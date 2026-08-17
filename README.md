@@ -1,6 +1,6 @@
 # 🌍 Language Translations
 <!-- TRANSLATE-README-LANGUAGES-START -->
-https://github.com/Artid1994/THE_TRANSCENDING_FORM
+
 | [ภาษาไทย](README.th.md) |
 <!-- TRANSLATE-README-LANGUAGES-END -->
 
