@@ -29,6 +29,15 @@ class Memory:
 
         self.state.episodic.append(experience)
 
+    def import_structured(self, structured_memory) -> None:
+        for experience in structured_memory.episodic:
+            if experience not in self.state.episodic:
+                self.state.episodic.append(experience)
+
+        for knowledge in structured_memory.semantic:
+            if knowledge not in self.state.semantic:
+                self.state.semantic.append(knowledge)
+
     def is_empty(self) -> bool:
         return not (
             self.state.working

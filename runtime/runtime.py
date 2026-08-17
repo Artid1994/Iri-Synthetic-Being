@@ -11,6 +11,9 @@ from runtime.learning import Learning
 from runtime.development import Development
 from runtime.prediction import Prediction
 from runtime.identity_continuity import IdentityContinuity
+from runtime.human_data import HumanData
+from runtime.memory_processing import MemoryProcessor
+from runtime.identity_representation import IdentityRepresentation
 from runtime.cognitive_loop import CognitiveLoop
 
 
@@ -26,6 +29,9 @@ class TranscendingRuntime:
         self.learning = Learning(self.memory)
         self.prediction = Prediction()
         self.identity_continuity = IdentityContinuity()
+        self.human_data = HumanData()
+        self.memory_processor = MemoryProcessor()
+        self.identity_representation = IdentityRepresentation()
 
         self.development = Development(
             self.identity,
@@ -46,6 +52,15 @@ class TranscendingRuntime:
         )
 
 
+    def import_human_data(self, data: HumanData) -> None:
+        structured = self.memory_processor.process(data)
+
+        self.memory.import_structured(structured)
+        self.human_data = data
+        self.identity_representation = (
+            IdentityRepresentation.from_structured_memory(structured)
+        )
+
     def snapshot(self) -> dict:
         return {
             "system": self.system.snapshot(),
@@ -59,6 +74,8 @@ class TranscendingRuntime:
             "learning": self.learning.snapshot(),
             "prediction": self.prediction.snapshot(),
             "identity_continuity": self.identity_continuity.snapshot(),
+            "human_data": self.human_data,
+            "identity_representation": self.identity_representation,
             "development": self.development.assess(),
             "development_history": self.development.history_snapshot(),
         }
