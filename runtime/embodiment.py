@@ -3,6 +3,7 @@ from __future__ import annotations
 from runtime.body_action import BodyAction
 from runtime.body_command import BodyCommand
 from runtime.body_command_adapter import BodyCommandAdapter
+from runtime.action_mapper import ActionMapper
 from runtime.virtual_body import VirtualBody
 
 
@@ -34,7 +35,10 @@ class EmbodimentLoop:
             position=position
         )
 
-    def decide(self, cognitive_cycle) -> BodyAction | None:
+    def map_decision(self, decision: str):
+        return ActionMapper.map_decision(decision)
+
+    def decide_command(self, cognitive_cycle):
         if cognitive_cycle is None:
             return None
 
@@ -43,7 +47,10 @@ class EmbodimentLoop:
         if not decision:
             return None
 
-        return self.virtual_body.body_action.execute(decision)
+        return self.map_decision(decision)
+
+    def decide(self, cognitive_cycle):
+        return self.decide_command(cognitive_cycle)
 
     def apply(self, action: BodyAction | None):
         if action is None:
@@ -77,5 +84,4 @@ class EmbodimentLoop:
         return self.apply(action)
 
     def step(self, cognitive_cycle):
-        action = self.decide(cognitive_cycle)
-        return self.apply(action)
+        return self.decide_command(cognitive_cycle)
