@@ -12,6 +12,7 @@ from runtime.development import Development
 from runtime.prediction import Prediction
 from runtime.identity_continuity import IdentityContinuity
 from runtime.virtual_body import VirtualBody
+from runtime.embodiment import EmbodimentLoop
 from runtime.human_data import HumanData
 from runtime.memory_processing import MemoryProcessor
 from runtime.identity_representation import IdentityRepresentation
@@ -31,6 +32,7 @@ class TranscendingRuntime:
         self.prediction = Prediction()
         self.identity_continuity = IdentityContinuity()
         self.virtual_body = VirtualBody()
+        self.embodiment = EmbodimentLoop(self.virtual_body)
         self.human_data = HumanData()
         self.memory_processor = MemoryProcessor()
         self.identity_representation = IdentityRepresentation()
@@ -77,6 +79,7 @@ class TranscendingRuntime:
             "prediction": self.prediction.snapshot(),
             "identity_continuity": self.identity_continuity.snapshot(),
             "virtual_body": self.virtual_body.snapshot(),
+            "embodiment": self.embodiment.observe(),
             "human_data": self.human_data,
             "identity_representation": self.identity_representation,
             "development": self.development.assess(),
