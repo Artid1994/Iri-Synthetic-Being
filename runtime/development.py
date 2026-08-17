@@ -27,7 +27,16 @@ class DevelopmentCriteriaEvidence:
 
 
 class Development:
-    def __init__(self, identity, memory, learning, personality, self_model, prediction, identity_continuity) -> None:
+    def __init__(
+        self,
+        identity,
+        memory,
+        learning,
+        personality,
+        self_model,
+        prediction,
+        identity_continuity,
+    ) -> None:
         self.identity = identity
         self.memory = memory
         self.learning = learning
@@ -36,6 +45,23 @@ class Development:
         self.prediction = prediction
         self.identity_continuity = identity_continuity
         self.history: list[DevelopmentCriteriaEvidence] = []
+
+    def sync(self) -> DevelopmentCriteriaEvidence:
+        candidate = self.learning.last_candidate
+        evaluation = self.learning.last_evaluation
+
+        if (
+            candidate is not None
+            and evaluation is not None
+            and evaluation.accepted
+            and self.identity.snapshot().experience < len(self.memory.state.episodic)
+        ):
+            self.identity.add_experience(
+                len(self.memory.state.episodic)
+                - self.identity.snapshot().experience
+            )
+
+        return self.criteria_evidence()
 
     def assess(self) -> DevelopmentAssessment:
         identity = self.identity.snapshot()
@@ -70,7 +96,9 @@ class Development:
                 + len(self_model.beliefs)
                 + len(self_model.self_history)
             ),
-            prediction_available=self.prediction.snapshot().prediction_count > 0,
+            prediction_available=(
+                self.prediction.snapshot().prediction_count > 0
+            ),
             identity_continuity_available=(
                 self.identity_continuity.snapshot().snapshot_count > 0
             ),

@@ -3,10 +3,10 @@ from __future__ import annotations
 from dataclasses import dataclass
 
 from runtime.action import Action
-from runtime.current_state import CurrentState
-from runtime.perception import Perception
 from runtime.action import ActionModule
+from runtime.current_state import CurrentState
 from runtime.current_state import CurrentStateModule
+from runtime.perception import Perception
 from runtime.perception import PerceptionModule
 
 
@@ -23,9 +23,19 @@ class CognitiveCycle:
 
 
 class CognitiveLoop:
-    def __init__(self, cognitive, learning) -> None:
+    def __init__(
+        self,
+        cognitive,
+        learning,
+        personality,
+        self_model,
+        development,
+    ) -> None:
         self.cognitive = cognitive
         self.learning = learning
+        self.personality = personality
+        self.self_model = self_model
+        self.development = development
 
         self.perception = PerceptionModule()
         self.current_state = CurrentStateModule()
@@ -55,8 +65,23 @@ class CognitiveLoop:
                 "GENERAL",
                 1.0,
             )
+
             evaluation = self.learning.evaluate(candidate)
             experience_recorded = evaluation.accepted
+
+            if evaluation.accepted and candidate is not None:
+                self.personality.adapt(
+                    openness_delta=0.1,
+                    conscientiousness_delta=0.05,
+                )
+
+                self.self_model.update(
+                    self_awareness_delta=0.1,
+                    self_knowledge_delta=0.1,
+                    history_entry=candidate.experience,
+                )
+
+                self.development.sync()
 
         cycle = CognitiveCycle(
             input_text=perception.normalized_input,

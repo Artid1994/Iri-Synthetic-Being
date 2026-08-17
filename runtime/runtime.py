@@ -24,9 +24,9 @@ class TranscendingRuntime:
         self.self_model = SelfModel()
         self.cognitive = CognitiveEngine(self.memory)
         self.learning = Learning(self.memory)
-        self.cognitive_loop = CognitiveLoop(self.cognitive, self.learning)
         self.prediction = Prediction()
         self.identity_continuity = IdentityContinuity()
+
         self.development = Development(
             self.identity,
             self.memory,
@@ -36,6 +36,15 @@ class TranscendingRuntime:
             self.prediction,
             self.identity_continuity,
         )
+
+        self.cognitive_loop = CognitiveLoop(
+            self.cognitive,
+            self.learning,
+            self.personality,
+            self.self_model,
+            self.development,
+        )
+
 
     def snapshot(self) -> dict:
         return {
