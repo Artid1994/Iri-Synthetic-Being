@@ -61,6 +61,13 @@ class Development:
                 - self.identity.snapshot().experience
             )
 
+        if (
+            candidate is not None
+            and evaluation is not None
+            and evaluation.accepted
+        ):
+            self.identity_continuity.record(self.identity)
+
         return self.criteria_evidence()
 
     def assess(self) -> DevelopmentAssessment:
