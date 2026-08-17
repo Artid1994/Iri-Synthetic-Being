@@ -1,0 +1,22 @@
+name: Auto Translate README
+
+on:
+  push:
+    branches:
+      - main  # หรือเปลี่ยนเป็น master ตามชื่อสาขาหลักของคุณ
+    paths:
+      - 'README.md'
+
+jobs:
+  translate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 3
+
+      - name: GitHub Translate Readme Action
+        uses: ephraimduncan/translate-readme-action@v1.0.0
+        with:
+          LANG: "th" # รหัสภาษาไทย
