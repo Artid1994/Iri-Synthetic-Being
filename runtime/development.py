@@ -70,6 +70,32 @@ class Development:
 
         return self.criteria_evidence()
 
+    def evaluate_stage(self, policy: dict) -> str:
+        identity = self.identity.snapshot()
+        evidence = self.criteria_evidence()
+        stages = self.identity.VALID_STAGES
+        current_index = stages.index(identity.stage)
+
+        if current_index >= len(stages) - 1:
+            return identity.stage
+
+        next_stage = stages[current_index + 1]
+        criteria = policy.get(next_stage, {})
+
+        if not criteria:
+            return identity.stage
+
+        for name, threshold in criteria.items():
+            value = getattr(evidence, name)
+
+            if isinstance(threshold, bool):
+                if value is not threshold:
+                    return identity.stage
+            elif value < threshold:
+                return identity.stage
+
+        return next_stage
+
     def assess(self) -> DevelopmentAssessment:
         identity = self.identity.snapshot()
         memory = self.memory.snapshot()

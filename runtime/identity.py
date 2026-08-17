@@ -32,6 +32,21 @@ class Identity:
 
         self.state.stage = stage
 
+    def transition_to(self, stage: str) -> None:
+        if stage not in self.VALID_STAGES:
+            raise ValueError(f"Invalid development stage: {stage}")
+
+        current_index = self.VALID_STAGES.index(self.state.stage)
+        target_index = self.VALID_STAGES.index(stage)
+
+        if target_index != current_index + 1:
+            raise ValueError(
+                f"Invalid development transition: "
+                f"{self.state.stage} -> {stage}"
+            )
+
+        self.state.stage = stage
+
     def add_experience(self, amount: int = 1) -> None:
         if amount < 0:
             raise ValueError("Experience amount cannot be negative")
