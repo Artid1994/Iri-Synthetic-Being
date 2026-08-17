@@ -13,3 +13,12 @@ class AutonomousController:
 
     def allowed(self, command: BodyCommand | None) -> bool:
         return self.embodiment.autonomous_allowed(command)
+
+    def enable(self) -> None:
+        self.embodiment.autonomous_gate.enabled = True
+
+    def disable(self) -> None:
+        self.embodiment.autonomous_gate.enabled = False
+
+    def enabled(self) -> bool:
+        return self.embodiment.autonomous_gate.snapshot()
