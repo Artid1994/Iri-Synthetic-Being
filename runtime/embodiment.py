@@ -4,12 +4,17 @@ from runtime.body_action import BodyAction
 from runtime.body_command import BodyCommand
 from runtime.body_command_adapter import BodyCommandAdapter
 from runtime.action_mapper import ActionMapper
+from runtime.autonomous_gate import AutonomousGate
 from runtime.virtual_body import VirtualBody
 
 
 class EmbodimentLoop:
     def __init__(self, virtual_body: VirtualBody) -> None:
         self.virtual_body = virtual_body
+        self.autonomous_gate = AutonomousGate()
+
+    def autonomous_allowed(self, command: BodyCommand | None) -> bool:
+        return self.autonomous_gate.allow(command)
 
     def observe(self):
         return self.virtual_body.world_model.snapshot()
