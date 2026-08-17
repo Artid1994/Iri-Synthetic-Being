@@ -1,13 +1,7 @@
 # 🌍 Language Translations
-
-[![Translate to Thai](https://shields.io)](https://google.com)
-[![Translate to English](https://shields.io)](https://google.com)
-[![Translate to Japanese](https://shields.io)](https://google.com)
-[![Translate to Chinese](https://shields.io)](https://google.com)
-
 <!-- TRANSLATE-README-LANGUAGES-START -->
-
-| [English](README.md) | [ภาษาไทย](README.th.md) |
+https://github.com/Artid1994/THE_TRANSCENDING_FORM
+| [ภาษาไทย](README.th.md) |
 <!-- TRANSLATE-README-LANGUAGES-END -->
 
 
