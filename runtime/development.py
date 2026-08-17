@@ -4,6 +4,14 @@ from dataclasses import dataclass
 
 
 @dataclass(frozen=True)
+class DevelopmentPolicy:
+    criteria: dict[str, object]
+
+    def for_stage(self, stage: str) -> dict[str, object]:
+        return dict(self.criteria.get(stage, {}))
+
+
+@dataclass(frozen=True)
 class DevelopmentAssessment:
     stage: str
     experience: int
@@ -70,7 +78,7 @@ class Development:
 
         return self.criteria_evidence()
 
-    def evaluate_stage(self, policy: dict) -> str:
+    def evaluate_stage(self, policy: DevelopmentPolicy) -> str:
         identity = self.identity.snapshot()
         evidence = self.criteria_evidence()
         stages = self.identity.VALID_STAGES
@@ -80,7 +88,7 @@ class Development:
             return identity.stage
 
         next_stage = stages[current_index + 1]
-        criteria = policy.get(next_stage, {})
+        criteria = policy.for_stage(next_stage)
 
         if not criteria:
             return identity.stage
