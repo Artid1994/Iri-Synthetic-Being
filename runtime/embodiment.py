@@ -6,6 +6,7 @@ from runtime.body_command_adapter import BodyCommandAdapter
 from runtime.action_mapper import ActionMapper
 from runtime.autonomous_gate import AutonomousGate
 from runtime.virtual_body import VirtualBody
+from runtime.robot_feedback import RobotFeedback
 
 
 class EmbodimentLoop:
@@ -87,6 +88,12 @@ class EmbodimentLoop:
         )
 
         return self.apply(action)
+
+    def ingest_feedback(self, feedback: RobotFeedback | None):
+        if not isinstance(feedback, RobotFeedback):
+            return None
+
+        return feedback
 
     def step(self, cognitive_cycle):
         return self.decide_command(cognitive_cycle)
