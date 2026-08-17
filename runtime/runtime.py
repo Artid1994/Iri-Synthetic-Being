@@ -13,6 +13,7 @@ from runtime.prediction import Prediction
 from runtime.identity_continuity import IdentityContinuity
 from runtime.virtual_body import VirtualBody
 from runtime.embodiment import EmbodimentLoop
+from runtime.autonomous_controller import AutonomousController
 from runtime.human_data import HumanData
 from runtime.memory_processing import MemoryProcessor
 from runtime.identity_representation import IdentityRepresentation
@@ -33,6 +34,7 @@ class TranscendingRuntime:
         self.identity_continuity = IdentityContinuity()
         self.virtual_body = VirtualBody()
         self.embodiment = EmbodimentLoop(self.virtual_body)
+        self.autonomous_controller = AutonomousController(self.embodiment)
         self.human_data = HumanData()
         self.memory_processor = MemoryProcessor()
         self.identity_representation = IdentityRepresentation()
