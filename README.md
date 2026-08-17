@@ -5,6 +5,12 @@
 [![Translate to Japanese](https://shields.io)](https://google.com)
 [![Translate to Chinese](https://shields.io)](https://google.com)
 
+<!-- TRANSLATE-README-LANGUAGES-START -->
+
+| [English](README.md) | [ภาษาไทย](README.th.md) |
+<!-- TRANSLATE-README-LANGUAGES-END -->
+
+
 
 
 
