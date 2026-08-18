@@ -47,5 +47,14 @@ class TestGemmaCognitiveEngine(unittest.TestCase):
         )
 
 
+    def test_engine_accepts_llama_inference_backend(self):
+        inference = lambda prompt: "ต้นไม้เป็นสิ่งมีชีวิต"
+        engine = GemmaCognitiveEngine(inference=inference)
+
+        result = engine.think("เห็นต้นไม้")
+
+        self.assertEqual(result, "ต้นไม้เป็นสิ่งมีชีวิต")
+
+
 if __name__ == "__main__":
     unittest.main()
