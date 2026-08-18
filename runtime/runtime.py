@@ -96,7 +96,7 @@ class TranscendingRuntime:
 
         self.last_experience = experience
 
-        self.memory.add_experience(
+        self.cognitive_loop.process(
             experience.content
         )
 
