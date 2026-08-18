@@ -28,8 +28,9 @@ class TestLlamaCppInference(unittest.TestCase):
                 "-m", "/models/gemma.gguf",
                 "-t", "1",
                 "-c", "256",
-                "-n", "32",
+                "-n", "8",
                 "-no-cnv",
+                "-st",
                 "-p", "person A sees tree",
             ]],
         )

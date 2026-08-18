@@ -25,8 +25,9 @@ class LlamaCppInference:
             "-c",
             "256",
             "-n",
-            "32",
+            "8",
             "-no-cnv",
+            "-st",
             "-p",
             prompt,
         ]
