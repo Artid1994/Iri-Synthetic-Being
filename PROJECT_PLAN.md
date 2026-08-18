@@ -342,3 +342,140 @@ Do not begin real webcam or microphone hardware integration until this software 
 ba941b5 — FEAT: Add injectable real sensor source contracts
 
 103 tests passing at that checkpoint.
+
+# PLAN REVISION — AE01M Thai Language & Voice Architecture
+Date: 2026-08-18
+
+## Purpose
+
+AE01M must communicate naturally with humans in Thai.
+
+Thai communication is a capability layer, not the definition of AE01M cognition.
+
+AE01M is not a chatbot.
+
+## Core Separation
+
+Thought != Language != Speech
+
+Gemma 3 1B IT is the initial Cognitive Engine.
+
+The Cognitive Engine produces internal cognitive output such as:
+
+- thought
+- prediction
+- intention
+- interpretation
+- decision candidate
+
+A separate Language Layer transforms relevant cognitive output into human-readable Thai.
+
+A separate Voice/TTS Layer transforms Thai text into speech.
+
+## Communication Pipeline
+
+Experience
+→ Memory / Brain State
+→ Cognitive Trigger
+→ Gemma 3 1B IT
+→ Thought / Intention
+→ Language Layer
+→ Thai Text
+→ TTS
+→ Speech
+
+## Thai Language Rule
+
+AE01M does not need to perform every internal cognitive operation in Thai.
+
+Thai is primarily used at the human communication boundary.
+
+Internal cognition must remain independent from a specific human language.
+
+## Voice Rule
+
+Text generation and speech synthesis remain separate.
+
+The TTS implementation must be replaceable.
+
+The Cognitive Engine must not directly depend on a specific TTS provider.
+
+Preferred boundary:
+
+LanguageOutput
+→ SpeechEngine
+→ Audio
+
+## Resource Constraint
+
+Target machine:
+
+- 3.5 GiB RAM
+- Intel Celeron N4000
+- 2 CPU threads
+- CPU-only inference
+
+Gemma 3 1B IT Q4_K_M has been successfully tested locally.
+
+Observed performance:
+
+- Generation: approximately 0.64 tokens/sec
+- Prompt evaluation: approximately 0.70 tokens/sec
+
+Therefore AE01M must not invoke Gemma on every runtime cycle.
+
+Cognitive processing must be trigger-based.
+
+## Communication Efficiency
+
+Preferred:
+
+Continuous perception
+→ State / Attention / Event Detection
+→ Cognitive Trigger
+→ Gemma
+→ Communication Decision
+→ Thai Language Output
+→ TTS when required
+
+Avoid:
+
+Continuous perception
+→ Gemma every cycle
+→ Continuous speech
+
+## Reference Prototype
+
+The existing ai_talk.py prototype demonstrates:
+
+- Thai TTS
+- separate speech function
+- short output
+- bounded conversation history
+
+These ideas may inform the future Voice/Language Layer.
+
+The chatbot architecture itself must not be copied into AE01M.
+
+## Architectural Constraint
+
+Do not place these inside the Cognitive Engine:
+
+- TTS
+- speech playback
+- Thai conversation history
+- chatbot system prompts
+
+The Cognitive Engine remains responsible for cognition.
+
+## Next Milestone
+
+1. LlamaCppInference subprocess adapter
+2. Verify real Gemma inference through the adapter
+3. Integrate GemmaCognitiveEngine
+4. Establish cognitive triggering
+5. Establish Language Layer
+6. Establish replaceable Thai TTS/Voice Layer
+7. Integrate speech communication into continuous runtime
+
+Do not skip directly to voice interaction before the cognitive boundary is stable.
