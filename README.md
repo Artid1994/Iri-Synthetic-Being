@@ -1,3 +1,13 @@
+# 🌍 Language Translations
+<!-- TRANSLATE-README-LANGUAGES-START -->
+
+| [ภาษาไทย](README.th.md) |
+<!-- TRANSLATE-README-LANGUAGES-END -->
+
+
+
+
+
 # The Transcending Form
 
 > Experimental offline identity-runtime project for building an artificial identity that begins from a minimal **Newborn** state and develops through experience, memory, cognition, learning, self-modeling, identity continuity, human-data representation, and eventually embodiment.
