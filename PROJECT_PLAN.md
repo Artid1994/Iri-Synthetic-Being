@@ -249,3 +249,96 @@ CURRENT METHOD
 → DOCUMENT DECISION
 
 ห้ามเปลี่ยนเป้าหมายเพียงเพราะ implementation ปัจจุบันทำได้ยาก
+
+
+# PLAN REVISION — Ae01m Cognitive Architecture
+Date: 2026-08-18
+
+## North Star
+
+The project target is **Ae01m**, a computer-first Cyber Human Brain prototype.
+
+Ae01m is not designed as a chatbot.
+
+Target behavior:
+
+Perceive → Remember → Think → Predict → Decide → Act → Experience → Learn → Update State → Continue
+
+## Core Architectural Rule
+
+AI Model != Identity
+
+Gemma 3 1B IT is a replaceable **Cognitive Engine** for Ae01m.
+
+It is not Ae01m's identity, memory, personality, self-model, history, or continuity.
+
+## Cognitive Engine
+
+Gemma 3 1B IT performs internal cognitive processing.
+
+The CognitiveLoop controls when cognitive processing occurs.
+
+Memory, Identity, Personality, Self Model, Learning, Development, and Continuity remain outside the model.
+
+The system must not be designed as:
+
+Memory → giant prompt → LLM → response
+
+Preferred architecture:
+
+Experience → Memory → Relevant Recall → Brain State → Cognitive Engine → Thought/Prediction/Intention → Decision → Action → Experience
+
+## Continuous Operation
+
+Ae01m is intended to operate continuously without requiring a human prompt.
+
+Gemma must not be called at an uncontrolled frequency.
+
+The runtime decides when cognitive processing is required.
+
+## Model Independence
+
+Gemma 3 1B IT is the initial Cognitive Engine, not Ae01m itself.
+
+The CognitiveEngine abstraction must remain replaceable.
+
+Changing the model must not inherently destroy Ae01m's:
+
+- Identity
+- Memory
+- Personality
+- Self Model
+- Learned State
+- Development State
+- Identity Continuity
+- Experience History
+
+## Learning
+
+Learning should primarily update Ae01m's external state rather than require continual model-weight training.
+
+Preferred path:
+
+Experience → Learning Evaluation → Memory/Knowledge → Personality/Self Model/Development Update
+
+## Hardware Independence
+
+Physical sensors and future robot hardware are interfaces to Ae01m, not Ae01m itself.
+
+Real webcam and microphone integration remain optional hardware backends.
+
+## Next Milestone
+
+The next engineering milestone is:
+
+**Ae01m Cognitive Engine Integration**
+
+Integrate Gemma 3 1B IT behind the existing CognitiveEngine abstraction.
+
+Do not begin real webcam or microphone hardware integration until this software contract is stable.
+
+## Current Stable Checkpoint
+
+ba941b5 — FEAT: Add injectable real sensor source contracts
+
+103 tests passing at that checkpoint.
