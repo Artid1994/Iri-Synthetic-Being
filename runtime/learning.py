@@ -70,9 +70,7 @@ class Learning:
 
         if evaluation.accepted and candidate is not None:
             self.memory.add_experience(candidate.experience)
-
-            if candidate.experience not in self.memory.state.semantic:
-                self.memory.state.semantic.append(candidate.experience)
+            self.memory.add_semantic(candidate.experience)
 
         return evaluation
 
@@ -81,4 +79,3 @@ class Learning:
             "last_candidate": self.last_candidate,
             "last_evaluation": self.last_evaluation,
         }
-

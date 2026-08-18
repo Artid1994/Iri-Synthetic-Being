@@ -63,13 +63,7 @@ class CognitiveEngine:
         if not user_input:
             return ""
 
-        memory = self.memory.snapshot()
-
-        for experience in reversed(memory.episodic):
-            if experience == user_input:
-                return experience
-
-        return user_input
+        return self.memory.recall(user_input)
 
     @staticmethod
     def _reason(recalled: str) -> str:

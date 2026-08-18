@@ -2,6 +2,9 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 
+from runtime.recall_index import RecallIndex
+from runtime.semantic_index import SemanticIndex
+
 
 @dataclass
 class MemoryState:
@@ -13,6 +16,8 @@ class MemoryState:
 class Memory:
     def __init__(self) -> None:
         self.state = MemoryState()
+        self._recall_index = RecallIndex()
+        self._semantic_index = SemanticIndex()
 
     def snapshot(self) -> MemoryState:
         return MemoryState(
@@ -27,16 +32,42 @@ class Memory:
         if not experience:
             return
 
+        position = len(self.state.episodic)
         self.state.episodic.append(experience)
+        self._recall_index.add(experience, position)
+
+    def recall(self, experience: str) -> str:
+        position = self._recall_index.find_latest(experience)
+
+        if position is None:
+            return experience
+
+        return self.state.episodic[position]
+
+    def add_semantic(self, knowledge: str) -> None:
+        knowledge = knowledge.strip()
+
+        if not knowledge:
+            return
+
+        if self._semantic_index.contains(knowledge):
+            return
+
+        self.state.semantic.append(knowledge)
+        self._semantic_index.add(knowledge)
+
+    def semantic_contains(self, knowledge: str) -> bool:
+        return self._semantic_index.contains(knowledge)
 
     def import_structured(self, structured_memory) -> None:
         for experience in structured_memory.episodic:
             if experience not in self.state.episodic:
+                position = len(self.state.episodic)
                 self.state.episodic.append(experience)
+                self._recall_index.add(experience, position)
 
         for knowledge in structured_memory.semantic:
-            if knowledge not in self.state.semantic:
-                self.state.semantic.append(knowledge)
+            self.add_semantic(knowledge)
 
     def is_empty(self) -> bool:
         return not (

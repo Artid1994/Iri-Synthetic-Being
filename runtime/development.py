@@ -57,16 +57,17 @@ class Development:
     def sync(self) -> DevelopmentCriteriaEvidence:
         candidate = self.learning.last_candidate
         evaluation = self.learning.last_evaluation
+        identity = self.identity.snapshot()
+        episodic_count = len(self.memory.state.episodic)
 
         if (
             candidate is not None
             and evaluation is not None
             and evaluation.accepted
-            and self.identity.snapshot().experience < len(self.memory.state.episodic)
+            and identity.experience < episodic_count
         ):
             self.identity.add_experience(
-                len(self.memory.state.episodic)
-                - self.identity.snapshot().experience
+                episodic_count - identity.experience
             )
 
         if (
@@ -121,27 +122,27 @@ class Development:
 
     def criteria_evidence(self) -> DevelopmentCriteriaEvidence:
         identity = self.identity.snapshot()
-        memory = self.memory.snapshot()
-        self_model = self.self_model.snapshot()
+        memory_state = self.memory.state
+        self_model_state = self.self_model.state
 
         evidence = DevelopmentCriteriaEvidence(
             experience=identity.experience,
-            episodic_memory_count=len(memory.episodic),
-            semantic_memory_count=len(memory.semantic),
+            episodic_memory_count=len(memory_state.episodic),
+            semantic_memory_count=len(memory_state.semantic),
             learning_available=(
                 self.learning.last_candidate is not None
                 and self.learning.last_evaluation is not None
             ),
             self_model_complexity=(
-                len(self_model.goals)
-                + len(self_model.beliefs)
-                + len(self_model.self_history)
+                len(self_model_state.goals)
+                + len(self_model_state.beliefs)
+                + len(self_model_state.self_history)
             ),
             prediction_available=(
-                self.prediction.snapshot().prediction_count > 0
+                self.prediction.state.prediction_count > 0
             ),
             identity_continuity_available=(
-                self.identity_continuity.snapshot().snapshot_count > 0
+                self.identity_continuity.state.snapshot_count > 0
             ),
         )
 
