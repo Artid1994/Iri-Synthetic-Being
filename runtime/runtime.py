@@ -18,6 +18,8 @@ from runtime.human_data import HumanData
 from runtime.memory_processing import MemoryProcessor
 from runtime.identity_representation import IdentityRepresentation
 from runtime.cognitive_loop import CognitiveLoop
+from runtime.experience import Experience
+from runtime.sensor_source import MockSensor
 
 
 class TranscendingRuntime:
@@ -38,6 +40,9 @@ class TranscendingRuntime:
         self.human_data = HumanData()
         self.memory_processor = MemoryProcessor()
         self.identity_representation = IdentityRepresentation()
+        self.camera = MockSensor("camera", "")
+        self.microphone = MockSensor("microphone", "")
+        self.last_experience: Experience | None = None
 
         self.development = Development(
             self.identity,
@@ -57,6 +62,45 @@ class TranscendingRuntime:
             self.development,
         )
 
+
+    def process_sensor(
+        self,
+        sensor: str,
+        value: object,
+        timestamp: float,
+        modality: str,
+    ) -> bool:
+        if sensor == "camera":
+            source = self.camera
+        elif sensor == "microphone":
+            source = self.microphone
+        else:
+            return False
+
+        source.value = value
+        reading = source.read(timestamp)
+
+        perception = self.cognitive_loop.perception.process(
+            str(reading.value)
+        )
+
+        if not perception.has_input:
+            return False
+
+        experience = Experience(
+            source=reading.sensor,
+            content=perception.normalized_input,
+            timestamp=reading.timestamp,
+            modality=modality,
+        )
+
+        self.last_experience = experience
+
+        self.memory.add_experience(
+            experience.content
+        )
+
+        return True
 
     def import_human_data(self, data: HumanData) -> None:
         structured = self.memory_processor.process(data)
