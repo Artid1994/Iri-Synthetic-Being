@@ -4,6 +4,7 @@ from dataclasses import dataclass, field
 
 from runtime.recall_index import RecallIndex
 from runtime.semantic_index import SemanticIndex
+from runtime.experience import Experience
 
 
 @dataclass
@@ -11,6 +12,7 @@ class MemoryState:
     working: list = field(default_factory=list)
     episodic: list = field(default_factory=list)
     semantic: list = field(default_factory=list)
+    experiences: list[Experience] = field(default_factory=list)
 
 
 class Memory:
@@ -24,6 +26,7 @@ class Memory:
             working=list(self.state.working),
             episodic=list(self.state.episodic),
             semantic=list(self.state.semantic),
+            experiences=list(self.state.experiences),
         )
 
     def add_experience(self, experience: str) -> None:
@@ -35,6 +38,12 @@ class Memory:
         position = len(self.state.episodic)
         self.state.episodic.append(experience)
         self._recall_index.add(experience, position)
+
+    def add_experience_object(self, experience: Experience) -> None:
+        if not isinstance(experience, Experience):
+            raise TypeError("experience must be an Experience")
+
+        self.state.experiences.append(experience)
 
     def recall(self, experience: str) -> str:
         position = self._recall_index.find_latest(experience)
