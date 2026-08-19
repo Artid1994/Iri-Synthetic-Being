@@ -147,4 +147,6 @@ class CognitiveLoop:
             action=self.action.snapshot(
                 self.last_cycle.action
             ),
+            attention_required=self.last_cycle.attention_required,
+            salience=self.last_cycle.salience,
         )
