@@ -50,10 +50,30 @@ class CognitiveLoop:
             perception.normalized_input
         )
 
-        decision = self.cognitive.process(
-            perception.normalized_input,
-            record_experience=False,
-        )
+        if not perception.has_input:
+            cycle = CognitiveCycle(
+                input_text="",
+                recalled="",
+                reasoning="",
+                decision="NO_ACTION",
+                experience_recorded=False,
+                perception=perception,
+                current_state=current_state,
+                action=self.action.execute("NO_ACTION"),
+            )
+            self.last_cycle = cycle
+            return cycle
+
+        if (
+            self.last_cycle is not None
+            and self.last_cycle.input_text == perception.normalized_input
+        ):
+            decision = "NO_ACTION"
+        else:
+            decision = self.cognitive.process(
+                perception.normalized_input,
+                record_experience=False,
+            )
 
         action = self.action.execute(decision)
 
