@@ -44,7 +44,8 @@ class TestCognitiveSalience(unittest.TestCase):
 
         cycle = loop.process("person A sees tree")
 
-        self.assertEqual(cycle.salience, 1.0)
+        self.assertGreater(cycle.salience, 0.0)
+        self.assertLessEqual(cycle.salience, 1.0)
 
 
     def test_unchanged_input_has_zero_salience(self):
@@ -59,11 +60,44 @@ class TestCognitiveSalience(unittest.TestCase):
     def test_salience_threshold_allows_cognition(self):
         loop = self._create_loop()
 
-        cycle = loop.process("person A sees dog")
+        cycle = loop.process("person A sees a large tree near the house")
 
         self.assertGreaterEqual(cycle.salience, 0.5)
         self.assertTrue(cycle.attention_required)
         self.assertEqual(cycle.decision, "RESPOND")
+
+
+    def test_longer_new_input_can_have_higher_salience(self):
+        loop = self._create_loop()
+
+        cycle = loop.process(
+            "person A sees a large tree near the house"
+        )
+
+        self.assertGreater(cycle.salience, 0.0)
+        self.assertLessEqual(cycle.salience, 1.0)
+
+
+    def test_longer_input_has_higher_salience(self):
+        loop = self._create_loop()
+
+        short_cycle = loop.process("tree")
+        long_cycle = loop.process(
+            "person A sees a large tree near the house"
+        )
+
+        self.assertGreater(
+            long_cycle.salience,
+            short_cycle.salience,
+        )
+
+
+    def test_salience_is_bounded_to_one(self):
+        loop = self._create_loop()
+
+        cycle = loop.process("x" * 128)
+
+        self.assertLessEqual(cycle.salience, 1.0)
 
 
 if __name__ == "__main__":

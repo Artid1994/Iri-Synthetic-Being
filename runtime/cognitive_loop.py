@@ -70,7 +70,11 @@ class CognitiveLoop:
             self.last_cycle is None
             or self.last_cycle.input_text != perception.normalized_input
         )
-        salience = 1.0 if attention_required else 0.0
+        salience = (
+            min(len(perception.normalized_input) / 64.0, 1.0)
+            if attention_required
+            else 0.0
+        )
 
         if not attention_required:
             decision = "NO_ACTION"
