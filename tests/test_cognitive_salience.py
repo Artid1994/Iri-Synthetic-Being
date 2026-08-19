@@ -100,5 +100,7 @@ class TestCognitiveSalience(unittest.TestCase):
         self.assertLessEqual(cycle.salience, 1.0)
 
 
+
+
 if __name__ == "__main__":
     unittest.main()
