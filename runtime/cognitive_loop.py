@@ -20,6 +20,7 @@ class CognitiveCycle:
     perception: Perception | None = None
     current_state: CurrentState | None = None
     action: Action | None = None
+    attention_required: bool = False
 
 
 class CognitiveLoop:
@@ -64,10 +65,12 @@ class CognitiveLoop:
             self.last_cycle = cycle
             return cycle
 
-        if (
-            self.last_cycle is not None
-            and self.last_cycle.input_text == perception.normalized_input
-        ):
+        attention_required = (
+            self.last_cycle is None
+            or self.last_cycle.input_text != perception.normalized_input
+        )
+
+        if not attention_required:
             decision = "NO_ACTION"
         else:
             decision = self.cognitive.process(
@@ -112,6 +115,7 @@ class CognitiveLoop:
             perception=perception,
             current_state=current_state,
             action=action,
+            attention_required=attention_required,
         )
 
         self.last_cycle = cycle
