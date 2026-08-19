@@ -21,6 +21,7 @@ class CognitiveCycle:
     current_state: CurrentState | None = None
     action: Action | None = None
     attention_required: bool = False
+    salience: float = 0.0
 
 
 class CognitiveLoop:
@@ -69,6 +70,7 @@ class CognitiveLoop:
             self.last_cycle is None
             or self.last_cycle.input_text != perception.normalized_input
         )
+        salience = 1.0 if attention_required else 0.0
 
         if not attention_required:
             decision = "NO_ACTION"
@@ -116,6 +118,7 @@ class CognitiveLoop:
             current_state=current_state,
             action=action,
             attention_required=attention_required,
+            salience=salience,
         )
 
         self.last_cycle = cycle
