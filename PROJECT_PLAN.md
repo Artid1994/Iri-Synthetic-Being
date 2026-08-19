@@ -479,3 +479,100 @@ The Cognitive Engine remains responsible for cognition.
 7. Integrate speech communication into continuous runtime
 
 Do not skip directly to voice interaction before the cognitive boundary is stable.
+
+# PLAN REVISION — AE01M Cognitive Engine Model Selection
+Date: 2026-08-19
+
+## Model Selection Decision
+
+Gemma 3 1B IT Q4_K_M is the selected initial Cognitive Engine for AE01M.
+
+The decision is based on direct benchmark results on the target hardware.
+
+## Target Hardware
+
+- Intel Celeron N4000
+- 2 CPU threads
+- Approximately 3.5 GiB RAM
+- CPU-only inference
+- No CUDA GPU
+
+## Local Benchmark
+
+Same inference conditions:
+
+- llama.cpp
+- CPU thread: 1
+- context: 256
+- output: 8 tokens
+- Q4_K_M quantization
+- Thai-language prompt
+
+### Gemma 3 1B IT
+
+- Model size: approximately 769 MB
+- Prompt evaluation: approximately 0.72 tokens/sec
+- Generation: approximately 0.61 tokens/sec
+- Total test time: approximately 43.7 seconds
+
+### Qwen2.5 1.5B Instruct
+
+- Model size: approximately 1.1 GB
+- Prompt evaluation: approximately 0.29 tokens/sec
+- Generation: approximately 0.26 tokens/sec
+- Total test time: approximately 96.7 seconds
+
+## Decision
+
+Gemma 3 1B IT is approximately:
+
+- 2.48x faster for prompt evaluation
+- 2.35x faster for generation
+
+Gemma also requires less model storage and memory than the tested Qwen2.5 1.5B model.
+
+Therefore:
+
+AE01M Cognitive Engine
+→ Gemma 3 1B IT Q4_K_M
+→ llama.cpp CPU
+
+## Qwen Status
+
+Qwen2.5 1.5B remains an experimental alternative.
+
+It must not replace Gemma in the primary architecture unless a future benchmark demonstrates a meaningful advantage in cognition, language quality, capability, or overall AE01M behavior.
+
+## Runtime Constraint
+
+Because Gemma generation is approximately 0.61 tokens/sec on the target machine, AE01M must not invoke the Cognitive Engine continuously on every perception cycle.
+
+The Cognitive Trigger / Attention mechanism remains required.
+
+Preferred:
+
+Perception
+→ State Change / Attention
+→ Cognitive Trigger
+→ Gemma
+→ Thought / Intention
+→ Decision / Action
+
+Avoid:
+
+Perception
+→ Gemma
+→ Gemma
+→ Gemma
+→ continuous inference
+
+## Architecture Lock
+
+For the current development milestone:
+
+- Gemma 3 1B IT is the primary Cognitive Engine.
+- llama.cpp is the initial CPU inference runtime.
+- LlamaCppInference remains an adapter boundary.
+- GemmaCognitiveEngine remains independent from Memory.
+- Memory, Identity, Personality, Self Model, Learning, Development, and Continuity remain outside the model.
+- Model replacement remains technically possible through the inference boundary.
