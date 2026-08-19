@@ -1,11 +1,12 @@
 import unittest
 
 from runtime.runtime import TranscendingRuntime
+from tests.cognitive_test_helper import FakeCognitive
 
 
 class TestCognitiveExperienceSnapshot(unittest.TestCase):
     def test_sensor_experience_survives_runtime_snapshot(self):
-        runtime = TranscendingRuntime()
+        runtime = TranscendingRuntime(cognitive=FakeCognitive())
 
         runtime.process_sensor(
             sensor="camera",

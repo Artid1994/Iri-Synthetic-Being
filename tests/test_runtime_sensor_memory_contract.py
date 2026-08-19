@@ -1,11 +1,12 @@
 import unittest
 
 from runtime.runtime import TranscendingRuntime
+from tests.cognitive_test_helper import FakeCognitive
 
 
 class TestRuntimeSensorMemoryContract(unittest.TestCase):
     def test_sensor_experience_is_recorded_once(self):
-        runtime = TranscendingRuntime()
+        runtime = TranscendingRuntime(cognitive=FakeCognitive())
 
         result = runtime.process_sensor(
             sensor="camera",

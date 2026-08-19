@@ -2,11 +2,12 @@ import unittest
 
 from runtime.experience import Experience
 from runtime.runtime import TranscendingRuntime
+from tests.cognitive_test_helper import FakeCognitive
 
 
 class TestExperienceCognitive(unittest.TestCase):
     def test_experience_content_can_enter_cognitive_loop(self):
-        runtime = TranscendingRuntime()
+        runtime = TranscendingRuntime(cognitive=FakeCognitive())
 
         experience = Experience(
             source="camera",
@@ -26,7 +27,7 @@ class TestExperienceCognitive(unittest.TestCase):
         self.assertTrue(cycle.experience_recorded)
 
     def test_audio_experience_can_enter_cognitive_loop(self):
-        runtime = TranscendingRuntime()
+        runtime = TranscendingRuntime(cognitive=FakeCognitive())
 
         experience = Experience(
             source="microphone",

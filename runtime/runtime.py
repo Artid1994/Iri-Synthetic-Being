@@ -6,7 +6,7 @@ from runtime.memory import Memory
 from runtime.internal_state import InternalStateManager
 from runtime.personality import Personality
 from runtime.self_model import SelfModel
-from runtime.cognitive_engine import CognitiveEngine
+from runtime.ae01m_cognitive_factory import create_cognitive_engine
 from runtime.learning import Learning
 from runtime.development import Development
 from runtime.prediction import Prediction
@@ -23,14 +23,17 @@ from runtime.sensor_source import MockSensor
 
 
 class TranscendingRuntime:
-    def __init__(self) -> None:
+    def __init__(self, cognitive=None) -> None:
         self.system = SystemMonitor()
         self.identity = Identity()
         self.memory = Memory()
         self.internal_state = InternalStateManager()
         self.personality = Personality()
         self.self_model = SelfModel()
-        self.cognitive = CognitiveEngine(self.memory)
+        self.cognitive = cognitive or create_cognitive_engine(
+            model_path="/home/artid1994/.local/share/ae01m/models/gemma-3-1b-it-Q4_K_M.gguf",
+            executable="/home/artid1994/.local/src/ae01m-llama.cpp/build/bin/llama-completion",
+        )
         self.learning = Learning(self.memory)
         self.prediction = Prediction()
         self.identity_continuity = IdentityContinuity()

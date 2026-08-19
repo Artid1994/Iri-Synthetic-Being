@@ -1,11 +1,12 @@
 import unittest
 
 from runtime.runtime import TranscendingRuntime
+from tests.cognitive_test_helper import FakeCognitive
 
 
 class TestRuntimeMultimodalContinuity(unittest.TestCase):
     def test_vision_and_audio_belong_to_same_person_a_memory(self):
-        runtime = TranscendingRuntime()
+        runtime = TranscendingRuntime(cognitive=FakeCognitive())
 
         runtime.process_sensor(
             sensor="camera",

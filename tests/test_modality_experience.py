@@ -1,11 +1,12 @@
 import unittest
 
 from runtime.runtime import TranscendingRuntime
+from tests.cognitive_test_helper import FakeCognitive
 
 
 class TestModalityExperience(unittest.TestCase):
     def test_camera_creates_vision_experience(self):
-        runtime = TranscendingRuntime()
+        runtime = TranscendingRuntime(cognitive=FakeCognitive())
 
         runtime.process_sensor(
             sensor="camera",
@@ -21,7 +22,7 @@ class TestModalityExperience(unittest.TestCase):
         self.assertEqual(experience.source, "camera")
 
     def test_microphone_creates_audio_experience(self):
-        runtime = TranscendingRuntime()
+        runtime = TranscendingRuntime(cognitive=FakeCognitive())
 
         runtime.process_sensor(
             sensor="microphone",

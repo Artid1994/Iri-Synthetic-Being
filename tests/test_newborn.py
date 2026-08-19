@@ -1,11 +1,12 @@
 import unittest
 
 from runtime.runtime import TranscendingRuntime
+from tests.cognitive_test_helper import FakeCognitive
 
 
 class TestNewborn(unittest.TestCase):
     def test_person_a_starts_as_newborn(self):
-        runtime = TranscendingRuntime()
+        runtime = TranscendingRuntime(cognitive=FakeCognitive())
 
         identity = runtime.identity.snapshot()
         memory = runtime.memory.snapshot()

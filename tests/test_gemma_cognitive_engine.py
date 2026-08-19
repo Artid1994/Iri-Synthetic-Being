@@ -56,5 +56,15 @@ class TestGemmaCognitiveEngine(unittest.TestCase):
         self.assertEqual(result, "ต้นไม้เป็นสิ่งมีชีวิต")
 
 
+    def test_process_returns_respond_when_thought_is_generated(self):
+        engine = GemmaCognitiveEngine(
+            inference=lambda prompt: "ต้นไม้เป็นพืช",
+        )
+
+        result = engine.process("ต้นไม้คืออะไร")
+
+        self.assertEqual(result, "RESPOND")
+
+
 if __name__ == "__main__":
     unittest.main()

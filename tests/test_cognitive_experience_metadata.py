@@ -2,11 +2,12 @@ import unittest
 
 from runtime.experience import Experience
 from runtime.runtime import TranscendingRuntime
+from tests.cognitive_test_helper import FakeCognitive
 
 
 class TestCognitiveExperienceMetadata(unittest.TestCase):
     def test_cognitive_cycle_preserves_sensor_context(self):
-        runtime = TranscendingRuntime()
+        runtime = TranscendingRuntime(cognitive=FakeCognitive())
 
         runtime.process_sensor(
             sensor="camera",
@@ -30,7 +31,7 @@ class TestCognitiveExperienceMetadata(unittest.TestCase):
         )
 
     def test_audio_context_reaches_cognitive_cycle(self):
-        runtime = TranscendingRuntime()
+        runtime = TranscendingRuntime(cognitive=FakeCognitive())
 
         runtime.process_sensor(
             sensor="microphone",

@@ -1,11 +1,12 @@
 import unittest
 
 from runtime.runtime import TranscendingRuntime
+from tests.cognitive_test_helper import FakeCognitive
 
 
 class TestRuntimeSensoryInput(unittest.TestCase):
     def test_camera_input_reaches_memory(self):
-        runtime = TranscendingRuntime()
+        runtime = TranscendingRuntime(cognitive=FakeCognitive())
 
         result = runtime.process_sensor(
             sensor="camera",
@@ -21,7 +22,7 @@ class TestRuntimeSensoryInput(unittest.TestCase):
         )
 
     def test_microphone_input_reaches_memory(self):
-        runtime = TranscendingRuntime()
+        runtime = TranscendingRuntime(cognitive=FakeCognitive())
 
         result = runtime.process_sensor(
             sensor="microphone",

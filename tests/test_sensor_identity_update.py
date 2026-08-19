@@ -1,11 +1,12 @@
 import unittest
 
 from runtime.runtime import TranscendingRuntime
+from tests.cognitive_test_helper import FakeCognitive
 
 
 class TestSensorIdentityUpdate(unittest.TestCase):
     def test_camera_experience_updates_person_a_state(self):
-        runtime = TranscendingRuntime()
+        runtime = TranscendingRuntime(cognitive=FakeCognitive())
 
         initial_identity = runtime.identity.snapshot()
         initial_personality = runtime.personality.snapshot()

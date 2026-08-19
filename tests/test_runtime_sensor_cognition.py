@@ -1,11 +1,12 @@
 import unittest
 
 from runtime.runtime import TranscendingRuntime
+from tests.cognitive_test_helper import FakeCognitive
 
 
 class TestRuntimeSensorCognition(unittest.TestCase):
     def test_camera_sensor_reaches_cognitive_loop(self):
-        runtime = TranscendingRuntime()
+        runtime = TranscendingRuntime(cognitive=FakeCognitive())
 
         result = runtime.process_sensor(
             sensor="camera",
@@ -26,7 +27,7 @@ class TestRuntimeSensorCognition(unittest.TestCase):
         self.assertTrue(cycle.experience_recorded)
 
     def test_microphone_sensor_reaches_cognitive_loop(self):
-        runtime = TranscendingRuntime()
+        runtime = TranscendingRuntime(cognitive=FakeCognitive())
 
         result = runtime.process_sensor(
             sensor="microphone",

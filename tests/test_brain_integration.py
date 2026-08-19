@@ -1,18 +1,19 @@
 import unittest
 
 from runtime.runtime import TranscendingRuntime
+from tests.cognitive_test_helper import FakeCognitive
 
 
 class TestBrainIntegration(unittest.TestCase):
     def test_newborn_runtime_starts_empty(self):
-        runtime = TranscendingRuntime()
+        runtime = TranscendingRuntime(cognitive=FakeCognitive())
 
         self.assertEqual(runtime.identity.state.stage, "NEWBORN")
         self.assertEqual(runtime.identity.state.experience, 0)
         self.assertTrue(runtime.memory.is_empty())
 
     def test_cognitive_cycle_creates_experience(self):
-        runtime = TranscendingRuntime()
+        runtime = TranscendingRuntime(cognitive=FakeCognitive())
 
         cycle = runtime.cognitive_loop.process("hello brain")
 
@@ -30,7 +31,7 @@ class TestBrainIntegration(unittest.TestCase):
         )
 
     def test_experience_updates_identity(self):
-        runtime = TranscendingRuntime()
+        runtime = TranscendingRuntime(cognitive=FakeCognitive())
 
         runtime.cognitive_loop.process("first experience")
 
@@ -40,7 +41,7 @@ class TestBrainIntegration(unittest.TestCase):
         )
 
     def test_experience_updates_self_model(self):
-        runtime = TranscendingRuntime()
+        runtime = TranscendingRuntime(cognitive=FakeCognitive())
 
         runtime.cognitive_loop.process("self model experience")
 
@@ -50,7 +51,7 @@ class TestBrainIntegration(unittest.TestCase):
         )
 
     def test_experience_updates_personality(self):
-        runtime = TranscendingRuntime()
+        runtime = TranscendingRuntime(cognitive=FakeCognitive())
 
         before = runtime.personality.snapshot()
 
@@ -68,7 +69,7 @@ class TestBrainIntegration(unittest.TestCase):
         )
 
     def test_development_records_evidence(self):
-        runtime = TranscendingRuntime()
+        runtime = TranscendingRuntime(cognitive=FakeCognitive())
 
         runtime.cognitive_loop.process("development experience")
 
@@ -81,7 +82,7 @@ class TestBrainIntegration(unittest.TestCase):
         )
 
     def test_identity_continuity_records_experience(self):
-        runtime = TranscendingRuntime()
+        runtime = TranscendingRuntime(cognitive=FakeCognitive())
 
         runtime.cognitive_loop.process("continuity experience")
 
@@ -93,7 +94,7 @@ class TestBrainIntegration(unittest.TestCase):
         )
 
     def test_runtime_snapshot_contains_brain_state(self):
-        runtime = TranscendingRuntime()
+        runtime = TranscendingRuntime(cognitive=FakeCognitive())
 
         runtime.cognitive_loop.process("snapshot experience")
 
@@ -112,6 +113,14 @@ class TestBrainIntegration(unittest.TestCase):
         }
 
         self.assertTrue(required.issubset(snapshot.keys()))
+
+
+    def test_runtime_uses_gemma_cognitive_engine(self):
+        from runtime.gemma_cognitive_engine import GemmaCognitiveEngine
+
+        runtime = TranscendingRuntime()
+
+        self.assertIsInstance(runtime.cognitive, GemmaCognitiveEngine)
 
 
 if __name__ == "__main__":
