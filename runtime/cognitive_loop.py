@@ -79,10 +79,11 @@ class CognitiveLoop:
         if not attention_required:
             decision = "NO_ACTION"
         else:
-            decision = self.cognitive.process(
+            reasoning = self.cognitive.process(
                 perception.normalized_input,
                 record_experience=False,
             )
+            decision = "RESPOND" if reasoning else "NO_ACTION"
 
         action = self.action.execute(decision)
 
@@ -115,7 +116,7 @@ class CognitiveLoop:
         cycle = CognitiveCycle(
             input_text=perception.normalized_input,
             recalled=perception.normalized_input,
-            reasoning=perception.normalized_input,
+            reasoning=reasoning if attention_required else "",
             decision=decision,
             experience_recorded=experience_recorded,
             perception=perception,

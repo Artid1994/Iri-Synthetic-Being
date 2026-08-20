@@ -68,3 +68,38 @@ class TestGemmaCognitiveEngine(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+class TestGemmaThoughtState(unittest.TestCase):
+    def test_process_preserves_generated_thought(self):
+        engine = GemmaCognitiveEngine(
+            inference=lambda prompt: "internal thought: tree detected",
+        )
+
+        engine.process("person A sees tree")
+
+        self.assertEqual(
+            engine.snapshot()["last_thought"],
+            "internal thought: tree detected",
+        )
+
+
+if __name__ == "__main__":
+    unittest.main()
+
+class TestGemmaEmptyThought(unittest.TestCase):
+    def test_empty_thought_is_preserved_as_empty(self):
+        engine = GemmaCognitiveEngine(
+            inference=lambda prompt: "",
+        )
+
+        result = engine.process("person A sees tree")
+
+        self.assertEqual(result, "NO_ACTION")
+        self.assertEqual(
+            engine.snapshot()["last_thought"],
+            "",
+        )
+
+
+if __name__ == "__main__":
+    unittest.main()
