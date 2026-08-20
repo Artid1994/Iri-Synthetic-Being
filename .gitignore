@@ -4,3 +4,5 @@ __pycache__/
 
 /cognitive_shell_import/
 /COGNITIVE_SHELL_SOURCE_FILES.txt
+
+.project_backups/
