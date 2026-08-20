@@ -1,3 +1,6 @@
 .venv/
 __pycache__/
 *.pyc
+
+/cognitive_shell_import/
+/COGNITIVE_SHELL_SOURCE_FILES.txt
