@@ -63,6 +63,7 @@ class TranscendingRuntime:
             self.personality,
             self.self_model,
             self.development,
+            self.prediction,
         )
 
 

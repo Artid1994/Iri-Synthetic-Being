@@ -6,6 +6,7 @@ from runtime.action import Action
 from runtime.action import ActionModule
 from runtime.current_state import CurrentState
 from runtime.current_state import CurrentStateModule
+from runtime.prediction import Prediction
 from runtime.perception import Perception
 from runtime.perception import PerceptionModule
 
@@ -32,12 +33,14 @@ class CognitiveLoop:
         personality,
         self_model,
         development,
+        prediction=None,
     ) -> None:
         self.cognitive = cognitive
         self.learning = learning
         self.personality = personality
         self.self_model = self_model
         self.development = development
+        self.prediction = prediction or Prediction()
 
         self.perception = PerceptionModule()
         self.current_state = CurrentStateModule()
@@ -84,6 +87,9 @@ class CognitiveLoop:
                 record_experience=False,
             )
             decision = "RESPOND" if reasoning else "NO_ACTION"
+
+            if reasoning:
+                self.prediction.record(reasoning)
 
         action = self.action.execute(decision)
 
