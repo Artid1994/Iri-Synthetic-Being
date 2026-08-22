@@ -1,0 +1,20 @@
+[Unit]
+Description=The Transcending Form Autonomous Runtime
+After=network.target
+
+[Service]
+Type=simple
+Environment=PYTHONUNBUFFERED=1
+WorkingDirectory=/home/artid1994/Projects/THE_TRANSCENDING_FORM
+ExecStart=/home/artid1994/Projects/THE_TRANSCENDING_FORM/.venv/bin/python tools/autonomous_service_launcher.py
+
+Restart=no
+
+KillSignal=SIGTERM
+TimeoutStopSec=30
+
+StandardOutput=append:/home/artid1994/Projects/THE_TRANSCENDING_FORM/logs/service.log
+StandardError=append:/home/artid1994/Projects/THE_TRANSCENDING_FORM/logs/service.error.log
+
+[Install]
+WantedBy=multi-user.target
