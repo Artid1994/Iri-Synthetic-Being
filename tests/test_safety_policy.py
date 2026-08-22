@@ -143,5 +143,44 @@ class TestSafetyPolicy(unittest.TestCase):
         )
 
 
+    def test_snapshot_restore_preserves_learned_safety_state(self):
+        policy = SafetyPolicy()
+
+        policy.observe(
+            SafetyEvent(
+                action="move",
+                value=(2.0, 0.0),
+                reason="move_limit_exceeded",
+            )
+        )
+
+        snapshot = policy.persistence_snapshot()
+
+        restored = SafetyPolicy()
+        restored.restore(snapshot)
+
+        self.assertTrue(
+            restored.evaluate("move_limit_exceeded").blocked
+        )
+
+        self.assertTrue(
+            restored.evaluate_command(
+                BodyCommand(
+                    action="move",
+                    value=(2.0, 0.0),
+                )
+            ).blocked
+        )
+
+        self.assertTrue(
+            restored.evaluate_learned_action(
+                BodyCommand(
+                    action="move",
+                    value=(1.0, 0.0),
+                )
+            ).blocked
+        )
+
+
 if __name__ == "__main__":
     unittest.main()

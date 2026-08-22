@@ -27,6 +27,8 @@ from runtime.sensor_source import MockSensor
 from runtime.robot_adapter import RobotAdapter
 from runtime.speech_output import SpeechOutput
 from runtime.voice_conversation import VoiceConversation
+from ttf_approval_gate import ActionState, ApprovalAction, ApprovalGate
+from ttf_execution_adapter import ExecutionAdapter
 
 
 class TranscendingRuntime:
@@ -54,6 +56,10 @@ class TranscendingRuntime:
             memory=self.memory,
         )
         self.autonomous_controller = AutonomousController(self.embodiment)
+        self.approval_gate = ApprovalGate()
+        self.pending_approval = None
+        self.pending_command = None
+        self.execution_adapter = ExecutionAdapter(self.approval_gate)
         self._sync_safety_policy()
         self.robot_adapter = RobotAdapter()
         self.speech_output = SpeechOutput()
@@ -161,51 +167,87 @@ class TranscendingRuntime:
                 "learning": None,
             }
 
-        feedback = self.act(command)
+        approval = self.propose_action(command)
 
-        if feedback is None:
+        if approval is None:
             return {
                 "observation": observation,
                 "reasoning": cycle.reasoning,
                 "decision": cycle.decision,
                 "command": command,
+                "approval": None,
                 "feedback": None,
                 "evaluation": None,
                 "learning": None,
             }
-
-        outcome = feedback.value
-
-        if (
-            feedback.success
-            and command.action == "respond"
-            and outcome is None
-        ):
-            outcome = cycle.reasoning
-
-        evaluation = self.prediction.evaluate(
-            str(outcome)
-        )
-
-        prediction = self.prediction.state.last_prediction
-
-        learning = None
-
-        if prediction is not None:
-            learning = self.learning.learn_from_prediction(
-                prediction,
-                evaluation,
-            )
 
         return {
             "observation": observation,
             "reasoning": cycle.reasoning,
             "decision": cycle.decision,
             "command": command,
-            "feedback": feedback,
-            "evaluation": evaluation,
-            "learning": learning,
+            "approval": approval,
+            "feedback": None,
+            "evaluation": None,
+            "learning": None,
         }
+
+    def propose_action(self, command):
+        if command is None:
+            return None
+        action = ApprovalAction(action_type=command.action, path="")
+        if not self.approval_gate.validate(action):
+            return None
+        self.pending_approval = action
+        self.pending_command = command
+        return action
+
+    def approve_pending_action(self):
+        if self.pending_approval is None:
+            return False
+        return self.approval_gate.approve(self.pending_approval)
+
+    def reject_pending_action(self):
+        if self.pending_approval is None:
+            return False
+        return self.approval_gate.reject(self.pending_approval)
+
+    def execute_pending_action(self):
+        if self.pending_approval is None or self.pending_command is None:
+            return None
+
+        if not self.approval_gate.authorize_execution(
+            self.pending_approval
+        ):
+            return None
+
+        result = self.execution_adapter.execute(
+            self.pending_approval,
+            lambda action: self.robot_adapter.execute(
+                self.pending_command
+            ),
+        )
+
+        self.pending_approval = None
+        self.pending_command = None
+
+        return result
+
+    def complete_pending_action(self):
+        command = self.pending_command
+        if command is None:
+            return None
+        result = self.execute_pending_action()
+        if result is None:
+            return None
+        success, execution = result
+        from runtime.robot_feedback import RobotFeedback
+        return RobotFeedback(
+            success=execution.success,
+            action=execution.action,
+            value=execution.value,
+            error=execution.error,
+        )
 
     def act(self, command):
         if not self.autonomous_controller.allowed(command):
@@ -242,6 +284,13 @@ class TranscendingRuntime:
             value=result.value,
             error=result.error,
         )
+
+    def complete_approved_cycle(self):
+        feedback = self.complete_pending_action()
+        if feedback is None:
+            return None
+        evaluation = self.process_feedback(feedback)
+        return feedback, evaluation
 
     def process_feedback(self, feedback):
         if feedback is None:

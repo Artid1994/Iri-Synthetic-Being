@@ -1,0 +1,12 @@
+- [1787408288] Runtime error: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+- [1787408300] Runtime error: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+- [1787408312] Runtime error: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+- [1787414394] AI returned invalid XML.
+- [1787414837] AI returned invalid XML.
+- [1787415111] AI returned invalid XML: unclosed CDATA section: line 17, column 15
+- [1787415438] READY
+- [1787415942] READY
+- [1787416039] READY
+- [1787416136] READY
+- [1787416325] READY
+- [1787419197] REGRESSION_TEST_MEMORY_OK

@@ -114,3 +114,68 @@ class SafetyPolicy:
 
     def snapshot(self) -> tuple[str, ...]:
         return tuple(sorted(self._blocked_reasons))
+
+    def persistence_snapshot(self) -> dict:
+        commands = []
+
+        for action, value in sorted(
+            self._blocked_commands,
+            key=lambda item: (item[0], repr(item[1])),
+        ):
+            commands.append(
+                {
+                    "action": action,
+                    "value": value,
+                }
+            )
+
+        return {
+            "blocked_reasons": tuple(
+                sorted(self._blocked_reasons)
+            ),
+            "blocked_commands": commands,
+            "learned_actions": tuple(
+                sorted(self._learned_actions)
+            ),
+        }
+
+    def restore(self, data: dict) -> None:
+        if not isinstance(data, dict):
+            raise TypeError("data must be a dict")
+
+        blocked_reasons = data.get(
+            "blocked_reasons",
+            (),
+        )
+        blocked_commands = data.get(
+            "blocked_commands",
+            (),
+        )
+        learned_actions = data.get(
+            "learned_actions",
+            (),
+        )
+
+        self._blocked_reasons = set(blocked_reasons)
+        self._learned_actions = set(learned_actions)
+        self._blocked_commands = set()
+
+        for item in blocked_commands:
+            if not isinstance(item, dict):
+                raise TypeError(
+                    "blocked command must be a dict"
+                )
+
+            action = item.get("action")
+            value = item.get("value")
+
+            try:
+                hash(value)
+            except TypeError as exc:
+                raise TypeError(
+                    "blocked command value must be hashable"
+                ) from exc
+
+            self._blocked_commands.add(
+                (action, value)
+            )
