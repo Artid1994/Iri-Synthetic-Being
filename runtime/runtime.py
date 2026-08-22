@@ -432,6 +432,10 @@ class TranscendingRuntime:
             for item in data.get("teachings", [])
         ]
 
+        safety_policy = data.get("safety_policy")
+        if isinstance(safety_policy, dict):
+            self.safety_policy.restore(safety_policy)
+
     def snapshot(self) -> dict:
         return {
             "system": self.system.snapshot(),
@@ -454,5 +458,5 @@ class TranscendingRuntime:
             "identity_representation": self.identity_representation,
             "development": self.development.assess(),
             "development_history": self.development.history_snapshot(),
-            "safety_policy": self.safety_policy.snapshot(),
+            "safety_policy": self.safety_policy.persistence_snapshot(),
         }
