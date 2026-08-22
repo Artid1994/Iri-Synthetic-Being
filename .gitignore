@@ -6,3 +6,26 @@ __pycache__/
 /COGNITIVE_SHELL_SOURCE_FILES.txt
 
 .project_backups/
+
+# TTF development checkpoints / temporary backups
+*.v0.1_legacy.py
+*.v0.2.baseline.py
+*.v0.2.pre_*.py
+*.v0.2.pre_*.md
+*.v0.2.approved_checkpoint.py
+*.v0.2.baseline.md
+*.v0.1.backup.md
+
+# TTF local development sandbox
+ttf_sandbox/
+
+# TTF baseline artifacts
+*.v0.1.baseline.py
+*.v0.2.baseline.py
+*.v0.2.baseline.md
+
+# TTF uppercase baseline artifacts
+*.V0.2.baseline.md
+
+# TTF plan baseline artifacts
+TTF_V0.2_PLAN.baseline.md
