@@ -10,56 +10,84 @@ class FakeCognitive:
 
 
 class FailingHardware:
+    def __init__(self):
+        self.calls = []
+
     def execute(self, action, value):
+        self.calls.append((action, value))
         return False
 
 
 class TestRuntimeAutonomousFailure(unittest.TestCase):
-    def test_failed_action_produces_failed_feedback_and_correction(self):
+    def test_failed_action_requires_approval_then_produces_failed_feedback(self):
         from runtime.runtime import TranscendingRuntime
+
+        hardware = FailingHardware()
 
         runtime = TranscendingRuntime(
             cognitive=FakeCognitive()
         )
 
-        runtime.robot_adapter = RobotAdapter(
-            FailingHardware()
-        )
-
+        runtime.robot_adapter = RobotAdapter(hardware)
         runtime.autonomous_controller.enable()
 
         result = runtime.autonomous_step(
             "person A sees tree"
         )
 
+        self.assertIsNotNone(result["command"])
+        self.assertIsNotNone(result["approval"])
+        self.assertEqual(
+            result["approval"].state.value,
+            "VALIDATED",
+        )
+
+        self.assertIsNone(result["feedback"])
+        self.assertEqual(hardware.calls, [])
+
+        self.assertTrue(
+            runtime.approve_pending_action()
+        )
+
+        completed = runtime.complete_approved_cycle()
+
+        self.assertIsNotNone(completed)
+
+        feedback, evaluation = completed
+
         self.assertIsInstance(
-            result["feedback"],
+            feedback,
             RobotFeedback,
         )
 
         self.assertFalse(
-            result["feedback"].success
+            feedback.success
         )
 
         self.assertIsNotNone(
-            result["evaluation"]
+            evaluation
         )
 
         self.assertFalse(
-            result["evaluation"].correct
+            evaluation.correct
         )
 
         self.assertIsNotNone(
-            result["learning"]
+            runtime.learning.last_evaluation
         )
 
         self.assertFalse(
-            result["learning"].accepted
+            runtime.learning.last_evaluation.accepted
         )
 
         self.assertEqual(
-            result["learning"].reason,
+            runtime.learning.last_evaluation.reason,
             "PREDICTION_CORRECTION_REQUIRED",
+        )
+
+        self.assertEqual(
+            hardware.calls,
+            [("respond", None)],
         )
 
 
