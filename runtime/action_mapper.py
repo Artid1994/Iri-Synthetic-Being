@@ -17,4 +17,10 @@ class ActionMapper:
                 value=(1.0, 0.0),
             )
 
+        if decision == "RESPOND":
+            return BodyCommand(
+                action="respond",
+                value=None,
+            )
+
         return None

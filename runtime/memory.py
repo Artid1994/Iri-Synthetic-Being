@@ -5,6 +5,7 @@ from dataclasses import dataclass, field
 from runtime.recall_index import RecallIndex
 from runtime.semantic_index import SemanticIndex
 from runtime.experience import Experience
+from runtime.safety_event import SafetyEvent
 
 
 @dataclass
@@ -13,6 +14,7 @@ class MemoryState:
     episodic: list = field(default_factory=list)
     semantic: list = field(default_factory=list)
     experiences: list[Experience] = field(default_factory=list)
+    safety_events: list[SafetyEvent] = field(default_factory=list)
 
 
 class Memory:
@@ -27,6 +29,7 @@ class Memory:
             episodic=list(self.state.episodic),
             semantic=list(self.state.semantic),
             experiences=list(self.state.experiences),
+            safety_events=list(self.state.safety_events),
         )
 
     def add_experience(self, experience: str) -> None:
@@ -67,6 +70,13 @@ class Memory:
 
     def semantic_contains(self, knowledge: str) -> bool:
         return self._semantic_index.contains(knowledge)
+
+
+    def add_safety_event(self, event: SafetyEvent) -> None:
+        if not isinstance(event, SafetyEvent):
+            raise TypeError("event must be a SafetyEvent")
+
+        self.state.safety_events.append(event)
 
     def import_structured(self, structured_memory) -> None:
         for experience in structured_memory.episodic:

@@ -1,21 +1,81 @@
 from __future__ import annotations
 
+from runtime.action_mapper import ActionMapper
+from runtime.autonomous_gate import AutonomousGate
 from runtime.body_action import BodyAction
 from runtime.body_command import BodyCommand
 from runtime.body_command_adapter import BodyCommandAdapter
-from runtime.action_mapper import ActionMapper
-from runtime.autonomous_gate import AutonomousGate
-from runtime.virtual_body import VirtualBody
+from runtime.cognitive_safety_gate import CognitiveSafetyGate
+from runtime.memory import Memory
 from runtime.robot_feedback import RobotFeedback
+from runtime.safety_event import SafetyEvent
+from runtime.virtual_body import VirtualBody
 
 
 class EmbodimentLoop:
-    def __init__(self, virtual_body: VirtualBody) -> None:
+    def __init__(
+        self,
+        virtual_body: VirtualBody,
+        memory: Memory | None = None,
+    ) -> None:
         self.virtual_body = virtual_body
+        self.memory = memory
         self.autonomous_gate = AutonomousGate()
+        self.cognitive_safety_gate = CognitiveSafetyGate()
 
-    def autonomous_allowed(self, command: BodyCommand | None) -> bool:
-        return self.autonomous_gate.allow(command)
+    def autonomous_allowed(
+        self,
+        command: BodyCommand | None,
+    ) -> bool:
+        if not self.autonomous_gate.allow(command):
+            return False
+
+        safety = self.cognitive_safety_gate.evaluate(command)
+
+        if not safety.allowed:
+            self._record_safety_event(
+                command,
+                safety.reason,
+            )
+
+        return safety.allowed
+
+    def safety_check(
+        self,
+        command: BodyCommand | None,
+    ):
+        safety = self.cognitive_safety_gate.evaluate(command)
+
+        if not safety.allowed:
+            self._record_safety_event(
+                command,
+                safety.reason,
+            )
+
+        return safety
+
+    def _record_safety_event(
+        self,
+        command: BodyCommand | None,
+        reason: str,
+    ) -> None:
+        if self.memory is None:
+            return
+
+        if command is None:
+            action = ""
+            value = None
+        else:
+            action = command.action
+            value = command.value
+
+        self.memory.add_safety_event(
+            SafetyEvent(
+                action=action,
+                value=value,
+                reason=reason,
+            )
+        )
 
     def observe(self):
         return self.virtual_body.world_model.snapshot()
@@ -76,8 +136,20 @@ class EmbodimentLoop:
 
         return self.observe()
 
-    def execute_command(self, command: BodyCommand):
+    def execute_command(
+        self,
+        command: BodyCommand,
+    ):
         if command is None:
+            return self.observe()
+
+        safety = self.cognitive_safety_gate.evaluate(command)
+
+        if not safety.allowed:
+            self._record_safety_event(
+                command,
+                safety.reason,
+            )
             return self.observe()
 
         action = BodyCommandAdapter.to_body_action(command)
@@ -89,7 +161,10 @@ class EmbodimentLoop:
 
         return self.apply(action)
 
-    def ingest_feedback(self, feedback: RobotFeedback | None):
+    def ingest_feedback(
+        self,
+        feedback: RobotFeedback | None,
+    ):
         if not isinstance(feedback, RobotFeedback):
             return None
 
