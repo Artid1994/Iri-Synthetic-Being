@@ -29,6 +29,7 @@ from runtime.speech_output import SpeechOutput
 from runtime.voice_conversation import VoiceConversation
 from ttf_approval_gate import ActionState, ApprovalAction, ApprovalGate
 from ttf_execution_adapter import ExecutionAdapter
+from runtime.autonomous_policy_gate import AutonomousPolicyGate
 
 
 class TranscendingRuntime:
@@ -60,6 +61,7 @@ class TranscendingRuntime:
         self.pending_approval = None
         self.pending_command = None
         self.execution_adapter = ExecutionAdapter(self.approval_gate)
+        self.autonomous_policy = AutonomousPolicyGate()
         self._sync_safety_policy()
         self.robot_adapter = RobotAdapter()
         self.speech_output = SpeechOutput()
