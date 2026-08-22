@@ -30,6 +30,10 @@ from runtime.voice_conversation import VoiceConversation
 from ttf_approval_gate import ActionState, ApprovalAction, ApprovalGate
 from ttf_execution_adapter import ExecutionAdapter
 from runtime.autonomous_policy_gate import AutonomousPolicyGate
+from runtime.resource_guard import ResourceGuard
+from runtime.auto_cooling import AutoCoolingController
+from runtime.heartbeat import Heartbeat
+from runtime.autonomous_loop import AutonomousLoopController
 
 
 class TranscendingRuntime:
@@ -63,6 +67,10 @@ class TranscendingRuntime:
         self.execution_adapter = ExecutionAdapter(self.approval_gate)
         self.autonomous_policy = AutonomousPolicyGate()
         self.autonomous_mode = False
+        self.resource_guard = ResourceGuard()
+        self.auto_cooling = AutoCoolingController()
+        self.heartbeat = Heartbeat()
+        self.autonomous_loop = None
         self._sync_safety_policy()
         self.robot_adapter = RobotAdapter()
         self.speech_output = SpeechOutput()
@@ -104,6 +112,30 @@ class TranscendingRuntime:
     def disable_autonomous_mode(self) -> None:
         self.autonomous_mode = False
         self.autonomous_policy.disable()
+
+    def run_autonomous_step(
+        self,
+        observation,
+        memory_usage=0.0,
+    ):
+        if not self.autonomous_mode:
+            return {
+                "status": "BLOCKED",
+                "reason": "AUTONOMOUS_MODE_DISABLED",
+            }
+
+        if self.autonomous_loop is None:
+            self.autonomous_loop = AutonomousLoopController(
+                self,
+                self.resource_guard,
+                self.auto_cooling,
+                self.heartbeat,
+            )
+
+        return self.autonomous_loop.step(
+            observation,
+            memory_usage,
+        )
 
     def add_goal(self, goal: Goal) -> None:
         if not isinstance(goal, Goal):
