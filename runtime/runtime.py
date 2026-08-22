@@ -34,6 +34,8 @@ from runtime.resource_guard import ResourceGuard
 from runtime.auto_cooling import AutoCoolingController
 from runtime.heartbeat import Heartbeat
 from runtime.autonomous_loop import AutonomousLoopController
+from runtime.error_recovery import ErrorRecovery
+from runtime.heartbeat_storage import HeartbeatStorage
 
 
 class TranscendingRuntime:
@@ -70,6 +72,8 @@ class TranscendingRuntime:
         self.resource_guard = ResourceGuard()
         self.auto_cooling = AutoCoolingController()
         self.heartbeat = Heartbeat()
+        self.error_recovery = ErrorRecovery()
+        self.heartbeat_storage = HeartbeatStorage()
         self.autonomous_loop = None
         self._sync_safety_policy()
         self.robot_adapter = RobotAdapter()
@@ -130,6 +134,8 @@ class TranscendingRuntime:
                 self.resource_guard,
                 self.auto_cooling,
                 self.heartbeat,
+                self.error_recovery,
+                self.heartbeat_storage,
             )
 
         return self.autonomous_loop.step(

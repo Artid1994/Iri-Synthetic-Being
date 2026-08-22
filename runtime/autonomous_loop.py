@@ -8,13 +8,25 @@ class AutonomousLoopController:
         resource_guard,
         cooling,
         heartbeat,
+        error_recovery=None,
+        heartbeat_storage=None,
     ) -> None:
         self.runtime = runtime
         self.resource_guard = resource_guard
         self.cooling = cooling
         self.heartbeat = heartbeat
+        self.error_recovery = error_recovery
+        self.heartbeat_storage = heartbeat_storage
 
         self.cycle_count = 0
+
+    def _save_heartbeat(self):
+        if self.heartbeat_storage is None:
+            return
+
+        self.heartbeat_storage.save(
+            self.heartbeat.snapshot()
+        )
 
     def step(self, observation, memory_usage=0.0):
         resource = self.resource_guard.evaluate(
@@ -31,14 +43,38 @@ class AutonomousLoopController:
                 "PAUSED",
             )
 
+            self._save_heartbeat()
+
             return {
                 "status": "PAUSED",
                 "reason": resource.reason,
             }
 
-        result = self.runtime.autonomous_step(
-            observation
-        )
+        try:
+            result = self.runtime.autonomous_step(
+                observation
+            )
+
+        except Exception as exc:
+            if self.error_recovery is None:
+                raise
+
+            decision = self.error_recovery.handle(
+                str(exc)
+            )
+
+            self.heartbeat.record_cycle(
+                resource.level,
+                decision.action,
+            )
+
+            self._save_heartbeat()
+
+            return {
+                "status": decision.action,
+                "attempt": decision.attempt,
+                "error": decision.reason,
+            }
 
         self.cycle_count += 1
 
@@ -46,6 +82,8 @@ class AutonomousLoopController:
             resource.level,
             "RUNNING",
         )
+
+        self._save_heartbeat()
 
         return {
             "status": "RUNNING",
