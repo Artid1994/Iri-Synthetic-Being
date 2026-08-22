@@ -32,3 +32,6 @@ TTF_V0.2_PLAN.baseline.md
 
 # TTF runtime heartbeat data
 heartbeat.json
+
+# TTF runtime logs
+logs/
