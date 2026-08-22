@@ -62,6 +62,7 @@ class TranscendingRuntime:
         self.pending_command = None
         self.execution_adapter = ExecutionAdapter(self.approval_gate)
         self.autonomous_policy = AutonomousPolicyGate()
+        self.autonomous_mode = False
         self._sync_safety_policy()
         self.robot_adapter = RobotAdapter()
         self.speech_output = SpeechOutput()
@@ -95,6 +96,14 @@ class TranscendingRuntime:
             self.prediction,
         )
 
+
+    def enable_autonomous_mode(self) -> None:
+        self.autonomous_mode = True
+        self.autonomous_policy.enable()
+
+    def disable_autonomous_mode(self) -> None:
+        self.autonomous_mode = False
+        self.autonomous_policy.disable()
 
     def add_goal(self, goal: Goal) -> None:
         if not isinstance(goal, Goal):
