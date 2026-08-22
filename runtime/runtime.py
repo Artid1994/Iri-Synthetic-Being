@@ -192,11 +192,12 @@ class TranscendingRuntime:
                 "reason": "AUTONOMOUS_MODE_DISABLED",
             }
 
-        self.start_autonomous_runner(
-            observation,
-            max_cycles,
-            memory_usage,
-        )
+        if self.autonomous_runner is None:
+            self.start_autonomous_runner(
+                observation,
+                0,
+                memory_usage,
+            )
 
         if self.safe_runtime_control is None:
             self.safe_runtime_control = SafeRuntimeControl(
