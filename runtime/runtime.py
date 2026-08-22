@@ -37,6 +37,7 @@ from runtime.autonomous_loop import AutonomousLoopController
 from runtime.error_recovery import ErrorRecovery
 from runtime.heartbeat_storage import HeartbeatStorage
 from runtime.autonomous_runner import AutonomousRunner
+from runtime.safe_runtime_control import SafeRuntimeControl
 
 
 class TranscendingRuntime:
@@ -77,6 +78,7 @@ class TranscendingRuntime:
         self.heartbeat_storage = HeartbeatStorage()
         self.autonomous_loop = None
         self.autonomous_runner = None
+        self.safe_runtime_control = None
         self._sync_safety_policy()
         self.robot_adapter = RobotAdapter()
         self.speech_output = SpeechOutput()
@@ -173,6 +175,35 @@ class TranscendingRuntime:
             )
 
         return self.autonomous_runner.run(
+            observation,
+            max_cycles,
+            memory_usage,
+        )
+
+    def start_safe_autonomous_runtime(
+        self,
+        observation,
+        max_cycles=1,
+        memory_usage=0.0,
+    ):
+        if not self.autonomous_mode:
+            return {
+                "status": "BLOCKED",
+                "reason": "AUTONOMOUS_MODE_DISABLED",
+            }
+
+        self.start_autonomous_runner(
+            observation,
+            max_cycles,
+            memory_usage,
+        )
+
+        if self.safe_runtime_control is None:
+            self.safe_runtime_control = SafeRuntimeControl(
+                self.autonomous_runner
+            )
+
+        return self.safe_runtime_control.start(
             observation,
             max_cycles,
             memory_usage,
