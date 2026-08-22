@@ -38,6 +38,7 @@ from runtime.error_recovery import ErrorRecovery
 from runtime.heartbeat_storage import HeartbeatStorage
 from runtime.autonomous_runner import AutonomousRunner
 from runtime.safe_runtime_control import SafeRuntimeControl
+from runtime.process_guard import ProcessGuard
 
 
 class TranscendingRuntime:
@@ -76,6 +77,10 @@ class TranscendingRuntime:
         self.heartbeat = Heartbeat()
         self.error_recovery = ErrorRecovery()
         self.heartbeat_storage = HeartbeatStorage()
+        self.process_guard = ProcessGuard(
+            self.heartbeat_storage,
+            self.heartbeat,
+        )
         self.autonomous_loop = None
         self.autonomous_runner = None
         self.safe_runtime_control = None
@@ -256,6 +261,14 @@ class TranscendingRuntime:
     def _sync_safety_policy(self) -> None:
         for event in self.memory.state.safety_events:
             self.safety_policy.observe(event)
+
+    def shutdown(
+        self,
+        reason: str = "MANUAL",
+    ) -> None:
+        self.process_guard.request_shutdown(
+            reason
+        )
 
     def speak(self, text: str) -> bool:
         return self.speech_output.speak(text)
