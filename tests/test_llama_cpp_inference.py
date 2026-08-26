@@ -13,7 +13,7 @@ class TestLlamaCppInference(unittest.TestCase):
             return "internal thought"
 
         inference = LlamaCppInference(
-            model_path="/models/gemma.gguf",
+            model_path="/models/qwen2.5-coder.gguf",
             executable="/bin/llama-completion",
             runner=fake_runner,
         )
@@ -25,24 +25,22 @@ class TestLlamaCppInference(unittest.TestCase):
             calls,
             [[
                 "/bin/llama-completion",
-                "-m", "/models/gemma.gguf",
-                "-t", "1",
-                "-c", "256",
+                "-m", "/models/qwen2.5-coder.gguf",
+                "-t", "2",
+                "-c", "192",
                 "-n", "8",
-                "-no-cnv",
                 "-st",
                 "-p", "person A sees tree",
             ]],
         )
 
-
     @patch("runtime.llama_cpp_inference.subprocess.run")
     def test_subprocess_runner_returns_stdout(self, mock_run):
         mock_run.return_value.stdout = "model output\n"
         mock_run.return_value.stderr = "llama debug log"
 
         inference = LlamaCppInference(
-            model_path="/models/gemma.gguf",
+            model_path="/models/qwen2.5-coder.gguf",
             executable="/bin/llama-completion",
         )
 
@@ -52,44 +50,12 @@ class TestLlamaCppInference(unittest.TestCase):
         mock_run.assert_called_once()
 
         args, kwargs = mock_run.call_args
-        self.assertEqual(kwargs["capture_output"], True)
-        self.assertEqual(kwargs["text"], True)
-        self.assertEqual(kwargs["check"], True)
-        self.assertEqual(kwargs["timeout"], 60)
 
-        _, kwargs = mock_run.call_args
         self.assertEqual(kwargs["capture_output"], True)
         self.assertEqual(kwargs["text"], True)
         self.assertEqual(kwargs["check"], True)
-        self.assertEqual(kwargs["timeout"], 60)
+        self.assertEqual(kwargs["timeout"], 180)
 
 
 if __name__ == "__main__":
     unittest.main()
-
-    @patch("runtime.llama_cpp_inference.subprocess.run")
-    def test_subprocess_runner_returns_stdout(self, mock_run):
-        mock_run.return_value.stdout = "model output\n"
-        mock_run.return_value.stderr = "llama debug log"
-
-        inference = LlamaCppInference(
-            model_path="/models/gemma.gguf",
-            executable="/bin/llama-completion",
-        )
-
-        result = inference("hello")
-
-        self.assertEqual(result, "model output")
-        mock_run.assert_called_once()
-
-        args, kwargs = mock_run.call_args
-        self.assertEqual(kwargs["capture_output"], True)
-        self.assertEqual(kwargs["text"], True)
-        self.assertEqual(kwargs["check"], True)
-        self.assertEqual(kwargs["timeout"], 60)
-
-        _, kwargs = mock_run.call_args
-        self.assertEqual(kwargs["capture_output"], True)
-        self.assertEqual(kwargs["text"], True)
-        self.assertEqual(kwargs["check"], True)
-        self.assertEqual(kwargs["timeout"], 60)

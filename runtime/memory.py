@@ -3,6 +3,7 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 
 from runtime.recall_index import RecallIndex
+from runtime.association_index import AssociationIndex
 from runtime.semantic_index import SemanticIndex
 from runtime.experience import Experience
 from runtime.safety_event import SafetyEvent
@@ -22,6 +23,7 @@ class Memory:
         self.state = MemoryState()
         self._recall_index = RecallIndex()
         self._semantic_index = SemanticIndex()
+        self._association_index = AssociationIndex()
 
     def snapshot(self) -> MemoryState:
         return MemoryState(
@@ -31,6 +33,30 @@ class Memory:
             experiences=list(self.state.experiences),
             safety_events=list(self.state.safety_events),
         )
+
+    def add_working(
+        self,
+        item: str,
+        capacity: int = 7,
+    ) -> None:
+        item = item.strip()
+
+        if not item:
+            return
+
+        if capacity <= 0:
+            raise ValueError("Working memory capacity must be positive")
+
+        self.state.working.append(item)
+
+        if len(self.state.working) > capacity:
+            del self.state.working[:-capacity]
+
+    def working_memory(self) -> list:
+        return list(self.state.working)
+
+    def clear_working(self) -> None:
+        self.state.working.clear()
 
     def add_experience(self, experience: str) -> None:
         experience = experience.strip()
@@ -55,6 +81,30 @@ class Memory:
             return experience
 
         return self.state.episodic[position]
+
+    def associate(
+        self,
+        experience: str,
+        association: str,
+    ) -> None:
+        experience = experience.strip()
+        association = association.strip()
+
+        if not experience or not association:
+            return
+
+        self._association_index.add(
+            experience,
+            association,
+        )
+
+    def associations(self, experience: str) -> list[str]:
+        experience = experience.strip()
+
+        if not experience:
+            return []
+
+        return self._association_index.find(experience)
 
     def add_semantic(self, knowledge: str) -> None:
         knowledge = knowledge.strip()

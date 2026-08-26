@@ -39,6 +39,14 @@ from runtime.heartbeat_storage import HeartbeatStorage
 from runtime.autonomous_runner import AutonomousRunner
 from runtime.safe_runtime_control import SafeRuntimeControl
 from runtime.process_guard import ProcessGuard
+from runtime.goal_learning import GoalLearning
+from runtime.autonomous_step import AutonomousStep
+from runtime.research_learning import ResearchLearning
+from runtime.research_safety import ResearchSafetyGate
+from runtime.web_research import WebResearch
+from runtime.autonomous_learning import AutonomousLearning
+from brain.brain import Brain
+from runtime.self_directed_learning import SelfDirectedLearning
 
 
 class TranscendingRuntime:
@@ -46,15 +54,17 @@ class TranscendingRuntime:
         self.system = SystemMonitor()
         self.identity = Identity()
         self.memory = Memory()
+        self.brain = Brain()
         self.safety_policy = SafetyPolicy()
         self.internal_state = InternalStateManager()
         self.personality = Personality()
         self.self_model = SelfModel()
         self.cognitive = cognitive or create_cognitive_engine(
-            model_path="/home/artid1994/.local/share/ae01m/models/gemma-3-1b-it-Q4_K_M.gguf",
-            executable="/home/artid1994/.local/src/ae01m-llama.cpp/build/bin/llama-completion",
+            backend="ollama",
+            model="ae01m-qwen-fast",
         )
         self.learning = Learning(self.memory)
+        self.self_directed_learning = SelfDirectedLearning()
         self.goals: list[Goal] = []
         self.intentions: list[Intention] = []
         self.teachings: list[Teaching] = []
@@ -115,6 +125,25 @@ class TranscendingRuntime:
             self.self_model,
             self.development,
             self.prediction,
+            brain=self.brain,
+        )
+
+        self.web_research = WebResearch()
+        self.research_safety = ResearchSafetyGate()
+        self.research_learning = ResearchLearning(
+            self.learning
+        )
+        self.autonomous_learning = AutonomousLearning(
+            research=self.web_research,
+            research_learning=self.research_learning,
+            safety_gate=self.research_safety,
+        )
+        self.goal_learning = GoalLearning(
+            autonomous_learning=self.autonomous_learning,
+            development=self.development,
+        )
+        self._autonomous_step = AutonomousStep(
+            goal_learning=self.goal_learning,
         )
 
 
@@ -215,11 +244,43 @@ class TranscendingRuntime:
             memory_usage,
         )
 
+    def sync_brain_memory(self) -> int:
+        return self.brain.sync_memory(self.memory)
+
+    def create_self_directed_task(self, need: str):
+        return self.self_directed_learning.create_task(need)
+
+    def run_next_self_directed_task(self):
+        task = self.self_directed_learning.next_task()
+
+        if task is None:
+            return None
+
+        result = self.autonomous_learning.learn(task)
+
+        if result.memory_updated:
+            self.sync_brain_memory()
+
+        return type(
+            "SelfDirectedLearningResult",
+            (),
+            {
+                "task": task,
+                "learning_result": result,
+            },
+        )()
+
     def add_goal(self, goal: Goal) -> None:
         if not isinstance(goal, Goal):
             raise TypeError("goal must be a Goal")
 
         self.goals.append(goal)
+
+    def run_goal_learning_step(self, goal: Goal):
+        if not isinstance(goal, Goal):
+            raise TypeError("goal must be a Goal")
+
+        return self._autonomous_step.run(goal)
 
     def add_intention(self, intention: Intention) -> None:
         if not isinstance(intention, Intention):
@@ -454,10 +515,13 @@ class TranscendingRuntime:
         if prediction is None:
             return evaluation
 
-        self.learning.learn_from_prediction(
+        learning_result = self.learning.learn_from_prediction(
             prediction,
             evaluation,
         )
+
+        if learning_result.accepted:
+            self.sync_brain_memory()
 
         return evaluation
 
@@ -485,11 +549,16 @@ class TranscendingRuntime:
         if not perception.has_input:
             return False
 
+        cycle = self.cognitive_loop.process(
+            perception.normalized_input
+        )
+
         experience = Experience(
             source=reading.sensor,
             content=perception.normalized_input,
             timestamp=reading.timestamp,
             modality=modality,
+            salience=cycle.salience,
         )
 
         self.last_experience = experience
@@ -498,16 +567,13 @@ class TranscendingRuntime:
             experience
         )
 
-        self.cognitive_loop.process(
-            experience.content
-        )
-
         return True
 
     def import_human_data(self, data: HumanData) -> None:
         structured = self.memory_processor.process(data)
 
         self.memory.import_structured(structured)
+        self.sync_brain_memory()
         self.human_data = data
         self.identity_representation = (
             IdentityRepresentation.from_structured_memory(structured)
@@ -585,6 +651,7 @@ class TranscendingRuntime:
             "system": self.system.snapshot(),
             "identity": self.identity.snapshot(),
             "memory": self.memory.snapshot(),
+            "brain": self.brain.stats(),
             "internal_state": self.internal_state.snapshot(),
             "personality": self.personality.snapshot(),
             "self_model": self.self_model.snapshot(),

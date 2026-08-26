@@ -38,6 +38,10 @@ class FakeCognitive:
         self.calls.append((user_input, record_experience))
         return "RESPOND"
 
+    def think(self, text, context=""):
+        self.calls.append((text, context))
+        return "RESPOND"
+
 
 class TestGemmaCognitiveLoopIntegration(unittest.TestCase):
     def test_cognitive_loop_calls_injected_cognitive_engine(self):
@@ -54,9 +58,14 @@ class TestGemmaCognitiveLoopIntegration(unittest.TestCase):
         cycle = loop.process("person A sees tree")
 
         self.assertEqual(cycle.decision, "RESPOND")
+        self.assertEqual(len(cognitive.calls), 1)
         self.assertEqual(
-            cognitive.calls,
-            [("person A sees tree", False)],
+            cognitive.calls[0][0],
+            "person A sees tree",
+        )
+        self.assertIn(
+            "IDENTITY_STAGE: NEWBORN",
+            cognitive.calls[0][1],
         )
 
 
@@ -66,7 +75,7 @@ if __name__ == "__main__":
 class TestGemmaThoughtPropagation(unittest.TestCase):
     def test_cognitive_engine_output_becomes_cognitive_reasoning(self):
         class ThoughtCognitive:
-            def process(self, user_input, record_experience=True):
+            def think(self, text, context=""):
                 return "internal thought: tree detected"
 
         loop = CognitiveLoop(
@@ -91,7 +100,7 @@ if __name__ == "__main__":
 class TestCognitiveReasoningContract(unittest.TestCase):
     def test_reasoning_preserves_cognitive_engine_output(self):
         class Cognitive:
-            def process(self, user_input, record_experience=True):
+            def think(self, text, context=""):
                 return "predicted: tree is near the house"
 
         loop = CognitiveLoop(

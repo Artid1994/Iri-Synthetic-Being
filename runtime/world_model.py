@@ -2,6 +2,8 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 
+from runtime.world_observation import WorldObservation
+
 
 @dataclass(frozen=True)
 class WorldState:
@@ -36,6 +38,13 @@ class WorldModel:
                 if environment is None
                 else environment
             ),
+        )
+
+    def observe(self) -> WorldObservation:
+        return WorldObservation(
+            position=self.state.position,
+            objects=self.state.objects,
+            environment=self.state.environment,
         )
 
     def snapshot(self) -> WorldState:

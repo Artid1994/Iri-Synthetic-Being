@@ -21,16 +21,16 @@ class LlamaCppInference:
             "-m",
             self.model_path,
             "-t",
-            "1",
+            "2",
             "-c",
-            "256",
+            "192",
             "-n",
             "8",
-            "-no-cnv",
             "-st",
             "-p",
             prompt,
         ]
+
         return self._runner(command)
 
     @staticmethod
@@ -40,6 +40,6 @@ class LlamaCppInference:
             capture_output=True,
             text=True,
             check=True,
-            timeout=60,
+            timeout=180,
         )
         return result.stdout.strip()
