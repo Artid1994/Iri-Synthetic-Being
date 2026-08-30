@@ -50,7 +50,7 @@ from runtime.self_directed_learning import SelfDirectedLearning
 
 
 class TranscendingRuntime:
-    def __init__(self, cognitive=None) -> None:
+    def __init__(self, cognitive=None, ollama_host=None) -> None:
         self.system = SystemMonitor()
         self.identity = Identity()
         self.memory = Memory()
@@ -62,6 +62,7 @@ class TranscendingRuntime:
         self.cognitive = cognitive or create_cognitive_engine(
             backend="ollama",
             model="qwen2.5:0.5b",
+            **({"host": ollama_host} if ollama_host else {}),
         )
         self.learning = Learning(self.memory)
         self.self_directed_learning = SelfDirectedLearning()

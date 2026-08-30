@@ -10,9 +10,10 @@ def create_cognitive_engine(
     executable: str = "",
     backend: str = "ollama",
     model: str = "qwen3.5:0.8b",
+    host: str = "http://10.74.65.85:11434",
 ) -> GemmaCognitiveEngine:
     if backend == "ollama":
-        inference = OllamaInference(model=model)
+        inference = OllamaInference(model=model, host=host)
     elif backend == "llama":
         inference = LlamaCppInference(
             model_path=model_path,
