@@ -138,6 +138,31 @@ class Memory:
         for knowledge in structured_memory.semantic:
             self.add_semantic(knowledge)
 
+    def prune(
+        self,
+        max_experiences: int = 256,
+        max_safety_events: int = 256,
+        max_episodic: int = 512,
+    ) -> None:
+        if max_experiences < 0:
+            raise ValueError("max_experiences must be non-negative")
+
+        if max_safety_events < 0:
+            raise ValueError("max_safety_events must be non-negative")
+
+        if max_episodic < 0:
+            raise ValueError("max_episodic must be non-negative")
+
+        if len(self.state.experiences) > max_experiences:
+            del self.state.experiences[:-max_experiences]
+
+        if len(self.state.episodic) > max_episodic:
+            self.state.episodic = self.state.episodic[-max_episodic:]
+            self._recall_index.rebuild(self.state.episodic)
+
+        if len(self.state.safety_events) > max_safety_events:
+            del self.state.safety_events[:-max_safety_events]
+
     def is_empty(self) -> bool:
         return not (
             self.state.working

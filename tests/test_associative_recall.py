@@ -62,3 +62,13 @@ class TestAssociativeRecall(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+    def test_contextual_recall_prefers_matching_topic(self):
+        memory = Memory()
+        recall = AssociativeRecall(memory)
+
+        memory.add_experience("ฉันชอบสีแดง")
+        memory.add_experience("วันนี้ฉันกินข้าว")
+
+        result = recall.recall("ฉันชอบสีอะไร")
+
+        self.assertEqual(result, ["ฉันชอบสีแดง"])

@@ -69,6 +69,27 @@ class TestMemoryConsolidation(unittest.TestCase):
 
         self.assertFalse(result.consolidated)
 
+    def test_prune_episodic_rebuilds_recall_index(self):
+        memory = Memory()
+
+        for i in range(5):
+            memory.add_experience(f"experience {i}")
+
+        memory.prune(max_episodic=3)
+
+        self.assertEqual(
+            memory.state.episodic,
+            ["experience 2", "experience 3", "experience 4"],
+        )
+        self.assertEqual(
+            memory.recall("experience 4"),
+            "experience 4",
+        )
+        self.assertEqual(
+            memory.recall("experience 1"),
+            "experience 1",
+        )
+
 
 if __name__ == "__main__":
     unittest.main()

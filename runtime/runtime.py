@@ -61,7 +61,7 @@ class TranscendingRuntime:
         self.self_model = SelfModel()
         self.cognitive = cognitive or create_cognitive_engine(
             backend="ollama",
-            model="ae01m-qwen-fast",
+            model="qwen2.5:0.5b",
         )
         self.learning = Learning(self.memory)
         self.self_directed_learning = SelfDirectedLearning()

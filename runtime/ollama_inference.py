@@ -8,7 +8,7 @@ class OllamaInference:
     def __init__(
         self,
         model: str = "ae01m-qwen-fast",
-        host: str = "http://127.0.0.1:11434",
+        host: str = "http://10.74.65.85:11434",
         timeout: int = 120,
     ) -> None:
         self.model = model

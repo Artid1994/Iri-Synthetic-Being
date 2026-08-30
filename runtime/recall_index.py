@@ -13,6 +13,12 @@ class RecallIndex:
     def find_latest(self, experience: str) -> int | None:
         return self._latest.get(experience)
 
+    def rebuild(self, experiences: list[str]) -> None:
+        self._latest.clear()
+
+        for position, experience in enumerate(experiences):
+            self._latest[experience] = position
+
     def __len__(self) -> int:
         return len(self._latest)
 

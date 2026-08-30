@@ -76,6 +76,10 @@ class AutonomousLoopController:
                 "error": decision.reason,
             }
 
+        memory = getattr(self.runtime, "memory", None)
+        if memory is not None:
+            memory.prune()
+
         self.cycle_count += 1
 
         self.heartbeat.record_cycle(
