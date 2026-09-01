@@ -267,3 +267,40 @@ Unrelated untracked files remain outside this checkpoint:
 
 ยังไม่ถือเป็นการยืนยันผลทางฟิสิกส์
 และยังไม่ได้ทดสอบ autonomous multi-cycle
+
+---
+
+## CP11 — Real 2-Machine Research Cycle Verified
+
+### Environment
+- เครื่อง 2: Python Research Runtime
+- เครื่อง 1: Ollama
+- Ollama host: `10.74.65.85:11434`
+- Model: `qwen2.5:0.5b`
+
+### Verification
+เครื่อง 2 สามารถเรียก Ollama เครื่อง 1 ได้จริง
+
+AI ตอบ Research Proposal ตาม format ที่กำหนด:
+
+`Hypothesis: coherence decreases with coupling`
+
+`Model Proposal: Exponential model`
+
+### Research Cycle Result
+
+`status = COMPLETED`
+
+`model = exponential`
+
+`error = 0.021072181397545926`
+
+### CP11 Status
+
+**PASSED**
+
+ยืนยันการทำงานจริงของ:
+
+`Machine 2 → Network → Machine 1 Ollama → AI Proposal → Proposal Parsing → Model Validation → Numerical Evaluation`
+
+ยังไม่เปิด Autonomous Research Loop

@@ -212,7 +212,16 @@ Git checkpoint ล่าสุด:
 
 ## CP11 — Real 2-Machine Research Cycle
 
-สถานะ: ⬜ WAITING
+สถานะ: ✅ COMPLETED
+
+หลักฐาน:
+- เครื่อง 2 → เครื่อง 1 Ollama ✅
+- `qwen2.5:0.5b` inference จริง ✅
+- Research Proposal parsing ✅
+- Model validation ✅
+- Numerical evaluation ✅
+- Result: `COMPLETED`
+- Error: `0.021072181397545926`
 
 เงื่อนไข:
 - เครื่อง 1 เปิด
