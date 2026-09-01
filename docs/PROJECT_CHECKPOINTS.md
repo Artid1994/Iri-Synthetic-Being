@@ -240,65 +240,94 @@ Pipeline:
 
 ## CP12 — Research Cycle Integration
 
-สถานะ: ⬜ TODO
+สถานะ: ✅ COMPLETED
 
-รวม:
+รวมระบบ:
 
 Research History
 + NumericalResearch
 + AI Proposal
 + Numerical Evaluation
 
-ให้กลายเป็น research cycle ที่ตรวจสอบย้อนหลังได้
+สิ่งที่ยืนยัน:
+- NumericalResearch บันทึกผลลง ExperimentHistory
+- รองรับหลาย research cycles
+- History แยก experiment_id ของแต่ละ cycle
+- History save/load รักษาข้อมูลหลาย cycles
+- failed proposal ไม่ถูกบันทึกเป็นผลสำเร็จ
 
 ---
 
 ## CP13 — Autonomous Research Loop
 
-สถานะ: ⬜ TODO
+สถานะ: ✅ COMPLETED
 
-ทำให้ระบบสามารถ:
+สร้าง:
+- `runtime/research_loop.py`
+
+ระบบทำงาน:
 
 cycle
-→ summary
+→ research summary
 → AI proposal
 → validation
-→ experiment
+→ numerical evaluation
 → history
+→ previous result
 → next cycle
 
-โดยมี:
-- safety gate
-- validation
-- stop condition
-- error handling
+สิ่งที่ยืนยัน:
+- ส่งผลของ cycle ก่อนหน้าเข้า cycle ถัดไป
+- `previous_result` ถูกส่งเข้า ResearchPrompt จริง
+- รองรับหลาย cycles
+- หยุดเมื่อ `FAILED`
+- หยุดเมื่อ `ERROR`
+- หยุดเมื่อ `REJECTED`
+- ไม่บันทึกผล `REJECTED` ลง History
 
-ยังไม่ควรเปิด loop จนกว่า CP10–CP12 ผ่าน
+การทดสอบจริง:
+- 2 cycles ทำงานสำเร็จ
+- cycle ถัดไปได้รับผลของ cycle ก่อนหน้า
+- unsupported model ทำให้ loop หยุดที่ cycle แรก
+- history_entries = 0 สำหรับ rejected proposal
+
+Git:
+`110306e`
 
 ---
 
 ## CP14 — Stability / Regression
 
-สถานะ: ⬜ TODO
+สถานะ: ✅ COMPLETED
 
-ต้องตรวจ:
+ตรวจสอบ:
 - research tests
 - existing AE01M tests
-- numerical failures
 - invalid AI output
 - unsupported model
 - network failure
-- Ollama unavailable
+- Ollama timeout
+- malformed Ollama response
+- AutonomousRunner failure limit
+- legacy test collection
 
-หมายเหตุ:
-full pytest ปัจจุบันมี legacy test filenames ที่ทำให้ collection error
-ยังไม่ได้แก้ legacy tests
+เพิ่ม:
+- `pytest.ini`
+- ย้าย legacy tests ไป `tests/legacy/`
+
+Full regression:
+
+`467 passed in 795.20s (0:13:15)`
+
+ไม่พบ test failure ใน regression ล่าสุด
 
 ---
 
 ## CP15 — Final Documentation
 
-สถานะ: ⬜ TODO
+สถานะ: ⬜ IN PROGRESS
+
+เป้าหมาย:
 
 สร้าง/อัปเดต:
 
@@ -317,74 +346,3 @@ full pytest ปัจจุบันมี legacy test filenames ที่ทำ
 สร้างแฟ้มสำหรับจุดเริ่มระบบ เช่น:
 
 `docs/START_HERE.md`
-
-ต้องระบุ:
-
-- ระบบคืออะไร
-- ต้องเปิดเครื่องไหนก่อน
-- Ollama อยู่เครื่องไหน
-- Python อยู่เครื่องไหน
-- คำสั่ง start
-- คำสั่ง test
-- วิธีตรวจสถานะ
-- วิธีหยุดระบบ
-- Git checkpoint ล่าสุด
-
-จุดนี้จะเป็นคู่มือสำหรับกลับมาเริ่มโครงการใหม่โดยไม่ต้องอ่านประวัติแชททั้งหมด
-
----
-
-# Definition of Done
-
-โครงการวิจัย prototype ถือว่าพร้อมเปิดระบบเมื่อ:
-
-[ ] CP10 Experiment History
-[ ] CP11 Real 2-Machine Cycle
-[ ] CP12 Research Cycle Integration
-[ ] CP13 Autonomous Research Loop
-[ ] CP14 Stability / Regression
-[ ] CP15 Final Documentation
-[ ] CP16 System Start Point
-
-ห้ามข้าม checkpoint โดยไม่มีเหตุผลและบันทึกไว้ใน Build Log
-
----
-
-# Current State
-
-Current Checkpoint:
-
-`CP11 — Real 2-Machine Research Cycle`
-
-Completed:
-
-`CP0–CP9`
-
-Latest Git checkpoint:
-
-`4e942de`
-
-Latest verified research cycle:
-
-`FakeAI + Python NumericalResearch`
-
-Ollama integration test ล่าสุดยังรอเครื่อง 1 เปิด
-
-Latest test result:
-
-`13 passed`
-
-Next action:
-
-เมื่อเครื่อง 1 เปิด ให้ทดสอบ Ollama + NumericalResearch แบบครบ cycle
-
----
-
-# Important Scientific Boundary
-
-ระบบนี้เป็น research prototype
-
-ผลจาก simulation ไม่ถือเป็นการค้นพบทางฟิสิกส์โดยอัตโนมัติ
-
-สมการ reference และ candidate ใน prototype
-ต้องถือเป็นแบบจำลองสำหรับการทดลองจนกว่าจะมีหลักฐานอิสระรองรับ

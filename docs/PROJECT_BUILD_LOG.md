@@ -304,3 +304,117 @@ AI ตอบ Research Proposal ตาม format ที่กำหนด:
 `Machine 2 → Network → Machine 1 Ollama → AI Proposal → Proposal Parsing → Model Validation → Numerical Evaluation`
 
 ยังไม่เปิด Autonomous Research Loop
+
+---
+
+## 2026-09-01 — CP12 Research Cycle Integration
+
+### งาน
+เชื่อม NumericalResearch เข้ากับ ExperimentHistory และรองรับหลาย research cycles
+
+### สิ่งที่ยืนยัน
+- NumericalResearch บันทึกผลลง ExperimentHistory
+- แต่ละ cycle มี experiment_id แยกกัน
+- History สามารถ save/load หลาย cycles ได้
+- failed proposal ไม่ถูกบันทึกเป็นผลสำเร็จ
+
+---
+
+## 2026-09-01 — CP13 Autonomous Research Loop
+
+### งาน
+เพิ่ม `runtime/research_loop.py` สำหรับควบคุม research cycles ต่อเนื่อง
+
+Pipeline:
+
+Research Summary
+→ AI Proposal
+→ Validation
+→ Numerical Evaluation
+→ History
+→ Previous Result
+→ Next Cycle
+
+### สิ่งที่แก้
+- `runtime/research_loop.py`
+- `runtime/numerical_research.py`
+- `runtime/research_prompt.py`
+- `tests/test_experiment.py`
+
+### Previous Result
+
+ผลจาก cycle ก่อนหน้าถูกส่งผ่าน:
+
+`ResearchLoop`
+→ `NumericalResearch`
+→ `ResearchPrompt`
+→ `AI`
+
+การทดสอบจริงยืนยันว่า cycle ที่สองได้รับ:
+
+- model
+- error
+- status
+
+จาก cycle ก่อนหน้า
+
+### Failure Handling
+
+ResearchLoop หยุดเมื่อผลเป็น:
+
+- `FAILED`
+- `ERROR`
+- `REJECTED`
+
+กรณี unsupported model:
+
+`cycles: 1`
+
+`status: REJECTED`
+
+`history_entries: 0`
+
+### Tests
+
+ResearchLoop tests:
+
+`4 passed`
+
+Integration verification:
+
+`2 cycles`
+
+### Git
+
+Commit:
+
+`110306e` — `feat: complete autonomous research loop`
+
+---
+
+## 2026-09-01 — CP14 Stability / Regression
+
+### งาน
+ตรวจสอบความเสถียรหลังการรวม Research Loop
+
+ตรวจสอบ:
+- invalid AI output
+- unsupported model
+- network failure
+- Ollama timeout
+- malformed Ollama response
+- AutonomousRunner failure limit
+- legacy test collection
+- existing project tests
+
+### การแก้ไข
+เพิ่ม:
+
+`pytest.ini`
+
+เพื่อกำหนด test discovery และไม่ให้ legacy tests ใน `tests/legacy/` ถูกรันเป็น active tests
+
+### Full Regression
+
+```text
+467 passed in 795.20s (0:13:15)
