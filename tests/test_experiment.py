@@ -437,6 +437,345 @@ Model Proposal: Exponential model"""
         )
         self.assertEqual(entry["status"], "COMPLETED")
 
+    def test_numerical_research_records_multiple_cycles(self):
+        from runtime.experiment_history import ExperimentHistory
+        from runtime.numerical_research import NumericalResearch
+
+        class FakeAI:
+            def __init__(self):
+                self.calls = 0
+
+            def __call__(self, prompt):
+                self.calls += 1
+                model = "Exponential model" if self.calls == 1 else "Linear model"
+                return (
+                    "Hypothesis: coherence decreases with coupling\n"
+                    f"Model Proposal: {model}"
+                )
+
+        history = ExperimentHistory()
+        research = NumericalResearch(
+            inference=FakeAI(),
+            history=history,
+        )
+
+        research.run(coupling_values=[0.0, 0.5, 1.0])
+        research.run(coupling_values=[0.0, 0.25, 0.5])
+
+        entries = history.entries()
+
+        self.assertEqual(len(entries), 2)
+        self.assertNotEqual(
+            entries[0]["experiment_id"],
+            entries[1]["experiment_id"],
+        )
+        self.assertEqual(entries[0]["model"], "exponential")
+        self.assertEqual(entries[1]["model"], "linear")
+
+    def test_experiment_history_preserves_multiple_cycles_after_load(self):
+        from tempfile import TemporaryDirectory
+        from runtime.experiment_history import ExperimentHistory
+
+        with TemporaryDirectory() as tmp:
+            history = ExperimentHistory()
+
+            history.record(
+                hypothesis="test one",
+                model="exponential",
+                parameters={"coupling": [0.0, 0.5]},
+                metrics={"error": 0.1},
+                status="COMPLETED",
+            )
+            history.record(
+                hypothesis="test two",
+                model="linear",
+                parameters={"coupling": [0.0, 1.0]},
+                metrics={"error": 0.2},
+                status="COMPLETED",
+            )
+
+            path = Path(tmp) / "history.json"
+            history.save(path)
+
+            loaded = ExperimentHistory.load(path)
+            entries = loaded.entries()
+
+            self.assertEqual(len(entries), 2)
+            self.assertEqual(entries[0]["hypothesis"], "test one")
+            self.assertEqual(entries[1]["hypothesis"], "test two")
+            self.assertEqual(entries[0]["model"], "exponential")
+            self.assertEqual(entries[1]["model"], "linear")
+            self.assertEqual(entries[0]["metrics"]["error"], 0.1)
+            self.assertEqual(entries[1]["metrics"]["error"], 0.2)
+            self.assertNotEqual(
+                entries[0]["experiment_id"],
+                entries[1]["experiment_id"],
+            )
+
+    def test_numerical_research_does_not_record_failed_proposal(self):
+        from runtime.experiment_history import ExperimentHistory
+        from runtime.numerical_research import NumericalResearch
+
+        class FakeAI:
+            def __call__(self, prompt):
+                return "invalid AI output"
+
+        history = ExperimentHistory()
+        research = NumericalResearch(
+            inference=FakeAI(),
+            history=history,
+        )
+
+        with self.assertRaises(ValueError):
+            research.run(
+                coupling_values=[0.0, 0.5, 1.0],
+            )
+
+        self.assertEqual(history.entries(), [])
+
+    def test_ollama_inference_raises_on_network_failure(self):
+        from unittest.mock import patch
+        from urllib.error import URLError
+        from runtime.ollama_inference import OllamaInference
+
+        ai = OllamaInference(
+            model="qwen2.5:0.5b",
+            host="http://10.74.65.85:11434",
+            timeout=1,
+        )
+
+        with patch(
+            "urllib.request.urlopen",
+            side_effect=URLError("network unavailable"),
+        ):
+            with self.assertRaises(URLError):
+                ai("test")
+
+    def test_ollama_inference_raises_on_timeout(self):
+        from unittest.mock import patch
+        from runtime.ollama_inference import OllamaInference
+
+        ai = OllamaInference(
+            model="qwen2.5:0.5b",
+            host="http://10.74.65.85:11434",
+            timeout=1,
+        )
+
+        with patch(
+            "urllib.request.urlopen",
+            side_effect=TimeoutError("request timed out"),
+        ):
+            with self.assertRaises(TimeoutError):
+                ai("test")
+
+    def test_ollama_inference_handles_malformed_response(self):
+        from unittest.mock import patch
+        from runtime.ollama_inference import OllamaInference
+
+        ai = OllamaInference(
+            model="qwen2.5:0.5b",
+            host="http://10.74.65.85:11434",
+        )
+
+        class FakeResponse:
+            def read(self):
+                return b'{"unexpected": "response"}'
+
+            def __enter__(self):
+                return self
+
+            def __exit__(self, *args):
+                pass
+
+        with patch(
+            "urllib.request.urlopen",
+            return_value=FakeResponse(),
+        ):
+            result = ai("test")
+
+        self.assertEqual(result, "")
+
+    def test_autonomous_runner_pauses_after_failure_limit(self):
+        from runtime.autonomous_runner import AutonomousRunner
+
+        class FailingLoop:
+            def __init__(self):
+                self.calls = 0
+
+            def step(self, observation, memory_usage):
+                self.calls += 1
+                return {"status": "FAILED", "error": "test"}
+
+        loop = FailingLoop()
+        runner = AutonomousRunner(
+            loop_controller=loop,
+            interval=0.0,
+            failure_limit=3,
+        )
+
+        results = runner.run(
+            observation="test-task",
+            max_cycles=10,
+        )
+
+        self.assertEqual(len(results), 3)
+        self.assertEqual(results[-1]["status"], "TASK_PAUSED")
+        self.assertEqual(results[-1]["reason"], "CIRCUIT_BREAKER")
+        self.assertEqual(results[-1]["failures"], 3)
+        self.assertEqual(loop.calls, 3)
+        self.assertIn("test-task", runner.paused_tasks())
+
+    def test_autonomous_research_loop_runs_multiple_cycles(self):
+        from runtime.experiment_history import ExperimentHistory
+        from runtime.numerical_research import NumericalResearch
+
+        class FakeAI:
+            def __call__(self, prompt):
+                return (
+                    "Hypothesis: coherence decreases with coupling\n"
+                    "Model Proposal: Exponential model"
+                )
+
+        history = ExperimentHistory()
+        research = NumericalResearch(
+            inference=FakeAI(),
+            history=history,
+        )
+
+        results = [
+            research.run([0.0, 0.5, 1.0]),
+            research.run([0.0, 0.5, 1.0]),
+        ]
+
+        self.assertEqual(len(results), 2)
+        self.assertTrue(
+            all(result["status"] == "COMPLETED" for result in results)
+        )
+        self.assertEqual(len(history.entries()), 2)
+
+    def test_research_loop_controller_runs_requested_cycles(self):
+        from runtime.experiment_history import ExperimentHistory
+        from runtime.numerical_research import NumericalResearch
+        from runtime.research_loop import ResearchLoop
+
+        class FakeAI:
+            def __call__(self, prompt):
+                return (
+                    "Hypothesis: coherence decreases with coupling\n"
+                    "Model Proposal: Exponential model"
+                )
+
+        history = ExperimentHistory()
+        research = NumericalResearch(
+            inference=FakeAI(),
+            history=history,
+        )
+
+        loop = ResearchLoop(research)
+
+        results = loop.run(
+            coupling_values=[0.0, 0.5, 1.0],
+            max_cycles=2,
+        )
+
+        self.assertEqual(len(results), 2)
+        self.assertEqual(len(history.entries()), 2)
+        self.assertTrue(
+            all(result["status"] == "COMPLETED" for result in results)
+        )
+
+    def test_research_loop_stops_after_failed_cycle(self):
+        from runtime.research_loop import ResearchLoop
+
+        class FakeResearch:
+            def __init__(self):
+                self.calls = 0
+
+            def run(self, coupling_values, previous_result=None):
+                self.calls += 1
+                if self.calls == 1:
+                    return {"status": "FAILED", "error": "test"}
+                return {"status": "COMPLETED"}
+
+        research = FakeResearch()
+        loop = ResearchLoop(research)
+
+        results = loop.run(
+            coupling_values=[0.0, 0.5, 1.0],
+            max_cycles=5,
+        )
+
+        self.assertEqual(len(results), 1)
+        self.assertEqual(results[0]["status"], "FAILED")
+        self.assertEqual(research.calls, 1)
+
+    def test_research_loop_passes_previous_result_to_next_cycle(self):
+        from runtime.research_loop import ResearchLoop
+
+        class FakeResearch:
+            def __init__(self):
+                self.calls = []
+
+            def run(self, coupling_values, previous_result=None):
+                self.calls.append(previous_result)
+
+                if len(self.calls) == 1:
+                    return {
+                        "status": "COMPLETED",
+                        "model": "exponential",
+                        "error": 0.1,
+                    }
+
+                return {
+                    "status": "COMPLETED",
+                    "model": "linear",
+                    "error": 0.05,
+                }
+
+        research = FakeResearch()
+        loop = ResearchLoop(research)
+
+        results = loop.run(
+            coupling_values=[0.0, 0.5, 1.0],
+            max_cycles=2,
+        )
+
+        self.assertEqual(len(results), 2)
+        self.assertIsNone(research.calls[0])
+        self.assertEqual(research.calls[1]["model"], "exponential")
+        self.assertEqual(research.calls[1]["error"], 0.1)
+
+    def test_numerical_research_prompt_contains_previous_result(self):
+        from runtime.numerical_research import NumericalResearch
+
+        prompts = []
+
+        class FakeAI:
+            def __call__(self, prompt):
+                prompts.append(prompt)
+                return (
+                    "Hypothesis: next hypothesis\n"
+                    "Model Proposal: Linear model"
+                )
+
+        research = NumericalResearch(
+            inference=FakeAI(),
+        )
+
+        previous = {
+            "status": "COMPLETED",
+            "model": "exponential",
+            "error": 0.021,
+        }
+
+        research.run(
+            coupling_values=[0.0, 0.5, 1.0],
+            previous_result=previous,
+        )
+
+        self.assertIn("0.021", prompts[0])
+        self.assertIn("exponential", prompts[0])
+
 
 if __name__ == "__main__":
     unittest.main()

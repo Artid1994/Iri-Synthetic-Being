@@ -12,12 +12,16 @@ class NumericalResearch:
         self.engine = NumericalEngine()
         self.history = history
 
-    def run(self, coupling_values: list[float]) -> dict[str, object]:
+    def run(
+        self,
+        coupling_values: list[float],
+        previous_result: dict[str, object] | None = None,
+    ) -> dict[str, object]:
         summary = self.engine.research_summary(
             self._base_experiment(coupling_values)
         )
 
-        prompt = ResearchPrompt.build(summary)
+        prompt = ResearchPrompt.build(summary, previous_result)
         output = self.inference(prompt)
         proposal = ResearchProposal.parse(output)
 
