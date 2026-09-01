@@ -1,14 +1,16 @@
 from __future__ import annotations
 
+from runtime.experiment_history import ExperimentHistory
 from runtime.numerical_engine import NumericalEngine
 from runtime.research_prompt import ResearchPrompt
 from runtime.research_proposal import ResearchProposal
 
 
 class NumericalResearch:
-    def __init__(self, inference) -> None:
+    def __init__(self, inference, history: ExperimentHistory | None = None) -> None:
         self.inference = inference
         self.engine = NumericalEngine()
+        self.history = history
 
     def run(self, coupling_values: list[float]) -> dict[str, object]:
         summary = self.engine.research_summary(
@@ -23,6 +25,17 @@ class NumericalResearch:
             proposal,
             coupling_values=coupling_values,
         )
+
+        if self.history is not None and result["status"] == "COMPLETED":
+            self.history.record_result(
+                hypothesis=proposal.hypothesis,
+                model=proposal.model_key() or "",
+                parameters={
+                    "qubits": 1,
+                    "coupling_values": list(coupling_values),
+                },
+                result=result,
+            )
 
         return result
 

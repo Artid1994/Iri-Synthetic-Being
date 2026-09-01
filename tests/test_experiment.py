@@ -1,4 +1,5 @@
 import unittest
+from pathlib import Path
 
 from runtime.experiment import Experiment, ExperimentResult
 
@@ -259,6 +260,182 @@ Model Proposal: Exponential model"""
         self.assertEqual(result["status"], "COMPLETED")
         self.assertEqual(result["model"], "exponential")
         self.assertIn("error", result)
+
+    def test_experiment_history_records_completed_result(self):
+        from runtime.experiment_history import ExperimentHistory
+
+        history = ExperimentHistory()
+
+        history.record(
+            hypothesis="coherence decreases with coupling",
+            model="exponential",
+            parameters={"qubits": 1, "coupling": 0.5},
+            metrics={"coherence": 0.857764},
+            status="COMPLETED",
+        )
+
+        entries = history.entries()
+
+        self.assertEqual(len(entries), 1)
+        self.assertEqual(
+            entries[0]["hypothesis"],
+            "coherence decreases with coupling",
+        )
+        self.assertEqual(entries[0]["model"], "exponential")
+        self.assertEqual(entries[0]["status"], "COMPLETED")
+
+    def test_experiment_history_records_timestamp(self):
+        from runtime.experiment_history import ExperimentHistory
+
+        history = ExperimentHistory()
+
+        history.record(
+            hypothesis="test",
+            model="exponential",
+            parameters={"qubits": 1},
+            metrics={"coherence": 1.0},
+            status="COMPLETED",
+        )
+
+        entry = history.entries()[0]
+
+        self.assertIn("timestamp", entry)
+        self.assertIsInstance(entry["timestamp"], str)
+        self.assertTrue(entry["timestamp"])
+
+    def test_experiment_history_records_experiment_id(self):
+        from runtime.experiment_history import ExperimentHistory
+
+        history = ExperimentHistory()
+
+        history.record(
+            hypothesis="test",
+            model="exponential",
+            parameters={"qubits": 1},
+            metrics={"coherence": 1.0},
+            status="COMPLETED",
+        )
+
+        entry = history.entries()[0]
+
+        self.assertIn("experiment_id", entry)
+        self.assertIsInstance(entry["experiment_id"], str)
+        self.assertTrue(entry["experiment_id"])
+
+    def test_experiment_history_records_research_result(self):
+        from runtime.experiment_history import ExperimentHistory
+
+        history = ExperimentHistory()
+
+        history.record_result(
+            hypothesis="coherence decreases with coupling",
+            model="exponential",
+            parameters={"qubits": 1, "coupling_values": [0.0, 0.5, 1.0]},
+            result={
+                "status": "COMPLETED",
+                "model": "exponential",
+                "error": 0.021072181397545926,
+            },
+        )
+
+        entry = history.entries()[0]
+
+        self.assertEqual(entry["status"], "COMPLETED")
+        self.assertEqual(entry["model"], "exponential")
+        self.assertEqual(entry["metrics"]["error"], 0.021072181397545926)
+
+    def test_numerical_research_records_history(self):
+        from runtime.experiment_history import ExperimentHistory
+        from runtime.numerical_research import NumericalResearch
+
+        class FakeAI:
+            def __call__(self, prompt):
+                return (
+                    "Hypothesis: coherence decreases with coupling\n"
+                    "Model Proposal: Exponential model"
+                )
+
+        history = ExperimentHistory()
+        research = NumericalResearch(
+            inference=FakeAI(),
+            history=history,
+        )
+
+        result = research.run(
+            coupling_values=[0.0, 0.5, 1.0],
+        )
+
+        self.assertEqual(result["status"], "COMPLETED")
+        self.assertEqual(len(history.entries()), 1)
+        self.assertEqual(
+            history.entries()[0]["model"],
+            "exponential",
+        )
+
+    def test_experiment_history_saves_and_loads(self):
+        from tempfile import TemporaryDirectory
+        from runtime.experiment_history import ExperimentHistory
+
+        with TemporaryDirectory() as tmp:
+            history = ExperimentHistory()
+
+            history.record(
+                hypothesis="test",
+                model="exponential",
+                parameters={"qubits": 1},
+                metrics={"error": 0.1},
+                status="COMPLETED",
+            )
+
+            path = Path(tmp) / "history.json"
+            history.save(path)
+
+            loaded = ExperimentHistory.load(path)
+
+            self.assertEqual(len(loaded.entries()), 1)
+            self.assertEqual(
+                loaded.entries()[0]["model"],
+                "exponential",
+            )
+
+    def test_numerical_research_history_contains_complete_cycle(self):
+        from runtime.experiment_history import ExperimentHistory
+        from runtime.numerical_research import NumericalResearch
+
+        class FakeAI:
+            def __call__(self, prompt):
+                return (
+                    "Hypothesis: coherence decreases with coupling\n"
+                    "Model Proposal: Exponential model"
+                )
+
+        history = ExperimentHistory()
+        research = NumericalResearch(
+            inference=FakeAI(),
+            history=history,
+        )
+
+        result = research.run(
+            coupling_values=[0.0, 0.5, 1.0],
+        )
+
+        entry = history.entries()[0]
+
+        self.assertEqual(result["status"], "COMPLETED")
+        self.assertEqual(
+            entry["hypothesis"],
+            "coherence decreases with coupling",
+        )
+        self.assertEqual(entry["model"], "exponential")
+        self.assertEqual(
+            entry["parameters"]["coupling_values"],
+            [0.0, 0.5, 1.0],
+        )
+        self.assertEqual(
+            entry["metrics"]["error"],
+            result["error"],
+        )
+        self.assertEqual(entry["status"], "COMPLETED")
 
 
 if __name__ == "__main__":
