@@ -395,3 +395,53 @@ class TestMemoryGraphStructuredImportEdgeCases(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class TestMemoryCoActivation(unittest.TestCase):
+    def setUp(self):
+        self.memory = Memory()
+
+    def test_co_activate_creates_graph_edge(self):
+        edge_id = self.memory.co_activate(
+            "quantum state",
+            "wavefunction",
+        )
+
+        self.assertIn(edge_id, self.memory.memory_graph.edges)
+
+    def test_co_activate_strengthens_existing_relation(self):
+        edge_id = self.memory.co_activate(
+            "quantum state",
+            "wavefunction",
+        )
+        self.memory.co_activate(
+            "quantum state",
+            "wavefunction",
+        )
+
+        edge = self.memory.memory_graph.edges[edge_id]
+
+        self.assertEqual(edge.usage_count, 2)
+        self.assertEqual(edge.weight, 1.5)
+
+    def test_unrelated_memory_is_not_connected(self):
+        self.memory.co_activate(
+            "quantum state",
+            "wavefunction",
+        )
+
+        graph = self.memory.memory_graph
+        third = graph.add_node("classical state", "SEMANTIC")
+
+        first = graph.add_node("quantum state", "SEMANTIC")
+
+        self.assertNotIn((first, third), graph.edges)
+        self.assertNotIn((third, first), graph.edges)
+
+    def test_existing_memory_api_remains_unchanged(self):
+        self.memory.add_experience("quantum measurement")
+
+        self.assertEqual(
+            self.memory.recall("quantum measurement"),
+            "quantum measurement",
+        )

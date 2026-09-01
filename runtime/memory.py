@@ -124,6 +124,18 @@ class Memory:
 
         return self._association_index.find(experience)
 
+    def co_activate(self, first: str, second: str) -> tuple[str, str]:
+        first = first.strip()
+        second = second.strip()
+
+        if not first or not second:
+            raise ValueError("Memory contents cannot be empty")
+
+        first_id = self.memory_graph.add_node(first, "SEMANTIC")
+        second_id = self.memory_graph.add_node(second, "SEMANTIC")
+
+        return self.memory_graph.co_activate(first_id, second_id)
+
     def add_semantic(self, knowledge: str) -> None:
         knowledge = knowledge.strip()
 

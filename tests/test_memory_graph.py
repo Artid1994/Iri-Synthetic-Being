@@ -311,3 +311,126 @@ class TestMemoryGraphValidation(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class TestMemoryGraphCoActivation(unittest.TestCase):
+
+    def setUp(self):
+        self.graph = MemoryGraph()
+
+        self.first = self.graph.add_node(
+            content="quantum state",
+            memory_type="SEMANTIC",
+        )
+
+        self.second = self.graph.add_node(
+            content="wavefunction",
+            memory_type="SEMANTIC",
+        )
+
+    def test_co_activate_creates_edge(self):
+        self.graph.co_activate(
+            self.first,
+            self.second,
+        )
+
+        edge_id = (self.first, self.second)
+
+        self.assertIn(
+            edge_id,
+            self.graph.edges,
+        )
+
+    def test_co_activate_strengthens_existing_edge(self):
+        self.graph.co_activate(
+            self.first,
+            self.second,
+        )
+
+        edge_id = (self.first, self.second)
+
+        self.graph.co_activate(
+            self.first,
+            self.second,
+        )
+
+        edge = self.graph.edges[edge_id]
+
+        self.assertEqual(
+            edge.usage_count,
+            2,
+        )
+
+        self.assertEqual(
+            edge.weight,
+            1.5,
+        )
+
+    def test_co_activate_activates_both_nodes(self):
+        first_before = self.graph.nodes[self.first].activation_count
+        second_before = self.graph.nodes[self.second].activation_count
+
+        self.graph.co_activate(
+            self.first,
+            self.second,
+        )
+
+        self.assertEqual(
+            self.graph.nodes[self.first].activation_count,
+            first_before + 1,
+        )
+
+        self.assertEqual(
+            self.graph.nodes[self.second].activation_count,
+            second_before + 1,
+        )
+
+    def test_co_activate_missing_node_is_rejected(self):
+        with self.assertRaises(ValueError):
+            self.graph.co_activate(
+                self.first,
+                "missing_node",
+            )
+
+
+if __name__ == "__main__":
+    unittest.main()
+
+
+class TestMemoryGraphCoActivationContract(unittest.TestCase):
+    def setUp(self):
+        self.graph = MemoryGraph()
+        self.first = self.graph.add_node("quantum state", "SEMANTIC")
+        self.second = self.graph.add_node("wavefunction", "SEMANTIC")
+
+    def test_activate_single_node_does_not_create_edge(self):
+        self.graph.activate(self.first)
+
+        self.assertEqual(len(self.graph.edges), 0)
+
+    def test_co_activation_creates_only_requested_edge(self):
+        self.graph.co_activate(self.first, self.second)
+
+        self.assertEqual(
+            list(self.graph.edges.keys()),
+            [(self.first, self.second)],
+        )
+
+    def test_repeated_co_activation_strengthens_same_edge(self):
+        self.graph.co_activate(self.first, self.second)
+        self.graph.co_activate(self.first, self.second)
+
+        edge = self.graph.edges[(self.first, self.second)]
+
+        self.assertEqual(edge.usage_count, 2)
+        self.assertEqual(edge.weight, 1.5)
+
+    def test_unrelated_node_is_not_connected(self):
+        third = self.graph.add_node("classical state", "SEMANTIC")
+
+        self.graph.co_activate(self.first, self.second)
+
+        self.assertNotIn((self.first, third), self.graph.edges)
+        self.assertNotIn((third, self.first), self.graph.edges)
+        self.assertNotIn((self.second, third), self.graph.edges)
+        self.assertNotIn((third, self.second), self.graph.edges)

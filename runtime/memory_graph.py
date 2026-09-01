@@ -54,6 +54,21 @@ class MemoryGraph:
 
         node.activation_count += 1
 
+    def co_activate(self, source: str, target: str) -> tuple[str, str]:
+        if source not in self.nodes:
+            raise ValueError("Source memory node does not exist")
+
+        if target not in self.nodes:
+            raise ValueError("Target memory node does not exist")
+
+        if source == target:
+            raise ValueError("Memory node cannot co-activate with itself")
+
+        self.activate(source)
+        self.activate(target)
+
+        return self.connect(source, target)
+
     def connect(self, source: str, target: str) -> tuple[str, str]:
         if source not in self.nodes:
             raise ValueError("Source memory node does not exist")
