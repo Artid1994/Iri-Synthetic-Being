@@ -76,6 +76,52 @@ class NumericalEngine:
 
         return values
 
+    def search_exponential_rate(
+        self,
+        coupling_values: list[float],
+        rates: list[float],
+    ) -> dict[str, float | str]:
+        actual_values = self.reference_dynamics(
+            qubits=1,
+            coupling_values=coupling_values,
+        )
+
+        initial = actual_values[0]
+        best_rate = None
+        best_error = None
+
+        for rate in rates:
+            rate = float(rate)
+
+            if rate <= 0.0:
+                continue
+
+            error = 0.0
+
+            for coupling, actual in zip(
+                coupling_values,
+                actual_values,
+            ):
+                predicted = initial * np.exp(-rate * coupling)
+                error += (actual - predicted) ** 2
+
+            if best_error is None or error < best_error:
+                best_rate = rate
+                best_error = error
+
+        if best_rate is None or best_error is None:
+            return {
+                "status": "REJECTED",
+                "error": "NO_VALID_RATES",
+            }
+
+        return {
+            "status": "COMPLETED",
+            "model": "exponential",
+            "rate": best_rate,
+            "error": best_error,
+        }
+
     def compare_models(self, experiment: Experiment) -> dict[str, float | str]:
         values = experiment.parameters["coupling_values"]
         qubits = int(experiment.parameters.get("qubits", 1))

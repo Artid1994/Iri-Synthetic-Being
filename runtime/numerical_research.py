@@ -25,10 +25,16 @@ class NumericalResearch:
         output = self.inference(prompt)
         proposal = ResearchProposal.parse(output)
 
-        result = self.engine.evaluate_model(
-            proposal,
-            coupling_values=coupling_values,
-        )
+        if proposal.model_key() == "exponential":
+            result = self.engine.search_exponential_rate(
+                coupling_values=coupling_values,
+                rates=[0.5, 0.75, 1.0, 1.25, 1.5],
+            )
+        else:
+            result = self.engine.evaluate_model(
+                proposal,
+                coupling_values=coupling_values,
+            )
 
         if self.history is not None and result["status"] == "COMPLETED":
             self.history.record_result(
@@ -37,6 +43,11 @@ class NumericalResearch:
                 parameters={
                     "qubits": 1,
                     "coupling_values": list(coupling_values),
+                    **(
+                        {"rate": result["rate"]}
+                        if "rate" in result
+                        else {}
+                    ),
                 },
                 result=result,
             )
