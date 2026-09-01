@@ -7,6 +7,7 @@ from runtime.association_index import AssociationIndex
 from runtime.semantic_index import SemanticIndex
 from runtime.experience import Experience
 from runtime.safety_event import SafetyEvent
+from runtime.memory_graph import MemoryGraph
 
 
 @dataclass
@@ -24,6 +25,7 @@ class Memory:
         self._recall_index = RecallIndex()
         self._semantic_index = SemanticIndex()
         self._association_index = AssociationIndex()
+        self.memory_graph = MemoryGraph()
 
     def snapshot(self) -> MemoryState:
         return MemoryState(
@@ -67,6 +69,7 @@ class Memory:
         position = len(self.state.episodic)
         self.state.episodic.append(experience)
         self._recall_index.add(experience, position)
+        self.memory_graph.add_node(experience, "EPISODIC")
 
     def add_experience_object(self, experience: Experience) -> None:
         if not isinstance(experience, Experience):
@@ -98,6 +101,21 @@ class Memory:
             association,
         )
 
+        source = self.memory_graph.add_node(
+            experience,
+            "EPISODIC",
+        )
+
+        target = self.memory_graph.add_node(
+            association,
+            "SEMANTIC",
+        )
+
+        self.memory_graph.connect(
+            source,
+            target,
+        )
+
     def associations(self, experience: str) -> list[str]:
         experience = experience.strip()
 
@@ -117,6 +135,7 @@ class Memory:
 
         self.state.semantic.append(knowledge)
         self._semantic_index.add(knowledge)
+        self.memory_graph.add_node(knowledge, "SEMANTIC")
 
     def semantic_contains(self, knowledge: str) -> bool:
         return self._semantic_index.contains(knowledge)
@@ -134,6 +153,7 @@ class Memory:
                 position = len(self.state.episodic)
                 self.state.episodic.append(experience)
                 self._recall_index.add(experience, position)
+            self.memory_graph.add_node(experience, "EPISODIC")
 
         for knowledge in structured_memory.semantic:
             self.add_semantic(knowledge)
