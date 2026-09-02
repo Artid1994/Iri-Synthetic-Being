@@ -1,0 +1,1922 @@
+from .helpers import format_uptime, format_memory_content, memory_type_color
+from .memory_panel import MemoryPanel
+
+import math
+import tkinter as tk
+from tkinter import ttk
+
+from runtime.runtime import TranscendingRuntime
+
+
+# ============================================================
+# AE01M — Cognitive Research Console
+# Theme v2.1
+# Real Memory Graph Integration
+# ============================================================
+
+APP_TITLE = "AE01M — The Transcending Form"
+
+
+# ------------------------------------------------------------
+# Theme
+# ------------------------------------------------------------
+
+BG = "#080d18"
+SURFACE = "#0d1422"
+SURFACE_2 = "#111b2c"
+SURFACE_3 = "#162238"
+
+BORDER = "#22314a"
+BORDER_LIGHT = "#2a3b57"
+
+TEXT = "#edf4ff"
+TEXT_SECONDARY = "#9aabc3"
+TEXT_MUTED = "#667994"
+
+BLUE = "#3b82f6"
+BLUE_HOVER = "#2563eb"
+
+CYAN = "#22d3ee"
+VIOLET = "#a78bfa"
+
+GREEN = "#34d399"
+YELLOW = "#fbbf24"
+RED = "#f87171"
+
+WHITE = "#ffffff"
+
+# ------------------------------------------------------------
+# Utility
+# ------------------------------------------------------------
+
+class AE01MApp(tk.Tk):
+
+    def __init__(self):
+        super().__init__()
+
+        self.title(APP_TITLE)
+        self.geometry("1540x920")
+        self.minsize(1200, 720)
+
+        self.configure(bg=BG)
+
+        self.runtime = TranscendingRuntime()
+
+        self.active_tab = "Chat"
+
+        self._configure_styles()
+        self._build_ui()
+
+        self.after(
+            1000,
+            self._refresh_runtime,
+        )
+
+    # --------------------------------------------------------
+    # ttk styling
+    # --------------------------------------------------------
+
+    def _configure_styles(self):
+
+        style = ttk.Style(self)
+
+        try:
+            style.theme_use("clam")
+        except tk.TclError:
+            pass
+
+        style.configure(
+            "AE01M.Horizontal.TProgressbar",
+            troughcolor=SURFACE_3,
+            background=BLUE,
+            bordercolor=SURFACE_3,
+            lightcolor=BLUE,
+            darkcolor=BLUE,
+            thickness=5,
+        )
+
+    # --------------------------------------------------------
+    # Root layout
+    # --------------------------------------------------------
+
+    def _build_ui(self):
+
+        self.grid_rowconfigure(
+            1,
+            weight=1,
+        )
+
+        self.grid_columnconfigure(
+            0,
+            weight=1,
+        )
+
+        self._build_header()
+        self._build_main_area()
+        self._build_status_bar()
+
+    # --------------------------------------------------------
+    # Header
+    # --------------------------------------------------------
+
+    def _build_header(self):
+
+        header = tk.Frame(
+            self,
+            bg=BG,
+            height=74,
+        )
+
+        header.grid(
+            row=0,
+            column=0,
+            sticky="ew",
+            padx=18,
+            pady=(14, 8),
+        )
+
+        header.grid_columnconfigure(
+            1,
+            weight=1,
+        )
+
+        brand = tk.Frame(
+            header,
+            bg=BG,
+        )
+
+        brand.grid(
+            row=0,
+            column=0,
+            sticky="w",
+        )
+
+        logo = tk.Label(
+            brand,
+            text="AE01M",
+            bg=BG,
+            fg=TEXT,
+            font=("TkDefaultFont", 21, "bold"),
+        )
+
+        logo.pack(
+            anchor="w",
+        )
+
+        subtitle = tk.Label(
+            brand,
+            text=(
+                "THE TRANSCENDING FORM  /  "
+                "COGNITIVE RESEARCH CONSOLE"
+            ),
+            bg=BG,
+            fg=TEXT_MUTED,
+            font=("TkDefaultFont", 8),
+        )
+
+        subtitle.pack(
+            anchor="w",
+            pady=(2, 0),
+        )
+
+        nav = tk.Frame(
+            header,
+            bg=BG,
+        )
+
+        nav.grid(
+            row=0,
+            column=1,
+            sticky="w",
+            padx=(70, 0),
+        )
+
+        self.tab_buttons = {}
+
+        for tab in (
+            "Chat",
+            "Memory",
+            "Research",
+            "System",
+        ):
+
+            button = tk.Button(
+                nav,
+                text=tab,
+                command=lambda name=tab: self._select_tab(name),
+                relief="flat",
+                bd=0,
+                padx=18,
+                pady=9,
+                bg=SURFACE,
+                fg=TEXT_SECONDARY,
+                activebackground=SURFACE_3,
+                activeforeground=TEXT,
+                font=("TkDefaultFont", 9, "bold"),
+                cursor="hand2",
+            )
+
+            button.pack(
+                side="left",
+                padx=(0, 5),
+            )
+
+            self.tab_buttons[tab] = button
+
+        state = tk.Frame(
+            header,
+            bg=BG,
+        )
+
+        state.grid(
+            row=0,
+            column=2,
+            sticky="e",
+        )
+
+        self.autonomous_dot = tk.Label(
+            state,
+            text="●",
+            bg=BG,
+            fg=TEXT_MUTED,
+            font=("TkDefaultFont", 9),
+        )
+
+        self.autonomous_dot.pack(
+            side="left",
+            padx=(0, 5),
+        )
+
+        self.autonomous_label = tk.Label(
+            state,
+            text="Autonomous Mode  IDLE",
+            bg=BG,
+            fg=TEXT_SECONDARY,
+            font=("TkDefaultFont", 9),
+        )
+
+        self.autonomous_label.pack(
+            side="left",
+        )
+
+        self._update_tab_buttons()
+
+    # --------------------------------------------------------
+    # Main dashboard
+    # --------------------------------------------------------
+
+    def _build_main_area(self):
+
+        container = tk.Frame(
+            self,
+            bg=BG,
+        )
+
+        container.grid(
+            row=1,
+            column=0,
+            sticky="nsew",
+            padx=18,
+            pady=(0, 10),
+        )
+
+        container.grid_rowconfigure(
+            0,
+            weight=1,
+        )
+
+        container.grid_columnconfigure(
+            0,
+            weight=25,
+            uniform="dashboard",
+        )
+
+        container.grid_columnconfigure(
+            1,
+            weight=35,
+            uniform="dashboard",
+        )
+
+        container.grid_columnconfigure(
+            2,
+            weight=22,
+            uniform="dashboard",
+        )
+
+        container.grid_columnconfigure(
+            3,
+            weight=18,
+            uniform="dashboard",
+        )
+
+        self.chat_panel = self._build_chat_panel(
+            container
+        )
+
+        self.memory_panel_controller = MemoryPanel(
+            parent=container,
+            runtime=self.runtime,
+            panel_builder=self._panel,
+            panel_header_builder=self._panel_header,
+            colors={
+                "SURFACE": SURFACE,
+                "SURFACE_2": SURFACE_2,
+                "SURFACE_3": SURFACE_3,
+                "BORDER": BORDER,
+                "BORDER_LIGHT": BORDER_LIGHT,
+                "TEXT": TEXT,
+                "TEXT_SECONDARY": TEXT_SECONDARY,
+                "TEXT_MUTED": TEXT_MUTED,
+                "CYAN": CYAN,
+                "YELLOW": YELLOW,
+            },
+        )
+
+        self.memory_panel = self.memory_panel_controller.build()
+
+        self.research_panel = self._build_research_panel(
+            container
+        )
+
+        self.system_panel = self._build_system_panel(
+            container
+        )
+
+        self.chat_panel.grid(
+            row=0,
+            column=0,
+            sticky="nsew",
+            padx=(0, 6),
+        )
+
+        self.memory_panel.grid(
+            row=0,
+            column=1,
+            sticky="nsew",
+            padx=6,
+        )
+
+        self.research_panel.grid(
+            row=0,
+            column=2,
+            sticky="nsew",
+            padx=6,
+        )
+
+        self.system_panel.grid(
+            row=0,
+            column=3,
+            sticky="nsew",
+            padx=(6, 0),
+        )
+
+    # --------------------------------------------------------
+    # Generic panel
+    # --------------------------------------------------------
+
+    def _panel(self, parent):
+
+        frame = tk.Frame(
+            parent,
+            bg=SURFACE,
+            highlightbackground=BORDER,
+            highlightcolor=BORDER,
+            highlightthickness=1,
+            bd=0,
+        )
+
+        frame.grid_rowconfigure(
+            1,
+            weight=1,
+        )
+
+        frame.grid_columnconfigure(
+            0,
+            weight=1,
+        )
+
+        return frame
+
+    # --------------------------------------------------------
+    # Panel header
+    # --------------------------------------------------------
+
+    def _panel_header(
+        self,
+        parent,
+        title,
+        status=None,
+        status_color=TEXT_MUTED,
+    ):
+
+        header = tk.Frame(
+            parent,
+            bg=SURFACE,
+            height=46,
+        )
+
+        header.grid(
+            row=0,
+            column=0,
+            sticky="ew",
+            padx=16,
+            pady=(12, 0),
+        )
+
+        header.grid_columnconfigure(
+            0,
+            weight=1,
+        )
+
+        title_label = tk.Label(
+            header,
+            text=title,
+            bg=SURFACE,
+            fg=TEXT,
+            font=("TkDefaultFont", 11, "bold"),
+        )
+
+        title_label.grid(
+            row=0,
+            column=0,
+            sticky="w",
+        )
+
+        if status:
+
+            status_label = tk.Label(
+                header,
+                text=status.upper(),
+                bg=SURFACE,
+                fg=status_color,
+                font=("TkDefaultFont", 7, "bold"),
+            )
+
+            status_label.grid(
+                row=0,
+                column=1,
+                sticky="e",
+            )
+
+        return header
+
+    # --------------------------------------------------------
+    # Chat
+    # --------------------------------------------------------
+
+    def _build_chat_panel(self, parent):
+
+        panel = self._panel(parent)
+
+        self._panel_header(
+            panel,
+            "Chat",
+            "Online",
+            CYAN,
+        )
+
+        body = tk.Frame(
+            panel,
+            bg=SURFACE,
+        )
+
+        body.grid(
+            row=1,
+            column=0,
+            sticky="nsew",
+            padx=10,
+            pady=10,
+        )
+
+        body.grid_rowconfigure(
+            0,
+            weight=1,
+        )
+
+        body.grid_columnconfigure(
+            0,
+            weight=1,
+        )
+
+        conversation = tk.Frame(
+            body,
+            bg=SURFACE_2,
+            highlightbackground=BORDER,
+            highlightthickness=1,
+        )
+
+        conversation.grid(
+            row=0,
+            column=0,
+            sticky="nsew",
+        )
+
+        self.chat_text = tk.Text(
+            conversation,
+            bg=SURFACE_2,
+            fg=TEXT,
+            insertbackground=CYAN,
+            selectbackground=SURFACE_3,
+            selectforeground=TEXT,
+            relief="flat",
+            bd=0,
+            wrap="word",
+            padx=14,
+            pady=14,
+            font=("TkDefaultFont", 10),
+        )
+
+        self.chat_text.pack(
+            fill="both",
+            expand=True,
+        )
+
+        self.chat_text.insert(
+            "end",
+            "AE01M Cognitive Interface\n\n",
+        )
+
+        self.chat_text.insert(
+            "end",
+            "Runtime is ready.\n",
+        )
+
+        self.chat_text.insert(
+            "end",
+            "Waiting for user input...\n",
+        )
+
+        self.chat_text.configure(
+            state="disabled",
+        )
+
+        input_area = tk.Frame(
+            body,
+            bg=SURFACE,
+        )
+
+        input_area.grid(
+            row=1,
+            column=0,
+            sticky="ew",
+            pady=(10, 0),
+        )
+
+        input_area.grid_columnconfigure(
+            0,
+            weight=1,
+        )
+
+        self.chat_entry = tk.Entry(
+            input_area,
+            bg=SURFACE_2,
+            fg=TEXT,
+            insertbackground=CYAN,
+            relief="flat",
+            bd=0,
+            highlightbackground=BORDER,
+            highlightcolor=BLUE,
+            highlightthickness=1,
+            font=("TkDefaultFont", 10),
+        )
+
+        self.chat_entry.grid(
+            row=0,
+            column=0,
+            sticky="ew",
+            ipady=9,
+            padx=(0, 8),
+        )
+
+        self.chat_entry.insert(
+            0,
+            "พิมพ์ข้อความถึง AE01M...",
+        )
+
+        self.send_button = tk.Button(
+            input_area,
+            text="➤",
+            command=self._send_message,
+            bg=BLUE,
+            fg=WHITE,
+            activebackground=BLUE_HOVER,
+            activeforeground=WHITE,
+            relief="flat",
+            bd=0,
+            width=4,
+            cursor="hand2",
+            font=("TkDefaultFont", 10, "bold"),
+        )
+
+        self.send_button.grid(
+            row=0,
+            column=1,
+            sticky="ns",
+        )
+
+        tools = tk.Frame(
+            body,
+            bg=SURFACE,
+        )
+
+        tools.grid(
+            row=2,
+            column=0,
+            sticky="ew",
+            pady=(8, 0),
+        )
+
+        for text in (
+            "Voice",
+            "Attach",
+            "Think Deeper",
+        ):
+
+            button = tk.Button(
+                tools,
+                text=text,
+                bg=SURFACE_3,
+                fg=TEXT_SECONDARY,
+                activebackground=BORDER_LIGHT,
+                activeforeground=TEXT,
+                relief="flat",
+                bd=0,
+                padx=10,
+                pady=5,
+                cursor="hand2",
+                font=("TkDefaultFont", 8),
+            )
+
+            button.pack(
+                side="left",
+                padx=(0, 5),
+            )
+
+        return panel
+
+    # --------------------------------------------------------
+    # Memory
+    # --------------------------------------------------------
+
+    def _build_memory_panel(self, parent):
+
+        panel = self._panel(parent)
+
+        self._panel_header(
+            panel,
+            "Memory Graph",
+            "Live",
+            CYAN,
+        )
+
+        body = tk.Frame(
+            panel,
+            bg=SURFACE,
+        )
+
+        body.grid(
+            row=1,
+            column=0,
+            sticky="nsew",
+            padx=10,
+            pady=10,
+        )
+
+        body.grid_rowconfigure(
+            1,
+            weight=1,
+        )
+
+        body.grid_columnconfigure(
+            0,
+            weight=1,
+        )
+
+        metrics = tk.Frame(
+            body,
+            bg=SURFACE,
+        )
+
+        metrics.grid(
+            row=0,
+            column=0,
+            sticky="ew",
+            pady=(0, 10),
+        )
+
+        for index in range(4):
+
+            metrics.grid_columnconfigure(
+                index,
+                weight=1,
+                uniform="memory_metric",
+            )
+
+        self.memory_metrics = {}
+
+        metric_names = (
+            ("Nodes", "nodes"),
+            ("Connections", "connections"),
+            ("Experiences", "experiences"),
+            ("Last Update", "last_update"),
+        )
+
+        for index, (label, key) in enumerate(
+            metric_names
+        ):
+
+            card = tk.Frame(
+                metrics,
+                bg=SURFACE_2,
+                highlightbackground=BORDER,
+                highlightthickness=1,
+            )
+
+            card.grid(
+                row=0,
+                column=index,
+                sticky="nsew",
+                padx=(
+                    0 if index == 0 else 3,
+                    3,
+                ),
+            )
+
+            tk.Label(
+                card,
+                text=label.upper(),
+                bg=SURFACE_2,
+                fg=TEXT_MUTED,
+                font=("TkDefaultFont", 7),
+            ).pack(
+                pady=(8, 1),
+            )
+
+            value = tk.Label(
+                card,
+                text="—",
+                bg=SURFACE_2,
+                fg=TEXT,
+                font=("TkDefaultFont", 10, "bold"),
+            )
+
+            value.pack(
+                pady=(0, 8),
+            )
+
+            self.memory_metrics[key] = value
+
+        graph = tk.Frame(
+            body,
+            bg=SURFACE_2,
+            highlightbackground=BORDER,
+            highlightthickness=1,
+        )
+
+        graph.grid(
+            row=1,
+            column=0,
+            sticky="nsew",
+        )
+
+        graph.grid_rowconfigure(
+            0,
+            weight=1,
+        )
+
+        graph.grid_columnconfigure(
+            0,
+            weight=1,
+        )
+
+        self.graph_canvas = tk.Canvas(
+            graph,
+            bg=SURFACE_2,
+            highlightthickness=0,
+            bd=0,
+        )
+
+        self.graph_canvas.grid(
+            row=0,
+            column=0,
+            sticky="nsew",
+        )
+
+        self.graph_canvas.bind(
+            "<Configure>",
+            lambda event: self._draw_memory_graph(),
+        )
+
+        recent = tk.Frame(
+            body,
+            bg=SURFACE,
+        )
+
+        recent.grid(
+            row=2,
+            column=0,
+            sticky="ew",
+            pady=(10, 0),
+        )
+
+        tk.Label(
+            recent,
+            text="RECENT MEMORIES",
+            bg=SURFACE,
+            fg=TEXT_MUTED,
+            font=("TkDefaultFont", 7, "bold"),
+        ).pack(
+            anchor="w",
+        )
+
+        self.recent_memory_label = tk.Label(
+            recent,
+            text="No recent memory data",
+            bg=SURFACE,
+            fg=TEXT_SECONDARY,
+            anchor="w",
+            justify="left",
+            wraplength=400,
+            font=("TkDefaultFont", 8),
+        )
+
+        self.recent_memory_label.pack(
+            anchor="w",
+            pady=(5, 8),
+        )
+
+        button = tk.Button(
+            recent,
+            text="View Full Memory Graph  →",
+            bg=SURFACE_3,
+            fg=CYAN,
+            activebackground=BORDER_LIGHT,
+            activeforeground=TEXT,
+            relief="flat",
+            bd=0,
+            pady=6,
+            cursor="hand2",
+            font=("TkDefaultFont", 8, "bold"),
+        )
+
+        button.pack(
+            fill="x",
+        )
+
+        return panel
+
+    # --------------------------------------------------------
+    # Real Memory Graph
+    # --------------------------------------------------------
+
+    def _draw_memory_graph(self):
+
+        canvas = getattr(
+            self,
+            "graph_canvas",
+            None,
+        )
+
+        if canvas is None:
+            return
+
+        canvas.delete("all")
+
+        graph = self.runtime.memory.memory_graph
+
+        nodes = list(
+            graph.nodes.items()
+        )
+
+        edges = list(
+            graph.edges.values()
+        )
+
+        width = max(
+            canvas.winfo_width(),
+            300,
+        )
+
+        height = max(
+            canvas.winfo_height(),
+            300,
+        )
+
+        if not nodes:
+
+            canvas.create_text(
+                width // 2,
+                height // 2 - 10,
+                text="No memory nodes",
+                fill=TEXT_SECONDARY,
+                font=("TkDefaultFont", 11, "bold"),
+            )
+
+            canvas.create_text(
+                width // 2,
+                height // 2 + 15,
+                text="Memory graph is currently empty",
+                fill=TEXT_MUTED,
+                font=("TkDefaultFont", 8),
+            )
+
+            return
+
+        display_nodes = nodes[:80]
+
+        node_positions = {}
+
+        cx = width / 2
+        cy = height / 2
+
+        radius = min(
+            width,
+            height,
+        ) * 0.32
+
+        count = len(display_nodes)
+
+        if count == 1:
+
+            node_positions[
+                display_nodes[0][0]
+            ] = (
+                cx,
+                cy,
+            )
+
+        else:
+
+            for index, (node_id, node) in enumerate(
+                display_nodes
+            ):
+
+                angle = (
+                    2.0
+                    * math.pi
+                    * index
+                    / count
+                )
+
+                x = (
+                    cx
+                    + math.cos(angle)
+                    * radius
+                )
+
+                y = (
+                    cy
+                    + math.sin(angle)
+                    * radius
+                )
+
+                node_positions[node_id] = (
+                    x,
+                    y,
+                )
+
+        for edge in edges:
+
+            if (
+                edge.source not in node_positions
+                or edge.target not in node_positions
+            ):
+                continue
+
+            x1, y1 = node_positions[
+                edge.source
+            ]
+
+            x2, y2 = node_positions[
+                edge.target
+            ]
+
+            line_width = max(
+                1,
+                min(
+                    5,
+                    int(round(edge.weight)),
+                ),
+            )
+
+            canvas.create_line(
+                x1,
+                y1,
+                x2,
+                y2,
+                fill=BORDER_LIGHT,
+                width=line_width,
+            )
+
+        for node_id, node in display_nodes:
+
+            x, y = node_positions[
+                node_id
+            ]
+
+            node_color = memory_type_color(
+                node.memory_type
+            )
+
+            node_radius = 16 + min(
+                12,
+                max(
+                    0,
+                    node.activation_count - 1,
+                ),
+            )
+
+            canvas.create_oval(
+                x - node_radius,
+                y - node_radius,
+                x + node_radius,
+                y + node_radius,
+                fill=SURFACE_3,
+                outline=node_color,
+                width=2,
+            )
+
+            label = format_memory_content(
+                node.content,
+                20,
+            )
+
+            canvas.create_text(
+                x,
+                y,
+                text=label,
+                fill=TEXT,
+                font=("TkDefaultFont", 7, "bold"),
+                width=120,
+            )
+
+        canvas.create_text(
+            10,
+            10,
+            text=(
+                f"{len(graph.nodes)} nodes  •  "
+                f"{len(graph.edges)} connections"
+            ),
+            anchor="nw",
+            fill=TEXT_MUTED,
+            font=("TkDefaultFont", 7),
+        )
+
+        if len(nodes) > len(display_nodes):
+
+            canvas.create_text(
+                width - 10,
+                10,
+                text=(
+                    f"Showing {len(display_nodes)} "
+                    f"of {len(nodes)} nodes"
+                ),
+                anchor="ne",
+                fill=YELLOW,
+                font=("TkDefaultFont", 7),
+            )
+
+    # --------------------------------------------------------
+    # Real Memory refresh
+    # --------------------------------------------------------
+
+    def _refresh_memory(self):
+        self.memory_panel_controller.refresh()
+
+    # --------------------------------------------------------
+    # Research
+    # --------------------------------------------------------
+
+    def _build_research_panel(self, parent):
+
+        panel = self._panel(parent)
+
+        self._panel_header(
+            panel,
+            "Research",
+            "Ready",
+            VIOLET,
+        )
+
+        body = tk.Frame(
+            panel,
+            bg=SURFACE,
+        )
+
+        body.grid(
+            row=1,
+            column=0,
+            sticky="nsew",
+            padx=12,
+            pady=10,
+        )
+
+        body.grid_columnconfigure(
+            0,
+            weight=1,
+        )
+
+        new_button = tk.Button(
+            body,
+            text="+  New Research",
+            bg=BLUE,
+            fg=WHITE,
+            activebackground=BLUE_HOVER,
+            activeforeground=WHITE,
+            relief="flat",
+            bd=0,
+            pady=8,
+            cursor="hand2",
+            font=("TkDefaultFont", 9, "bold"),
+        )
+
+        new_button.grid(
+            row=0,
+            column=0,
+            sticky="ew",
+        )
+
+        tk.Label(
+            body,
+            text="ACTIVE RESEARCH",
+            bg=SURFACE,
+            fg=TEXT_MUTED,
+            font=("TkDefaultFont", 7, "bold"),
+        ).grid(
+            row=1,
+            column=0,
+            sticky="w",
+            pady=(18, 7),
+        )
+
+        active = tk.Frame(
+            body,
+            bg=SURFACE_2,
+            highlightbackground=BORDER,
+            highlightthickness=1,
+        )
+
+        active.grid(
+            row=2,
+            column=0,
+            sticky="ew",
+        )
+
+        self.active_research_label = tk.Label(
+            active,
+            text="No active research",
+            bg=SURFACE_2,
+            fg=TEXT,
+            anchor="w",
+            font=("TkDefaultFont", 9, "bold"),
+        )
+
+        self.active_research_label.pack(
+            fill="x",
+            padx=10,
+            pady=(12, 4),
+        )
+
+        self.research_detail_label = tk.Label(
+            active,
+            text="—",
+            bg=SURFACE_2,
+            fg=TEXT_SECONDARY,
+            anchor="w",
+            font=("TkDefaultFont", 8),
+        )
+
+        self.research_detail_label.pack(
+            fill="x",
+            padx=10,
+            pady=(0, 12),
+        )
+
+        tk.Label(
+            body,
+            text="RECENT FINDINGS",
+            bg=SURFACE,
+            fg=TEXT_MUTED,
+            font=("TkDefaultFont", 7, "bold"),
+        ).grid(
+            row=3,
+            column=0,
+            sticky="w",
+            pady=(18, 7),
+        )
+
+        self.findings_label = tk.Label(
+            body,
+            text="No research findings available",
+            bg=SURFACE,
+            fg=TEXT_SECONDARY,
+            anchor="w",
+            justify="left",
+            wraplength=270,
+            font=("TkDefaultFont", 9),
+        )
+
+        self.findings_label.grid(
+            row=4,
+            column=0,
+            sticky="ew",
+        )
+
+        view_button = tk.Button(
+            body,
+            text="View All Research  →",
+            bg=SURFACE_2,
+            fg=CYAN,
+            activebackground=SURFACE_3,
+            activeforeground=TEXT,
+            relief="flat",
+            bd=0,
+            pady=7,
+            cursor="hand2",
+            font=("TkDefaultFont", 8, "bold"),
+        )
+
+        view_button.grid(
+            row=5,
+            column=0,
+            sticky="ew",
+            pady=(14, 0),
+        )
+
+        return panel
+
+    # --------------------------------------------------------
+    # System
+    # --------------------------------------------------------
+
+    def _build_system_panel(self, parent):
+
+        panel = self._panel(parent)
+
+        self._panel_header(
+            panel,
+            "System Status",
+            "Live",
+            GREEN,
+        )
+
+        body = tk.Frame(
+            panel,
+            bg=SURFACE,
+        )
+
+        body.grid(
+            row=1,
+            column=0,
+            sticky="nsew",
+            padx=12,
+            pady=10,
+        )
+
+        body.grid_columnconfigure(
+            0,
+            weight=1,
+        )
+
+        self._section_title(
+            body,
+            "COGNITIVE ENGINE",
+            0,
+            CYAN,
+        )
+
+        cognitive = self.runtime.cognitive.snapshot()
+
+        inference = getattr(
+            self.runtime.cognitive,
+            "_inference",
+            None,
+        )
+
+        engine_name = cognitive.get(
+            "engine",
+            "—",
+        )
+
+        model = getattr(
+            inference,
+            "model",
+            "—",
+        )
+
+        backend = (
+            type(inference).__name__
+            if inference is not None
+            else "—"
+        )
+
+        context = getattr(
+            inference,
+            "context_size",
+            None,
+        )
+
+        context_text = (
+            str(context)
+            if context is not None
+            else "1024"
+        )
+
+        self.engine_value = self._info_row(
+            body,
+            "Engine",
+            engine_name,
+            1,
+        )
+
+        self.model_value = self._info_row(
+            body,
+            "Model",
+            model,
+            2,
+        )
+
+        self.backend_value = self._info_row(
+            body,
+            "Backend",
+            backend,
+            3,
+        )
+
+        self.context_value = self._info_row(
+            body,
+            "Context",
+            context_text,
+            4,
+        )
+
+        self._section_title(
+            body,
+            "SYSTEM RESOURCES",
+            5,
+            CYAN,
+        )
+
+        self.cpu_value = self._info_row(
+            body,
+            "CPU",
+            "—",
+            6,
+        )
+
+        self.ram_value = self._info_row(
+            body,
+            "RAM",
+            "—",
+            7,
+        )
+
+        self.disk_value = self._info_row(
+            body,
+            "Disk",
+            "—",
+            8,
+        )
+
+        self.temperature_value = self._info_row(
+            body,
+            "Temperature",
+            "—",
+            9,
+        )
+
+        self._section_title(
+            body,
+            "RUNTIME",
+            10,
+            GREEN,
+        )
+
+        self.runtime_status_value = self._info_row(
+            body,
+            "Status",
+            "Running",
+            11,
+        )
+
+        self.uptime_value = self._info_row(
+            body,
+            "Uptime",
+            "—",
+            12,
+        )
+
+        self.mode_value = self._info_row(
+            body,
+            "Mode",
+            "Manual",
+            13,
+        )
+
+        self._section_title(
+            body,
+            "SAFETY & HEALTH",
+            14,
+            GREEN,
+        )
+
+        self.safety_value = self._info_row(
+            body,
+            "Safety Policy",
+            "Active",
+            15,
+        )
+
+        self.blocked_value = self._info_row(
+            body,
+            "Blocked Reasons",
+            "0",
+            16,
+        )
+
+        self.learned_actions_value = self._info_row(
+            body,
+            "Learned Actions",
+            "0",
+            17,
+        )
+
+        settings_button = tk.Button(
+            body,
+            text="⚙  System Settings",
+            bg=SURFACE_2,
+            fg=TEXT_SECONDARY,
+            activebackground=SURFACE_3,
+            activeforeground=TEXT,
+            relief="flat",
+            bd=0,
+            pady=7,
+            cursor="hand2",
+            font=("TkDefaultFont", 8),
+        )
+
+        settings_button.grid(
+            row=18,
+            column=0,
+            sticky="ew",
+            pady=(12, 0),
+        )
+
+        return panel
+
+    # --------------------------------------------------------
+    # System UI helpers
+    # --------------------------------------------------------
+
+    def _section_title(
+        self,
+        parent,
+        text,
+        row,
+        accent,
+    ):
+
+        label = tk.Label(
+            parent,
+            text=text,
+            bg=SURFACE,
+            fg=accent,
+            anchor="w",
+            font=("TkDefaultFont", 7, "bold"),
+        )
+
+        label.grid(
+            row=row,
+            column=0,
+            sticky="ew",
+            pady=(12, 4),
+        )
+
+    def _info_row(
+        self,
+        parent,
+        label,
+        value,
+        row,
+    ):
+
+        row_frame = tk.Frame(
+            parent,
+            bg=SURFACE,
+        )
+
+        row_frame.grid(
+            row=row,
+            column=0,
+            sticky="ew",
+            pady=2,
+        )
+
+        row_frame.grid_columnconfigure(
+            1,
+            weight=1,
+        )
+
+        left = tk.Label(
+            row_frame,
+            text=label,
+            bg=SURFACE,
+            fg=TEXT_SECONDARY,
+            anchor="w",
+            font=("TkDefaultFont", 8),
+        )
+
+        left.grid(
+            row=0,
+            column=0,
+            sticky="w",
+        )
+
+        right = tk.Label(
+            row_frame,
+            text=str(value),
+            bg=SURFACE,
+            fg=TEXT,
+            anchor="e",
+            font=("TkDefaultFont", 8, "bold"),
+        )
+
+        right.grid(
+            row=0,
+            column=1,
+            sticky="e",
+        )
+
+        return right
+
+    # --------------------------------------------------------
+    # Status Bar
+    # --------------------------------------------------------
+
+    def _build_status_bar(self):
+
+        bar = tk.Frame(
+            self,
+            bg=SURFACE_2,
+            height=32,
+            highlightbackground=BORDER,
+            highlightthickness=1,
+        )
+
+        bar.grid(
+            row=2,
+            column=0,
+            sticky="ew",
+            padx=18,
+            pady=(0, 10),
+        )
+
+        bar.grid_columnconfigure(
+            1,
+            weight=1,
+        )
+
+        self.status_build_label = tk.Label(
+            bar,
+            text=(
+                "AE01M Runtime v0.2  |  "
+                "Build 2024.05.30"
+            ),
+            bg=SURFACE_2,
+            fg=TEXT_MUTED,
+            font=("TkDefaultFont", 7),
+        )
+
+        self.status_build_label.grid(
+            row=0,
+            column=0,
+            sticky="w",
+            padx=10,
+            pady=7,
+        )
+
+        self.status_cycle_label = tk.Label(
+            bar,
+            text=(
+                "Cycle: —  |  "
+                "TPS: —  |  "
+                "Latency: —"
+            ),
+            bg=SURFACE_2,
+            fg=TEXT_MUTED,
+            font=("TkDefaultFont", 7),
+        )
+
+        self.status_cycle_label.grid(
+            row=0,
+            column=1,
+            sticky="w",
+            padx=10,
+        )
+
+        runtime_frame = tk.Frame(
+            bar,
+            bg=SURFACE_2,
+        )
+
+        runtime_frame.grid(
+            row=0,
+            column=2,
+            sticky="e",
+            padx=10,
+        )
+
+        self.status_runtime_dot = tk.Label(
+            runtime_frame,
+            text="●",
+            bg=SURFACE_2,
+            fg=GREEN,
+            font=("TkDefaultFont", 8),
+        )
+
+        self.status_runtime_dot.pack(
+            side="left",
+            padx=(0, 4),
+        )
+
+        self.status_runtime_label = tk.Label(
+            runtime_frame,
+            text="Runtime Connected",
+            bg=SURFACE_2,
+            fg=GREEN,
+            font=("TkDefaultFont", 7, "bold"),
+        )
+
+        self.status_runtime_label.pack(
+            side="left",
+        )
+
+    # --------------------------------------------------------
+    # Tabs
+    # --------------------------------------------------------
+
+    def _select_tab(self, tab):
+
+        self.active_tab = tab
+        self._update_tab_buttons()
+
+    def _update_tab_buttons(self):
+
+        for name, button in self.tab_buttons.items():
+
+            if name == self.active_tab:
+
+                button.configure(
+                    bg=SURFACE_3,
+                    fg=TEXT,
+                    activebackground=SURFACE_3,
+                    activeforeground=TEXT,
+                )
+
+            else:
+
+                button.configure(
+                    bg=SURFACE,
+                    fg=TEXT_SECONDARY,
+                    activebackground=SURFACE_3,
+                    activeforeground=TEXT,
+                )
+
+    # --------------------------------------------------------
+    # Chat
+    # --------------------------------------------------------
+
+    def _send_message(self):
+
+        text = self.chat_entry.get().strip()
+
+        if not text:
+            return
+
+        if text == "พิมพ์ข้อความถึง AE01M...":
+            return
+
+        self.chat_text.configure(
+            state="normal",
+        )
+
+        self.chat_text.insert(
+            "end",
+            f"\nYou\n{text}\n",
+        )
+
+        self.chat_text.configure(
+            state="disabled",
+        )
+
+        self.chat_text.see(
+            "end",
+        )
+
+        self.chat_entry.delete(
+            0,
+            "end",
+        )
+
+    # --------------------------------------------------------
+    # Runtime refresh
+    # --------------------------------------------------------
+
+    def _refresh_runtime(self):
+
+        try:
+
+            self._refresh_system_status()
+            self._refresh_memory()
+
+            self.status_runtime_dot.configure(
+                fg=GREEN,
+            )
+
+            self.status_runtime_label.configure(
+                text="Runtime Connected",
+                fg=GREEN,
+            )
+
+        except Exception:
+
+            self.runtime_status_value.configure(
+                text="Error",
+                fg=RED,
+            )
+
+            self.status_runtime_dot.configure(
+                fg=RED,
+            )
+
+            self.status_runtime_label.configure(
+                text="Runtime Error",
+                fg=RED,
+            )
+
+        self.after(
+            2000,
+            self._refresh_runtime,
+        )
+
+    # --------------------------------------------------------
+    # System refresh
+    # --------------------------------------------------------
+
+    def _refresh_system_status(self):
+
+        try:
+
+            system = self.runtime.system.snapshot()
+
+            cpu = getattr(
+                system,
+                "cpu_usage_percent",
+                None,
+            )
+
+            ram_available = getattr(
+                system,
+                "ram_available",
+                None,
+            )
+
+            ram_total = getattr(
+                system,
+                "ram_total",
+                None,
+            )
+
+            disk_used = getattr(
+                system,
+                "disk_used",
+                None,
+            )
+
+            disk_total = getattr(
+                system,
+                "disk_total",
+                None,
+            )
+
+            temperature = getattr(
+                system,
+                "cpu_temperature",
+                None,
+            )
+
+            uptime = getattr(
+                system,
+                "uptime_seconds",
+                None,
+            )
+
+            self.cpu_value.configure(
+                text=(
+                    f"{float(cpu):.1f}%"
+                    if cpu is not None
+                    else "—"
+                )
+            )
+
+            if (
+                ram_available is not None
+                and ram_total is not None
+            ):
+
+                ram_used = (
+                    float(ram_total)
+                    - float(ram_available)
+                )
+
+                ram_total_gb = (
+                    float(ram_total)
+                    / (1024 ** 3)
+                )
+
+                ram_used_gb = (
+                    float(ram_used)
+                    / (1024 ** 3)
+                )
+
+                self.ram_value.configure(
+                    text=(
+                        f"{ram_used_gb:.1f} / "
+                        f"{ram_total_gb:.1f} GB"
+                    )
+                )
+
+            else:
+
+                self.ram_value.configure(
+                    text="—"
+                )
+
+            if (
+                disk_used is not None
+                and disk_total is not None
+            ):
+
+                disk_used_gb = (
+                    float(disk_used)
+                    / (1024 ** 3)
+                )
+
+                disk_total_gb = (
+                    float(disk_total)
+                    / (1024 ** 3)
+                )
+
+                self.disk_value.configure(
+                    text=(
+                        f"{disk_used_gb:.1f} / "
+                        f"{disk_total_gb:.1f} GB"
+                    )
+                )
+
+            else:
+
+                self.disk_value.configure(
+                    text="—"
+                )
+
+            if temperature is not None:
+
+                self.temperature_value.configure(
+                    text=f"{float(temperature):.1f} °C"
+                )
+
+            else:
+
+                self.temperature_value.configure(
+                    text="—"
+                )
+
+            self.uptime_value.configure(
+                text=format_uptime(uptime)
+            )
+
+            self.runtime_status_value.configure(
+                text="Running",
+                fg=GREEN,
+            )
+
+        except Exception:
+
+            self.runtime_status_value.configure(
+                text="Error",
+                fg=RED,
+            )
+
+    # --------------------------------------------------------
+    # Main
+    # --------------------------------------------------------
+
+def main():
+
+    app = AE01MApp()
+    app.mainloop()
+
+
+if __name__ == "__main__":
+    main()
