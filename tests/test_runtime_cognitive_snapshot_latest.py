@@ -1,11 +1,12 @@
 import unittest
 
 from runtime.runtime import TranscendingRuntime
+from tests.cognitive_test_helper import FakeCognitive
 
 
 class TestRuntimeCognitiveSnapshotLatest(unittest.TestCase):
     def test_runtime_snapshot_contains_latest_cognitive_cycle(self):
-        runtime = TranscendingRuntime()
+        runtime = TranscendingRuntime(cognitive=FakeCognitive())
 
         runtime.cognitive_loop.process(
             "person A sees a large tree near the house"

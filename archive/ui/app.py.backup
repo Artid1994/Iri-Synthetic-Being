@@ -1,7 +1,3 @@
-from .helpers import format_uptime, format_memory_content, memory_type_color
-from .memory_panel import MemoryPanel
-from .runtime_snapshot import RuntimeSnapshot
-
 import math
 import tkinter as tk
 from tkinter import ttk
@@ -46,8 +42,52 @@ RED = "#f87171"
 
 WHITE = "#ffffff"
 
+MEMORY_TYPE_COLORS = {
+    "EPISODIC": BLUE,
+    "SEMANTIC": CYAN,
+    "WORKING": YELLOW,
+    "EXPERIENCE": VIOLET,
+}
+
+
 # ------------------------------------------------------------
 # Utility
+# ------------------------------------------------------------
+
+def format_uptime(seconds):
+    if seconds is None:
+        return "—"
+
+    try:
+        seconds = int(seconds)
+    except (TypeError, ValueError):
+        return "—"
+
+    hours = seconds // 3600
+    minutes = (seconds % 3600) // 60
+    secs = seconds % 60
+
+    return f"{hours:02d}:{minutes:02d}:{secs:02d}"
+
+
+def format_memory_content(content, maximum=24):
+    content = str(content).replace("\n", " ").strip()
+
+    if len(content) <= maximum:
+        return content
+
+    return content[: maximum - 1] + "…"
+
+
+def memory_type_color(memory_type):
+    return MEMORY_TYPE_COLORS.get(
+        str(memory_type).upper(),
+        VIOLET,
+    )
+
+
+# ------------------------------------------------------------
+# Main Application
 # ------------------------------------------------------------
 
 class AE01MApp(tk.Tk):
@@ -62,8 +102,6 @@ class AE01MApp(tk.Tk):
         self.configure(bg=BG)
 
         self.runtime = TranscendingRuntime()
-        self.runtime_snapshot = RuntimeSnapshot(self.runtime)
-        self.dashboard_snapshot = {}
 
         self.active_tab = "Chat"
 
@@ -316,26 +354,9 @@ class AE01MApp(tk.Tk):
             container
         )
 
-        self.memory_panel_controller = MemoryPanel(
-            parent=container,
-            runtime=self.runtime,
-            panel_builder=self._panel,
-            panel_header_builder=self._panel_header,
-            colors={
-                "SURFACE": SURFACE,
-                "SURFACE_2": SURFACE_2,
-                "SURFACE_3": SURFACE_3,
-                "BORDER": BORDER,
-                "BORDER_LIGHT": BORDER_LIGHT,
-                "TEXT": TEXT,
-                "TEXT_SECONDARY": TEXT_SECONDARY,
-                "TEXT_MUTED": TEXT_MUTED,
-                "CYAN": CYAN,
-                "YELLOW": YELLOW,
-            },
+        self.memory_panel = self._build_memory_panel(
+            container
         )
-
-        self.memory_panel = self.memory_panel_controller.build()
 
         self.research_panel = self._build_research_panel(
             container
@@ -1084,7 +1105,92 @@ class AE01MApp(tk.Tk):
     # --------------------------------------------------------
 
     def _refresh_memory(self):
-        self.memory_panel_controller.refresh()
+
+        memory = self.runtime.memory
+        state = memory.snapshot()
+        graph = memory.memory_graph
+
+        # Nodes
+        self.memory_metrics[
+            "nodes"
+        ].configure(
+            text=str(
+                len(graph.nodes)
+            )
+        )
+
+        # Connections
+        self.memory_metrics[
+            "connections"
+        ].configure(
+            text=str(
+                len(graph.edges)
+            )
+        )
+
+        # Experiences
+        #
+        # add_experience() stores text in state.episodic
+        # and creates an EPISODIC MemoryGraph node.
+        #
+        # state.experiences is reserved for structured
+        # Experience objects and is therefore not used
+        # for this dashboard metric.
+        episodic_count = sum(
+            1
+            for node in graph.nodes.values()
+            if str(node.memory_type).upper() == "EPISODIC"
+        )
+
+        self.memory_metrics[
+            "experiences"
+        ].configure(
+            text=str(
+                episodic_count
+            )
+        )
+
+        # Memory currently has no graph-update timestamp.
+        self.memory_metrics[
+            "last_update"
+        ].configure(
+            text="—"
+        )
+
+        # Recent episodic memories
+        recent_items = list(
+            state.episodic[-3:]
+        )
+
+        if not recent_items:
+
+            self.recent_memory_label.configure(
+                text="No recent memory data",
+                fg=TEXT_SECONDARY,
+            )
+
+        else:
+
+            lines = []
+
+            for item in reversed(
+                recent_items
+            ):
+
+                lines.append(
+                    "• "
+                    + format_memory_content(
+                        item,
+                        70,
+                    )
+                )
+
+            self.recent_memory_label.configure(
+                text="\n".join(lines),
+                fg=TEXT,
+            )
+
+        self._draw_memory_graph()
 
     # --------------------------------------------------------
     # Research

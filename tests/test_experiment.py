@@ -779,3 +779,48 @@ Model Proposal: Exponential model"""
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class TestExponentialRateSearch(unittest.TestCase):
+
+    def test_search_exponential_rate_finds_best_rate(self):
+        from runtime.numerical_engine import NumericalEngine
+
+        engine = NumericalEngine()
+
+        result = engine.search_exponential_rate(
+            coupling_values=[0.0, 0.5, 1.0],
+            rates=[0.5, 0.75, 1.0, 1.25, 1.5],
+        )
+
+        self.assertEqual(result["status"], "COMPLETED")
+        self.assertEqual(result["model"], "exponential")
+        self.assertEqual(result["rate"], 0.75)
+        self.assertLess(result["error"], 1.0)
+
+    def test_search_exponential_rate_rejects_invalid_rates(self):
+        from runtime.numerical_engine import NumericalEngine
+
+        engine = NumericalEngine()
+
+        result = engine.search_exponential_rate(
+            coupling_values=[0.0, 0.5, 1.0],
+            rates=[0.0, -1.0],
+        )
+
+        self.assertEqual(result["status"], "REJECTED")
+        self.assertEqual(result["error"], "NO_VALID_RATES")
+
+    def test_search_exponential_rate_ignores_invalid_rates(self):
+        from runtime.numerical_engine import NumericalEngine
+
+        engine = NumericalEngine()
+
+        result = engine.search_exponential_rate(
+            coupling_values=[0.0, 0.5, 1.0],
+            rates=[-1.0, 0.0, 0.75],
+        )
+
+        self.assertEqual(result["status"], "COMPLETED")
+        self.assertEqual(result["model"], "exponential")
+        self.assertEqual(result["rate"], 0.75)

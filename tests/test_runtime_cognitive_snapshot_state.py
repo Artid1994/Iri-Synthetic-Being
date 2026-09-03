@@ -1,11 +1,12 @@
 import unittest
 
 from runtime.runtime import TranscendingRuntime
+from tests.cognitive_test_helper import FakeCognitive
 
 
 class TestRuntimeCognitiveSnapshotState(unittest.TestCase):
     def test_runtime_snapshot_preserves_cognitive_attention_and_salience(self):
-        runtime = TranscendingRuntime()
+        runtime = TranscendingRuntime(cognitive=FakeCognitive())
 
         runtime.cognitive_loop.process(
             "person A sees a large tree near the house"

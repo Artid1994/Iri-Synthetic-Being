@@ -215,7 +215,7 @@ class MemoryPanel:
 
         button.pack(fill="x")
 
-    def draw_graph(self):
+    def draw_graph(self, nodes=None, edges=None):
         canvas = self.graph_canvas
 
         if canvas is None:
@@ -223,10 +223,14 @@ class MemoryPanel:
 
         canvas.delete("all")
 
-        graph = self.runtime.memory.memory_graph
+        if nodes is None:
+            nodes = {}
 
-        nodes = list(graph.nodes.items())
-        edges = list(graph.edges.values())
+        if edges is None:
+            edges = {}
+
+        nodes = list(nodes.items())
+        edges = list(edges.values())
 
         width = max(canvas.winfo_width(), 300)
         height = max(canvas.winfo_height(), 300)
@@ -270,18 +274,22 @@ class MemoryPanel:
                 node_positions[node_id] = (x, y)
 
         for edge in edges:
+            source = edge.get("source")
+            target = edge.get("target")
+            weight = edge.get("weight", 1.0)
+
             if (
-                edge.source not in node_positions
-                or edge.target not in node_positions
+                source not in node_positions
+                or target not in node_positions
             ):
                 continue
 
-            x1, y1 = node_positions[edge.source]
-            x2, y2 = node_positions[edge.target]
+            x1, y1 = node_positions[source]
+            x2, y2 = node_positions[target]
 
             line_width = max(
                 1,
-                min(5, int(round(edge.weight))),
+                min(5, int(round(weight))),
             )
 
             canvas.create_line(
@@ -296,11 +304,15 @@ class MemoryPanel:
         for node_id, node in display_nodes:
             x, y = node_positions[node_id]
 
-            node_color = memory_type_color(node.memory_type)
+            memory_type = node.get("memory_type", "")
+            activation_count = node.get("activation_count", 1)
+            content = node.get("content", node_id)
+
+            node_color = memory_type_color(memory_type)
 
             node_radius = 16 + min(
                 12,
-                max(0, node.activation_count - 1),
+                max(0, activation_count - 1),
             )
 
             canvas.create_oval(
@@ -314,7 +326,7 @@ class MemoryPanel:
             )
 
             label = format_memory_content(
-                node.content,
+                content,
                 20,
             )
 
@@ -331,8 +343,8 @@ class MemoryPanel:
             10,
             10,
             text=(
-                f"{len(graph.nodes)} nodes  •  "
-                f"{len(graph.edges)} connections"
+                f"{len(nodes)} nodes  •  "
+                f"{len(edges)} connections"
             ),
             anchor="nw",
             fill=self.TEXT_MUTED,
@@ -352,23 +364,25 @@ class MemoryPanel:
                 font=("TkDefaultFont", 7),
             )
 
-    def refresh(self):
-        memory = self.runtime.memory
-        state = memory.snapshot()
-        graph = memory.memory_graph
+    def refresh(self, snapshot):
+        memory_snapshot = snapshot.get("memory", {})
+        graph_snapshot = snapshot.get("memory_graph", {})
+
+        nodes = graph_snapshot.get("nodes", {})
+        edges = graph_snapshot.get("edges", {})
 
         self.memory_metrics["nodes"].configure(
-            text=str(len(graph.nodes))
+            text=str(len(nodes))
         )
 
         self.memory_metrics["connections"].configure(
-            text=str(len(graph.edges))
+            text=str(len(edges))
         )
 
         episodic_count = sum(
             1
-            for node in graph.nodes.values()
-            if str(node.memory_type).upper() == "EPISODIC"
+            for node in nodes.values()
+            if str(node.get("memory_type", "")).upper() == "EPISODIC"
         )
 
         self.memory_metrics["experiences"].configure(
@@ -379,7 +393,7 @@ class MemoryPanel:
             text="—"
         )
 
-        recent_items = list(state.episodic[-3:])
+        recent_items = list(memory_snapshot.get("episodic", [])[-3:])
 
         if not recent_items:
             self.recent_memory_label.configure(
@@ -403,4 +417,4 @@ class MemoryPanel:
                 fg=self.TEXT,
             )
 
-        self.draw_graph()
+        self.draw_graph(nodes, edges)

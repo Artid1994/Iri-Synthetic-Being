@@ -241,7 +241,7 @@ Research files staged:
 Unrelated untracked files remain outside this checkpoint:
 - `memory.db`
 - `persistent_memory.py`
-- `runtime/code_reviewer.py`
+- `tools/code_reviewer.py`
 ---
 
 ## 2026-08-31 — Numerical Research Cycle Verified
