@@ -56,5 +56,36 @@ class TestWebResearch(unittest.TestCase):
         )
 
 
+def test_web_research_strips_script_and_style_content():
+    from runtime.web_research import WebResearch
+
+    class FakeResponse:
+        def read(self):
+            return (
+                b"<html><style>body { color: red; }</style>"
+                b"<script>var secret = 123;</script>"
+                b"<p>Hello world</p></html>"
+            )
+
+        def __enter__(self):
+            return self
+
+        def __exit__(self, *args):
+            pass
+
+    import runtime.web_research as module
+
+    original = module.urlopen
+    module.urlopen = lambda *args, **kwargs: FakeResponse()
+
+    try:
+        result = WebResearch().search("test")
+        assert "secret" not in result.content
+        assert "color: red" not in result.content
+        assert "Hello world" in result.content
+    finally:
+        module.urlopen = original
+
+
 if __name__ == "__main__":
     unittest.main()
