@@ -1,11 +1,17 @@
 import asyncio
 import json
-from fastapi import FastAPI, Request
+from fastapi import FastAPI, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import StreamingResponse
+from pathlib import Path
+
 from runtime.runtime import TranscendingRuntime
+from runtime.obsidian_exporter import ObsidianMemoryExporter
 
 app = FastAPI()
+
+# Configuration: Explicit isolated projection path within project boundary
+VAULT_EXPORT_DIR = (Path(__file__).resolve().parent / "vault_memory").resolve()
 
 # เปิดสิทธิ์ให้ Next.js หน้าบ้านยิงเรียกข้ามพอร์ตได้
 app.add_middleware(
@@ -56,6 +62,25 @@ async def handle_chat_stream(request: Request):
     return StreamingResponse(
         generate_brain_thought(user_prompt), media_type="text/event-stream"
     )
+
+
+@app.post("/api/memory/export")
+async def handle_memory_export():
+    """Trigger a one-way export from AE01M MemoryGraph to the designated vault projection directory."""
+    try:
+        exporter = ObsidianMemoryExporter(VAULT_EXPORT_DIR)
+        stats = exporter.export(runtime_engine.memory.memory_graph)
+        return {
+            "status": "success",
+            "exported": stats.get("exported", 0),
+            "cleaned": stats.get("cleaned", 0),
+            "destination": str(VAULT_EXPORT_DIR.name),
+        }
+    except Exception:
+        raise HTTPException(
+            status_code=500,
+            detail="Memory export operation failed",
+        )
 
 
 if __name__ == "__main__":

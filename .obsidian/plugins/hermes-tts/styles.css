@@ -1,0 +1,43 @@
+.hermes-tts-setting-tab .setting-item-heading {
+  margin-top: 1rem;
+}
+
+.hermes-tts-setting-tab .setting-item-control {
+  gap: var(--size-4-2);
+}
+
+.hermes-tts-setting-tab .setting-item-control input[type="text"],
+.hermes-tts-setting-tab .setting-item-control textarea,
+.hermes-tts-setting-tab .setting-item-control select {
+  width: min(100%, 420px);
+}
+
+.hermes-tts-setting-tab .setting-item-control textarea {
+  min-height: 88px;
+}
+
+@media (max-width: 700px) {
+  .hermes-tts-setting-tab .setting-item {
+    flex-wrap: wrap;
+    gap: var(--size-4-2);
+  }
+
+  .hermes-tts-setting-tab .setting-item-info,
+  .hermes-tts-setting-tab .setting-item-control {
+    width: 100%;
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+
+  .hermes-tts-setting-tab .setting-item-control input[type="text"],
+  .hermes-tts-setting-tab .setting-item-control textarea,
+  .hermes-tts-setting-tab .setting-item-control select {
+    width: 100%;
+  }
+
+  .hermes-tts-setting-tab .setting-item-control {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+}

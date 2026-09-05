@@ -1,0 +1,227 @@
+{
+  "main": {
+    "id": "0dd032c8d80d9f63",
+    "type": "split",
+    "children": [
+      {
+        "id": "336f2eaccaa7c829",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "edf6aea3e428a0bf",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "มุมมองกราฟ"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "991f3fcb8f987bd9",
+    "type": "split",
+    "children": [
+      {
+        "id": "6c0c3c0edcc81266",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f8d62eeeb182e744",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "File explorer"
+            }
+          },
+          {
+            "id": "3c237379533054c9",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "4764ae9a935e03c3",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "4e09c917324e199c",
+    "type": "split",
+    "children": [
+      {
+        "id": "bad6845e6d8eda8b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "03af1ac36aa7a7f2",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "2896c884b9b922d9",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "72b7916aae5db4af",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "efa52cd9fdfaece3",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "ec943babe2278df4",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          },
+          {
+            "id": "e8d8fe945dae45ca",
+            "type": "leaf",
+            "state": {
+              "type": "terminal-view",
+              "state": {
+                "tabs": [
+                  {
+                    "name": "Hermes 1",
+                    "color": "",
+                    "cwd": "/home/artid1994/Projects/THE_TRANSCENDING_FORM",
+                    "bufferSerial": "\r\n\u001b[33mConsole binaries not installed.\r\n\u001b[0mGo to Settings → Hermes Console to download them.\u001b[1B\u001b[22D"
+                  }
+                ],
+                "activeIndex": 0
+              },
+              "icon": "hermes-caduceus-wing",
+              "title": "Hermes Console"
+            }
+          }
+        ],
+        "currentTab": 5
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:เปิด quick switcher": false,
+      "graph:เปิดมุมมองกราฟ": false,
+      "canvas:สร้างผืนผ้าใบใหม่": false,
+      "daily-notes:เปิดโน้ตของวันนี้": false,
+      "templates:แทรกเทมเพลต": false,
+      "command-palette:เปิดกระดานคำสั่ง": false,
+      "bases:สร้างฐานใหม่": false,
+      "obsidian-git:Open Git source control": false,
+      "hermes-agent:Open Hermes Agent": false,
+      "hermes-agent:Open Hermes smart graph": false,
+      "hermes-console:Open Hermes Console": false,
+      "hermes-tts:Generate audio for current note": false
+    }
+  },
+  "active": "e8d8fe945dae45ca",
+  "lastOpenFiles": [
+    "ยังไม่ได้ตั้งชื่อ.base",
+    "TTF_V0.2_PLAN.md",
+    "TTF_V0.2_PLAN.baseline.md",
+    "TTF_AUTONOMOUS_PLAN.v0.1.backup.md",
+    "TTF_AUTONOMOUS_PLAN.md",
+    "README.th.md",
+    "README.md",
+    "PROJECT_PLAN.md",
+    "PROJECT_MAP.md",
+    "AGENTS.md",
+    "MASTER_DEVELOPMENT_PLAN.md",
+    "ยังไม่ได้ตั้งชื่อ.md",
+    "cognitive_shell_import/web/node_modules/axe-core/README.md",
+    "cognitive_shell_import/web/node_modules/webpack-bundle-analyzer/node_modules/commander/Readme.md",
+    "cognitive_shell_import/web/node_modules/eslint-plugin-react/README.md"
+  ]
+}
