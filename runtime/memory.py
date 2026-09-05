@@ -111,7 +111,7 @@ class Memory:
             "SEMANTIC",
         )
 
-        self.memory_graph.connect(
+        self.memory_graph.co_activate(
             source,
             target,
         )
@@ -194,6 +194,10 @@ class Memory:
 
         if len(self.state.safety_events) > max_safety_events:
             del self.state.safety_events[:-max_safety_events]
+
+    def memory_activity_snapshot(self) -> dict[str, list]:
+        """Return a detached copy of pending graph activity."""
+        return self.memory_graph.snapshot_activity()
 
     def is_empty(self) -> bool:
         return not (

@@ -8,6 +8,10 @@ from runtime.personality import Personality
 from runtime.self_model import SelfModel
 from runtime.ae01m_cognitive_factory import create_cognitive_engine
 from runtime.learning import Learning
+from runtime.learning_practice import LearningPractice
+from runtime.learning_exercise import LearningExercise
+from runtime.learning_exercise_runner import LearningExerciseRunner
+from runtime.learning_exercise_verifier import LearningExerciseVerifier
 from runtime.goal import Goal
 from runtime.intention import Intention
 from runtime.teaching import Teaching
@@ -65,6 +69,7 @@ class TranscendingRuntime:
             **({"host": ollama_host} if ollama_host else {}),
         )
         self.learning = Learning(self.memory)
+        self.learning_practice = LearningPractice()
         self.self_directed_learning = SelfDirectedLearning()
         self.goals: list[Goal] = []
         self.intentions: list[Intention] = []
@@ -525,6 +530,21 @@ class TranscendingRuntime:
             self.sync_brain_memory()
 
         return evaluation
+
+    def practice_exercise(
+        self,
+        exercise: LearningExercise | None,
+        answer: str,
+    ):
+        result = self.learning_practice.check(exercise, answer)
+        if result.passed and exercise is not None:
+            experience_text = f"{exercise.question} = {answer.strip()}"
+            self.learning.learn_from_prediction(
+                experience_text,
+                result.evaluation,
+            )
+            self.sync_brain_memory()
+        return result
 
     def process_sensor(
         self,
