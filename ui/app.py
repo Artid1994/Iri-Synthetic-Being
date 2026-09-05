@@ -62,12 +62,10 @@ class AE01MApp(tk.Tk):
 
         # Keyboard shortcuts
         self.bind("<Control-k>", lambda e: self.search_entry.focus_set())
-        self.bind("<Control-1>", lambda e: self._select_tab("Chat"))
-        self.bind("<Control-2>", lambda e: self._select_tab("Memory"))
-        self.bind("<Control-3>", lambda e: self._select_tab("Brain"))
-        self.bind("<Control-4>", lambda e: self._select_tab("Research"))
-        self.bind("<Control-5>", lambda e: self._select_tab("Learning"))
-        self.bind("<Control-6>", lambda e: self._select_tab("System"))
+        self.bind("<Control-K>", lambda e: self.search_entry.focus_set())
+        for num, name in enumerate(["Chat", "Memory", "Brain", "Research", "Learning", "System"], start=1):
+            self.bind(f"<Control-Key-{num}>", lambda e, n=name: self._select_tab(n))
+            self.bind(f"<Control-{num}>", lambda e, n=name: self._select_tab(n))
 
         self.after(1000, self._refresh_runtime)
 
@@ -613,15 +611,21 @@ class AE01MApp(tk.Tk):
             self.prop_labels["working_prop"].configure(text=str(len(mem.get("working", []))))
 
             brain_stats = self.runtime.brain.stats()
-            hipp = brain_stats.get("hippocampus", {})
-            motor = brain_stats.get("motor_cortex", {})
-            self.prop_labels["neural_prop"].configure(text=f"Hipp: {hipp.get('allocated_neurons', 0)} / Motor: {motor.get('allocated_neurons', 0)}")
+            hipp = brain_stats.get("hippocampus")
+            motor = brain_stats.get("motor_cortex")
+
+            hipp_allocated = getattr(hipp, "allocated_neurons", 0)
+            hipp_chunks = getattr(hipp, "allocated_chunks", 0)
+            motor_allocated = getattr(motor, "allocated_neurons", 0)
+            motor_chunks = getattr(motor, "allocated_chunks", 0)
+
+            self.prop_labels["neural_prop"].configure(text=f"Hipp: {hipp_allocated} / Motor: {motor_allocated}")
 
             self.brain_stats_label.configure(
                 text=(
                     f"Total Neurons: {brain_stats.get('total_neurons', 0):,}\n"
-                    f"Hippocampus Allocated: {hipp.get('allocated_neurons', 0)} / Chunks: {hipp.get('allocated_chunks', 0)}\n"
-                    f"Motor Cortex Allocated: {motor.get('allocated_neurons', 0)} / Chunks: {motor.get('allocated_chunks', 0)}"
+                    f"Hippocampus Allocated: {hipp_allocated} / Chunks: {hipp_chunks}\n"
+                    f"Motor Cortex Allocated: {motor_allocated} / Chunks: {motor_chunks}"
                 )
             )
 
