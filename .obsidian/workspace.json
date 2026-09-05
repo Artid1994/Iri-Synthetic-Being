@@ -160,27 +160,17 @@
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "โครงเรื่อง"
             }
           },
           {
-            "id": "e8d8fe945dae45ca",
+            "id": "c3a7116416cfda99",
             "type": "leaf",
             "state": {
-              "type": "terminal-view",
-              "state": {
-                "tabs": [
-                  {
-                    "name": "Hermes 1",
-                    "color": "",
-                    "cwd": "/home/artid1994/Projects/THE_TRANSCENDING_FORM",
-                    "bufferSerial": "\r\n\u001b[33mConsole binaries not installed.\r\n\u001b[0mGo to Settings → Hermes Console to download them.\u001b[1B\u001b[22D"
-                  }
-                ],
-                "activeIndex": 0
-              },
-              "icon": "hermes-caduceus-wing",
-              "title": "Hermes Console"
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
             }
           }
         ],
@@ -206,8 +196,9 @@
       "hermes-tts:Generate audio for current note": false
     }
   },
-  "active": "e8d8fe945dae45ca",
+  "active": "edf6aea3e428a0bf",
   "lastOpenFiles": [
+    "vault_memory",
     "ยังไม่ได้ตั้งชื่อ.base",
     "TTF_V0.2_PLAN.md",
     "TTF_V0.2_PLAN.baseline.md",
