@@ -63,6 +63,8 @@ class AE01MApp(tk.Tk):
         # Keyboard shortcuts
         self.bind("<Control-k>", lambda e: self.search_entry.focus_set())
         self.bind("<Control-K>", lambda e: self.search_entry.focus_set())
+        self.bind("<Control-p>", lambda e: self._toggle_command_palette())
+        self.bind("<Control-P>", lambda e: self._toggle_command_palette())
         for num, name in enumerate(["Chat", "Memory", "Brain", "Research", "Learning", "System"], start=1):
             self.bind(f"<Control-Key-{num}>", lambda e, n=name: self._select_tab(n))
             self.bind(f"<Control-{num}>", lambda e, n=name: self._select_tab(n))
@@ -233,20 +235,113 @@ class AE01MApp(tk.Tk):
 
             self.tab_buttons[name] = (btn, btn_frame)
 
-        # Sidebar Bottom Section: Active State Summary
+        # Sidebar Bottom Section: Project Vault Explorer
         divider = tk.Frame(sidebar, bg=BORDER, height=1)
-        divider.pack(fill="x", padx=12, pady=(20, 10))
+        divider.pack(fill="x", padx=12, pady=(14, 8))
+
+        vault_head = tk.Frame(sidebar, bg=BG_SIDEBAR)
+        vault_head.pack(fill="x", padx=16, pady=(0, 4))
+        tk.Label(vault_head, text="PROJECT EXPLORER", bg=BG_SIDEBAR, fg=TEXT_MUTED, font=("TkDefaultFont", 8, "bold")).pack(side="left")
+
+        self.vault_tree = ttk.Treeview(sidebar, show="tree", selectmode="browse", height=9)
+        self.vault_tree.pack(fill="x", padx=8, pady=2)
+        self.vault_tree.bind("<<TreeviewSelect>>", self._on_vault_item_selected)
+
+        self._populate_vault_explorer()
+
+        # State Summary
+        self.cmd_palette_win = None
+        divider2 = tk.Frame(sidebar, bg=BORDER, height=1)
+        divider2.pack(fill="x", padx=12, pady=(10, 6))
 
         stage_box = tk.Frame(sidebar, bg=BG_SIDEBAR)
-        stage_box.pack(fill="x", padx=16, pady=4)
+        stage_box.pack(fill="x", padx=16, pady=2)
 
         tk.Label(stage_box, text="DEVELOPMENT STAGE", bg=BG_SIDEBAR, fg=TEXT_MUTED, font=("TkDefaultFont", 7, "bold")).pack(anchor="w")
         self.sidebar_stage_val = tk.Label(stage_box, text="NEWBORN", bg=BG_SIDEBAR, fg=CYAN, font=("TkDefaultFont", 9, "bold"))
         self.sidebar_stage_val.pack(anchor="w")
 
-        tk.Label(stage_box, text="EXPERIENCE", bg=BG_SIDEBAR, fg=TEXT_MUTED, font=("TkDefaultFont", 7, "bold"), pady=4).pack(anchor="w")
+        tk.Label(stage_box, text="EXPERIENCE", bg=BG_SIDEBAR, fg=TEXT_MUTED, font=("TkDefaultFont", 7, "bold"), pady=2).pack(anchor="w")
         self.sidebar_exp_val = tk.Label(stage_box, text="0 cycles", bg=BG_SIDEBAR, fg=TEXT, font=("TkDefaultFont", 9))
         self.sidebar_exp_val.pack(anchor="w")
+
+    def _populate_vault_explorer(self):
+        import os
+        from pathlib import Path
+
+        root_dir = Path(__file__).resolve().parent.parent
+        allowed_dirs = ["docs", "research", "runtime", "brain", "tests"]
+
+        for item in allowed_dirs:
+            folder_path = root_dir / item
+            if folder_path.is_dir():
+                node = self.vault_tree.insert("", "end", text=f"📁 {item}", open=False, values=[str(folder_path)])
+                try:
+                    for child in sorted(os.listdir(folder_path))[:12]:
+                        if child.startswith(".") or child.startswith("__"):
+                            continue
+                        c_path = folder_path / child
+                        icon = "📁" if c_path.is_dir() else "📄"
+                        self.vault_tree.insert(node, "end", text=f"{icon} {child}", values=[str(c_path)])
+                except Exception:
+                    pass
+
+    def _on_vault_item_selected(self, event):
+        selected = self.vault_tree.selection()
+        if not selected:
+            return
+        vals = self.vault_tree.item(selected[0], "values")
+        if vals and len(vals) > 0:
+            path_str = vals[0]
+            self.status_left.configure(text=f"Selected: {path_str}")
+
+    def _toggle_command_palette(self):
+        if self.cmd_palette_win and self.cmd_palette_win.winfo_exists():
+            self.cmd_palette_win.destroy()
+            self.cmd_palette_win = None
+            return
+
+        win = tk.Toplevel(self)
+        win.title("Command Palette")
+        win.geometry("540x360")
+        win.configure(bg=BG_SIDEBAR)
+        win.transient(self)
+        win.grab_set()
+
+        self.cmd_palette_win = win
+
+        entry = tk.Entry(win, bg=BG_SURFACE, fg=TEXT, insertbackground=WHITE, relief="flat", font=("TkDefaultFont", 11), bd=0)
+        entry.pack(fill="x", padx=16, pady=12, ipady=6)
+        entry.focus_set()
+
+        commands = [
+            ("Switch to Chat", lambda: self._select_tab("Chat")),
+            ("Switch to Memory", lambda: self._select_tab("Memory")),
+            ("Switch to Brain", lambda: self._select_tab("Brain")),
+            ("Switch to Research", lambda: self._select_tab("Research")),
+            ("Switch to Learning", lambda: self._select_tab("Learning")),
+            ("Switch to System", lambda: self._select_tab("System")),
+            ("Toggle Split Pane (Memory)", self._toggle_split_pane),
+            ("Trigger Brain Memory Sync", self._manual_sync),
+        ]
+
+        listbox = tk.Listbox(win, bg=BG_SURFACE, fg=TEXT, selectbackground=ACCENT_PURPLE, selectforeground=WHITE, relief="flat", bd=0, font=("TkDefaultFont", 10))
+        listbox.pack(fill="both", expand=True, padx=16, pady=(0, 16))
+
+        for name, _ in commands:
+            listbox.insert("end", f" > {name}")
+        listbox.selection_set(0)
+
+        def execute_selection(e=None):
+            sel = listbox.curselection()
+            if sel:
+                cmd_fn = commands[sel[0]][1]
+                win.destroy()
+                self.cmd_palette_win = None
+                cmd_fn()
+
+        win.bind("<Return>", execute_selection)
+        win.bind("<Escape>", lambda e: (win.destroy(), setattr(self, "cmd_palette_win", None)))
 
     # ------------------------------------------------------------
     # Central Workspace with Tab Switching
@@ -281,21 +376,83 @@ class AE01MApp(tk.Tk):
             t_btn.pack(side="left", padx=(0, 2))
             self.tab_header_btns[tab_name] = t_btn
 
-        # Central container holding individual tab frames
-        self.container = tk.Frame(workspace, bg=BG_SURFACE, bd=0, highlightthickness=1, highlightbackground=BORDER)
-        self.container.grid(row=1, column=0, sticky="nsew")
-        self.container.grid_rowconfigure(0, weight=1)
-        self.container.grid_columnconfigure(0, weight=1)
+        # Split toggle button
+        self.split_active = False
+        self.split_btn = tk.Button(
+            tab_bar,
+            text="◫ Split Right (Memory)",
+            command=self._toggle_split_pane,
+            relief="flat",
+            bd=0,
+            padx=10,
+            pady=4,
+            bg=BG_SURFACE,
+            fg=TEXT_MUTED,
+            activebackground=BG_SURFACE_HOVER,
+            activeforeground=TEXT,
+            font=("TkDefaultFont", 8),
+            cursor="hand2",
+        )
+        self.split_btn.pack(side="right", padx=(0, 4), pady=4)
 
-        # Instantiate Tabs
-        self.tab_frames["Chat"] = self._build_chat_tab(self.container)
-        self.tab_frames["Memory"] = self._build_memory_tab(self.container)
-        self.tab_frames["Brain"] = self._build_brain_tab(self.container)
-        self.tab_frames["Research"] = self._build_research_tab(self.container)
-        self.tab_frames["Learning"] = self._build_learning_tab(self.container)
-        self.tab_frames["System"] = self._build_system_tab(self.container)
+        # Central PanedWindow holding primary and optional secondary panes
+        self.paned_workspace = ttk.PanedWindow(workspace, orient="horizontal")
+        self.paned_workspace.grid(row=1, column=0, sticky="nsew")
+
+        # Primary pane container
+        self.primary_container = tk.Frame(self.paned_workspace, bg=BG_SURFACE, bd=0, highlightthickness=1, highlightbackground=BORDER)
+        self.primary_container.grid_rowconfigure(0, weight=1)
+        self.primary_container.grid_columnconfigure(0, weight=1)
+        self.paned_workspace.add(self.primary_container, weight=1)
+
+        # Secondary (split) pane container
+        self.secondary_container = tk.Frame(self.paned_workspace, bg=BG_SURFACE, bd=0, highlightthickness=1, highlightbackground=BORDER)
+        self.secondary_container.grid_rowconfigure(0, weight=1)
+        self.secondary_container.grid_columnconfigure(0, weight=1)
+
+        # Secondary pane widgets (instantiate Memory Graph for split view)
+        self.secondary_memory_controller = MemoryPanel(
+            parent=self.secondary_container,
+            runtime=self.runtime,
+            panel_builder=lambda p: tk.Frame(p, bg=BG_SURFACE),
+            panel_header_builder=lambda p, title, subtitle, color=None: None,
+            colors={
+                "SURFACE": BG_SURFACE,
+                "SURFACE_2": BG_APP,
+                "SURFACE_3": BG_SURFACE_HOVER,
+                "BORDER": BORDER,
+                "BORDER_LIGHT": BORDER_MUTED,
+                "TEXT": TEXT,
+                "TEXT_SECONDARY": TEXT_SECONDARY,
+                "TEXT_MUTED": TEXT_MUTED,
+                "CYAN": CYAN,
+                "YELLOW": YELLOW,
+            },
+        )
+        self.secondary_memory_view = self.secondary_memory_controller.build()
+        self.secondary_memory_view.grid(row=0, column=0, sticky="nsew")
+
+        # Instantiate primary Tabs
+        self.container = self.primary_container
+        self.tab_frames["Chat"] = self._build_chat_tab(self.primary_container)
+        self.tab_frames["Memory"] = self._build_memory_tab(self.primary_container)
+        self.tab_frames["Brain"] = self._build_brain_tab(self.primary_container)
+        self.tab_frames["Research"] = self._build_research_tab(self.primary_container)
+        self.tab_frames["Learning"] = self._build_learning_tab(self.primary_container)
+        self.tab_frames["System"] = self._build_system_tab(self.primary_container)
 
         self._select_tab("Chat")
+
+    def _toggle_split_pane(self):
+        self.split_active = not self.split_active
+        if self.split_active:
+            self.paned_workspace.add(self.secondary_container, weight=1)
+            self.split_btn.configure(bg=BG_SURFACE_HOVER, fg=CYAN, text="✕ Close Split")
+            snapshot = self.runtime_snapshot.capture()
+            self.secondary_memory_controller.refresh(snapshot)
+        else:
+            self.paned_workspace.forget(self.secondary_container)
+            self.split_btn.configure(bg=BG_SURFACE, fg=TEXT_MUTED, text="◫ Split Right (Memory)")
 
     def _select_tab(self, name: str):
         self.active_tab = name
@@ -354,6 +511,20 @@ class AE01MApp(tk.Tk):
             lbl_val = tk.Label(box, text=default_val, bg=BG_SIDEBAR, fg=TEXT, font=("TkDefaultFont", 8, "bold"))
             lbl_val.pack(anchor="w")
             self.prop_labels[key] = lbl_val
+
+        # Backlinks / Node Context Inspector section
+        divider_node = tk.Frame(inspector, bg=BORDER, height=1)
+        divider_node.pack(fill="x", padx=16, pady=(12, 8))
+
+        node_box = tk.Frame(inspector, bg=BG_SIDEBAR)
+        node_box.pack(fill="x", padx=16, pady=2)
+        tk.Label(node_box, text="SELECTED NODE CONTEXT", bg=BG_SIDEBAR, fg=TEXT_MUTED, font=("TkDefaultFont", 8, "bold")).pack(anchor="w")
+
+        self.selected_node_label = tk.Label(node_box, text="None selected", bg=BG_SIDEBAR, fg=CYAN, font=("TkDefaultFont", 8, "bold"))
+        self.selected_node_label.pack(anchor="w", pady=(2, 0))
+
+        self.node_backlinks_label = tk.Label(node_box, text="No connections", bg=BG_SIDEBAR, fg=TEXT_SECONDARY, font=("TkDefaultFont", 8), justify="left")
+        self.node_backlinks_label.pack(anchor="w", pady=(2, 0))
 
         # Bottom Safety / Gateway box
         divider = tk.Frame(inspector, bg=BORDER, height=1)
@@ -457,7 +628,59 @@ class AE01MApp(tk.Tk):
         mem_view = self.memory_panel_controller.build()
         mem_view.grid(row=0, column=0, sticky="nsew")
 
+        # Wire node selection on canvas
+        if self.memory_panel_controller.graph_canvas:
+            self.memory_panel_controller.graph_canvas.bind("<Button-1>", self._on_graph_canvas_click)
+
         return frame
+
+    def _on_graph_canvas_click(self, event):
+        positions = getattr(self.memory_panel_controller, "node_positions", {})
+        if not positions:
+            return
+
+        click_x, click_y = event.x, event.y
+        closest_node = None
+        min_dist = 25.0
+
+        for node_id, (nx, ny) in positions.items():
+            dist = math.hypot(click_x - nx, click_y - ny)
+            if dist < min_dist:
+                min_dist = dist
+                closest_node = node_id
+
+        if closest_node:
+            self._select_memory_node(closest_node)
+
+    def _select_memory_node(self, node_id: str):
+        graph = self.runtime.memory.memory_graph
+        if node_id not in graph.nodes:
+            self.selected_node_label.configure(text="None selected")
+            self.node_backlinks_label.configure(text="No connections")
+            return
+
+        node = graph.nodes[node_id]
+        self.selected_node_label.configure(text=f"{node.memory_type}: {node.content[:24]}")
+
+        # Find connected edges
+        out_edges = [target for (src, target) in graph.edges if src == node_id]
+        in_edges = [src for (src, target) in graph.edges if target == node_id]
+
+        lines = []
+        if out_edges:
+            lines.append("Associations:")
+            for target in out_edges[:5]:
+                lines.append(f" → {target[:22]}")
+        if in_edges:
+            lines.append("Backlinks:")
+            for src in in_edges[:5]:
+                lines.append(f" ← {src[:22]}")
+
+        if not lines:
+            lines.append("No active connections")
+
+        self.node_backlinks_label.configure(text="\n".join(lines))
+        self.status_left.configure(text=f"Inspecting node: {node_id}")
 
     # ------------------------------------------------------------
     # Tab 3: Brain Substrate Inspector
@@ -588,6 +811,8 @@ class AE01MApp(tk.Tk):
 
             # Refresh Memory Panel
             self.memory_panel_controller.refresh(snapshot)
+            if self.split_active:
+                self.secondary_memory_controller.refresh(snapshot)
 
             # Refresh Properties
             identity_snap = snapshot.get("identity") if isinstance(snapshot.get("identity"), dict) else {}
