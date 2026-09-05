@@ -42,4 +42,6 @@ class RuntimeSnapshot:
             },
         }
 
+        snapshot["memory_activity"] = graph.consume_activity()
+
         return snapshot
