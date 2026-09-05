@@ -461,20 +461,25 @@ class MemoryPanel:
             content = node.get("content", node_id)
 
             node_color = memory_type_color(memory_type)
+            is_active = node_id in active_nodes
 
             node_radius = 16 + min(
                 12,
                 max(0, activation_count - 1),
             )
 
+            fill_color = self.CYAN if is_active else self.SURFACE_3
+            outline_color = self.YELLOW if is_active else node_color
+            border_width = 3 if is_active else 2
+
             canvas.create_oval(
                 x - node_radius,
                 y - node_radius,
                 x + node_radius,
                 y + node_radius,
-                fill=self.SURFACE_3,
-                outline=node_color,
-                width=2,
+                fill=fill_color,
+                outline=outline_color,
+                width=border_width,
             )
 
             label = format_memory_content(
