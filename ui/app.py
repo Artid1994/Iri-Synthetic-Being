@@ -637,3 +637,12 @@ class AE01MApp(tk.Tk):
             self.status_left.configure(text=f"Error: {exc}")
 
         self.after(3000, self._refresh_runtime)
+
+
+def main():
+    app = AE01MApp()
+    app.mainloop()
+
+
+if __name__ == "__main__":
+    main()
