@@ -1,0 +1,19 @@
+{
+  "baseUrl": "http://127.0.0.1:8642",
+  "apiKey": "ae01m-secret-key-for-hermes-gateway",
+  "model": "",
+  "transport": "auto",
+  "reasoningEffort": "",
+  "includeNoteContent": true,
+  "requestTimeoutMs": 120000,
+  "maxTabs": 3,
+  "workingFolder": "",
+  "autoApproveTools": true,
+  "userName": "",
+  "hermesHome": "",
+  "graphMaxNotes": 150,
+  "graphMinEdgeWeight": 0.3,
+  "graphIncludeWikilinks": true,
+  "markdownFormattingPromptEnabled": true,
+  "customSystemPrompt": ""
+}

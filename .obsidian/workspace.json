@@ -79,8 +79,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "4e09c917324e199c",
@@ -170,16 +169,26 @@
             "state": {
               "type": "git-view",
               "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
+              "icon": "lucide-ghost",
+              "title": "git-view"
+            }
+          },
+          {
+            "id": "8b536bbd75d886ba",
+            "type": "leaf",
+            "state": {
+              "type": "hermes-chat",
+              "state": {},
+              "icon": "bot",
+              "title": "Hermes Agent"
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 6
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 450.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -190,14 +199,12 @@
       "templates:แทรกเทมเพลต": false,
       "command-palette:เปิดกระดานคำสั่ง": false,
       "bases:สร้างฐานใหม่": false,
-      "obsidian-git:Open Git source control": false,
       "hermes-agent:Open Hermes Agent": false,
       "hermes-agent:Open Hermes smart graph": false,
-      "hermes-console:Open Hermes Console": false,
-      "hermes-tts:Generate audio for current note": false
+      "obsidian-git:Open Git source control": false
     }
   },
-  "active": "edf6aea3e428a0bf",
+  "active": "8b536bbd75d886ba",
   "lastOpenFiles": [
     "vault_memory",
     "ยังไม่ได้ตั้งชื่อ.base",
