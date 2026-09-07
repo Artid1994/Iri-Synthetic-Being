@@ -1,3 +1,6 @@
+---
+brain_region: stem
+---
 # AGENTS.md — AE01M / The Transcending Form
 
 ## 1. Authority

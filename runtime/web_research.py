@@ -11,6 +11,7 @@ class ResearchResult:
     topic: str
     source: str
     content: str
+    timestamp: float | None = None
 
 
 class WebResearch:
@@ -22,13 +23,48 @@ class WebResearch:
         self.search_url = search_url
         self.timeout = timeout
 
-    def search(self, topic: str) -> ResearchResult:
-        topic = topic.strip()
+    @staticmethod
+    def normalize_query(topic: str) -> str:
+        text = topic.strip()
+        if not text:
+            return ""
 
-        if not topic:
+        # Strip operational task prefixes deterministically (case-insensitive)
+        prefixes = [
+            r"^research\s+missing\s+knowledge\s+(?:for|about):\s*",
+            r"^research\s+missing\s+knowledge:\s*",
+            r"^research\s+missing\s+knowledge\s*",
+            r"^investigate\s+failure\s+of:\s*",
+            r"^investigate\s+failure\s+of\s*",
+            r"^investigate\s+previous\s+failure:\s*",
+            r"^investigate\s+previous\s+failure\s*",
+            r"^research\s+for:\s*",
+            r"^research:\s*",
+            r"^research\s+",
+            r"^investigate:\s*",
+            r"^investigate\s+",
+        ]
+        for pattern in prefixes:
+            match = re.search(pattern, text, flags=re.IGNORECASE)
+            if match:
+                stripped = text[match.end():].strip()
+                if stripped:
+                    text = stripped
+                    break
+
+        # Remove extraneous enclosing quotes if present
+        if (text.startswith('"') and text.endswith('"')) or (text.startswith("'") and text.endswith("'")):
+            text = text[1:-1].strip()
+
+        return text
+
+    def search(self, topic: str) -> ResearchResult:
+        raw_topic = topic.strip()
+        if not raw_topic:
             raise ValueError("research topic cannot be empty")
 
-        url = self.search_url + quote(topic)
+        clean_query = self.normalize_query(raw_topic) or raw_topic
+        url = self.search_url + quote(clean_query)
 
         request = Request(
             url,
@@ -57,8 +93,10 @@ class WebResearch:
         # 6. จำกัดความยาวข้อความเนื้อหาเน้นๆ ส่งต่อให้โมเดลประมวลผลต่อได้ง่าย
         clean_content = clean_content[:2500]
 
+        import time
         return ResearchResult(
-            topic=topic,
+            topic=clean_query,
             source=url,
             content=clean_content,
+            timestamp=time.time(),
         )

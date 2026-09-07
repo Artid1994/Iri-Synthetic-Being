@@ -1,0 +1,19 @@
+---
+id: "EPISODIC:LESSON: Thai Literacy | CONCEPT: สระ อา (Sara Ah) | RULE: สระเสียงยาว เขียนข้างหลังพยัญชนะ เช่น ก + า = กา (Long vowel written behind consonant)"
+type: "EPISODIC"
+activation_count: 1
+brain_region: temporal
+lobe: temporal
+region: temporal
+tags: [temporal, memory, ae01m_knowledge]
+---
+
+# LESSON: Thai Literacy | CONCEPT: สระ อา (Sara Ah) | RULE: สระเสียงยาว เขียนข้างหลังพยัญชนะ เช่น ก + า = กา (Long vowel written behind consonant)
+
+## Associations
+No outgoing associations.
+
+## Projection Info
+- **Memory Type**: EPISODIC
+- **Activation Count**: 1
+- **Brain Region**: [[03_Temporal/README|Temporal Lobe (Memory Graph)]]

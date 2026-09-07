@@ -4,17 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "336f2eaccaa7c829",
+        "id": "ccbb5e66b3e5f24a",
         "type": "tabs",
         "children": [
           {
-            "id": "edf6aea3e428a0bf",
+            "id": "65ae035ba22eb5d4",
             "type": "leaf",
             "state": {
-              "type": "graph",
+              "type": "brain-atlas",
               "state": {},
-              "icon": "lucide-git-fork",
-              "title": "มุมมองกราฟ"
+              "icon": "brain",
+              "title": "Brain Atlas"
             }
           }
         ]
@@ -37,7 +37,7 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false,
+                "autoReveal": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
@@ -72,14 +72,15 @@
                 "searchQuery": ""
               },
               "icon": "lucide-bookmark",
-              "title": "Bookmarks"
+              "title": "บุ๊กมาร์ก"
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 213.5,
+    "collapsed": true
   },
   "right": {
     "id": "4e09c917324e199c",
@@ -89,6 +90,26 @@
         "id": "bad6845e6d8eda8b",
         "type": "tabs",
         "children": [
+          {
+            "id": "8b536bbd75d886ba",
+            "type": "leaf",
+            "state": {
+              "type": "hermes-chat",
+              "state": {},
+              "icon": "bot",
+              "title": "Hermes Agent"
+            }
+          },
+          {
+            "id": "c3a7116416cfda99",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
+          },
           {
             "id": "03af1ac36aa7a7f2",
             "type": "leaf",
@@ -162,38 +183,19 @@
               "icon": "lucide-list",
               "title": "โครงเรื่อง"
             }
-          },
-          {
-            "id": "c3a7116416cfda99",
-            "type": "leaf",
-            "state": {
-              "type": "git-view",
-              "state": {},
-              "icon": "lucide-ghost",
-              "title": "git-view"
-            }
-          },
-          {
-            "id": "8b536bbd75d886ba",
-            "type": "leaf",
-            "state": {
-              "type": "hermes-chat",
-              "state": {},
-              "icon": "bot",
-              "title": "Hermes Agent"
-            }
           }
         ],
-        "currentTab": 6
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 450.5
+    "width": 483.5
   },
   "left-ribbon": {
     "hiddenItems": {
       "switcher:เปิด quick switcher": false,
       "graph:เปิดมุมมองกราฟ": false,
+      "brain-atlas:Open atlas": false,
       "canvas:สร้างผืนผ้าใบใหม่": false,
       "daily-notes:เปิดโน้ตของวันนี้": false,
       "templates:แทรกเทมเพลต": false,
@@ -201,26 +203,48 @@
       "bases:สร้างฐานใหม่": false,
       "hermes-agent:Open Hermes Agent": false,
       "hermes-agent:Open Hermes smart graph": false,
-      "obsidian-git:Open Git source control": false
+      "obsidian-git:Open Git source control": false,
+      "galaxy-view:Open Galaxy View": false
     }
   },
-  "active": "8b536bbd75d886ba",
+  "active": "c3a7116416cfda99",
   "lastOpenFiles": [
-    "vault_memory",
+    "docs/AE01M_LANGUAGE_MATH_LOG.md",
+    "03_Temporal/learned_memories/SEMANTIC__สระ_อา_Sara_Ah.md",
+    "03_Temporal/learned_memories/SEMANTIC__คำประสมพ_นฐาน_กา_Gaa.md",
+    "03_Temporal/learned_memories/SEMANTIC__ก_ไก_Gor_Gai.md",
+    "03_Temporal/learned_memories/SEMANTIC__Thai_Literacy.md",
+    "03_Temporal/learned_memories/SEMANTIC__RULE_สระเส_ยงยาว_เข_ยนข_างหล_งพย_ญชนะ_เช_น_ก.md",
+    "03_Temporal/learned_memories/SEMANTIC__RULE_พย_ญชนะไทยต_วแรก_ออกเส_ยง_ก_เป_นอ_กษรกลา.md",
+    "03_Temporal/learned_memories/SEMANTIC__RULE_ประสมพย_ญชนะ_ก_ไก_ก_บ_สระ_อา_แปลว_า_กา.md",
+    "03_Temporal/learned_memories/SEMANTIC__RULE_Second_letter_of_the_English_alphabet_v.md",
+    "03_Temporal/learned_memories/SEMANTIC__RULE_First_letter_of_the_English_alphabet_vo.md",
+    "03_Temporal/learned_memories/SEMANTIC__RULE_C-A-T_phonics_blending_k_æ_t_CAT.md",
+    "03_Temporal/learned_memories/SEMANTIC__LESSON_Thai_Literacy_CONCEPT_สระ_อา_Sara_Ah_RULE_สระเส_ยงยาว.md",
+    "03_Temporal/learned_memories/SEMANTIC__LESSON_Thai_Literacy_CONCEPT_คำประสมพ_นฐาน_กา_Gaa_RULE_ประสม.md",
+    "03_Temporal/learned_memories/SEMANTIC__LESSON_Thai_Literacy_CONCEPT_ก_ไก_Gor_Gai_RULE_พย_ญชนะไทยต_ว.md",
+    "03_Temporal/learned_memories/SEMANTIC__LESSON_English_Literacy_CONCEPT_English_Word_CAT_RULE_C-A-T_.md",
+    "03_Temporal/learned_memories/SEMANTIC__LESSON_English_Literacy_CONCEPT_English_Letter_B_RULE_Second.md",
+    "03_Temporal/learned_memories/SEMANTIC__LESSON_English_Literacy_CONCEPT_English_Letter_A_RULE_First_.md",
+    "03_Temporal/learned_memories/SEMANTIC__English_Word_CAT.md",
+    "03_Temporal/learned_memories/SEMANTIC__English_Literacy.md",
+    "03_Temporal/learned_memories/SEMANTIC__English_Letter_B.md",
+    "03_Temporal/learned_memories/SEMANTIC__English_Letter_A.md",
+    "03_Temporal/learned_memories/EPISODIC__สระ_อา_Sara_Ah.md",
+    "03_Temporal/learned_memories/EPISODIC__คำประสมพ_นฐาน_กา_Gaa.md",
+    "03_Temporal/learned_memories/EPISODIC__ก_ไก_Gor_Gai.md",
+    "03_Temporal/learned_memories/EPISODIC__Thai_Literacy.md",
+    "03_Temporal/learned_memories/EPISODIC__LESSON_Thai_Literacy_CONCEPT_สระ_อา_Sara_Ah_RULE_สระเส_ยงยาว.md",
+    "03_Temporal/learned_memories",
+    "runtime/__pycache__/obsidian_exporter.cpython-313.pyc.140050047616464",
+    "run_primary_tutor.py",
+    "tests/__pycache__/test_synapse_plasticity_trigger.cpython-313-pytest-9.1.1.pyc",
+    "tests/__pycache__/test_synapse_plasticity_trigger.cpython-313-pytest-9.1.1.pyc.23826",
+    "tests/test_synapse_plasticity_trigger.py",
+    "ยังไม่ได้ตั้งชื่อ.canvas",
     "ยังไม่ได้ตั้งชื่อ.base",
-    "TTF_V0.2_PLAN.md",
-    "TTF_V0.2_PLAN.baseline.md",
-    "TTF_AUTONOMOUS_PLAN.v0.1.backup.md",
-    "TTF_AUTONOMOUS_PLAN.md",
-    "README.th.md",
-    "README.md",
-    "PROJECT_PLAN.md",
-    "PROJECT_MAP.md",
-    "AGENTS.md",
-    "MASTER_DEVELOPMENT_PLAN.md",
-    "ยังไม่ได้ตั้งชื่อ.md",
-    "cognitive_shell_import/web/node_modules/axe-core/README.md",
-    "cognitive_shell_import/web/node_modules/webpack-bundle-analyzer/node_modules/commander/Readme.md",
-    "cognitive_shell_import/web/node_modules/eslint-plugin-react/README.md"
+    "tests/__pycache__/test_phase1_foundation.cpython-313-pytest-9.1.1.pyc.20475",
+    "tests/__pycache__/test_phase1_foundation.cpython-313-pytest-9.1.1.pyc.20361",
+    "tests/__pycache__/test_phase1_foundation.cpython-313-pytest-9.1.1.pyc"
   ]
 }

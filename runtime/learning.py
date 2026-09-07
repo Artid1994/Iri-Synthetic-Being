@@ -13,6 +13,8 @@ class LearningCandidate:
     experience: str
     category: str = "GENERAL"
     confidence: float = 0.0
+    source_url: str | None = None
+    retrieval_timestamp: float | None = None
 
 
 @dataclass(frozen=True)
@@ -32,6 +34,8 @@ class Learning:
         experience: str,
         category: str = "GENERAL",
         confidence: float = 0.0,
+        source_url: str | None = None,
+        retrieval_timestamp: float | None = None,
     ) -> LearningCandidate | None:
         experience = experience.strip()
 
@@ -44,6 +48,8 @@ class Learning:
             experience=experience,
             category=category,
             confidence=confidence,
+            source_url=source_url,
+            retrieval_timestamp=retrieval_timestamp,
         )
 
         self.last_candidate = candidate
@@ -80,8 +86,31 @@ class Learning:
         self.last_evaluation = evaluation
 
         if evaluation.accepted and candidate is not None:
-            self.memory.add_experience(candidate.experience)
-            self.memory.add_semantic(candidate.experience)
+            self.memory.add_experience(
+                candidate.experience,
+                source_url=candidate.source_url,
+                retrieval_timestamp=candidate.retrieval_timestamp,
+                confidence=candidate.confidence,
+            )
+            self.memory.add_semantic(
+                candidate.experience,
+                source_url=candidate.source_url,
+                retrieval_timestamp=candidate.retrieval_timestamp,
+                confidence=candidate.confidence,
+            )
+            if candidate.source_url:
+                import time
+                from runtime.experience import Experience
+                ts = candidate.retrieval_timestamp or time.time()
+                self.memory.add_experience_object(
+                    Experience(
+                        source=candidate.source_url,
+                        content=candidate.experience,
+                        timestamp=ts,
+                        modality="web_research",
+                        salience=candidate.confidence,
+                    )
+                )
 
         return evaluation
 

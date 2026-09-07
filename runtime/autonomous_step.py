@@ -25,13 +25,19 @@ class AutonomousStep:
         self.goal_learning = goal_learning
         self.reflection = reflection or Reflection()
 
-    def run(self, goal: Goal) -> AutonomousStepResult:
+    def run(self, goal: Goal, category: str = "GENERAL") -> AutonomousStepResult:
         if not isinstance(goal, Goal):
             raise TypeError("goal must be a Goal")
 
         task = LearningTask(goal.description)
 
-        result = self.goal_learning.autonomous_learning.learn(task)
+        if category and category != "GENERAL":
+            try:
+                result = self.goal_learning.autonomous_learning.learn(task, category=category)
+            except TypeError:
+                result = self.goal_learning.autonomous_learning.learn(task)
+        else:
+            result = self.goal_learning.autonomous_learning.learn(task)
 
         if result.memory_updated:
             task.status = "COMPLETED"

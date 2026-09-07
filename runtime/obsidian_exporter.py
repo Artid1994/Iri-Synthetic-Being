@@ -132,6 +132,10 @@ class ObsidianMemoryExporter:
                 f'id: "{escaped_id}"\n'
                 f'type: "{escaped_type}"\n'
                 f"activation_count: {node.activation_count}\n"
+                f"brain_region: temporal\n"
+                f"lobe: temporal\n"
+                f"region: temporal\n"
+                f"tags: [temporal, memory, ae01m_knowledge]\n"
                 f"---\n\n"
                 f"# {node.content}\n\n"
                 f"## Associations\n"
@@ -139,6 +143,7 @@ class ObsidianMemoryExporter:
                 f"## Projection Info\n"
                 f"- **Memory Type**: {node.memory_type}\n"
                 f"- **Activation Count**: {node.activation_count}\n"
+                f"- **Brain Region**: [[03_Temporal/README|Temporal Lobe (Memory Graph)]]\n"
             )
 
             # Write file

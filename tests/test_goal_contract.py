@@ -30,6 +30,13 @@ class TestGoalContract(unittest.TestCase):
 
         self.assertEqual(goal.status, "PAUSED")
 
+    def test_goal_can_resume(self):
+        goal = Goal(description="learn")
+        goal.pause()
+        self.assertEqual(goal.status, "PAUSED")
+        goal.resume()
+        self.assertEqual(goal.status, "ACTIVE")
+
 
 if __name__ == "__main__":
     unittest.main()

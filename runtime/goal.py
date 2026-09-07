@@ -25,3 +25,6 @@ class Goal:
 
     def pause(self) -> None:
         self.status = "PAUSED"
+
+    def resume(self) -> None:
+        self.status = "ACTIVE"

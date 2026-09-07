@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from pathlib import Path
+
 from runtime.system_monitor import SystemMonitor
 from runtime.identity import Identity
 from runtime.memory import Memory
@@ -51,6 +53,7 @@ from runtime.web_research import WebResearch
 from runtime.autonomous_learning import AutonomousLearning
 from brain.brain import Brain
 from runtime.self_directed_learning import SelfDirectedLearning
+from runtime.memory_brain_persistence import MemoryBrainPersistence
 
 
 class TranscendingRuntime:
@@ -282,11 +285,124 @@ class TranscendingRuntime:
 
         self.goals.append(goal)
 
-    def run_goal_learning_step(self, goal: Goal):
+    def run_goal_learning_step(self, goal: Goal, auto_chain: bool = True, category: str = "GENERAL"):
         if not isinstance(goal, Goal):
             raise TypeError("goal must be a Goal")
 
-        return self._autonomous_step.run(goal)
+        result = self._autonomous_step.run(goal, category=category)
+
+        if auto_chain and result.reflection and result.reflection.next_task:
+            next_goal_desc = result.reflection.next_task.strip()
+            if next_goal_desc and not any(g.description == next_goal_desc and g.status == "ACTIVE" for g in self.goals):
+                child_goal = Goal(
+                    description=next_goal_desc,
+                    priority=goal.priority,
+                    status="ACTIVE",
+                )
+                # Track parent-child relationship
+                setattr(child_goal, "parent_goal_id", goal.id)
+                self.goals.append(child_goal)
+
+        return result
+
+    def _resume_parent_goal_if_any(self, completed_child_goal: Goal) -> Goal | None:
+        parent_id = getattr(completed_child_goal, "parent_goal_id", None)
+        if not parent_id:
+            return None
+
+        # Check if parent is currently paused
+        parent = next((g for g in self.goals if g.id == parent_id), None)
+        if parent is not None and parent.status == "PAUSED":
+            # Check if any other active children exist for this parent
+            active_siblings = any(
+                getattr(g, "parent_goal_id", None) == parent_id and g.status == "ACTIVE"
+                for g in self.goals
+                if g.id != completed_child_goal.id
+            )
+            if not active_siblings:
+                parent.resume()
+                return parent
+        return None
+
+    def dispatch_next_goal(self, auto_chain: bool = True, category: str = "GENERAL"):
+        active_goals = [g for g in self.goals if g.status == "ACTIVE"]
+        if not active_goals:
+            return None
+
+        # Prefer highest priority; preserve deterministic FIFO ordering for equal priority
+        selected_goal = max(active_goals, key=lambda g: g.priority)
+
+        # Inherit category from goal if present, else fallback
+        goal_cat = getattr(selected_goal, "category", category)
+
+        result = self.run_goal_learning_step(selected_goal, auto_chain=auto_chain, category=goal_cat)
+
+        # Mark goal completed if learning succeeded
+        if getattr(result, "learning_result", None) and getattr(result.learning_result, "memory_updated", False):
+            selected_goal.complete()
+            self._resume_parent_goal_if_any(selected_goal)
+        elif getattr(result, "reflection", None) and getattr(result.reflection, "outcome", None) == "SUCCESS":
+            selected_goal.complete()
+            self._resume_parent_goal_if_any(selected_goal)
+        elif getattr(result, "reflection", None) and getattr(result.reflection, "outcome", None) == "MISSING_KNOWLEDGE":
+            selected_goal.pause()
+
+        return result
+
+    def dispatch_all_goals(
+        self,
+        max_cycles: int = 50,
+        auto_chain: bool = True,
+        safety_stop_callback=None,
+    ) -> list:
+        if not self.autonomous_mode:
+            return [{
+                "status": "BLOCKED",
+                "reason": "AUTONOMOUS_MODE_DISABLED",
+            }]
+
+        results = []
+        executed_counts = {}
+
+        for _ in range(max_cycles):
+            if safety_stop_callback and safety_stop_callback():
+                break
+
+            active_goals = [g for g in self.goals if g.status == "ACTIVE"]
+            if not active_goals:
+                break
+
+            selected_goal = max(active_goals, key=lambda g: g.priority)
+
+            # Prevent infinite execution loops on same goal if stuck without progress
+            current_count = executed_counts.get(selected_goal.id, 0)
+            if current_count >= 3:
+                selected_goal.pause()
+                results.append({
+                    "status": "GOAL_PAUSED",
+                    "reason": "CIRCUIT_BREAKER",
+                    "goal": selected_goal,
+                })
+                continue
+
+            executed_counts[selected_goal.id] = current_count + 1
+
+            goal_cat = getattr(selected_goal, "category", "GENERAL")
+            result = self.run_goal_learning_step(selected_goal, auto_chain=auto_chain, category=goal_cat)
+
+            if getattr(result, "learning_result", None) and getattr(result.learning_result, "memory_updated", False):
+                selected_goal.complete()
+                self._resume_parent_goal_if_any(selected_goal)
+            elif getattr(result, "reflection", None) and getattr(result.reflection, "outcome", None) == "SUCCESS":
+                selected_goal.complete()
+                self._resume_parent_goal_if_any(selected_goal)
+            elif getattr(result, "reflection", None) and getattr(result.reflection, "outcome", None) == "MISSING_KNOWLEDGE":
+                selected_goal.pause()
+
+            results.append(result)
+
+        return results
+
 
     def add_intention(self, intention: Intention) -> None:
         if not isinstance(intention, Intention):
@@ -667,6 +783,20 @@ class TranscendingRuntime:
         if isinstance(safety_policy, dict):
             self.safety_policy.restore(safety_policy)
 
+        memory_data = data.get("persisted_memory")
+        if isinstance(memory_data, dict):
+            MemoryBrainPersistence.deserialize_memory(memory_data, memory=self.memory)
+
+        brain_data = data.get("persisted_brain")
+        if isinstance(brain_data, dict):
+            MemoryBrainPersistence.deserialize_brain(brain_data, brain=self.brain)
+
+    def save_memory_brain_snapshot(self, filepath: Path | str) -> None:
+        MemoryBrainPersistence.save(self.memory, self.brain, filepath)
+
+    def load_memory_brain_snapshot(self, filepath: Path | str) -> None:
+        MemoryBrainPersistence.load(filepath, memory=self.memory, brain=self.brain)
+
     def snapshot(self) -> dict:
         return {
             "system": self.system.snapshot(),
@@ -679,6 +809,8 @@ class TranscendingRuntime:
             "goals": list(self.goals),
             "intentions": list(self.intentions),
             "teachings": list(self.teachings),
+            "persisted_memory": MemoryBrainPersistence.serialize_memory(self.memory),
+            "persisted_brain": MemoryBrainPersistence.serialize_brain(self.brain),
             "cognitive": self.cognitive.snapshot(),
             "cognitive_loop": self.cognitive_loop.snapshot(),
             "learning": self.learning.snapshot(),

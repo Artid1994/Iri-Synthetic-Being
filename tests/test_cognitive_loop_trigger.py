@@ -122,5 +122,29 @@ class TestCognitiveLoopTrigger(unittest.TestCase):
         )
 
 
+    def test_associative_recall_flows_into_cognitive_context(self):
+        class TrackingCognitive(FakeCognitive):
+            def __init__(self):
+                self.contexts = []
+
+            def think(self, text, context=""):
+                self.contexts.append(context)
+                return "recalled response"
+
+        cognitive = TrackingCognitive()
+        loop = self._create_loop(cognitive)
+
+
+        loop.development.memory.add_experience("ฉันชอบสีแดง")
+
+        loop.process("สีโปรดของฉันคืออะไร")
+
+        self.assertEqual(len(cognitive.contexts), 1)
+        self.assertIn(
+            "RECALLED_MEMORY:\n- ฉันชอบสีแดง",
+            cognitive.contexts[0],
+        )
+
+
 if __name__ == "__main__":
     unittest.main()

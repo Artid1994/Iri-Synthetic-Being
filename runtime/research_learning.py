@@ -34,6 +34,8 @@ class ResearchLearning:
             content,
             category="WEB_RESEARCH",
             confidence=confidence,
+            source_url=result.source,
+            retrieval_timestamp=result.timestamp,
         )
 
     def evaluate(

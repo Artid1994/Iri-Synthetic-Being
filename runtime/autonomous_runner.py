@@ -102,6 +102,94 @@ class AutonomousRunner:
         self.running = False
         return results
 
+    def run_goals(
+        self,
+        runtime,
+        max_cycles: int = 50,
+        auto_chain: bool = True,
+        safety_stop_callback=None,
+    ) -> list:
+        self.running = True
+        self._stop_event.clear()
+
+        results = []
+        executed_counts: dict[str, int] = {}
+
+        for _ in range(max_cycles):
+            if not self.running or self._stop_event.is_set():
+                break
+
+            if safety_stop_callback and safety_stop_callback():
+                break
+
+            active_goals = [g for g in getattr(runtime, "goals", []) if g.status == "ACTIVE"]
+            if not active_goals:
+                break
+
+            # Deterministic selection: highest priority, FIFO tie-breaking
+            selected_goal = max(active_goals, key=lambda g: g.priority)
+
+            # Circuit breaker against infinite execution loops without progress
+            key = selected_goal.id
+            if key in self._paused_tasks:
+                break
+
+            current_failures = self._failure_counts.get(key, 0)
+            if current_failures >= self.failure_limit:
+                self._paused_tasks.add(key)
+                selected_goal.pause()
+                results.append({
+                    "status": "TASK_PAUSED",
+                    "reason": "CIRCUIT_BREAKER",
+                    "goal": selected_goal,
+                })
+                break
+
+            result = runtime.run_goal_learning_step(selected_goal, auto_chain=auto_chain)
+            self.cycle_count += 1
+            self.last_result = result
+
+            # Evaluate success / failure for circuit breaker and completion
+            is_success = False
+            learning_res = getattr(result, "learning_result", None)
+            if learning_res and getattr(learning_res, "memory_updated", False):
+                is_success = True
+            elif getattr(result, "reflection", None) and getattr(result.reflection, "outcome", None) == "SUCCESS":
+                is_success = True
+
+            if is_success:
+                selected_goal.complete()
+                self._failure_counts.pop(key, None)
+                # Auto-resume parent goal if this was a chained child
+                if hasattr(runtime, "_resume_parent_goal_if_any"):
+                    runtime._resume_parent_goal_if_any(selected_goal)
+            else:
+                # If outcome is missing knowledge and generated a chained child goal, pause parent goal
+                if getattr(result, "reflection", None) and getattr(result.reflection, "outcome", None) == "MISSING_KNOWLEDGE":
+                    selected_goal.pause()
+                else:
+                    failures = current_failures + 1
+                    self._failure_counts[key] = failures
+                    if failures >= self.failure_limit:
+                        self._paused_tasks.add(key)
+                        selected_goal.pause()
+                        results.append(result)
+                        results.append({
+                            "status": "TASK_PAUSED",
+                            "reason": "CIRCUIT_BREAKER",
+                            "goal": selected_goal,
+                        })
+                        break
+
+
+            results.append(result)
+
+            if self.interval:
+                time.sleep(self.interval)
+
+        self.running = False
+        return results
+
     def start(
         self,
         observation,

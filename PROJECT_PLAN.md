@@ -1,3 +1,6 @@
+---
+brain_region: stem
+---
 # THE TRANSCENDING FORM
 # PROJECT PLAN — SOURCE OF TRUTH
 

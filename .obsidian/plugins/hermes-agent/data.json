@@ -3,7 +3,7 @@
   "apiKey": "ae01m-secret-key-for-hermes-gateway",
   "model": "",
   "transport": "auto",
-  "reasoningEffort": "",
+  "reasoningEffort": "medium",
   "includeNoteContent": true,
   "requestTimeoutMs": 120000,
   "maxTabs": 3,

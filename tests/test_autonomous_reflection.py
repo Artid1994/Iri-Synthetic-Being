@@ -18,7 +18,14 @@ class FakeResearch:
 
 
 class FakeLearning:
-    def create_candidate(self, content, category, confidence):
+    def create_candidate(
+        self,
+        content,
+        category,
+        confidence,
+        source_url=None,
+        retrieval_timestamp=None,
+    ):
         return object()
 
     def evaluate(self, candidate):

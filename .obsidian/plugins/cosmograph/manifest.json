@@ -1,0 +1,10 @@
+{
+  "id": "cosmograph",
+  "name": "CosmoGraph 3D",
+  "version": "0.2.3",
+  "minAppVersion": "1.7.2",
+  "description": "Explore your vault as an immersive 3D knowledge planet with notes, links, clusters, and procedural terrain.",
+  "author": "n1ghtmare-dev",
+  "authorUrl": "https://github.com/n1ghtmare-dev",
+  "isDesktopOnly": false
+}

@@ -1,0 +1,3 @@
+User expects strict scope control, read-only design/reconnaissance until explicit implementation approval, preservation of uncommitted work, no unauthorized commits/pushes, high token efficiency with concise reporting, teaching while working, and careful separation of UI versus core architectural checkpoints.
+§
+User requires strict verification integrity: never simulate or claim GUI verification unless physically observed in an interactive window; distinguish verified HTTP backend from unverified live Electron/Obsidian GUI rendering in headless environments.

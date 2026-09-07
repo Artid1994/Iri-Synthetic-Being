@@ -1,0 +1,68 @@
+{
+  "palette": "bio",
+  "performancePreset": "mobile",
+  "frontmatterKindKeys": [
+    "kind",
+    "type",
+    "category"
+  ],
+  "frontmatterKindValueMap": {},
+  "frontmatterRegionKeys": [
+    "brain_region",
+    "brainRegion",
+    "lobe",
+    "region"
+  ],
+  "tagKindMap": {
+    "project": "project",
+    "person": "person",
+    "decision": "decision",
+    "question": "question",
+    "tool": "tool",
+    "concept": "concept",
+    "source": "source",
+    "daily": "dailyNote",
+    "moc": "concept",
+    "thread": "workThread",
+    "index": "index"
+  },
+  "folderKindMap": {
+    "People": "person",
+    "Projects": "project",
+    "Sources": "source",
+    "Daily": "dailyNote",
+    "Journal": "dailyNote",
+    "Concepts": "concept",
+    "Topics": "concept",
+    "MOCs": "concept",
+    "Maps": "concept",
+    "Index": "index",
+    "Home": "index"
+  },
+  "frontmatterRegionValueMap": {},
+  "tagRegionMap": {},
+  "folderRegionMap": {},
+  "noteRegionMap": {},
+  "treatDateFilesAsDaily": true,
+  "honorDailyNotesFormat": true,
+  "dailyNoteDateFormat": "YYYY-MM-DD",
+  "nodeCap": 10000,
+  "edgeCap": 20000,
+  "idleAutoRotate": true,
+  "showLobeLabels": true,
+  "showLegendChip": true,
+  "enabledLobes": {
+    "frontal": true,
+    "parietal": true,
+    "temporal": true,
+    "occipital": true,
+    "cerebellum": true,
+    "stem": true
+  },
+  "clickAction": "current",
+  "hubThresholdPercent": 4,
+  "pinnedNodePositions": {},
+  "defaultKind": "person",
+  "inferKindsFromLinks": true,
+  "rendererMode": "auto"
+}

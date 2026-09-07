@@ -60,7 +60,13 @@ class Memory:
     def clear_working(self) -> None:
         self.state.working.clear()
 
-    def add_experience(self, experience: str) -> None:
+    def add_experience(
+        self,
+        experience: str,
+        source_url: str | None = None,
+        retrieval_timestamp: float | None = None,
+        confidence: float | None = None,
+    ) -> None:
         experience = experience.strip()
 
         if not experience:
@@ -69,7 +75,13 @@ class Memory:
         position = len(self.state.episodic)
         self.state.episodic.append(experience)
         self._recall_index.add(experience, position)
-        self.memory_graph.add_node(experience, "EPISODIC")
+        self.memory_graph.add_node(
+            experience,
+            "EPISODIC",
+            source_url=source_url,
+            retrieval_timestamp=retrieval_timestamp,
+            confidence=confidence,
+        )
 
     def add_experience_object(self, experience: Experience) -> None:
         if not isinstance(experience, Experience):
@@ -136,18 +148,38 @@ class Memory:
 
         return self.memory_graph.co_activate(first_id, second_id)
 
-    def add_semantic(self, knowledge: str) -> None:
+    def add_semantic(
+        self,
+        knowledge: str,
+        source_url: str | None = None,
+        retrieval_timestamp: float | None = None,
+        confidence: float | None = None,
+    ) -> None:
         knowledge = knowledge.strip()
 
         if not knowledge:
             return
 
         if self._semantic_index.contains(knowledge):
+            # Still update metadata if node already exists
+            self.memory_graph.add_node(
+                knowledge,
+                "SEMANTIC",
+                source_url=source_url,
+                retrieval_timestamp=retrieval_timestamp,
+                confidence=confidence,
+            )
             return
 
         self.state.semantic.append(knowledge)
         self._semantic_index.add(knowledge)
-        self.memory_graph.add_node(knowledge, "SEMANTIC")
+        self.memory_graph.add_node(
+            knowledge,
+            "SEMANTIC",
+            source_url=source_url,
+            retrieval_timestamp=retrieval_timestamp,
+            confidence=confidence,
+        )
 
     def semantic_contains(self, knowledge: str) -> bool:
         return self._semantic_index.contains(knowledge)

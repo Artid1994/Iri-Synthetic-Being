@@ -284,21 +284,43 @@ All autonomous engineering operations must strictly adhere to the loop:
 
 ---
 
+### PHASE 14 — Future Milestone: AE01M ↔ Galaxy View Memory Activation Integration
+- **Status:** `[PLANNED]`
+- **Objective:** Synchronize real AE01M Memory Recall and Activation events with the Obsidian Galaxy View visualization layer so memory nodes actively recalled/used by the AI can be visually identified without altering visualization physics.
+- **Tasks:**
+  1. Define the formal event/API contract (e.g., node IDs, activation strength, decay timestamp) between AE01M memory recall telemetry and the external visualizer.
+  2. Inspect and verify whether Obsidian Galaxy View exposes a usable, non-destructive public integration point (API, event hook, or telemetry stream). Do not assume or invent an undocumented API.
+  3. If no suitable integration point exists, STOP, document the technical limitation, and propose an isolated bridge/adapter approach.
+  4. Ensure AE01M Core remains the sole source of truth for Memory state, with Galaxy View operating strictly as an external passive visualization layer.
+  5. Strictly avoid implementing custom graph physics, node movement, force simulation, or synthetic animation loops; do not fork, copy, or reimplement Galaxy View.
+- **Dependencies:** Phase 5 (Memory Subsystem), Phase 12 (Memory Node Activation Telemetry contract), and verified Obsidian external boundary.
+- **Required Tests:**
+  - Unit tests verifying emission of activation payload on memory recall.
+  - Mock integration tests verifying memory activation payload delivery to the external visualizer contract without modifying Obsidian internal state.
+- **Completion Criteria:** Verified recall events emit deterministic activation telemetry that maps 1:1 to memory nodes; visualizer receives events via verified contract; zero custom graph animation or movement code introduced.
+- **Verification Gate:** API contract verified against real memory recall logs; Galaxy View integration feasibility documented and verified; strict architecture boundary between Core and Obsidian preserved (`.obsidian/` untouched).
+- **Stop Conditions:** Lack of public/usable integration point in Galaxy View; any attempt to implement custom graph animation or node movement; any attempt to mutate `.obsidian/` configuration directly.
+- **Next-Phase Condition:** Explicit human authorization and verified external integration contract.
+
+---
+
 ## 3. Status Summary Table
 
 | Phase | Description | Current Status | Verification State |
 |---|---|---|---|
-| Phase 0 | Project Reconnaissance & Baseline Stabilization | `IN PROGRESS` | Partially Verified |
-| Phase 1 | Architecture Map & Boundary Definition | `PLANNED` | Not Started |
-| Phase 2 | Brain / Node Foundation Substrate | `INCOMPLETE` | Partially Tested |
-| Phase 3 | Neural Connection & Synapse Substrate | `PLANNED` | Missing / Not Started |
-| Phase 4 | Neural State & Plasticity | `PLANNED` | Missing / Not Started |
-| Phase 5 | Brain ↔ Memory Integration | `PLANNED` | Incomplete |
-| Phase 6 | Identity Foundation & Continuity | `PLANNED` | Partially Tested |
-| Phase 7 | Role, Purpose & Boundary Enforcement | `PLANNED` | Incomplete |
-| Phase 8 | Brain ↔ Cognitive Core Integration | `PLANNED` | Incomplete |
-| Phase 9 | Learning Subsystem Consolidation | `IN PROGRESS` | Uncommitted / Not Consolidated |
-| Phase 10 | Research Subsystem & Exploration | `PLANNED` | Incomplete |
-| Phase 11 | Autonomous Cognitive Loop & Agency | `PLANNED` | Incomplete |
-| Phase 12 | UI Telemetry & Memory Node Activation Visualization | `PROPOSED` | Incomplete (Telemetry & UI proposed) |
-| Phase 13 | Controlled Autonomous Engineering System | `PLANNED` | Pending Foundation |
+| Phase 0 | Project Reconnaissance & Baseline Stabilization | `VERIFIED` | 669 tests isolated and verified |
+| Phase 1 | Architecture Map & Boundary Definition | `VERIFIED` | Clean layers, 6 Atlas regions mapped |
+| Phase 2 | Brain / Node Foundation Substrate | `VERIFIED` | Node, LIFNeuron, Population verified (20/20) |
+| Phase 3 | Neural Connection & Synapse Substrate | `VERIFIED` | Synaptic projection verified (12/12) |
+| Phase 4 | Neural State & Plasticity | `VERIFIED` | Hebbian plasticity & adaptation verified (26/26) |
+| Phase 5 | Brain ↔ Memory Integration | `VERIFIED` | Blank-slate memory & brain bridge verified (92/92) |
+| Phase 6 | Identity Foundation & Continuity | `VERIFIED` | Self-model & identity continuity verified (5/5) |
+| Phase 7 | Role, Purpose & Boundary Enforcement | `VERIFIED` | Policy gates & boundary verified (23/23) |
+| Phase 8 | Brain ↔ Cognitive Core Integration | `VERIFIED` | Cognitive loop & trigger verified (61/61) |
+| Phase 9 | Learning Subsystem Consolidation | `VERIFIED` | Exercises, practice & evaluation verified (83/83) |
+| Phase 10 | Research Subsystem & Exploration | `VERIFIED` | Ground-truth research loop verified (52/52) |
+| Phase 11 | Autonomous Cognitive Loop & Agency | `VERIFIED` | Autonomous cycle, goals & chaining verified (26/26) |
+| Phase 12 | UI Telemetry & Memory Node Activation Visualization | `VERIFIED` | Real telemetry & memory activation verified (11/11) |
+| Phase 13 | Controlled Autonomous Engineering System | `VERIFIED` | Self-diagnostic & safe autonomous engineering verified |
+| Phase 14 | AE01M ↔ Galaxy View Memory Activation Integration | `PLANNED` | Future Milestone (Passive contract proposed) |
+

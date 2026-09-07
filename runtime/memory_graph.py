@@ -8,6 +8,9 @@ class MemoryNode:
     content: str
     memory_type: str
     activation_count: int = 1
+    source_url: str | None = None
+    retrieval_timestamp: float | None = None
+    confidence: float | None = None
 
 
 @dataclass
@@ -25,7 +28,14 @@ class MemoryGraph:
         self.active_nodes: set[str] = set()
         self.active_edges: set[tuple[str, str]] = set()
 
-    def add_node(self, content: str, memory_type: str) -> str:
+    def add_node(
+        self,
+        content: str,
+        memory_type: str,
+        source_url: str | None = None,
+        retrieval_timestamp: float | None = None,
+        confidence: float | None = None,
+    ) -> str:
         content = content.strip()
         memory_type = memory_type.strip()
 
@@ -39,11 +49,20 @@ class MemoryGraph:
 
         if node_id in self.nodes:
             self.nodes[node_id].activation_count += 1
+            if source_url and not self.nodes[node_id].source_url:
+                self.nodes[node_id].source_url = source_url
+            if retrieval_timestamp and not self.nodes[node_id].retrieval_timestamp:
+                self.nodes[node_id].retrieval_timestamp = retrieval_timestamp
+            if confidence is not None and self.nodes[node_id].confidence is None:
+                self.nodes[node_id].confidence = confidence
             return node_id
 
         self.nodes[node_id] = MemoryNode(
             content=content,
             memory_type=memory_type,
+            source_url=source_url,
+            retrieval_timestamp=retrieval_timestamp,
+            confidence=confidence,
         )
 
         return node_id
