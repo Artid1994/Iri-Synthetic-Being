@@ -46,9 +46,9 @@
   "treatDateFilesAsDaily": true,
   "honorDailyNotesFormat": true,
   "dailyNoteDateFormat": "YYYY-MM-DD",
-  "nodeCap": 10000,
-  "edgeCap": 20000,
-  "idleAutoRotate": true,
+  "nodeCap": 4000,
+  "edgeCap": 8400,
+  "idleAutoRotate": false,
   "showLobeLabels": true,
   "showLegendChip": true,
   "enabledLobes": {

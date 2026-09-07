@@ -5,12 +5,12 @@
     "threshold": 0.18
   },
   "physics": {
-    "repel": 260,
-    "linkDistance": 62,
-    "linkStrength": 1.1,
-    "centerPull": 0.03,
+    "repel": 4000,
+    "linkDistance": 380,
+    "linkStrength": 0.15,
+    "centerPull": 0.0,
     "flatten": 0,
-    "coreGravity": -0.08,
+    "coreGravity": 0.0,
     "spiral": 0
   },
   "look": {

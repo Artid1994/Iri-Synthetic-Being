@@ -17,3 +17,8 @@ No outgoing associations.
 - **Memory Type**: SEMANTIC
 - **Activation Count**: 3
 - **Brain Region**: [[03_Temporal/README|Temporal Lobe (Memory Graph)]]
+
+
+### Cross-Region Neural Pathways
+- [[05_Occipital/feature_extractor|Occipital Feature Extractor]]
+- [[02_Parietal/spatial_substrate|Parietal Substrate]]

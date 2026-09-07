@@ -42,6 +42,7 @@ class CognitiveLoop:
         prediction=None,
         reflection=None,
         brain: Brain | None = None,
+        enable_voice: bool = False,
     ) -> None:
         self.cognitive = cognitive
         self.learning = learning
@@ -51,6 +52,30 @@ class CognitiveLoop:
         self.prediction = prediction or Prediction()
         self.reflection = reflection or Reflection()
         self.brain = brain
+        self.enable_voice = enable_voice
+        self.voice_synthesizer = None
+        if self.enable_voice:
+            try:
+                from importlib.machinery import SourceFileLoader
+                import os
+                voice_path = os.path.join(os.path.dirname(__file__), "..", "04_Cerebellum", "voice_synthesis.py")
+                if os.path.exists(voice_path):
+                    mod = SourceFileLoader("voice_synthesis", voice_path).load_module()
+                    self.voice_synthesizer = getattr(mod, "default_synthesizer", None)
+            except Exception:
+                pass
+
+        try:
+            from importlib.machinery import SourceFileLoader
+            import os
+            sleep_path = os.path.join(os.path.dirname(__file__), "..", "00_BrainStem", "sleep_homeostasis.py")
+            if os.path.exists(sleep_path):
+                mod = SourceFileLoader("sleep_homeostasis", sleep_path).load_module()
+                self.sleep_homeostasis = getattr(mod, "default_sleep_homeostasis", None)
+            else:
+                self.sleep_homeostasis = None
+        except Exception:
+            self.sleep_homeostasis = None
         self.last_reflection = None
 
         self.perception = PerceptionModule()
@@ -187,6 +212,7 @@ class CognitiveLoop:
 
         recalled = perception.normalized_input
         associations = []
+        reasoning = ""
 
         if self.associative_recall is not None:
             associations = self.associative_recall.recall(
@@ -243,6 +269,12 @@ class CognitiveLoop:
         experience_recorded = False
 
         if decision == "RESPOND":
+            if self.enable_voice and self.voice_synthesizer is not None and reasoning:
+                try:
+                    self.voice_synthesizer.speak(reasoning, block=False)
+                except Exception:
+                    pass
+
             candidate = self.learning.create_candidate(
                 perception.normalized_input,
                 "GENERAL",
@@ -275,6 +307,14 @@ class CognitiveLoop:
                 )
 
                 self.development.sync()
+
+        if self.sleep_homeostasis is not None:
+            wm_count = len(getattr(self.development.memory, "working", [])) if hasattr(self.development, "memory") else 0
+            sleep_state = self.sleep_homeostasis.update_cycle(working_memory_count=wm_count)
+            if sleep_state == "NEEDS_SLEEP" and decision == "RESPOND" and reasoning:
+                drowsy_note = "\n\n(ไอริเริ่มรู้สึกง่วงและสมองตึงมากแล้วค่ะเจ้านาย... ต้องการเข้าสู่ Sleep Consolidation เพื่อพักฟื้นความจำระยะยาวค่ะ)"
+                if drowsy_note not in reasoning:
+                    reasoning += drowsy_note
 
         cycle = CognitiveCycle(
             input_text=perception.normalized_input,
