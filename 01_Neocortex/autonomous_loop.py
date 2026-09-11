@@ -546,29 +546,36 @@ def main():
         logger.info("[AutonomousLoop] Running in continuous daemon mode")
         
         try:
+            iteration = 0
             while True:
-                iteration = 0
-                
                 # Check for state transition
                 new_state = loop._check_state_transition()
                 if new_state:
                     loop._transition_state(new_state)
                 
-                # Log current state periodically (every 10 iterations)
-                if iteration % 10 == 0:
+                # Log current state periodically (every 30 iterations = ~30-60s)
+                if iteration % 30 == 0:
                     current_state = loop.context.state
                     time_in_state = (datetime.now() - loop.context.last_state_change).total_seconds()
                     logger.info(f"[Status] State: {current_state.value.upper()} (T+{time_in_state:.0f}s)")
+                
+                # Execute goal processing cycle
+                if loop.context.state == CircadianState.ACTIVE:
+                    # Process pending goals
+                    pending_goals = [g for g in loop.goal_engine.list_goals() if g.status == GoalStatus.PENDING]
+                    if pending_goals and iteration % 10 == 0:
+                        logger.info(f"[Goals] {len(pending_goals)} pending goals in queue")
+                        # Goals will be processed by goal_engine's own evaluation
                 
                 iteration += 1
                 
                 # Adaptive sleep based on state
                 if loop.context.state == CircadianState.ACTIVE:
-                    time.sleep(1)  # Fast polling when active
+                    time.sleep(2)  # Active polling when active
                 elif loop.context.state == CircadianState.IDLE:
-                    time.sleep(2)  # Medium polling when idle
+                    time.sleep(5)  # Medium polling when idle
                 else:  # SLEEP, RESEARCH, CONSOLIDATE
-                    time.sleep(5)  # Slow polling in background (more efficient)
+                    time.sleep(10)  # Slow polling in background (more efficient)
                 
         except KeyboardInterrupt:
             logger.info("[AutonomousLoop] Interrupted by user")
