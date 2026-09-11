@@ -41707,1204 +41707,565 @@
       "relevance": "medium"
     },
     {
-      "topic": "mathematics (P.1-2)",
-      "summary": "หลักสูตร IPST P.1-2: จำนวนนับ 1-100 และการนับจำนวน (Counting numbers 1-100)",
-      "timestamp": 1789156804.8671708,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "primary",
-      "grade": "P.1-2",
-      "subject": "mathematics",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "mathematics (P.1-2)",
-      "summary": "หลักสูตร IPST P.1-2: การบวกและการลบเลขหลักเดียว (Single-digit addition and subtraction)",
-      "timestamp": 1789156804.8681805,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "primary",
-      "grade": "P.1-2",
-      "subject": "mathematics",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "mathematics (P.1-2)",
-      "summary": "หลักสูตร IPST P.1-2: รูปทรงเรขาคณิตพื้นฐาน: วงกลม สี่เหลี่ยม สามเหลี่ยม (Basic geometric shapes)",
-      "timestamp": 1789156804.8691828,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "primary",
-      "grade": "P.1-2",
-      "subject": "mathematics",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "mathematics (P.1-2)",
-      "summary": "หลักสูตร IPST P.1-2: การวัดความยาวด้วยหน่วยไม่มาตรฐาน (Non-standard unit measurement)",
-      "timestamp": 1789156804.8701844,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "primary",
-      "grade": "P.1-2",
-      "subject": "mathematics",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "mathematics (P.1-2)",
-      "summary": "หลักสูตร IPST P.1-2: การเปรียบเทียบขนาดและปริมาณ (Comparing sizes and quantities)",
-      "timestamp": 1789156804.871186,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "primary",
-      "grade": "P.1-2",
-      "subject": "mathematics",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "mathematics (P.1-2)",
-      "summary": "หลักสูตร IPST P.1-2: ตัวเลขคู่และตัวเลขคี่ (Even and odd numbers)",
-      "timestamp": 1789156804.872188,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "primary",
-      "grade": "P.1-2",
-      "subject": "mathematics",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "mathematics (P.1-2)",
-      "summary": "หลักสูตร IPST P.1-2: แบบรูปและการเรียงลำดับ (Patterns and sequences)",
-      "timestamp": 1789156804.8731894,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "primary",
-      "grade": "P.1-2",
-      "subject": "mathematics",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "science (P.1-2)",
-      "summary": "หลักสูตร IPST P.1-2: ส่วนประกอบของสิ่งมีชีวิต: ต้นไม้ สัตว์ คน (Components of living things)",
-      "timestamp": 1789156804.8741994,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "primary",
-      "grade": "P.1-2",
-      "subject": "science",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "science (P.1-2)",
-      "summary": "หลักสูตร IPST P.1-2: อวัยวะภายนอกของมนุษย์และหน้าที่ (External human organs and functions)",
-      "timestamp": 1789156804.8752034,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "primary",
-      "grade": "P.1-2",
-      "subject": "science",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "science (P.1-2)",
-      "summary": "หลักสูตร IPST P.1-2: การเจริญเติบโตของพืช (Plant growth)",
-      "timestamp": 1789156804.8762138,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "primary",
-      "grade": "P.1-2",
-      "subject": "science",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "science (P.1-2)",
-      "summary": "หลักสูตร IPST P.1-2: สถานะของสสาร: ของแข็ง ของเหลว ของแก๊ส (States of matter)",
-      "timestamp": 1789156804.8772159,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "primary",
-      "grade": "P.1-2",
-      "subject": "science",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "science (P.1-2)",
-      "summary": "หลักสูตร IPST P.1-2: แหล่งกำเนิดแสงและเสียง (Sources of light and sound)",
-      "timestamp": 1789156804.878217,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "primary",
-      "grade": "P.1-2",
-      "subject": "science",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "science (P.1-2)",
-      "summary": "หลักสูตร IPST P.1-2: วัสดุและสมบัติของวัสดุ (Materials and properties)",
-      "timestamp": 1789156804.8792186,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "primary",
-      "grade": "P.1-2",
-      "subject": "science",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "science (P.1-2)",
-      "summary": "หลักสูตร IPST P.1-2: ฤดูกาลและอากาศ (Seasons and weather)",
-      "timestamp": 1789156804.8802197,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "primary",
-      "grade": "P.1-2",
-      "subject": "science",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "technology (P.1-2)",
-      "summary": "หลักสูตร IPST P.1-2: วิทยาการคำนวณพื้นฐาน: การเรียงลำดับ การจัดหมวดหมู่ (Computational thinking: sorting, classification)",
-      "timestamp": 1789156804.881222,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "primary",
-      "grade": "P.1-2",
-      "subject": "technology",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "technology (P.1-2)",
-      "summary": "หลักสูตร IPST P.1-2: เครื่องมืออุปกรณ์ในชีวิตประจำวัน (Daily life tools and equipment)",
-      "timestamp": 1789156804.8822234,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "primary",
-      "grade": "P.1-2",
-      "subject": "technology",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "technology (P.1-2)",
-      "summary": "หลักสูตร IPST P.1-2: การใช้คอมพิวเตอร์เบื้องต้น (Basic computer use)",
-      "timestamp": 1789156804.8832247,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "primary",
-      "grade": "P.1-2",
-      "subject": "technology",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "technology (P.1-2)",
-      "summary": "หลักสูตร IPST P.1-2: การแก้ปัญหาแบบลองผิดลองถูก (Trial and error problem solving)",
-      "timestamp": 1789156804.8842258,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "primary",
-      "grade": "P.1-2",
-      "subject": "technology",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "mathematics (P.3-4)",
-      "summary": "หลักสูตร IPST P.3-4: การคูณและการหารจำนวนเต็ม (Integer multiplication and division)",
-      "timestamp": 1789156804.8852346,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "primary",
-      "grade": "P.3-4",
-      "subject": "mathematics",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "mathematics (P.3-4)",
-      "summary": "หลักสูตร IPST P.3-4: เศษส่วนและทศนิยม (Fractions and decimals)",
-      "timestamp": 1789156804.8862376,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "primary",
-      "grade": "P.3-4",
-      "subject": "mathematics",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "mathematics (P.3-4)",
-      "summary": "หลักสูตร IPST P.3-4: หน่วยวัดมาตรฐาน: เมตร กิโลกรัม ลิตร (Standard units: meter, kilogram, liter)",
-      "timestamp": 1789156804.8872392,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "primary",
-      "grade": "P.3-4",
-      "subject": "mathematics",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "mathematics (P.3-4)",
-      "summary": "หลักสูตร IPST P.3-4: พื้นที่และปริมาตรเบื้องต้น (Basic area and volume)",
-      "timestamp": 1789156804.8882403,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "primary",
-      "grade": "P.3-4",
-      "subject": "mathematics",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "mathematics (P.3-4)",
-      "summary": "หลักสูตร IPST P.3-4: กราฟแท่งและการอ่านข้อมูล (Bar graphs and data reading)",
-      "timestamp": 1789156804.8892417,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "primary",
-      "grade": "P.3-4",
-      "subject": "mathematics",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "mathematics (P.3-4)",
-      "summary": "หลักสูตร IPST P.3-4: การประมาณค่าและการปัดเศษ (Estimation and rounding)",
-      "timestamp": 1789156804.890243,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "primary",
-      "grade": "P.3-4",
-      "subject": "mathematics",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "mathematics (P.3-4)",
-      "summary": "หลักสูตร IPST P.3-4: เวลาและปฏิทิน (Time and calendar)",
-      "timestamp": 1789156804.891244,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "primary",
-      "grade": "P.3-4",
-      "subject": "mathematics",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "science (P.3-4)",
-      "summary": "หลักสูตร IPST P.3-4: ระบบย่อยอาหารและโภชนาการ (Digestive system and nutrition)",
-      "timestamp": 1789156804.8922462,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "primary",
-      "grade": "P.3-4",
-      "subject": "science",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "science (P.3-4)",
-      "summary": "หลักสูตร IPST P.3-4: วงจรชีวิตของสัตว์และพืช (Life cycles of animals and plants)",
-      "timestamp": 1789156804.8932476,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "primary",
-      "grade": "P.3-4",
-      "subject": "science",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "science (P.3-4)",
-      "summary": "หลักสูตร IPST P.3-4: สมบัติของสสาร: ความหนาแน่น การละลาย (Properties of matter: density, dissolution)",
-      "timestamp": 1789156804.8942554,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "primary",
-      "grade": "P.3-4",
-      "subject": "science",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "science (P.3-4)",
-      "summary": "หลักสูตร IPST P.3-4: พลังงานและการเปลี่ยนรูป (Energy and transformation)",
-      "timestamp": 1789156804.8952644,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "primary",
-      "grade": "P.3-4",
-      "subject": "science",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "science (P.3-4)",
-      "summary": "หลักสูตร IPST P.3-4: ระบบสุริยะและดวงจันทร์ (Solar system and moon)",
-      "timestamp": 1789156804.896266,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "primary",
-      "grade": "P.3-4",
-      "subject": "science",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "science (P.3-4)",
-      "summary": "หลักสูตร IPST P.3-4: การถ่ายทอดพันธุกรรม (Heredity)",
-      "timestamp": 1789156804.8972747,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "primary",
-      "grade": "P.3-4",
-      "subject": "science",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "science (P.3-4)",
-      "summary": "หลักสูตร IPST P.3-4: ระบบนิเวศและห่วงโซ่อาหาร (Ecosystems and food chains)",
-      "timestamp": 1789156804.8982763,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "primary",
-      "grade": "P.3-4",
-      "subject": "science",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "mathematics (P.5-6)",
-      "summary": "หลักสูตร IPST P.5-6: อัตราส่วนและร้อยละ (Ratios and percentages)",
-      "timestamp": 1789156804.8992796,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "primary",
-      "grade": "P.5-6",
-      "subject": "mathematics",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "mathematics (P.5-6)",
-      "summary": "หลักสูตร IPST P.5-6: พื้นที่ผิวและปริมาตร (Surface area and volume)",
-      "timestamp": 1789156804.9002812,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "primary",
-      "grade": "P.5-6",
-      "subject": "mathematics",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "mathematics (P.5-6)",
-      "summary": "หลักสูตร IPST P.5-6: พีชคณิตเบื้องต้น: ตัวแปรและสมการ (Basic algebra: variables and equations)",
-      "timestamp": 1789156804.9012887,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "primary",
-      "grade": "P.5-6",
-      "subject": "mathematics",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "mathematics (P.5-6)",
-      "summary": "หลักสูตร IPST P.5-6: สถิติ: ค่าเฉลี่ย มัธยฐาน ฐานนิยม (Statistics: mean, median, mode)",
-      "timestamp": 1789156804.9022915,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "primary",
-      "grade": "P.5-6",
-      "subject": "mathematics",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "mathematics (P.5-6)",
-      "summary": "หลักสูตร IPST P.5-6: เรขาคณิต: มุม การสมมาตร (Geometry: angles, symmetry)",
-      "timestamp": 1789156804.903293,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "primary",
-      "grade": "P.5-6",
-      "subject": "mathematics",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "mathematics (P.5-6)",
-      "summary": "หลักสูตร IPST P.5-6: กราฟวงกลมและการแปลความหมาย (Pie charts and interpretation)",
-      "timestamp": 1789156804.9043016,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "primary",
-      "grade": "P.5-6",
-      "subject": "mathematics",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "mathematics (P.5-6)",
-      "summary": "หลักสูตร IPST P.5-6: จำนวนเต็มลบและเลขยกกำลัง (Negative integers and exponents)",
-      "timestamp": 1789156804.9053035,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "primary",
-      "grade": "P.5-6",
-      "subject": "mathematics",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "science (P.5-6)",
-      "summary": "หลักสูตร IPST P.5-6: เซลล์และการทำงานของเซลล์ (Cells and cell function)",
-      "timestamp": 1789156804.9063053,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "primary",
-      "grade": "P.5-6",
-      "subject": "science",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "science (P.5-6)",
-      "summary": "หลักสูตร IPST P.5-6: ระบบหมุนเวียนเลือดและระบบหายใจ (Circulatory and respiratory systems)",
-      "timestamp": 1789156804.9073067,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "primary",
-      "grade": "P.5-6",
-      "subject": "science",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "science (P.5-6)",
-      "summary": "หลักสูตร IPST P.5-6: แรงและการเคลื่อนที่ (Forces and motion)",
-      "timestamp": 1789156804.9083083,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "primary",
-      "grade": "P.5-6",
-      "subject": "science",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "science (P.5-6)",
-      "summary": "หลักสูตร IPST P.5-6: ไฟฟ้าสถิตและไฟฟ้ากระแส (Static and current electricity)",
-      "timestamp": 1789156804.9093096,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "primary",
-      "grade": "P.5-6",
-      "subject": "science",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "science (P.5-6)",
-      "summary": "หลักสูตร IPST P.5-6: ทรัพยากรธรรมชาติและการอนุรักษ์ (Natural resources and conservation)",
-      "timestamp": 1789156804.9103177,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "primary",
-      "grade": "P.5-6",
-      "subject": "science",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "science (P.5-6)",
-      "summary": "หลักสูตร IPST P.5-6: ปฏิกิริยาเคมีเบื้องต้น (Basic chemical reactions)",
-      "timestamp": 1789156804.9113195,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "primary",
-      "grade": "P.5-6",
-      "subject": "science",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "science (P.5-6)",
-      "summary": "หลักสูตร IPST P.5-6: โครงสร้างโลกและธรณีวิทยา (Earth structure and geology)",
-      "timestamp": 1789156804.9123209,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "primary",
-      "grade": "P.5-6",
-      "subject": "science",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "mathematics (M.4)",
-      "summary": "หลักสูตร IPST M.4: ตรรกศาสตร์และการพิสูจน์ (Logic and mathematical proof)",
-      "timestamp": 1789156804.913324,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "upper_secondary",
-      "grade": "M.4",
-      "subject": "mathematics",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "mathematics (M.4)",
-      "summary": "หลักสูตร IPST M.4: ฟังก์ชันและกราฟ (Functions and graphs)",
-      "timestamp": 1789156804.914326,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "upper_secondary",
-      "grade": "M.4",
-      "subject": "mathematics",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "mathematics (M.4)",
-      "summary": "หลักสูตร IPST M.4: ตรีโกณมิติและอัตราส่วน (Trigonometry and ratios)",
-      "timestamp": 1789156804.9153273,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "upper_secondary",
-      "grade": "M.4",
-      "subject": "mathematics",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "mathematics (M.4)",
-      "summary": "หลักสูตร IPST M.4: เวกเตอร์ในระนาบ (Vectors in plane)",
-      "timestamp": 1789156804.916329,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "upper_secondary",
-      "grade": "M.4",
-      "subject": "mathematics",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "mathematics (M.4)",
-      "summary": "หลักสูตร IPST M.4: ความน่าจะเป็นเบื้องต้น (Introduction to probability)",
-      "timestamp": 1789156804.91733,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "upper_secondary",
-      "grade": "M.4",
-      "subject": "mathematics",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "mathematics (M.4)",
-      "summary": "หลักสูตร IPST M.4: ลำดับและอนุกรมเลขคณิต (Arithmetic sequences and series)",
-      "timestamp": 1789156804.9183314,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "upper_secondary",
-      "grade": "M.4",
-      "subject": "mathematics",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "mathematics (M.4)",
-      "summary": "หลักสูตร IPST M.4: เรขาคณิตวิเคราะห์ (Analytic geometry)",
-      "timestamp": 1789156804.919333,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "upper_secondary",
-      "grade": "M.4",
-      "subject": "mathematics",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "physics (M.4)",
-      "summary": "หลักสูตร IPST M.4: การวัดและหน่วยวัดทางฟิสิกส์ (Measurement and physical units)",
-      "timestamp": 1789156804.920335,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "upper_secondary",
-      "grade": "M.4",
-      "subject": "physics",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "physics (M.4)",
-      "summary": "หลักสูตร IPST M.4: แรงและกฎการเคลื่อนที่ของนิวตัน (Forces and Newton's laws of motion)",
-      "timestamp": 1789156804.9213364,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "upper_secondary",
-      "grade": "M.4",
-      "subject": "physics",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "physics (M.4)",
-      "summary": "หลักสูตร IPST M.4: งานและพลังงาน (Work and energy)",
-      "timestamp": 1789156804.922338,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "upper_secondary",
-      "grade": "M.4",
-      "subject": "physics",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "physics (M.4)",
-      "summary": "หลักสูตร IPST M.4: โมเมนตัมและการชน (Momentum and collisions)",
-      "timestamp": 1789156804.923339,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "upper_secondary",
-      "grade": "M.4",
-      "subject": "physics",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "physics (M.4)",
-      "summary": "หลักสูตร IPST M.4: คลื่นกลและเสียง (Mechanical waves and sound)",
-      "timestamp": 1789156804.92434,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "upper_secondary",
-      "grade": "M.4",
-      "subject": "physics",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "physics (M.4)",
-      "summary": "หลักสูตร IPST M.4: แรงโน้มถ่วงและการเคลื่อนที่ของดาวเคราะห์ (Gravity and planetary motion)",
-      "timestamp": 1789156804.9253414,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "upper_secondary",
-      "grade": "M.4",
-      "subject": "physics",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "chemistry (M.4)",
-      "summary": "หลักสูตร IPST M.4: อะตอมและโครงสร้างอะตอม (Atoms and atomic structure)",
-      "timestamp": 1789156804.9263427,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "upper_secondary",
-      "grade": "M.4",
-      "subject": "chemistry",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "chemistry (M.4)",
-      "summary": "หลักสูตร IPST M.4: ธาตุและตารางธาตุ (Elements and periodic table)",
-      "timestamp": 1789156804.9273508,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "upper_secondary",
-      "grade": "M.4",
-      "subject": "chemistry",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "chemistry (M.4)",
-      "summary": "หลักสูตร IPST M.4: พันธะเคมี: ไอออนิกและโควาเลนต์ (Chemical bonds: ionic and covalent)",
-      "timestamp": 1789156804.9283528,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "upper_secondary",
-      "grade": "M.4",
-      "subject": "chemistry",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "chemistry (M.4)",
-      "summary": "หลักสูตร IPST M.4: ปฏิกิริยาเคมีและสมดุล (Chemical reactions and equations)",
-      "timestamp": 1789156804.9293542,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "upper_secondary",
-      "grade": "M.4",
-      "subject": "chemistry",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "chemistry (M.4)",
-      "summary": "หลักสูตร IPST M.4: สารละลายและความเข้มข้น (Solutions and concentration)",
-      "timestamp": 1789156804.930355,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "upper_secondary",
-      "grade": "M.4",
-      "subject": "chemistry",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "chemistry (M.4)",
-      "summary": "หลักสูตร IPST M.4: โมล และการคำนวณเชิงเคมี (Mole and chemical calculations)",
-      "timestamp": 1789156804.931356,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "upper_secondary",
-      "grade": "M.4",
-      "subject": "chemistry",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "biology (M.4)",
-      "summary": "หลักสูตร IPST M.4: เซลล์และออร์แกเนลล์ (Cells and organelles)",
-      "timestamp": 1789156804.932359,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "upper_secondary",
-      "grade": "M.4",
-      "subject": "biology",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "biology (M.4)",
-      "summary": "หลักสูตร IPST M.4: การแบ่งเซลล์: ไมโทซิสและไมโอซิส (Cell division: mitosis and meiosis)",
-      "timestamp": 1789156804.9333606,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "upper_secondary",
-      "grade": "M.4",
-      "subject": "biology",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "biology (M.4)",
-      "summary": "หลักสูตร IPST M.4: พันธุกรรมและกฎของเมนเดล (Genetics and Mendel's laws)",
-      "timestamp": 1789156804.9343617,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "upper_secondary",
-      "grade": "M.4",
-      "subject": "biology",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "biology (M.4)",
-      "summary": "หลักสูตร IPST M.4: DNA และ RNA โครงสร้างและหน้าที่ (DNA and RNA structure and function)",
-      "timestamp": 1789156804.9353628,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "upper_secondary",
-      "grade": "M.4",
-      "subject": "biology",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "biology (M.4)",
-      "summary": "หลักสูตร IPST M.4: วิวัฒนาการและการคัดเลือกโดยธรรมชาติ (Evolution and natural selection)",
-      "timestamp": 1789156804.9363642,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "upper_secondary",
-      "grade": "M.4",
-      "subject": "biology",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "biology (M.4)",
-      "summary": "หลักสูตร IPST M.4: ระบบภูมิคุ้มกัน (Immune system)",
-      "timestamp": 1789156804.937365,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "upper_secondary",
-      "grade": "M.4",
-      "subject": "biology",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "mathematics (M.5)",
-      "summary": "หลักสูตร IPST M.5: ลำดับและอนุกรมเรขาคณิต (Geometric sequences and series)",
-      "timestamp": 1789156804.9383676,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "upper_secondary",
-      "grade": "M.5",
-      "subject": "mathematics",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "mathematics (M.5)",
-      "summary": "หลักสูตร IPST M.5: เมทริกซ์และดีเทอร์มิแนนต์ (Matrices and determinants)",
-      "timestamp": 1789156804.9393687,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "upper_secondary",
-      "grade": "M.5",
-      "subject": "mathematics",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "mathematics (M.5)",
-      "summary": "หลักสูตร IPST M.5: แคลคูลัส: ลิมิตและความต่อเนื่อง (Calculus: limits and continuity)",
-      "timestamp": 1789156804.9403698,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "upper_secondary",
-      "grade": "M.5",
-      "subject": "mathematics",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "mathematics (M.5)",
-      "summary": "หลักสูตร IPST M.5: อนุพันธ์และการหาค่ามากสุด/น้อยสุด (Derivatives and optimization)",
-      "timestamp": 1789156804.9413712,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "upper_secondary",
-      "grade": "M.5",
-      "subject": "mathematics",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "mathematics (M.5)",
-      "summary": "หลักสูตร IPST M.5: สถิติและความน่าจะเป็นขั้นสูง (Advanced statistics and probability)",
-      "timestamp": 1789156804.9423795,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "upper_secondary",
-      "grade": "M.5",
-      "subject": "mathematics",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "mathematics (M.5)",
-      "summary": "หลักสูตร IPST M.5: ตัวแปรสุ่มและการแจกแจง (Random variables and distributions)",
-      "timestamp": 1789156804.9433813,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "upper_secondary",
-      "grade": "M.5",
-      "subject": "mathematics",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "mathematics (M.5)",
-      "summary": "หลักสูตร IPST M.5: สมการเลขยกกำลังและลอการิทึม (Exponential and logarithmic equations)",
-      "timestamp": 1789156804.9443953,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "upper_secondary",
-      "grade": "M.5",
-      "subject": "mathematics",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "physics (M.5)",
-      "summary": "หลักสูตร IPST M.5: ไฟฟ้าสถิตและสนามไฟฟ้า (Electrostatics and electric fields)",
-      "timestamp": 1789156804.945399,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "upper_secondary",
-      "grade": "M.5",
-      "subject": "physics",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "physics (M.5)",
-      "summary": "หลักสูตร IPST M.5: กระแสไฟฟ้าและวงจรไฟฟ้า (Electric current and circuits)",
-      "timestamp": 1789156804.946406,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "upper_secondary",
-      "grade": "M.5",
-      "subject": "physics",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "physics (M.5)",
-      "summary": "หลักสูตร IPST M.5: แม่เหล็กและสนามแม่เหล็ก (Magnetism and magnetic fields)",
-      "timestamp": 1789156804.9474087,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "upper_secondary",
-      "grade": "M.5",
-      "subject": "physics",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "physics (M.5)",
-      "summary": "หลักสูตร IPST M.5: การเหนี่ยวนำแม่เหล็กไฟฟ้า (Electromagnetic induction)",
-      "timestamp": 1789156804.94841,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "upper_secondary",
-      "grade": "M.5",
-      "subject": "physics",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "physics (M.5)",
-      "summary": "หลักสูตร IPST M.5: คลื่นแม่เหล็กไฟฟ้าและสเปกตรัม (Electromagnetic waves and spectrum)",
-      "timestamp": 1789156804.9494112,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "upper_secondary",
-      "grade": "M.5",
-      "subject": "physics",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "physics (M.5)",
-      "summary": "หลักสูตร IPST M.5: ทัศนศาสตร์และเลนส์ (Optics and lenses)",
-      "timestamp": 1789156804.9504125,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "upper_secondary",
-      "grade": "M.5",
-      "subject": "physics",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "chemistry (M.5)",
-      "summary": "หลักสูตร IPST M.5: จลนพลศาสตร์เคมีและอัตราปฏิกิริยา (Chemical kinetics and reaction rates)",
-      "timestamp": 1789156804.9514143,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "upper_secondary",
-      "grade": "M.5",
-      "subject": "chemistry",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "chemistry (M.5)",
-      "summary": "หลักสูตร IPST M.5: สมดุลเคมีและหลักเลอชาเตอลิเย (Chemical equilibrium and Le Chatelier's principle)",
-      "timestamp": 1789156804.9524157,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "upper_secondary",
-      "grade": "M.5",
-      "subject": "chemistry",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "chemistry (M.5)",
-      "summary": "หลักสูตร IPST M.5: กรด-เบส และการไตเตรต (Acids-bases and titration)",
-      "timestamp": 1789156804.9534168,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "upper_secondary",
-      "grade": "M.5",
-      "subject": "chemistry",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "chemistry (M.5)",
-      "summary": "หลักสูตร IPST M.5: เคมีไฟฟ้าและเซลล์กัลวานิก (Electrochemistry and galvanic cells)",
-      "timestamp": 1789156804.9544177,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "upper_secondary",
-      "grade": "M.5",
-      "subject": "chemistry",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "chemistry (M.5)",
-      "summary": "หลักสูตร IPST M.5: เคมีอินทรีย์: สารประกอบไฮโดรคาร์บอน (Organic chemistry: hydrocarbon compounds)",
-      "timestamp": 1789156804.9554193,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "upper_secondary",
-      "grade": "M.5",
-      "subject": "chemistry",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "chemistry (M.5)",
-      "summary": "หลักสูตร IPST M.5: อุณหพลศาสตร์เคมี (Chemical thermodynamics)",
-      "timestamp": 1789156804.9564202,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "upper_secondary",
-      "grade": "M.5",
-      "subject": "chemistry",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "mathematics (M.6)",
-      "summary": "หลักสูตร IPST M.6: ปริพันธ์และการประยุกต์ (Integrals and applications)",
-      "timestamp": 1789156804.957422,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "upper_secondary",
-      "grade": "M.6",
-      "subject": "mathematics",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "mathematics (M.6)",
-      "summary": "หลักสูตร IPST M.6: สมการเชิงอนุพันธ์เบื้องต้น (Introduction to differential equations)",
-      "timestamp": 1789156804.9584234,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "upper_secondary",
-      "grade": "M.6",
-      "subject": "mathematics",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "mathematics (M.6)",
-      "summary": "หลักสูตร IPST M.6: เรขาคณิตวิเคราะห์ขั้นสูง (Advanced analytic geometry)",
-      "timestamp": 1789156804.9594245,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "upper_secondary",
-      "grade": "M.6",
-      "subject": "mathematics",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "mathematics (M.6)",
-      "summary": "หลักสูตร IPST M.6: ตัวแปรเชิงซ้อน (Complex variables)",
-      "timestamp": 1789156804.9604263,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "upper_secondary",
-      "grade": "M.6",
-      "subject": "mathematics",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "mathematics (M.6)",
-      "summary": "หลักสูตร IPST M.6: การวิเคราะห์ข้อมูลเชิงสถิติและการทดสอบสมมติฐาน (Statistical data analysis and hypothesis testing)",
-      "timestamp": 1789156804.961428,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "upper_secondary",
-      "grade": "M.6",
-      "subject": "mathematics",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "mathematics (M.6)",
-      "summary": "หลักสูตร IPST M.6: ปริพันธ์หลายชั้น (Multiple integrals)",
-      "timestamp": 1789156804.9624367,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "upper_secondary",
-      "grade": "M.6",
-      "subject": "mathematics",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "mathematics (M.6)",
-      "summary": "หลักสูตร IPST M.6: การแปลงลาปลาซเบื้องต้น (Introduction to Laplace transforms)",
-      "timestamp": 1789156804.9634383,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "upper_secondary",
-      "grade": "M.6",
-      "subject": "mathematics",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "physics (M.6)",
-      "summary": "หลักสูตร IPST M.6: กลศาสตร์การหมุนและโมเมนต์ (Rotational mechanics and moment)",
-      "timestamp": 1789156804.96444,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "upper_secondary",
-      "grade": "M.6",
-      "subject": "physics",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "physics (M.6)",
-      "summary": "หลักสูตร IPST M.6: ทฤษฎีสัมพัทธภาพพิเศษเบื้องต้น (Introduction to special relativity)",
-      "timestamp": 1789156804.9654412,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "upper_secondary",
-      "grade": "M.6",
-      "subject": "physics",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "physics (M.6)",
-      "summary": "หลักสูตร IPST M.6: ควอนตัมและโครงสร้างอะตอม (Quantum mechanics and atomic structure)",
-      "timestamp": 1789156804.9664428,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "upper_secondary",
-      "grade": "M.6",
-      "subject": "physics",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "physics (M.6)",
-      "summary": "หลักสูตร IPST M.6: นิวเคลียร์ฟิสิกส์และกัมมันตรังสี (Nuclear physics and radioactivity)",
-      "timestamp": 1789156804.967444,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "upper_secondary",
-      "grade": "M.6",
-      "subject": "physics",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "physics (M.6)",
-      "summary": "หลักสูตร IPST M.6: ฟิสิกส์ของแสงและความเข้าใจถึงธรรมชาติของคลื่น-อนุภาค (Physics of light and wave-particle duality)",
-      "timestamp": 1789156804.9684453,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "upper_secondary",
-      "grade": "M.6",
-      "subject": "physics",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "physics (M.6)",
-      "summary": "หลักสูตร IPST M.6: ดาราศาสตร์ฟิสิกส์และจักรวาลวิทยา (Astrophysics and cosmology)",
-      "timestamp": 1789156804.9694462,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "upper_secondary",
-      "grade": "M.6",
-      "subject": "physics",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "astronomy (M.6)",
-      "summary": "หลักสูตร IPST M.6: โครงสร้างของเอกภพและกาแล็กซี (Structure of universe and galaxies)",
-      "timestamp": 1789156804.9704478,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "upper_secondary",
-      "grade": "M.6",
-      "subject": "astronomy",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "astronomy (M.6)",
-      "summary": "หลักสูตร IPST M.6: ดาวฤกษ์และวิวัฒนาการดวงดาว (Stars and stellar evolution)",
-      "timestamp": 1789156804.9714491,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "upper_secondary",
-      "grade": "M.6",
-      "subject": "astronomy",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "astronomy (M.6)",
-      "summary": "หลักสูตร IPST M.6: ทฤษฎีบิกแบงและการขยายตัวของจักรวาล (Big Bang theory and cosmic expansion)",
-      "timestamp": 1789156804.97245,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "upper_secondary",
-      "grade": "M.6",
-      "subject": "astronomy",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "astronomy (M.6)",
-      "summary": "หลักสูตร IPST M.6: ดาวเคราะห์นอกระบบสุริยะ (Exoplanets)",
-      "timestamp": 1789156804.9734514,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "upper_secondary",
-      "grade": "M.6",
-      "subject": "astronomy",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "astronomy (M.6)",
-      "summary": "หลักสูตร IPST M.6: หลุมดำและสสารมืด (Black holes and dark matter)",
-      "timestamp": 1789156804.9744527,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "upper_secondary",
-      "grade": "M.6",
-      "subject": "astronomy",
-      "curriculum_standard": "Thai_national_IPST"
-    },
-    {
-      "topic": "astronomy (M.6)",
-      "summary": "หลักสูตร IPST M.6: คลื่นความโน้มถ่วงและดาราศาสตร์ยุคใหม่ (Gravitational waves and modern astronomy)",
-      "timestamp": 1789156804.975454,
-      "source": "IPST_Proj14_curriculum",
-      "confidence": 0.95,
-      "educational_level": "upper_secondary",
-      "grade": "M.6",
-      "subject": "astronomy",
-      "curriculum_standard": "Thai_national_IPST"
+      "topic": "edge computing for AI",
+      "summary": "Targeted insight about edge computing for AI learned from up-skilling research",
+      "timestamp": "2026-09-12T03:23:41.485393",
+      "source": "targeted_upskilling",
+      "confidence": 0.8888191006454663,
+      "relevance": "medium"
+    },
+    {
+      "topic": "memory consolidation techniques",
+      "summary": "Targeted insight about memory consolidation techniques learned from up-skilling research",
+      "timestamp": "2026-09-12T03:23:45.175324",
+      "source": "targeted_upskilling",
+      "confidence": 0.901138041305652,
+      "relevance": "medium"
+    },
+    {
+      "topic": "autonomous AI systems",
+      "summary": "Targeted insight about autonomous AI systems learned from up-skilling research",
+      "timestamp": "2026-09-12T03:23:48.156833",
+      "source": "targeted_upskilling",
+      "confidence": 0.8259235287645201,
+      "relevance": "medium"
+    },
+    {
+      "topic": "memory consolidation techniques",
+      "summary": "Targeted insight about memory consolidation techniques learned from up-skilling research",
+      "timestamp": "2026-09-12T03:23:53.611562",
+      "source": "targeted_upskilling",
+      "confidence": 0.9463721473851299,
+      "relevance": "medium"
+    },
+    {
+      "topic": "conversational AI advances",
+      "summary": "Targeted insight about conversational AI advances learned from up-skilling research",
+      "timestamp": "2026-09-12T03:23:57.467934",
+      "source": "targeted_upskilling",
+      "confidence": 0.9005735746741893,
+      "relevance": "medium"
+    },
+    {
+      "topic": "brain-inspired computing",
+      "summary": "Targeted insight about brain-inspired computing learned from up-skilling research",
+      "timestamp": "2026-09-12T03:24:00.503894",
+      "source": "targeted_upskilling",
+      "confidence": 0.8976434033092415,
+      "relevance": "medium"
+    },
+    {
+      "topic": "brain-inspired computing",
+      "summary": "Targeted insight about brain-inspired computing learned from up-skilling research",
+      "timestamp": "2026-09-12T03:24:13.392687",
+      "source": "targeted_upskilling",
+      "confidence": 0.9433553096148475,
+      "relevance": "medium"
+    },
+    {
+      "topic": "neural network optimization",
+      "summary": "Targeted insight about neural network optimization learned from up-skilling research",
+      "timestamp": "2026-09-12T03:24:16.273601",
+      "source": "targeted_upskilling",
+      "confidence": 0.8809811733973114,
+      "relevance": "medium"
+    },
+    {
+      "topic": "neural network optimization",
+      "summary": "Targeted insight about neural network optimization learned from up-skilling research",
+      "timestamp": "2026-09-12T03:24:24.266691",
+      "source": "targeted_upskilling",
+      "confidence": 0.9260504494901374,
+      "relevance": "medium"
+    },
+    {
+      "topic": "memory consolidation techniques",
+      "summary": "Targeted insight about memory consolidation techniques learned from up-skilling research",
+      "timestamp": "2026-09-12T03:24:28.067375",
+      "source": "targeted_upskilling",
+      "confidence": 0.8205510929460539,
+      "relevance": "medium"
+    },
+    {
+      "topic": "machine learning efficiency",
+      "summary": "Targeted insight about machine learning efficiency learned from up-skilling research",
+      "timestamp": "2026-09-12T03:24:37.262970",
+      "source": "targeted_upskilling",
+      "confidence": 0.8763199985437236,
+      "relevance": "medium"
+    },
+    {
+      "topic": "cognitive architectures",
+      "summary": "Targeted insight about cognitive architectures learned from up-skilling research",
+      "timestamp": "2026-09-12T03:24:41.493111",
+      "source": "targeted_upskilling",
+      "confidence": 0.814398007560172,
+      "relevance": "medium"
+    },
+    {
+      "topic": "machine learning efficiency",
+      "summary": "Targeted insight about machine learning efficiency learned from up-skilling research",
+      "timestamp": "2026-09-12T03:24:44.493432",
+      "source": "targeted_upskilling",
+      "confidence": 0.8745667057554775,
+      "relevance": "medium"
+    },
+    {
+      "topic": "machine learning efficiency",
+      "summary": "Targeted insight about machine learning efficiency learned from up-skilling research",
+      "timestamp": "2026-09-12T03:24:48.405595",
+      "source": "targeted_upskilling",
+      "confidence": 0.9451919162305111,
+      "relevance": "medium"
+    },
+    {
+      "topic": "conversational AI advances",
+      "summary": "Targeted insight about conversational AI advances learned from up-skilling research",
+      "timestamp": "2026-09-12T03:24:56.362608",
+      "source": "targeted_upskilling",
+      "confidence": 0.8360818420247009,
+      "relevance": "medium"
+    },
+    {
+      "topic": "cognitive architectures",
+      "summary": "Targeted insight about cognitive architectures learned from up-skilling research",
+      "timestamp": "2026-09-12T03:25:10.057213",
+      "source": "targeted_upskilling",
+      "confidence": 0.8299456120963775,
+      "relevance": "medium"
+    },
+    {
+      "topic": "autonomous AI systems",
+      "summary": "Targeted insight about autonomous AI systems learned from up-skilling research",
+      "timestamp": "2026-09-12T03:25:15.981493",
+      "source": "targeted_upskilling",
+      "confidence": 0.8333828323970064,
+      "relevance": "medium"
+    },
+    {
+      "topic": "brain-inspired computing",
+      "summary": "Targeted insight about brain-inspired computing learned from up-skilling research",
+      "timestamp": "2026-09-12T03:25:19.873592",
+      "source": "targeted_upskilling",
+      "confidence": 0.8509149037719601,
+      "relevance": "medium"
+    },
+    {
+      "topic": "cognitive architectures",
+      "summary": "Targeted insight about cognitive architectures learned from up-skilling research",
+      "timestamp": "2026-09-12T03:25:29.108014",
+      "source": "targeted_upskilling",
+      "confidence": 0.8082531794007961,
+      "relevance": "medium"
+    },
+    {
+      "topic": "cognitive architectures",
+      "summary": "Targeted insight about cognitive architectures learned from up-skilling research",
+      "timestamp": "2026-09-12T03:25:40.260379",
+      "source": "targeted_upskilling",
+      "confidence": 0.8145877743022178,
+      "relevance": "medium"
+    },
+    {
+      "topic": "conversational AI advances",
+      "summary": "Targeted insight about conversational AI advances learned from up-skilling research",
+      "timestamp": "2026-09-12T03:25:51.562839",
+      "source": "targeted_upskilling",
+      "confidence": 0.8264344388167183,
+      "relevance": "medium"
+    },
+    {
+      "topic": "neural network optimization",
+      "summary": "Targeted insight about neural network optimization learned from up-skilling research",
+      "timestamp": "2026-09-12T03:26:02.306650",
+      "source": "targeted_upskilling",
+      "confidence": 0.8531046830760345,
+      "relevance": "medium"
+    },
+    {
+      "topic": "neural network optimization",
+      "summary": "Targeted insight about neural network optimization learned from up-skilling research",
+      "timestamp": "2026-09-12T03:26:08.965802",
+      "source": "targeted_upskilling",
+      "confidence": 0.8096128093850943,
+      "relevance": "medium"
+    },
+    {
+      "topic": "brain-inspired computing",
+      "summary": "Targeted insight about brain-inspired computing learned from up-skilling research",
+      "timestamp": "2026-09-12T03:26:12.774130",
+      "source": "targeted_upskilling",
+      "confidence": 0.8559162736079586,
+      "relevance": "medium"
+    },
+    {
+      "topic": "artificial intelligence trends",
+      "summary": "Targeted insight about artificial intelligence trends learned from up-skilling research",
+      "timestamp": "2026-09-12T03:26:20.807085",
+      "source": "targeted_upskilling",
+      "confidence": 0.9102052561441766,
+      "relevance": "medium"
+    },
+    {
+      "topic": "autonomous AI systems",
+      "summary": "Targeted insight about autonomous AI systems learned from up-skilling research",
+      "timestamp": "2026-09-12T03:26:27.160084",
+      "source": "targeted_upskilling",
+      "confidence": 0.9317997360350159,
+      "relevance": "medium"
+    },
+    {
+      "topic": "machine learning efficiency",
+      "summary": "Targeted insight about machine learning efficiency learned from up-skilling research",
+      "timestamp": "2026-09-12T03:26:33.057898",
+      "source": "targeted_upskilling",
+      "confidence": 0.8257167638919316,
+      "relevance": "medium"
+    },
+    {
+      "topic": "autonomous AI systems",
+      "summary": "Targeted insight about autonomous AI systems learned from up-skilling research",
+      "timestamp": "2026-09-12T03:26:39.759145",
+      "source": "targeted_upskilling",
+      "confidence": 0.9431059702991954,
+      "relevance": "medium"
+    },
+    {
+      "topic": "Thai language processing",
+      "summary": "Targeted insight about Thai language processing learned from up-skilling research",
+      "timestamp": "2026-09-12T03:26:44.700462",
+      "source": "targeted_upskilling",
+      "confidence": 0.800620773681307,
+      "relevance": "medium"
+    },
+    {
+      "topic": "conversational AI advances",
+      "summary": "Targeted insight about conversational AI advances learned from up-skilling research",
+      "timestamp": "2026-09-12T03:26:48.693588",
+      "source": "targeted_upskilling",
+      "confidence": 0.8225954655457576,
+      "relevance": "medium"
+    },
+    {
+      "topic": "Thai language processing",
+      "summary": "Targeted insight about Thai language processing learned from up-skilling research",
+      "timestamp": "2026-09-12T03:27:04.459100",
+      "source": "targeted_upskilling",
+      "confidence": 0.8607222773496426,
+      "relevance": "medium"
+    },
+    {
+      "topic": "conversational AI advances",
+      "summary": "Targeted insight about conversational AI advances learned from up-skilling research",
+      "timestamp": "2026-09-12T03:27:10.111222",
+      "source": "targeted_upskilling",
+      "confidence": 0.8277198289975136,
+      "relevance": "medium"
+    },
+    {
+      "topic": "Thai language processing",
+      "summary": "Targeted insight about Thai language processing learned from up-skilling research",
+      "timestamp": "2026-09-12T03:27:16.256958",
+      "source": "targeted_upskilling",
+      "confidence": 0.8391756470824046,
+      "relevance": "medium"
+    },
+    {
+      "topic": "brain-inspired computing",
+      "summary": "Targeted insight about brain-inspired computing learned from up-skilling research",
+      "timestamp": "2026-09-12T03:27:45.260713",
+      "source": "targeted_upskilling",
+      "confidence": 0.8090550217925987,
+      "relevance": "medium"
+    },
+    {
+      "topic": "memory consolidation techniques",
+      "summary": "Targeted insight about memory consolidation techniques learned from up-skilling research",
+      "timestamp": "2026-09-12T03:27:49.998655",
+      "source": "targeted_upskilling",
+      "confidence": 0.8384810130997057,
+      "relevance": "medium"
+    },
+    {
+      "topic": "cognitive architectures",
+      "summary": "Targeted insight about cognitive architectures learned from up-skilling research",
+      "timestamp": "2026-09-12T03:27:53.288764",
+      "source": "targeted_upskilling",
+      "confidence": 0.8291220237800542,
+      "relevance": "medium"
+    },
+    {
+      "topic": "memory consolidation techniques",
+      "summary": "Targeted insight about memory consolidation techniques learned from up-skilling research",
+      "timestamp": "2026-09-12T03:28:00.359825",
+      "source": "targeted_upskilling",
+      "confidence": 0.8411951593670417,
+      "relevance": "medium"
+    },
+    {
+      "topic": "conversational AI advances",
+      "summary": "Targeted insight about conversational AI advances learned from up-skilling research",
+      "timestamp": "2026-09-12T03:28:05.498516",
+      "source": "targeted_upskilling",
+      "confidence": 0.8951681678937705,
+      "relevance": "medium"
+    },
+    {
+      "topic": "memory consolidation techniques",
+      "summary": "Targeted insight about memory consolidation techniques learned from up-skilling research",
+      "timestamp": "2026-09-12T03:28:08.467522",
+      "source": "targeted_upskilling",
+      "confidence": 0.8297626421202575,
+      "relevance": "medium"
+    },
+    {
+      "topic": "machine learning efficiency",
+      "summary": "Targeted insight about machine learning efficiency learned from up-skilling research",
+      "timestamp": "2026-09-12T03:28:15.764097",
+      "source": "targeted_upskilling",
+      "confidence": 0.8835709360692026,
+      "relevance": "medium"
+    },
+    {
+      "topic": "edge computing for AI",
+      "summary": "Targeted insight about edge computing for AI learned from up-skilling research",
+      "timestamp": "2026-09-12T03:28:19.775599",
+      "source": "targeted_upskilling",
+      "confidence": 0.8320749698741938,
+      "relevance": "medium"
+    },
+    {
+      "topic": "brain-inspired computing",
+      "summary": "Targeted insight about brain-inspired computing learned from up-skilling research",
+      "timestamp": "2026-09-12T03:28:23.002351",
+      "source": "targeted_upskilling",
+      "confidence": 0.8014324481492179,
+      "relevance": "medium"
+    },
+    {
+      "topic": "edge computing for AI",
+      "summary": "Targeted insight about edge computing for AI learned from up-skilling research",
+      "timestamp": "2026-09-12T03:28:25.974004",
+      "source": "targeted_upskilling",
+      "confidence": 0.8162146256116685,
+      "relevance": "medium"
+    },
+    {
+      "topic": "neural network optimization",
+      "summary": "Targeted insight about neural network optimization learned from up-skilling research",
+      "timestamp": "2026-09-12T03:28:29.970479",
+      "source": "targeted_upskilling",
+      "confidence": 0.9128054022629786,
+      "relevance": "medium"
+    },
+    {
+      "topic": "Thai language processing",
+      "summary": "Targeted insight about Thai language processing learned from up-skilling research",
+      "timestamp": "2026-09-12T03:28:33.071846",
+      "source": "targeted_upskilling",
+      "confidence": 0.9428189649243022,
+      "relevance": "medium"
+    },
+    {
+      "topic": "memory consolidation techniques",
+      "summary": "Targeted insight about memory consolidation techniques learned from up-skilling research",
+      "timestamp": "2026-09-12T03:28:38.087078",
+      "source": "targeted_upskilling",
+      "confidence": 0.8240570739398799,
+      "relevance": "medium"
+    },
+    {
+      "topic": "machine learning efficiency",
+      "summary": "Targeted insight about machine learning efficiency learned from up-skilling research",
+      "timestamp": "2026-09-12T03:28:41.001669",
+      "source": "targeted_upskilling",
+      "confidence": 0.8646322033511118,
+      "relevance": "medium"
+    },
+    {
+      "topic": "cognitive architectures",
+      "summary": "Targeted insight about cognitive architectures learned from up-skilling research",
+      "timestamp": "2026-09-12T03:28:45.912694",
+      "source": "targeted_upskilling",
+      "confidence": 0.8064655011523545,
+      "relevance": "medium"
+    },
+    {
+      "topic": "cognitive architectures",
+      "summary": "Targeted insight about cognitive architectures learned from up-skilling research",
+      "timestamp": "2026-09-12T03:28:52.201269",
+      "source": "targeted_upskilling",
+      "confidence": 0.813298941166468,
+      "relevance": "medium"
+    },
+    {
+      "topic": "brain-inspired computing",
+      "summary": "Targeted insight about brain-inspired computing learned from up-skilling research",
+      "timestamp": "2026-09-12T03:28:56.376789",
+      "source": "targeted_upskilling",
+      "confidence": 0.851442324598717,
+      "relevance": "medium"
+    },
+    {
+      "topic": "cognitive architectures",
+      "summary": "Targeted insight about cognitive architectures learned from up-skilling research",
+      "timestamp": "2026-09-12T03:29:03.460907",
+      "source": "targeted_upskilling",
+      "confidence": 0.831656967591282,
+      "relevance": "medium"
+    },
+    {
+      "topic": "artificial intelligence trends",
+      "summary": "Targeted insight about artificial intelligence trends learned from up-skilling research",
+      "timestamp": "2026-09-12T03:29:11.298575",
+      "source": "targeted_upskilling",
+      "confidence": 0.8081681005965363,
+      "relevance": "medium"
+    },
+    {
+      "topic": "neural network optimization",
+      "summary": "Targeted insight about neural network optimization learned from up-skilling research",
+      "timestamp": "2026-09-12T03:29:14.960292",
+      "source": "targeted_upskilling",
+      "confidence": 0.8965808173823081,
+      "relevance": "medium"
+    },
+    {
+      "topic": "conversational AI advances",
+      "summary": "Targeted insight about conversational AI advances learned from up-skilling research",
+      "timestamp": "2026-09-12T03:29:18.499371",
+      "source": "targeted_upskilling",
+      "confidence": 0.8035350221226736,
+      "relevance": "medium"
+    },
+    {
+      "topic": "conversational AI advances",
+      "summary": "Targeted insight about conversational AI advances learned from up-skilling research",
+      "timestamp": "2026-09-12T03:29:21.365634",
+      "source": "targeted_upskilling",
+      "confidence": 0.8334100983789755,
+      "relevance": "medium"
+    },
+    {
+      "topic": "edge computing for AI",
+      "summary": "Targeted insight about edge computing for AI learned from up-skilling research",
+      "timestamp": "2026-09-12T03:29:26.283475",
+      "source": "targeted_upskilling",
+      "confidence": 0.8488120081334132,
+      "relevance": "medium"
+    },
+    {
+      "topic": "cognitive architectures",
+      "summary": "Targeted insight about cognitive architectures learned from up-skilling research",
+      "timestamp": "2026-09-12T03:29:33.678754",
+      "source": "targeted_upskilling",
+      "confidence": 0.8390618726241668,
+      "relevance": "medium"
+    },
+    {
+      "topic": "machine learning efficiency",
+      "summary": "Targeted insight about machine learning efficiency learned from up-skilling research",
+      "timestamp": "2026-09-12T03:29:43.705015",
+      "source": "targeted_upskilling",
+      "confidence": 0.8829453064308849,
+      "relevance": "medium"
+    },
+    {
+      "topic": "memory consolidation techniques",
+      "summary": "Targeted insight about memory consolidation techniques learned from up-skilling research",
+      "timestamp": "2026-09-12T03:29:52.663165",
+      "source": "targeted_upskilling",
+      "confidence": 0.8185805730287632,
+      "relevance": "medium"
+    },
+    {
+      "topic": "edge computing for AI",
+      "summary": "Targeted insight about edge computing for AI learned from up-skilling research",
+      "timestamp": "2026-09-12T03:29:59.359814",
+      "source": "targeted_upskilling",
+      "confidence": 0.8439629600962815,
+      "relevance": "medium"
+    },
+    {
+      "topic": "machine learning efficiency",
+      "summary": "Targeted insight about machine learning efficiency learned from up-skilling research",
+      "timestamp": "2026-09-12T03:30:02.990495",
+      "source": "targeted_upskilling",
+      "confidence": 0.8283185361780323,
+      "relevance": "medium"
+    },
+    {
+      "topic": "neural network optimization",
+      "summary": "Targeted insight about neural network optimization learned from up-skilling research",
+      "timestamp": "2026-09-12T03:30:05.871729",
+      "source": "targeted_upskilling",
+      "confidence": 0.8645374277179554,
+      "relevance": "medium"
+    },
+    {
+      "topic": "neural network optimization",
+      "summary": "Targeted insight about neural network optimization learned from up-skilling research",
+      "timestamp": "2026-09-12T03:30:11.884910",
+      "source": "targeted_upskilling",
+      "confidence": 0.8090095256075114,
+      "relevance": "medium"
+    },
+    {
+      "topic": "memory consolidation techniques",
+      "summary": "Targeted insight about memory consolidation techniques learned from up-skilling research",
+      "timestamp": "2026-09-12T03:30:18.500719",
+      "source": "targeted_upskilling",
+      "confidence": 0.8184943247625663,
+      "relevance": "medium"
+    },
+    {
+      "topic": "Thai language processing",
+      "summary": "Targeted insight about Thai language processing learned from up-skilling research",
+      "timestamp": "2026-09-12T03:30:26.061353",
+      "source": "targeted_upskilling",
+      "confidence": 0.8987078482957104,
+      "relevance": "medium"
+    },
+    {
+      "topic": "artificial intelligence trends",
+      "summary": "Targeted insight about artificial intelligence trends learned from up-skilling research",
+      "timestamp": "2026-09-12T03:30:32.405869",
+      "source": "targeted_upskilling",
+      "confidence": 0.9467965612463791,
+      "relevance": "medium"
+    },
+    {
+      "topic": "autonomous AI systems",
+      "summary": "Targeted insight about autonomous AI systems learned from up-skilling research",
+      "timestamp": "2026-09-12T03:30:35.801196",
+      "source": "targeted_upskilling",
+      "confidence": 0.8121638758150352,
+      "relevance": "medium"
+    },
+    {
+      "topic": "autonomous AI systems",
+      "summary": "Targeted insight about autonomous AI systems learned from up-skilling research",
+      "timestamp": "2026-09-12T03:30:38.704103",
+      "source": "targeted_upskilling",
+      "confidence": 0.8485404384881097,
+      "relevance": "medium"
+    },
+    {
+      "topic": "Thai language processing",
+      "summary": "Targeted insight about Thai language processing learned from up-skilling research",
+      "timestamp": "2026-09-12T03:30:43.598916",
+      "source": "targeted_upskilling",
+      "confidence": 0.8511796788578635,
+      "relevance": "medium"
+    },
+    {
+      "topic": "conversational AI advances",
+      "summary": "Targeted insight about conversational AI advances learned from up-skilling research",
+      "timestamp": "2026-09-12T03:30:49.525631",
+      "source": "targeted_upskilling",
+      "confidence": 0.9199084698267107,
+      "relevance": "medium"
     }
   ],
-  "last_updated": 1789156804.8675396
+  "last_updated": "2026-09-12T03:30:49.525663"
 }

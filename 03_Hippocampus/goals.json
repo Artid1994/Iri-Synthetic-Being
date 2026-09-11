@@ -30,7 +30,7 @@
         "safety_checks": [
           "DIRECTIVE_1"
         ],
-        "result": "● iri-voice.service - Iri Autonomous Neural Voice Loop Daemon\n     Loaded: loaded (/home/artid1994/.config/systemd/user/iri-voice.service; enabled; preset: enabled)\n     Active: active (running) since Thu 2026-09-10 00:55:53 +07; 3h 20min ago\n Invocation: d5605e9b95b849c38704b0cbe833940c\n       Docs: file:///home/artid1994/Projects/THE_TRANSCENDING_FORM/README.md\n   Main PID: 20868 (python)\n      Tasks: 2 (limit: 4172)\n     Memory: 780K (max: 2G, available: 1.9G, peak: 220.9M, swap: 96.8M, swap "
+        "result": "\u25cf iri-voice.service - Iri Autonomous Neural Voice Loop Daemon\n     Loaded: loaded (/home/artid1994/.config/systemd/user/iri-voice.service; enabled; preset: enabled)\n     Active: active (running) since Thu 2026-09-10 00:55:53 +07; 3h 20min ago\n Invocation: d5605e9b95b849c38704b0cbe833940c\n       Docs: file:///home/artid1994/Projects/THE_TRANSCENDING_FORM/README.md\n   Main PID: 20868 (python)\n      Tasks: 2 (limit: 4172)\n     Memory: 780K (max: 2G, available: 1.9G, peak: 220.9M, swap: 96.8M, swap "
       },
       {
         "id": "5a824d58",
@@ -90,7 +90,6 @@
     "title": "Miniaturization Science & Pym Particle Feasibility Research",
     "description": "Comprehensive research into the theoretical and practical feasibility of macroscopic-to-microscopic volume reduction, exploring physics limits, engineering state-of-the-art, and quantum horizons",
     "priority": "high",
-    "category": "RESEARCH",
     "status": "pending",
     "created_at": 1789124220.330237,
     "updated_at": 1789124220.3302372,
@@ -98,8 +97,9 @@
       {
         "id": "104da440",
         "title": "Physics Feasibility Study",
-        "description": "Research the physical limits of atomic-scale volume reduction (Pauli exclusion principle, mass density, quantum tunneling)",
         "type": "research",
+        "command": null,
+        "estimated_duration": 300,
         "status": "pending",
         "safety_checks": [
           "DIRECTIVE_1",
@@ -110,8 +110,9 @@
       {
         "id": "f4368e25",
         "title": "Real-World Engineering Analysis",
-        "description": "Investigate current state-of-the-art miniaturization technology (MEMS/NEMS, Nanorobotics, 2nm Semiconductor Fabrication)",
         "type": "research",
+        "command": null,
+        "estimated_duration": 300,
         "status": "pending",
         "safety_checks": [
           "DIRECTIVE_1",
@@ -122,8 +123,9 @@
       {
         "id": "76770a8e",
         "title": "Quantum & Theoretical Physics Horizons",
-        "description": "Explore theoretical models (e.g., metamaterials, spatial contraction) that mimic macroscopic-to-microscopic scaling",
         "type": "research",
+        "command": null,
+        "estimated_duration": 300,
         "status": "pending",
         "safety_checks": [
           "DIRECTIVE_1",
@@ -134,13 +136,50 @@
       {
         "id": "bdf53743",
         "title": "Summary Report",
-        "description": "Generate a comprehensive synthesis report on 'The Feasibility of Macroscopic Miniaturization' and save to 03_Hippocampus/knowledge_base/miniaturization_science.md",
         "type": "synthesis",
-        "output_path": "03_Hippocampus/knowledge_base/miniaturization_science.md",
+        "command": null,
+        "estimated_duration": 300,
         "status": "pending",
         "safety_checks": [
           "DIRECTIVE_1",
           "DIRECTIVE_2"
+        ],
+        "result": null
+      }
+    ],
+    "result": null
+  },
+  {
+    "id": "LEARN_os_basics_1789157609",
+    "title": "Learn: Operating System Fundamentals",
+    "description": "Processes, threads, memory management, file systems\nConcepts: processes, threads, virtual memory, file systems, syscalls",
+    "priority": "medium",
+    "status": "pending",
+    "created_at": 1789157609.04352,
+    "updated_at": 1789157609.043521,
+    "subtasks": [
+      {
+        "id": "LEARN_os_basics_1789157609_research",
+        "title": "Research Operating System Fundamentals",
+        "type": "research",
+        "command": "Research topic: Operating System Fundamentals",
+        "estimated_duration": 300,
+        "status": "pending",
+        "safety_checks": [
+          "DIRECTIVE_1",
+          "DIRECTIVE_2"
+        ],
+        "result": null
+      },
+      {
+        "id": "LEARN_os_basics_1789157609_quiz",
+        "title": "Self-quiz: Operating System Fundamentals",
+        "type": "verification",
+        "command": "echo 'Quiz: What is the difference between a process and a thread?\nExpected: A process is an independent program with its own memory space, while a thread is a lightweight execu'",
+        "estimated_duration": 60,
+        "status": "pending",
+        "safety_checks": [
+          "DIRECTIVE_1"
         ],
         "result": null
       }
