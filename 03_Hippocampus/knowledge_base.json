@@ -46321,7 +46321,783 @@
       "source": "targeted_upskilling",
       "confidence": 0.8296089728916897,
       "relevance": "medium"
+    },
+    {
+      "topic": "machine learning efficiency",
+      "summary": "Targeted insight about machine learning efficiency learned from up-skilling research",
+      "timestamp": "2026-09-12T04:24:11.205190",
+      "source": "targeted_upskilling",
+      "confidence": 0.92795983556993,
+      "relevance": "medium"
+    },
+    {
+      "topic": "brain-inspired computing",
+      "summary": "Targeted insight about brain-inspired computing learned from up-skilling research",
+      "timestamp": "2026-09-12T04:24:14.205105",
+      "source": "targeted_upskilling",
+      "confidence": 0.8186341628551349,
+      "relevance": "medium"
+    },
+    {
+      "topic": "edge computing for AI",
+      "summary": "Targeted insight about edge computing for AI learned from up-skilling research",
+      "timestamp": "2026-09-12T04:24:21.218291",
+      "source": "targeted_upskilling",
+      "confidence": 0.8302304806596472,
+      "relevance": "medium"
+    },
+    {
+      "topic": "neural network optimization",
+      "summary": "Targeted insight about neural network optimization learned from up-skilling research",
+      "timestamp": "2026-09-12T04:24:26.213962",
+      "source": "targeted_upskilling",
+      "confidence": 0.9450005796191682,
+      "relevance": "medium"
+    },
+    {
+      "topic": "autonomous AI systems",
+      "summary": "Targeted insight about autonomous AI systems learned from up-skilling research",
+      "timestamp": "2026-09-12T04:24:32.184736",
+      "source": "targeted_upskilling",
+      "confidence": 0.8434107964177091,
+      "relevance": "medium"
+    },
+    {
+      "topic": "brain-inspired computing",
+      "summary": "Targeted insight about brain-inspired computing learned from up-skilling research",
+      "timestamp": "2026-09-12T04:24:41.238006",
+      "source": "targeted_upskilling",
+      "confidence": 0.8909348791872084,
+      "relevance": "medium"
+    },
+    {
+      "topic": "cognitive architectures",
+      "summary": "Targeted insight about cognitive architectures learned from up-skilling research",
+      "timestamp": "2026-09-12T04:24:47.215376",
+      "source": "targeted_upskilling",
+      "confidence": 0.924274060812986,
+      "relevance": "medium"
+    },
+    {
+      "topic": "machine learning efficiency",
+      "summary": "Targeted insight about machine learning efficiency learned from up-skilling research",
+      "timestamp": "2026-09-12T04:24:51.313785",
+      "source": "targeted_upskilling",
+      "confidence": 0.8207239153581642,
+      "relevance": "medium"
+    },
+    {
+      "topic": "brain-inspired computing",
+      "summary": "Targeted insight about brain-inspired computing learned from up-skilling research",
+      "timestamp": "2026-09-12T04:24:54.301932",
+      "source": "targeted_upskilling",
+      "confidence": 0.8127243350346224,
+      "relevance": "medium"
+    },
+    {
+      "topic": "Thai language processing",
+      "summary": "Targeted insight about Thai language processing learned from up-skilling research",
+      "timestamp": "2026-09-12T04:24:57.307872",
+      "source": "targeted_upskilling",
+      "confidence": 0.856105270855202,
+      "relevance": "medium"
+    },
+    {
+      "topic": "Thai language processing",
+      "summary": "Targeted insight about Thai language processing learned from up-skilling research",
+      "timestamp": "2026-09-12T04:25:02.289279",
+      "source": "targeted_upskilling",
+      "confidence": 0.9131252355809756,
+      "relevance": "medium"
+    },
+    {
+      "topic": "artificial intelligence trends",
+      "summary": "Targeted insight about artificial intelligence trends learned from up-skilling research",
+      "timestamp": "2026-09-12T04:25:05.302949",
+      "source": "targeted_upskilling",
+      "confidence": 0.8068702540975692,
+      "relevance": "medium"
+    },
+    {
+      "topic": "edge computing for AI",
+      "summary": "Targeted insight about edge computing for AI learned from up-skilling research",
+      "timestamp": "2026-09-12T04:25:20.336687",
+      "source": "targeted_upskilling",
+      "confidence": 0.8245592942175253,
+      "relevance": "medium"
+    },
+    {
+      "topic": "brain-inspired computing",
+      "summary": "Targeted insight about brain-inspired computing learned from up-skilling research",
+      "timestamp": "2026-09-12T04:25:23.296389",
+      "source": "targeted_upskilling",
+      "confidence": 0.8868656399120014,
+      "relevance": "medium"
+    },
+    {
+      "topic": "artificial intelligence trends",
+      "summary": "Targeted insight about artificial intelligence trends learned from up-skilling research",
+      "timestamp": "2026-09-12T04:25:35.320758",
+      "source": "targeted_upskilling",
+      "confidence": 0.8646591662608808,
+      "relevance": "medium"
+    },
+    {
+      "topic": "brain-inspired computing",
+      "summary": "Targeted insight about brain-inspired computing learned from up-skilling research",
+      "timestamp": "2026-09-12T04:25:40.313033",
+      "source": "targeted_upskilling",
+      "confidence": 0.9097487855041886,
+      "relevance": "medium"
+    },
+    {
+      "topic": "memory consolidation techniques",
+      "summary": "Targeted insight about memory consolidation techniques learned from up-skilling research",
+      "timestamp": "2026-09-12T04:25:43.306161",
+      "source": "targeted_upskilling",
+      "confidence": 0.8114855259143877,
+      "relevance": "medium"
+    },
+    {
+      "topic": "autonomous AI systems",
+      "summary": "Targeted insight about autonomous AI systems learned from up-skilling research",
+      "timestamp": "2026-09-12T04:25:50.299922",
+      "source": "targeted_upskilling",
+      "confidence": 0.872105170268036,
+      "relevance": "medium"
+    },
+    {
+      "topic": "machine learning efficiency",
+      "summary": "Targeted insight about machine learning efficiency learned from up-skilling research",
+      "timestamp": "2026-09-12T04:25:54.301265",
+      "source": "targeted_upskilling",
+      "confidence": 0.8622800913004041,
+      "relevance": "medium"
+    },
+    {
+      "topic": "Thai language processing",
+      "summary": "Targeted insight about Thai language processing learned from up-skilling research",
+      "timestamp": "2026-09-12T04:25:57.299140",
+      "source": "targeted_upskilling",
+      "confidence": 0.8643509852637268,
+      "relevance": "medium"
+    },
+    {
+      "topic": "edge computing for AI",
+      "summary": "Targeted insight about edge computing for AI learned from up-skilling research",
+      "timestamp": "2026-09-12T04:26:01.357360",
+      "source": "targeted_upskilling",
+      "confidence": 0.8378960068919317,
+      "relevance": "medium"
+    },
+    {
+      "topic": "cognitive architectures",
+      "summary": "Targeted insight about cognitive architectures learned from up-skilling research",
+      "timestamp": "2026-09-12T04:26:07.560064",
+      "source": "targeted_upskilling",
+      "confidence": 0.814576723061648,
+      "relevance": "medium"
+    },
+    {
+      "topic": "brain-inspired computing",
+      "summary": "Targeted insight about brain-inspired computing learned from up-skilling research",
+      "timestamp": "2026-09-12T04:26:11.657273",
+      "source": "targeted_upskilling",
+      "confidence": 0.8368894225682777,
+      "relevance": "medium"
+    },
+    {
+      "topic": "memory consolidation techniques",
+      "summary": "Targeted insight about memory consolidation techniques learned from up-skilling research",
+      "timestamp": "2026-09-12T04:26:16.687547",
+      "source": "targeted_upskilling",
+      "confidence": 0.8148059400578871,
+      "relevance": "medium"
+    },
+    {
+      "topic": "neural network optimization",
+      "summary": "Targeted insight about neural network optimization learned from up-skilling research",
+      "timestamp": "2026-09-12T04:26:19.856657",
+      "source": "targeted_upskilling",
+      "confidence": 0.9322294735582102,
+      "relevance": "medium"
+    },
+    {
+      "topic": "Thai language processing",
+      "summary": "Targeted insight about Thai language processing learned from up-skilling research",
+      "timestamp": "2026-09-12T04:26:22.801957",
+      "source": "targeted_upskilling",
+      "confidence": 0.838351462761125,
+      "relevance": "medium"
+    },
+    {
+      "topic": "artificial intelligence trends",
+      "summary": "Targeted insight about artificial intelligence trends learned from up-skilling research",
+      "timestamp": "2026-09-12T04:26:28.840700",
+      "source": "targeted_upskilling",
+      "confidence": 0.8616285960712494,
+      "relevance": "medium"
+    },
+    {
+      "topic": "memory consolidation techniques",
+      "summary": "Targeted insight about memory consolidation techniques learned from up-skilling research",
+      "timestamp": "2026-09-12T04:26:39.807758",
+      "source": "targeted_upskilling",
+      "confidence": 0.9015514675785801,
+      "relevance": "medium"
+    },
+    {
+      "topic": "brain-inspired computing",
+      "summary": "Targeted insight about brain-inspired computing learned from up-skilling research",
+      "timestamp": "2026-09-12T04:26:47.832164",
+      "source": "targeted_upskilling",
+      "confidence": 0.8290072089221869,
+      "relevance": "medium"
+    },
+    {
+      "topic": "conversational AI advances",
+      "summary": "Targeted insight about conversational AI advances learned from up-skilling research",
+      "timestamp": "2026-09-12T04:26:50.810532",
+      "source": "targeted_upskilling",
+      "confidence": 0.8349750947523336,
+      "relevance": "medium"
+    },
+    {
+      "topic": "memory consolidation techniques",
+      "summary": "Targeted insight about memory consolidation techniques learned from up-skilling research",
+      "timestamp": "2026-09-12T04:26:58.860972",
+      "source": "targeted_upskilling",
+      "confidence": 0.8478647384837072,
+      "relevance": "medium"
+    },
+    {
+      "topic": "autonomous AI systems",
+      "summary": "Targeted insight about autonomous AI systems learned from up-skilling research",
+      "timestamp": "2026-09-12T04:27:04.259600",
+      "source": "targeted_upskilling",
+      "confidence": 0.8987829740963565,
+      "relevance": "medium"
+    },
+    {
+      "topic": "machine learning efficiency",
+      "summary": "Targeted insight about machine learning efficiency learned from up-skilling research",
+      "timestamp": "2026-09-12T04:27:11.189278",
+      "source": "targeted_upskilling",
+      "confidence": 0.850048632854203,
+      "relevance": "medium"
+    },
+    {
+      "topic": "autonomous AI systems",
+      "summary": "Targeted insight about autonomous AI systems learned from up-skilling research",
+      "timestamp": "2026-09-12T04:27:14.313777",
+      "source": "targeted_upskilling",
+      "confidence": 0.8258974235187176,
+      "relevance": "medium"
+    },
+    {
+      "topic": "artificial intelligence trends",
+      "summary": "Targeted insight about artificial intelligence trends learned from up-skilling research",
+      "timestamp": "2026-09-12T04:27:18.460397",
+      "source": "targeted_upskilling",
+      "confidence": 0.8427770602356877,
+      "relevance": "medium"
+    },
+    {
+      "topic": "Thai language processing",
+      "summary": "Targeted insight about Thai language processing learned from up-skilling research",
+      "timestamp": "2026-09-12T04:27:21.874122",
+      "source": "targeted_upskilling",
+      "confidence": 0.9123590487760468,
+      "relevance": "medium"
+    },
+    {
+      "topic": "autonomous AI systems",
+      "summary": "Targeted insight about autonomous AI systems learned from up-skilling research",
+      "timestamp": "2026-09-12T04:27:24.889043",
+      "source": "targeted_upskilling",
+      "confidence": 0.9256945878165146,
+      "relevance": "medium"
+    },
+    {
+      "topic": "artificial intelligence trends",
+      "summary": "Targeted insight about artificial intelligence trends learned from up-skilling research",
+      "timestamp": "2026-09-12T04:27:27.896615",
+      "source": "targeted_upskilling",
+      "confidence": 0.8836878154010888,
+      "relevance": "medium"
+    },
+    {
+      "topic": "neural network optimization",
+      "summary": "Targeted insight about neural network optimization learned from up-skilling research",
+      "timestamp": "2026-09-12T04:27:36.911268",
+      "source": "targeted_upskilling",
+      "confidence": 0.9267885294469764,
+      "relevance": "medium"
+    },
+    {
+      "topic": "neural network optimization",
+      "summary": "Targeted insight about neural network optimization learned from up-skilling research",
+      "timestamp": "2026-09-12T04:27:41.361694",
+      "source": "targeted_upskilling",
+      "confidence": 0.9476318249220017,
+      "relevance": "medium"
+    },
+    {
+      "topic": "artificial intelligence trends",
+      "summary": "Targeted insight about artificial intelligence trends learned from up-skilling research",
+      "timestamp": "2026-09-12T04:27:44.498142",
+      "source": "targeted_upskilling",
+      "confidence": 0.9016884803645511,
+      "relevance": "medium"
+    },
+    {
+      "topic": "artificial intelligence trends",
+      "summary": "Targeted insight about artificial intelligence trends learned from up-skilling research",
+      "timestamp": "2026-09-12T04:27:54.622960",
+      "source": "targeted_upskilling",
+      "confidence": 0.8187670873869533,
+      "relevance": "medium"
+    },
+    {
+      "topic": "brain-inspired computing",
+      "summary": "Targeted insight about brain-inspired computing learned from up-skilling research",
+      "timestamp": "2026-09-12T04:27:57.661259",
+      "source": "targeted_upskilling",
+      "confidence": 0.8359236150068371,
+      "relevance": "medium"
+    },
+    {
+      "topic": "cognitive architectures",
+      "summary": "Targeted insight about cognitive architectures learned from up-skilling research",
+      "timestamp": "2026-09-12T04:28:07.010259",
+      "source": "targeted_upskilling",
+      "confidence": 0.8676908711080319,
+      "relevance": "medium"
+    },
+    {
+      "topic": "conversational AI advances",
+      "summary": "Targeted insight about conversational AI advances learned from up-skilling research",
+      "timestamp": "2026-09-12T04:28:21.270059",
+      "source": "targeted_upskilling",
+      "confidence": 0.8480005199555266,
+      "relevance": "medium"
+    },
+    {
+      "topic": "Thai language processing",
+      "summary": "Targeted insight about Thai language processing learned from up-skilling research",
+      "timestamp": "2026-09-12T04:28:29.513117",
+      "source": "targeted_upskilling",
+      "confidence": 0.925612402320913,
+      "relevance": "medium"
+    },
+    {
+      "topic": "autonomous AI systems",
+      "summary": "Targeted insight about autonomous AI systems learned from up-skilling research",
+      "timestamp": "2026-09-12T04:28:39.768363",
+      "source": "targeted_upskilling",
+      "confidence": 0.9269961573481087,
+      "relevance": "medium"
+    },
+    {
+      "topic": "autonomous AI systems",
+      "summary": "Targeted insight about autonomous AI systems learned from up-skilling research",
+      "timestamp": "2026-09-12T04:28:46.060423",
+      "source": "targeted_upskilling",
+      "confidence": 0.9284512674005109,
+      "relevance": "medium"
+    },
+    {
+      "topic": "brain-inspired computing",
+      "summary": "Targeted insight about brain-inspired computing learned from up-skilling research",
+      "timestamp": "2026-09-12T04:29:00.857210",
+      "source": "targeted_upskilling",
+      "confidence": 0.8422691358141509,
+      "relevance": "medium"
+    },
+    {
+      "topic": "memory consolidation techniques",
+      "summary": "Targeted insight about memory consolidation techniques learned from up-skilling research",
+      "timestamp": "2026-09-12T04:29:05.558121",
+      "source": "targeted_upskilling",
+      "confidence": 0.8832122636531136,
+      "relevance": "medium"
+    },
+    {
+      "topic": "Thai language processing",
+      "summary": "Targeted insight about Thai language processing learned from up-skilling research",
+      "timestamp": "2026-09-12T04:29:10.863571",
+      "source": "targeted_upskilling",
+      "confidence": 0.8219899444417222,
+      "relevance": "medium"
+    },
+    {
+      "topic": "edge computing for AI",
+      "summary": "Targeted insight about edge computing for AI learned from up-skilling research",
+      "timestamp": "2026-09-12T04:29:23.558601",
+      "source": "targeted_upskilling",
+      "confidence": 0.853214508268823,
+      "relevance": "medium"
+    },
+    {
+      "topic": "memory consolidation techniques",
+      "summary": "Targeted insight about memory consolidation techniques learned from up-skilling research",
+      "timestamp": "2026-09-12T04:29:27.960586",
+      "source": "targeted_upskilling",
+      "confidence": 0.8781754861895877,
+      "relevance": "medium"
+    },
+    {
+      "topic": "neural network optimization",
+      "summary": "Targeted insight about neural network optimization learned from up-skilling research",
+      "timestamp": "2026-09-12T04:29:34.557124",
+      "source": "targeted_upskilling",
+      "confidence": 0.9347804402034635,
+      "relevance": "medium"
+    },
+    {
+      "topic": "edge computing for AI",
+      "summary": "Targeted insight about edge computing for AI learned from up-skilling research",
+      "timestamp": "2026-09-12T04:29:40.966342",
+      "source": "targeted_upskilling",
+      "confidence": 0.9329243114881228,
+      "relevance": "medium"
+    },
+    {
+      "topic": "autonomous AI systems",
+      "summary": "Targeted insight about autonomous AI systems learned from up-skilling research",
+      "timestamp": "2026-09-12T04:29:45.200916",
+      "source": "targeted_upskilling",
+      "confidence": 0.8778079606250291,
+      "relevance": "medium"
+    },
+    {
+      "topic": "conversational AI advances",
+      "summary": "Targeted insight about conversational AI advances learned from up-skilling research",
+      "timestamp": "2026-09-12T04:29:49.203901",
+      "source": "targeted_upskilling",
+      "confidence": 0.9042135305795277,
+      "relevance": "medium"
+    },
+    {
+      "topic": "neural network optimization",
+      "summary": "Targeted insight about neural network optimization learned from up-skilling research",
+      "timestamp": "2026-09-12T04:29:57.985823",
+      "source": "targeted_upskilling",
+      "confidence": 0.8858307547558292,
+      "relevance": "medium"
+    },
+    {
+      "topic": "Thai language processing",
+      "summary": "Targeted insight about Thai language processing learned from up-skilling research",
+      "timestamp": "2026-09-12T04:30:10.104130",
+      "source": "targeted_upskilling",
+      "confidence": 0.8528601995266684,
+      "relevance": "medium"
+    },
+    {
+      "topic": "artificial intelligence trends",
+      "summary": "Targeted insight about artificial intelligence trends learned from up-skilling research",
+      "timestamp": "2026-09-12T04:30:13.100197",
+      "source": "targeted_upskilling",
+      "confidence": 0.9466058760432291,
+      "relevance": "medium"
+    },
+    {
+      "topic": "brain-inspired computing",
+      "summary": "Targeted insight about brain-inspired computing learned from up-skilling research",
+      "timestamp": "2026-09-12T04:30:16.106192",
+      "source": "targeted_upskilling",
+      "confidence": 0.8450834059452884,
+      "relevance": "medium"
+    },
+    {
+      "topic": "cognitive architectures",
+      "summary": "Targeted insight about cognitive architectures learned from up-skilling research",
+      "timestamp": "2026-09-12T04:30:21.158637",
+      "source": "targeted_upskilling",
+      "confidence": 0.8176456717334715,
+      "relevance": "medium"
+    },
+    {
+      "topic": "Thai language processing",
+      "summary": "Targeted insight about Thai language processing learned from up-skilling research",
+      "timestamp": "2026-09-12T04:30:35.361648",
+      "source": "targeted_upskilling",
+      "confidence": 0.8191678947369435,
+      "relevance": "medium"
+    },
+    {
+      "topic": "artificial intelligence trends",
+      "summary": "Targeted insight about artificial intelligence trends learned from up-skilling research",
+      "timestamp": "2026-09-12T04:30:38.697975",
+      "source": "targeted_upskilling",
+      "confidence": 0.8624295657882511,
+      "relevance": "medium"
+    },
+    {
+      "topic": "brain-inspired computing",
+      "summary": "Targeted insight about brain-inspired computing learned from up-skilling research",
+      "timestamp": "2026-09-12T04:30:44.702284",
+      "source": "targeted_upskilling",
+      "confidence": 0.8454522867609559,
+      "relevance": "medium"
+    },
+    {
+      "topic": "memory consolidation techniques",
+      "summary": "Targeted insight about memory consolidation techniques learned from up-skilling research",
+      "timestamp": "2026-09-12T04:30:53.866321",
+      "source": "targeted_upskilling",
+      "confidence": 0.9090528382039221,
+      "relevance": "medium"
+    },
+    {
+      "topic": "edge computing for AI",
+      "summary": "Targeted insight about edge computing for AI learned from up-skilling research",
+      "timestamp": "2026-09-12T04:31:10.671430",
+      "source": "targeted_upskilling",
+      "confidence": 0.8493178917128886,
+      "relevance": "medium"
+    },
+    {
+      "topic": "artificial intelligence trends",
+      "summary": "Targeted insight about artificial intelligence trends learned from up-skilling research",
+      "timestamp": "2026-09-12T04:31:13.793906",
+      "source": "targeted_upskilling",
+      "confidence": 0.9232265864531616,
+      "relevance": "medium"
+    },
+    {
+      "topic": "autonomous AI systems",
+      "summary": "Targeted insight about autonomous AI systems learned from up-skilling research",
+      "timestamp": "2026-09-12T04:31:16.884752",
+      "source": "targeted_upskilling",
+      "confidence": 0.8754557363173587,
+      "relevance": "medium"
+    },
+    {
+      "topic": "autonomous AI systems",
+      "summary": "Targeted insight about autonomous AI systems learned from up-skilling research",
+      "timestamp": "2026-09-12T04:31:21.003220",
+      "source": "targeted_upskilling",
+      "confidence": 0.898139000196467,
+      "relevance": "medium"
+    },
+    {
+      "topic": "memory consolidation techniques",
+      "summary": "Targeted insight about memory consolidation techniques learned from up-skilling research",
+      "timestamp": "2026-09-12T04:31:24.129548",
+      "source": "targeted_upskilling",
+      "confidence": 0.8111734939646655,
+      "relevance": "medium"
+    },
+    {
+      "topic": "brain-inspired computing",
+      "summary": "Targeted insight about brain-inspired computing learned from up-skilling research",
+      "timestamp": "2026-09-12T04:31:48.260632",
+      "source": "targeted_upskilling",
+      "confidence": 0.9454772342470685,
+      "relevance": "medium"
+    },
+    {
+      "topic": "memory consolidation techniques",
+      "summary": "Targeted insight about memory consolidation techniques learned from up-skilling research",
+      "timestamp": "2026-09-12T04:31:52.405764",
+      "source": "targeted_upskilling",
+      "confidence": 0.8710861807689696,
+      "relevance": "medium"
+    },
+    {
+      "topic": "cognitive architectures",
+      "summary": "Targeted insight about cognitive architectures learned from up-skilling research",
+      "timestamp": "2026-09-12T04:32:01.512779",
+      "source": "targeted_upskilling",
+      "confidence": 0.9107265144275765,
+      "relevance": "medium"
+    },
+    {
+      "topic": "brain-inspired computing",
+      "summary": "Targeted insight about brain-inspired computing learned from up-skilling research",
+      "timestamp": "2026-09-12T04:32:04.857645",
+      "source": "targeted_upskilling",
+      "confidence": 0.8798346064805184,
+      "relevance": "medium"
+    },
+    {
+      "topic": "neural network optimization",
+      "summary": "Targeted insight about neural network optimization learned from up-skilling research",
+      "timestamp": "2026-09-12T04:32:10.863665",
+      "source": "targeted_upskilling",
+      "confidence": 0.8137685986683887,
+      "relevance": "medium"
+    },
+    {
+      "topic": "autonomous AI systems",
+      "summary": "Targeted insight about autonomous AI systems learned from up-skilling research",
+      "timestamp": "2026-09-12T04:32:14.303850",
+      "source": "targeted_upskilling",
+      "confidence": 0.8984952501606775,
+      "relevance": "medium"
+    },
+    {
+      "topic": "conversational AI advances",
+      "summary": "Targeted insight about conversational AI advances learned from up-skilling research",
+      "timestamp": "2026-09-12T04:32:23.300328",
+      "source": "targeted_upskilling",
+      "confidence": 0.8211730432479619,
+      "relevance": "medium"
+    },
+    {
+      "topic": "Thai language processing",
+      "summary": "Targeted insight about Thai language processing learned from up-skilling research",
+      "timestamp": "2026-09-12T04:32:26.586836",
+      "source": "targeted_upskilling",
+      "confidence": 0.8221963859083163,
+      "relevance": "medium"
+    },
+    {
+      "topic": "conversational AI advances",
+      "summary": "Targeted insight about conversational AI advances learned from up-skilling research",
+      "timestamp": "2026-09-12T04:32:29.676183",
+      "source": "targeted_upskilling",
+      "confidence": 0.8956648879012591,
+      "relevance": "medium"
+    },
+    {
+      "topic": "neural network optimization",
+      "summary": "Targeted insight about neural network optimization learned from up-skilling research",
+      "timestamp": "2026-09-12T04:32:35.713276",
+      "source": "targeted_upskilling",
+      "confidence": 0.8282959185047477,
+      "relevance": "medium"
+    },
+    {
+      "topic": "Thai language processing",
+      "summary": "Targeted insight about Thai language processing learned from up-skilling research",
+      "timestamp": "2026-09-12T04:32:40.960745",
+      "source": "targeted_upskilling",
+      "confidence": 0.866126231580853,
+      "relevance": "medium"
+    },
+    {
+      "topic": "conversational AI advances",
+      "summary": "Targeted insight about conversational AI advances learned from up-skilling research",
+      "timestamp": "2026-09-12T04:32:43.977920",
+      "source": "targeted_upskilling",
+      "confidence": 0.864586464817026,
+      "relevance": "medium"
+    },
+    {
+      "topic": "conversational AI advances",
+      "summary": "Targeted insight about conversational AI advances learned from up-skilling research",
+      "timestamp": "2026-09-12T04:32:48.258198",
+      "source": "targeted_upskilling",
+      "confidence": 0.8821625506247529,
+      "relevance": "medium"
+    },
+    {
+      "topic": "edge computing for AI",
+      "summary": "Targeted insight about edge computing for AI learned from up-skilling research",
+      "timestamp": "2026-09-12T04:32:54.765346",
+      "source": "targeted_upskilling",
+      "confidence": 0.9003807527274356,
+      "relevance": "medium"
+    },
+    {
+      "topic": "memory consolidation techniques",
+      "summary": "Targeted insight about memory consolidation techniques learned from up-skilling research",
+      "timestamp": "2026-09-12T04:33:01.462055",
+      "source": "targeted_upskilling",
+      "confidence": 0.8663629934780225,
+      "relevance": "medium"
+    },
+    {
+      "topic": "Thai language processing",
+      "summary": "Targeted insight about Thai language processing learned from up-skilling research",
+      "timestamp": "2026-09-12T04:33:07.557719",
+      "source": "targeted_upskilling",
+      "confidence": 0.8824169990990106,
+      "relevance": "medium"
+    },
+    {
+      "topic": "brain-inspired computing",
+      "summary": "Targeted insight about brain-inspired computing learned from up-skilling research",
+      "timestamp": "2026-09-12T04:33:10.903371",
+      "source": "targeted_upskilling",
+      "confidence": 0.9144194897698057,
+      "relevance": "medium"
+    },
+    {
+      "topic": "edge computing for AI",
+      "summary": "Targeted insight about edge computing for AI learned from up-skilling research",
+      "timestamp": "2026-09-12T04:33:15.017168",
+      "source": "targeted_upskilling",
+      "confidence": 0.9169305657501557,
+      "relevance": "medium"
+    },
+    {
+      "topic": "artificial intelligence trends",
+      "summary": "Targeted insight about artificial intelligence trends learned from up-skilling research",
+      "timestamp": "2026-09-12T04:33:17.979976",
+      "source": "targeted_upskilling",
+      "confidence": 0.8543911260896595,
+      "relevance": "medium"
+    },
+    {
+      "topic": "Thai language processing",
+      "summary": "Targeted insight about Thai language processing learned from up-skilling research",
+      "timestamp": "2026-09-12T04:33:25.031452",
+      "source": "targeted_upskilling",
+      "confidence": 0.875738322691165,
+      "relevance": "medium"
+    },
+    {
+      "topic": "machine learning efficiency",
+      "summary": "Targeted insight about machine learning efficiency learned from up-skilling research",
+      "timestamp": "2026-09-12T04:33:31.058184",
+      "source": "targeted_upskilling",
+      "confidence": 0.8279518250497692,
+      "relevance": "medium"
+    },
+    {
+      "topic": "memory consolidation techniques",
+      "summary": "Targeted insight about memory consolidation techniques learned from up-skilling research",
+      "timestamp": "2026-09-12T04:33:34.176433",
+      "source": "targeted_upskilling",
+      "confidence": 0.9111451494181662,
+      "relevance": "medium"
+    },
+    {
+      "topic": "edge computing for AI",
+      "summary": "Targeted insight about edge computing for AI learned from up-skilling research",
+      "timestamp": "2026-09-12T04:33:37.196232",
+      "source": "targeted_upskilling",
+      "confidence": 0.8916870711174439,
+      "relevance": "medium"
+    },
+    {
+      "topic": "machine learning efficiency",
+      "summary": "Targeted insight about machine learning efficiency learned from up-skilling research",
+      "timestamp": "2026-09-12T04:33:40.289548",
+      "source": "targeted_upskilling",
+      "confidence": 0.872742007965106,
+      "relevance": "medium"
+    },
+    {
+      "topic": "neural network optimization",
+      "summary": "Targeted insight about neural network optimization learned from up-skilling research",
+      "timestamp": "2026-09-12T04:33:53.375812",
+      "source": "targeted_upskilling",
+      "confidence": 0.9272067555219962,
+      "relevance": "medium"
+    },
+    {
+      "topic": "brain-inspired computing",
+      "summary": "Targeted insight about brain-inspired computing learned from up-skilling research",
+      "timestamp": "2026-09-12T04:33:56.558291",
+      "source": "targeted_upskilling",
+      "confidence": 0.853236729556043,
+      "relevance": "medium"
     }
   ],
-  "last_updated": "2026-09-12T04:24:08.203683"
+  "last_updated": "2026-09-12T04:33:56.558325"
 }

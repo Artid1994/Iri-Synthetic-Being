@@ -547,12 +547,7 @@ class AutonomousLoop:
     def _autonomous_tool_research(self, topic: str, description: str) -> int:
         """
         Autonomous tool-assisted research using local capabilities.
-        NO HERMES DELEGATION - Iri synthesizes knowledge independently.
-        
-        Tools available:
-        - Internal knowledge synthesis (built-in templates)
-        - Concept extraction from description
-        - Pattern matching for domain-specific facts
+        REAL TOOLS: Wikipedia, ArXiv, Web Search, Python Sandbox.
         
         Returns: Number of facts synthesized
         """
@@ -571,9 +566,42 @@ class AutonomousLoop:
             return 0
         
         facts_added = 0
-        max_facts = 5  # Top 5 most important facts
+        max_facts = 5
         
-        # Domain-specific knowledge templates (built-in tool)
+        # Try using real tools first
+        try:
+            from tool_registry import ToolRegistry
+            registry = ToolRegistry()
+            
+            # Research with tools
+            tool_facts = registry.research_with_tools(topic, description, max_facts=max_facts)
+            
+            if tool_facts:
+                logger.info(f"[ToolResearch] Retrieved {len(tool_facts)} facts from tools")
+                
+                for i, fact_data in enumerate(tool_facts):
+                    fact = {
+                        "topic": topic,
+                        "summary": f"[{fact_data['source'].title()}] {fact_data['text']}",
+                        "timestamp": time.time() + i * 0.001,
+                        "source": "autonomous_tool_research",
+                        "tool": fact_data['source'],
+                        "confidence": fact_data.get('confidence', 0.85),
+                        "hash": f"{topic_hash}_{i}"
+                    }
+                    self.knowledge_base.setdefault("learned_facts", []).append(fact)
+                    facts_added += 1
+                
+                # Save and return
+                if facts_added > 0:
+                    self._prune_and_save_knowledge_base()
+                    logger.info(f"[ToolResearch] Tool-based research: {facts_added} facts from real sources")
+                    return facts_added
+        
+        except Exception as e:
+            logger.warning(f"[ToolResearch] Tool usage failed: {e}, falling back to templates")
+        
+        # Fallback to built-in templates if tools fail
         # AI/ML domain
         if any(kw in topic.lower() for kw in ['neural', 'llm', 'transformer', 'ai', 'machine learning']):
             facts = [
