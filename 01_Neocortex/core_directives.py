@@ -680,8 +680,8 @@ def test_directives():
     # Test 5: Sensitive Data Detection (DIRECTIVE_8)
     print("\n5. DIRECTIVE_8: Privacy Guard - Sensitive Data Tests")
     sensitive_tests = [
-        ("api_key = 'sk_test_EXAMPLE),
-        ("token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9", True, "Bearer token detected"),
+        ("api_key = 'sk_test_1234567890'", True, "API key detected"),
+        ("token: Bearer eyJhbG...VCJ9", True, "Bearer token detected"),
         ("password = 'mySecretPass123'", True, "Password detected"),
         ("Just normal text here", False, "No sensitive data"),
         ("ghp_REDACTED==1234567890123456789012345678901234567890", True, "GitHub token detected"),
