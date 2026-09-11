@@ -35,3 +35,7 @@ heartbeat.json
 
 # TTF runtime logs
 logs/
+
+# NLP Datasets (large, can be re-downloaded)
+03_Hippocampus/knowledge_base/nlp_thai/lexicon-thai/
+03_Hippocampus/knowledge_base/nlp_thai/thai-ner/
