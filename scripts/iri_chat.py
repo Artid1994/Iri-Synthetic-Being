@@ -66,6 +66,16 @@ class IriChat:
         # Conversational response builder
         self.response_builder = ConversationalResponseBuilder()
         print("✓ Natural response generator initialized")
+        
+        # Inner monologue pipeline
+        from inner_monologue import InnerMonologue
+        self.inner_monologue = InnerMonologue(PROJECT_ROOT)
+        print("✓ Inner monologue reasoning initialized")
+        
+        # Parallel processor
+        from parallel_processor import get_processor
+        self.parallel_processor = get_processor()
+        print("✓ Parallel dual-tasking engine started")
     
     def update_user_activity(self):
         """Update user activity timestamp (DIRECTIVE_2 compliance)."""
@@ -157,7 +167,27 @@ class IriChat:
         """
         Generate Iri's response using Neocortex reasoning and Hippocampus memory.
         Enforces DIRECTIVE_2 (user priority) and DIRECTIVE_4 (identity consistency).
+        Uses inner monologue for transparent reasoning.
         """
+        # Build context for inner monologue
+        context = {
+            'intent_type': intent.type,
+            'conversation_history_len': len(self.conversation_history),
+            'relevant_facts': [],  # Would query Hippocampus here
+            'formality': 'polite',
+            'emotion': 'neutral',
+            'language': 'th',
+            'draft_response': ''
+        }
+        
+        # Execute inner monologue reasoning (in parallel background)
+        def reason_async():
+            self.inner_monologue.reason(user_input, context)
+        
+        # Submit to background thread (non-blocking)
+        self.parallel_processor.submit_background(reason_async, priority=1)
+        
+        # Generate response (foreground - immediate)
         # Handle exit
         if intent.type == 'exit':
             return self._generate_farewell()
