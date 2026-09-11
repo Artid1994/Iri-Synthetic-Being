@@ -26,6 +26,7 @@ try:
     from core_directives import CoreDirectives
     from nlp_thai_lexicon import get_thai_lexicon
     from skills import get_system_inspector, get_text_analyzer
+    from voice_synthesis import speak_aloud  # TTS voice output
 except ImportError as e:
     print(f"⚠️  Import error: {e}")
     print("Make sure you're running from project root with venv activated")
@@ -51,6 +52,18 @@ class IriChat:
         # Session metadata
         self.session_start = datetime.now()
         self.session_id = int(self.session_start.timestamp())
+        
+        # TTS voice output (enabled by default)
+        self.voice_enabled = True
+        try:
+            # Test TTS availability
+            from voice_synthesis import default_synthesizer
+            self.voice_available = True
+            print("✓ Voice synthesis enabled")
+        except Exception as e:
+            self.voice_available = False
+            print(f"⚠️  Voice synthesis unavailable: {e}")
+            print("   Continuing in text-only mode")
     
     def update_user_activity(self):
         """Update user activity timestamp (DIRECTIVE_2 compliance)."""
@@ -404,6 +417,9 @@ class IriChat:
                 
                 # Display response
                 print(f"\n[Iri AE01M] > {response}\n")
+                
+                # Speak response (TTS voice output, non-blocking)
+                self.speak(response)
                 
                 # Save conversation turn to memory
                 self.save_conversation_turn(user_input, response)
