@@ -20,8 +20,6 @@ sys.path.insert(0, str(PROJECT_ROOT / "04_Cerebellum"))
 
 # Import Neocortex and Hippocampus
 try:
-    
-try:
     from executive_core import KnowledgeGraph, Intent
     from memory_store import HippocampusMemory
     from core_directives import CoreDirectives
