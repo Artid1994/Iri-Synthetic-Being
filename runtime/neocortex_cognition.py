@@ -4,7 +4,7 @@ import json
 import urllib.request
 
 
-class OllamaInference:
+class NeocortexCognition:
     def __init__(
         self,
         model: str = "ae01m-qwen-fast",

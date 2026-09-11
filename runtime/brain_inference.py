@@ -4,7 +4,7 @@ from collections.abc import Callable
 import subprocess
 
 
-class LlamaCppInference:
+class BrainInference:
     def __init__(
         self,
         model_path: str,

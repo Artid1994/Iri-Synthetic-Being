@@ -57,7 +57,7 @@ from runtime.memory_brain_persistence import MemoryBrainPersistence
 
 
 class TranscendingRuntime:
-    def __init__(self, cognitive=None, ollama_host=None) -> None:
+    def __init__(self, cognitive=None, brain_host=None) -> None:
         self.system = SystemMonitor()
         self.identity = Identity()
         self.memory = Memory()
@@ -67,9 +67,9 @@ class TranscendingRuntime:
         self.personality = Personality()
         self.self_model = SelfModel()
         self.cognitive = cognitive or create_cognitive_engine(
-            backend="ollama",
+            backend="neocortex",
             model="qwen2.5:0.5b",
-            **({"host": ollama_host} if ollama_host else {}),
+            **({("host"): brain_host} if brain_host else {}),
         )
         self.learning = Learning(self.memory)
         self.learning_practice = LearningPractice()
