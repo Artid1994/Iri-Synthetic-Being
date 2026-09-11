@@ -25,10 +25,10 @@ fi
 # Configure the binding
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/iri-trigger/ name 'Iri Voice Trigger'
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/iri-trigger/ command "$PYTHON_PATH $SCRIPT_PATH"
-gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/iri-trigger/ binding '<Super><Ctrl>m'
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/iri-trigger/ binding '<Super><Alt>i'
 
-echo "✓ Hotkey configured: Super+Ctrl+M"
+echo "✓ Hotkey configured: Super+Alt+I"
 echo "✓ Command: $PYTHON_PATH $SCRIPT_PATH"
 echo ""
-echo "Test the hotkey by pressing Super+Ctrl+M"
+echo "Test the hotkey by pressing Super+Alt+I"
 echo "Check logs with: iri-ctl logs-bg"
