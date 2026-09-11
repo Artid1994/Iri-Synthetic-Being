@@ -116,7 +116,7 @@ class AutonomousLoop:
         self.goal_engine = GoalEngine()
         
         logger.info("[AutonomousLoop] Initialized")
-        logger.info(f"[AutonomousLoop] Knowledge base: {len(self.knowledge_base)} entries")
+        logger.info(f"[AutonomousLoop] Knowledge base: {len(self.knowledge_base.get('learned_facts', []))} facts")
         logger.info(f"[AutonomousLoop] Goal engine: {len(self.goal_engine.list_goals())} goals loaded")
     
     def _load_knowledge_base(self) -> Dict[str, Any]:
