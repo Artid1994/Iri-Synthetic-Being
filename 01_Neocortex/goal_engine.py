@@ -48,6 +48,7 @@ class SubtaskType(Enum):
     WAIT = "wait"
     VERIFICATION = "verification"
     RESEARCH = "research"
+    SYNTHESIS = "synthesis"
 
 
 @dataclass
