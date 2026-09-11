@@ -82,8 +82,8 @@
     ],
     "prerequisites": [],
     "mastery_score": 0.0,
-    "attempts": 1,
-    "last_studied": 1789158743.3220665
+    "attempts": 2,
+    "last_studied": 1789160018.0716789
   },
   "networking_fundamentals": {
     "id": "networking_fundamentals",
@@ -117,8 +117,8 @@
     ],
     "prerequisites": [],
     "mastery_score": 0.0,
-    "attempts": 0,
-    "last_studied": null
+    "attempts": 1,
+    "last_studied": 1789159854.6438546
   },
   "calculus_fundamentals": {
     "id": "calculus_fundamentals",
@@ -134,8 +134,8 @@
     ],
     "prerequisites": [],
     "mastery_score": 0.0,
-    "attempts": 0,
-    "last_studied": null
+    "attempts": 1,
+    "last_studied": 1789159895.9137578
   },
   "probability_statistics": {
     "id": "probability_statistics",
@@ -222,8 +222,8 @@
     ],
     "prerequisites": [],
     "mastery_score": 0.0,
-    "attempts": 0,
-    "last_studied": null
+    "attempts": 1,
+    "last_studied": 1789159936.6056974
   },
   "self_code_mapping": {
     "id": "self_code_mapping",
@@ -239,8 +239,8 @@
     ],
     "prerequisites": [],
     "mastery_score": 0.0,
-    "attempts": 0,
-    "last_studied": null
+    "attempts": 1,
+    "last_studied": 1789159977.4094024
   },
   "llm_architectures": {
     "id": "llm_architectures",

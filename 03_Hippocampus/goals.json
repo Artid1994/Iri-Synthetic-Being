@@ -154,9 +154,9 @@
     "title": "Learn: Operating System Fundamentals",
     "description": "Processes, threads, memory management, file systems\nConcepts: processes, threads, virtual memory, file systems, syscalls",
     "priority": "medium",
-    "status": "in_progress",
+    "status": "completed",
     "created_at": 1789157609.04352,
-    "updated_at": 1789158743.331489,
+    "updated_at": 1789159833.8112528,
     "subtasks": [
       {
         "id": "LEARN_os_basics_1789157609_research",
@@ -176,6 +176,228 @@
         "title": "Self-quiz: Operating System Fundamentals",
         "type": "verification",
         "command": "echo 'Quiz: What is the difference between a process and a thread?\nExpected: A process is an independent program with its own memory space, while a thread is a lightweight execu'",
+        "estimated_duration": 60,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1"
+        ],
+        "result": "Quiz: What is the difference between a process and a thread?\nExpected: A process is an independent program with its own memory space, while a thread is a lightweight execu"
+      }
+    ],
+    "result": null
+  },
+  {
+    "id": "LEARN_linear_algebra_basics_1789159833",
+    "title": "Learn: Linear Algebra Basics",
+    "description": "Vectors, matrices, transformations\nConcepts: vectors, matrices, dot product, transformations",
+    "priority": "medium",
+    "status": "completed",
+    "created_at": 1789159833.8150406,
+    "updated_at": 1789159874.734768,
+    "subtasks": [
+      {
+        "id": "LEARN_linear_algebra_basics_1789159833_research",
+        "title": "Research Linear Algebra Basics",
+        "type": "research",
+        "command": "Research topic: Linear Algebra Basics",
+        "estimated_duration": 300,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1",
+          "DIRECTIVE_2"
+        ],
+        "result": "Research completed on Linear Algebra Basics. Added knowledge to database."
+      },
+      {
+        "id": "LEARN_linear_algebra_basics_1789159833_quiz",
+        "title": "Self-quiz: Linear Algebra Basics",
+        "type": "verification",
+        "command": "echo 'Quiz: Calculate the dot product of vectors [1,2,3] and [4,5,6]\nExpected: 32'",
+        "estimated_duration": 60,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1"
+        ],
+        "result": "Quiz: Calculate the dot product of vectors [1,2,3] and [4,5,6]\nExpected: 32"
+      }
+    ],
+    "result": null
+  },
+  {
+    "id": "LEARN_calculus_fundamentals_1789159864",
+    "title": "Learn: Calculus Fundamentals",
+    "description": "Derivatives, integrals, limits\nConcepts: limits, derivatives, integrals, optimization",
+    "priority": "medium",
+    "status": "completed",
+    "created_at": 1789159864.6748047,
+    "updated_at": 1789159915.9841928,
+    "subtasks": [
+      {
+        "id": "LEARN_calculus_fundamentals_1789159864_research",
+        "title": "Research Calculus Fundamentals",
+        "type": "research",
+        "command": "Research topic: Calculus Fundamentals",
+        "estimated_duration": 300,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1",
+          "DIRECTIVE_2"
+        ],
+        "result": "Research completed on Calculus Fundamentals. Added knowledge to database."
+      },
+      {
+        "id": "LEARN_calculus_fundamentals_1789159864_quiz",
+        "title": "Self-quiz: Calculus Fundamentals",
+        "type": "verification",
+        "command": "echo 'Quiz: What is the derivative of f(x) = x\u00b2 + 2x?\nExpected: 2x + 2'",
+        "estimated_duration": 60,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1"
+        ],
+        "result": "Quiz: What is the derivative of f(x) = x\u00b2 + 2x?\nExpected: 2x + 2"
+      }
+    ],
+    "result": null
+  },
+  {
+    "id": "LEARN_ml_neural_basics_1789159895",
+    "title": "Learn: Machine Learning & Neural Network Basics",
+    "description": "Foundational ML concepts, neural network architecture, training\nConcepts: supervised learning, neural networks, backpropagation, activation functions, loss functions",
+    "priority": "medium",
+    "status": "completed",
+    "created_at": 1789159895.970974,
+    "updated_at": 1789159956.625434,
+    "subtasks": [
+      {
+        "id": "LEARN_ml_neural_basics_1789159895_research",
+        "title": "Research Machine Learning & Neural Network Basics",
+        "type": "research",
+        "command": "Research topic: Machine Learning & Neural Network Basics",
+        "estimated_duration": 300,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1",
+          "DIRECTIVE_2"
+        ],
+        "result": "Research completed on Machine Learning & Neural Network Basics. Added knowledge to database."
+      },
+      {
+        "id": "LEARN_ml_neural_basics_1789159895_quiz",
+        "title": "Self-quiz: Machine Learning & Neural Network Basics",
+        "type": "verification",
+        "command": "echo 'Quiz: Explain the purpose of backpropagation in neural network training\nExpected: Backpropagation calculates gradients of the loss function with respect to weights using the chain ru'",
+        "estimated_duration": 60,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1"
+        ],
+        "result": "Quiz: Explain the purpose of backpropagation in neural network training\nExpected: Backpropagation calculates gradients of the loss function with respect to weights using the chain ru"
+      }
+    ],
+    "result": null
+  },
+  {
+    "id": "LEARN_self_code_mapping_1789159956",
+    "title": "Learn: Self-Code Architecture Mapping",
+    "description": "Understanding own codebase structure, module dependencies, data flow\nConcepts: code introspection, dependency graphs, module relationships, capability inventory",
+    "priority": "medium",
+    "status": "completed",
+    "created_at": 1789159956.6542716,
+    "updated_at": 1789159997.4654338,
+    "subtasks": [
+      {
+        "id": "LEARN_self_code_mapping_1789159956_research",
+        "title": "Research Self-Code Architecture Mapping",
+        "type": "research",
+        "command": "Research topic: Self-Code Architecture Mapping",
+        "estimated_duration": 300,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1",
+          "DIRECTIVE_2"
+        ],
+        "result": "Research completed on Self-Code Architecture Mapping. Added knowledge to database."
+      },
+      {
+        "id": "LEARN_self_code_mapping_1789159956_quiz",
+        "title": "Self-quiz: Self-Code Architecture Mapping",
+        "type": "verification",
+        "command": "echo 'Quiz: List the main functional modules in Iri's architecture (Neocortex, Limbic, etc.)\nExpected: Neocortex (cognition), Visual Cortex (perception), Hippocampus (memory), Cerebellum (motor), Brain S'",
+        "estimated_duration": 60,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1"
+        ],
+        "result": "Exit code: 2\nError: /bin/sh: 1: Syntax error: \"(\" unexpected"
+      }
+    ],
+    "result": null
+  },
+  {
+    "id": "LEARN_os_basics_1789159987",
+    "title": "Learn: Operating System Fundamentals",
+    "description": "Processes, threads, memory management, file systems\nConcepts: processes, threads, virtual memory, file systems, syscalls",
+    "priority": "medium",
+    "status": "completed",
+    "created_at": 1789159987.4193757,
+    "updated_at": 1789160038.100113,
+    "subtasks": [
+      {
+        "id": "LEARN_os_basics_1789159987_research",
+        "title": "Research Operating System Fundamentals",
+        "type": "research",
+        "command": "Research topic: Operating System Fundamentals",
+        "estimated_duration": 300,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1",
+          "DIRECTIVE_2"
+        ],
+        "result": "Research completed on Operating System Fundamentals. Added knowledge to database."
+      },
+      {
+        "id": "LEARN_os_basics_1789159987_quiz",
+        "title": "Self-quiz: Operating System Fundamentals",
+        "type": "verification",
+        "command": "echo 'Quiz: What is the difference between a process and a thread?\nExpected: A process is an independent program with its own memory space, while a thread is a lightweight execu'",
+        "estimated_duration": 60,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1"
+        ],
+        "result": "Quiz: What is the difference between a process and a thread?\nExpected: A process is an independent program with its own memory space, while a thread is a lightweight execu"
+      }
+    ],
+    "result": null
+  },
+  {
+    "id": "LEARN_linear_algebra_basics_1789160018",
+    "title": "Learn: Linear Algebra Basics",
+    "description": "Vectors, matrices, transformations\nConcepts: vectors, matrices, dot product, transformations",
+    "priority": "medium",
+    "status": "pending",
+    "created_at": 1789160018.074177,
+    "updated_at": 1789160018.074177,
+    "subtasks": [
+      {
+        "id": "LEARN_linear_algebra_basics_1789160018_research",
+        "title": "Research Linear Algebra Basics",
+        "type": "research",
+        "command": "Research topic: Linear Algebra Basics",
+        "estimated_duration": 300,
+        "status": "pending",
+        "safety_checks": [
+          "DIRECTIVE_1",
+          "DIRECTIVE_2"
+        ],
+        "result": null
+      },
+      {
+        "id": "LEARN_linear_algebra_basics_1789160018_quiz",
+        "title": "Self-quiz: Linear Algebra Basics",
+        "type": "verification",
+        "command": "echo 'Quiz: Calculate the dot product of vectors [1,2,3] and [4,5,6]\nExpected: 32'",
         "estimated_duration": 60,
         "status": "pending",
         "safety_checks": [
