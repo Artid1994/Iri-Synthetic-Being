@@ -602,7 +602,7 @@ def main():
                         if new_tier == ResourceTier.LOW_LOAD:
                             logger.info("[ResourceMonitor] Low load detected: accelerating cognitive tick to 1s")
                         elif new_tier == ResourceTier.HIGH_LOAD:
-                            logger.info("[ResourceMonitor] High load detected: throttling to 15s (conserve resources)")
+                            logger.info("[ResourceMonitor] High load detected: throttling to 5s (conserve resources)")
                 
                 # Check for state transition
                 new_state = loop._check_state_transition()
@@ -629,23 +629,24 @@ def main():
                 iteration += 1
                 
                 # Adaptive sleep based on resource tier and state
+                # STRICT CONSTRAINT: 1-5 seconds maximum for all ticks (prevents slow learning)
                 if loop.current_resource_tier == ResourceTier.HIGH_LOAD:
-                    # High load: conserve resources
-                    time.sleep(15)
+                    # High load: conserve resources (max 5s)
+                    time.sleep(5)
                 elif loop.current_resource_tier == ResourceTier.LOW_LOAD:
                     # Low load: high-performance mode
                     if loop.context.state == CircadianState.ACTIVE:
                         time.sleep(1)  # Very responsive
                     else:
-                        time.sleep(3)  # Moderate
+                        time.sleep(2)  # Fast background
                 else:
                     # Normal load: standard polling
                     if loop.context.state == CircadianState.ACTIVE:
                         time.sleep(2)
                     elif loop.context.state == CircadianState.IDLE:
-                        time.sleep(5)
+                        time.sleep(3)
                     else:  # SLEEP, RESEARCH, CONSOLIDATE
-                        time.sleep(10)
+                        time.sleep(5)  # Max 5s even in sleep
                 
         except KeyboardInterrupt:
             logger.info("[AutonomousLoop] Interrupted by user")

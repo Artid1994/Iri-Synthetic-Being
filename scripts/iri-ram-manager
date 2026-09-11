@@ -1,0 +1,280 @@
+#!/usr/bin/env python3
+"""
+AE01M RAM Manager - Intelligent memory management and cache clearing
+Monitors system RAM and Swap, performs safe cache clearing when memory is critical.
+"""
+import os
+import sys
+import time
+import argparse
+import subprocess
+from pathlib import Path
+from datetime import datetime
+
+try:
+    import psutil
+    PSUTIL_AVAILABLE = True
+except ImportError:
+    PSUTIL_AVAILABLE = False
+    print("ERROR: psutil not available. Install: pip install psutil")
+    sys.exit(1)
+
+
+class RAMManager:
+    """Intelligent RAM monitoring and management."""
+    
+    def __init__(self, critical_threshold=15, warning_threshold=25, verbose=False):
+        """
+        Initialize RAM manager.
+        
+        Args:
+            critical_threshold: RAM % below which to trigger cache clear
+            warning_threshold: RAM % below which to warn
+            verbose: Enable detailed logging
+        """
+        self.critical_threshold = critical_threshold
+        self.warning_threshold = warning_threshold
+        self.verbose = verbose
+        self.last_clear_time = None
+        self.clear_cooldown = 300  # 5 minutes between clears
+    
+    def get_memory_info(self):
+        """Get current memory statistics."""
+        mem = psutil.virtual_memory()
+        swap = psutil.swap_memory()
+        
+        return {
+            "ram_total_gb": mem.total / (1024**3),
+            "ram_available_gb": mem.available / (1024**3),
+            "ram_used_gb": mem.used / (1024**3),
+            "ram_percent_available": (mem.available / mem.total) * 100,
+            "ram_percent_used": mem.percent,
+            "swap_total_gb": swap.total / (1024**3),
+            "swap_used_gb": swap.used / (1024**3),
+            "swap_percent": swap.percent,
+        }
+    
+    def format_memory_status(self, info):
+        """Format memory info for display."""
+        lines = [
+            f"RAM:  {info['ram_used_gb']:.2f}GB / {info['ram_total_gb']:.2f}GB "
+            f"(Available: {info['ram_percent_available']:.1f}%)",
+            f"Swap: {info['swap_used_gb']:.2f}GB / {info['swap_total_gb']:.2f}GB "
+            f"(Used: {info['swap_percent']:.1f}%)",
+        ]
+        
+        # Add status indicator
+        if info['ram_percent_available'] < self.critical_threshold:
+            lines.append("Status: CRITICAL ⚠️  (Cache clear recommended)")
+        elif info['ram_percent_available'] < self.warning_threshold:
+            lines.append("Status: WARNING ⚠️  (Memory getting low)")
+        else:
+            lines.append("Status: OK ✓")
+        
+        return "\n".join(lines)
+    
+    def should_clear_cache(self, info):
+        """Determine if cache clearing is needed."""
+        # Check if below critical threshold
+        if info['ram_percent_available'] >= self.critical_threshold:
+            return False, "Memory level OK"
+        
+        # Check cooldown
+        if self.last_clear_time:
+            elapsed = (datetime.now() - self.last_clear_time).total_seconds()
+            if elapsed < self.clear_cooldown:
+                remaining = int(self.clear_cooldown - elapsed)
+                return False, f"Cooldown active ({remaining}s remaining)"
+        
+        return True, "Critical memory level"
+    
+    def clear_cache(self):
+        """
+        Safely clear system caches.
+        Requires sudo privileges for /proc/sys/vm/drop_caches.
+        
+        Returns:
+            (success, message)
+        """
+        try:
+            # Sync first to flush pending writes
+            subprocess.run(['sync'], check=True, timeout=10)
+            
+            if self.verbose:
+                print("[RAM Manager] Synced filesystem buffers")
+            
+            # Drop caches: 3 = pagecache + dentries + inodes
+            result = subprocess.run(
+                ['sudo', 'tee', '/proc/sys/vm/drop_caches'],
+                input=b'3',
+                capture_output=True,
+                timeout=10
+            )
+            
+            if result.returncode == 0:
+                self.last_clear_time = datetime.now()
+                return True, "Cache cleared successfully"
+            else:
+                error = result.stderr.decode('utf-8', errors='ignore').strip()
+                return False, f"Failed to clear cache: {error}"
+        
+        except subprocess.TimeoutExpired:
+            return False, "Cache clear operation timed out"
+        except FileNotFoundError:
+            return False, "Required commands (sync/sudo) not available"
+        except Exception as e:
+            return False, f"Error clearing cache: {e}"
+    
+    def monitor_loop(self, interval=10, auto_clear=False):
+        """
+        Continuous monitoring loop.
+        
+        Args:
+            interval: Seconds between checks
+            auto_clear: Automatically clear cache when critical
+        """
+        print(f"[RAM Manager] Starting continuous monitoring (interval: {interval}s)")
+        print(f"[RAM Manager] Auto-clear: {'ENABLED' if auto_clear else 'DISABLED'}")
+        print(f"[RAM Manager] Critical threshold: {self.critical_threshold}%\n")
+        
+        try:
+            iteration = 0
+            while True:
+                iteration += 1
+                info = self.get_memory_info()
+                
+                # Print status
+                timestamp = datetime.now().strftime("%H:%M:%S")
+                print(f"\n[{timestamp}] Memory Status (Check #{iteration})")
+                print("-" * 60)
+                print(self.format_memory_status(info))
+                
+                # Check if cache clear needed
+                if auto_clear:
+                    should_clear, reason = self.should_clear_cache(info)
+                    
+                    if should_clear:
+                        print(f"\n[RAM Manager] Triggering cache clear: {reason}")
+                        success, message = self.clear_cache()
+                        
+                        if success:
+                            print(f"[RAM Manager] ✓ {message}")
+                            # Re-check memory after clear
+                            time.sleep(2)
+                            new_info = self.get_memory_info()
+                            freed_gb = new_info['ram_available_gb'] - info['ram_available_gb']
+                            print(f"[RAM Manager] Freed: {freed_gb:.2f}GB")
+                        else:
+                            print(f"[RAM Manager] ✗ {message}")
+                    elif self.verbose and reason != "Memory level OK":
+                        print(f"[RAM Manager] {reason}")
+                
+                print("-" * 60)
+                time.sleep(interval)
+        
+        except KeyboardInterrupt:
+            print("\n[RAM Manager] Monitoring stopped by user")
+
+
+def main():
+    parser = argparse.ArgumentParser(
+        description="AE01M RAM Manager - Monitor and manage system memory"
+    )
+    
+    subparsers = parser.add_subparsers(dest='command', help='Commands')
+    
+    # Status command
+    status_parser = subparsers.add_parser('status', help='Show current RAM status')
+    
+    # Monitor command
+    monitor_parser = subparsers.add_parser('monitor', help='Continuous memory monitoring')
+    monitor_parser.add_argument(
+        '--interval', type=int, default=10,
+        help='Check interval in seconds (default: 10)'
+    )
+    monitor_parser.add_argument(
+        '--auto-clear', action='store_true',
+        help='Automatically clear cache when critical'
+    )
+    
+    # Clear command
+    clear_parser = subparsers.add_parser('clear', help='Clear system caches now')
+    clear_parser.add_argument(
+        '--force', action='store_true',
+        help='Skip threshold check'
+    )
+    
+    # Threshold settings
+    parser.add_argument(
+        '--critical', type=int, default=15,
+        help='Critical threshold %% (default: 15)'
+    )
+    parser.add_argument(
+        '--warning', type=int, default=25,
+        help='Warning threshold %% (default: 25)'
+    )
+    parser.add_argument(
+        '-v', '--verbose', action='store_true',
+        help='Verbose output'
+    )
+    
+    args = parser.parse_args()
+    
+    # Show help if no command
+    if not args.command:
+        parser.print_help()
+        sys.exit(0)
+    
+    # Initialize manager
+    manager = RAMManager(
+        critical_threshold=args.critical,
+        warning_threshold=args.warning,
+        verbose=args.verbose
+    )
+    
+    # Execute command
+    if args.command == 'status':
+        info = manager.get_memory_info()
+        print(manager.format_memory_status(info))
+    
+    elif args.command == 'monitor':
+        manager.monitor_loop(
+            interval=args.interval,
+            auto_clear=args.auto_clear
+        )
+    
+    elif args.command == 'clear':
+        info = manager.get_memory_info()
+        
+        if not args.force:
+            should_clear, reason = manager.should_clear_cache(info)
+            
+            if not should_clear:
+                print(f"Cache clear not recommended: {reason}")
+                print(f"Current available RAM: {info['ram_percent_available']:.1f}%")
+                print("Use --force to clear anyway")
+                sys.exit(1)
+        
+        print("Clearing system caches...")
+        print("(This requires sudo privileges)")
+        
+        success, message = manager.clear_cache()
+        
+        if success:
+            print(f"✓ {message}")
+            
+            # Show before/after
+            time.sleep(2)
+            new_info = manager.get_memory_info()
+            freed_gb = new_info['ram_available_gb'] - info['ram_available_gb']
+            
+            print(f"\nBefore: {info['ram_available_gb']:.2f}GB available")
+            print(f"After:  {new_info['ram_available_gb']:.2f}GB available")
+            print(f"Freed:  {freed_gb:.2f}GB")
+        else:
+            print(f"✗ {message}")
+            sys.exit(1)
+
+
+if __name__ == "__main__":
+    main()
