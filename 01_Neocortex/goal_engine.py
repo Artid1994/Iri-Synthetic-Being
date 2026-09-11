@@ -49,6 +49,7 @@ class SubtaskType(Enum):
     VERIFICATION = "verification"
     RESEARCH = "research"
     SYNTHESIS = "synthesis"
+    DELEGATE_TO_HERMES = "delegate_to_hermes"  # Deep knowledge synthesis via Hermes
 
 
 @dataclass

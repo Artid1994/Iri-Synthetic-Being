@@ -376,7 +376,7 @@
     "title": "Learn: Linear Algebra Basics",
     "description": "Vectors, matrices, transformations\nConcepts: vectors, matrices, dot product, transformations",
     "priority": "medium",
-    "status": "pending",
+    "status": "in_progress",
     "created_at": 1789160018.074177,
     "updated_at": 1789160018.074177,
     "subtasks": [
