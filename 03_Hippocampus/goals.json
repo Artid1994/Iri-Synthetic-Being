@@ -1073,5 +1073,79 @@
       }
     ],
     "result": null
+  },
+  {
+    "id": "LEARN_calculus_fundamentals_1789165434",
+    "title": "Learn: Calculus Fundamentals",
+    "description": "Derivatives, integrals, limits\nConcepts: limits, derivatives, integrals, optimization",
+    "priority": "medium",
+    "status": "completed",
+    "created_at": 1789165434.8270617,
+    "updated_at": 1789165508.1573095,
+    "subtasks": [
+      {
+        "id": "LEARN_calculus_fundamentals_1789165434_research",
+        "title": "Research Calculus Fundamentals",
+        "type": "research",
+        "command": "Research topic: Calculus Fundamentals",
+        "estimated_duration": 300,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1",
+          "DIRECTIVE_2"
+        ],
+        "result": "Basic research completed on Calculus Fundamentals. Added knowledge to database."
+      },
+      {
+        "id": "LEARN_calculus_fundamentals_1789165434_quiz",
+        "title": "Self-quiz: Calculus Fundamentals",
+        "type": "verification",
+        "command": "echo 'Quiz: What is the derivative of f(x) = x\u00b2 + 2x?\nExpected: 2x + 2'",
+        "estimated_duration": 60,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1"
+        ],
+        "result": "Quiz: What is the derivative of f(x) = x\u00b2 + 2x?\nExpected: 2x + 2"
+      }
+    ],
+    "result": null
+  },
+  {
+    "id": "LEARN_calculus_fundamentals_1789165508",
+    "title": "Learn: Calculus Fundamentals",
+    "description": "Derivatives, integrals, limits\nConcepts: limits, derivatives, integrals, optimization",
+    "priority": "medium",
+    "status": "in_progress",
+    "created_at": 1789165508.1619384,
+    "updated_at": 1789165602.5651536,
+    "subtasks": [
+      {
+        "id": "LEARN_calculus_fundamentals_1789165508_research",
+        "title": "Research Calculus Fundamentals",
+        "type": "research",
+        "command": "Research topic: Calculus Fundamentals",
+        "estimated_duration": 300,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1",
+          "DIRECTIVE_2"
+        ],
+        "result": "Basic research completed on Calculus Fundamentals. Added knowledge to database."
+      },
+      {
+        "id": "LEARN_calculus_fundamentals_1789165508_quiz",
+        "title": "Self-quiz: Calculus Fundamentals",
+        "type": "verification",
+        "command": "echo 'Quiz: What is the derivative of f(x) = x\u00b2 + 2x?\nExpected: 2x + 2'",
+        "estimated_duration": 60,
+        "status": "pending",
+        "safety_checks": [
+          "DIRECTIVE_1"
+        ],
+        "result": null
+      }
+    ],
+    "result": null
   }
 ]
