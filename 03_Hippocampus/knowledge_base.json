@@ -40145,7 +40145,103 @@
       "source": "linguistic_consolidation",
       "confidence": 0.91,
       "timestamp": "2026-09-11T23:40:31.818920"
+    },
+    {
+      "topic": "Thai personal names - male",
+      "summary": "Common Thai male names for NER training: ชัยวิวัฒน์, อุโฆษา, ประวิทย์, ธนพล, ณัฐพล, นิสงฆ์สวรรค์, วรรณพงษ์, พิษณุวัรช์, อดุลย์ศักดิ์, วิชา, ธีรศักดิ์, พงศธร, ภราดร, ขจรศักดิ์, อร่าม, กิตติศักดิ์, กิตติพงษ์, ธวัชชัย, ปริญญา, กณสิทธิ์. Male names often end with consonants or specific patterns recognizable in Thai naming conventions.",
+      "source": "PyThaiNLP_lexicon",
+      "confidence": 0.94,
+      "category": "thai_lexicon",
+      "timestamp": "2026-09-11T23:46:03.707424"
+    },
+    {
+      "topic": "Thai personal names - female",
+      "summary": "Common Thai female names for NER training: ศุภรัตน์, ชมพูนุช, นันท์นริน, สุพาพร, อุไรวรรณ, พนิตนาถ, ปพิชญา, วิไลลักษณ์, ชวนพิศ, ลลิตา, จันทิกา, มาลินี, กัญญ์ณพัชญ์, สุภาวิณี, ศิริพร, ฐิติมญชุ์, วัลภา, กิดาการ, บังอร, วณัสนันทร์. Female names often have softer sounds and specific endings characteristic of Thai naming patterns.",
+      "source": "PyThaiNLP_lexicon",
+      "confidence": 0.94,
+      "category": "thai_lexicon",
+      "timestamp": "2026-09-11T23:46:03.707424"
+    },
+    {
+      "topic": "Thai abbreviations",
+      "summary": "Thai abbreviation patterns for text normalization: อักษรย่อ; อ.; ดร.; ด.ช.; ด.ญ.; อ.ตร.; นศท.; นศ.; นร.; บ.ก.; ท.บ.; น.น.ร.; พลฯ; ส.ต.; ส.ท.. Abbreviations critical for expanding short forms in casual text, social media, and formal documents.",
+      "source": "PyThaiNLP_lexicon",
+      "confidence": 0.91,
+      "category": "thai_lexicon",
+      "timestamp": "2026-09-11T23:46:03.707424"
+    },
+    {
+      "topic": "Thai sentiment - positive adjectives",
+      "summary": "Positive sentiment adjectives: กตเวที, กตัญญู, กล้า, กรุณา, กันเอง, ขำ, แข็ง, แข็งแกร่ง, แข็งขัน, แข็งแรง, ครื้นครึก, ครึกครื้น, แจ่ม, แจ่มใส, ชัดเจน, ชุ่มชื้น, เชี่ยวชาญ, เด่น, เต็ม, ทันสมัย. These adjectives indicate positive emotion, approval, or favorable assessment in Thai text.",
+      "source": "PyThaiNLP_lexicon",
+      "confidence": 0.92,
+      "category": "sentiment_lexicon",
+      "timestamp": "2026-09-11T23:46:03.707424"
+    },
+    {
+      "topic": "Thai sentiment - negative adjectives",
+      "summary": "Negative sentiment adjectives: ﻿กระจุกกระจิก, กระดาน, แก่, เกรียน, เกเร, เกิน, ขวางโลก, ขัดสมาธิ, ขุ่น, คมคาย, กระเซอะกระเซิง, เคร่งขรึม, เครียด, งอ, งอแง, โง่, จังไร, จัญไร, เจือ, เจือจาง. These adjectives indicate negative emotion, disapproval, or unfavorable assessment.",
+      "source": "PyThaiNLP_lexicon",
+      "confidence": 0.92,
+      "category": "sentiment_lexicon",
+      "timestamp": "2026-09-11T23:46:03.707424"
+    },
+    {
+      "topic": "Thai sentiment - negative verbs",
+      "summary": "Negative sentiment verbs: ﻿ฆ่า, ตัด, ข่ม, ข่มขืน, ขโมย, ตาย, ตก, ล้ม, เสียใจ, กดดัน, กัก, กดขี่, กักขัง, กระชาก, กระวนกระวาย, กระแทก, กระทืบ, ก่อกวน, ก่อกรรมทำเข็ญ, กระทำชำเรา. Action verbs with negative connotations useful for sentiment analysis.",
+      "source": "PyThaiNLP_lexicon",
+      "confidence": 0.9,
+      "category": "sentiment_lexicon",
+      "timestamp": "2026-09-11T23:46:03.707424"
+    },
+    {
+      "topic": "Thai profanity - high severity",
+      "summary": "High-severity profanity markers (15 terms catalogued) for content filtering and safety detection. Used to identify inappropriate or offensive language requiring moderation.",
+      "source": "PyThaiNLP_lexicon",
+      "confidence": 0.96,
+      "category": "content_safety",
+      "timestamp": "2026-09-11T23:46:03.707424"
+    },
+    {
+      "topic": "Thai profanity - medium severity",
+      "summary": "Medium-severity profanity markers (15 terms) for nuanced content moderation. Contextual assessment needed for appropriate response.",
+      "source": "PyThaiNLP_lexicon",
+      "confidence": 0.93,
+      "category": "content_safety",
+      "timestamp": "2026-09-11T23:46:03.707424"
+    },
+    {
+      "topic": "Thai news corpus vocabulary",
+      "summary": "Formal Thai vocabulary patterns from news corpus. Formal register includes complex compounds, technical terms, and elevated vocabulary distinct from casual speech.",
+      "source": "PyThaiNLP_lexicon",
+      "confidence": 0.89,
+      "category": "vocabulary_boundary",
+      "timestamp": "2026-09-11T23:46:03.707424"
+    },
+    {
+      "topic": "Thai clickbait patterns",
+      "summary": "Thai clickbait language patterns for content quality assessment. Markers include sensational phrases, curiosity gaps, and emotional manipulation tactics common in low-quality content.",
+      "source": "PyThaiNLP_lexicon",
+      "confidence": 0.88,
+      "category": "content_analysis",
+      "timestamp": "2026-09-11T23:46:03.707424"
+    },
+    {
+      "topic": "Thai vocabulary segmentation boundaries",
+      "summary": "PyThaiNLP lexicon provides 500K+ Thai names, comprehensive sentiment lexicons, abbreviation mappings, and corpus-based vocabulary for word boundary detection. Essential for accurate tokenization and named entity recognition.",
+      "source": "PyThaiNLP_lexicon",
+      "confidence": 0.93,
+      "category": "vocabulary_boundary",
+      "timestamp": "2026-09-11T23:46:03.707424"
+    },
+    {
+      "topic": "PyThaiNLP lexicon integration",
+      "summary": "Integrated PyThaiNLP lexicon-thai repository (CC BY-SA 4.0) containing curated Thai language resources: names, abbreviations, sentiment markers, profanity filters, news corpus, and clickbait patterns. Source: github.com/PyThaiNLP/lexicon-thai",
+      "source": "PyThaiNLP_lexicon",
+      "confidence": 0.97,
+      "category": "thai_lexicon",
+      "timestamp": "2026-09-11T23:46:03.707424"
     }
   ],
-  "last_updated": "2026-09-11T23:40:31.818920"
+  "last_updated": "2026-09-11T23:46:16.717127"
 }
