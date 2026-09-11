@@ -33,11 +33,11 @@ def log_event(message: str):
         pass
 
 def play_audio_feedback():
-    """Play audio feedback (chime or beep)."""
+    """Play audio feedback using ffplay."""
     try:
-        # Try system sound
+        # Try ffplay with system sound
         subprocess.run(
-            ["paplay", "/usr/share/sounds/freedesktop/stereo/message.oga"],
+            ["ffplay", "-nodisp", "-autoexit", "-loglevel", "error", "/usr/share/sounds/freedesktop/stereo/message.oga"],
             check=False,
             timeout=2,
             stdout=subprocess.DEVNULL,
@@ -48,38 +48,33 @@ def play_audio_feedback():
         print("\a", flush=True)
 
 def speak_greeting():
-    """Speak Thai greeting."""
+    """Speak Thai greeting using 04_Cerebellum voice synthesizer."""
     greeting = "ครับเจ้านาย ผมไอริพร้อมรับคำสั่งครับ"
     
     try:
-        # Try Edge-TTS first
-        subprocess.run(
-            ["edge-tts", "--voice", "th-TH-NiwatNeural", "--text", greeting, "--write-media", "/tmp/iri_greeting.mp3"],
-            check=False,
-            timeout=5,
-            stdout=subprocess.DEVNULL,
-            stderr=subprocess.DEVNULL
-        )
-        subprocess.run(
-            ["paplay", "/tmp/iri_greeting.mp3"],
-            check=False,
-            timeout=3,
-            stdout=subprocess.DEVNULL,
-            stderr=subprocess.DEVNULL
-        )
-        Path("/tmp/iri_greeting.mp3").unlink(missing_ok=True)
-    except:
-        # Fallback to espeak-ng
-        try:
+        # Use 04_Cerebellum voice synthesizer
+        sys.path.insert(0, str(PROJECT_ROOT / "04_Cerebellum"))
+        from voice_synthesis import VoiceSynthesizer
+        
+        vs = VoiceSynthesizer()
+        output_path = "/tmp/iri_greeting.mp3"
+        
+        # Synthesize
+        result = vs.synthesize(greeting, output_path=output_path)
+        
+        if result:
+            # Play with ffplay
             subprocess.run(
-                ["espeak-ng", "-v", "th", greeting],
+                ["ffplay", "-nodisp", "-autoexit", "-loglevel", "error", result],
                 check=False,
-                timeout=3,
+                timeout=10,
                 stdout=subprocess.DEVNULL,
                 stderr=subprocess.DEVNULL
             )
-        except:
-            pass
+            Path(output_path).unlink(missing_ok=True)
+    except:
+        # Fallback to terminal bell
+        print("\a", flush=True)
 
 def show_notification(title: str, message: str):
     """Show desktop notification."""
