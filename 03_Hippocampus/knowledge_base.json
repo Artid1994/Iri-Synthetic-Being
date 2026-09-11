@@ -48310,7 +48310,55 @@
       "source": "targeted_upskilling",
       "confidence": 0.8701587631072212,
       "relevance": "medium"
+    },
+    {
+      "topic": "memory consolidation techniques",
+      "summary": "Targeted insight about memory consolidation techniques learned from up-skilling research",
+      "timestamp": "2026-09-12T05:14:50.614748",
+      "source": "targeted_upskilling",
+      "confidence": 0.8181597796639143,
+      "relevance": "medium"
+    },
+    {
+      "topic": "artificial intelligence trends",
+      "summary": "Targeted insight about artificial intelligence trends learned from up-skilling research",
+      "timestamp": "2026-09-12T05:14:54.322818",
+      "source": "targeted_upskilling",
+      "confidence": 0.9355938095474502,
+      "relevance": "medium"
+    },
+    {
+      "topic": "cognitive architectures",
+      "summary": "Targeted insight about cognitive architectures learned from up-skilling research",
+      "timestamp": "2026-09-12T05:14:57.086026",
+      "source": "targeted_upskilling",
+      "confidence": 0.8474943227454582,
+      "relevance": "medium"
+    },
+    {
+      "topic": "cognitive architectures",
+      "summary": "Targeted insight about cognitive architectures learned from up-skilling research",
+      "timestamp": "2026-09-12T05:15:02.825006",
+      "source": "targeted_upskilling",
+      "confidence": 0.9099210407613483,
+      "relevance": "medium"
+    },
+    {
+      "topic": "memory consolidation techniques",
+      "summary": "Targeted insight about memory consolidation techniques learned from up-skilling research",
+      "timestamp": "2026-09-12T05:15:12.132670",
+      "source": "targeted_upskilling",
+      "confidence": 0.8705774945067752,
+      "relevance": "medium"
+    },
+    {
+      "topic": "brain-inspired computing",
+      "summary": "Targeted insight about brain-inspired computing learned from up-skilling research",
+      "timestamp": "2026-09-12T05:15:17.621467",
+      "source": "targeted_upskilling",
+      "confidence": 0.8327228587343657,
+      "relevance": "medium"
     }
   ],
-  "last_updated": "2026-09-12T05:14:47.922354"
+  "last_updated": "2026-09-12T05:15:17.621567"
 }
