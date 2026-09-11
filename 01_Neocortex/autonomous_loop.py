@@ -37,6 +37,9 @@ sys.path.insert(0, str(PROJECT_ROOT / "01_Neocortex"))
 # Import goal engine for autonomous task execution
 from goal_engine import GoalEngine, GoalStatus, SubtaskType
 
+# Import curriculum manager for knowledge gap driven learning
+from curriculum_manager import CurriculumManager
+
 # Setup unbuffered logging with immediate flush
 log_handler = logging.StreamHandler(sys.stdout)
 log_handler.setLevel(logging.INFO)
@@ -130,9 +133,13 @@ class AutonomousLoop:
         # Initialize goal engine for autonomous task execution
         self.goal_engine = GoalEngine()
         
+        # Initialize curriculum manager for knowledge-gap driven learning
+        self.curriculum_manager = CurriculumManager()
+        
         logger.info("[AutonomousLoop] Initialized")
         logger.info(f"[AutonomousLoop] Knowledge base: {len(self.knowledge_base.get('learned_facts', []))} facts")
         logger.info(f"[AutonomousLoop] Goal engine: {len(self.goal_engine.list_goals())} goals loaded")
+        logger.info(f"[AutonomousLoop] Curriculum: {len(self.curriculum_manager.topics)} topics tracked")
         
         # Resource monitoring state
         self.current_resource_tier = ResourceTier.NORMAL
@@ -493,6 +500,88 @@ class AutonomousLoop:
         """Execute verification subtask (similar to terminal)."""
         return self._execute_terminal_subtask(subtask)
     
+    def _check_curriculum_gaps(self):
+        """
+        Proactively identify curriculum knowledge gaps and queue learning tasks.
+        Integrates CurriculumManager into autonomous loop for systematic learning.
+        """
+        logger.info("[Curriculum] Checking for knowledge gaps...")
+        
+        # Fetch next unmastered topic from curriculum
+        next_topic = self.curriculum_manager.fetch_next_topic()
+        
+        if not next_topic:
+            logger.info("[Curriculum] All topics mastered or prerequisites not met")
+            return
+        
+        logger.info(f"[Curriculum] Gap identified: {next_topic.title}")
+        logger.info(f"[Curriculum] Domain: {next_topic.domain.value}, Level: {next_topic.level.value}")
+        logger.info(f"[Curriculum] Current mastery: {next_topic.mastery_score:.0%}")
+        
+        # Check if learning goal already exists for this topic
+        existing_goals = self.goal_engine.list_goals()
+        topic_already_queued = any(
+            next_topic.id in goal.title.lower() or next_topic.title.lower() in goal.title.lower()
+            for goal in existing_goals
+            if goal.status in [GoalStatus.PENDING, GoalStatus.IN_PROGRESS]
+        )
+        
+        if topic_already_queued:
+            logger.info(f"[Curriculum] Learning goal already queued for {next_topic.title}")
+            return
+        
+        # Generate self-quiz for this topic
+        question, expected_answer, is_code = self.curriculum_manager.generate_self_quiz(next_topic)
+        
+        logger.info(f"[Curriculum] Generated quiz: {question[:80]}...")
+        
+        # Create learning goal from curriculum gap
+        from goal_engine import Goal, GoalPriority, Subtask
+        
+        learning_goal = Goal(
+            id=f"LEARN_{next_topic.id}_{int(time.time())}",
+            title=f"Learn: {next_topic.title}",
+            description=f"{next_topic.description}\nConcepts: {', '.join(next_topic.concepts)}",
+            priority=GoalPriority.MEDIUM,
+            status=GoalStatus.PENDING,
+            created_at=time.time(),
+            updated_at=time.time(),
+            subtasks=[]
+        )
+        
+        # Add research subtask
+        research_subtask = Subtask(
+            id=f"{learning_goal.id}_research",
+            title=f"Research {next_topic.title}",
+            type=SubtaskType.RESEARCH,
+            command=f"Research topic: {next_topic.title}",
+            estimated_duration=300,  # 5 minutes
+            status=GoalStatus.PENDING,
+            safety_checks=["DIRECTIVE_1", "DIRECTIVE_2"],
+            result=None
+        )
+        learning_goal.subtasks.append(research_subtask)
+        
+        # Add self-assessment subtask
+        quiz_subtask = Subtask(
+            id=f"{learning_goal.id}_quiz",
+            title=f"Self-quiz: {next_topic.title[:50]}",
+            type=SubtaskType.VERIFICATION,
+            command=f"echo 'Quiz: {question[:100]}\nExpected: {expected_answer[:100]}'",
+            estimated_duration=60,
+            status=GoalStatus.PENDING,
+            safety_checks=["DIRECTIVE_1"],
+            result=None
+        )
+        learning_goal.subtasks.append(quiz_subtask)
+        
+        # Queue learning goal
+        self.goal_engine.goals.append(learning_goal)
+        self.goal_engine.save_goals()
+        
+        logger.info(f"[Curriculum] ✓ Queued learning goal: {learning_goal.title}")
+        logger.info(f"[Curriculum] Goal ID: {learning_goal.id}, Priority: {learning_goal.priority.value}")
+    
     def mark_interaction(self):
         """Mark user interaction (resets idle timer)."""
         self.context.last_interaction = datetime.now()
@@ -593,60 +682,32 @@ def main():
         try:
             iteration = 0
             while True:
-                # Check resource tier every 20 iterations (~40-200s depending on tier)
-                if iteration % 20 == 0:
-                    new_tier = loop._check_resource_tier()
-                    if new_tier != loop.current_resource_tier:
-                        loop.current_resource_tier = new_tier
-                        logger.info(f"[ResourceMonitor] Tier change: {new_tier.value}")
-                        if new_tier == ResourceTier.LOW_LOAD:
-                            logger.info("[ResourceMonitor] Low load detected: accelerating cognitive tick to 1s")
-                        elif new_tier == ResourceTier.HIGH_LOAD:
-                            logger.info("[ResourceMonitor] High load detected: throttling to 5s (conserve resources)")
-                
                 # Check for state transition
                 new_state = loop._check_state_transition()
                 if new_state:
                     loop._transition_state(new_state)
                 
-                # Log current state periodically (every 30 iterations = ~30-450s)
-                if iteration % 30 == 0:
+                # Log current state periodically (every 60 iterations = ~60s)
+                if iteration % 60 == 0:
                     current_state = loop.context.state
                     time_in_state = (datetime.now() - loop.context.last_state_change).total_seconds()
-                    logger.info(f"[Status] State: {current_state.value.upper()} (T+{time_in_state:.0f}s) | Tier: {loop.current_resource_tier.value}")
+                    logger.info(f"[Status] State: {current_state.value.upper()} (T+{time_in_state:.0f}s)")
                 
-                # Execute goal processing cycle (frequency depends on resource tier)
-                if loop.context.state == CircadianState.ACTIVE:
-                    # High-performance mode: process goals more frequently
-                    goal_check_interval = 5 if loop.current_resource_tier == ResourceTier.LOW_LOAD else 10
-                    
-                    # Process pending goals
+                # Execute goal processing cycle every 10 iterations (~10s)
+                if loop.context.state == CircadianState.ACTIVE and iteration % 10 == 0:
                     pending_goals = [g for g in loop.goal_engine.list_goals() if g.status == GoalStatus.PENDING]
-                    if pending_goals and iteration % goal_check_interval == 0:
+                    if pending_goals:
                         logger.info(f"[Goals] {len(pending_goals)} pending goals in queue")
-                        # Goals will be processed by goal_engine's own evaluation
+                
+                # Curriculum-driven learning integration (every 30 iterations = ~30s)
+                if iteration % 30 == 0 and loop.context.state in [CircadianState.IDLE, CircadianState.RESEARCH]:
+                    loop._check_curriculum_gaps()
                 
                 iteration += 1
                 
-                # Adaptive sleep based on resource tier and state
-                # STRICT CONSTRAINT: 1-5 seconds maximum for all ticks (prevents slow learning)
-                if loop.current_resource_tier == ResourceTier.HIGH_LOAD:
-                    # High load: conserve resources (max 5s)
-                    time.sleep(5)
-                elif loop.current_resource_tier == ResourceTier.LOW_LOAD:
-                    # Low load: high-performance mode
-                    if loop.context.state == CircadianState.ACTIVE:
-                        time.sleep(1)  # Very responsive
-                    else:
-                        time.sleep(2)  # Fast background
-                else:
-                    # Normal load: standard polling
-                    if loop.context.state == CircadianState.ACTIVE:
-                        time.sleep(2)
-                    elif loop.context.state == CircadianState.IDLE:
-                        time.sleep(3)
-                    else:  # SLEEP, RESEARCH, CONSOLIDATE
-                        time.sleep(5)  # Max 5s even in sleep
+                # CONSTANT 1-SECOND TICK - No dynamic throttling
+                # Ensures consistent cognitive cycle rate for learning
+                time.sleep(1.0)
                 
         except KeyboardInterrupt:
             logger.info("[AutonomousLoop] Interrupted by user")
