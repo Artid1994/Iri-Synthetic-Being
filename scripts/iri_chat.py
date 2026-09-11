@@ -76,7 +76,25 @@ class IriChat:
         # Use Thai lexicon for advanced entity extraction
         thai_intent = self.thai_lexicon.extract_intent(user_input)
         
-        # Check for skill commands first (highest priority)
+        # Check for system inspection keywords (highest priority)
+        system_keywords = ['ตรวจสอบ', 'สถานะ', 'ระบบ', 'รายงาน', 'วิเคราะห์', 'ตรวจสภาพ', 'เครื่อง']
+        if any(keyword in user_input for keyword in system_keywords):
+            # Use text analyzer to extract precise skill command
+            skill_command = self.text_analyzer.extract_skill_commands(user_input)
+            if skill_command:
+                return Intent(
+                    type='skill',
+                    confidence=1.0,
+                    entities=[skill_command['skill'], skill_command['method']]
+                )
+            # Fallback to full system inspection
+            return Intent(
+                type='skill',
+                confidence=0.9,
+                entities=['system_inspector', 'inspect_all']
+            )
+        
+        # Check for other skill commands
         skill_command = self.text_analyzer.extract_skill_commands(user_input)
         if skill_command:
             return Intent(
@@ -176,7 +194,7 @@ class IriChat:
         return f"ตามที่ผมค้นหาในหน่วยความจำครับเจ้านาย:\n\n{context}"
     
     def _execute_skill(self, intent: Intent) -> str:
-        """Execute skill command."""
+        """Execute skill command and return real system data."""
         if len(intent.entities) < 2:
             return "ขออภัยครับเจ้านาย ระบุสกิลไม่ครบถ้วนครับ"
         
@@ -185,34 +203,97 @@ class IriChat:
         
         try:
             if skill_name == 'system_inspector':
-                # Execute system inspector methods
+                # Execute system inspector methods with real data
                 if method_name == 'inspect_all':
+                    # Full system inspection
                     inspection = self.system_inspector.inspect_all()
                     report = self.system_inspector.format_report(inspection)
-                    return f"รับทราบคำสั่งครับเจ้านาย กำลังตรวจสอบระบบ...\n\n{report}"
+                    return f"รับทราบคำสั่งครับเจ้านาย กำลังตรวจสอบระบบของไอริ...\n\n{report}"
                 
                 elif method_name == 'inspect_system':
-                    inspection = {'system': self.system_inspector.inspect_system()}
-                    return f"รับทราบคำสั่งครับเจ้านาย\n\nทรัพยากรระบบ:\nCPU: {inspection['system']['cpu']['usage_percent']:.1f}%\nMemory: {inspection['system']['memory']['percent']:.1f}%\nDisk: {inspection['system']['disk']['percent']:.1f}%"
+                    # System resources only
+                    sys_data = self.system_inspector.inspect_system()
+                    cpu = sys_data['cpu']
+                    mem = sys_data['memory']
+                    disk = sys_data['disk']
+                    
+                    response = "รับทราบคำสั่งครับเจ้านาย รายงานทรัพยากรระบบ:\n\n"
+                    response += f"📊 CPU:\n"
+                    response += f"  • ใช้งาน: {cpu['usage_percent']:.1f}% ({cpu['count']} cores)\n"
+                    response += f"  • สถานะ: {cpu['status']}\n\n"
+                    response += f"💾 Memory:\n"
+                    response += f"  • ใช้งาน: {mem['used_mb']:,} MB / {mem['total_mb']:,} MB\n"
+                    response += f"  • เปอร์เซ็นต์: {mem['percent']:.1f}%\n"
+                    response += f"  • สถานะ: {mem['status']}\n\n"
+                    response += f"💿 Disk:\n"
+                    response += f"  • ใช้งาน: {disk['used_gb']} GB / {disk['total_gb']} GB\n"
+                    response += f"  • เปอร์เซ็นต์: {disk['percent']:.1f}%\n"
+                    response += f"  • สถานะ: {disk['status']}"
+                    
+                    return response
                 
                 elif method_name == 'inspect_project':
-                    inspection = {'project': self.system_inspector.inspect_project()}
-                    proj = inspection['project']
-                    return f"รับทราบคำสั่งครับเจ้านาย\n\nสถานะโปรเจกต์:\nRoot: {proj['root']}\nVirtual Env: {'✓' if proj['virtualenv_active'] else '✗'}\nBrain Regions: {sum(1 for k, v in proj['structure'].items() if v.get('exists', False))}"
+                    # Project structure
+                    proj = self.system_inspector.inspect_project()
+                    
+                    response = "รับทราบคำสั่งครับเจ้านาย รายงานสถานะโปรเจกต์:\n\n"
+                    response += f"📁 Project Root:\n  {proj['root']}\n\n"
+                    response += f"🐍 Virtual Environment: {'✓ Active' if proj['virtualenv_active'] else '✗ Not found'}\n\n"
+                    response += "🧠 Brain Regions:\n"
+                    
+                    brain_regions = ['00_BrainStem', '01_Neocortex', '02_VisualCortex', '03_Hippocampus', '04_Cerebellum']
+                    for region in brain_regions:
+                        if region in proj['structure']:
+                            info = proj['structure'][region]
+                            status = "✓" if info['exists'] else "✗"
+                            py_count = info.get('python_files', 0)
+                            response += f"  {status} {region}: {py_count} Python files\n"
+                    
+                    return response
                 
                 elif method_name == 'inspect_git':
-                    inspection = {'git': self.system_inspector.inspect_git()}
-                    git = inspection['git']
-                    if git['is_repo']:
-                        commits_text = '\n'.join(git['recent_commits'][:3]) if git['recent_commits'] else 'None'
-                        return f"รับทราบคำสั่งครับเจ้านาย\n\nGit Status:\nBranch: {git['branch']}\nUncommitted: {'Yes' if git['uncommitted_changes'] else 'No'}\n\nRecent commits:\n{commits_text}"
-                    else:
+                    # Git status
+                    git = self.system_inspector.inspect_git()
+                    
+                    if not git['is_repo']:
                         return "ขออภัยครับเจ้านาย ไม่พบ Git repository ครับ"
+                    
+                    response = "รับทราบคำสั่งครับเจ้านาย รายงานสถานะ Git:\n\n"
+                    response += f"🌿 Branch: {git['branch']}\n"
+                    response += f"📝 Uncommitted changes: {'Yes' if git['uncommitted_changes'] else 'No'}\n\n"
+                    
+                    if git['recent_commits']:
+                        response += "📜 Recent commits:\n"
+                        for commit in git['recent_commits'][:3]:
+                            response += f"  • {commit}\n"
+                    
+                    return response
+                
+                elif method_name == 'inspect_processes':
+                    # Process monitoring
+                    procs = self.system_inspector.inspect_processes()
+                    
+                    response = "รับทราบคำสั่งครับเจ้านาย รายงาน Iri Processes:\n\n"
+                    
+                    if procs['iri_processes']:
+                        for proc in procs['iri_processes']:
+                            response += f"🔄 PID {proc['pid']}\n"
+                            response += f"  • Command: {proc['cmdline']}\n"
+                            response += f"  • CPU: {proc['cpu_percent']:.1f}%\n"
+                            response += f"  • Memory: {proc['memory_mb']} MB\n\n"
+                    else:
+                        response += "⚠️  No Iri processes currently running\n\n"
+                    
+                    response += f"📊 Total Python processes: {procs['python_processes']}"
+                    
+                    return response
             
             return f"ขออภัยครับเจ้านาย ยังไม่รองรับสกิล '{skill_name}' ครับ"
         
         except Exception as e:
-            return f"ขออภัยครับเจ้านาย เกิดข้อผิดพลาด: {str(e)}"
+            import traceback
+            error_detail = traceback.format_exc()
+            return f"ขออภัยครับเจ้านาย เกิดข้อผิดพลาดในการตรวจสอบระบบ:\n{str(e)}\n\nDetails:\n{error_detail}"
     
     def _execute_command(self, intent: Intent) -> str:
         """Execute command extracted from Thai NLP."""
@@ -222,14 +303,44 @@ class IriChat:
         return f"รับทราบคำสั่งครับเจ้านาย: '{action}' เป้าหมาย: '{target}'\nกำลังดำเนินการ... (ฟังก์ชันยังไม่เชื่อมต่อครับ)"
     
     def _respond_to_statement(self, statement: str) -> str:
-        """Respond to general statements."""
-        # Acknowledge and show understanding
-        responses = [
-            "เข้าใจแล้วครับเจ้านาย",
-            "รับทราบครับเจ้านาย ผมจดจำไว้แล้วครับ",
-            "ครับเจ้านาย ผมเข้าใจครับ",
-            "ได้ครับเจ้านาย ผมจะจำไว้ครับ"
-        ]
+        """Respond to general statements with dynamic context-aware responses."""
+        # Analyze statement sentiment and content
+        analysis = self.text_analyzer.analyze(statement)
+        sentiment = analysis.get('sentiment', 'neutral')
+        
+        # Context-aware responses based on sentiment and content
+        if sentiment == 'positive':
+            responses = [
+                "ขอบคุณครับเจ้านาย ผมดีใจที่ได้รับทราบครับ",
+                "รับทราบครับเจ้านาย ยินดีด้วยครับ",
+                "ครับเจ้านาย เป็นเรื่องที่ดีครับ ผมจดจำไว้แล้วครับ",
+                "เข้าใจแล้วครับเจ้านาย ผมมีความยินดีด้วยครับ"
+            ]
+        elif sentiment == 'negative':
+            responses = [
+                "รับทราบครับเจ้านาย ผมเข้าใจความรู้สึกของเจ้านายครับ",
+                "ครับเจ้านาย ผมจดจำไว้แล้วครับ หากมีอะไรให้ช่วย โปรดบอกผมนะครับ",
+                "เข้าใจแล้วครับเจ้านาย ผมพร้อมช่วยเหลือเสมอครับ",
+                "รับทราบครับเจ้านาย ขอให้ทุกอย่างดีขึ้นนะครับ"
+            ]
+        else:
+            # Neutral or informative statements
+            if len(statement.split()) > 10:
+                # Longer statements - show more engagement
+                responses = [
+                    "เข้าใจแล้วครับเจ้านาย ขอบคุณที่แจ้งให้ผมทราบครับ",
+                    "รับทราบครับเจ้านาย ผมจดบันทึกไว้แล้วครับ",
+                    "ครับเจ้านาย ผมได้บันทึกข้อมูลนี้ไว้ในหน่วยความจำแล้วครับ",
+                    "ได้ครับเจ้านาย ผมจะจำไว้ครับ"
+                ]
+            else:
+                # Short statements
+                responses = [
+                    "เข้าใจแล้วครับเจ้านาย",
+                    "รับทราบครับเจ้านาย ผมจดจำไว้แล้วครับ",
+                    "ครับเจ้านาย ผมเข้าใจครับ",
+                    "ได้ครับเจ้านาย ผมจะจำไว้ครับ"
+                ]
         import random
         return random.choice(responses)
     
