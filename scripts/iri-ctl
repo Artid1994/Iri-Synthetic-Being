@@ -99,6 +99,7 @@ Usage: iri-ctl <command> [options]
 Status & Display:
   status              Toggle Iri status window (Super+Ctrl+I)
   chat                Launch interactive chat with Iri
+  hermes-stats        Show Hermes delegation metrics
   
 RAM Management:
   ram status          Show current RAM/Swap status
@@ -118,6 +119,7 @@ Shortcuts (mapped to GNOME keybindings):
 Examples:
   iri-ctl status                    # Toggle status window
   iri-ctl chat                      # Start interactive chat
+  iri-ctl hermes-stats              # View delegation metrics
   iri-ctl ram status                # Check RAM
   iri-ctl ram monitor --auto-clear  # Monitor with auto-clear
   iri-ctl restart                   # Restart service
@@ -170,6 +172,114 @@ case "${1:-}" in
                 notify-send "Iri" "Chat started in background (check terminal)" -t 3000
             fi
         fi
+        ;;
+    
+    # Hermes delegation statistics
+    hermes-stats)
+        DELEGATION_QUEUE="$PROJECT_ROOT/03_Hippocampus/hermes_delegation_queue.json"
+        KNOWLEDGE_BASE="$PROJECT_ROOT/03_Hippocampus/knowledge_base.json"
+        
+        echo "================================================================================"
+        echo "HERMES DELEGATION METRICS - Recursive Self-Improvement Statistics"
+        echo "================================================================================"
+        echo ""
+        
+        # Check if delegation queue exists
+        if [ -f "$DELEGATION_QUEUE" ]; then
+            # Count delegations using Python
+            STATS=$("$VENV_PYTHON" << PYTHON_STATS
+import json
+import sys
+from datetime import datetime
+
+delegation_queue = "$DELEGATION_QUEUE"
+knowledge_base = "$KNOWLEDGE_BASE"
+
+try:
+    # Load delegation queue
+    with open(delegation_queue) as f:
+        delegations = json.load(f)
+    
+    total = len(delegations)
+    completed = sum(1 for d in delegations if d.get("status") == "completed")
+    pending = sum(1 for d in delegations if d.get("status") == "pending")
+    
+    # Get last delegation
+    if delegations:
+        last = delegations[-1]
+        last_topic = last.get("topic", "Unknown")
+        last_time = last.get("timestamp", 0)
+        last_status = last.get("status", "unknown")
+        facts_added = last.get("facts_added", 0)
+        
+        # Format timestamp
+        if last_time > 0:
+            last_dt = datetime.fromtimestamp(last_time)
+            last_time_str = last_dt.strftime("%Y-%m-%d %H:%M:%S")
+        else:
+            last_time_str = "Unknown"
+    else:
+        last_topic = "None"
+        last_time_str = "None"
+        last_status = "N/A"
+        facts_added = 0
+    
+    # Load knowledge base to count Hermes facts
+    with open(knowledge_base) as f:
+        kb = json.load(f)
+    
+    hermes_facts = [f for f in kb.get("learned_facts", []) if f.get("source") == "hermes_delegation"]
+    total_hermes_facts = len(hermes_facts)
+    
+    # Calculate average facts per delegation
+    if completed > 0:
+        avg_facts = total_hermes_facts / completed
+    else:
+        avg_facts = 0
+    
+    print(f"{total}|{completed}|{pending}|{total_hermes_facts}|{avg_facts:.1f}|{last_topic}|{last_time_str}|{last_status}|{facts_added}")
+
+except Exception as e:
+    print(f"ERROR: {e}", file=sys.stderr)
+    print("0|0|0|0|0.0|Error|None|error|0")
+PYTHON_STATS
+)
+            
+            # Parse stats
+            IFS='|' read -r TOTAL COMPLETED PENDING TOTAL_FACTS AVG_FACTS LAST_TOPIC LAST_TIME LAST_STATUS LAST_FACTS_ADDED <<< "$STATS"
+            
+            if [ "$TOTAL" = "ERROR:" ]; then
+                echo "⚠️  Error reading delegation queue"
+                echo ""
+                exit 1
+            fi
+            
+            echo "Delegation Summary:"
+            echo "  Total Hermes Calls:        $TOTAL"
+            echo "  Completed:                 $COMPLETED"
+            echo "  Pending:                   $PENDING"
+            echo ""
+            echo "Knowledge Synthesis:"
+            echo "  Total Facts Synthesized:   $TOTAL_FACTS facts"
+            echo "  Average per Delegation:    $AVG_FACTS facts"
+            echo ""
+            echo "Last Delegation:"
+            echo "  Topic:                     $LAST_TOPIC"
+            echo "  Timestamp:                 $LAST_TIME"
+            echo "  Status:                    $LAST_STATUS"
+            echo "  Facts Added:               $LAST_FACTS_ADDED"
+            
+        else
+            echo "No Hermes delegations found yet."
+            echo ""
+            echo "Hermes delegation activates when:"
+            echo "  - Curriculum topic has mastery < 0.40"
+            echo "  - Topic has been attempted at least once"
+            echo "  - Topic is complex (LLM, calculus, OS, etc.)"
+        fi
+        
+        echo ""
+        echo "================================================================================"
         ;;
     
     # RAM management
