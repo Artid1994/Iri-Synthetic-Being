@@ -47,6 +47,7 @@ class SubtaskType(Enum):
     FILE_OPERATION = "file_operation"
     WAIT = "wait"
     VERIFICATION = "verification"
+    RESEARCH = "research"
 
 
 @dataclass
