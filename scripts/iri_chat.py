@@ -11,24 +11,35 @@ from pathlib import Path
 from datetime import datetime
 from typing import Optional
 
-# Add project root to path
+# Add project root to path FIRST (before any local imports)
 PROJECT_ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(PROJECT_ROOT))
+sys.path.insert(0, str(PROJECT_ROOT / "01_Neocortex"))
+sys.path.insert(0, str(PROJECT_ROOT / "03_Hippocampus"))
+sys.path.insert(0, str(PROJECT_ROOT / "04_Cerebellum"))
 
 # Import Neocortex and Hippocampus
 try:
-    sys.path.insert(0, str(PROJECT_ROOT / "01_Neocortex"))
-    sys.path.insert(0, str(PROJECT_ROOT / "03_Hippocampus"))
-    sys.path.insert(0, str(PROJECT_ROOT / "04_Cerebellum"))
     
+try:
     from executive_core import KnowledgeGraph, Intent
     from memory_store import HippocampusMemory
     from core_directives import CoreDirectives
     from nlp_thai_lexicon import get_thai_lexicon
     from skills import get_system_inspector, get_text_analyzer
-    from chat_voice_bridge import ChatVoiceBridge  # TTS voice integration
-    from tools.bilingual_pragmatics import BilingualPragmaticParser  # Bilingual parsing
-    from tools.conversational_response_builder import ConversationalResponseBuilder, ResponseContext  # Natural responses
+    
+    # Communication modules (with proper path)
+    sys.path.insert(0, str(PROJECT_ROOT / "01_Neocortex" / "tools"))
+    from bilingual_pragmatics import BilingualPragmaticParser
+    from conversational_response_builder import ConversationalResponseBuilder, ResponseContext
+    
+    # Voice synthesis
+    from chat_voice_bridge import ChatVoiceBridge
+    
+    # Cognitive modules
+    from inner_monologue import InnerMonologue
+    from parallel_processor import get_processor
+    
 except ImportError as e:
     print(f"⚠️  Import error: {e}")
     print("Make sure you're running from project root with venv activated")
@@ -68,12 +79,10 @@ class IriChat:
         print("✓ Natural response generator initialized")
         
         # Inner monologue pipeline
-        from inner_monologue import InnerMonologue
         self.inner_monologue = InnerMonologue(PROJECT_ROOT)
         print("✓ Inner monologue reasoning initialized")
         
         # Parallel processor
-        from parallel_processor import get_processor
         self.parallel_processor = get_processor()
         print("✓ Parallel dual-tasking engine started")
     
