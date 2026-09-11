@@ -98,6 +98,7 @@ Usage: iri-ctl <command> [options]
 
 Status & Display:
   status              Toggle Iri status window (Super+Ctrl+I)
+  chat                Launch interactive chat with Iri
   
 RAM Management:
   ram status          Show current RAM/Swap status
@@ -116,6 +117,7 @@ Shortcuts (mapped to GNOME keybindings):
 
 Examples:
   iri-ctl status                    # Toggle status window
+  iri-ctl chat                      # Start interactive chat
   iri-ctl ram status                # Check RAM
   iri-ctl ram monitor --auto-clear  # Monitor with auto-clear
   iri-ctl restart                   # Restart service
@@ -129,6 +131,45 @@ case "${1:-}" in
     # Status display (toggle)
     status)
         toggle_status
+        ;;
+    
+    # Interactive chat
+    chat)
+        # Launch iri_chat.py in terminal
+        CHAT_SCRIPT="$PROJECT_ROOT/scripts/iri_chat.py"
+        
+        if [ ! -f "$CHAT_SCRIPT" ]; then
+            notify-send "Iri" "Chat script not found" -u critical -t 3000
+            echo "Error: Chat script not found at $CHAT_SCRIPT"
+            exit 1
+        fi
+        
+        # Check if chat is already running
+        if pgrep -f "iri_chat.py" > /dev/null; then
+            notify-send "Iri" "Chat already running" -t 2000
+            echo "Chat session already active"
+            exit 0
+        fi
+        
+        # Launch chat interface
+        notify-send "Iri (ไอริ)" "Starting chat interface..." -t 2000
+        
+        # Run in current terminal or launch new terminal
+        if [ -t 0 ]; then
+            # Running in terminal - execute directly
+            "$VENV_PYTHON" "$CHAT_SCRIPT"
+        else
+            # Not in terminal - launch in new terminal window
+            if command -v gnome-terminal &> /dev/null; then
+                gnome-terminal -- "$VENV_PYTHON" "$CHAT_SCRIPT"
+            elif command -v xterm &> /dev/null; then
+                xterm -e "$VENV_PYTHON" "$CHAT_SCRIPT" &
+            else
+                # Fallback: run in background and notify
+                "$VENV_PYTHON" "$CHAT_SCRIPT" &
+                notify-send "Iri" "Chat started in background (check terminal)" -t 3000
+            fi
+        fi
         ;;
     
     # RAM management
