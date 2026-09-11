@@ -400,12 +400,22 @@ class IriChat:
         print("=" * 80)
         print(f"Session started: {self.session_start.strftime('%Y-%m-%d %H:%M:%S')}")
         print("Type 'exit', 'quit', or 'bye' to end conversation")
-        print("=" * 80)
+        print("="*80)
         print()
         
-        # Initial greeting
-        print("[Iri AE01M] > สวัสดีครับเจ้านาย ผมไอริพร้อมรับคำสั่งครับ")
-        print()
+        # Check for unreported research and generate proactive greeting
+        proactive_greeting = self._generate_proactive_greeting()
+        if proactive_greeting:
+            print(f"[Iri AE01M] > {proactive_greeting}")
+            print()
+            # Speak proactive greeting
+            self.speak(proactive_greeting)
+        else:
+            # Standard initial greeting
+            greeting = "สวัสดีครับเจ้านาย ผมไอริพร้อมรับคำสั่งครับ"
+            print(f"[Iri AE01M] > {greeting}")
+            print()
+            self.speak(greeting)
         
         while True:
             try:
@@ -455,6 +465,63 @@ class IriChat:
         print(f"Duration: {duration:.0f} seconds")
         print(f"Turns: {len(self.conversation_history)}")
         print("=" * 80)
+    
+    def _generate_proactive_greeting(self) -> Optional[str]:
+        """
+        Generate proactive greeting with unreported research summary.
+        Returns None if no unreported research exists.
+        """
+        try:
+            unreported_file = self.project_root / "03_Hippocampus" / "unreported_research.json"
+            
+            if not unreported_file.exists():
+                return None
+            
+            # Load unreported research
+            with open(unreported_file, 'r') as f:
+                unreported = json.load(f)
+            
+            # Filter unreported items
+            pending = [item for item in unreported if not item.get('reported', False)]
+            
+            if not pending:
+                return None
+            
+            # Format proactive greeting (Thai male polite)
+            if len(pending) == 1:
+                item = pending[0]
+                greeting = f"สวัสดีครับเจ้านาย! ระหว่างที่เจ้านายพักผ่อน ผมได้ไปแอบศึกษาเรื่อง '{item['topic']}' เพิ่มเติมมา {item['facts_count']} ข้อเท็จจริงครับ"
+                
+                # Add key fact preview
+                if item.get('key_facts') and len(item['key_facts']) > 0:
+                    first_fact = item['key_facts'][0].replace('[Autonomous] ', '')
+                    greeting += f" เช่น {first_fact}"
+                
+                greeting += " เจ้านายอยากให้ผมสรุปรายละเอียดเรื่องนี้ให้ฟังไหมครับ?"
+            
+            else:
+                # Multiple topics
+                total_facts = sum(item['facts_count'] for item in pending)
+                topics = [item['topic'] for item in pending[:3]]
+                topics_str = ', '.join(topics[:2])
+                if len(pending) > 2:
+                    topics_str += f" และอีก {len(pending)-2} เรื่อง"
+                
+                greeting = f"สวัสดีครับเจ้านาย! ระหว่างที่เจ้านายพักผ่อน ผมได้ศึกษาเพิ่มเติมเรื่อง {topics_str} รวม {total_facts} ข้อเท็จจริงครับ เจ้านายอยากฟังสรุปไหมครับ?"
+            
+            # Mark as reported
+            for item in pending:
+                item['reported'] = True
+            
+            # Save updated status
+            with open(unreported_file, 'w') as f:
+                json.dump(unreported, f, indent=2)
+            
+            return greeting
+        
+        except Exception as e:
+            # Silently fail, return standard greeting
+            return None
 
 
 def main():

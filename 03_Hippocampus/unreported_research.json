@@ -1,0 +1,13 @@
+[
+  {
+    "topic": "Operating System Fundamentals",
+    "domain": "Computer_Systems",
+    "facts_count": 5,
+    "timestamp": 1789160000.0,
+    "key_facts": [
+      "[Autonomous] Operating systems manage hardware resources",
+      "[Autonomous] Processes are independent program executions"
+    ],
+    "reported": false
+  }
+]

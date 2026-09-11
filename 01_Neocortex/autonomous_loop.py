@@ -673,6 +673,10 @@ class AutonomousLoop:
         if facts_added > 0:
             self._prune_and_save_knowledge_base()
             logger.info(f"[ToolResearch] Synthesized {facts_added} facts for {topic} (domain: {domain})")
+            
+            # Track unreported research for proactive reporting
+            key_facts = [f"[Autonomous] {facts[i]}" for i in range(min(2, len(facts)))]
+            self._track_unreported_research(topic, facts_added, key_facts, domain)
         
         return facts_added
     
@@ -890,6 +894,51 @@ class AutonomousLoop:
         
         self.knowledge_base["learned_facts"] = unique_facts
         self._save_knowledge_base()
+    
+    def _track_unreported_research(self, topic: str, facts_count: int, key_facts: List = None, domain: str = None):
+        """
+        Track unreported research for proactive reporting in chat.
+        Records summary of autonomous learning for user notification.
+        """
+        if key_facts is None:
+            key_facts = []
+        
+        try:
+            unreported_file = self.project_root / "03_Hippocampus" / "unreported_research.json"
+            
+            # Load existing unreported items
+            if unreported_file.exists():
+                try:
+                    with open(unreported_file, 'r') as f:
+                        unreported = json.load(f)
+                except:
+                    unreported = []
+            else:
+                unreported = []
+            
+            # Create research summary entry
+            entry = {
+                "topic": topic,
+                "domain": domain or "general",
+                "facts_count": facts_count,
+                "timestamp": time.time(),
+                "key_facts": [fact[:150] for fact in key_facts[:2]],  # Top 2, truncated
+                "reported": False
+            }
+            
+            unreported.append(entry)
+            
+            # Keep only last 10 unreported items
+            unreported = unreported[-10:]
+            
+            # Save
+            with open(unreported_file, 'w') as f:
+                json.dump(unreported, f, indent=2)
+            
+            logger.info(f"[Research] Tracked unreported research: {topic} ({facts_count} facts)")
+        
+        except Exception as e:
+            logger.warning(f"[Research] Failed to track unreported research: {e}")
     
     def _update_curriculum_mastery(self, goal):
         """Update curriculum mastery score after completing a learning goal."""
