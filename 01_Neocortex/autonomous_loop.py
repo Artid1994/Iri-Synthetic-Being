@@ -16,6 +16,14 @@ from enum import Enum
 from typing import Dict, Any, Optional, List
 from dataclasses import dataclass, asdict
 
+# Resource monitoring
+try:
+    import psutil
+    PSUTIL_AVAILABLE = True
+except ImportError:
+    PSUTIL_AVAILABLE = False
+    psutil = None
+
 # Force unbuffered output for real-time journalctl streaming
 sys.stdout = os.fdopen(sys.stdout.fileno(), 'w', buffering=1)
 sys.stderr = os.fdopen(sys.stderr.fileno(), 'w', buffering=1)
@@ -51,6 +59,13 @@ class CircadianState(Enum):
     SLEEP = "sleep"             # Low-power background mode
     RESEARCH = "research"       # Autonomous learning/research
     CONSOLIDATE = "consolidate" # Memory consolidation
+
+
+class ResourceTier(Enum):
+    """System resource utilization tiers."""
+    HIGH_LOAD = "high_load"     # CPU > 70% or RAM < 15%: conserve resources
+    NORMAL = "normal"           # CPU 30-70%: standard operation
+    LOW_LOAD = "low_load"       # CPU < 30%, RAM > 30%: high-performance mode
 
 
 @dataclass
@@ -118,6 +133,36 @@ class AutonomousLoop:
         logger.info("[AutonomousLoop] Initialized")
         logger.info(f"[AutonomousLoop] Knowledge base: {len(self.knowledge_base.get('learned_facts', []))} facts")
         logger.info(f"[AutonomousLoop] Goal engine: {len(self.goal_engine.list_goals())} goals loaded")
+        
+        # Resource monitoring state
+        self.current_resource_tier = ResourceTier.NORMAL
+        self.last_resource_check = datetime.now()
+    
+    def _check_resource_tier(self) -> ResourceTier:
+        """Check current system resource tier for adaptive polling."""
+        if not PSUTIL_AVAILABLE:
+            return ResourceTier.NORMAL
+        
+        try:
+            cpu_percent = psutil.cpu_percent(interval=0.1)
+            memory = psutil.virtual_memory()
+            available_ram_percent = memory.available / memory.total * 100
+            
+            # High load: conserve resources
+            if cpu_percent > 70 or available_ram_percent < 15:
+                return ResourceTier.HIGH_LOAD
+            
+            # Low load: high-performance mode
+            elif cpu_percent < 30 and available_ram_percent > 30:
+                return ResourceTier.LOW_LOAD
+            
+            # Normal load
+            else:
+                return ResourceTier.NORMAL
+        
+        except Exception as e:
+            logger.warning(f"[ResourceMonitor] Error checking resources: {e}")
+            return ResourceTier.NORMAL
     
     def _load_knowledge_base(self) -> Dict[str, Any]:
         """Load knowledge base from Hippocampus."""
@@ -548,34 +593,59 @@ def main():
         try:
             iteration = 0
             while True:
+                # Check resource tier every 20 iterations (~40-200s depending on tier)
+                if iteration % 20 == 0:
+                    new_tier = loop._check_resource_tier()
+                    if new_tier != loop.current_resource_tier:
+                        loop.current_resource_tier = new_tier
+                        logger.info(f"[ResourceMonitor] Tier change: {new_tier.value}")
+                        if new_tier == ResourceTier.LOW_LOAD:
+                            logger.info("[ResourceMonitor] Low load detected: accelerating cognitive tick to 1s")
+                        elif new_tier == ResourceTier.HIGH_LOAD:
+                            logger.info("[ResourceMonitor] High load detected: throttling to 15s (conserve resources)")
+                
                 # Check for state transition
                 new_state = loop._check_state_transition()
                 if new_state:
                     loop._transition_state(new_state)
                 
-                # Log current state periodically (every 30 iterations = ~30-60s)
+                # Log current state periodically (every 30 iterations = ~30-450s)
                 if iteration % 30 == 0:
                     current_state = loop.context.state
                     time_in_state = (datetime.now() - loop.context.last_state_change).total_seconds()
-                    logger.info(f"[Status] State: {current_state.value.upper()} (T+{time_in_state:.0f}s)")
+                    logger.info(f"[Status] State: {current_state.value.upper()} (T+{time_in_state:.0f}s) | Tier: {loop.current_resource_tier.value}")
                 
-                # Execute goal processing cycle
+                # Execute goal processing cycle (frequency depends on resource tier)
                 if loop.context.state == CircadianState.ACTIVE:
+                    # High-performance mode: process goals more frequently
+                    goal_check_interval = 5 if loop.current_resource_tier == ResourceTier.LOW_LOAD else 10
+                    
                     # Process pending goals
                     pending_goals = [g for g in loop.goal_engine.list_goals() if g.status == GoalStatus.PENDING]
-                    if pending_goals and iteration % 10 == 0:
+                    if pending_goals and iteration % goal_check_interval == 0:
                         logger.info(f"[Goals] {len(pending_goals)} pending goals in queue")
                         # Goals will be processed by goal_engine's own evaluation
                 
                 iteration += 1
                 
-                # Adaptive sleep based on state
-                if loop.context.state == CircadianState.ACTIVE:
-                    time.sleep(2)  # Active polling when active
-                elif loop.context.state == CircadianState.IDLE:
-                    time.sleep(5)  # Medium polling when idle
-                else:  # SLEEP, RESEARCH, CONSOLIDATE
-                    time.sleep(10)  # Slow polling in background (more efficient)
+                # Adaptive sleep based on resource tier and state
+                if loop.current_resource_tier == ResourceTier.HIGH_LOAD:
+                    # High load: conserve resources
+                    time.sleep(15)
+                elif loop.current_resource_tier == ResourceTier.LOW_LOAD:
+                    # Low load: high-performance mode
+                    if loop.context.state == CircadianState.ACTIVE:
+                        time.sleep(1)  # Very responsive
+                    else:
+                        time.sleep(3)  # Moderate
+                else:
+                    # Normal load: standard polling
+                    if loop.context.state == CircadianState.ACTIVE:
+                        time.sleep(2)
+                    elif loop.context.state == CircadianState.IDLE:
+                        time.sleep(5)
+                    else:  # SLEEP, RESEARCH, CONSOLIDATE
+                        time.sleep(10)
                 
         except KeyboardInterrupt:
             logger.info("[AutonomousLoop] Interrupted by user")
