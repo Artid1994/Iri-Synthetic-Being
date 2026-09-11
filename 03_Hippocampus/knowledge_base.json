@@ -38720,7 +38720,15 @@
       "source": "targeted_upskilling",
       "confidence": 0.8656647160193841,
       "relevance": "medium"
+    },
+    {
+      "topic": "memory consolidation techniques",
+      "summary": "Targeted insight about memory consolidation techniques learned from up-skilling research",
+      "timestamp": "2026-09-11T22:40:04.972128",
+      "source": "targeted_upskilling",
+      "confidence": 0.8205138765156351,
+      "relevance": "medium"
     }
   ],
-  "last_updated": "2026-09-11T22:39:44.439325"
+  "last_updated": "2026-09-11T22:40:04.972155"
 }
