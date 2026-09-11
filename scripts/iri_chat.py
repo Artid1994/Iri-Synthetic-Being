@@ -26,7 +26,9 @@ try:
     from core_directives import CoreDirectives
     from nlp_thai_lexicon import get_thai_lexicon
     from skills import get_system_inspector, get_text_analyzer
-    from voice_synthesis import speak_aloud  # TTS voice output
+    from chat_voice_bridge import ChatVoiceBridge  # TTS voice integration
+    from tools.bilingual_pragmatics import BilingualPragmaticParser  # Bilingual parsing
+    from tools.conversational_response_builder import ConversationalResponseBuilder, ResponseContext  # Natural responses
 except ImportError as e:
     print(f"⚠️  Import error: {e}")
     print("Make sure you're running from project root with venv activated")
@@ -53,17 +55,17 @@ class IriChat:
         self.session_start = datetime.now()
         self.session_id = int(self.session_start.timestamp())
         
-        # TTS voice output (enabled by default)
-        self.voice_enabled = True
-        try:
-            # Test TTS availability
-            from voice_synthesis import default_synthesizer
-            self.voice_available = True
-            print("✓ Voice synthesis enabled")
-        except Exception as e:
-            self.voice_available = False
-            print(f"⚠️  Voice synthesis unavailable: {e}")
-            print("   Continuing in text-only mode")
+        # TTS voice bridge (integrated)
+        self.voice_bridge = ChatVoiceBridge(enabled=True)
+        print(f"✓ Voice synthesis: {'enabled' if self.voice_bridge.is_available() else 'unavailable'}")
+        
+        # Bilingual pragmatic parser
+        self.bilingual_parser = BilingualPragmaticParser()
+        print("✓ Bilingual parser initialized")
+        
+        # Conversational response builder
+        self.response_builder = ConversationalResponseBuilder()
+        print("✓ Natural response generator initialized")
     
     def update_user_activity(self):
         """Update user activity timestamp (DIRECTIVE_2 compliance)."""
@@ -85,18 +87,9 @@ class IriChat:
     def speak(self, text: str):
         """
         Speak text using TTS voice synthesis (non-blocking).
-        Plays audio in background thread so it doesn't block user input.
+        Uses ChatVoiceBridge for bilingual support.
         """
-        if not self.voice_enabled or not self.voice_available:
-            return
-        
-        try:
-            # Use non-blocking speak (block=False)
-            import threading
-            threading.Thread(target=lambda: speak_aloud(text, block=False), daemon=True).start()
-        except Exception as e:
-            # Silently fail - don't disrupt chat flow
-            pass
+        self.voice_bridge.speak_bilingual(text)
     
     def classify_input(self, user_input: str) -> Intent:
         """Classify user input intent using Thai NLP lexicon and skills."""

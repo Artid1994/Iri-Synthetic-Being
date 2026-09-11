@@ -47305,7 +47305,95 @@
       "source": "targeted_upskilling",
       "confidence": 0.9493094892483931,
       "relevance": "medium"
+    },
+    {
+      "topic": "conversational AI advances",
+      "summary": "Targeted insight about conversational AI advances learned from up-skilling research",
+      "timestamp": "2026-09-12T04:36:58.856358",
+      "source": "targeted_upskilling",
+      "confidence": 0.8375597743568381,
+      "relevance": "medium"
+    },
+    {
+      "topic": "Thai language processing",
+      "summary": "Targeted insight about Thai language processing learned from up-skilling research",
+      "timestamp": "2026-09-12T04:37:07.868542",
+      "source": "targeted_upskilling",
+      "confidence": 0.8137789811388373,
+      "relevance": "medium"
+    },
+    {
+      "topic": "machine learning efficiency",
+      "summary": "Targeted insight about machine learning efficiency learned from up-skilling research",
+      "timestamp": "2026-09-12T04:37:14.558489",
+      "source": "targeted_upskilling",
+      "confidence": 0.8346093172885944,
+      "relevance": "medium"
+    },
+    {
+      "topic": "edge computing for AI",
+      "summary": "Targeted insight about edge computing for AI learned from up-skilling research",
+      "timestamp": "2026-09-12T04:37:19.969414",
+      "source": "targeted_upskilling",
+      "confidence": 0.8748679871234488,
+      "relevance": "medium"
+    },
+    {
+      "topic": "edge computing for AI",
+      "summary": "Targeted insight about edge computing for AI learned from up-skilling research",
+      "timestamp": "2026-09-12T04:37:23.456707",
+      "source": "targeted_upskilling",
+      "confidence": 0.809129286895184,
+      "relevance": "medium"
+    },
+    {
+      "topic": "brain-inspired computing",
+      "summary": "Targeted insight about brain-inspired computing learned from up-skilling research",
+      "timestamp": "2026-09-12T04:37:32.764087",
+      "source": "targeted_upskilling",
+      "confidence": 0.870914986412211,
+      "relevance": "medium"
+    },
+    {
+      "topic": "edge computing for AI",
+      "summary": "Targeted insight about edge computing for AI learned from up-skilling research",
+      "timestamp": "2026-09-12T04:37:37.609208",
+      "source": "targeted_upskilling",
+      "confidence": 0.9435421197467092,
+      "relevance": "medium"
+    },
+    {
+      "topic": "cognitive architectures",
+      "summary": "Targeted insight about cognitive architectures learned from up-skilling research",
+      "timestamp": "2026-09-12T04:37:42.580240",
+      "source": "targeted_upskilling",
+      "confidence": 0.8842335902319697,
+      "relevance": "medium"
+    },
+    {
+      "topic": "conversational AI advances",
+      "summary": "Targeted insight about conversational AI advances learned from up-skilling research",
+      "timestamp": "2026-09-12T04:37:50.757475",
+      "source": "targeted_upskilling",
+      "confidence": 0.8221438985064893,
+      "relevance": "medium"
+    },
+    {
+      "topic": "edge computing for AI",
+      "summary": "Targeted insight about edge computing for AI learned from up-skilling research",
+      "timestamp": "2026-09-12T04:38:01.003981",
+      "source": "targeted_upskilling",
+      "confidence": 0.8423545865809712,
+      "relevance": "medium"
+    },
+    {
+      "topic": "conversational AI advances",
+      "summary": "Targeted insight about conversational AI advances learned from up-skilling research",
+      "timestamp": "2026-09-12T04:38:07.099701",
+      "source": "targeted_upskilling",
+      "confidence": 0.8689918941587375,
+      "relevance": "medium"
     }
   ],
-  "last_updated": "2026-09-12T04:36:53.707569"
+  "last_updated": "2026-09-12T04:38:07.099733"
 }
