@@ -1,0 +1,253 @@
+{
+  "main": {
+    "id": "0dd032c8d80d9f63",
+    "type": "split",
+    "children": [
+      {
+        "id": "bc8d09d8253f065b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d64d970d03ff9bfd",
+            "type": "leaf",
+            "state": {
+              "type": "brain-atlas",
+              "state": {},
+              "icon": "brain",
+              "title": "Brain Atlas"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "991f3fcb8f987bd9",
+    "type": "split",
+    "children": [
+      {
+        "id": "6c0c3c0edcc81266",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f8d62eeeb182e744",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "File explorer"
+            }
+          },
+          {
+            "id": "3c237379533054c9",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "4764ae9a935e03c3",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-bookmark",
+              "title": "บุ๊กมาร์ก"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 213.5,
+    "collapsed": true
+  },
+  "right": {
+    "id": "4e09c917324e199c",
+    "type": "split",
+    "children": [
+      {
+        "id": "bad6845e6d8eda8b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c3a7116416cfda99",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
+          },
+          {
+            "id": "03af1ac36aa7a7f2",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "2896c884b9b922d9",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "72b7916aae5db4af",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "efa52cd9fdfaece3",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "ec943babe2278df4",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "โครงเรื่อง"
+            }
+          }
+        ],
+        "currentTab": 5
+      }
+    ],
+    "direction": "horizontal",
+    "width": 323.5,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:เปิด quick switcher": false,
+      "graph:เปิดมุมมองกราฟ": false,
+      "brain-atlas:Open atlas": false,
+      "canvas:สร้างผืนผ้าใบใหม่": false,
+      "daily-notes:เปิดโน้ตของวันนี้": false,
+      "templates:แทรกเทมเพลต": false,
+      "command-palette:เปิดกระดานคำสั่ง": false,
+      "bases:สร้างฐานใหม่": false,
+      "hermes-agent:Open Hermes Agent": false,
+      "hermes-agent:Open Hermes smart graph": false,
+      "obsidian-git:Open Git source control": false,
+      "galaxy-view:Open Galaxy View": false,
+      "terminal-commands:Terminal commands": false,
+      "obsidian-shellcommands:Shell commands: Custom variables": false
+    }
+  },
+  "active": "d64d970d03ff9bfd",
+  "lastOpenFiles": [
+    "01_Neocortex/NEURAL_NETWORK_ARCHITECTURE.md",
+    "03_Hippocampus/learned_insights/EPISODIC_ไอร_20260909_194635.md",
+    "04_Cerebellum/piper/espeak-ng-data/ur_dict",
+    "04_Cerebellum/piper/espeak-ng-data/tk_dict",
+    "04_Cerebellum/piper/espeak-ng-data/sr_dict",
+    "04_Cerebellum/piper/espeak-ng-data/smj_dict",
+    "04_Cerebellum/piper/espeak-ng-data/sk_dict",
+    "04_Cerebellum/piper/espeak-ng-data/shn_dict",
+    "04_Cerebellum/piper/espeak-ng-data/ru_dict",
+    "04_Cerebellum/piper/espeak-ng-data/ro_dict",
+    "04_Cerebellum/piper/espeak-ng-data/qya_dict",
+    "04_Cerebellum/piper/espeak-ng-data/qu_dict",
+    "03_Hippocampus/learned_insights/EPISODIC_ไอร_20260909_125701.md",
+    "03_Hippocampus/learned_insights/EPISODIC_Test_Auto-Linking_System_20260909_124938.md",
+    "03_Hippocampus/learned_insights/EPISODIC_ไอร_20260909_040247.md",
+    "03_Hippocampus/learned_insights/EPISODIC_ไอร_20260909_040056.md",
+    "03_Hippocampus/learned_insights/EPISODIC_Hippocampus_20260909_040006.md",
+    "03_Hippocampus/learned_insights/EPISODIC_ไอร_20260909_035948.md",
+    "03_Hippocampus/learned_insights/EPISODIC_ไอร_20260909_035926.md",
+    "03_Hippocampus/learned_insights/EPISODIC_Hippocampus_20260909_035849.md",
+    "03_Hippocampus/learned_insights/EPISODIC_ไอร_20260909_035819.md",
+    "cognitive_shell_import/web/node_modules/@shikijs/vscode-textmate/LICENSE.md",
+    "03_Hippocampus/learned_insights/EPISODIC_ไอร_20260909_035423.md",
+    "03_Hippocampus/learned_insights/EPISODIC_ไอร_20260909_035407.md",
+    "03_Hippocampus/learned_insights/EPISODIC_ไอร_20260909_035230.md",
+    "03_Hippocampus/learned_insights/EPISODIC_ไอร_20260909_033346.md",
+    "03_Hippocampus/learned_insights/EPISODIC_ไอร_20260909_033309.md",
+    "03_Hippocampus/learned_insights/EPISODIC_ไอร_20260909_033030.md",
+    "03_Hippocampus/learned_insights/EPISODIC_ไอร_20260909_030612.md",
+    "03_Hippocampus/learned_insights/EPISODIC_Test_Learning_20260909_030544.md",
+    "venv/lib/python3.13/site-packages/idna-3.19.dist-info/licenses/LICENSE.md",
+    "03_Temporal/Voice_Logs/2026-09-09.md",
+    "02_Knowledge/Learned_Facts/LEARNED_FACT__ตอนนทำอะไรอย.md",
+    "02_Knowledge/Learned_Facts/LEARNED_FACT__ไดยน.md",
+    "02_Knowledge/Learned_Facts/LEARNED_FACT__ดวงอาทตยขนก.md",
+    "02_Knowledge/Learned_Facts/LEARNED_FACT__ทำอะไรอย.md",
+    "venv/lib/python3.13/site-packages/pygame/docs/generated/_images/tom_radians.png",
+    "venv/lib/python3.13/site-packages/pygame/docs/generated/_images/tom_formulae.png",
+    "venv/lib/python3.13/site-packages/pygame/docs/generated/_images/tom_event-flowchart.png",
+    "venv/lib/python3.13/site-packages/pygame/docs/generated/_images/tom_basic.png",
+    "venv/lib/python3.13/site-packages/pygame/docs/generated/_images/surfarray_xfade.png",
+    "venv/lib/python3.13/site-packages/pygame/docs/generated/_images/surfarray_striped.png",
+    "venv/lib/python3.13/site-packages/pygame/docs/generated/_images/surfarray_soften.png",
+    "venv/lib/python3.13/site-packages/pygame/docs/generated/_images/surfarray_scaleup.png",
+    "venv/lib/python3.13/site-packages/pygame/docs/generated/_images/surfarray_scaledown.png",
+    "venv/lib/python3.13/site-packages/pygame/docs/generated/_images/surfarray_rgbarray.png",
+    "ยังไม่ได้ตั้งชื่อ.canvas"
+  ]
+}

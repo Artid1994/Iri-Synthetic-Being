@@ -1,0 +1,10 @@
+{
+	"id": "neuro-mindmap-mouse",
+	"name": "MapTheMind",
+	"version": "1.1.1",
+	"minAppVersion": "1.4.0",
+	"description": "Hierarchical visual database for mouse neuroscience data, built on the Allen Mouse Brain Atlas (CCFv3).",
+	"author": "Cosmakes",
+	"authorUrl": "https://github.com/Cosmakes",
+	"isDesktopOnly": true
+}

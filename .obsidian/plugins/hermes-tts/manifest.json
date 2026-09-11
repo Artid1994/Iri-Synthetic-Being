@@ -1,0 +1,10 @@
+{
+  "id": "hermes-tts",
+  "name": "Hermes TTS",
+  "version": "0.1.0",
+  "minAppVersion": "1.5.0",
+  "description": "Generate lightweight audio from a markdown note and prepend timestamped metadata with an embedded audio link.",
+  "author": "Matthias",
+  "authorUrl": "https://github.com/thematthiasleitner",
+  "isDesktopOnly": false
+}

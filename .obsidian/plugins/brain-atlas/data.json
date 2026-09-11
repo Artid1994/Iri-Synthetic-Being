@@ -1,0 +1,113 @@
+{
+  "palette": "aurora",
+  "performancePreset": "smooth",
+  "frontmatterKindKeys": [
+    "kind",
+    "type",
+    "category"
+  ],
+  "frontmatterKindValueMap": {},
+  "frontmatterRegionKeys": [
+    "brain_region",
+    "brainRegion",
+    "lobe",
+    "region"
+  ],
+  "tagKindMap": {
+    "project": "project",
+    "person": "person",
+    "decision": "decision",
+    "question": "question",
+    "tool": "tool",
+    "concept": "concept",
+    "source": "source",
+    "daily": "dailyNote",
+    "moc": "concept",
+    "thread": "workThread",
+    "index": "index"
+  },
+  "folderKindMap": {
+    "People": "person",
+    "Projects": "project",
+    "Sources": "source",
+    "Daily": "dailyNote",
+    "Journal": "dailyNote",
+    "Concepts": "concept",
+    "Topics": "concept",
+    "MOCs": "concept",
+    "Maps": "concept",
+    "Index": "index",
+    "Home": "index",
+    "01_Neocortex": "project",
+    "01_Frontal": "project",
+    "02_Limbic": "concept",
+    "02_Parietal": "concept",
+    "03_Hippocampus": "person",
+    "03_Temporal": "person",
+    "04_Cerebellum": "dailyNote"
+  },
+  "frontmatterRegionValueMap": {
+    "brain_region:neocortex": "frontal",
+    "brain_region:limbic": "temporal",
+    "brain_region:hippocampus": "temporal",
+    "brain_region:cerebellum": "cerebellum",
+    "brain_region:stem": "stem",
+    "brain_region:parietal": "parietal",
+    "brain_region:occipital": "occipital",
+    "region:neocortex": "frontal",
+    "region:limbic": "temporal",
+    "region:hippocampus": "temporal",
+    "region:cerebellum": "cerebellum",
+    "region:brainstem": "stem"
+  },
+  "tagRegionMap": {},
+  "folderRegionMap": {
+    "01_Neocortex": "frontal",
+    "01_Frontal": "frontal",
+    "01_Core": "frontal",
+    "02_Limbic": "temporal",
+    "02_Parietal": "parietal",
+    "02_Knowledge": "parietal",
+    "03_Hippocampus": "temporal",
+    "03_Temporal": "temporal",
+    "04_Cerebellum": "cerebellum",
+    "learned_insights": "temporal",
+    "learned_memories": "temporal",
+    "00_BrainStem": "stem",
+    "05_Occipital": "occipital"
+  },
+  "noteRegionMap": {},
+  "treatDateFilesAsDaily": true,
+  "honorDailyNotesFormat": true,
+  "dailyNoteDateFormat": "YYYY-MM-DD",
+  "nodeCap": 10000,
+  "edgeCap": 20000,
+  "idleAutoRotate": true,
+  "showLobeLabels": true,
+  "showLegendChip": true,
+  "enabledLobes": {
+    "frontal": true,
+    "parietal": true,
+    "temporal": true,
+    "occipital": true,
+    "cerebellum": true,
+    "stem": true
+  },
+  "clickAction": "current",
+  "hubThresholdPercent": 4,
+  "pinnedNodePositions": {
+    "venv/lib/python3.13/site-packages/idna-3.19.dist-info/licenses/LICENSE.md": {
+      "x": 0.7197235110003385,
+      "y": -0.009364846317192933,
+      "z": 0.00991867245087003
+    },
+    "cognitive_shell_import/web/node_modules/micromark-factory-title/readme.md": {
+      "x": -0.21860046164159205,
+      "y": -0.1992813639066232,
+      "z": -0.8220350935446054
+    }
+  },
+  "defaultKind": "person",
+  "inferKindsFromLinks": true,
+  "rendererMode": "auto"
+}

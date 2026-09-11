@@ -1,0 +1,19 @@
+{
+  "baseUrl": "https://api.maxplus-ai.cc/v1",
+  "apiKey": "ccsk-93f242a3c07000b8d83086f75446a4ea6a6aea69ddd04bcede5dba13149c2061",
+  "model": "claude-sonnet-5",
+  "transport": "auto",
+  "reasoningEffort": "medium",
+  "includeNoteContent": true,
+  "requestTimeoutMs": 120000,
+  "maxTabs": 3,
+  "workingFolder": "",
+  "autoApproveTools": true,
+  "userName": "",
+  "hermesHome": "",
+  "graphMaxNotes": 150,
+  "graphMinEdgeWeight": 0.3,
+  "graphIncludeWikilinks": true,
+  "markdownFormattingPromptEnabled": true,
+  "customSystemPrompt": ""
+}

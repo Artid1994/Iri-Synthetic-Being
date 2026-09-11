@@ -1,0 +1,2523 @@
+/* ──────────────────────────────────────────────────────────────────────────────
+   MapTheMind  —  plugin styles
+   All colours use Obsidian CSS variables where possible for theme compatibility.
+   ────────────────────────────────────────────────────────────────────────────── */
+
+/* ── View container ──────────────────────────────────────────────────────────── */
+
+.neuro-map-view {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	padding: 8px 12px 12px;
+	overflow-y: auto;
+	box-sizing: border-box;
+}
+
+/* ── Toolbar (breadcrumbs + buttons) ─────────────────────────────────────────── */
+
+.neuro-map-toolbar {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	padding: 6px 0 8px;
+	border-bottom: 1px solid var(--background-modifier-border);
+	flex-wrap: wrap;
+}
+
+.neuro-map-back-btn {
+	background: var(--background-modifier-hover);
+	border: 1px solid var(--background-modifier-border);
+	border-radius: 4px;
+	padding: 3px 10px;
+	font-size: 14px;
+	cursor: pointer;
+	color: var(--text-normal);
+	transition: background 0.1s;
+}
+.neuro-map-back-btn:hover {
+	background: var(--background-modifier-active-hover);
+}
+
+.neuro-map-breadcrumbs {
+	display: flex;
+	align-items: center;
+	font-size: 13px;
+	gap: 2px;
+	min-width: 0;
+}
+
+.neuro-crumb {
+	color: var(--text-muted);
+	white-space: nowrap;
+}
+
+.neuro-crumb--active {
+	color: var(--text-normal);
+	font-weight: 600;
+}
+
+.neuro-crumb-sep {
+	color: var(--text-faint);
+	padding: 0 2px;
+}
+
+/* Inline organism switcher — replaces the static root crumb at depth 0. */
+.neuro-organism-switch {
+	background: var(--background-modifier-form-field);
+	color: var(--text-normal);
+	border: 1px solid var(--background-modifier-border);
+	border-radius: 4px;
+	padding: 2px 6px;
+	font-size: 13px;
+	font-weight: 600;
+	cursor: pointer;
+}
+.neuro-organism-switch:hover {
+	background: var(--background-modifier-hover);
+}
+
+.neuro-toolbar-spacer {
+	flex: 1;
+}
+
+/* ── Preview banner ──────────────────────────────────────────────────────────── */
+
+.neuro-preview-banner {
+	margin: 8px 0 4px;
+	padding: 6px 10px;
+	border-radius: 6px;
+	background: var(--background-modifier-message);
+	color: var(--text-muted);
+	font-size: 12px;
+	border-left: 3px solid var(--color-orange, #e07b3a);
+}
+
+/* ── SVG map ─────────────────────────────────────────────────────────────────── */
+
+.neuro-hippocampus-svg {
+	width: 100%;
+	max-width: 520px;
+	display: block;
+	margin: 8px auto 0;
+}
+
+/* ── 3D viewer layout ────────────────────────────────────────────────────────── */
+
+.neuro-3d-wrapper {
+	display: flex;
+	flex-direction: row;
+	gap: 8px;
+	flex: 1;
+	min-height: 0;
+	padding: 8px 0 0;
+}
+
+.neuro-3d-container {
+	flex: 1;
+	min-height: 380px;
+	border-radius: 8px;
+	overflow: hidden;
+	background: transparent;
+	position: relative;
+}
+
+.neuro-region-dropdown {
+	width: 190px;
+	flex-shrink: 0;
+	padding: 4px;
+	background: var(--background-secondary);
+	border: 1px solid var(--background-modifier-border);
+	border-radius: 8px;
+	overflow-y: auto;
+	max-height: 500px;
+	align-self: flex-start;
+	font-size: 12px;
+}
+
+/* ── Individual row ─────────────────────────────────────────────────────────── */
+
+.neuro-region-dropdown-item {
+	display: flex;
+	align-items: center;
+	gap: 4px;
+	padding: 5px 10px;
+	border-radius: 5px;
+	color: var(--text-normal);
+	cursor: pointer;
+	transition: background 0.1s;
+	user-select: none;
+}
+
+.neuro-region-dropdown-item:hover {
+	background: var(--background-modifier-hover);
+	color: var(--interactive-accent);
+}
+
+.neuro-region-dropdown-item.neuro-dropdown-child {
+	color: var(--text-muted);
+	font-size: 11px;
+}
+
+.neuro-region-dropdown-item.neuro-dropdown-child:hover {
+	color: var(--interactive-accent);
+}
+
+/* ── Expand icon ────────────────────────────────────────────────────────────── */
+
+.neuro-dropdown-expand-icon {
+	font-size: 7px;
+	color: var(--text-faint);
+	flex-shrink: 0;
+	width: 10px;
+	text-align: center;
+	transition: color 0.1s;
+}
+
+.neuro-region-dropdown-item:hover .neuro-dropdown-expand-icon {
+	color: var(--interactive-accent);
+}
+
+/* ── Children container ─────────────────────────────────────────────────────── */
+
+.neuro-dropdown-children {
+	border-left: 1px solid var(--background-modifier-border);
+	margin-left: 14px;
+}
+
+/* ── Tooltip ─────────────────────────────────────────────────────────────────── */
+
+.neuro-map-tooltip {
+	position: absolute;
+	pointer-events: none;
+	background: var(--background-modifier-message);
+	border: 1px solid var(--background-modifier-border);
+	border-radius: 5px;
+	padding: 4px 8px;
+	font-size: 12px;
+	color: var(--text-normal);
+	white-space: nowrap;
+	z-index: 100;
+	max-width: 260px;
+	box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+}
+
+/* ── Legend ──────────────────────────────────────────────────────────────────── */
+
+.neuro-map-legend {
+	font-size: 11px;
+	color: var(--text-faint);
+	text-align: center;
+	margin: 8px 0 0;
+}
+
+/* ── Empty state (no organism selected) ──────────────────────────────────────── */
+
+.neuro-empty-state {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	gap: 14px;
+	color: var(--text-muted);
+	text-align: center;
+}
+
+/* ── Organism selection modal ────────────────────────────────────────────────── */
+
+.neuro-organism-intro {
+	color: var(--text-muted);
+	font-size: 13px;
+	margin-bottom: 16px;
+}
+
+.neuro-organism-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 10px;
+	margin-bottom: 8px;
+}
+
+.neuro-organism-card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 4px;
+	padding: 14px 10px;
+	border: 2px solid var(--background-modifier-border);
+	border-radius: 8px;
+	cursor: pointer;
+	text-align: center;
+	transition: border-color 0.15s, background 0.15s;
+	background: var(--background-secondary);
+}
+
+.neuro-organism-card:hover,
+.neuro-organism-card:focus {
+	border-color: var(--interactive-accent);
+	background: var(--background-modifier-hover);
+	outline: none;
+}
+
+.neuro-organism-emoji {
+	font-size: 32px;
+	line-height: 1;
+}
+
+.neuro-organism-desc {
+	font-size: 11px;
+	color: var(--text-muted);
+	margin-top: 2px;
+	display: block;
+}
+
+/* ── Region detail (notes list) ──────────────────────────────────────────────── */
+
+.neuro-region-notes {
+	padding: 12px 4px 0;
+}
+
+.neuro-region-notes-heading {
+	margin: 0 0 10px;
+	font-size: 16px;
+	color: var(--text-normal);
+}
+
+.neuro-region-notes-empty {
+	color: var(--text-muted);
+	font-size: 13px;
+}
+
+.neuro-region-notes-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+}
+
+.neuro-region-notes-item {
+	display: flex;
+	align-items: center;
+}
+
+.neuro-region-notes-link {
+	display: block;
+	padding: 6px 10px;
+	border-radius: 5px;
+	font-size: 13px;
+	color: var(--text-accent);
+	cursor: pointer;
+	text-decoration: none;
+	transition: background 0.1s;
+}
+
+.neuro-region-notes-link:hover {
+	background: var(--background-modifier-hover);
+	text-decoration: underline;
+}
+
+/* ── Modal description text ──────────────────────────────────────────────────── */
+
+.neuro-modal-desc {
+	font-size: 13px;
+	color: var(--text-muted);
+	margin-bottom: 12px;
+}
+
+/* ── 3D viewer header bar ────────────────────────────────────────────────── */
+
+.neuro-3d-root {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	min-height: 380px;
+}
+.neuro-3d-header {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 6px 10px;
+	border-bottom: 1px solid var(--background-modifier-border);
+	flex: 0 0 auto;
+}
+.neuro-3d-header-group {
+	display: flex;
+	align-items: center;
+	gap: 3px;
+}
+.neuro-3d-header-label {
+	font-size: 11px;
+	color: var(--text-muted);
+	margin-right: 2px;
+}
+.neuro-3d-header-spacer {
+	flex: 1 1 auto;
+}
+.neuro-3d-canvas-wrap {
+	position: relative;
+	flex: 1 1 auto;
+	min-height: 0;
+}
+
+.neuro-viewer-btn {
+	width: 26px;
+	height: 26px;
+	font-size: 13px;
+	line-height: 1;
+	padding: 0;
+	border: 1px solid var(--background-modifier-border);
+	border-radius: 4px;
+	background: var(--background-secondary);
+	color: var(--text-normal);
+	cursor: pointer;
+	opacity: 0.7;
+	transition: opacity 0.1s, background 0.1s;
+}
+
+.neuro-viewer-btn:hover {
+	opacity: 1;
+	background: var(--background-modifier-hover);
+}
+
+/* ── Empty hint (note-driven dropdown) ──────────────────────────────────────── */
+
+.neuro-empty-hint {
+	padding: 12px 10px;
+	font-size: 12px;
+	color: var(--text-faint);
+	font-style: italic;
+}
+
+/* ── Schematic slice viewer ──────────────────────────────────────────────────── */
+
+.neuro-schematic-svg {
+	width: 100%;
+	height: 100%;
+	max-height: 500px;
+	display: block;
+}
+
+.neuro-cell-body {
+	fill: #cccccc;
+	stroke: rgba(0,0,0,0.20);
+	stroke-width: 0.5px;
+}
+
+.neuro-label-line {
+	stroke: rgba(100,100,100,0.45);
+	stroke-width: 0.7;
+}
+
+.neuro-layer-label {
+	font-size: 9.5px;
+	fill: var(--text-muted);
+	font-family: var(--font-interface);
+}
+
+.neuro-hint-label {
+	font-size: 9px;
+	fill: var(--text-faint);
+	font-style: italic;
+	font-family: var(--font-interface);
+}
+
+.neuro-slice-view-labels {
+	display: flex;
+	justify-content: space-between;
+	padding: 2px 4px 0;
+	font-size: 10px;
+	color: var(--text-faint);
+}
+
+.neuro-slice-view-label {
+	flex: 1;
+	text-align: center;
+}
+
+/* ── Two-panel body shell ────────────────────────────────────────────────────── */
+
+.neuro-map-body {
+	display: flex;
+	flex-direction: row-reverse;
+	flex: 1;
+	min-height: 0;
+	gap: 0;
+	overflow: hidden;
+}
+
+/* ── Note Navigator (right panel — DOM order is unchanged; .neuro-map-body
+       uses row-reverse to put it on the right) ───────────────────────────── */
+
+.neuro-note-navigator {
+	width: 200px;
+	flex-shrink: 0;
+	display: flex;
+	flex-direction: column;
+	border-left: 1px solid var(--background-modifier-border);
+	overflow-y: auto;
+	background: var(--background-secondary);
+	font-size: 12px;
+}
+
+.neuro-nav-section-label {
+	padding: 8px 10px 4px;
+	font-size: 10px;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	color: var(--text-faint);
+}
+
+.neuro-nav-item {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	padding: 5px 10px;
+	cursor: pointer;
+	border-radius: 4px;
+	margin: 1px 4px;
+	color: var(--text-normal);
+	transition: background 0.1s;
+	min-width: 0;
+}
+
+.neuro-nav-item:hover {
+	background: var(--background-modifier-hover);
+	color: var(--interactive-accent);
+}
+
+.neuro-nav-item-icon {
+	flex-shrink: 0;
+	font-size: 11px;
+	opacity: 0.7;
+}
+
+.neuro-nav-item-title {
+	flex: 1;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	font-size: 12px;
+}
+
+.neuro-nav-item-badge {
+	flex-shrink: 0;
+	font-size: 9px;
+	padding: 1px 5px;
+	border-radius: 8px;
+	background: var(--background-modifier-border);
+	color: var(--text-faint);
+	white-space: nowrap;
+}
+
+.neuro-nav-item-action {
+	margin-left: auto;
+	opacity: 0;
+	border: none;
+	background: transparent;
+	cursor: pointer;
+	font-size: 12px;
+	line-height: 1;
+	color: var(--text-muted);
+	padding: 2px 6px;
+	border-radius: 4px;
+	flex-shrink: 0;
+	transition: opacity 0.12s ease, background 0.12s ease, color 0.12s ease;
+}
+
+.neuro-nav-item:hover .neuro-nav-item-action,
+.neuro-nav-item-action:focus-visible {
+	opacity: 1;
+}
+
+.neuro-nav-item-action:hover {
+	background: var(--background-modifier-hover);
+	color: var(--text-normal);
+}
+
+.neuro-nav-empty {
+	padding: 12px 10px;
+	font-size: 11px;
+	color: var(--text-faint);
+	font-style: italic;
+	line-height: 1.5;
+}
+
+.neuro-fly-nav-search {
+	width: calc(100% - 16px);
+	margin: 6px 8px 8px;
+	padding: 5px 8px;
+	font-size: 12px;
+	border: 1px solid var(--background-modifier-border);
+	border-radius: 4px;
+	background: var(--background-primary);
+	color: var(--text-normal);
+}
+
+.neuro-fly-nav-search:focus {
+	outline: none;
+	border-color: var(--interactive-accent);
+}
+
+.neuro-fly-nav-list {
+	display: flex;
+	flex-direction: column;
+}
+
+.neuro-fly-nav-eye {
+	opacity: 0.7;
+	margin-left: auto;
+}
+
+.neuro-fly-nav-eye:hover {
+	opacity: 1;
+}
+
+/* ── PickFlyNeuronModal cards ───────────────────────────────────────────────── */
+
+.neuro-pick-fly-row {
+	display: flex;
+	gap: 8px;
+	align-items: center;
+	margin-bottom: 8px;
+}
+
+.neuro-pick-fly-input {
+	flex: 1;
+	padding: 6px 8px;
+	font-size: 13px;
+	border: 1px solid var(--background-modifier-border);
+	border-radius: 4px;
+	background: var(--background-primary);
+	color: var(--text-normal);
+}
+
+.neuro-pick-fly-status {
+	font-size: 11px;
+	color: var(--text-faint);
+	white-space: nowrap;
+}
+
+.neuro-pick-fly-results {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	max-height: 60vh;
+	overflow-y: auto;
+}
+
+.neuro-pick-fly-card {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+	padding: 6px 8px;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: background 0.1s;
+}
+
+.neuro-pick-fly-card:hover {
+	background: var(--background-modifier-hover);
+}
+
+.neuro-pick-fly-preview {
+	flex-shrink: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid var(--background-modifier-border);
+	border-radius: 3px;
+	background: var(--background-secondary);
+	color: var(--text-muted);
+	font-size: 11px;
+}
+
+.neuro-pick-fly-preview.is-loading::after {
+	content: "…";
+	color: var(--text-faint);
+}
+
+.neuro-pick-fly-preview.is-error {
+	color: var(--text-error, #d33);
+}
+
+.neuro-pick-fly-preview-svg {
+	color: var(--interactive-accent);
+	display: block;
+}
+
+.neuro-pick-fly-card-body {
+	flex: 1;
+	min-width: 0;
+}
+
+.neuro-pick-fly-card-top strong {
+	font-size: 13px;
+}
+
+.neuro-pick-fly-card-meta {
+	font-size: 11px;
+	color: var(--text-muted);
+}
+
+.neuro-pick-fly-card-badges {
+	font-size: 10px;
+	color: var(--text-faint);
+	margin-top: 2px;
+}
+
+.neuro-pick-fly-empty {
+	padding: 12px 8px;
+	font-size: 12px;
+	color: var(--text-faint);
+	font-style: italic;
+}
+
+.neuro-nav-add-btn {
+	margin: 6px 8px 8px;
+	width: calc(100% - 16px);
+	font-size: 12px;
+	padding: 5px 8px;
+}
+
+/* ── Canvas Panel (right panel) ──────────────────────────────────────────────── */
+
+.neuro-canvas-panel {
+	flex: 1;
+	min-width: 0;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	position: relative;
+}
+
+/* ── Schematic slice viewer shell ────────────────────────────────────────────── */
+
+.neuro-slice-viewer {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	overflow: hidden;
+}
+
+.neuro-slice-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 6px 12px 4px;
+	font-size: 12px;
+	color: var(--text-muted);
+	border-bottom: 1px solid var(--background-modifier-border);
+	flex-shrink: 0;
+}
+
+.neuro-slice-svg-container {
+	flex: 1;
+	overflow: auto;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	padding: 8px;
+}
+
+.neuro-slice-loading {
+	padding: 20px;
+	color: var(--text-faint);
+	font-style: italic;
+}
+
+.neuro-slice-slider-row {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	padding: 6px 12px 4px;
+	font-size: 11px;
+	color: var(--text-faint);
+	flex-shrink: 0;
+}
+
+.neuro-slice-slider-row input[type="range"] {
+	flex: 1;
+}
+
+/* ── Cell body dot hover states ──────────────────────────────────────────────── */
+
+.neuro-cell-dot-active {
+	cursor: pointer;
+	transition: opacity 0.15s;
+}
+
+.neuro-cell-dot-active:hover {
+	opacity: 0.8;
+}
+
+.neuro-cell-dot-inactive {
+	cursor: crosshair;
+	transition: opacity 0.15s;
+}
+
+.neuro-cell-dot-inactive:hover {
+	opacity: 0.5;
+}
+
+/* ── Connection arrows ───────────────────────────────────────────────────────── */
+
+.neuro-conn-wikilink {
+	stroke: rgba(150, 150, 150, 0.4);
+	stroke-width: 1.5;
+	stroke-dasharray: 4 3;
+	fill: none;
+}
+
+.neuro-conn-explicit {
+	stroke: var(--interactive-accent);
+	stroke-width: 2;
+	fill: none;
+}
+
+.neuro-conn-label {
+	font-size: 9px;
+	fill: var(--text-muted);
+	font-family: var(--font-interface);
+	pointer-events: none;
+}
+
+/* ── StructureTreeModal ──────────────────────────────────────────────────────── */
+
+.neuro-structure-tree-modal .modal-content {
+	padding: 16px;
+}
+
+.neuro-tree-search {
+	width: 100%;
+	padding: 6px 10px;
+	border-radius: 6px;
+	border: 1px solid var(--background-modifier-border);
+	background: var(--background-primary);
+	color: var(--text-normal);
+	font-size: 13px;
+	margin-bottom: 10px;
+	box-sizing: border-box;
+}
+
+.neuro-structure-tree {
+	max-height: 60vh;
+	overflow-y: auto;
+	border: 1px solid var(--background-modifier-border);
+	border-radius: 6px;
+}
+
+.neuro-tree-row {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	padding: 5px 8px;
+	cursor: pointer;
+	border-radius: 4px;
+	font-size: 12px;
+	color: var(--text-normal);
+}
+
+.neuro-tree-row:hover,
+.neuro-tree-selectable:hover {
+	background: var(--background-modifier-hover);
+}
+
+.neuro-tree-toggle {
+	width: 14px;
+	flex-shrink: 0;
+	cursor: pointer;
+	color: var(--text-faint);
+	font-size: 10px;
+	user-select: none;
+}
+
+.neuro-tree-swatch {
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	flex-shrink: 0;
+	border: 1px solid rgba(0,0,0,0.15);
+}
+
+.neuro-tree-name {
+	flex: 1;
+	min-width: 0;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.neuro-tree-acronym {
+	color: var(--text-faint);
+	font-size: 11px;
+}
+
+.neuro-tree-empty {
+	padding: 16px;
+	color: var(--text-faint);
+	font-style: italic;
+	text-align: center;
+}
+
+/* ── Structure preview in CreateBrainRegionNoteModal ─────────────────────────── */
+
+.neuro-structure-preview {
+	padding: 4px 0;
+}
+
+.neuro-structure-preview-inner {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	padding: 6px 10px;
+	background: var(--background-secondary);
+	border-radius: 6px;
+	font-size: 12px;
+}
+
+/* ── Allen section viewer ───────────────────────────────────────────────────── */
+
+.neuro-section-viewer {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+.neuro-section-header {
+	display: flex;
+	align-items: center;
+	padding: 6px 12px 4px;
+	border-bottom: 1px solid var(--background-modifier-border);
+	flex-shrink: 0;
+}
+
+.neuro-section-title {
+	font-size: 13px;
+	font-weight: 600;
+	color: var(--text-normal);
+}
+
+.neuro-section-svg-wrap {
+	flex: 1;
+	overflow: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 8px;
+	position: relative;
+}
+
+.neuro-section-loading,
+.neuro-section-empty,
+.neuro-section-error {
+	padding: 24px;
+	color: var(--text-faint);
+	font-style: italic;
+	text-align: center;
+}
+
+.neuro-section-error {
+	color: var(--text-error);
+}
+
+.neuro-section-slider-row {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	padding: 6px 12px 4px;
+	font-size: 11px;
+	color: var(--text-faint);
+	flex-shrink: 0;
+	border-top: 1px solid var(--background-modifier-border);
+}
+
+.neuro-section-slider {
+	flex: 1;
+	accent-color: var(--interactive-accent);
+}
+
+.neuro-section-ap-label {
+	min-width: 70px;
+	text-align: right;
+	color: var(--text-muted);
+}
+
+/* ── Viewpoint picker (middle step between 3D click and slice scrubber) ────── */
+
+.neuro-viewpoint-picker {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	overflow-y: auto;
+	padding: 14px 16px;
+	box-sizing: border-box;
+}
+
+.neuro-viewpoint-picker-header {
+	margin-bottom: 14px;
+}
+
+.neuro-viewpoint-picker-title {
+	margin: 0 0 4px;
+	font-size: 16px;
+	color: var(--text-normal);
+}
+
+.neuro-viewpoint-picker-sub {
+	margin: 0;
+	font-size: 12px;
+	color: var(--text-muted);
+}
+
+.neuro-viewpoint-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+	gap: 10px;
+}
+
+.neuro-viewpoint-card {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	padding: 12px;
+	border: 1px solid var(--background-modifier-border);
+	border-radius: 8px;
+	background: var(--background-secondary);
+	cursor: pointer;
+	transition: border-color 0.12s, background 0.12s, transform 0.12s;
+	min-height: 72px;
+}
+
+.neuro-viewpoint-card:hover {
+	border-color: var(--interactive-accent);
+	background: var(--background-modifier-hover);
+}
+
+.neuro-viewpoint-card-preview {
+	width: 100%;
+	aspect-ratio: 1 / 1;
+	background: var(--background-primary);
+	border: 1px solid var(--background-modifier-border);
+	border-radius: 4px;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 4px;
+}
+
+.neuro-viewpoint-card-svg {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+.neuro-viewpoint-card-title {
+	font-size: 13px;
+	font-weight: 600;
+	color: var(--text-normal);
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
+
+.neuro-viewpoint-card-desc {
+	font-size: 11px;
+	color: var(--text-muted);
+}
+
+.neuro-viewpoint-card--new {
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	border-style: dashed;
+	color: var(--text-muted);
+}
+
+.neuro-viewpoint-card--new:hover {
+	color: var(--interactive-accent);
+}
+
+.neuro-viewpoint-card-plus {
+	font-size: 28px;
+	line-height: 1;
+	color: var(--text-faint);
+}
+
+.neuro-viewpoint-card--new:hover .neuro-viewpoint-card-plus {
+	color: var(--interactive-accent);
+}
+
+/* ── Viewpoint viewer (renders saved viewpoint SVG) ────────────────────────── */
+
+.neuro-viewpoint-viewer {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+.neuro-viewpoint-header {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	padding: 6px 12px 4px;
+	border-bottom: 1px solid var(--background-modifier-border);
+	flex-shrink: 0;
+}
+
+.neuro-viewpoint-title {
+	font-size: 13px;
+	font-weight: 600;
+	color: var(--text-normal);
+}
+
+.neuro-viewpoint-sub {
+	font-size: 11px;
+	color: var(--text-faint);
+}
+
+.neuro-viewpoint-header-spacer {
+	flex: 1;
+}
+
+.neuro-viewpoint-ctrl-group {
+	display: flex;
+	gap: 4px;
+}
+
+.neuro-viewpoint-ctrl-btn {
+	font-size: 14px;
+	line-height: 1;
+	width: 26px;
+	height: 26px;
+	padding: 0;
+	background: var(--background-modifier-hover);
+	color: var(--text-normal);
+	border: 1px solid var(--background-modifier-border);
+	border-radius: 4px;
+	cursor: pointer;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.neuro-viewpoint-ctrl-btn:hover {
+	background: var(--background-modifier-active-hover);
+	color: var(--interactive-accent);
+}
+
+.neuro-viewpoint-open-btn,
+.neuro-viewpoint-picker-btn {
+	font-size: 11px;
+	padding: 3px 10px;
+	background: var(--background-modifier-hover);
+	color: var(--text-normal);
+	border: 1px solid var(--background-modifier-border);
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.neuro-viewpoint-open-btn:hover,
+.neuro-viewpoint-picker-btn:hover {
+	background: var(--background-modifier-active-hover);
+}
+
+.neuro-viewpoint-svg-wrap {
+	flex: 1;
+	background: var(--background-primary);
+	border-radius: 6px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 12px;
+	margin: 10px;
+	position: relative;
+	overflow: hidden;
+	min-height: 0;
+}
+
+.neuro-viewpoint-panel-title {
+	margin: 0;
+	font-size: 13px;
+	font-weight: 600;
+	color: var(--text-normal);
+}
+
+.neuro-viewpoint-panel-sublabel {
+	margin: 8px 0 4px;
+	font-size: 11px;
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+	color: var(--text-muted);
+}
+
+.neuro-viewpoint-panel-head {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.neuro-viewpoint-deselect-btn {
+	font-size: 15px;
+	line-height: 1;
+	padding: 0 7px;
+	background: transparent;
+	color: var(--text-muted);
+	border: none;
+	cursor: pointer;
+	border-radius: 4px;
+}
+
+.neuro-viewpoint-deselect-btn:hover {
+	background: var(--background-modifier-hover);
+	color: var(--text-normal);
+}
+
+.neuro-viewpoint-svg {
+	width: 100%;
+	height: 100%;
+	max-height: 640px;
+}
+
+.neuro-viewpoint-label {
+	font-size: 11px;
+	font-weight: 500;
+	fill: var(--text-normal);
+	font-family: var(--font-interface);
+	paint-order: stroke;
+	stroke: var(--background-primary);
+	stroke-width: 3px;
+	stroke-linejoin: round;
+}
+
+.neuro-viewpoint-loading,
+.neuro-viewpoint-error {
+	padding: 24px;
+	color: var(--text-faint);
+	font-style: italic;
+	text-align: center;
+}
+
+.neuro-viewpoint-error {
+	color: var(--text-error);
+}
+
+.neuro-viewpoint-tooltip {
+	position: absolute;
+	pointer-events: none;
+	background: var(--background-secondary);
+	border: 1px solid var(--background-modifier-border);
+	border-radius: 5px;
+	padding: 5px 9px;
+	font-size: 12px;
+	font-weight: 500;
+	color: var(--text-normal);
+	white-space: nowrap;
+	z-index: 100;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+/* ── Viewpoint polygon styling (theme-aware) ───────────────────────────────── */
+
+.neuro-viewpoint-layer {
+	fill: var(--background-modifier-hover);
+	stroke: var(--text-muted);
+	stroke-width: 1.5;
+	transition: fill 0.12s ease;
+	cursor: pointer;
+}
+
+/* Default darker for layers that are predominantly cell bodies (pyramidal,
+   granule, Purkinje, mitral, …) — matches the Allen atlas visual convention. */
+.neuro-viewpoint-layer.is-cell-dense {
+	fill: var(--background-modifier-active-hover);
+}
+
+.neuro-viewpoint-layer.is-hover,
+.neuro-viewpoint-layer:hover {
+	fill: var(--interactive-hover);
+}
+
+.neuro-viewpoint-layer.is-focused {
+	fill: var(--interactive-accent);
+	fill-opacity: 0.30;
+	stroke: var(--interactive-accent);
+	stroke-width: 2.5;
+}
+
+/* ── Inline cell overlay (glyph + morphology) ──────────────────────────────── */
+
+.neuro-cell-soma {
+	stroke: var(--background-primary);
+	stroke-width: 1.5;
+}
+
+.neuro-cell-arbor-dendrite {
+	stroke-dasharray: 6 3;
+	fill: none;
+}
+
+.neuro-cell-arbor-axon {
+	fill: none;
+}
+
+.neuro-cell-view-list-items {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+}
+
+.neuro-cell-view-list-item {
+	padding: 8px 10px;
+	border-radius: 5px;
+	background: var(--background-primary);
+	cursor: pointer;
+	transition: background 0.12s ease;
+}
+
+.neuro-cell-view-list-item:hover {
+	background: var(--background-modifier-hover);
+}
+
+.neuro-cell-view-list-title {
+	font-weight: 500;
+	color: var(--text-normal);
+}
+
+.neuro-cell-view-list-meta {
+	font-size: 11px;
+	color: var(--text-muted);
+	margin-top: 2px;
+}
+
+.neuro-cell-view-empty {
+	color: var(--text-faint);
+	font-style: italic;
+	font-size: 12px;
+}
+
+.neuro-cell-view-add-btn {
+	margin-top: auto;
+}
+
+/* ── "Use this slice" action on the section viewer slider row ──────────────── */
+
+.neuro-section-use-slice-btn {
+	margin-left: 8px;
+	font-size: 11px;
+	padding: 4px 10px;
+	white-space: nowrap;
+}
+
+/* ── 3D viewer layer toggle panel ───────────────────────────────────────────── */
+
+.neuro-layer-panel {
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+	background: var(--background-secondary);
+	border: 1px solid var(--background-modifier-border);
+	border-radius: 6px;
+	padding: 6px 8px;
+	min-width: 140px;
+	max-width: 200px;
+	font-size: 11px;
+	color: var(--text-muted);
+	z-index: 10;
+	backdrop-filter: blur(4px);
+}
+
+.neuro-layer-row {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	padding: 3px 0;
+}
+
+.neuro-layer-label {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	flex: 1;
+}
+
+/* ── Header help buttons ──────────────────────────────────────────────────── */
+
+.neuro-viewpoint-help-btn,
+.neuro-help-btn {
+	font-weight: 700;
+}
+
+.neuro-help-btn {
+	font-size: 0.85em;
+	padding: 4px 10px;
+	cursor: pointer;
+}
+
+/* Picker header isn't flex by default — pin the help button to the top-right. */
+.neuro-viewpoint-picker-header {
+	position: relative;
+}
+.neuro-viewpoint-picker-help-btn {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+/* Section + cell headers are already flex; push the help button to the end. */
+.neuro-section-help-btn,
+.neuro-cell-view-help-btn {
+	margin-left: auto;
+}
+
+/* The 3D viewer's help button reuses .neuro-viewer-btn for its look; this
+   rule just emphasises the glyph the same way as in other views. */
+.neuro-viewer-help-btn {
+	font-weight: 700;
+	margin-top: 4px;
+}
+
+/* ── Side-panel sections (collapsibles) ───────────────────────────────────── */
+
+.neuro-side-section {
+	border-top: 1px solid var(--background-modifier-border);
+	padding-top: 8px;
+	margin-top: 4px;
+}
+
+.neuro-side-section:first-of-type {
+	border-top: none;
+	padding-top: 0;
+	margin-top: 0;
+}
+
+.neuro-side-section-head {
+	display: flex;
+	align-items: center;
+	font-weight: 600;
+	cursor: pointer;
+	font-size: 13px;
+	color: var(--text-normal);
+	list-style: none;
+	padding: 2px 0;
+}
+
+.neuro-side-section-head::-webkit-details-marker { display: none; }
+
+.neuro-side-section-head::before {
+	content: "▸";
+	margin-right: 6px;
+	font-size: 10px;
+	color: var(--text-muted);
+	transition: transform 120ms ease;
+}
+
+.neuro-side-section[open] > .neuro-side-section-head::before {
+	transform: rotate(90deg);
+}
+
+/* ── Topic list ───────────────────────────────────────────────────────────── */
+
+.neuro-topic-search {
+	width: 100%;
+	margin: 6px 0 8px;
+	padding: 4px 6px;
+	border-radius: 4px;
+	border: 1px solid var(--background-modifier-border);
+	background: var(--background-primary);
+	color: var(--text-normal);
+	font-size: 12px;
+}
+
+.neuro-topic-list-wrap {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+}
+
+.neuro-topic-theme-group {
+	margin-bottom: 6px;
+}
+
+.neuro-topic-theme-label {
+	font-size: 0.75em;
+	color: var(--text-muted);
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	margin-bottom: 3px;
+}
+
+.neuro-topic-row {
+	padding: 4px 6px;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.neuro-topic-row:hover {
+	background: var(--background-modifier-hover);
+}
+
+.neuro-topic-row-title {
+	font-weight: 500;
+	font-size: 12.5px;
+}
+
+.neuro-topic-row-summary {
+	font-size: 0.85em;
+	color: var(--text-muted);
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.neuro-topic-show-more {
+	font-size: 0.85em;
+	color: var(--text-accent);
+	cursor: pointer;
+	padding: 2px 6px;
+}
+
+.neuro-topic-show-more:hover {
+	text-decoration: underline;
+}
+
+.neuro-topic-add-btn {
+	margin-top: 6px;
+	width: 100%;
+}
+
+/* ── CreateTopicModal (chips, relation rows) ──────────────────────────────── */
+
+.neuro-topic-modal .neuro-topic-chip-list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 4px;
+	margin: 6px 0;
+	min-height: 24px;
+}
+
+.neuro-topic-chip {
+	display: inline-flex;
+	align-items: center;
+	gap: 4px;
+	padding: 2px 8px;
+	background: var(--background-modifier-hover);
+	border-radius: 10px;
+	font-size: 12px;
+}
+
+.neuro-topic-chip-empty {
+	font-size: 12px;
+	color: var(--text-muted);
+	font-style: italic;
+}
+
+.neuro-topic-chip-remove {
+	background: transparent;
+	border: none;
+	color: var(--text-muted);
+	cursor: pointer;
+	font-size: 14px;
+	line-height: 1;
+	padding: 0 2px;
+}
+
+.neuro-topic-chip-remove:hover { color: var(--text-error); }
+
+.neuro-topic-scope-add {
+	display: flex;
+	gap: 6px;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-bottom: 10px;
+}
+
+.neuro-topic-scope-input {
+	padding: 3px 6px;
+	border-radius: 4px;
+	border: 1px solid var(--background-modifier-border);
+	background: var(--background-primary);
+	color: var(--text-normal);
+	font-size: 12px;
+	flex: 1;
+	min-width: 80px;
+}
+
+.neuro-topic-relation-list {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	margin: 6px 0;
+}
+
+.neuro-topic-relation-row {
+	display: flex;
+	gap: 6px;
+	align-items: center;
+}
+
+.neuro-topic-relation-kind {
+	padding: 3px 6px;
+	border-radius: 4px;
+	border: 1px solid var(--background-modifier-border);
+	background: var(--background-primary);
+	color: var(--text-normal);
+	font-size: 12px;
+}
+
+.neuro-topic-relation-note {
+	flex: 1;
+	padding: 3px 6px;
+	border-radius: 4px;
+	border: 1px solid var(--background-modifier-border);
+	background: var(--background-primary);
+	color: var(--text-normal);
+	font-size: 12px;
+}
+
+.neuro-topic-add-relation-btn {
+	margin-top: 4px;
+}
+
+/* ── Help modal ───────────────────────────────────────────────────────────── */
+
+.neuro-help-modal {
+	max-width: 640px;
+}
+
+.neuro-help-modal h3 {
+	margin-top: 18px;
+	margin-bottom: 6px;
+	color: var(--text-normal);
+}
+
+.neuro-help-modal p,
+.neuro-help-modal li {
+	line-height: 1.5;
+	color: var(--text-normal);
+}
+
+.neuro-help-modal ol,
+.neuro-help-modal ul {
+	padding-left: 22px;
+	margin: 4px 0;
+}
+
+.neuro-help-modal code {
+	background: var(--background-secondary);
+	padding: 1px 5px;
+	border-radius: 3px;
+	font-size: 0.9em;
+}
+
+.neuro-help-modal em {
+	color: var(--text-muted);
+	font-style: normal;
+	margin-left: 4px;
+}
+
+.neuro-help-modal-buttons {
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 16px;
+}
+
+/* ── Compartment toggles (ViewpointView focused-layer section) ───────────── */
+.neuro-compartment-toggles {
+	display: flex;
+	gap: 6px;
+	align-items: center;
+	flex-wrap: wrap;
+	margin: 8px 0;
+}
+.neuro-compartment-toggles-label {
+	font-size: 0.85em;
+	color: var(--text-muted);
+	margin-right: 2px;
+}
+.neuro-compartment-toggle {
+	font-size: 0.85em;
+	padding: 2px 10px;
+	border-radius: 999px;
+	border: 1px solid var(--background-modifier-border);
+	background: var(--background-secondary);
+	color: var(--text-muted);
+	cursor: pointer;
+}
+.neuro-compartment-toggle.is-active {
+	background: var(--interactive-accent);
+	color: var(--text-on-accent);
+	border-color: var(--interactive-accent);
+}
+
+/* ── AddCellModal ────────────────────────────────────────────────────────── */
+.neuro-add-cell-modal { min-width: 520px; }
+.neuro-add-cell-status { margin: 4px 0; }
+.neuro-add-cell-loading { color: var(--text-muted); font-style: italic; }
+.neuro-add-cell-error   { color: var(--text-error); }
+.neuro-add-cell-count   { color: var(--text-muted); font-size: 0.85em; margin: 4px 0 8px; }
+.neuro-add-cell-list {
+	max-height: 360px;
+	overflow-y: auto;
+	border: 1px solid var(--background-modifier-border);
+	border-radius: 4px;
+}
+.neuro-add-cell-row {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	padding: 8px 10px;
+	border-bottom: 1px solid var(--background-modifier-border);
+}
+.neuro-add-cell-row:last-child { border-bottom: none; }
+.neuro-add-cell-info { flex: 1; min-width: 0; }
+.neuro-add-cell-name { font-weight: 500; }
+.neuro-add-cell-meta {
+	font-size: 0.85em;
+	color: var(--text-muted);
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.neuro-add-cell-badge {
+	font-size: 0.75em;
+	padding: 2px 6px;
+	border-radius: 3px;
+	background: var(--background-secondary);
+	color: var(--text-muted);
+}
+.neuro-add-cell-use-btn { flex-shrink: 0; }
+.neuro-add-cell-thumb {
+	flex-shrink: 0;
+	width: 64px;
+	height: 64px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--text-muted);
+	background: var(--background-primary-alt);
+	border-radius: 4px;
+	overflow: hidden;
+}
+.neuro-add-cell-thumb-svg {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+.neuro-add-cell-thumb-placeholder {
+	width: 14px;
+	height: 14px;
+	border-radius: 50%;
+	background: var(--background-modifier-border);
+}
+.neuro-add-cell-thumb-placeholder.is-failed {
+	background: var(--text-error);
+	opacity: 0.4;
+}
+
+/* ── Subregion list inside Subregions section ───────────────────────────── */
+.neuro-subregion-list { display: flex; flex-direction: column; gap: 6px; margin-top: 4px; }
+.neuro-subregion-row {
+	border-radius: 4px;
+	background: var(--background-secondary);
+	padding: 6px 8px;
+}
+.neuro-subregion-row-head {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	gap: 6px;
+}
+.neuro-subregion-row-title  { font-weight: 500; font-size: 0.92em; }
+.neuro-subregion-row-count {
+	font-size: 0.78em;
+	color: var(--text-muted);
+	background: var(--background-modifier-border);
+	border-radius: 999px;
+	padding: 1px 7px;
+}
+.neuro-subregion-cells {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+	margin-top: 4px;
+}
+.neuro-subregion-cell-row {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	font-size: 0.88em;
+}
+.neuro-subregion-cell-toggle { margin: 0; cursor: pointer; }
+.neuro-subregion-cell-label  { cursor: pointer; flex: 1; }
+.neuro-subregion-cell-label:hover { text-decoration: underline; }
+.neuro-subregion-cell-edit-btn,
+.neuro-subregion-cell-drill-btn {
+	background: transparent;
+	border: none;
+	cursor: pointer;
+	color: var(--text-muted);
+	font-size: 0.95em;
+	padding: 0 2px;
+	line-height: 1;
+}
+.neuro-subregion-cell-edit-btn:hover,
+.neuro-subregion-cell-drill-btn:hover { color: var(--text-normal); }
+
+/* ── Placement mode ─────────────────────────────────────────────────────── */
+.neuro-placement-preview {
+	opacity: 0.6;
+	cursor: move;
+	pointer-events: all;
+}
+.neuro-placement-controls {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+	margin-top: 6px;
+}
+.neuro-placement-row {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	font-size: 0.88em;
+}
+.neuro-placement-row span { width: 60px; color: var(--text-muted); }
+.neuro-placement-row input[type="text"],
+.neuro-placement-row select {
+	flex: 1;
+	min-width: 0;
+}
+.neuro-placement-row input[type="number"] {
+	width: 90px;
+}
+.neuro-placement-row input[type="range"] {
+	flex: 1;
+	min-width: 0;
+}
+.neuro-placement-readout {
+	width: auto;
+	min-width: 42px;
+	text-align: right;
+	font-variant-numeric: tabular-nums;
+	color: var(--text-normal);
+}
+.neuro-placement-help {
+	font-size: 0.78em;
+	color: var(--text-muted);
+	font-style: italic;
+	margin-top: 4px;
+}
+.neuro-placement-buttons {
+	display: flex;
+	gap: 8px;
+	margin-top: 6px;
+}
+
+.neuro-viewpoint-deselect-btn-text {
+	display: block;
+	margin-top: 8px;
+	background: transparent;
+	color: var(--text-muted);
+	border: 1px solid var(--background-modifier-border);
+	font-size: 0.85em;
+}
+
+/* ── AddCellModal fallback banner ───────────────────────────────────────── */
+.neuro-add-cell-banner.is-fallback {
+	margin: 8px 0;
+	padding: 8px 10px;
+	border-left: 3px solid var(--text-warning, #d4a017);
+	background: var(--background-secondary);
+	border-radius: 3px;
+	font-size: 0.88em;
+	color: var(--text-normal);
+}
+
+/* ── Rotation slider (viewpoint header) ──────────────────────────────────── */
+.neuro-viewpoint-ctrl-label {
+	font-size: 0.85em;
+	color: var(--text-muted);
+	margin-right: 4px;
+}
+.neuro-viewpoint-rot-slider {
+	width: 140px;
+	vertical-align: middle;
+}
+.neuro-viewpoint-rot-readout {
+	display: inline-block;
+	font-variant-numeric: tabular-nums;
+	width: 3.2em;
+	text-align: right;
+	font-size: 0.85em;
+	color: var(--text-muted);
+}
+
+/* ── Clickable cell glyphs in viewpoints ─────────────────────────────────── */
+.neuro-cell-clickable { cursor: pointer; }
+.neuro-cell-clickable:hover { filter: brightness(1.25); }
+
+/* ── Cell view (third-level navigation) ──────────────────────────────────── */
+.neuro-cell-view {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+.neuro-cell-view-header {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 8px 12px;
+	border-bottom: 1px solid var(--background-modifier-border);
+	flex-shrink: 0;
+}
+.neuro-cell-view-title { font-weight: 600; font-size: 1.05em; }
+.neuro-cell-view-sub {
+	font-size: 0.85em;
+	color: var(--text-muted);
+	padding: 2px 8px;
+	background: var(--background-secondary);
+	border-radius: 10px;
+}
+.neuro-cell-view-spacer { flex: 1; }
+.neuro-cell-view-open-btn {
+	font-size: 0.85em;
+	padding: 4px 10px;
+}
+.neuro-cell-view-svg-wrap {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	background: var(--background-primary);
+	min-height: 0;
+}
+.neuro-cell-view-svg {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+.neuro-cell-view-svg.has-selection
+	> g.neuro-cell-view-compartment:not(.is-selected) {
+	opacity: 0.22;
+}
+.neuro-cell-view-compartment { cursor: pointer; transition: opacity 120ms ease; }
+.neuro-cell-view-compartment:hover { filter: brightness(1.25); }
+
+.neuro-cell-view-chips {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+}
+.neuro-cell-view-chip {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	padding: 5px 8px;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: background 120ms ease;
+}
+.neuro-cell-view-chip:hover  { background: var(--background-modifier-hover); }
+.neuro-cell-view-chip.is-selected {
+	background: var(--background-modifier-active-hover);
+}
+.neuro-cell-view-chip-swatch {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	flex-shrink: 0;
+}
+
+.neuro-cell-view-topic-list {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+}
+.neuro-cell-view-topic-row {
+	padding: 5px 8px;
+	border-radius: 4px;
+	cursor: pointer;
+}
+.neuro-cell-view-topic-row:hover { background: var(--background-modifier-hover); }
+.neuro-cell-view-topic-name { font-size: 0.92em; }
+.neuro-cell-view-empty-row {
+	color: var(--text-faint);
+	font-size: 0.85em;
+	margin: 0;
+	padding: 4px 8px;
+}
+.neuro-cell-view-add-btn {
+	margin-top: 10px;
+	width: 100%;
+}
+.neuro-cell-view-empty,
+.neuro-cell-view-error,
+.neuro-cell-view-loading {
+	color: var(--text-muted);
+	padding: 20px;
+	text-align: center;
+}
+.neuro-cell-view-error { color: var(--text-error); }
+
+/* ── CreateTopicModal compartment dropdown ───────────────────────────────── */
+.neuro-topic-scope-compartment {
+	margin-left: 4px;
+	margin-right: 4px;
+}
+
+/* ── Cross-view search ──────────────────────────────────────────────────────── */
+
+.neuro-canvas-host {
+	flex: 1;
+	min-height: 0;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	position: relative;
+}
+
+.neuro-search-bar {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	padding: 6px 10px;
+	border-top: 1px solid var(--background-modifier-border);
+	background: var(--background-secondary);
+	flex-shrink: 0;
+}
+.neuro-search-bar-icon {
+	font-size: 0.95em;
+	color: var(--text-muted);
+}
+.neuro-search-bar-input {
+	flex: 1;
+	height: 28px;
+	padding: 2px 8px;
+	font-size: 0.92em;
+	background: var(--background-primary);
+	color: var(--text-normal);
+	border: 1px solid var(--background-modifier-border);
+	border-radius: 4px;
+}
+.neuro-search-bar-input:focus {
+	outline: 1px solid var(--interactive-accent);
+}
+.neuro-search-bar-clear {
+	background: transparent;
+	border: none;
+	color: var(--text-muted);
+	cursor: pointer;
+	font-size: 1.1em;
+	padding: 0 6px;
+}
+.neuro-search-bar-clear:hover { color: var(--text-normal); }
+
+.neuro-search-bar-actions {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+}
+
+.neuro-create-note-btn {
+	font-size: 0.9em;
+	padding: 4px 10px;
+	white-space: nowrap;
+}
+
+/* ── Create-note modal ──────────────────────────────────────────────────── */
+
+.neuro-create-note-modal {
+	width: min(80vw, 900px);
+	max-width: 900px;
+}
+
+.neuro-create-note-content {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	min-height: 70vh;
+}
+
+.neuro-create-note-row {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+}
+
+.neuro-create-note-row--body {
+	flex: 1;
+	min-height: 0;
+}
+
+.neuro-create-note-label {
+	font-size: 0.85em;
+	color: var(--text-muted);
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+}
+
+.neuro-create-note-title {
+	width: 100%;
+	height: 32px;
+	padding: 4px 10px;
+	font-size: 1em;
+	background: var(--background-primary);
+	color: var(--text-normal);
+	border: 1px solid var(--background-modifier-border);
+	border-radius: 4px;
+}
+
+.neuro-create-note-chips {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px;
+}
+
+.neuro-create-note-chip {
+	display: inline-flex;
+	align-items: center;
+	gap: 4px;
+	padding: 3px 8px;
+	background: var(--background-secondary);
+	border-radius: 12px;
+	font-size: 0.88em;
+}
+
+.neuro-create-note-chip-remove {
+	background: transparent;
+	border: none;
+	color: var(--text-muted);
+	cursor: pointer;
+	font-size: 1.05em;
+	padding: 0 2px;
+	line-height: 1;
+}
+
+.neuro-create-note-chip-remove:hover { color: var(--text-normal); }
+
+.neuro-create-note-chip-add {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	margin-top: 2px;
+}
+
+.neuro-create-note-chip-input {
+	flex: 1;
+	height: 26px;
+	padding: 2px 8px;
+	font-size: 0.88em;
+	background: var(--background-primary);
+	color: var(--text-normal);
+	border: 1px solid var(--background-modifier-border);
+	border-radius: 4px;
+}
+
+.neuro-create-note-add-region {
+	font-size: 0.85em;
+	padding: 4px 10px;
+	cursor: pointer;
+}
+
+.neuro-create-note-body {
+	flex: 1;
+	min-height: 40vh;
+	resize: vertical;
+	padding: 8px 10px;
+	font-family: var(--font-monospace, monospace);
+	font-size: 0.92em;
+	background: var(--background-primary);
+	color: var(--text-normal);
+	border: 1px solid var(--background-modifier-border);
+	border-radius: 4px;
+}
+
+.neuro-create-note-actions {
+	display: flex;
+	justify-content: flex-end;
+	gap: 8px;
+	margin-top: 4px;
+}
+
+.neuro-slice-picker-toolbar {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px 16px;
+	padding: 8px 10px;
+	border-bottom: 1px solid var(--background-modifier-border);
+	background: var(--background-secondary);
+}
+.neuro-slice-picker-label {
+	font-size: 12px;
+	color: var(--text-muted);
+}
+.neuro-slice-picker-toggle {
+	display: inline-flex;
+	border: 1px solid var(--background-modifier-border);
+	border-radius: 6px;
+	overflow: hidden;
+}
+.neuro-slice-picker-btn {
+	background: var(--background-primary);
+	color: var(--text-normal);
+	border: none;
+	padding: 4px 10px;
+	font-size: 12px;
+	cursor: pointer;
+}
+.neuro-slice-picker-btn + .neuro-slice-picker-btn {
+	border-left: 1px solid var(--background-modifier-border);
+}
+.neuro-slice-picker-btn.is-active {
+	background: var(--interactive-accent);
+	color: var(--text-on-accent);
+}
+.neuro-slice-viewer-host {
+	flex: 1;
+	min-height: 0;
+	display: flex;
+	flex-direction: column;
+}
+
+.neuro-search-results {
+	position: absolute;
+	top: 52px;
+	right: 8px;
+	width: 280px;
+	max-height: calc(100% - 60px);
+	overflow-y: auto;
+	background: var(--background-primary);
+	border: 1px solid var(--background-modifier-border);
+	border-radius: 6px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+	padding: 8px 10px;
+	z-index: 30;
+}
+.neuro-search-results.is-empty { display: none; }
+.neuro-search-results-head {
+	font-size: 0.82em;
+	color: var(--text-muted);
+	margin-bottom: 6px;
+}
+.neuro-search-result-row {
+	padding: 6px 4px;
+	border-radius: 4px;
+	cursor: pointer;
+}
+.neuro-search-result-row:hover { background: var(--background-modifier-hover); }
+.neuro-search-result-title {
+	font-size: 0.92em;
+	font-weight: 500;
+	color: var(--text-normal);
+}
+.neuro-search-result-snippet {
+	font-size: 0.78em;
+	color: var(--text-muted);
+	margin-top: 2px;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
+
+/* ── 3D markers / callouts ──────────────────────────────────────────────── */
+
+.neuro-search-callouts-3d {
+	position: absolute;
+	inset: 0;
+	pointer-events: none;
+	z-index: 25;
+}
+.neuro-search-callout {
+	position: absolute;
+	pointer-events: auto;
+	width: 220px;
+	max-height: 200px;
+	overflow-y: auto;
+	background: var(--background-primary);
+	border: 1px solid var(--background-modifier-border);
+	border-radius: 6px;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+	padding: 6px 8px;
+	font-size: 0.85em;
+}
+.neuro-search-callout-head {
+	font-size: 0.78em;
+	color: var(--text-muted);
+	margin-bottom: 4px;
+}
+.neuro-search-callout-row {
+	padding: 4px;
+	border-radius: 3px;
+	cursor: pointer;
+}
+.neuro-search-callout-row:hover { background: var(--background-modifier-hover); }
+.neuro-search-callout-title {
+	font-weight: 500;
+	color: var(--text-normal);
+}
+.neuro-search-callout-snippet {
+	font-size: 0.78em;
+	color: var(--text-muted);
+	margin-top: 2px;
+}
+.neuro-search-lines-3d {
+	position: absolute;
+	top: 0;
+	left: 0;
+	pointer-events: none;
+	z-index: 24;
+}
+
+/* ── Search-result preview overlay (HTML on top of the SVG) ─────────────── */
+
+.neuro-search-preview-overlay {
+	position: absolute;
+	inset: 0;
+	pointer-events: none;
+	z-index: 5;
+}
+
+.neuro-search-preview-lines {
+	position: absolute;
+	inset: 0;
+	pointer-events: none;
+}
+.neuro-search-preview-line {
+	stroke: var(--text-muted, #888);
+	stroke-width: 1.2;
+	stroke-dasharray: 3 3;
+	opacity: 0.7;
+}
+
+.neuro-search-preview-dot {
+	position: absolute;
+	width: 12px;
+	height: 12px;
+	margin-left: -6px;
+	margin-top: -6px;
+	border-radius: 50%;
+	background: #000;
+	border: 2px solid #fff;
+	box-shadow: 0 1px 4px rgba(0,0,0,0.4);
+	cursor: pointer;
+	pointer-events: auto;
+	transition: transform 0.12s ease;
+}
+.neuro-search-preview-dot:hover,
+.neuro-search-preview-dot.is-promoted {
+	transform: scale(1.25);
+}
+
+.neuro-search-preview-card-wrap {
+	position: absolute;
+	transform: translate(-50%, -50%);
+	pointer-events: auto;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.18s ease;
+	z-index: 10;
+}
+.neuro-search-preview-card-wrap.is-visible {
+	opacity: 1;
+	visibility: visible;
+}
+
+/* Entrance animation: dot fades in (0–300ms), then the leader line draws
+ * out from the dot (300–800ms via stroke-dashoffset), then the card fades
+ * in (800–1200ms). Each piece carries `is-entering` only for its first
+ * mount; the class is harmless to leave on after the animation runs once. */
+@keyframes neuro-dot-enter {
+	from { opacity: 0; transform: scale(0.2); }
+	to   { opacity: 1; transform: scale(1); }
+}
+@keyframes neuro-line-fade {
+	from { opacity: 0; }
+	to   { opacity: 0.7; }
+}
+@keyframes neuro-card-enter {
+	from { opacity: 0; }
+	to   { opacity: 1; }
+}
+.neuro-search-preview-dot.is-entering {
+	animation: neuro-dot-enter 300ms ease-out 0ms both;
+}
+.neuro-search-preview-line.is-entering {
+	animation: neuro-line-fade 400ms ease-out 300ms both;
+}
+.neuro-search-preview-card-wrap.is-entering.is-visible {
+	animation: neuro-card-enter 400ms ease-out 700ms both;
+}
+
+.neuro-preview-card {
+	min-width: 220px;
+	max-width: 320px;
+	background: var(--background-primary);
+	border: 1px solid var(--background-modifier-border);
+	border-radius: 6px;
+	box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+	padding: 8px 10px;
+	font-size: 12px;
+	color: var(--text-normal);
+}
+
+.neuro-preview-card-header {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 4px;
+}
+.neuro-preview-card-title {
+	font-weight: 600;
+}
+
+.neuro-preview-card-regions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 4px;
+	margin-bottom: 6px;
+}
+.neuro-preview-card-region-chip {
+	font-size: 10px;
+	padding: 1px 6px;
+	border-radius: 8px;
+	background: var(--background-modifier-hover);
+	color: var(--text-muted);
+}
+
+.neuro-preview-card-list {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+}
+.neuro-preview-card-list.is-scrollable {
+	max-height: 220px;
+	overflow-y: auto;
+}
+.neuro-preview-card-row {
+	cursor: pointer;
+	padding: 4px 6px;
+	border-radius: 4px;
+}
+.neuro-preview-card-row:hover {
+	background: var(--background-modifier-hover);
+}
+.neuro-preview-card-row-title {
+	font-weight: 600;
+	margin-bottom: 2px;
+}
+.neuro-preview-card-snippet {
+	color: var(--text-muted);
+	line-height: 1.35;
+}
+.neuro-preview-card-snippet mark {
+	background: var(--text-highlight-bg);
+	color: var(--text-normal);
+	padding: 0 2px;
+	border-radius: 2px;
+}
+
+/* ── Fly viewpoint picker (focal-only card variant) ─────────────────────────── */
+
+.neuro-viewpoint-card--focal-only {
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	border-style: dashed;
+	color: var(--text-muted);
+}
+
+.neuro-viewpoint-card--focal-only:hover {
+	color: var(--interactive-accent);
+}
+
+.neuro-viewpoint-card--focal-only:hover .neuro-viewpoint-card-plus {
+	color: var(--interactive-accent);
+}
+
+/* ── Fly viewpoint header (above 3D pane) ───────────────────────────────────── */
+
+.neuro-fly-vp-header {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	padding: 6px 12px 4px;
+	border-bottom: 1px solid var(--background-modifier-border);
+	flex-shrink: 0;
+}
+
+.neuro-fly-vp-title {
+	font-weight: 600;
+	font-size: 14px;
+	color: var(--text-normal);
+	flex: 1;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.neuro-fly-vp-actions {
+	display: flex;
+	gap: 4px;
+}
+
+.neuro-fly-vp-action {
+	background: var(--background-secondary);
+	border: 1px solid var(--background-modifier-border);
+	color: var(--text-normal);
+	border-radius: 4px;
+	padding: 3px 8px;
+	font-size: 12px;
+	cursor: pointer;
+}
+
+.neuro-fly-vp-action:hover {
+	background: var(--background-modifier-hover);
+}
+
+.neuro-fly-vp-action--danger {
+	color: var(--text-error, #d75252);
+}
+
+.neuro-fly-vp-action--danger:hover {
+	background: var(--background-modifier-error-hover, rgba(215, 82, 82, 0.15));
+}
+
+/* ── Fly viewpoint navigator participant rows ───────────────────────────────── */
+
+.neuro-fly-vp-row {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+}
+
+.neuro-fly-vp-swatch {
+	width: 14px;
+	height: 14px;
+	padding: 0;
+	border: 1px solid var(--background-modifier-border);
+	border-radius: 3px;
+	background: transparent;
+	cursor: pointer;
+	flex-shrink: 0;
+}
+
+.neuro-fly-vp-swatch::-webkit-color-swatch-wrapper { padding: 0; }
+.neuro-fly-vp-swatch::-webkit-color-swatch { border: none; border-radius: 2px; }
+.neuro-fly-vp-swatch::-moz-color-swatch { border: none; border-radius: 2px; }
+

@@ -39,3 +39,9 @@ logs/
 # NLP Datasets (large, can be re-downloaded)
 03_Hippocampus/knowledge_base/nlp_thai/lexicon-thai/
 03_Hippocampus/knowledge_base/nlp_thai/thai-ner/
+
+# Large TTS/Speech model files (download separately)
+04_Cerebellum/models/*.onnx
+04_Cerebellum/models/**/*.onnx
+04_Cerebellum/models/**/*.safetensors
+04_Cerebellum/models/**/*.tar.bz2

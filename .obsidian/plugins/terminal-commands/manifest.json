@@ -1,0 +1,10 @@
+{
+  "id": "terminal-commands",
+  "name": "Terminal Commands",
+  "version": "0.2.1",
+  "minAppVersion": "1.13.1",
+  "description": "Open your vault in a terminal and launch configurable shell commands.",
+  "author": "Issac404",
+  "authorUrl": "https://github.com/Issac404",
+  "isDesktopOnly": true
+}
