@@ -48073,7 +48073,47 @@
       "source": "targeted_upskilling",
       "confidence": 0.8418654972719647,
       "relevance": "medium"
+    },
+    {
+      "topic": "artificial intelligence trends",
+      "summary": "Targeted insight about artificial intelligence trends learned from up-skilling research",
+      "timestamp": "2026-09-12T04:46:43.668341",
+      "source": "targeted_upskilling",
+      "confidence": 0.9245812448768662,
+      "relevance": "medium"
+    },
+    {
+      "topic": "cognitive architectures",
+      "summary": "Targeted insight about cognitive architectures learned from up-skilling research",
+      "timestamp": "2026-09-12T04:46:51.287867",
+      "source": "targeted_upskilling",
+      "confidence": 0.8182787339126798,
+      "relevance": "medium"
+    },
+    {
+      "topic": "artificial intelligence trends",
+      "summary": "Targeted insight about artificial intelligence trends learned from up-skilling research",
+      "timestamp": "2026-09-12T04:46:55.792351",
+      "source": "targeted_upskilling",
+      "confidence": 0.9413216779750315,
+      "relevance": "medium"
+    },
+    {
+      "topic": "autonomous AI systems",
+      "summary": "Targeted insight about autonomous AI systems learned from up-skilling research",
+      "timestamp": "2026-09-12T04:47:01.178168",
+      "source": "targeted_upskilling",
+      "confidence": 0.8278652727233251,
+      "relevance": "medium"
+    },
+    {
+      "topic": "brain-inspired computing",
+      "summary": "Targeted insight about brain-inspired computing learned from up-skilling research",
+      "timestamp": "2026-09-12T04:47:10.322214",
+      "source": "targeted_upskilling",
+      "confidence": 0.8011617361316573,
+      "relevance": "medium"
     }
   ],
-  "last_updated": "2026-09-12T04:46:32.971711"
+  "last_updated": "2026-09-12T04:47:10.322243"
 }

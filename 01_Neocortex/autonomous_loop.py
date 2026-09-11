@@ -672,7 +672,13 @@ class AutonomousLoop:
         # Save with pruning
         if facts_added > 0:
             self._prune_and_save_knowledge_base()
-            logger.info(f"[ToolResearch] Synthesized {facts_added} facts for {topic} (domain: {domain})")
+            
+            # Ultra-dense reporting
+            from dense_reporter import DenseReporter
+            summary = DenseReporter.format_research_summary(
+                topic, facts_added, "autonomous_tool", domain
+            )
+            logger.info(f"[ToolResearch] {summary.replace(chr(10), ' | ')}")
             
             # Track unreported research for proactive reporting
             key_facts = [f"[Autonomous] {facts[i]}" for i in range(min(2, len(facts)))]
