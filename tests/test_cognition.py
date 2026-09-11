@@ -92,6 +92,8 @@ try:
     processor = get_processor()
     monologue = InnerMonologue(PROJECT_ROOT)
     
+    thought_count = [None]  # Use list to avoid nonlocal issue
+    
     def integrated_reasoning():
         context = {
             'intent_type': 'command',
@@ -103,22 +105,16 @@ try:
             'draft_response': 'Integrated test'
         }
         response, thoughts = monologue.reason("Integrated test query", context)
-        return len(thoughts)
+        thought_count[0] = len(thoughts)
     
     # Submit to background
-    thought_count = None
-    
-    def wrapper():
-        nonlocal thought_count
-        thought_count = integrated_reasoning()
-    
-    processor.submit_background(wrapper, priority=1)
+    processor.submit_background(integrated_reasoning, priority=1)
     
     # Wait
     time.sleep(0.5)
     
-    if thought_count:
-        print(f"  ✓ Background reasoning completed: {thought_count} thoughts")
+    if thought_count[0]:
+        print(f"  ✓ Background reasoning completed: {thought_count[0]} thoughts")
     
     print("  ✓ Integration successful")
     

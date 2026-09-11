@@ -21211,4 +21211,3679 @@
     },
     {
       "topic": "voice synthesis",
-      "summary": "Targeted insight about voice synthesis learned from up-skilling research"
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T19:23:15.427602",
+      "source": "targeted_upskilling",
+      "confidence": 0.876398040480794,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T19:23:26.203993",
+      "source": "targeted_upskilling",
+      "confidence": 0.9153902965233044,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T19:23:52.537126",
+      "source": "targeted_upskilling",
+      "confidence": 0.8602408556692306,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T19:24:13.705259",
+      "source": "targeted_upskilling",
+      "confidence": 0.9383130190871978,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T19:24:25.027137",
+      "source": "targeted_upskilling",
+      "confidence": 0.8010614974826492,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T19:24:51.125920",
+      "source": "targeted_upskilling",
+      "confidence": 0.8667693848577487,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T19:25:02.229583",
+      "source": "targeted_upskilling",
+      "confidence": 0.9002781426251356,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T19:25:32.933643",
+      "source": "targeted_upskilling",
+      "confidence": 0.9395782569291988,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T19:25:44.128983",
+      "source": "targeted_upskilling",
+      "confidence": 0.8016693754330079,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T19:26:05.035206",
+      "source": "targeted_upskilling",
+      "confidence": 0.9219449145192307,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T19:27:16.344846",
+      "source": "targeted_upskilling",
+      "confidence": 0.8404772015712708,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T19:28:22.643948",
+      "source": "targeted_upskilling",
+      "confidence": 0.8349160679540462,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T19:28:38.927499",
+      "source": "targeted_upskilling",
+      "confidence": 0.9451484083610671,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T19:28:49.826873",
+      "source": "targeted_upskilling",
+      "confidence": 0.8408911853939248,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T19:29:50.847400",
+      "source": "targeted_upskilling",
+      "confidence": 0.8489459433277119,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T19:30:17.030063",
+      "source": "targeted_upskilling",
+      "confidence": 0.814457919262312,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T19:30:27.903262",
+      "source": "targeted_upskilling",
+      "confidence": 0.862922533144993,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T19:30:48.832478",
+      "source": "targeted_upskilling",
+      "confidence": 0.90870257610067,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T19:31:25.131864",
+      "source": "targeted_upskilling",
+      "confidence": 0.8004348733704064,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T19:31:56.423203",
+      "source": "targeted_upskilling",
+      "confidence": 0.8635877449603291,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T19:32:27.736676",
+      "source": "targeted_upskilling",
+      "confidence": 0.8727263815397066,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T19:32:39.024473",
+      "source": "targeted_upskilling",
+      "confidence": 0.9146570635667444,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T19:32:59.931146",
+      "source": "targeted_upskilling",
+      "confidence": 0.8079350749121158,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T19:33:16.132703",
+      "source": "targeted_upskilling",
+      "confidence": 0.8280997860269689,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T19:33:27.429418",
+      "source": "targeted_upskilling",
+      "confidence": 0.8373330882117259,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T19:33:43.724472",
+      "source": "targeted_upskilling",
+      "confidence": 0.9161416513973697,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T19:34:05.022003",
+      "source": "targeted_upskilling",
+      "confidence": 0.8802846677739448,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T19:34:16.325228",
+      "source": "targeted_upskilling",
+      "confidence": 0.8952237152129825,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T19:34:32.028168",
+      "source": "targeted_upskilling",
+      "confidence": 0.8547498168178056,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T19:34:58.331222",
+      "source": "targeted_upskilling",
+      "confidence": 0.9395589820279492,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T19:35:49.638220",
+      "source": "targeted_upskilling",
+      "confidence": 0.9491914566197656,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T19:36:15.832351",
+      "source": "targeted_upskilling",
+      "confidence": 0.8222678442376351,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T19:36:37.134185",
+      "source": "targeted_upskilling",
+      "confidence": 0.8505806892776705,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T19:36:48.427528",
+      "source": "targeted_upskilling",
+      "confidence": 0.8459297666893398,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T19:37:04.529238",
+      "source": "targeted_upskilling",
+      "confidence": 0.8228144986828855,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T19:37:40.816475",
+      "source": "targeted_upskilling",
+      "confidence": 0.8227383471826919,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T19:39:17.156782",
+      "source": "targeted_upskilling",
+      "confidence": 0.8373715367375174,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T19:39:33.330919",
+      "source": "targeted_upskilling",
+      "confidence": 0.8573967051575717,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T19:39:44.424290",
+      "source": "targeted_upskilling",
+      "confidence": 0.8188445929636563,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T19:40:15.731208",
+      "source": "targeted_upskilling",
+      "confidence": 0.81623741630531,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T19:40:27.100672",
+      "source": "targeted_upskilling",
+      "confidence": 0.8578899295862477,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T19:40:57.832635",
+      "source": "targeted_upskilling",
+      "confidence": 0.8921134575846938,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T19:41:23.907686",
+      "source": "targeted_upskilling",
+      "confidence": 0.8161780290873715,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T19:42:15.246070",
+      "source": "targeted_upskilling",
+      "confidence": 0.9317497843550526,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T19:42:36.399212",
+      "source": "targeted_upskilling",
+      "confidence": 0.825683397732365,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T19:42:52.728564",
+      "source": "targeted_upskilling",
+      "confidence": 0.8058305462076082,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T19:43:08.720188",
+      "source": "targeted_upskilling",
+      "confidence": 0.9174603576253613,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T19:43:39.905633",
+      "source": "targeted_upskilling",
+      "confidence": 0.8281286958394848,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T19:44:31.242920",
+      "source": "targeted_upskilling",
+      "confidence": 0.8133953082841399,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T19:44:57.329583",
+      "source": "targeted_upskilling",
+      "confidence": 0.9471157436912507,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T19:45:28.634157",
+      "source": "targeted_upskilling",
+      "confidence": 0.9139995719365767,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T19:45:39.995095",
+      "source": "targeted_upskilling",
+      "confidence": 0.8845506601267625,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T19:45:50.726414",
+      "source": "targeted_upskilling",
+      "confidence": 0.8852291062012085,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T19:46:01.817505",
+      "source": "targeted_upskilling",
+      "confidence": 0.817342344746768,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T19:46:32.906303",
+      "source": "targeted_upskilling",
+      "confidence": 0.8678364765233799,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T19:46:54.230099",
+      "source": "targeted_upskilling",
+      "confidence": 0.856915552406223,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T19:47:30.534384",
+      "source": "targeted_upskilling",
+      "confidence": 0.8226609062848722,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T19:47:41.830443",
+      "source": "targeted_upskilling",
+      "confidence": 0.841691490932669,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T19:47:52.531002",
+      "source": "targeted_upskilling",
+      "confidence": 0.8909988585386917,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T19:49:13.648398",
+      "source": "targeted_upskilling",
+      "confidence": 0.8995681205366812,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T19:49:24.925296",
+      "source": "targeted_upskilling",
+      "confidence": 0.8030125964722608,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T19:49:55.631300",
+      "source": "targeted_upskilling",
+      "confidence": 0.847390528549796,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T19:50:17.005200",
+      "source": "targeted_upskilling",
+      "confidence": 0.8818548163238019,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T19:50:32.900751",
+      "source": "targeted_upskilling",
+      "confidence": 0.8337151790823762,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T19:51:08.634092",
+      "source": "targeted_upskilling",
+      "confidence": 0.802368308556308,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T19:51:29.931418",
+      "source": "targeted_upskilling",
+      "confidence": 0.9194726376830226,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T19:51:41.203954",
+      "source": "targeted_upskilling",
+      "confidence": 0.8533139630969099,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T19:51:52.427297",
+      "source": "targeted_upskilling",
+      "confidence": 0.8487379796729312,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T19:52:38.431935",
+      "source": "targeted_upskilling",
+      "confidence": 0.9282201432959913,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T19:52:54.804259",
+      "source": "targeted_upskilling",
+      "confidence": 0.8002032158653395,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T19:53:06.203544",
+      "source": "targeted_upskilling",
+      "confidence": 0.8301494463448594,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T19:53:22.532308",
+      "source": "targeted_upskilling",
+      "confidence": 0.9123194846925392,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T19:53:48.707553",
+      "source": "targeted_upskilling",
+      "confidence": 0.8746077884922361,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T19:54:00.026258",
+      "source": "targeted_upskilling",
+      "confidence": 0.924812144683072,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T19:54:41.134353",
+      "source": "targeted_upskilling",
+      "confidence": 0.917417930604333,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T19:55:02.402202",
+      "source": "targeted_upskilling",
+      "confidence": 0.8864201514250577,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T19:55:43.732049",
+      "source": "targeted_upskilling",
+      "confidence": 0.8650198339975247,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T19:56:10.104299",
+      "source": "targeted_upskilling",
+      "confidence": 0.8270611786231419,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T19:57:11.420719",
+      "source": "targeted_upskilling",
+      "confidence": 0.8955428990504091,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T19:57:37.807016",
+      "source": "targeted_upskilling",
+      "confidence": 0.8686234403755083,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T19:57:49.202509",
+      "source": "targeted_upskilling",
+      "confidence": 0.8053976615544561,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T19:58:35.240097",
+      "source": "targeted_upskilling",
+      "confidence": 0.9174862307965659,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T19:59:11.608730",
+      "source": "targeted_upskilling",
+      "confidence": 0.8478915967648435,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T19:59:23.004933",
+      "source": "targeted_upskilling",
+      "confidence": 0.9022153404433576,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T20:00:24.240169",
+      "source": "targeted_upskilling",
+      "confidence": 0.8175410332410181,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T20:00:50.603734",
+      "source": "targeted_upskilling",
+      "confidence": 0.8312381477146629,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T20:01:01.830798",
+      "source": "targeted_upskilling",
+      "confidence": 0.8342617421385212,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T20:01:17.528799",
+      "source": "targeted_upskilling",
+      "confidence": 0.9455644344809271,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T20:01:33.726741",
+      "source": "targeted_upskilling",
+      "confidence": 0.8798489480025942,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T20:01:49.623852",
+      "source": "targeted_upskilling",
+      "confidence": 0.8953306067321847,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T20:02:00.926875",
+      "source": "targeted_upskilling",
+      "confidence": 0.8480297563546193,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T20:02:17.119232",
+      "source": "targeted_upskilling",
+      "confidence": 0.8544542854757736,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T20:02:28.425910",
+      "source": "targeted_upskilling",
+      "confidence": 0.9021418225613295,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T20:04:29.226167",
+      "source": "targeted_upskilling",
+      "confidence": 0.8522038576977576,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T20:04:40.604238",
+      "source": "targeted_upskilling",
+      "confidence": 0.9413673287898212,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T20:05:06.705709",
+      "source": "targeted_upskilling",
+      "confidence": 0.891172039290661,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T20:05:23.125747",
+      "source": "targeted_upskilling",
+      "confidence": 0.8493313403379587,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T20:05:44.406041",
+      "source": "targeted_upskilling",
+      "confidence": 0.8565492710622943,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T20:05:55.726698",
+      "source": "targeted_upskilling",
+      "confidence": 0.9145113448840572,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T20:06:46.939276",
+      "source": "targeted_upskilling",
+      "confidence": 0.9215377289500213,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T20:07:58.320226",
+      "source": "targeted_upskilling",
+      "confidence": 0.8832977172938165,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T20:08:19.599522",
+      "source": "targeted_upskilling",
+      "confidence": 0.8600665506581928,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T20:08:30.726336",
+      "source": "targeted_upskilling",
+      "confidence": 0.8893448393164791,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T20:08:41.900920",
+      "source": "targeted_upskilling",
+      "confidence": 0.9086297292485882,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T20:09:03.127920",
+      "source": "targeted_upskilling",
+      "confidence": 0.8632373971566489,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T20:09:14.317033",
+      "source": "targeted_upskilling",
+      "confidence": 0.819285745762377,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T20:09:25.317347",
+      "source": "targeted_upskilling",
+      "confidence": 0.8505221916526674,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T20:09:41.320336",
+      "source": "targeted_upskilling",
+      "confidence": 0.8442153642395585,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T20:10:02.435891",
+      "source": "targeted_upskilling",
+      "confidence": 0.8103979754041466,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T20:11:03.821800",
+      "source": "targeted_upskilling",
+      "confidence": 0.8856332298919668,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T20:11:50.216892",
+      "source": "targeted_upskilling",
+      "confidence": 0.8902063629147301,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T20:12:06.617898",
+      "source": "targeted_upskilling",
+      "confidence": 0.9209165162904114,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T20:12:32.606240",
+      "source": "targeted_upskilling",
+      "confidence": 0.9030823585202581,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T20:12:49.006709",
+      "source": "targeted_upskilling",
+      "confidence": 0.8738686312385893,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T20:13:00.404014",
+      "source": "targeted_upskilling",
+      "confidence": 0.8924196852296982,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T20:13:21.206359",
+      "source": "targeted_upskilling",
+      "confidence": 0.8127790345841224,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T20:13:52.408204",
+      "source": "targeted_upskilling",
+      "confidence": 0.861574100475516,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T20:14:03.817118",
+      "source": "targeted_upskilling",
+      "confidence": 0.8894560050233781,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T20:14:49.811499",
+      "source": "targeted_upskilling",
+      "confidence": 0.9119854248103819,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T20:15:31.236079",
+      "source": "targeted_upskilling",
+      "confidence": 0.8885289351686673,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T20:15:42.620131",
+      "source": "targeted_upskilling",
+      "confidence": 0.837194565138863,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T20:15:53.626137",
+      "source": "targeted_upskilling",
+      "confidence": 0.9323256796161892,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T20:17:44.642321",
+      "source": "targeted_upskilling",
+      "confidence": 0.8677043657007389,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T20:18:20.935175",
+      "source": "targeted_upskilling",
+      "confidence": 0.8422743754556372,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T20:18:37.325445",
+      "source": "targeted_upskilling",
+      "confidence": 0.8362269843978046,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T20:18:58.627960",
+      "source": "targeted_upskilling",
+      "confidence": 0.8493062102354043,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T20:19:19.824534",
+      "source": "targeted_upskilling",
+      "confidence": 0.8139351792786135,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T20:19:36.129659",
+      "source": "targeted_upskilling",
+      "confidence": 0.908315342179165,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T20:20:02.121783",
+      "source": "targeted_upskilling",
+      "confidence": 0.9185661956149692,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T20:20:28.507872",
+      "source": "targeted_upskilling",
+      "confidence": 0.8839466965637138,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T20:20:39.918207",
+      "source": "targeted_upskilling",
+      "confidence": 0.901585791322334,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T20:21:05.631523",
+      "source": "targeted_upskilling",
+      "confidence": 0.8858512209343605,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T20:22:06.844503",
+      "source": "targeted_upskilling",
+      "confidence": 0.9286960332543304,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T20:22:23.117473",
+      "source": "targeted_upskilling",
+      "confidence": 0.9109320943741346,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T20:23:39.046809",
+      "source": "targeted_upskilling",
+      "confidence": 0.9329489035353521,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T20:24:20.434073",
+      "source": "targeted_upskilling",
+      "confidence": 0.8199784745633005,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T20:24:41.821870",
+      "source": "targeted_upskilling",
+      "confidence": 0.9477041005848396,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T20:25:03.206340",
+      "source": "targeted_upskilling",
+      "confidence": 0.8589060947324666,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T20:25:14.426437",
+      "source": "targeted_upskilling",
+      "confidence": 0.9002030312991185,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T20:25:25.515981",
+      "source": "targeted_upskilling",
+      "confidence": 0.9487198138648241,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T20:25:36.729141",
+      "source": "targeted_upskilling",
+      "confidence": 0.873025132382617,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T20:25:57.830729",
+      "source": "targeted_upskilling",
+      "confidence": 0.8696224887413875,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T20:26:09.219024",
+      "source": "targeted_upskilling",
+      "confidence": 0.9303435436700458,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T20:26:25.217606",
+      "source": "targeted_upskilling",
+      "confidence": 0.9464197695784053,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T20:27:01.223425",
+      "source": "targeted_upskilling",
+      "confidence": 0.8348330086175368,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T20:27:37.635184",
+      "source": "targeted_upskilling",
+      "confidence": 0.8045141054060685,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T20:27:48.526263",
+      "source": "targeted_upskilling",
+      "confidence": 0.885286104814042,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T20:28:14.398787",
+      "source": "targeted_upskilling",
+      "confidence": 0.8493838021778672,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T20:28:25.823067",
+      "source": "targeted_upskilling",
+      "confidence": 0.8068031485163037,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T20:29:01.831729",
+      "source": "targeted_upskilling",
+      "confidence": 0.9042251068128316,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T20:30:12.946664",
+      "source": "targeted_upskilling",
+      "confidence": 0.8607195113799886,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T20:30:34.231216",
+      "source": "targeted_upskilling",
+      "confidence": 0.8703374402123123,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T20:30:45.616530",
+      "source": "targeted_upskilling",
+      "confidence": 0.8192109741562765,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T20:31:06.421838",
+      "source": "targeted_upskilling",
+      "confidence": 0.8602308999049704,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T20:31:27.805793",
+      "source": "targeted_upskilling",
+      "confidence": 0.8312060022735607,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T20:31:38.926841",
+      "source": "targeted_upskilling",
+      "confidence": 0.8095744818447222,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T20:32:40.043331",
+      "source": "targeted_upskilling",
+      "confidence": 0.8084096830708712,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T20:33:41.225608",
+      "source": "targeted_upskilling",
+      "confidence": 0.8277831524935658,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T20:34:47.343253",
+      "source": "targeted_upskilling",
+      "confidence": 0.800821058993524,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T20:35:08.631903",
+      "source": "targeted_upskilling",
+      "confidence": 0.8547622619266487,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T20:35:45.031171",
+      "source": "targeted_upskilling",
+      "confidence": 0.8847565298849822,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T20:35:56.422866",
+      "source": "targeted_upskilling",
+      "confidence": 0.8912161565327159,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T20:36:22.135992",
+      "source": "targeted_upskilling",
+      "confidence": 0.9173819799286304,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T20:36:48.529779",
+      "source": "targeted_upskilling",
+      "confidence": 0.8694854662766959,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T20:37:14.730151",
+      "source": "targeted_upskilling",
+      "confidence": 0.8357710060326291,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T20:37:26.123801",
+      "source": "targeted_upskilling",
+      "confidence": 0.9454640730595589,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T20:37:47.031538",
+      "source": "targeted_upskilling",
+      "confidence": 0.8823817909792626,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T20:38:08.431301",
+      "source": "targeted_upskilling",
+      "confidence": 0.8423437009367489,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T20:38:29.629048",
+      "source": "targeted_upskilling",
+      "confidence": 0.9183414628211818,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T20:39:16.038736",
+      "source": "targeted_upskilling",
+      "confidence": 0.8132054960282926,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T20:39:42.432857",
+      "source": "targeted_upskilling",
+      "confidence": 0.8106052149387535,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T20:39:53.822842",
+      "source": "targeted_upskilling",
+      "confidence": 0.8292014463025958,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T20:40:04.917384",
+      "source": "targeted_upskilling",
+      "confidence": 0.9204233854313337,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T20:40:30.920585",
+      "source": "targeted_upskilling",
+      "confidence": 0.8676588185715461,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T20:40:52.205561",
+      "source": "targeted_upskilling",
+      "confidence": 0.8190059168332786,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T20:41:13.619605",
+      "source": "targeted_upskilling",
+      "confidence": 0.9041944647820509,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T20:41:49.831529",
+      "source": "targeted_upskilling",
+      "confidence": 0.9150727051348868,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T20:42:31.235513",
+      "source": "targeted_upskilling",
+      "confidence": 0.8756292889161286,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T20:42:47.528052",
+      "source": "targeted_upskilling",
+      "confidence": 0.9385112139134775,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T20:43:08.729123",
+      "source": "targeted_upskilling",
+      "confidence": 0.8892632021153336,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T20:43:30.031227",
+      "source": "targeted_upskilling",
+      "confidence": 0.8734672138296671,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T20:44:21.240802",
+      "source": "targeted_upskilling",
+      "confidence": 0.9145496137666539,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T20:44:32.429377",
+      "source": "targeted_upskilling",
+      "confidence": 0.8074265939222981,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T20:44:58.631797",
+      "source": "targeted_upskilling",
+      "confidence": 0.9310959373085959,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T20:45:10.026321",
+      "source": "targeted_upskilling",
+      "confidence": 0.858731861997506,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T20:45:55.508801",
+      "source": "targeted_upskilling",
+      "confidence": 0.888421688680665,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T20:46:06.702672",
+      "source": "targeted_upskilling",
+      "confidence": 0.8445356383825229,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T20:46:27.445860",
+      "source": "targeted_upskilling",
+      "confidence": 0.8821642316756695,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T20:46:38.632404",
+      "source": "targeted_upskilling",
+      "confidence": 0.8190170040065501,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T20:46:59.828472",
+      "source": "targeted_upskilling",
+      "confidence": 0.9137555924917969,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T20:47:11.126768",
+      "source": "targeted_upskilling",
+      "confidence": 0.9025140543149838,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T20:47:42.236818",
+      "source": "targeted_upskilling",
+      "confidence": 0.8459967912376523,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T20:48:13.431149",
+      "source": "targeted_upskilling",
+      "confidence": 0.8724440489601248,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T20:48:39.832635",
+      "source": "targeted_upskilling",
+      "confidence": 0.8996924200124943,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T20:48:51.026949",
+      "source": "targeted_upskilling",
+      "confidence": 0.8465326659667176,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T20:49:12.430544",
+      "source": "targeted_upskilling",
+      "confidence": 0.8500209341246571,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T20:49:23.826534",
+      "source": "targeted_upskilling",
+      "confidence": 0.8541085067588069,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T20:49:54.935661",
+      "source": "targeted_upskilling",
+      "confidence": 0.8189737908357636,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T20:50:05.917790",
+      "source": "targeted_upskilling",
+      "confidence": 0.8638856308435765,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T20:50:36.935546",
+      "source": "targeted_upskilling",
+      "confidence": 0.8387067383978297,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T20:51:13.110440",
+      "source": "targeted_upskilling",
+      "confidence": 0.9410909303587867,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T20:51:24.525456",
+      "source": "targeted_upskilling",
+      "confidence": 0.8074916181705998,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T20:51:35.232858",
+      "source": "targeted_upskilling",
+      "confidence": 0.8914151388503979,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T20:52:15.931926",
+      "source": "targeted_upskilling",
+      "confidence": 0.8256635619734203,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T20:52:57.337563",
+      "source": "targeted_upskilling",
+      "confidence": 0.8103019936449137,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T20:53:13.507810",
+      "source": "targeted_upskilling",
+      "confidence": 0.8908314452793641,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T20:53:34.434365",
+      "source": "targeted_upskilling",
+      "confidence": 0.9469687365786421,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T20:55:10.647569",
+      "source": "targeted_upskilling",
+      "confidence": 0.9087505072606975,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T20:55:37.027760",
+      "source": "targeted_upskilling",
+      "confidence": 0.9430645317929761,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T20:55:53.218959",
+      "source": "targeted_upskilling",
+      "confidence": 0.9065494621799094,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T20:56:04.433666",
+      "source": "targeted_upskilling",
+      "confidence": 0.9448244728202833,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T20:56:50.633330",
+      "source": "targeted_upskilling",
+      "confidence": 0.8310776276001479,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T20:57:01.904037",
+      "source": "targeted_upskilling",
+      "confidence": 0.9065444362937258,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T20:57:38.034605",
+      "source": "targeted_upskilling",
+      "confidence": 0.9420371923352717,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T20:57:49.401006",
+      "source": "targeted_upskilling",
+      "confidence": 0.8073657218370655,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T20:58:20.638908",
+      "source": "targeted_upskilling",
+      "confidence": 0.9238097626379128,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T20:59:01.937383",
+      "source": "targeted_upskilling",
+      "confidence": 0.8805809061928627,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T20:59:38.244534",
+      "source": "targeted_upskilling",
+      "confidence": 0.8563606137314376,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T20:59:54.628017",
+      "source": "targeted_upskilling",
+      "confidence": 0.873051308958737,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T21:00:35.939593",
+      "source": "targeted_upskilling",
+      "confidence": 0.88854035110373,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T21:01:02.333755",
+      "source": "targeted_upskilling",
+      "confidence": 0.8177216141109798,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T21:01:13.725488",
+      "source": "targeted_upskilling",
+      "confidence": 0.8568402869247574,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T21:01:39.837493",
+      "source": "targeted_upskilling",
+      "confidence": 0.8486733573657892,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T21:02:11.235702",
+      "source": "targeted_upskilling",
+      "confidence": 0.8789035718187599,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T21:02:42.634142",
+      "source": "targeted_upskilling",
+      "confidence": 0.839196504898766,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T21:03:18.735439",
+      "source": "targeted_upskilling",
+      "confidence": 0.8685314825801562,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T21:03:59.938877",
+      "source": "targeted_upskilling",
+      "confidence": 0.8360361303976481,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T21:04:21.403829",
+      "source": "targeted_upskilling",
+      "confidence": 0.8180493974505126,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T21:04:37.627170",
+      "source": "targeted_upskilling",
+      "confidence": 0.8584586962350017,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T21:05:03.805437",
+      "source": "targeted_upskilling",
+      "confidence": 0.8017504961422552,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T21:05:20.228021",
+      "source": "targeted_upskilling",
+      "confidence": 0.8443907821175376,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T21:05:46.619979",
+      "source": "targeted_upskilling",
+      "confidence": 0.859994907284627,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T21:06:37.707668",
+      "source": "targeted_upskilling",
+      "confidence": 0.9239637697564141,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T21:06:53.905886",
+      "source": "targeted_upskilling",
+      "confidence": 0.8322624568605552,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T21:07:20.338819",
+      "source": "targeted_upskilling",
+      "confidence": 0.874738143630407,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T21:07:36.732348",
+      "source": "targeted_upskilling",
+      "confidence": 0.8219967936433064,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T21:07:52.928815",
+      "source": "targeted_upskilling",
+      "confidence": 0.9326268535431756,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T21:08:19.319420",
+      "source": "targeted_upskilling",
+      "confidence": 0.8935410231405579,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T21:08:30.727397",
+      "source": "targeted_upskilling",
+      "confidence": 0.8011451793179986,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T21:08:41.832952",
+      "source": "targeted_upskilling",
+      "confidence": 0.884178587116886,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T21:08:58.104152",
+      "source": "targeted_upskilling",
+      "confidence": 0.8293227222451964,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T21:09:14.524505",
+      "source": "targeted_upskilling",
+      "confidence": 0.8065066532802924,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T21:09:30.798347",
+      "source": "targeted_upskilling",
+      "confidence": 0.94982086221004,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T21:10:02.233072",
+      "source": "targeted_upskilling",
+      "confidence": 0.8619320168239258,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T21:10:18.501175",
+      "source": "targeted_upskilling",
+      "confidence": 0.8448503914947871,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T21:10:39.928775",
+      "source": "targeted_upskilling",
+      "confidence": 0.9121225809670831,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T21:11:06.220112",
+      "source": "targeted_upskilling",
+      "confidence": 0.9043663976815023,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T21:11:22.697141",
+      "source": "targeted_upskilling",
+      "confidence": 0.9147302988734161,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T21:12:18.740161",
+      "source": "targeted_upskilling",
+      "confidence": 0.8000443118467472,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T21:12:30.126735",
+      "source": "targeted_upskilling",
+      "confidence": 0.9488869875072851,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T21:13:11.231646",
+      "source": "targeted_upskilling",
+      "confidence": 0.9155937924726072,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T21:14:12.639339",
+      "source": "targeted_upskilling",
+      "confidence": 0.8982967020215511,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T21:14:29.034379",
+      "source": "targeted_upskilling",
+      "confidence": 0.8201880355969794,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T21:15:00.323028",
+      "source": "targeted_upskilling",
+      "confidence": 0.8833502319488499,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T21:15:26.734053",
+      "source": "targeted_upskilling",
+      "confidence": 0.8471285621596137,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T21:15:43.004915",
+      "source": "targeted_upskilling",
+      "confidence": 0.8259464276875423,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T21:15:54.017070",
+      "source": "targeted_upskilling",
+      "confidence": 0.8229874281991926,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T21:16:30.239574",
+      "source": "targeted_upskilling",
+      "confidence": 0.8892506662519639,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T21:16:51.725144",
+      "source": "targeted_upskilling",
+      "confidence": 0.870949188919958,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T21:17:02.717338",
+      "source": "targeted_upskilling",
+      "confidence": 0.9097875819899632,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T21:18:08.747366",
+      "source": "targeted_upskilling",
+      "confidence": 0.9301936103038405,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T21:19:00.227709",
+      "source": "targeted_upskilling",
+      "confidence": 0.8335604148884596,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T21:19:26.506033",
+      "source": "targeted_upskilling",
+      "confidence": 0.9120063182924514,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T21:19:42.927638",
+      "source": "targeted_upskilling",
+      "confidence": 0.8204804947789716,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T21:19:54.326951",
+      "source": "targeted_upskilling",
+      "confidence": 0.924306091786707,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T21:20:20.433967",
+      "source": "targeted_upskilling",
+      "confidence": 0.8382050315473646,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T21:20:31.830337",
+      "source": "targeted_upskilling",
+      "confidence": 0.8594818012762632,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T21:20:53.022645",
+      "source": "targeted_upskilling",
+      "confidence": 0.9003874145889653,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T21:21:09.523665",
+      "source": "targeted_upskilling",
+      "confidence": 0.9449275335258379,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T21:21:20.930544",
+      "source": "targeted_upskilling",
+      "confidence": 0.8389994402998766,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T21:21:52.130382",
+      "source": "targeted_upskilling",
+      "confidence": 0.9267975272935134,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T21:22:03.531437",
+      "source": "targeted_upskilling",
+      "confidence": 0.8789282444816371,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T21:22:14.504399",
+      "source": "targeted_upskilling",
+      "confidence": 0.8543097012754276,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T21:22:25.633493",
+      "source": "targeted_upskilling",
+      "confidence": 0.8722558134072007,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T21:22:41.831969",
+      "source": "targeted_upskilling",
+      "confidence": 0.8775524548718224,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T21:23:08.307776",
+      "source": "targeted_upskilling",
+      "confidence": 0.936253622493933,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T21:23:19.716606",
+      "source": "targeted_upskilling",
+      "confidence": 0.9339218979937969,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T21:23:30.330778",
+      "source": "targeted_upskilling",
+      "confidence": 0.8593771483459334,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T21:23:41.417940",
+      "source": "targeted_upskilling",
+      "confidence": 0.8652725805206373,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T21:23:57.428503",
+      "source": "targeted_upskilling",
+      "confidence": 0.8357131888110195,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T21:24:08.726547",
+      "source": "targeted_upskilling",
+      "confidence": 0.9456700463055678,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T21:24:49.740764",
+      "source": "targeted_upskilling",
+      "confidence": 0.8288017898775849,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T21:25:16.034761",
+      "source": "targeted_upskilling",
+      "confidence": 0.8377531029129305,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T21:25:32.432784",
+      "source": "targeted_upskilling",
+      "confidence": 0.9132431087133733,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T21:26:13.835139",
+      "source": "targeted_upskilling",
+      "confidence": 0.8337595991051749,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T21:26:30.302888",
+      "source": "targeted_upskilling",
+      "confidence": 0.8102678134151224,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T21:26:46.518560",
+      "source": "targeted_upskilling",
+      "confidence": 0.8694652879147364,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T21:27:22.804769",
+      "source": "targeted_upskilling",
+      "confidence": 0.8250561944464038,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T21:27:49.229860",
+      "source": "targeted_upskilling",
+      "confidence": 0.8947149122212635,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T21:28:30.711597",
+      "source": "targeted_upskilling",
+      "confidence": 0.9334922637064414,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T21:28:42.196993",
+      "source": "targeted_upskilling",
+      "confidence": 0.8573592125730227,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T21:28:53.517100",
+      "source": "targeted_upskilling",
+      "confidence": 0.8793216350492171,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T21:29:59.742023",
+      "source": "targeted_upskilling",
+      "confidence": 0.9492226026717026,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T21:30:31.215280",
+      "source": "targeted_upskilling",
+      "confidence": 0.808688673923739,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T21:30:47.704573",
+      "source": "targeted_upskilling",
+      "confidence": 0.8996299041159934,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T21:30:59.131369",
+      "source": "targeted_upskilling",
+      "confidence": 0.8856494655762392,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T21:31:20.330233",
+      "source": "targeted_upskilling",
+      "confidence": 0.830242275581513,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T21:31:51.810412",
+      "source": "targeted_upskilling",
+      "confidence": 0.8739418743134295,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T21:32:28.327115",
+      "source": "targeted_upskilling",
+      "confidence": 0.882421978310824,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T21:32:44.806181",
+      "source": "targeted_upskilling",
+      "confidence": 0.9260138683294834,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T21:33:01.307166",
+      "source": "targeted_upskilling",
+      "confidence": 0.9249895478746463,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T21:33:57.742143",
+      "source": "targeted_upskilling",
+      "confidence": 0.8053340518388739,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T21:34:13.927968",
+      "source": "targeted_upskilling",
+      "confidence": 0.8988701648529542,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T21:34:45.221090",
+      "source": "targeted_upskilling",
+      "confidence": 0.8220910288127539,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T21:35:01.530298",
+      "source": "targeted_upskilling",
+      "confidence": 0.8904869111467903,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T21:35:17.931953",
+      "source": "targeted_upskilling",
+      "confidence": 0.8269510127561025,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T21:35:49.333812",
+      "source": "targeted_upskilling",
+      "confidence": 0.8158496037139645,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T21:36:00.619260",
+      "source": "targeted_upskilling",
+      "confidence": 0.8019504901821619,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T21:36:21.528730",
+      "source": "targeted_upskilling",
+      "confidence": 0.8192610361737814,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T21:37:02.735682",
+      "source": "targeted_upskilling",
+      "confidence": 0.9187941460668687,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T21:37:48.927996",
+      "source": "targeted_upskilling",
+      "confidence": 0.8431437342283553,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T21:38:10.119799",
+      "source": "targeted_upskilling",
+      "confidence": 0.9309862752707935,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T21:38:36.620542",
+      "source": "targeted_upskilling",
+      "confidence": 0.8885096381116581,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T21:38:58.120687",
+      "source": "targeted_upskilling",
+      "confidence": 0.9374598193555397,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T21:39:14.419378",
+      "source": "targeted_upskilling",
+      "confidence": 0.8485213682865185,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T21:39:25.726573",
+      "source": "targeted_upskilling",
+      "confidence": 0.8127795337541395,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T21:39:36.904918",
+      "source": "targeted_upskilling",
+      "confidence": 0.8749224498046523,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T21:39:53.105050",
+      "source": "targeted_upskilling",
+      "confidence": 0.8656052517297866,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T21:40:19.506747",
+      "source": "targeted_upskilling",
+      "confidence": 0.9014615220396902,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T21:40:31.026255",
+      "source": "targeted_upskilling",
+      "confidence": 0.9176704084617687,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T21:40:42.131358",
+      "source": "targeted_upskilling",
+      "confidence": 0.8551240736437864,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T21:40:58.418302",
+      "source": "targeted_upskilling",
+      "confidence": 0.908105407474176,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T21:41:39.426629",
+      "source": "targeted_upskilling",
+      "confidence": 0.9442737239445895,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T21:41:55.517594",
+      "source": "targeted_upskilling",
+      "confidence": 0.8111881075705918,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T21:42:06.826472",
+      "source": "targeted_upskilling",
+      "confidence": 0.940549787935842,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T21:42:28.004091",
+      "source": "targeted_upskilling",
+      "confidence": 0.8051906875002954,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T21:42:39.526005",
+      "source": "targeted_upskilling",
+      "confidence": 0.9043665297864456,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T21:43:00.340270",
+      "source": "targeted_upskilling",
+      "confidence": 0.8821606565386166,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T21:43:11.726329",
+      "source": "targeted_upskilling",
+      "confidence": 0.810688719884957,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T21:43:57.931754",
+      "source": "targeted_upskilling",
+      "confidence": 0.933840147806115,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T21:44:09.427275",
+      "source": "targeted_upskilling",
+      "confidence": 0.8160554309539522,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T21:44:20.427263",
+      "source": "targeted_upskilling",
+      "confidence": 0.9180717404486606,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T21:44:41.226498",
+      "source": "targeted_upskilling",
+      "confidence": 0.9430907909842208,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T21:45:12.729130",
+      "source": "targeted_upskilling",
+      "confidence": 0.884483738675279,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T21:45:59.236147",
+      "source": "targeted_upskilling",
+      "confidence": 0.885035821146705,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T21:47:05.742997",
+      "source": "targeted_upskilling",
+      "confidence": 0.8728747393567313,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T21:47:17.227042",
+      "source": "targeted_upskilling",
+      "confidence": 0.858211681534727,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T21:47:33.419561",
+      "source": "targeted_upskilling",
+      "confidence": 0.8304247734557656,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T21:47:59.505849",
+      "source": "targeted_upskilling",
+      "confidence": 0.9303085706370989,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T21:48:35.730510",
+      "source": "targeted_upskilling",
+      "confidence": 0.9453336940732711,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T21:49:07.232553",
+      "source": "targeted_upskilling",
+      "confidence": 0.9421115474329135,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T21:49:18.527367",
+      "source": "targeted_upskilling",
+      "confidence": 0.8182866242758497,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T21:49:44.708967",
+      "source": "targeted_upskilling",
+      "confidence": 0.8581549602837606,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T21:50:00.917638",
+      "source": "targeted_upskilling",
+      "confidence": 0.887341100857556,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T21:50:11.902552",
+      "source": "targeted_upskilling",
+      "confidence": 0.8853505569030629,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T21:50:58.114985",
+      "source": "targeted_upskilling",
+      "confidence": 0.8463089214599755,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T21:51:14.618765",
+      "source": "targeted_upskilling",
+      "confidence": 0.8665670023972702,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T21:51:45.706140",
+      "source": "targeted_upskilling",
+      "confidence": 0.860206294473693,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T21:51:57.028375",
+      "source": "targeted_upskilling",
+      "confidence": 0.9217920592691033,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T21:52:23.232110",
+      "source": "targeted_upskilling",
+      "confidence": 0.9349481096666109,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T21:52:39.724270",
+      "source": "targeted_upskilling",
+      "confidence": 0.8814665055080828,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T21:52:50.827011",
+      "source": "targeted_upskilling",
+      "confidence": 0.8424953080770069,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T21:53:21.630545",
+      "source": "targeted_upskilling",
+      "confidence": 0.8947869739362413,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T21:53:33.116559",
+      "source": "targeted_upskilling",
+      "confidence": 0.8494160345013928,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T21:53:43.823098",
+      "source": "targeted_upskilling",
+      "confidence": 0.8201244634901623,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T21:54:45.029076",
+      "source": "targeted_upskilling",
+      "confidence": 0.9495062618202499,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T21:55:11.223223",
+      "source": "targeted_upskilling",
+      "confidence": 0.8224432622448168,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T21:55:27.718943",
+      "source": "targeted_upskilling",
+      "confidence": 0.8635219735745359,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T21:55:39.126622",
+      "source": "targeted_upskilling",
+      "confidence": 0.9049596477153059,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T21:56:05.207109",
+      "source": "targeted_upskilling",
+      "confidence": 0.8538262279433012,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T21:56:16.726049",
+      "source": "targeted_upskilling",
+      "confidence": 0.9456755712999713,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T21:56:27.928720",
+      "source": "targeted_upskilling",
+      "confidence": 0.8083833221892508,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T21:57:14.009643",
+      "source": "targeted_upskilling",
+      "confidence": 0.8652634062005492,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T21:57:30.527492",
+      "source": "targeted_upskilling",
+      "confidence": 0.8445796339628897,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T21:58:26.442182",
+      "source": "targeted_upskilling",
+      "confidence": 0.874340465865567,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T21:58:42.933233",
+      "source": "targeted_upskilling",
+      "confidence": 0.8566825905090989,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T21:58:54.317898",
+      "source": "targeted_upskilling",
+      "confidence": 0.8969823652278965,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T21:59:25.623032",
+      "source": "targeted_upskilling",
+      "confidence": 0.9473452918963451,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T21:59:52.127720",
+      "source": "targeted_upskilling",
+      "confidence": 0.9472333450286862,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T22:00:33.610327",
+      "source": "targeted_upskilling",
+      "confidence": 0.8497402625141838,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T22:00:45.124370",
+      "source": "targeted_upskilling",
+      "confidence": 0.8278951503168573,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T22:01:20.900833",
+      "source": "targeted_upskilling",
+      "confidence": 0.8595394811670878,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T22:01:57.313577",
+      "source": "targeted_upskilling",
+      "confidence": 0.8447693003465386,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T22:02:38.840579",
+      "source": "targeted_upskilling",
+      "confidence": 0.9397143795501178,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T22:03:25.039243",
+      "source": "targeted_upskilling",
+      "confidence": 0.835718445500012,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T22:03:46.505127",
+      "source": "targeted_upskilling",
+      "confidence": 0.8008607846816992,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T22:04:02.431910",
+      "source": "targeted_upskilling",
+      "confidence": 0.8478686494677289,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T22:04:13.827283",
+      "source": "targeted_upskilling",
+      "confidence": 0.8287152321271357,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T22:04:30.019177",
+      "source": "targeted_upskilling",
+      "confidence": 0.9132807541178011,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T22:04:41.217804",
+      "source": "targeted_upskilling",
+      "confidence": 0.8159570147702875,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T22:05:07.024636",
+      "source": "targeted_upskilling",
+      "confidence": 0.9275813008204701,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T22:05:18.526980",
+      "source": "targeted_upskilling",
+      "confidence": 0.8988216595121802,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T22:05:29.717256",
+      "source": "targeted_upskilling",
+      "confidence": 0.9303097741300129,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T22:05:40.917576",
+      "source": "targeted_upskilling",
+      "confidence": 0.8682583005986216,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T22:05:51.656982",
+      "source": "targeted_upskilling",
+      "confidence": 0.8463043476655802,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T22:06:02.627132",
+      "source": "targeted_upskilling",
+      "confidence": 0.8803764774009958,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T22:06:23.919539",
+      "source": "targeted_upskilling",
+      "confidence": 0.8209645286716497,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T22:06:35.229443",
+      "source": "targeted_upskilling",
+      "confidence": 0.8474597631260721,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T22:06:46.516603",
+      "source": "targeted_upskilling",
+      "confidence": 0.8109458724479796,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T22:07:57.240804",
+      "source": "targeted_upskilling",
+      "confidence": 0.8614020394921696,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T22:08:08.528341",
+      "source": "targeted_upskilling",
+      "confidence": 0.8461088838318535,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T22:08:49.639040",
+      "source": "targeted_upskilling",
+      "confidence": 0.8059848463031491,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T22:09:46.138859",
+      "source": "targeted_upskilling",
+      "confidence": 0.9014820143300109,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T22:09:57.620980",
+      "source": "targeted_upskilling",
+      "confidence": 0.8418625203347128,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T22:10:23.429795",
+      "source": "targeted_upskilling",
+      "confidence": 0.9162611814267044,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T22:10:59.941690",
+      "source": "targeted_upskilling",
+      "confidence": 0.877517333882802,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T22:11:31.430538",
+      "source": "targeted_upskilling",
+      "confidence": 0.9478085094040712,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T22:11:42.931409",
+      "source": "targeted_upskilling",
+      "confidence": 0.9411513705281889,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T22:12:14.124114",
+      "source": "targeted_upskilling",
+      "confidence": 0.8287828139186367,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T22:12:40.632964",
+      "source": "targeted_upskilling",
+      "confidence": 0.804803449987059,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T22:12:51.932318",
+      "source": "targeted_upskilling",
+      "confidence": 0.9282863579352668,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T22:13:27.629329",
+      "source": "targeted_upskilling",
+      "confidence": 0.827974354878816,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T22:13:53.629208",
+      "source": "targeted_upskilling",
+      "confidence": 0.8339779517351735,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T22:14:05.031359",
+      "source": "targeted_upskilling",
+      "confidence": 0.8030190826754947,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T22:14:31.320807",
+      "source": "targeted_upskilling",
+      "confidence": 0.8530548963236614,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T22:14:47.827893",
+      "source": "targeted_upskilling",
+      "confidence": 0.8794229508793721,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T22:15:09.319248",
+      "source": "targeted_upskilling",
+      "confidence": 0.9230939641616858,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T22:15:35.731725",
+      "source": "targeted_upskilling",
+      "confidence": 0.8515208661449217,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T22:15:52.131708",
+      "source": "targeted_upskilling",
+      "confidence": 0.9333808369201801,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T22:16:17.929778",
+      "source": "targeted_upskilling",
+      "confidence": 0.8992952868215472,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T22:16:59.139447",
+      "source": "targeted_upskilling",
+      "confidence": 0.9185783466018944,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T22:17:10.601839",
+      "source": "targeted_upskilling",
+      "confidence": 0.8715292126677481,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T22:17:46.410175",
+      "source": "targeted_upskilling",
+      "confidence": 0.853837763168115,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T22:18:07.935962",
+      "source": "targeted_upskilling",
+      "confidence": 0.8451453609799855,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T22:18:34.427940",
+      "source": "targeted_upskilling",
+      "confidence": 0.8811620509843643,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T22:18:50.918490",
+      "source": "targeted_upskilling",
+      "confidence": 0.936706909693564,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T22:19:07.327783",
+      "source": "targeted_upskilling",
+      "confidence": 0.9190649112522568,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T22:19:23.832243",
+      "source": "targeted_upskilling",
+      "confidence": 0.9244310669974451,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T22:19:55.338584",
+      "source": "targeted_upskilling",
+      "confidence": 0.90617547338946,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T22:20:21.829884",
+      "source": "targeted_upskilling",
+      "confidence": 0.900788624852688,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T22:20:53.339876",
+      "source": "targeted_upskilling",
+      "confidence": 0.9122613694852841,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T22:21:23.805674",
+      "source": "targeted_upskilling",
+      "confidence": 0.9272497862791359,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T22:21:35.327903",
+      "source": "targeted_upskilling",
+      "confidence": 0.9058860892789451,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T22:21:45.929520",
+      "source": "targeted_upskilling",
+      "confidence": 0.8099341807123,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T22:22:06.733712",
+      "source": "targeted_upskilling",
+      "confidence": 0.8607945354699982,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T22:22:18.227071",
+      "source": "targeted_upskilling",
+      "confidence": 0.8814434469373702,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T22:22:29.428558",
+      "source": "targeted_upskilling",
+      "confidence": 0.8616505330384475,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T22:22:45.232260",
+      "source": "targeted_upskilling",
+      "confidence": 0.8722521400869919,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T22:22:56.531385",
+      "source": "targeted_upskilling",
+      "confidence": 0.8771331344202538,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T22:23:17.824819",
+      "source": "targeted_upskilling",
+      "confidence": 0.8730983717950463,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T22:23:29.125423",
+      "source": "targeted_upskilling",
+      "confidence": 0.8609165391346859,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T22:25:15.335913",
+      "source": "targeted_upskilling",
+      "confidence": 0.8429905380779883,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T22:26:51.531555",
+      "source": "targeted_upskilling",
+      "confidence": 0.8788195909935005,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T22:27:03.032089",
+      "source": "targeted_upskilling",
+      "confidence": 0.9016605967559645,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T22:27:14.227171",
+      "source": "targeted_upskilling",
+      "confidence": 0.8283117076165705,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T22:27:40.432850",
+      "source": "targeted_upskilling",
+      "confidence": 0.9148238861455064,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T22:27:57.003730",
+      "source": "targeted_upskilling",
+      "confidence": 0.8272732051219431,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T22:28:13.426439",
+      "source": "targeted_upskilling",
+      "confidence": 0.8708033244445943,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T22:28:54.438343",
+      "source": "targeted_upskilling",
+      "confidence": 0.9025835070449321,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T22:29:35.532849",
+      "source": "targeted_upskilling",
+      "confidence": 0.8794011735821048,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T22:29:46.830806",
+      "source": "targeted_upskilling",
+      "confidence": 0.8396587828398793,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T22:30:33.024371",
+      "source": "targeted_upskilling",
+      "confidence": 0.8721855044939337,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T22:30:59.307667",
+      "source": "targeted_upskilling",
+      "confidence": 0.8036936025029121,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T22:31:30.723207",
+      "source": "targeted_upskilling",
+      "confidence": 0.8899852568274036,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T22:31:52.158308",
+      "source": "targeted_upskilling",
+      "confidence": 0.8203068599096983,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T22:32:03.717802",
+      "source": "targeted_upskilling",
+      "confidence": 0.886436540624676,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T22:32:39.635420",
+      "source": "targeted_upskilling",
+      "confidence": 0.8740318538706235,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T22:33:26.139150",
+      "source": "targeted_upskilling",
+      "confidence": 0.9310896412072713,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T22:33:47.631702",
+      "source": "targeted_upskilling",
+      "confidence": 0.90355998305849,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T22:33:59.130417",
+      "source": "targeted_upskilling",
+      "confidence": 0.8963346513466866,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T22:34:15.316458",
+      "source": "targeted_upskilling",
+      "confidence": 0.9295015982092519,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T22:34:26.026657",
+      "source": "targeted_upskilling",
+      "confidence": 0.8341453201782167,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T22:34:37.216595",
+      "source": "targeted_upskilling",
+      "confidence": 0.941496228093232,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T22:35:13.209440",
+      "source": "targeted_upskilling",
+      "confidence": 0.8791942519794217,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T22:35:29.798624",
+      "source": "targeted_upskilling",
+      "confidence": 0.9302887503228048,
+      "relevance": "high"
+    },
+    {
+      "topic": "voice synthesis",
+      "summary": "Targeted insight about voice synthesis learned from up-skilling research",
+      "timestamp": "2026-09-10T22:36:16.340272",
+      "source": "targeted_upskilling",
+      "confidence": 0.8766653602313046,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T22:36:42.835897",
+      "source": "targeted_upskilling",
+      "confidence": 0.8436609816841761,
+      "relevance": "high"
+    },
+    {
+      "topic": "thai nlp",
+      "summary": "Targeted insight about thai nlp learned from up-skilling research",
+      "timestamp": "2026-09-10T22:36:59.230826",
+      "source": "targeted_upskilling",
+      "confidence": 0.9441177757801278,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-10T22:37:10.796493",
+      "source": "targeted_upskilling",
+      "confidence": 0.8186911092123518,
+      "relevance": "high"
+    },
+    {
+      "topic": "neural networks",
+      "summary": "Targeted insight about neural networks learned from up-skilling research",
+      "timestamp": "2026-09-10T22:37:32.131551",
+      "source": "targeted_upskilling",
+      "confidence": 0.9269652952418787
