@@ -518,5 +518,42 @@
       }
     ],
     "result": null
+  },
+  {
+    "id": "LEARN_calculus_fundamentals_1789164032",
+    "title": "Learn: Calculus Fundamentals",
+    "description": "Derivatives, integrals, limits\nConcepts: limits, derivatives, integrals, optimization",
+    "priority": "medium",
+    "status": "in_progress",
+    "created_at": 1789164032.7733479,
+    "updated_at": 1789164054.6752691,
+    "subtasks": [
+      {
+        "id": "LEARN_calculus_fundamentals_1789164032_research",
+        "title": "Research Calculus Fundamentals",
+        "type": "research",
+        "command": "Research topic: Calculus Fundamentals",
+        "estimated_duration": 300,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1",
+          "DIRECTIVE_2"
+        ],
+        "result": "Autonomous research completed on Calculus Fundamentals. Synthesized 5 facts using local tools."
+      },
+      {
+        "id": "LEARN_calculus_fundamentals_1789164032_quiz",
+        "title": "Self-quiz: Calculus Fundamentals",
+        "type": "verification",
+        "command": "echo 'Quiz: What is the derivative of f(x) = x\u00b2 + 2x?\nExpected: 2x + 2'",
+        "estimated_duration": 60,
+        "status": "pending",
+        "safety_checks": [
+          "DIRECTIVE_1"
+        ],
+        "result": null
+      }
+    ],
+    "result": null
   }
 ]

@@ -9,5 +9,16 @@
       "[Autonomous] Processes are independent program executions"
     ],
     "reported": true
+  },
+  {
+    "topic": "Calculus Fundamentals",
+    "domain": "Mathematics",
+    "facts_count": 5,
+    "timestamp": 1789164054.6732662,
+    "key_facts": [
+      "[Autonomous] Functions map inputs to outputs systematically",
+      "[Autonomous] Derivatives measure rates of change"
+    ],
+    "reported": false
   }
 ]
