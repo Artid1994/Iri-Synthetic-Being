@@ -83,7 +83,7 @@ class Subtask:
             title=data["title"],
             type=SubtaskType(data["type"]),
             command=data.get("command"),
-            estimated_duration=data["estimated_duration"],
+            estimated_duration=data.get("estimated_duration", 300),
             status=GoalStatus(data["status"]),
             safety_checks=data.get("safety_checks", []),
             result=data.get("result")
