@@ -23,6 +23,7 @@ try:
     from executive_core import KnowledgeGraph, Intent
     from memory_store import HippocampusMemory
     from core_directives import CoreDirectives
+    from nlp_thai_lexicon import get_thai_lexicon
 except ImportError as e:
     print(f"⚠️  Import error: {e}")
     print("Make sure you're running from project root with venv activated")
@@ -36,6 +37,7 @@ class IriChat:
         self.knowledge = KnowledgeGraph()
         self.memory = HippocampusMemory(vault_path=str(PROJECT_ROOT))
         self.directives = CoreDirectives
+        self.thai_lexicon = get_thai_lexicon()
         self.conversation_history = []
         
         # State file for user activity detection (DIRECTIVE_2)
@@ -64,8 +66,11 @@ class IriChat:
             pass
     
     def classify_input(self, user_input: str) -> Intent:
-        """Classify user input intent (simplified)."""
+        """Classify user input intent using Thai NLP lexicon."""
         user_lower = user_input.lower()
+        
+        # Use Thai lexicon for advanced entity extraction
+        thai_intent = self.thai_lexicon.extract_intent(user_input)
         
         # Command detection
         if any(cmd in user_lower for cmd in ['exit', 'quit', 'bye', 'ออก', 'ลาก่อน']):
@@ -74,11 +79,19 @@ class IriChat:
         # Question detection
         if any(q in user_lower for q in ['?', 'what', 'why', 'how', 'when', 'who', 
                                           'อะไร', 'ทำไม', 'อย่างไร', 'เมื่อไหร่']):
-            return Intent(type='question', confidence=0.8, entities=[])
+            return Intent(type='question', confidence=0.8, entities=thai_intent.get('entities', {}).get('object', []))
         
         # Greeting detection
         if any(g in user_lower for g in ['hello', 'hi', 'สวัสดี', 'หวัดดี']):
             return Intent(type='greeting', confidence=0.9, entities=['greeting'])
+        
+        # Action command detection from Thai NLP
+        if thai_intent['action'] != 'unknown' and thai_intent['confidence'] > 0.5:
+            return Intent(
+                type='command',
+                confidence=thai_intent['confidence'],
+                entities=[thai_intent['action'], thai_intent.get('target', '')]
+            )
         
         # Default: statement
         return Intent(type='statement', confidence=0.6, entities=[])
@@ -95,6 +108,10 @@ class IriChat:
         # Handle greeting
         if intent.type == 'greeting':
             return self._generate_greeting()
+        
+        # Handle commands (from Thai NLP extraction)
+        if intent.type == 'command':
+            return self._execute_command(intent)
         
         # Handle questions
         if intent.type == 'question':
@@ -140,6 +157,13 @@ class IriChat:
         
         # Found context
         return f"ตามที่ผมค้นหาในหน่วยความจำครับเจ้านาย:\n\n{context}"
+    
+    def _execute_command(self, intent: Intent) -> str:
+        """Execute command extracted from Thai NLP."""
+        action = intent.entities[0] if len(intent.entities) > 0 else 'unknown'
+        target = intent.entities[1] if len(intent.entities) > 1 else ''
+        
+        return f"รับทราบคำสั่งครับเจ้านาย: '{action}' เป้าหมาย: '{target}'\\nกำลังดำเนินการ... (ฟังก์ชันยังไม่เชื่อมต่อครับ)"
     
     def _respond_to_statement(self, statement: str) -> str:
         """Respond to general statements."""
