@@ -1,0 +1,305 @@
+{
+  "python_data_structures": {
+    "id": "python_data_structures",
+    "domain": "coding",
+    "level": 1,
+    "title": "Python Data Structures",
+    "description": "Lists, dicts, sets, tuples - core Python collections",
+    "concepts": [
+      "list operations",
+      "dictionary methods",
+      "set theory",
+      "tuple immutability"
+    ],
+    "prerequisites": [],
+    "mastery_score": 0.32000000000000006,
+    "attempts": 1,
+    "last_studied": 1788984469.5243828
+  },
+  "algorithms_basic": {
+    "id": "algorithms_basic",
+    "domain": "coding",
+    "level": 1,
+    "title": "Basic Algorithms",
+    "description": "Search, sort, basic complexity analysis",
+    "concepts": [
+      "linear search",
+      "binary search",
+      "bubble sort",
+      "Big-O notation"
+    ],
+    "prerequisites": [],
+    "mastery_score": 0.32000000000000006,
+    "attempts": 1,
+    "last_studied": 1788984981.9423335
+  },
+  "oop_principles": {
+    "id": "oop_principles",
+    "domain": "coding",
+    "level": 2,
+    "title": "Object-Oriented Programming",
+    "description": "Classes, inheritance, polymorphism, design patterns",
+    "concepts": [
+      "encapsulation",
+      "inheritance",
+      "polymorphism",
+      "SOLID principles"
+    ],
+    "prerequisites": [],
+    "mastery_score": 0.0,
+    "attempts": 0,
+    "last_studied": null
+  },
+  "async_programming": {
+    "id": "async_programming",
+    "domain": "coding",
+    "level": 3,
+    "title": "Asynchronous Programming",
+    "description": "async/await, coroutines, event loops",
+    "concepts": [
+      "asyncio",
+      "coroutines",
+      "futures",
+      "event-driven architecture"
+    ],
+    "prerequisites": [],
+    "mastery_score": 0.0,
+    "attempts": 0,
+    "last_studied": null
+  },
+  "os_basics": {
+    "id": "os_basics",
+    "domain": "computer_systems",
+    "level": 1,
+    "title": "Operating System Fundamentals",
+    "description": "Processes, threads, memory management, file systems",
+    "concepts": [
+      "processes",
+      "threads",
+      "virtual memory",
+      "file systems",
+      "syscalls"
+    ],
+    "prerequisites": [],
+    "mastery_score": 0.0,
+    "attempts": 0,
+    "last_studied": null
+  },
+  "networking_fundamentals": {
+    "id": "networking_fundamentals",
+    "domain": "computer_systems",
+    "level": 2,
+    "title": "Computer Networking",
+    "description": "TCP/IP, HTTP, sockets, protocols",
+    "concepts": [
+      "OSI model",
+      "TCP/IP",
+      "HTTP",
+      "DNS",
+      "routing"
+    ],
+    "prerequisites": [],
+    "mastery_score": 0.0,
+    "attempts": 0,
+    "last_studied": null
+  },
+  "linear_algebra_basics": {
+    "id": "linear_algebra_basics",
+    "domain": "mathematics",
+    "level": 1,
+    "title": "Linear Algebra Basics",
+    "description": "Vectors, matrices, transformations",
+    "concepts": [
+      "vectors",
+      "matrices",
+      "dot product",
+      "transformations"
+    ],
+    "prerequisites": [],
+    "mastery_score": 0.0,
+    "attempts": 0,
+    "last_studied": null
+  },
+  "calculus_fundamentals": {
+    "id": "calculus_fundamentals",
+    "domain": "mathematics",
+    "level": 1,
+    "title": "Calculus Fundamentals",
+    "description": "Derivatives, integrals, limits",
+    "concepts": [
+      "limits",
+      "derivatives",
+      "integrals",
+      "optimization"
+    ],
+    "prerequisites": [],
+    "mastery_score": 0.0,
+    "attempts": 0,
+    "last_studied": null
+  },
+  "probability_statistics": {
+    "id": "probability_statistics",
+    "domain": "mathematics",
+    "level": 2,
+    "title": "Probability & Statistics",
+    "description": "Probability theory, distributions, statistical inference",
+    "concepts": [
+      "probability",
+      "distributions",
+      "hypothesis testing",
+      "regression"
+    ],
+    "prerequisites": [],
+    "mastery_score": 0.0,
+    "attempts": 0,
+    "last_studied": null
+  },
+  "orbital_mechanics": {
+    "id": "orbital_mechanics",
+    "domain": "space_astronomy",
+    "level": 1,
+    "title": "Orbital Mechanics & Kepler's Laws",
+    "description": "Planetary motion, orbits, gravitational physics",
+    "concepts": [
+      "Kepler's laws",
+      "orbital elements",
+      "escape velocity",
+      "gravitational force"
+    ],
+    "prerequisites": [],
+    "mastery_score": 0.4,
+    "attempts": 1,
+    "last_studied": 1788984469.5235207
+  },
+  "celestial_navigation": {
+    "id": "celestial_navigation",
+    "domain": "space_astronomy",
+    "level": 1,
+    "title": "Celestial Coordinates & Navigation",
+    "description": "Star positions, coordinate systems, astronomical units",
+    "concepts": [
+      "right ascension",
+      "declination",
+      "ecliptic",
+      "parsec",
+      "light-year"
+    ],
+    "prerequisites": [],
+    "mastery_score": 0.4,
+    "attempts": 1,
+    "last_studied": 1788984981.9113617
+  },
+  "stellar_evolution": {
+    "id": "stellar_evolution",
+    "domain": "space_astronomy",
+    "level": 2,
+    "title": "Stellar Evolution",
+    "description": "Star life cycles, nucleosynthesis, supernovae",
+    "concepts": [
+      "main sequence",
+      "red giants",
+      "supernovae",
+      "neutron stars",
+      "black holes"
+    ],
+    "prerequisites": [],
+    "mastery_score": 0.0,
+    "attempts": 0,
+    "last_studied": null
+  },
+  "ml_neural_basics": {
+    "id": "ml_neural_basics",
+    "domain": "ai_self_architecture",
+    "level": 1,
+    "title": "Machine Learning & Neural Network Basics",
+    "description": "Foundational ML concepts, neural network architecture, training",
+    "concepts": [
+      "supervised learning",
+      "neural networks",
+      "backpropagation",
+      "activation functions",
+      "loss functions"
+    ],
+    "prerequisites": [],
+    "mastery_score": 0.0,
+    "attempts": 0,
+    "last_studied": null
+  },
+  "self_code_mapping": {
+    "id": "self_code_mapping",
+    "domain": "ai_self_architecture",
+    "level": 1,
+    "title": "Self-Code Architecture Mapping",
+    "description": "Understanding own codebase structure, module dependencies, data flow",
+    "concepts": [
+      "code introspection",
+      "dependency graphs",
+      "module relationships",
+      "capability inventory"
+    ],
+    "prerequisites": [],
+    "mastery_score": 0.0,
+    "attempts": 0,
+    "last_studied": null
+  },
+  "llm_architectures": {
+    "id": "llm_architectures",
+    "domain": "ai_self_architecture",
+    "level": 2,
+    "title": "LLM Architectures & RAG Systems",
+    "description": "Transformer models, attention mechanisms, retrieval-augmented generation",
+    "concepts": [
+      "transformers",
+      "attention",
+      "embeddings",
+      "RAG",
+      "context windows"
+    ],
+    "prerequisites": [
+      "ml_neural_basics"
+    ],
+    "mastery_score": 0.0,
+    "attempts": 0,
+    "last_studied": null
+  },
+  "memory_systems": {
+    "id": "memory_systems",
+    "domain": "ai_self_architecture",
+    "level": 2,
+    "title": "AI Memory & Knowledge Systems",
+    "description": "Long-term memory, episodic memory, knowledge graphs",
+    "concepts": [
+      "episodic memory",
+      "semantic memory",
+      "knowledge graphs",
+      "vector databases"
+    ],
+    "prerequisites": [
+      "self_code_mapping"
+    ],
+    "mastery_score": 0.0,
+    "attempts": 0,
+    "last_studied": null
+  },
+  "self_optimization": {
+    "id": "self_optimization",
+    "domain": "ai_self_architecture",
+    "level": 3,
+    "title": "Self-Optimization & Fine-Tuning",
+    "description": "Autonomous improvement, hyperparameter tuning, architecture search",
+    "concepts": [
+      "fine-tuning",
+      "RLHF",
+      "neural architecture search",
+      "AutoML",
+      "self-modification"
+    ],
+    "prerequisites": [
+      "llm_architectures",
+      "memory_systems"
+    ],
+    "mastery_score": 0.0,
+    "attempts": 0,
+    "last_studied": null
+  }
+}

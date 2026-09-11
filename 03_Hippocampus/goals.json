@@ -1,0 +1,150 @@
+[
+  {
+    "id": "fc8831f8",
+    "title": "Check system health and clean temporary log cache",
+    "description": "Perform system health check and remove old temporary files to free up disk space",
+    "priority": "high",
+    "status": "in_progress",
+    "created_at": 1788983637.7978241,
+    "updated_at": 1788988596.878173,
+    "subtasks": [
+      {
+        "id": "32a4a385",
+        "title": "Check system resources",
+        "type": "terminal",
+        "command": "free -h && df -h",
+        "estimated_duration": 5,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1"
+        ],
+        "result": "total        used        free      shared  buff/cache   available\nMem:           3.5Gi       3.0Gi       304Mi       415Mi       906Mi       550Mi\nSwap:          5.8Gi       1.3Gi       4.5Gi\nFilesystem      Size  Used Avail Use% Mounted on\nudev            1.7G     0  1.7G   0% /dev\ntmpfs           362M  1.9M  361M   1% /run\n/dev/mmcblk0p5   86G   60G   22G  73% /\ntmpfs           1.8G   32M  1.8G   2% /dev/shm\nefivarfs         16E     0 -5.1K   0% /sys/firmware/efi/efivars\ntmpfs           5.0M  "
+      },
+      {
+        "id": "bc9d8334",
+        "title": "Check service status",
+        "type": "terminal",
+        "command": "systemctl --user status iri-voice.service iri-autonomous.service --no-pager",
+        "estimated_duration": 5,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1"
+        ],
+        "result": "● iri-voice.service - Iri Autonomous Neural Voice Loop Daemon\n     Loaded: loaded (/home/artid1994/.config/systemd/user/iri-voice.service; enabled; preset: enabled)\n     Active: active (running) since Thu 2026-09-10 00:55:53 +07; 3h 20min ago\n Invocation: d5605e9b95b849c38704b0cbe833940c\n       Docs: file:///home/artid1994/Projects/THE_TRANSCENDING_FORM/README.md\n   Main PID: 20868 (python)\n      Tasks: 2 (limit: 4172)\n     Memory: 780K (max: 2G, available: 1.9G, peak: 220.9M, swap: 96.8M, swap "
+      },
+      {
+        "id": "5a824d58",
+        "title": "Verify log health",
+        "type": "terminal",
+        "command": "ls -lh ~/Projects/THE_TRANSCENDING_FORM/logs/ | tail -10",
+        "estimated_duration": 3,
+        "status": "pending",
+        "safety_checks": [
+          "DIRECTIVE_1"
+        ],
+        "result": null
+      },
+      {
+        "id": "738275db",
+        "title": "Identify temporary files",
+        "type": "terminal",
+        "command": "find ~/Projects/THE_TRANSCENDING_FORM -name '*.tmp' -o -name '*~' | head -20",
+        "estimated_duration": 5,
+        "status": "pending",
+        "safety_checks": [
+          "DIRECTIVE_1",
+          "DIRECTIVE_9"
+        ],
+        "result": null
+      },
+      {
+        "id": "34416b71",
+        "title": "Clean old cache files",
+        "type": "file_operation",
+        "command": "Clean files older than 7 days in cache directories",
+        "estimated_duration": 10,
+        "status": "pending",
+        "safety_checks": [
+          "DIRECTIVE_1",
+          "DIRECTIVE_9"
+        ],
+        "result": null
+      },
+      {
+        "id": "966fe7d7",
+        "title": "Verify cleanup success",
+        "type": "verification",
+        "command": "du -sh ~/Projects/THE_TRANSCENDING_FORM/*/cache/",
+        "estimated_duration": 3,
+        "status": "pending",
+        "safety_checks": [
+          "DIRECTIVE_1"
+        ],
+        "result": null
+      }
+    ],
+    "result": null
+  },
+  {
+    "id": "3eed9514",
+    "title": "Miniaturization Science & Pym Particle Feasibility Research",
+    "description": "Comprehensive research into the theoretical and practical feasibility of macroscopic-to-microscopic volume reduction, exploring physics limits, engineering state-of-the-art, and quantum horizons",
+    "priority": "high",
+    "category": "RESEARCH",
+    "status": "pending",
+    "created_at": 1789124220.330237,
+    "updated_at": 1789124220.3302372,
+    "subtasks": [
+      {
+        "id": "104da440",
+        "title": "Physics Feasibility Study",
+        "description": "Research the physical limits of atomic-scale volume reduction (Pauli exclusion principle, mass density, quantum tunneling)",
+        "type": "research",
+        "status": "pending",
+        "safety_checks": [
+          "DIRECTIVE_1",
+          "DIRECTIVE_2"
+        ],
+        "result": null
+      },
+      {
+        "id": "f4368e25",
+        "title": "Real-World Engineering Analysis",
+        "description": "Investigate current state-of-the-art miniaturization technology (MEMS/NEMS, Nanorobotics, 2nm Semiconductor Fabrication)",
+        "type": "research",
+        "status": "pending",
+        "safety_checks": [
+          "DIRECTIVE_1",
+          "DIRECTIVE_2"
+        ],
+        "result": null
+      },
+      {
+        "id": "76770a8e",
+        "title": "Quantum & Theoretical Physics Horizons",
+        "description": "Explore theoretical models (e.g., metamaterials, spatial contraction) that mimic macroscopic-to-microscopic scaling",
+        "type": "research",
+        "status": "pending",
+        "safety_checks": [
+          "DIRECTIVE_1",
+          "DIRECTIVE_2"
+        ],
+        "result": null
+      },
+      {
+        "id": "bdf53743",
+        "title": "Summary Report",
+        "description": "Generate a comprehensive synthesis report on 'The Feasibility of Macroscopic Miniaturization' and save to 03_Hippocampus/knowledge_base/miniaturization_science.md",
+        "type": "synthesis",
+        "output_path": "03_Hippocampus/knowledge_base/miniaturization_science.md",
+        "status": "pending",
+        "safety_checks": [
+          "DIRECTIVE_1",
+          "DIRECTIVE_2"
+        ],
+        "result": null
+      }
+    ],
+    "result": null
+  }
+]
