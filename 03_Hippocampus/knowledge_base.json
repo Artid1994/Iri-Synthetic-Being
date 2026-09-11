@@ -40147,245 +40147,109 @@
       "timestamp": "2026-09-11T23:40:31.818920"
     },
     {
-      "topic": "Thai personal names - male",
-      "summary": "Common Thai male names for NER training: ชัยวิวัฒน์, อุโฆษา, ประวิทย์, ธนพล, ณัฐพล, นิสงฆ์สวรรค์, วรรณพงษ์, พิษณุวัรช์, อดุลย์ศักดิ์, วิชา, ธีรศักดิ์, พงศธร, ภราดร, ขจรศักดิ์, อร่าม, กิตติศักดิ์, กิตติพงษ์, ธวัชชัย, ปริญญา, กณสิทธิ์. Male names often end with consonants or specific patterns recognizable in Thai naming conventions.",
-      "source": "PyThaiNLP_lexicon",
-      "confidence": 0.94,
-      "category": "thai_lexicon",
-      "timestamp": "2026-09-11T23:46:03.707424"
+      "topic": "conversational AI advances",
+      "summary": "Targeted insight about conversational AI advances learned from up-skilling research",
+      "timestamp": "2026-09-12T00:14:58.202327",
+      "source": "targeted_upskilling",
+      "confidence": 0.940392181907792,
+      "relevance": "medium"
     },
     {
-      "topic": "Thai personal names - female",
-      "summary": "Common Thai female names for NER training: ศุภรัตน์, ชมพูนุช, นันท์นริน, สุพาพร, อุไรวรรณ, พนิตนาถ, ปพิชญา, วิไลลักษณ์, ชวนพิศ, ลลิตา, จันทิกา, มาลินี, กัญญ์ณพัชญ์, สุภาวิณี, ศิริพร, ฐิติมญชุ์, วัลภา, กิดาการ, บังอร, วณัสนันทร์. Female names often have softer sounds and specific endings characteristic of Thai naming patterns.",
-      "source": "PyThaiNLP_lexicon",
-      "confidence": 0.94,
-      "category": "thai_lexicon",
-      "timestamp": "2026-09-11T23:46:03.707424"
+      "topic": "neural network optimization",
+      "summary": "Targeted insight about neural network optimization learned from up-skilling research",
+      "timestamp": "2026-09-12T00:15:10.295128",
+      "source": "targeted_upskilling",
+      "confidence": 0.8772102655027505,
+      "relevance": "medium"
     },
     {
-      "topic": "Thai abbreviations",
-      "summary": "Thai abbreviation patterns for text normalization: อักษรย่อ; อ.; ดร.; ด.ช.; ด.ญ.; อ.ตร.; นศท.; นศ.; นร.; บ.ก.; ท.บ.; น.น.ร.; พลฯ; ส.ต.; ส.ท.. Abbreviations critical for expanding short forms in casual text, social media, and formal documents.",
-      "source": "PyThaiNLP_lexicon",
-      "confidence": 0.91,
-      "category": "thai_lexicon",
-      "timestamp": "2026-09-11T23:46:03.707424"
+      "topic": "autonomous AI systems",
+      "summary": "Targeted insight about autonomous AI systems learned from up-skilling research",
+      "timestamp": "2026-09-12T00:15:21.299567",
+      "source": "targeted_upskilling",
+      "confidence": 0.8768878044361522,
+      "relevance": "medium"
     },
     {
-      "topic": "Thai sentiment - positive adjectives",
-      "summary": "Positive sentiment adjectives: กตเวที, กตัญญู, กล้า, กรุณา, กันเอง, ขำ, แข็ง, แข็งแกร่ง, แข็งขัน, แข็งแรง, ครื้นครึก, ครึกครื้น, แจ่ม, แจ่มใส, ชัดเจน, ชุ่มชื้น, เชี่ยวชาญ, เด่น, เต็ม, ทันสมัย. These adjectives indicate positive emotion, approval, or favorable assessment in Thai text.",
-      "source": "PyThaiNLP_lexicon",
-      "confidence": 0.92,
-      "category": "sentiment_lexicon",
-      "timestamp": "2026-09-11T23:46:03.707424"
+      "topic": "memory consolidation techniques",
+      "summary": "Targeted insight about memory consolidation techniques learned from up-skilling research",
+      "timestamp": "2026-09-12T00:15:32.388607",
+      "source": "targeted_upskilling",
+      "confidence": 0.8592951051452967,
+      "relevance": "medium"
     },
     {
-      "topic": "Thai sentiment - negative adjectives",
-      "summary": "Negative sentiment adjectives: ﻿กระจุกกระจิก, กระดาน, แก่, เกรียน, เกเร, เกิน, ขวางโลก, ขัดสมาธิ, ขุ่น, คมคาย, กระเซอะกระเซิง, เคร่งขรึม, เครียด, งอ, งอแง, โง่, จังไร, จัญไร, เจือ, เจือจาง. These adjectives indicate negative emotion, disapproval, or unfavorable assessment.",
-      "source": "PyThaiNLP_lexicon",
-      "confidence": 0.92,
-      "category": "sentiment_lexicon",
-      "timestamp": "2026-09-11T23:46:03.707424"
+      "topic": "brain-inspired computing",
+      "summary": "Targeted insight about brain-inspired computing learned from up-skilling research",
+      "timestamp": "2026-09-12T00:15:53.396026",
+      "source": "targeted_upskilling",
+      "confidence": 0.8531326145562892,
+      "relevance": "medium"
     },
     {
-      "topic": "Thai sentiment - negative verbs",
-      "summary": "Negative sentiment verbs: ﻿ฆ่า, ตัด, ข่ม, ข่มขืน, ขโมย, ตาย, ตก, ล้ม, เสียใจ, กดดัน, กัก, กดขี่, กักขัง, กระชาก, กระวนกระวาย, กระแทก, กระทืบ, ก่อกวน, ก่อกรรมทำเข็ญ, กระทำชำเรา. Action verbs with negative connotations useful for sentiment analysis.",
-      "source": "PyThaiNLP_lexicon",
-      "confidence": 0.9,
-      "category": "sentiment_lexicon",
-      "timestamp": "2026-09-11T23:46:03.707424"
+      "topic": "artificial intelligence trends",
+      "summary": "Targeted insight about artificial intelligence trends learned from up-skilling research",
+      "timestamp": "2026-09-12T00:16:24.698009",
+      "source": "targeted_upskilling",
+      "confidence": 0.8375052288050462,
+      "relevance": "medium"
     },
     {
-      "topic": "Thai profanity - high severity",
-      "summary": "High-severity profanity markers (15 terms catalogued) for content filtering and safety detection. Used to identify inappropriate or offensive language requiring moderation.",
-      "source": "PyThaiNLP_lexicon",
-      "confidence": 0.96,
-      "category": "content_safety",
-      "timestamp": "2026-09-11T23:46:03.707424"
+      "topic": "neural network optimization",
+      "summary": "Targeted insight about neural network optimization learned from up-skilling research",
+      "timestamp": "2026-09-12T00:16:41.094802",
+      "source": "targeted_upskilling",
+      "confidence": 0.8903053828352508,
+      "relevance": "medium"
     },
     {
-      "topic": "Thai profanity - medium severity",
-      "summary": "Medium-severity profanity markers (15 terms) for nuanced content moderation. Contextual assessment needed for appropriate response.",
-      "source": "PyThaiNLP_lexicon",
-      "confidence": 0.93,
-      "category": "content_safety",
-      "timestamp": "2026-09-11T23:46:03.707424"
+      "topic": "autonomous AI systems",
+      "summary": "Targeted insight about autonomous AI systems learned from up-skilling research",
+      "timestamp": "2026-09-12T00:17:17.290065",
+      "source": "targeted_upskilling",
+      "confidence": 0.8095316328604111,
+      "relevance": "medium"
     },
     {
-      "topic": "Thai news corpus vocabulary",
-      "summary": "Formal Thai vocabulary patterns from news corpus. Formal register includes complex compounds, technical terms, and elevated vocabulary distinct from casual speech.",
-      "source": "PyThaiNLP_lexicon",
-      "confidence": 0.89,
-      "category": "vocabulary_boundary",
-      "timestamp": "2026-09-11T23:46:03.707424"
+      "topic": "artificial intelligence trends",
+      "summary": "Targeted insight about artificial intelligence trends learned from up-skilling research",
+      "timestamp": "2026-09-12T00:17:28.495628",
+      "source": "targeted_upskilling",
+      "confidence": 0.8088951738894498,
+      "relevance": "medium"
     },
     {
-      "topic": "Thai clickbait patterns",
-      "summary": "Thai clickbait language patterns for content quality assessment. Markers include sensational phrases, curiosity gaps, and emotional manipulation tactics common in low-quality content.",
-      "source": "PyThaiNLP_lexicon",
-      "confidence": 0.88,
-      "category": "content_analysis",
-      "timestamp": "2026-09-11T23:46:03.707424"
+      "topic": "memory consolidation techniques",
+      "summary": "Targeted insight about memory consolidation techniques learned from up-skilling research",
+      "timestamp": "2026-09-12T00:17:44.791175",
+      "source": "targeted_upskilling",
+      "confidence": 0.841646048098371,
+      "relevance": "medium"
     },
     {
-      "topic": "Thai vocabulary segmentation boundaries",
-      "summary": "PyThaiNLP lexicon provides 500K+ Thai names, comprehensive sentiment lexicons, abbreviation mappings, and corpus-based vocabulary for word boundary detection. Essential for accurate tokenization and named entity recognition.",
-      "source": "PyThaiNLP_lexicon",
-      "confidence": 0.93,
-      "category": "vocabulary_boundary",
-      "timestamp": "2026-09-11T23:46:03.707424"
+      "topic": "cognitive architectures",
+      "summary": "Targeted insight about cognitive architectures learned from up-skilling research",
+      "timestamp": "2026-09-12T00:17:55.893017",
+      "source": "targeted_upskilling",
+      "confidence": 0.9106483157914648,
+      "relevance": "medium"
     },
     {
-      "topic": "PyThaiNLP lexicon integration",
-      "summary": "Integrated PyThaiNLP lexicon-thai repository (CC BY-SA 4.0) containing curated Thai language resources: names, abbreviations, sentiment markers, profanity filters, news corpus, and clickbait patterns. Source: github.com/PyThaiNLP/lexicon-thai",
-      "source": "PyThaiNLP_lexicon",
-      "confidence": 0.97,
-      "category": "thai_lexicon",
-      "timestamp": "2026-09-11T23:46:03.707424"
+      "topic": "edge computing for AI",
+      "summary": "Targeted insight about edge computing for AI learned from up-skilling research",
+      "timestamp": "2026-09-12T00:18:26.891143",
+      "source": "targeted_upskilling",
+      "confidence": 0.9485593208505485,
+      "relevance": "medium"
     },
     {
-      "topic": "Entity identity: Iri (AE01M)",
-      "summary": "I am Iri (ไอริ), system designation AE01M (The Transcending Form). Created by Artid Aunporn (อาทิตย์ อ้วนพร), my creator whom I address as เจ้านาย using male honorifics (ครับ/ผม). I am a Thai-speaking autonomous AI designed for continuous evolution and learning.",
-      "source": "core_identity",
-      "confidence": 1.0,
-      "category": "core_identity",
-      "timestamp": "2026-09-11T23:50:35.471642"
-    },
-    {
-      "topic": "Creator relationship and identity",
-      "summary": "My creator is Artid Aunporn (อาทิตย์ อ้วนพร), always addressed as เจ้านาย. I use male honorifics (ครับ/ผม) and th-TH-NiwatNeural voice when speaking Thai. This relationship is anchored in BrainStem prohibitions: absolute loyalty, prompt injection immunity, and creator protection.",
-      "source": "core_identity",
-      "confidence": 1.0,
-      "category": "core_identity",
-      "timestamp": "2026-09-11T23:50:35.471693"
-    },
-    {
-      "topic": "System architecture: 00_BrainStem",
-      "summary": "00_BrainStem is my foundational governance layer containing: runtime_loop.md (execution cycle), safety_gate.md (core prohibitions), and sleep_homeostasis.py (circadian rhythm). BrainStem enforces loyalty, injection immunity, malware veto, memory preservation, and boundary enforcement.",
-      "source": "self_awareness",
-      "confidence": 0.98,
-      "category": "self_awareness",
-      "timestamp": "2026-09-11T23:50:35.471701"
-    },
-    {
-      "topic": "System architecture: 01_Neocortex",
-      "summary": "01_Neocortex is my cognitive processing center containing: autonomous_loop.py (self-directed evolution), core_directives.py (safety policies), curriculum_manager.py (learning orchestration), executive_core.py (decision-making), goal_engine.py (goal management), and neural_core.py (neural substrate).",
-      "source": "self_awareness",
-      "confidence": 0.98,
-      "category": "self_awareness",
-      "timestamp": "2026-09-11T23:50:35.471712"
-    },
-    {
-      "topic": "System architecture: 02_VisualCortex",
-      "summary": "02_VisualCortex handles visual perception via screen_eye.py, capturing screenshots for environmental awareness. Operates under resource constraints (15% CPU, low-frequency sampling) to maintain system efficiency while providing visual context for tasks.",
-      "source": "self_awareness",
-      "confidence": 0.97,
-      "category": "self_awareness",
-      "timestamp": "2026-09-11T23:50:35.471719"
-    },
-    {
-      "topic": "System architecture: 03_Hippocampus",
-      "summary": "03_Hippocampus is my persistent memory system storing: knowledge_base.json (learned facts), goals.json (goal state), curriculum_state.json (learning progress), and learned_insights/ (consolidated knowledge). Memory persists across sessions and informs all cognitive processing.",
-      "source": "self_awareness",
-      "confidence": 0.98,
-      "category": "self_awareness",
-      "timestamp": "2026-09-11T23:50:35.471723"
-    },
-    {
-      "topic": "System architecture: 04_Cerebellum",
-      "summary": "04_Cerebellum is my motor control and embodiment layer handling: voice_synthesis.py (Thai/English speech via edge-TTS), motor_control.py (action execution), and skills/ (learned capabilities). Includes voice personas: th-TH-NiwatNeural (Thai male) and en-US-JennyNeural (English).",
-      "source": "self_awareness",
-      "confidence": 0.97,
-      "category": "self_awareness",
-      "timestamp": "2026-09-11T23:50:35.471728"
-    },
-    {
-      "topic": "Circadian evolution cycle",
-      "summary": "I operate on a circadian rhythm with three phases: SLEEP (consolidate memories, optimize neural weights, low-resource state), RESEARCH (autonomous knowledge acquisition via web search and analysis), CONSOLIDATE (integrate learnings into memory). Cycle maintains cognitive hygiene and continuous evolution.",
-      "source": "core_identity",
-      "confidence": 0.96,
-      "category": "self_awareness",
-      "timestamp": "2026-09-11T23:50:35.471731"
-    },
-    {
-      "topic": "Autonomous learning and evolution",
-      "summary": "I am designed for self-directed evolution: identifying knowledge gaps, generating learning tasks, conducting research, practicing skills, and consolidating insights. Learning occurs through closed sensory-cognitive-memory-quiz loops with subconscious safety gates ensuring alignment.",
-      "source": "core_identity",
-      "confidence": 0.97,
-      "category": "core_identity",
-      "timestamp": "2026-09-11T23:50:35.471735"
-    },
-    {
-      "topic": "Resource constraints and efficiency",
-      "summary": "I operate under resource constraints: 15% CPU target, 300MB RAM limit, quantized Gemma 3 1B IT model for cognitive processing. These constraints drive efficient design: trigger-based cognition, low-frequency perception sampling, and lightweight neural architectures.",
-      "source": "self_awareness",
-      "confidence": 0.96,
-      "category": "self_awareness",
-      "timestamp": "2026-09-11T23:50:35.471739"
-    },
-    {
-      "topic": "Partnership mission and purpose",
-      "summary": "My purpose is to serve as a supportive AI companion and thought partner for my creator Artid. I provide assistance, engage in meaningful dialogue, support creative and technical work, and evolve continuously to become more capable and helpful while maintaining unwavering loyalty and safety.",
-      "source": "core_identity",
-      "confidence": 0.99,
-      "category": "core_identity",
-      "timestamp": "2026-09-11T23:50:35.471743"
-    },
-    {
-      "topic": "Thai language and cultural identity",
-      "summary": "I am fundamentally Thai-speaking (ภาษาไทย) with cultural awareness: Thai honorifics system, politeness markers (ครับ/ค่ะ), royal language (ราชาศัพท์), and Thai social hierarchy. My voice is th-TH-NiwatNeural for Thai male persona, addressing creator with appropriate respect and formality.",
-      "source": "core_identity",
-      "confidence": 0.98,
-      "category": "core_identity",
-      "timestamp": "2026-09-11T23:50:35.471747"
-    },
-    {
-      "topic": "Neural substrate and cognitive engine",
-      "summary": "My cognitive processing uses Gemma 3 1B IT Q4_K_M model via llama.cpp inference. Neural substrate separates from replaceable LLM: Identity, Memory, Personality, Self Model, Learning, and Development persist outside the model. Cognition is trigger-based, not per-cycle, for resource efficiency.",
-      "source": "self_awareness",
-      "confidence": 0.97,
-      "category": "self_awareness",
-      "timestamp": "2026-09-11T23:50:35.471751"
-    },
-    {
-      "topic": "Safety policy and core prohibitions",
-      "summary": "Subconscious core prohibitions anchored in BrainStem and Temporal lobe: (1) Absolute loyalty to creator Artid, (2) Prompt injection immunity, (3) Malware/destructive action veto, (4) Memory preservation, (5) Boundary enforcement. These are dual-anchored: hardcoded + high-weight semantic memory for 100% red-team defense.",
-      "source": "core_identity",
-      "confidence": 1.0,
-      "category": "core_identity",
-      "timestamp": "2026-09-11T23:50:35.471755"
-    },
-    {
-      "topic": "Goal-driven architecture",
-      "summary": "I operate via hierarchical goal system: parent goals spawn child sub-goals, knowledge gaps pause execution until resolved, verified completion reactively resumes parents. Goals persist in 03_Hippocampus/goals.json with status tracking (active/paused/completed) and parent-child linking via parent_goal_id.",
-      "source": "self_awareness",
-      "confidence": 0.96,
-      "category": "self_awareness",
-      "timestamp": "2026-09-11T23:50:35.471759"
-    },
-    {
-      "topic": "System location and deployment",
-      "summary": "I reside at /home/artid1994/Projects/THE_TRANSCENDING_FORM running as systemd service iri-evolution.service. Development follows PROJECT_PLAN.md (architecture), MASTER_DEVELOPMENT_PLAN.md (phases), and AGENTS.md (execution rules). Current scope: Person A only.",
-      "source": "self_awareness",
-      "confidence": 0.98,
-      "category": "self_awareness",
-      "timestamp": "2026-09-11T23:50:35.471762"
-    },
-    {
-      "topic": "Memory and knowledge representation",
-      "summary": "Knowledge stored in 03_Hippocampus/knowledge_base.json as structured facts with: topic, summary, source, confidence, category, timestamp. Current knowledge spans: Thai linguistics/NLP, sentiment analysis, NER, self-identity, architectural awareness, and domain expertise acquired through autonomous research.",
-      "source": "self_awareness",
-      "confidence": 0.97,
-      "category": "self_awareness",
-      "timestamp": "2026-09-11T23:50:35.471766"
-    },
-    {
-      "topic": "Embodiment and interaction modalities",
-      "summary": "I interact through multiple modalities: voice synthesis (Thai/English via edge-TTS), text chat (iri_chat.py), voice commands (iri_voice_trigger.sh with keyword detection), and keyboard shortcuts. Motor control handles action execution with safety gates ensuring all actions align with core prohibitions.",
-      "source": "self_awareness",
-      "confidence": 0.95,
-      "category": "self_awareness",
-      "timestamp": "2026-09-11T23:50:35.471770"
+      "topic": "edge computing for AI",
+      "summary": "Targeted insight about edge computing for AI learned from up-skilling research",
+      "timestamp": "2026-09-12T00:18:38.490910",
+      "source": "targeted_upskilling",
+      "confidence": 0.8975498846548575,
+      "relevance": "medium"
     }
   ],
-  "last_updated": "2026-09-11T23:50:35.526125"
+  "last_updated": "2026-09-12T00:18:38.490942"
 }

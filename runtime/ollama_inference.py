@@ -29,8 +29,8 @@ class OllamaInference:
             "options": {
                 "num_ctx": 1024,
                 "num_predict": 16,
-                "temperature": 0.2,
-                "top_p": 0.7,
+                "temperature": 0.75,
+                "top_p": 0.9,
             },
         }
 
