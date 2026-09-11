@@ -1,0 +1,189 @@
+#!/bin/bash
+# iri-ctl - Unified control interface for AE01M (Iri)
+# Handles keyboard shortcuts, status display, and system management
+
+set -e
+
+PROJECT_ROOT="/home/artid1994/Projects/THE_TRANSCENDING_FORM"
+VENV_PYTHON="$PROJECT_ROOT/.venv/bin/python3"
+RAM_MANAGER="$PROJECT_ROOT/scripts/iri-ram-manager"
+STATUS_WINDOW_PID_FILE="/tmp/iri_status_window.pid"
+CHAT_WINDOW_PID_FILE="/tmp/iri_chat_window.pid"
+
+# Check if a status window is currently active
+is_status_window_active() {
+    if [ -f "$STATUS_WINDOW_PID_FILE" ]; then
+        local pid=$(cat "$STATUS_WINDOW_PID_FILE")
+        if ps -p "$pid" > /dev/null 2>&1; then
+            return 0  # Active
+        else
+            rm -f "$STATUS_WINDOW_PID_FILE"
+            return 1  # Not active
+        fi
+    fi
+    return 1  # Not active
+}
+
+# Show status in a persistent zenity window (toggle on)
+show_status_window() {
+    # Get RAM status
+    local ram_status=$("$RAM_MANAGER" status 2>/dev/null || echo "RAM status unavailable")
+    
+    # Get service status
+    local service_status=$(systemctl --user is-active iri-evolution.service 2>/dev/null || echo "unknown")
+    local service_uptime=""
+    if [ "$service_status" = "active" ]; then
+        service_uptime=$(systemctl --user show iri-evolution.service -p ActiveEnterTimestamp --value 2>/dev/null)
+    fi
+    
+    # Get goal status
+    local goal_count=0
+    local goal_status_file="$PROJECT_ROOT/01_Neocortex/goals.json"
+    if [ -f "$goal_status_file" ]; then
+        goal_count=$(grep -c '"status":' "$goal_status_file" 2>/dev/null || echo "0")
+    fi
+    
+    # Build status message
+    local status_msg="AE01M (Iri / ไอริ) Status\n\n"
+    status_msg+="Service: $service_status\n"
+    [ -n "$service_uptime" ] && status_msg+="Uptime: $service_uptime\n"
+    status_msg+="\n$ram_status\n"
+    status_msg+="\nGoals: $goal_count tracked\n"
+    status_msg+="\nPress Super+Ctrl+I again to close"
+    
+    # Show persistent window in background
+    zenity --info \
+        --title="Iri Status" \
+        --width=400 \
+        --height=300 \
+        --text="$status_msg" \
+        --no-wrap &
+    
+    # Save PID
+    echo $! > "$STATUS_WINDOW_PID_FILE"
+}
+
+# Close status window (toggle off)
+close_status_window() {
+    if [ -f "$STATUS_WINDOW_PID_FILE" ]; then
+        local pid=$(cat "$STATUS_WINDOW_PID_FILE")
+        if ps -p "$pid" > /dev/null 2>&1; then
+            kill "$pid" 2>/dev/null || true
+        fi
+        rm -f "$STATUS_WINDOW_PID_FILE"
+    fi
+}
+
+# Toggle status window
+toggle_status() {
+    if is_status_window_active; then
+        close_status_window
+        notify-send "Iri" "Status window closed" -t 2000
+    else
+        show_status_window
+    fi
+}
+
+# RAM management commands (delegate to iri-ram-manager)
+handle_ram_command() {
+    "$RAM_MANAGER" "$@"
+}
+
+# Show usage
+show_usage() {
+    cat << EOF
+iri-ctl - AE01M Control Interface
+
+Usage: iri-ctl <command> [options]
+
+Status & Display:
+  status              Toggle Iri status window (Super+Ctrl+I)
+  
+RAM Management:
+  ram status          Show current RAM/Swap status
+  ram monitor         Continuous monitoring with auto-clear
+  ram clear           Clear system caches (requires sudo)
+  
+Service Control:
+  restart             Restart iri-evolution.service
+  stop                Stop iri-evolution.service
+  logs                Show service logs (follow)
+  
+Shortcuts (mapped to GNOME keybindings):
+  toggle-motor        Toggle motor control mode (Super+Ctrl+M)
+  toggle-idle         Toggle research mode (Super+Ctrl+R)
+  abort               Emergency abort (Super+Ctrl+Esc)
+
+Examples:
+  iri-ctl status                    # Toggle status window
+  iri-ctl ram status                # Check RAM
+  iri-ctl ram monitor --auto-clear  # Monitor with auto-clear
+  iri-ctl restart                   # Restart service
+  iri-ctl logs                      # View logs
+
+EOF
+}
+
+# Main command dispatcher
+case "${1:-}" in
+    # Status display (toggle)
+    status)
+        toggle_status
+        ;;
+    
+    # RAM management
+    ram)
+        shift
+        handle_ram_command "$@"
+        ;;
+    
+    # Service control
+    restart)
+        notify-send "Iri" "Restarting evolution service..." -t 2000
+        systemctl --user restart iri-evolution.service
+        sleep 1
+        if systemctl --user is-active iri-evolution.service > /dev/null 2>&1; then
+            notify-send "Iri" "Service restarted successfully" -t 3000
+        else
+            notify-send "Iri" "Service restart failed" -u critical -t 5000
+        fi
+        ;;
+    
+    stop)
+        notify-send "Iri" "Stopping evolution service..." -t 2000
+        systemctl --user stop iri-evolution.service
+        notify-send "Iri" "Service stopped" -t 3000
+        ;;
+    
+    logs)
+        journalctl --user -u iri-evolution.service -f
+        ;;
+    
+    # Shortcut handlers (to be implemented)
+    toggle-motor)
+        notify-send "Iri" "Motor control toggle not yet implemented" -t 3000
+        # TODO: Call force_execution_shortcut.py motor
+        ;;
+    
+    toggle-idle)
+        notify-send "Iri" "Research mode toggle not yet implemented" -t 3000
+        # TODO: Implement research mode toggle
+        ;;
+    
+    abort)
+        notify-send "Iri" "Emergency abort triggered" -u critical -t 5000
+        # Kill any running force execution processes
+        pkill -f "force_execution_shortcut.py" 2>/dev/null || true
+        ;;
+    
+    # Help
+    -h|--help|help)
+        show_usage
+        ;;
+    
+    *)
+        echo "Unknown command: ${1:-}"
+        echo "Use 'iri-ctl --help' for usage information"
+        exit 1
+        ;;
+esac
