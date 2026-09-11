@@ -159,21 +159,74 @@ case "${1:-}" in
         journalctl --user -u iri-evolution.service -f
         ;;
     
-    # Shortcut handlers (to be implemented)
+    # Shortcut handlers
     toggle-motor)
-        notify-send "Iri" "Motor control toggle not yet implemented" -t 3000
-        # TODO: Call force_execution_shortcut.py motor
+        # Read current motor state
+        MOTOR_STATE_FILE="$PROJECT_ROOT/04_Cerebellum/motor_state.json"
+        
+        if [ -f "$MOTOR_STATE_FILE" ]; then
+            current_state=$(grep -o '"enabled":[^,}]*' "$MOTOR_STATE_FILE" | cut -d: -f2 | tr -d ' ')
+            
+            if [ "$current_state" = "true" ]; then
+                # Disable motor control
+                echo '{"enabled":false}' > "$MOTOR_STATE_FILE"
+                notify-send "Iri (ไอริ)" "Motor Control: OFF" -t 2000
+                logger -t iri-ctl "Motor control disabled via Super+Ctrl+M"
+            else
+                # Enable motor control
+                echo '{"enabled":true}' > "$MOTOR_STATE_FILE"
+                notify-send "Iri (ไอริ)" "Motor Control: ON" -t 2000
+                logger -t iri-ctl "Motor control enabled via Super+Ctrl+M"
+            fi
+        else
+            # Create new state file with motor enabled
+            echo '{"enabled":true}' > "$MOTOR_STATE_FILE"
+            notify-send "Iri (ไอริ)" "Motor Control: ON (initialized)" -t 2000
+        fi
         ;;
     
     toggle-idle)
-        notify-send "Iri" "Research mode toggle not yet implemented" -t 3000
-        # TODO: Implement research mode toggle
+        # Toggle research mode
+        RESEARCH_STATE_FILE="$PROJECT_ROOT/01_Neocortex/research_mode.json"
+        
+        if [ -f "$RESEARCH_STATE_FILE" ]; then
+            current_state=$(grep -o '"research_mode":[^,}]*' "$RESEARCH_STATE_FILE" | cut -d: -f2 | tr -d ' ')
+            
+            if [ "$current_state" = "true" ]; then
+                # Disable research mode
+                echo '{"research_mode":false}' > "$RESEARCH_STATE_FILE"
+                notify-send "Iri (ไอริ)" "Research Mode: OFF" -t 2000
+                logger -t iri-ctl "Research mode disabled via Super+Ctrl+R"
+            else
+                # Enable research mode
+                echo '{"research_mode":true}' > "$RESEARCH_STATE_FILE"
+                notify-send "Iri (ไอริ)" "Research Mode: ON" -t 2000
+                logger -t iri-ctl "Research mode enabled via Super+Ctrl+R"
+            fi
+        else
+            # Create new state file with research mode enabled
+            echo '{"research_mode":true}' > "$RESEARCH_STATE_FILE"
+            notify-send "Iri (ไอริ)" "Research Mode: ON (initialized)" -t 2000
+        fi
         ;;
     
     abort)
-        notify-send "Iri" "Emergency abort triggered" -u critical -t 5000
-        # Kill any running force execution processes
+        # Emergency abort - immediate kill switch
+        notify-send "Iri (ไอริ)" "EMERGENCY ABORT" -u critical -t 5000
+        logger -t iri-ctl "Emergency abort triggered via Super+Ctrl+Esc"
+        
+        # Update abort state in iri_state.json
+        IRI_STATE_FILE="$PROJECT_ROOT/04_Cerebellum/iri_state.json"
+        if [ -f "$IRI_STATE_FILE" ]; then
+            # Set abort_requested to true
+            python3 -c "import json; f=open('$IRI_STATE_FILE','r'); d=json.load(f); f.close(); d['abort_requested']=True; f=open('$IRI_STATE_FILE','w'); json.dump(d,f); f.close()"
+        fi
+        
+        # Kill any running autonomous processes
         pkill -f "force_execution_shortcut.py" 2>/dev/null || true
+        pkill -f "autonomous_loop.py" 2>/dev/null || true
+        
+        notify-send "Iri (ไอริ)" "All autonomous processes terminated" -t 3000
         ;;
     
     # Help
