@@ -3,7 +3,7 @@ from __future__ import annotations
 from collections.abc import Callable
 
 
-class GemmaCognitiveEngine:
+class AE01MCognitiveCore:
     def __init__(self, inference: Callable[[str], str]) -> None:
         self._inference = inference
         self.last_thought = ""
@@ -28,6 +28,6 @@ class GemmaCognitiveEngine:
 
     def snapshot(self) -> dict:
         return {
-            "engine": "GemmaCognitiveEngine",
+            "engine": "AE01MCognitiveCore",
             "last_thought": self.last_thought,
         }

@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from runtime.gemma_cognitive_engine import GemmaCognitiveEngine
+from runtime.ae01m_cognitive_core import AE01MCognitiveCore
 from runtime.brain_inference import BrainInference
 from runtime.neocortex_cognition import NeocortexCognition
 
@@ -9,11 +9,10 @@ def create_cognitive_engine(
     model_path: str = "",
     executable: str = "",
     backend: str = "neocortex",
-    model: str = "qwen3.5:0.8b",
-    host: str = "http://10.74.65.85:11434",
-) -> GemmaCognitiveEngine:
+    host: str = "http://localhost:11434",
+) -> AE01MCognitiveCore:
     if backend == "neocortex":
-        inference = NeocortexCognition(model=model, host=host)
+        inference = NeocortexCognition(host=host)
     elif backend == "brain":
         inference = BrainInference(
             model_path=model_path,
@@ -22,4 +21,4 @@ def create_cognitive_engine(
     else:
         raise ValueError(f"Unsupported cognitive backend: {backend}")
 
-    return GemmaCognitiveEngine(inference=inference)
+    return AE01MCognitiveCore(inference=inference)

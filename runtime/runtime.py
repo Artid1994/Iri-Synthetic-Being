@@ -68,7 +68,6 @@ class TranscendingRuntime:
         self.self_model = SelfModel()
         self.cognitive = cognitive or create_cognitive_engine(
             backend="neocortex",
-            model="qwen2.5:0.5b",
             **({("host"): brain_host} if brain_host else {}),
         )
         self.learning = Learning(self.memory)
