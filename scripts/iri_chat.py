@@ -19,11 +19,13 @@ sys.path.insert(0, str(PROJECT_ROOT))
 try:
     sys.path.insert(0, str(PROJECT_ROOT / "01_Neocortex"))
     sys.path.insert(0, str(PROJECT_ROOT / "03_Hippocampus"))
+    sys.path.insert(0, str(PROJECT_ROOT / "04_Cerebellum"))
     
     from executive_core import KnowledgeGraph, Intent
     from memory_store import HippocampusMemory
     from core_directives import CoreDirectives
     from nlp_thai_lexicon import get_thai_lexicon
+    from skills import get_system_inspector, get_text_analyzer
 except ImportError as e:
     print(f"⚠️  Import error: {e}")
     print("Make sure you're running from project root with venv activated")
@@ -38,6 +40,8 @@ class IriChat:
         self.memory = HippocampusMemory(vault_path=str(PROJECT_ROOT))
         self.directives = CoreDirectives
         self.thai_lexicon = get_thai_lexicon()
+        self.system_inspector = get_system_inspector()
+        self.text_analyzer = get_text_analyzer()
         self.conversation_history = []
         
         # State file for user activity detection (DIRECTIVE_2)
@@ -66,11 +70,20 @@ class IriChat:
             pass
     
     def classify_input(self, user_input: str) -> Intent:
-        """Classify user input intent using Thai NLP lexicon."""
+        """Classify user input intent using Thai NLP lexicon and skills."""
         user_lower = user_input.lower()
         
         # Use Thai lexicon for advanced entity extraction
         thai_intent = self.thai_lexicon.extract_intent(user_input)
+        
+        # Check for skill commands first (highest priority)
+        skill_command = self.text_analyzer.extract_skill_commands(user_input)
+        if skill_command:
+            return Intent(
+                type='skill',
+                confidence=1.0,
+                entities=[skill_command['skill'], skill_command['method']]
+            )
         
         # Command detection
         if any(cmd in user_lower for cmd in ['exit', 'quit', 'bye', 'ออก', 'ลาก่อน']):
@@ -108,6 +121,10 @@ class IriChat:
         # Handle greeting
         if intent.type == 'greeting':
             return self._generate_greeting()
+        
+        # Handle skill commands (system inspection, etc.)
+        if intent.type == 'skill':
+            return self._execute_skill(intent)
         
         # Handle commands (from Thai NLP extraction)
         if intent.type == 'command':
@@ -158,12 +175,51 @@ class IriChat:
         # Found context
         return f"ตามที่ผมค้นหาในหน่วยความจำครับเจ้านาย:\n\n{context}"
     
+    def _execute_skill(self, intent: Intent) -> str:
+        """Execute skill command."""
+        if len(intent.entities) < 2:
+            return "ขออภัยครับเจ้านาย ระบุสกิลไม่ครบถ้วนครับ"
+        
+        skill_name = intent.entities[0]
+        method_name = intent.entities[1]
+        
+        try:
+            if skill_name == 'system_inspector':
+                # Execute system inspector methods
+                if method_name == 'inspect_all':
+                    inspection = self.system_inspector.inspect_all()
+                    report = self.system_inspector.format_report(inspection)
+                    return f"รับทราบคำสั่งครับเจ้านาย กำลังตรวจสอบระบบ...\n\n{report}"
+                
+                elif method_name == 'inspect_system':
+                    inspection = {'system': self.system_inspector.inspect_system()}
+                    return f"รับทราบคำสั่งครับเจ้านาย\n\nทรัพยากรระบบ:\nCPU: {inspection['system']['cpu']['usage_percent']:.1f}%\nMemory: {inspection['system']['memory']['percent']:.1f}%\nDisk: {inspection['system']['disk']['percent']:.1f}%"
+                
+                elif method_name == 'inspect_project':
+                    inspection = {'project': self.system_inspector.inspect_project()}
+                    proj = inspection['project']
+                    return f"รับทราบคำสั่งครับเจ้านาย\n\nสถานะโปรเจกต์:\nRoot: {proj['root']}\nVirtual Env: {'✓' if proj['virtualenv_active'] else '✗'}\nBrain Regions: {sum(1 for k, v in proj['structure'].items() if v.get('exists', False))}"
+                
+                elif method_name == 'inspect_git':
+                    inspection = {'git': self.system_inspector.inspect_git()}
+                    git = inspection['git']
+                    if git['is_repo']:
+                        commits_text = '\n'.join(git['recent_commits'][:3]) if git['recent_commits'] else 'None'
+                        return f"รับทราบคำสั่งครับเจ้านาย\n\nGit Status:\nBranch: {git['branch']}\nUncommitted: {'Yes' if git['uncommitted_changes'] else 'No'}\n\nRecent commits:\n{commits_text}"
+                    else:
+                        return "ขออภัยครับเจ้านาย ไม่พบ Git repository ครับ"
+            
+            return f"ขออภัยครับเจ้านาย ยังไม่รองรับสกิล '{skill_name}' ครับ"
+        
+        except Exception as e:
+            return f"ขออภัยครับเจ้านาย เกิดข้อผิดพลาด: {str(e)}"
+    
     def _execute_command(self, intent: Intent) -> str:
         """Execute command extracted from Thai NLP."""
         action = intent.entities[0] if len(intent.entities) > 0 else 'unknown'
         target = intent.entities[1] if len(intent.entities) > 1 else ''
         
-        return f"รับทราบคำสั่งครับเจ้านาย: '{action}' เป้าหมาย: '{target}'\\nกำลังดำเนินการ... (ฟังก์ชันยังไม่เชื่อมต่อครับ)"
+        return f"รับทราบคำสั่งครับเจ้านาย: '{action}' เป้าหมาย: '{target}'\nกำลังดำเนินการ... (ฟังก์ชันยังไม่เชื่อมต่อครับ)"
     
     def _respond_to_statement(self, statement: str) -> str:
         """Respond to general statements."""
