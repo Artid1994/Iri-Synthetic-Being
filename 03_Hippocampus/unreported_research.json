@@ -19,6 +19,72 @@
       "[Autonomous] Functions map inputs to outputs systematically",
       "[Autonomous] Derivatives measure rates of change"
     ],
+    "reported": true
+  },
+  {
+    "topic": "Self-Code Architecture Mapping",
+    "domain": "Programming",
+    "facts_count": 5,
+    "timestamp": 1789164138.3288357,
+    "key_facts": [
+      "[Autonomous] Algorithms are step-by-step procedures",
+      "[Autonomous] Data structures organize information efficiently"
+    ],
+    "reported": true
+  },
+  {
+    "topic": "Python Data Structures",
+    "domain": "Programming",
+    "facts_count": 5,
+    "timestamp": 1789164179.5579953,
+    "key_facts": [
+      "[Autonomous] Algorithms are step-by-step procedures",
+      "[Autonomous] Data structures organize information efficiently"
+    ],
+    "reported": true
+  },
+  {
+    "topic": "Basic Algorithms",
+    "domain": "Programming",
+    "facts_count": 5,
+    "timestamp": 1789164220.769404,
+    "key_facts": [
+      "[Autonomous] Algorithms are step-by-step procedures",
+      "[Autonomous] Data structures organize information efficiently"
+    ],
+    "reported": true
+  },
+  {
+    "topic": "Celestial Coordinates & Navigation",
+    "domain": "General",
+    "facts_count": 3,
+    "timestamp": 1789164304.8333654,
+    "key_facts": [
+      "[Autonomous] Understanding Celestial Coordinates & Navigation requires foundational knowledge",
+      "[Autonomous] Key concepts in Celestial Coordinates & Navigation build systematically"
+    ],
+    "reported": false
+  },
+  {
+    "topic": "Operating System Fundamentals",
+    "domain": "Computer_Systems",
+    "facts_count": 5,
+    "timestamp": 1789164346.6515546,
+    "key_facts": [
+      "[Autonomous] Operating systems manage hardware resources",
+      "[Autonomous] Processes are independent program executions"
+    ],
+    "reported": false
+  },
+  {
+    "topic": "Linear Algebra Basics",
+    "domain": "Mathematics",
+    "facts_count": 5,
+    "timestamp": 1789164388.0648682,
+    "key_facts": [
+      "[Autonomous] Functions map inputs to outputs systematically",
+      "[Autonomous] Derivatives measure rates of change"
+    ],
     "reported": false
   }
 ]

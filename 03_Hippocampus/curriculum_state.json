@@ -13,8 +13,8 @@
     ],
     "prerequisites": [],
     "mastery_score": 0.32000000000000006,
-    "attempts": 1,
-    "last_studied": 1788984469.5243828
+    "attempts": 2,
+    "last_studied": 1789164179.5608563
   },
   "algorithms_basic": {
     "id": "algorithms_basic",
@@ -30,8 +30,8 @@
     ],
     "prerequisites": [],
     "mastery_score": 0.32000000000000006,
-    "attempts": 1,
-    "last_studied": 1788984981.9423335
+    "attempts": 2,
+    "last_studied": 1789164220.77498
   },
   "oop_principles": {
     "id": "oop_principles",
@@ -82,8 +82,8 @@
     ],
     "prerequisites": [],
     "mastery_score": 0.0,
-    "attempts": 2,
-    "last_studied": 1789160018.0716789
+    "attempts": 3,
+    "last_studied": 1789164346.6522918
   },
   "networking_fundamentals": {
     "id": "networking_fundamentals",
@@ -117,8 +117,8 @@
     ],
     "prerequisites": [],
     "mastery_score": 0.0,
-    "attempts": 2,
-    "last_studied": 1789161376.666135
+    "attempts": 3,
+    "last_studied": 1789164388.0656888
   },
   "calculus_fundamentals": {
     "id": "calculus_fundamentals",
@@ -168,8 +168,8 @@
     ],
     "prerequisites": [],
     "mastery_score": 0.4,
-    "attempts": 1,
-    "last_studied": 1788984469.5235207
+    "attempts": 2,
+    "last_studied": 1789164263.5548267
   },
   "celestial_navigation": {
     "id": "celestial_navigation",
@@ -186,8 +186,8 @@
     ],
     "prerequisites": [],
     "mastery_score": 0.4,
-    "attempts": 1,
-    "last_studied": 1788984981.9113617
+    "attempts": 2,
+    "last_studied": 1789164304.834318
   },
   "stellar_evolution": {
     "id": "stellar_evolution",
@@ -222,8 +222,8 @@
     ],
     "prerequisites": [],
     "mastery_score": 0.0,
-    "attempts": 1,
-    "last_studied": 1789159936.6056974
+    "attempts": 2,
+    "last_studied": 1789164097.1547813
   },
   "self_code_mapping": {
     "id": "self_code_mapping",
@@ -239,8 +239,8 @@
     ],
     "prerequisites": [],
     "mastery_score": 0.0,
-    "attempts": 1,
-    "last_studied": 1789159977.4094024
+    "attempts": 2,
+    "last_studied": 1789164138.3297484
   },
   "llm_architectures": {
     "id": "llm_architectures",
