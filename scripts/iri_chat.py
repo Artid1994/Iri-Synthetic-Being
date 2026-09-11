@@ -82,6 +82,22 @@ class IriChat:
         except Exception:
             pass
     
+    def speak(self, text: str):
+        """
+        Speak text using TTS voice synthesis (non-blocking).
+        Plays audio in background thread so it doesn't block user input.
+        """
+        if not self.voice_enabled or not self.voice_available:
+            return
+        
+        try:
+            # Use non-blocking speak (block=False)
+            import threading
+            threading.Thread(target=lambda: speak_aloud(text, block=False), daemon=True).start()
+        except Exception as e:
+            # Silently fail - don't disrupt chat flow
+            pass
+    
     def classify_input(self, user_input: str) -> Intent:
         """Classify user input intent using Thai NLP lexicon and skills."""
         user_lower = user_input.lower()
