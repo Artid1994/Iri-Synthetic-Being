@@ -67,25 +67,47 @@ class ForceExecutionTrigger:
     
     def announce_execution(self, shortcut_name: str):
         """
-        Announce execution start with 5-second countdown.
+        Announce execution with Thai voice feedback via 04_Cerebellum.
         
         Args:
             shortcut_name: Name of the triggered shortcut
         """
         logger.info(f"[SHORTCUT] {shortcut_name} activated")
         
-        # Announce via TTS if available
-        announcement = "Shortcut activated. Iri will begin execution in 5 seconds"
+        # Determine Thai announcement based on shortcut
+        if "Motor Control" in shortcut_name or "Super+Ctrl+M" in shortcut_name:
+            announcement = "สลับโหมดการเคลื่อนไหวแล้วครับ"  # Motor mode switched
+        elif "Immediate" in shortcut_name or "Super+Ctrl+R" in shortcut_name:
+            announcement = "สลับโหมดการวิจัยแล้วครับ"  # Research mode switched
+        elif "Status" in shortcut_name or "Super+Ctrl+I" in shortcut_name:
+            announcement = "สถานะไอริ ปกติดีครับเจ้านาย"  # Iri status normal, Master
+        elif "Emergency" in shortcut_name or "Super+Ctrl+Esc" in shortcut_name:
+            announcement = "ยกเลิกการทำงานฉุกเฉินครับ"  # Emergency stop
+        else:
+            announcement = "รับทราบคำสั่งครับเจ้านาย"  # Command acknowledged, Master
+        
         logger.info(f"[ANNOUNCE] {announcement}")
         
         try:
-            # Try to use edge-tts for announcement
-            subprocess.run(
-                ["edge-tts", "--text", announcement, "--voice", "en-US-JennyNeural", "--write-media", "/tmp/iri_announce.mp3"],
-                timeout=3,
-                capture_output=True
-            )
-            subprocess.run(["mpv", "--really-quiet", "/tmp/iri_announce.mp3"], timeout=5, capture_output=True)
+            # Use 04_Cerebellum voice synthesizer
+            sys.path.insert(0, str(self.project_root / "04_Cerebellum"))
+            from voice_synthesis import VoiceSynthesizer
+            
+            vs = VoiceSynthesizer()
+            output_path = "/tmp/iri_hotkey_announce.mp3"
+            
+            # Synthesize
+            result = vs.synthesize(announcement, output_path=output_path)
+            
+            if result:
+                # Play with ffplay (non-blocking)
+                subprocess.Popen(
+                    ["ffplay", "-nodisp", "-autoexit", "-loglevel", "error", result],
+                    stdout=subprocess.DEVNULL,
+                    stderr=subprocess.DEVNULL
+                )
+        except Exception as e:
+            logger.warning(f"[ANNOUNCE] Voice synthesis failed: {e}")
         except:
             # Fallback: just log
             logger.info("[ANNOUNCE] TTS not available, using log only")
