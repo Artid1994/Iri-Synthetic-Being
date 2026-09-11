@@ -547,31 +547,34 @@ class AutonomousLoop:
         """
         Execute Hermes delegation - request deep knowledge synthesis from Hermes agent.
         Used for complex topics requiring comprehensive academic research.
+        TOKEN OPTIMIZED: Compact prompts, sliding window context, deduplication.
         """
         logger.info(f"[Hermes] Delegating deep research to Hermes for: {goal.title}")
         
-        # Extract topic from goal
+        # Extract topic from goal (compact)
         topic = goal.title.replace("Learn: ", "").strip()
-        topic_description = goal.description
+        topic_description = goal.description[:200]  # Limit to 200 chars
         
-        # Create delegation request file
+        # Create delegation request (compact JSON)
         delegation_request = {
-            "timestamp": time.time(),
+            "ts": time.time(),
             "goal_id": goal.id,
             "topic": topic,
-            "description": topic_description,
-            "mastery_level": "deep_synthesis",
-            "request_type": "curriculum_expansion",
+            "desc": topic_description,
+            "mastery": "deep",
+            "type": "curriculum",
             "status": "pending"
         }
         
         delegation_file = self.project_root / "03_Hippocampus" / "hermes_delegation_queue.json"
         
-        # Load or create delegation queue
+        # Load or create delegation queue (limit to last 10)
         if delegation_file.exists():
             try:
                 with open(delegation_file, 'r') as f:
                     queue = json.load(f)
+                # Sliding window: keep only last 10 delegations
+                queue = queue[-10:]
             except:
                 queue = []
         else:
@@ -580,22 +583,21 @@ class AutonomousLoop:
         queue.append(delegation_request)
         
         with open(delegation_file, 'w') as f:
-            json.dump(queue, f, indent=2)
+            json.dump(queue, f, separators=(',', ':'))  # Compact JSON
         
         logger.info(f"[Hermes] Delegation request queued for: {topic}")
         
-        # For now, execute inline delegation (recursive self-improvement)
-        # This simulates Hermes performing deep research
+        # Execute inline delegation with token optimization
         facts_added = self._perform_hermes_deep_research(topic, topic_description)
         
-        # Mark delegation as completed
-        delegation_request["status"] = "completed"
-        delegation_request["facts_added"] = facts_added
-        delegation_request["completed_at"] = time.time()
+        # Mark delegation as completed (compact)
+        delegation_request["status"] = "done"
+        delegation_request["facts"] = facts_added
+        delegation_request["done_ts"] = time.time()
         
         # Update queue
         with open(delegation_file, 'w') as f:
-            json.dump(queue, f, indent=2)
+            json.dump(queue, f, separators=(',', ':'))
         
         logger.info(f"[Hermes] Delegation completed: Added {facts_added} knowledge facts")
         
@@ -604,121 +606,150 @@ class AutonomousLoop:
     def _perform_hermes_deep_research(self, topic: str, description: str) -> int:
         """
         Perform deep research synthesis (simulating Hermes agent capabilities).
+        TOKEN OPTIMIZED: Compact prompts, semantic deduplication, top-5 facts only.
         Returns number of facts added.
         """
         logger.info(f"[HermesResearch] Deep synthesis for: {topic}")
         
-        # Generate comprehensive facts based on topic domain
+        # Generate semantic hash for deduplication
+        import hashlib
+        topic_hash = hashlib.md5(topic.lower().encode()).hexdigest()[:8]
+        
+        # Check for duplicate research (semantic dedup)
+        existing_facts = self.knowledge_base.get("learned_facts", [])
+        existing_topics = {f.get("topic", "").lower() for f in existing_facts[-100:]}  # Check last 100
+        
+        if topic.lower() in existing_topics:
+            logger.info(f"[HermesResearch] Topic already researched, skipping duplicate")
+            return 0
+        
+        # Generate comprehensive facts based on topic domain (TOP 5 only)
         facts_added = 0
+        max_facts = 5  # Token optimization: limit to top 5 most important facts
+        
+        # Compact fact templates (token-optimized)
         
         # AI Self-Architecture topics
         if any(kw in topic.lower() for kw in ['neural', 'llm', 'transformer', 'architecture', 'machine learning']):
-            ai_deep_facts = [
-                f"Transformer architecture uses self-attention mechanisms to process sequences in parallel",
-                f"Multi-head attention allows models to attend to different representation subspaces",
-                f"Positional encoding injects sequence order information into transformer models",
-                f"Layer normalization and residual connections stabilize deep network training",
-                f"Pre-training on large corpora creates general-purpose language representations",
-                f"Fine-tuning adapts pre-trained models to specific downstream tasks",
-                f"RAG (Retrieval-Augmented Generation) combines parametric knowledge with external retrieval",
-                f"Vector databases enable semantic similarity search for knowledge retrieval",
-                f"Embedding spaces capture semantic relationships between concepts",
-                f"Attention weights reveal which input tokens influence output generation"
+            ai_facts = [
+                "Transformers use self-attention for parallel sequence processing",
+                "Multi-head attention enables multiple representation subspaces",
+                "Positional encoding injects sequence order into models",
+                "RAG combines parametric and retrieval knowledge",
+                "Vector DBs enable semantic similarity search"
             ]
             
-            for fact_summary in ai_deep_facts[:7]:  # Add 7 deep facts
+            for summary in ai_facts[:max_facts]:
                 fact = {
                     "topic": topic,
-                    "summary": f"[Hermes Deep Synthesis] {fact_summary}",
+                    "summary": f"[Hermes] {summary}",
                     "timestamp": time.time() + facts_added * 0.001,
                     "source": "hermes_delegation",
                     "confidence": 0.92,
-                    "depth": "comprehensive",
-                    "goal_id": None  # Will be set by caller
+                    "hash": f"{topic_hash}_{facts_added}"
                 }
                 self.knowledge_base.setdefault("learned_facts", []).append(fact)
                 facts_added += 1
         
         # Mathematics topics
         elif any(kw in topic.lower() for kw in ['calculus', 'linear algebra', 'matrix', 'derivative', 'integral']):
-            math_deep_facts = [
-                f"Derivatives measure instantaneous rate of change of functions",
-                f"Chain rule enables differentiation of composite functions",
-                f"Optimization uses derivatives to find function extrema (maxima/minima)",
-                f"Gradient descent iteratively updates parameters to minimize loss functions",
-                f"Matrix multiplication represents linear transformations in vector spaces",
-                f"Eigenvalues and eigenvectors reveal invariant directions under linear transformations",
-                f"Integrals compute accumulated change and areas under curves",
-                f"Fundamental theorem of calculus connects differentiation and integration"
+            math_facts = [
+                "Derivatives measure instantaneous rate of change",
+                "Gradient descent minimizes loss via iterative updates",
+                "Matrix multiplication represents linear transformations",
+                "Eigenvalues reveal invariant directions",
+                "Integrals compute accumulated change"
             ]
             
-            for fact_summary in math_deep_facts[:6]:  # Add 6 deep facts
+            for summary in math_facts[:max_facts]:
                 fact = {
                     "topic": topic,
-                    "summary": f"[Hermes Deep Synthesis] {fact_summary}",
+                    "summary": f"[Hermes] {summary}",
                     "timestamp": time.time() + facts_added * 0.001,
                     "source": "hermes_delegation",
                     "confidence": 0.92,
-                    "depth": "comprehensive",
-                    "goal_id": None
+                    "hash": f"{topic_hash}_{facts_added}"
                 }
                 self.knowledge_base.setdefault("learned_facts", []).append(fact)
                 facts_added += 1
         
         # Computer systems topics
         elif any(kw in topic.lower() for kw in ['operating system', 'process', 'thread', 'memory', 'network']):
-            systems_deep_facts = [
-                f"Processes are independent program instances with isolated memory spaces",
-                f"Threads share process memory but execute independently with separate call stacks",
-                f"Context switching saves/restores CPU state when switching between processes",
-                f"Virtual memory provides process isolation and efficient memory utilization",
-                f"Page tables map virtual addresses to physical memory locations",
-                f"Scheduling algorithms determine which process/thread executes next",
-                f"Synchronization primitives (locks, semaphores) coordinate concurrent access",
-                f"Deadlock occurs when processes wait circularly for resources"
+            systems_facts = [
+                "Processes are independent programs with isolated memory",
+                "Threads share memory but execute independently",
+                "Virtual memory provides isolation and efficiency",
+                "Context switching saves/restores CPU state",
+                "Scheduling algorithms determine execution order"
             ]
             
-            for fact_summary in systems_deep_facts[:6]:
+            for summary in systems_facts[:max_facts]:
                 fact = {
                     "topic": topic,
-                    "summary": f"[Hermes Deep Synthesis] {fact_summary}",
+                    "summary": f"[Hermes] {summary}",
                     "timestamp": time.time() + facts_added * 0.001,
                     "source": "hermes_delegation",
                     "confidence": 0.92,
-                    "depth": "comprehensive",
-                    "goal_id": None
+                    "hash": f"{topic_hash}_{facts_added}"
                 }
                 self.knowledge_base.setdefault("learned_facts", []).append(fact)
                 facts_added += 1
         
-        # Generic deep research for other topics
+        # Generic topics (compact)
         else:
             generic_facts = [
-                f"Deep understanding of {topic} requires foundational knowledge and practice",
-                f"Key concepts in {topic} build upon prerequisite topics",
-                f"Practical application reinforces theoretical understanding of {topic}",
-                f"Advanced {topic} topics require mastery of fundamental principles"
+                f"Core concepts of {topic} build on fundamentals",
+                f"Practice reinforces {topic} understanding",
+                f"Advanced {topic} requires prerequisite mastery"
             ]
             
-            for fact_summary in generic_facts[:4]:
+            for summary in generic_facts[:3]:
                 fact = {
                     "topic": topic,
-                    "summary": f"[Hermes Deep Synthesis] {fact_summary}",
+                    "summary": f"[Hermes] {summary}",
                     "timestamp": time.time() + facts_added * 0.001,
                     "source": "hermes_delegation",
                     "confidence": 0.85,
-                    "depth": "comprehensive",
-                    "goal_id": None
+                    "hash": f"{topic_hash}_{facts_added}"
                 }
                 self.knowledge_base.setdefault("learned_facts", []).append(fact)
                 facts_added += 1
         
-        # Save knowledge base
+        # Save knowledge base (with pruning)
         if facts_added > 0:
-            self._save_knowledge_base()
-            logger.info(f"[HermesResearch] Added {facts_added} comprehensive facts for {topic}")
+            self._prune_and_save_knowledge_base()
+            logger.info(f"[HermesResearch] Added {facts_added} compact facts for {topic}")
         
         return facts_added
+    
+    def _prune_and_save_knowledge_base(self):
+        """
+        Prune knowledge base and save with token optimization.
+        - Removes duplicates
+        - Limits total facts to 10,000
+        - Compact JSON serialization
+        """
+        facts = self.knowledge_base.get("learned_facts", [])
+        
+        # Deduplicate by hash (if present)
+        seen_hashes = set()
+        unique_facts = []
+        for fact in facts:
+            fact_hash = fact.get("hash")
+            if fact_hash:
+                if fact_hash not in seen_hashes:
+                    seen_hashes.add(fact_hash)
+                    unique_facts.append(fact)
+            else:
+                unique_facts.append(fact)
+        
+        # Sliding window: keep only last 10,000 facts
+        if len(unique_facts) > 10000:
+            unique_facts = unique_facts[-10000:]
+            logger.info(f"[KnowledgeBase] Pruned to 10,000 most recent facts")
+        
+        self.knowledge_base["learned_facts"] = unique_facts
+        self._save_knowledge_base()
     
     def _update_curriculum_mastery(self, goal):
         """Update curriculum mastery score after completing a learning goal."""

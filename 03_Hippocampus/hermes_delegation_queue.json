@@ -1,0 +1,35 @@
+[
+  {
+    "timestamp": 1789161396.7203398,
+    "goal_id": "LEARN_calculus_fundamentals_1789161376",
+    "topic": "Calculus Fundamentals",
+    "description": "Derivatives, integrals, limits\nConcepts: limits, derivatives, integrals, optimization",
+    "mastery_level": "deep_synthesis",
+    "request_type": "curriculum_expansion",
+    "status": "completed",
+    "facts_added": 6,
+    "completed_at": 1789161396.7256215
+  },
+  {
+    "timestamp": 1789161456.8777347,
+    "goal_id": "LEARN_calculus_fundamentals_1789161436",
+    "topic": "Calculus Fundamentals",
+    "description": "Derivatives, integrals, limits\nConcepts: limits, derivatives, integrals, optimization",
+    "mastery_level": "deep_synthesis",
+    "request_type": "curriculum_expansion",
+    "status": "completed",
+    "facts_added": 6,
+    "completed_at": 1789161456.879453
+  },
+  {
+    "timestamp": 1789161517.0086699,
+    "goal_id": "LEARN_calculus_fundamentals_1789161496",
+    "topic": "Calculus Fundamentals",
+    "description": "Derivatives, integrals, limits\nConcepts: limits, derivatives, integrals, optimization",
+    "mastery_level": "deep_synthesis",
+    "request_type": "curriculum_expansion",
+    "status": "completed",
+    "facts_added": 6,
+    "completed_at": 1789161517.0162756
+  }
+]

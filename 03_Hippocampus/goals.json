@@ -376,9 +376,9 @@
     "title": "Learn: Linear Algebra Basics",
     "description": "Vectors, matrices, transformations\nConcepts: vectors, matrices, dot product, transformations",
     "priority": "medium",
-    "status": "in_progress",
+    "status": "completed",
     "created_at": 1789160018.074177,
-    "updated_at": 1789160018.074177,
+    "updated_at": 1789161436.7918198,
     "subtasks": [
       {
         "id": "LEARN_linear_algebra_basics_1789160018_research",
@@ -386,12 +386,12 @@
         "type": "research",
         "command": "Research topic: Linear Algebra Basics",
         "estimated_duration": 300,
-        "status": "pending",
+        "status": "completed",
         "safety_checks": [
           "DIRECTIVE_1",
           "DIRECTIVE_2"
         ],
-        "result": null
+        "result": "Research completed on Linear Algebra Basics. Added knowledge to database."
       },
       {
         "id": "LEARN_linear_algebra_basics_1789160018_quiz",
@@ -399,11 +399,122 @@
         "type": "verification",
         "command": "echo 'Quiz: Calculate the dot product of vectors [1,2,3] and [4,5,6]\nExpected: 32'",
         "estimated_duration": 60,
-        "status": "pending",
+        "status": "completed",
         "safety_checks": [
           "DIRECTIVE_1"
         ],
-        "result": null
+        "result": "Quiz: Calculate the dot product of vectors [1,2,3] and [4,5,6]\nExpected: 32"
+      }
+    ],
+    "result": null
+  },
+  {
+    "id": "LEARN_calculus_fundamentals_1789161376",
+    "title": "Learn: Calculus Fundamentals",
+    "description": "Derivatives, integrals, limits\nConcepts: limits, derivatives, integrals, optimization",
+    "priority": "high",
+    "status": "completed",
+    "created_at": 1789161376.6762724,
+    "updated_at": 1789161416.7732081,
+    "subtasks": [
+      {
+        "id": "LEARN_calculus_fundamentals_1789161376_hermes",
+        "title": "Deep Research (Hermes): Calculus Fundamentals",
+        "type": "delegate_to_hermes",
+        "command": "Hermes deep research: Calculus Fundamentals",
+        "estimated_duration": 600,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1",
+          "DIRECTIVE_2"
+        ],
+        "result": "Hermes delegation completed. Added 6 deep knowledge facts for Calculus Fundamentals."
+      },
+      {
+        "id": "LEARN_calculus_fundamentals_1789161376_quiz",
+        "title": "Self-quiz: Calculus Fundamentals",
+        "type": "verification",
+        "command": "echo 'Quiz: What is the derivative of f(x) = x\u00b2 + 2x?\nExpected: 2x + 2'",
+        "estimated_duration": 60,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1"
+        ],
+        "result": "Quiz: What is the derivative of f(x) = x\u00b2 + 2x?\nExpected: 2x + 2"
+      }
+    ],
+    "result": null
+  },
+  {
+    "id": "LEARN_calculus_fundamentals_1789161436",
+    "title": "Learn: Calculus Fundamentals",
+    "description": "Derivatives, integrals, limits\nConcepts: limits, derivatives, integrals, optimization",
+    "priority": "high",
+    "status": "completed",
+    "created_at": 1789161436.837353,
+    "updated_at": 1789161476.8974562,
+    "subtasks": [
+      {
+        "id": "LEARN_calculus_fundamentals_1789161436_hermes",
+        "title": "Deep Research (Hermes): Calculus Fundamentals",
+        "type": "delegate_to_hermes",
+        "command": "Hermes deep research: Calculus Fundamentals",
+        "estimated_duration": 600,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1",
+          "DIRECTIVE_2"
+        ],
+        "result": "Hermes delegation completed. Added 6 deep knowledge facts for Calculus Fundamentals."
+      },
+      {
+        "id": "LEARN_calculus_fundamentals_1789161436_quiz",
+        "title": "Self-quiz: Calculus Fundamentals",
+        "type": "verification",
+        "command": "echo 'Quiz: What is the derivative of f(x) = x\u00b2 + 2x?\nExpected: 2x + 2'",
+        "estimated_duration": 60,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1"
+        ],
+        "result": "Quiz: What is the derivative of f(x) = x\u00b2 + 2x?\nExpected: 2x + 2"
+      }
+    ],
+    "result": null
+  },
+  {
+    "id": "LEARN_calculus_fundamentals_1789161496",
+    "title": "Learn: Calculus Fundamentals",
+    "description": "Derivatives, integrals, limits\nConcepts: limits, derivatives, integrals, optimization",
+    "priority": "high",
+    "status": "completed",
+    "created_at": 1789161496.9392793,
+    "updated_at": 1789161537.0313892,
+    "subtasks": [
+      {
+        "id": "LEARN_calculus_fundamentals_1789161496_hermes",
+        "title": "Deep Research (Hermes): Calculus Fundamentals",
+        "type": "delegate_to_hermes",
+        "command": "Hermes deep research: Calculus Fundamentals",
+        "estimated_duration": 600,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1",
+          "DIRECTIVE_2"
+        ],
+        "result": "Hermes delegation completed. Added 6 deep knowledge facts for Calculus Fundamentals."
+      },
+      {
+        "id": "LEARN_calculus_fundamentals_1789161496_quiz",
+        "title": "Self-quiz: Calculus Fundamentals",
+        "type": "verification",
+        "command": "echo 'Quiz: What is the derivative of f(x) = x\u00b2 + 2x?\nExpected: 2x + 2'",
+        "estimated_duration": 60,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1"
+        ],
+        "result": "Quiz: What is the derivative of f(x) = x\u00b2 + 2x?\nExpected: 2x + 2"
       }
     ],
     "result": null
