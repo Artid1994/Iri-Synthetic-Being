@@ -1,26 +1,43 @@
 """Voice Synthesis Module for AE01M (04_Cerebellum).
 
 Integrates local Text-to-Speech synthesis and audio playback.
-Supports high-quality multilingual Thai & English voices via edge-tts with
-lightweight local offline fallbacks (espeak-ng) and local audio players (ffplay, paplay, aplay).
+Hybrid architecture: Edge-TTS (primary, online) with Sherpa-ONNX fallback (offline).
 """
 
 from __future__ import annotations
 
 import asyncio
 import os
+import re
 import shutil
 import subprocess
 import tempfile
 from pathlib import Path
 from typing import Optional
 
+# Thai text processing
+try:
+    from pythainlp.tokenize import word_tokenize
+    PYTHAINLP_AVAILABLE = True
+except ImportError:
+    PYTHAINLP_AVAILABLE = False
+
+# Sherpa-ONNX fallback engine
+SHERPA_AVAILABLE = False
+try:
+    import sys
+    sys.path.insert(0, str(Path(__file__).parent))
+    from sherpa_tts_engine import SherpaTTS
+    SHERPA_AVAILABLE = True
+except ImportError:
+    pass
+
 
 class VoiceSynthesizer:
     """Voice synthesis controller for AE01M motor/cerebellar speech action."""
 
-    # Default natural Thai female voice for Iri (ไอริ)
-    DEFAULT_THAI_VOICE = "th-TH-PremwadeeNeural"
+    # Default natural Thai male voice for Iri (ไอริ)
+    DEFAULT_THAI_VOICE = "th-TH-NiwatNeural"
     DEFAULT_ENGLISH_VOICE = "en-US-JennyNeural"
     PERSONA_GREETING_PREFIX = "เจ้านายคะ"
 
@@ -28,7 +45,7 @@ class VoiceSynthesizer:
         self,
         voice_th: str = DEFAULT_THAI_VOICE,
         voice_en: str = DEFAULT_ENGLISH_VOICE,
-        rate: str = "+0%",
+        rate: str = "-12%",  # Slower baseline for more natural speech
         volume: str = "+0%",
         player_cmd: Optional[str] = None,
         enabled: bool = True,
@@ -39,6 +56,13 @@ class VoiceSynthesizer:
         self.volume = volume
         self.enabled = enabled
         self._player = player_cmd or self._detect_player()
+        
+        # Initialize Sherpa-ONNX fallback engine (lazy loaded)
+        self._sherpa_engine = None
+        self._sherpa_initialized = False
+        
+        print(f"[Voice] Primary: Edge-TTS ({voice_th})")
+        print(f"[Voice] Fallback: Sherpa-ONNX (available: {SHERPA_AVAILABLE})")
 
     def _detect_player(self) -> Optional[str]:
         """Detect available system audio player."""
@@ -50,6 +74,30 @@ class VoiceSynthesizer:
     def _contains_thai(self, text: str) -> bool:
         """Check if string contains Thai unicode characters."""
         return any("\u0e00" <= char <= "\u0e7f" for char in text)
+    
+    def _preprocess_thai_text(self, text: str) -> str:
+        """
+        Preprocess Thai text for clearer Edge-TTS pronunciation.
+        
+        - Tokenizes Thai words with pythainlp for explicit word boundaries
+        - Removes markdown formatting characters
+        - Normalizes punctuation for natural pauses
+        """
+        if not text or not text.strip():
+            return text
+        
+        # Clean markdown and formatting characters
+        text = re.sub(r'[*#`_~]', '', text)
+        
+        # Normalize multiple spaces
+        text = re.sub(r'\s+', ' ', text)
+        
+        # Apply Thai word tokenization for clear boundaries
+        if self._contains_thai(text) and PYTHAINLP_AVAILABLE:
+            words = word_tokenize(text, engine="newmm")
+            text = " ".join(words)
+        
+        return text.strip()
 
     def select_voice(self, text: str) -> str:
         """Select appropriate voice based on language detection."""
@@ -57,13 +105,48 @@ class VoiceSynthesizer:
             return self.voice_th
         return self.voice_en
 
-    def synthesize(self, text: str, output_path: Optional[str] = None) -> Optional[str]:
-        """Synthesize text to audio file (mp3 or wav)."""
+    def synthesize(self, text: str, output_path: Optional[str] = None, rate: Optional[str] = None, volume: Optional[str] = None) -> Optional[str]:
+        """
+        Synthesize text to audio file with auto-fallback.
+        
+        Primary: Edge-TTS (online, fast)
+        Fallback: Sherpa-ONNX (offline, slower)
+        """
         if not text or not text.strip():
             return None
 
-        clean_text = text.strip()
+        # Preprocess Thai text for clarity
+        clean_text = self._preprocess_thai_text(text.strip())
+        
+        # Try Edge-TTS first (online)
+        try:
+            audio_file = self._synthesize_edge_tts(clean_text, output_path, rate, volume)
+            if audio_file:
+                print("[Voice] Using Edge-TTS (Online)")
+                return audio_file
+        except Exception as e:
+            print(f"[Voice] Edge-TTS failed: {e}")
+        
+        # Fallback to Sherpa-ONNX (offline)
+        if SHERPA_AVAILABLE:
+            try:
+                audio_file = self._synthesize_sherpa(clean_text, output_path)
+                if audio_file:
+                    print("[Voice] Falling back to Sherpa-ONNX (Offline)")
+                    return audio_file
+            except Exception as e:
+                print(f"[Voice] Sherpa-ONNX failed: {e}")
+        
+        # Final fallback to espeak-ng
+        return self._synthesize_espeak(clean_text, output_path)
+    
+    def _synthesize_edge_tts(self, clean_text: str, output_path: Optional[str], rate: Optional[str], volume: Optional[str]) -> Optional[str]:
+        """Synthesize with Edge-TTS (primary, online)."""
         voice = self.select_voice(clean_text)
+        
+        # Use instance defaults or override
+        synthesis_rate = rate if rate is not None else self.rate
+        synthesis_volume = volume if volume is not None else self.volume
 
         if output_path is None:
             fd, output_path = tempfile.mkstemp(suffix=".mp3")
@@ -79,9 +162,9 @@ class VoiceSynthesizer:
                 "-v",
                 voice,
                 "--rate",
-                self.rate,
+                synthesis_rate,
                 "--volume",
-                self.volume,
+                synthesis_volume,
                 "--write-media",
                 output_path,
             ]
@@ -97,7 +180,7 @@ class VoiceSynthesizer:
             import edge_tts
 
             async def _async_gen():
-                communicate = edge_tts.Communicate(clean_text, voice, rate=self.rate, volume=self.volume)
+                communicate = edge_tts.Communicate(clean_text, voice, rate=synthesis_rate, volume=synthesis_volume)
                 await communicate.save(output_path)
 
             asyncio.run(_async_gen())
@@ -150,9 +233,16 @@ class VoiceSynthesizer:
             return False
 
     def speak(self, text: str, block: bool = True) -> bool:
-        """Synthesize and speak text aloud."""
+        """Synthesize and speak text aloud with voice-matched honorifics."""
         if not self.enabled or not text or not text.strip():
             return False
+        
+        # Format text to match voice gender
+        try:
+            from voice_formatter import format_output
+            text = format_output(text, include_master=None)  # Auto-detect context
+        except ImportError:
+            pass  # Skip formatting if module not available
 
         audio_file = self.synthesize(text)
         if not audio_file:
@@ -176,3 +266,11 @@ default_synthesizer = VoiceSynthesizer()
 def speak_aloud(text: str, block: bool = True) -> bool:
     """Convenience helper to speak text using Cerebellum voice synthesis."""
     return default_synthesizer.speak(text, block=block)
+
+
+def speak(text: str, emotional_state=None) -> bool:
+    """
+    Module-level speak function for daemon compatibility.
+    Wrapper around speak_aloud for voice_interactive_loop.py
+    """
+    return speak_aloud(text, block=True)

@@ -309,9 +309,9 @@ class MemoryPanel:
             )
         ]
 
-        # Lightweight force-directed relaxation.
-        # Stronger MemoryEdge weights attract connected memories more.
-        for _ in range(80):
+        # Enhanced force-directed relaxation with high node dispersion.
+        # Prevents clustering and overlapping in dense regions (TEMPORAL, BRAIN STEM).
+        for _ in range(120):  # More iterations for better settling
             forces = {
                 node_id: [0.0, 0.0]
                 for node_id in node_positions
@@ -319,6 +319,7 @@ class MemoryPanel:
 
             positions = node_positions
 
+            # Strong repulsion force to prevent node overlapping
             for source in display_ids:
                 x1, y1 = positions[source]
 
@@ -335,7 +336,8 @@ class MemoryPanel:
                         1.0,
                     )
 
-                    repulsion = 18000.0 / (distance * distance)
+                    # INCREASED: 18000 -> 50000 for much stronger repulsion
+                    repulsion = 50000.0 / (distance * distance)
 
                     fx = dx / distance * repulsion
                     fy = dy / distance * repulsion
@@ -345,6 +347,35 @@ class MemoryPanel:
                     forces[target][0] += fx
                     forces[target][1] += fy
 
+            # Collision detection: nodes push each other away if too close
+            node_radius = 25.0  # Effective node radius for collision
+            for source in display_ids:
+                x1, y1 = positions[source]
+
+                for target in display_ids:
+                    if source >= target:
+                        continue
+
+                    x2, y2 = positions[target]
+                    dx = x2 - x1
+                    dy = y2 - y1
+                    distance = math.hypot(dx, dy)
+
+                    # If nodes overlap, push them apart strongly
+                    min_distance = node_radius * 2
+                    if distance < min_distance and distance > 0:
+                        overlap = min_distance - distance
+                        collision_force = overlap * 15.0  # Strong collision response
+
+                        fx = (dx / distance) * collision_force
+                        fy = (dy / distance) * collision_force
+
+                        forces[source][0] -= fx
+                        forces[source][1] -= fy
+                        forces[target][0] += fx
+                        forces[target][1] += fy
+
+            # Spring forces for connected nodes (weaker than repulsion)
             for edge in graph_edges:
                 source = edge["source"]
                 target = edge["target"]
@@ -363,14 +394,16 @@ class MemoryPanel:
                     1.0,
                 )
 
+                # INCREASED: Desired distance 70-145 -> 100-200 for more spacing
                 desired = max(
-                    70.0,
-                    145.0 - min(weight, 10.0) * 7.0,
+                    100.0,
+                    200.0 - min(weight, 10.0) * 8.0,
                 )
 
+                # DECREASED: attraction 0.018 -> 0.012 (weaker pull, stronger dispersion)
                 attraction = (
                     (distance - desired)
-                    * 0.018
+                    * 0.012
                     * min(weight, 4.0)
                 )
 
@@ -382,17 +415,19 @@ class MemoryPanel:
                 forces[target][0] -= fx
                 forces[target][1] -= fy
 
+            # Apply forces with increased velocity limit for faster spreading
             for node_id, (x, y) in positions.items():
                 fx, fy = forces[node_id]
 
+                # INCREASED: velocity limit -8,8 -> -12,12 for faster dispersion
                 node_positions[node_id] = (
                     min(
                         width - 45,
-                        max(45, x + max(-8, min(8, fx))),
+                        max(45, x + max(-12, min(12, fx))),
                     ),
                     min(
                         height - 45,
-                        max(45, y + max(-8, min(8, fy))),
+                        max(45, y + max(-12, min(12, fy))),
                     ),
                 )
 

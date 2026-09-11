@@ -1,0 +1,725 @@
+{
+  "version": "1.0.0",
+  "interaction_count": 97,
+  "concept_success_rates": {
+    "ไอร": {
+      "success": 60,
+      "total": 61
+    },
+    "สว": {
+      "success": 0,
+      "total": 66
+    },
+    "สด": {
+      "success": 0,
+      "total": 66
+    },
+    "ทดสอบการเร": {
+      "success": 0,
+      "total": 1
+    },
+    "ยนร": {
+      "success": 0,
+      "total": 2
+    },
+    "ยง": {
+      "success": 24,
+      "total": 26
+    },
+    "ทดสอบระบบเส": {
+      "success": 0,
+      "total": 23
+    },
+    "ระบบสมองท": {
+      "success": 0,
+      "total": 12
+    },
+    "นทำงานอย": {
+      "success": 0,
+      "total": 12
+    },
+    "างไร": {
+      "success": 0,
+      "total": 13
+    },
+    "ระบบสมองทำงานอย": {
+      "success": 0,
+      "total": 1
+    },
+    "Hippocampus": {
+      "success": 2,
+      "total": 2
+    },
+    "ออะไร": {
+      "success": 0,
+      "total": 1
+    },
+    "าง": {
+      "success": 16,
+      "total": 16
+    },
+    "กย": {
+      "success": 0,
+      "total": 7
+    },
+    "งไงบ": {
+      "success": 0,
+      "total": 8
+    },
+    "าท": {
+      "success": 1,
+      "total": 1
+    },
+    "ทำหน": {
+      "success": 0,
+      "total": 1
+    },
+    "อะไร": {
+      "success": 0,
+      "total": 1
+    },
+    "offline": {
+      "success": 0,
+      "total": 8
+    },
+    "เป": {
+      "success": 11,
+      "total": 11
+    },
+    "นอย": {
+      "success": 0,
+      "total": 8
+    },
+    "างไรบ": {
+      "success": 0,
+      "total": 8
+    },
+    "สำเร": {
+      "success": 0,
+      "total": 3
+    },
+    "Piper": {
+      "success": 0,
+      "total": 1
+    },
+    "จแล": {
+      "success": 0,
+      "total": 1
+    },
+    "วค": {
+      "success": 0,
+      "total": 4
+    },
+    "างก": {
+      "success": 0,
+      "total": 1
+    },
+    "บระบบเส": {
+      "success": 0,
+      "total": 1
+    },
+    "ยงใหม": {
+      "success": 0,
+      "total": 10
+    },
+    "ำเส": {
+      "success": 18,
+      "total": 18
+    },
+    "ทดสอบน": {
+      "success": 0,
+      "total": 7
+    },
+    "ยงมน": {
+      "success": 0,
+      "total": 2
+    },
+    "ษย": {
+      "success": 0,
+      "total": 2
+    },
+    "นธรรมชาต": {
+      "success": 0,
+      "total": 3
+    },
+    "งด": {
+      "success": 0,
+      "total": 7
+    },
+    "ทดสอบการประมวลผลคำอ": {
+      "success": 0,
+      "total": 1
+    },
+    "านภาษาไทย": {
+      "success": 0,
+      "total": 1
+    },
+    "ทดสอบการปร": {
+      "success": 0,
+      "total": 1
+    },
+    "บแต": {
+      "success": 0,
+      "total": 1
+    },
+    "งน": {
+      "success": 0,
+      "total": 1
+    },
+    "และ": {
+      "success": 1,
+      "total": 1
+    },
+    "จากระบบ": {
+      "success": 0,
+      "total": 1
+    },
+    "espeak": {
+      "success": 0,
+      "total": 1
+    },
+    "ffmpeg": {
+      "success": 0,
+      "total": 1
+    },
+    "จาก": {
+      "success": 1,
+      "total": 1
+    },
+    "TTS": {
+      "success": 3,
+      "total": 4
+    },
+    "Edge": {
+      "success": 0,
+      "total": 4
+    },
+    "AI": {
+      "success": 2,
+      "total": 2
+    },
+    "ธรรมชาต": {
+      "success": 0,
+      "total": 2
+    },
+    "จร": {
+      "success": 0,
+      "total": 2
+    },
+    "ทดสอบการตรวจสอบระบบเส": {
+      "success": 0,
+      "total": 1
+    },
+    "หล": {
+      "success": 0,
+      "total": 1
+    },
+    "งล": {
+      "success": 0,
+      "total": 2
+    },
+    "างแคช": {
+      "success": 0,
+      "total": 1
+    },
+    "ยงหล": {
+      "success": 0,
+      "total": 2
+    },
+    "RAM": {
+      "success": 0,
+      "total": 1
+    },
+    "านาย": {
+      "success": 8,
+      "total": 8
+    },
+    "ปร": {
+      "success": 3,
+      "total": 3
+    },
+    "นแล": {
+      "success": 1,
+      "total": 1
+    },
+    "ะเจ": {
+      "success": 0,
+      "total": 6
+    },
+    "บจ": {
+      "success": 0,
+      "total": 1
+    },
+    "งหวะการพ": {
+      "success": 0,
+      "total": 2
+    },
+    "ดให": {
+      "success": 0,
+      "total": 1
+    },
+    "าลงและฟ": {
+      "success": 0,
+      "total": 1
+    },
+    "งสบายข": {
+      "success": 0,
+      "total": 1
+    },
+    "ทดสอบจ": {
+      "success": 0,
+      "total": 1
+    },
+    "ดใหม": {
+      "success": 0,
+      "total": 1
+    },
+    "าลง": {
+      "success": 0,
+      "total": 1
+    },
+    "ยงจ": {
+      "success": 0,
+      "total": 2
+    },
+    "งหวะใหม": {
+      "success": 0,
+      "total": 2
+    },
+    "งช": {
+      "success": 0,
+      "total": 2
+    },
+    "ดเจนและสบายห": {
+      "success": 0,
+      "total": 2
+    },
+    "นไหมคะ": {
+      "success": 0,
+      "total": 2
+    },
+    "สบายด": {
+      "success": 0,
+      "total": 2
+    },
+    "ไหม": {
+      "success": 0,
+      "total": 6
+    },
+    "อง": {
+      "success": 0,
+      "total": 2
+    },
+    "ได": {
+      "success": 0,
+      "total": 2
+    },
+    "บระบบต": {
+      "success": 0,
+      "total": 2
+    },
+    "ดคำภาษาไทยให": {
+      "success": 0,
+      "total": 2
+    },
+    "ดช": {
+      "success": 0,
+      "total": 2
+    },
+    "ดเจนและออกเส": {
+      "success": 0,
+      "total": 2
+    },
+    "ยงถ": {
+      "success": 0,
+      "total": 2
+    },
+    "กต": {
+      "success": 0,
+      "total": 2
+    },
+    "องแล": {
+      "success": 0,
+      "total": 2
+    },
+    "ทดสอบการต": {
+      "success": 0,
+      "total": 1
+    },
+    "ดคำภาษาไทยและการออกเส": {
+      "success": 0,
+      "total": 1
+    },
+    "ยงท": {
+      "success": 0,
+      "total": 1
+    },
+    "ดเจนข": {
+      "success": 0,
+      "total": 1
+    },
+    "ทดสอบการออกเส": {
+      "success": 0,
+      "total": 1
+    },
+    "ยงภาษาไทยแบบเว": {
+      "success": 0,
+      "total": 1
+    },
+    "นจ": {
+      "success": 0,
+      "total": 1
+    },
+    "งหวะคำ": {
+      "success": 0,
+      "total": 1
+    },
+    "คร": {
+      "success": 6,
+      "total": 6
+    },
+    "เส": {
+      "success": 1,
+      "total": 1
+    },
+    "บเจ": {
+      "success": 0,
+      "total": 2
+    },
+    "ผมไอร": {
+      "success": 0,
+      "total": 1
+    },
+    "เปล": {
+      "success": 0,
+      "total": 1
+    },
+    "ยนมาใช": {
+      "success": 0,
+      "total": 1
+    },
+    "ยงน": {
+      "success": 0,
+      "total": 2
+    },
+    "เพ": {
+      "success": 0,
+      "total": 1
+    },
+    "อทดสอบความช": {
+      "success": 0,
+      "total": 1
+    },
+    "ดเจนแล": {
+      "success": 0,
+      "total": 1
+    },
+    "วคร": {
+      "success": 0,
+      "total": 2
+    },
+    "ทดสอบเส": {
+      "success": 0,
+      "total": 1
+    },
+    "กคร": {
+      "success": 0,
+      "total": 1
+    },
+    "ตอนน": {
+      "success": 0,
+      "total": 4
+    },
+    "กด": {
+      "success": 0,
+      "total": 2
+    },
+    "พร": {
+      "success": 2,
+      "total": 2
+    },
+    "งค": {
+      "success": 0,
+      "total": 1
+    },
+    "าระบบเส": {
+      "success": 0,
+      "total": 1
+    },
+    "อมระบบสำรอง": {
+      "success": 0,
+      "total": 1
+    },
+    "Sherpa": {
+      "success": 0,
+      "total": 1
+    },
+    "ONNX": {
+      "success": 0,
+      "total": 1
+    },
+    "เร": {
+      "success": 0,
+      "total": 1
+    },
+    "ยบร": {
+      "success": 0,
+      "total": 1
+    },
+    "อยแล": {
+      "success": 0,
+      "total": 1
+    },
+    "ทดสอบการลงท": {
+      "success": 0,
+      "total": 1
+    },
+    "ายเส": {
+      "success": 0,
+      "total": 1
+    },
+    "ยงด": {
+      "success": 0,
+      "total": 1
+    },
+    "วยคร": {
+      "success": 0,
+      "total": 1
+    },
+    "บและการพ": {
+      "success": 0,
+      "total": 1
+    },
+    "ดท": {
+      "success": 0,
+      "total": 1
+    },
+    "รายงานสถานะความพร": {
+      "success": 0,
+      "total": 1
+    },
+    "อมของระบบตอนน": {
+      "success": 0,
+      "total": 1
+    },
+    "หน": {
+      "success": 0,
+      "total": 1
+    },
+    "อย": {
+      "success": 0,
+      "total": 4
+    },
+    "ทดสอบการพ": {
+      "success": 0,
+      "total": 1
+    },
+    "ดด": {
+      "success": 0,
+      "total": 1
+    },
+    "วยน": {
+      "success": 0,
+      "total": 1
+    },
+    "ยงผ": {
+      "success": 0,
+      "total": 1
+    },
+    "ชาย": {
+      "success": 0,
+      "total": 1
+    },
+    "ยงและบ": {
+      "success": 0,
+      "total": 1
+    },
+    "ษล": {
+      "success": 0,
+      "total": 1
+    },
+    "กษณะใหม": {
+      "success": 0,
+      "total": 1
+    },
+    "แนะนำต": {
+      "success": 0,
+      "total": 1
+    },
+    "วเองหน": {
+      "success": 0,
+      "total": 1
+    },
+    "อยคร": {
+      "success": 0,
+      "total": 3
+    },
+    "รายงานการทำงานของโครงข": {
+      "success": 0,
+      "total": 1
+    },
+    "ายประสาทเท": {
+      "success": 0,
+      "total": 1
+    },
+    "ยมหน": {
+      "success": 0,
+      "total": 1
+    },
+    "รายงานสถานะระบบให": {
+      "success": 0,
+      "total": 2
+    },
+    "ผมฟ": {
+      "success": 0,
+      "total": 2
+    },
+    "งหน": {
+      "success": 0,
+      "total": 2
+    },
+    "บไอร": {
+      "success": 0,
+      "total": 2
+    },
+    "วยรายงานสถานะระบบและความพร": {
+      "success": 0,
+      "total": 1
+    },
+    "อมของโครงข": {
+      "success": 0,
+      "total": 1
+    },
+    "ายประสาทหน": {
+      "success": 0,
+      "total": 1
+    },
+    "รายงานความพร": {
+      "success": 0,
+      "total": 1
+    },
+    "อมและสถานะการเร": {
+      "success": 0,
+      "total": 1
+    },
+    "ของระบบหน": {
+      "success": 0,
+      "total": 1
+    },
+    "นน": {
+      "success": 0,
+      "total": 1
+    },
+    "ทำงานเหน": {
+      "success": 0,
+      "total": 1
+    },
+    "อยมากเลย": {
+      "success": 0,
+      "total": 1
+    },
+    "ขอค": {
+      "success": 0,
+      "total": 1
+    },
+    "ยเล": {
+      "success": 0,
+      "total": 1
+    },
+    "นหน": {
+      "success": 0,
+      "total": 1
+    },
+    "อยส": {
+      "success": 0,
+      "total": 1
+    },
+    "านของเราเป": {
+      "success": 0,
+      "total": 1
+    },
+    "นย": {
+      "success": 0,
+      "total": 1
+    },
+    "อมช": {
+      "success": 0,
+      "total": 1
+    },
+    "วยงานเจ": {
+      "success": 0,
+      "total": 1
+    },
+    "านายไหมคร": {
+      "success": 0,
+      "total": 1
+    }
+  },
+  "knowledge_graph_relations": {
+    "สมอง": {
+      "related": [
+        "Neocortex",
+        "brain",
+        "reasoning",
+        "thinking",
+        "คิด",
+        "ตัดสินใจ"
+      ],
+      "weight": 1.0
+    },
+    "ความจำ": {
+      "related": [
+        "Hippocampus",
+        "memory",
+        "recall",
+        "จำ",
+        "เก็บข้อมูล"
+      ],
+      "weight": 0.9363600000000001
+    },
+    "เสียง": {
+      "related": [
+        "Cerebellum",
+        "voice",
+        "speech",
+        "audio",
+        "พูด",
+        "เล่นเสียง"
+      ],
+      "weight": 0.85
+    },
+    "อารมณ์": {
+      "related": [
+        "Limbic",
+        "emotion",
+        "affect",
+        "feeling",
+        "รู้สึก",
+        "น้ำเสียง"
+      ],
+      "weight": 0.9
+    },
+    "ระบบ": {
+      "related": [
+        "system",
+        "architecture",
+        "structure",
+        "โครงสร้าง"
+      ],
+      "weight": 0.7
+    },
+    "ทำงาน": {
+      "related": [
+        "function",
+        "operate",
+        "work",
+        "process",
+        "ประมวลผล"
+      ],
+      "weight": 0.8
+    }
+  },
+  "active_context": {
+    "last_input": "สวัสดีไอริ ตอนนี้พร้อมช่วยงานเจ้านายไหมครับ"
+  }
+}
