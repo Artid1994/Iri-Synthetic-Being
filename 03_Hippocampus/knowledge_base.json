@@ -40024,7 +40024,23 @@
       "source": "targeted_upskilling",
       "confidence": 0.9003311654881,
       "relevance": "medium"
+    },
+    {
+      "topic": "machine learning efficiency",
+      "summary": "Targeted insight about machine learning efficiency learned from up-skilling research",
+      "timestamp": "2026-09-11T23:38:22.367509",
+      "source": "targeted_upskilling",
+      "confidence": 0.8971906688475182,
+      "relevance": "medium"
+    },
+    {
+      "topic": "autonomous AI systems",
+      "summary": "Targeted insight about autonomous AI systems learned from up-skilling research",
+      "timestamp": "2026-09-11T23:39:03.465154",
+      "source": "targeted_upskilling",
+      "confidence": 0.8557299149420278,
+      "relevance": "medium"
     }
   ],
-  "last_updated": "2026-09-11T23:38:06.376851"
+  "last_updated": "2026-09-11T23:39:03.465211"
 }
