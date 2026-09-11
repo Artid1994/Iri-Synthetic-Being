@@ -1,16 +1,5 @@
 [
   {
-    "topic": "Operating System Fundamentals",
-    "domain": "Computer_Systems",
-    "facts_count": 5,
-    "timestamp": 1789160000.0,
-    "key_facts": [
-      "[Autonomous] Operating systems manage hardware resources",
-      "[Autonomous] Processes are independent program executions"
-    ],
-    "reported": true
-  },
-  {
     "topic": "Calculus Fundamentals",
     "domain": "Mathematics",
     "facts_count": 5,
@@ -86,5 +75,38 @@
       "[Autonomous] Derivatives measure rates of change"
     ],
     "reported": true
+  },
+  {
+    "topic": "Calculus Fundamentals",
+    "domain": "Mathematics",
+    "facts_count": 5,
+    "timestamp": 1789166611.6336043,
+    "key_facts": [
+      "[Autonomous] Functions map inputs to outputs systematically",
+      "[Autonomous] Derivatives measure rates of change"
+    ],
+    "reported": false
+  },
+  {
+    "topic": "Self-Code Architecture Mapping",
+    "domain": "Programming",
+    "facts_count": 5,
+    "timestamp": 1789167438.6513836,
+    "key_facts": [
+      "[Autonomous] Algorithms are step-by-step procedures",
+      "[Autonomous] Data structures organize information efficiently"
+    ],
+    "reported": false
+  },
+  {
+    "topic": "Python Data Structures",
+    "domain": "Programming",
+    "facts_count": 5,
+    "timestamp": 1789167555.853011,
+    "key_facts": [
+      "[Autonomous] Algorithms are step-by-step procedures",
+      "[Autonomous] Data structures organize information efficiently"
+    ],
+    "reported": false
   }
 ]

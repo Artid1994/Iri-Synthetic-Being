@@ -13,8 +13,8 @@
     ],
     "prerequisites": [],
     "mastery_score": 0.32000000000000006,
-    "attempts": 2,
-    "last_studied": 1789164179.5608563
+    "attempts": 3,
+    "last_studied": 1789167555.8541727
   },
   "algorithms_basic": {
     "id": "algorithms_basic",
@@ -134,8 +134,8 @@
     ],
     "prerequisites": [],
     "mastery_score": 0.0,
-    "attempts": 2,
-    "last_studied": 1789164054.674402
+    "attempts": 3,
+    "last_studied": 1789166611.6620622
   },
   "probability_statistics": {
     "id": "probability_statistics",
@@ -222,8 +222,8 @@
     ],
     "prerequisites": [],
     "mastery_score": 0.0,
-    "attempts": 2,
-    "last_studied": 1789164097.1547813
+    "attempts": 3,
+    "last_studied": 1789166943.5294347
   },
   "self_code_mapping": {
     "id": "self_code_mapping",
@@ -239,8 +239,8 @@
     ],
     "prerequisites": [],
     "mastery_score": 0.0,
-    "attempts": 2,
-    "last_studied": 1789164138.3297484
+    "attempts": 3,
+    "last_studied": 1789167438.652267
   },
   "llm_architectures": {
     "id": "llm_architectures",

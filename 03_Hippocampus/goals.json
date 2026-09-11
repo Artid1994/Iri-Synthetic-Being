@@ -1116,9 +1116,9 @@
     "title": "Learn: Calculus Fundamentals",
     "description": "Derivatives, integrals, limits\nConcepts: limits, derivatives, integrals, optimization",
     "priority": "medium",
-    "status": "in_progress",
+    "status": "completed",
     "created_at": 1789165508.1619384,
-    "updated_at": 1789165602.5651536,
+    "updated_at": 1789165745.7572954,
     "subtasks": [
       {
         "id": "LEARN_calculus_fundamentals_1789165508_research",
@@ -1138,6 +1138,228 @@
         "title": "Self-quiz: Calculus Fundamentals",
         "type": "verification",
         "command": "echo 'Quiz: What is the derivative of f(x) = x\u00b2 + 2x?\nExpected: 2x + 2'",
+        "estimated_duration": 60,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1"
+        ],
+        "result": "Quiz: What is the derivative of f(x) = x\u00b2 + 2x?\nExpected: 2x + 2"
+      }
+    ],
+    "result": null
+  },
+  {
+    "id": "LEARN_calculus_fundamentals_1789165758",
+    "title": "Learn: Calculus Fundamentals",
+    "description": "Derivatives, integrals, limits\nConcepts: limits, derivatives, integrals, optimization",
+    "priority": "medium",
+    "status": "completed",
+    "created_at": 1789165758.3529282,
+    "updated_at": 1789166072.0559297,
+    "subtasks": [
+      {
+        "id": "LEARN_calculus_fundamentals_1789165758_research",
+        "title": "Research Calculus Fundamentals",
+        "type": "research",
+        "command": "Research topic: Calculus Fundamentals",
+        "estimated_duration": 300,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1",
+          "DIRECTIVE_2"
+        ],
+        "result": "Basic research completed on Calculus Fundamentals. Added knowledge to database."
+      },
+      {
+        "id": "LEARN_calculus_fundamentals_1789165758_quiz",
+        "title": "Self-quiz: Calculus Fundamentals",
+        "type": "verification",
+        "command": "echo 'Quiz: What is the derivative of f(x) = x\u00b2 + 2x?\nExpected: 2x + 2'",
+        "estimated_duration": 60,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1"
+        ],
+        "result": "Quiz: What is the derivative of f(x) = x\u00b2 + 2x?\nExpected: 2x + 2"
+      }
+    ],
+    "result": null
+  },
+  {
+    "id": "LEARN_calculus_fundamentals_1789166358",
+    "title": "Learn: Calculus Fundamentals",
+    "description": "Derivatives, integrals, limits\nConcepts: limits, derivatives, integrals, optimization",
+    "priority": "medium",
+    "status": "completed",
+    "created_at": 1789166358.664656,
+    "updated_at": 1789166764.1271255,
+    "subtasks": [
+      {
+        "id": "LEARN_calculus_fundamentals_1789166358_research",
+        "title": "Research Calculus Fundamentals",
+        "type": "research",
+        "command": "Research topic: Calculus Fundamentals",
+        "estimated_duration": 300,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1",
+          "DIRECTIVE_2"
+        ],
+        "result": "Autonomous research completed on Calculus Fundamentals. Synthesized 5 facts using local tools."
+      },
+      {
+        "id": "LEARN_calculus_fundamentals_1789166358_quiz",
+        "title": "Self-quiz: Calculus Fundamentals",
+        "type": "verification",
+        "command": "echo 'Quiz: What is the derivative of f(x) = x\u00b2 + 2x?\nExpected: 2x + 2'",
+        "estimated_duration": 60,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1"
+        ],
+        "result": "Quiz: What is the derivative of f(x) = x\u00b2 + 2x?\nExpected: 2x + 2"
+      }
+    ],
+    "result": null
+  },
+  {
+    "id": "LEARN_ml_neural_basics_1789166611",
+    "title": "Learn: Machine Learning & Neural Network Basics",
+    "description": "Foundational ML concepts, neural network architecture, training\nConcepts: supervised learning, neural networks, backpropagation, activation functions, loss functions",
+    "priority": "medium",
+    "status": "completed",
+    "created_at": 1789166611.7229142,
+    "updated_at": 1789167321.254458,
+    "subtasks": [
+      {
+        "id": "LEARN_ml_neural_basics_1789166611_research",
+        "title": "Research Machine Learning & Neural Network Basics",
+        "type": "research",
+        "command": "Research topic: Machine Learning & Neural Network Basics",
+        "estimated_duration": 300,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1",
+          "DIRECTIVE_2"
+        ],
+        "result": "Autonomous research completed on Machine Learning & Neural Network Basics. Synthesized 2 facts using local tools."
+      },
+      {
+        "id": "LEARN_ml_neural_basics_1789166611_quiz",
+        "title": "Self-quiz: Machine Learning & Neural Network Basics",
+        "type": "verification",
+        "command": "echo 'Quiz: Explain the purpose of backpropagation in neural network training\nExpected: Backpropagation calculates gradients of the loss function with respect to weights using the chain ru'",
+        "estimated_duration": 60,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1"
+        ],
+        "result": "Quiz: Explain the purpose of backpropagation in neural network training\nExpected: Backpropagation calculates gradients of the loss function with respect to weights using the chain ru"
+      }
+    ],
+    "result": null
+  },
+  {
+    "id": "LEARN_self_code_mapping_1789167367",
+    "title": "Learn: Self-Code Architecture Mapping",
+    "description": "Understanding own codebase structure, module dependencies, data flow\nConcepts: code introspection, dependency graphs, module relationships, capability inventory",
+    "priority": "medium",
+    "status": "completed",
+    "created_at": 1789167367.0586026,
+    "updated_at": 1789167531.9608243,
+    "subtasks": [
+      {
+        "id": "LEARN_self_code_mapping_1789167367_research",
+        "title": "Research Self-Code Architecture Mapping",
+        "type": "research",
+        "command": "Research topic: Self-Code Architecture Mapping",
+        "estimated_duration": 300,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1",
+          "DIRECTIVE_2"
+        ],
+        "result": "Autonomous research completed on Self-Code Architecture Mapping. Synthesized 5 facts using local tools."
+      },
+      {
+        "id": "LEARN_self_code_mapping_1789167367_quiz",
+        "title": "Self-quiz: Self-Code Architecture Mapping",
+        "type": "verification",
+        "command": "echo 'Quiz: List the main functional modules in Iri's architecture (Neocortex, Limbic, etc.)\nExpected: Neocortex (cognition), Visual Cortex (perception), Hippocampus (memory), Cerebellum (motor), Brain S'",
+        "estimated_duration": 60,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1"
+        ],
+        "result": "Exit code: 2\nError: /bin/sh: 1: Syntax error: \"(\" unexpected"
+      }
+    ],
+    "result": null
+  },
+  {
+    "id": "LEARN_python_data_structures_1789167438",
+    "title": "Learn: Python Data Structures",
+    "description": "Lists, dicts, sets, tuples - core Python collections\nConcepts: list operations, dictionary methods, set theory, tuple immutability",
+    "priority": "medium",
+    "status": "completed",
+    "created_at": 1789167438.6602476,
+    "updated_at": 1789167580.7687936,
+    "subtasks": [
+      {
+        "id": "LEARN_python_data_structures_1789167438_research",
+        "title": "Research Python Data Structures",
+        "type": "research",
+        "command": "Research topic: Python Data Structures",
+        "estimated_duration": 300,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1",
+          "DIRECTIVE_2"
+        ],
+        "result": "Autonomous research completed on Python Data Structures. Synthesized 5 facts using local tools."
+      },
+      {
+        "id": "LEARN_python_data_structures_1789167438_quiz",
+        "title": "Self-quiz: Python Data Structures",
+        "type": "verification",
+        "command": "echo 'Quiz: Write Python code to count frequency of each character in 'hello world'\nExpected: \nfrom collections import Counter\ntext = 'hello world'\nfreq = Counter(text)\nprint(dict(freq))\n'",
+        "estimated_duration": 60,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1"
+        ],
+        "result": "Quiz: Write Python code to count frequency of each character in hello world\nExpected: \nfrom collections import Counter\ntext = hello world\nfreq = Counter(text)\nprint(dict(freq))"
+      }
+    ],
+    "result": null
+  },
+  {
+    "id": "LEARN_algorithms_basic_1789167580",
+    "title": "Learn: Basic Algorithms",
+    "description": "Search, sort, basic complexity analysis\nConcepts: linear search, binary search, bubble sort, Big-O notation",
+    "priority": "medium",
+    "status": "pending",
+    "created_at": 1789167580.8217833,
+    "updated_at": 1789167580.8217835,
+    "subtasks": [
+      {
+        "id": "LEARN_algorithms_basic_1789167580_research",
+        "title": "Research Basic Algorithms",
+        "type": "research",
+        "command": "Research topic: Basic Algorithms",
+        "estimated_duration": 300,
+        "status": "pending",
+        "safety_checks": [
+          "DIRECTIVE_1",
+          "DIRECTIVE_2"
+        ],
+        "result": null
+      },
+      {
+        "id": "LEARN_algorithms_basic_1789167580_quiz",
+        "title": "Self-quiz: Basic Algorithms",
+        "type": "verification",
+        "command": "echo 'Quiz: Implement binary search for sorted list [1,3,5,7,9] to find 5\nExpected: \ndef binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        '",
         "estimated_duration": 60,
         "status": "pending",
         "safety_checks": [
