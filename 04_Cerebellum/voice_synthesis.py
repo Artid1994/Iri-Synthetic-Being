@@ -215,13 +215,19 @@ class VoiceSynthesizer:
         return None
 
     def play(self, audio_path: str, block: bool = True) -> bool:
-        """Play generated audio via detected system player."""
+        """Play generated audio via detected system player with proper environment."""
         if not audio_path or not os.path.exists(audio_path):
             return False
 
         player = self._player or self._detect_player()
         if not player:
+            print("[Voice] ERROR: No audio player detected")
             return False
+        
+        # Enforce PulseAudio/PipeWire environment
+        env = os.environ.copy()
+        env['XDG_RUNTIME_DIR'] = '/run/user/1000'
+        env['PULSE_SERVER'] = 'unix:/run/user/1000/pulse/native'
 
         if player == "ffplay":
             cmd = [player, "-nodisp", "-autoexit", "-loglevel", "error", audio_path]
@@ -232,13 +238,22 @@ class VoiceSynthesizer:
 
         try:
             if block:
-                # Give generous timeout for longer sentences
-                res = subprocess.run(cmd, capture_output=True, timeout=60)
+                # Blocking mode with proper environment
+                res = subprocess.run(cmd, env=env, capture_output=True, timeout=60)
+                if res.returncode != 0:
+                    print(f"[Voice] WARNING: Player exited with code {res.returncode}")
+                    if res.stderr:
+                        print(f"[Voice] stderr: {res.stderr.decode()[:200]}")
                 return res.returncode == 0
             else:
-                subprocess.Popen(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+                # Non-blocking mode with proper environment
+                subprocess.Popen(cmd, env=env, stdout=subprocess.DEVNULL, stderr=subprocess.PIPE)
                 return True
-        except Exception:
+        except subprocess.TimeoutExpired:
+            print("[Voice] ERROR: Playback timeout")
+            return False
+        except Exception as e:
+            print(f"[Voice] ERROR: Playback failed: {e}")
             return False
 
     def speak(self, text: str, block: bool = True) -> bool:

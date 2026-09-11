@@ -30,7 +30,7 @@ class ChatVoiceBridge:
     def speak(self, text: str, block: bool = False):
         """
         Speak text using TTS (non-blocking by default).
-        Plays audio in background thread with proper environment.
+        Plays audio in background thread with proper PipeWire/PulseAudio environment.
         """
         if not self.enabled:
             return
@@ -48,23 +48,23 @@ class ChatVoiceBridge:
             # Blocking mode with environment
             try:
                 import os
-                env = os.environ.copy()
-                env['XDG_RUNTIME_DIR'] = '/run/user/1000'
-                env['PULSE_SERVER'] = 'unix:/run/user/1000/pulse/native'
+                os.environ['XDG_RUNTIME_DIR'] = '/run/user/1000'
+                os.environ['PULSE_SERVER'] = 'unix:/run/user/1000/pulse/native'
                 speak_aloud(text, block=True)
-            except Exception:
-                pass
+            except Exception as e:
+                print(f"[Voice] ERROR: Blocking speak failed: {e}")
         else:
             # Non-blocking mode (default)
             def speak_thread():
                 try:
                     import os
-                    env = os.environ.copy()
-                    env['XDG_RUNTIME_DIR'] = '/run/user/1000'
-                    env['PULSE_SERVER'] = 'unix:/run/user/1000/pulse/native'
-                    speak_aloud(text, block=False)
-                except Exception:
-                    pass
+                    os.environ['XDG_RUNTIME_DIR'] = '/run/user/1000'
+                    os.environ['PULSE_SERVER'] = 'unix:/run/user/1000/pulse/native'
+                    result = speak_aloud(text, block=False)
+                    if not result:
+                        print(f"[Voice] WARNING: Non-blocking speak returned False")
+                except Exception as e:
+                    print(f"[Voice] ERROR: Speak thread failed: {e}")
             
             thread = threading.Thread(target=speak_thread, daemon=True)
             thread.start()
