@@ -30,7 +30,7 @@ class ChatVoiceBridge:
     def speak(self, text: str, block: bool = False):
         """
         Speak text using TTS (non-blocking by default).
-        Plays audio in background thread.
+        Plays audio in background thread with proper environment.
         """
         if not self.enabled:
             return
@@ -45,8 +45,12 @@ class ChatVoiceBridge:
                 self.voice_threads[0].join(timeout=1.0)
         
         if block:
-            # Blocking mode
+            # Blocking mode with environment
             try:
+                import os
+                env = os.environ.copy()
+                env['XDG_RUNTIME_DIR'] = '/run/user/1000'
+                env['PULSE_SERVER'] = 'unix:/run/user/1000/pulse/native'
                 speak_aloud(text, block=True)
             except Exception:
                 pass
@@ -54,6 +58,10 @@ class ChatVoiceBridge:
             # Non-blocking mode (default)
             def speak_thread():
                 try:
+                    import os
+                    env = os.environ.copy()
+                    env['XDG_RUNTIME_DIR'] = '/run/user/1000'
+                    env['PULSE_SERVER'] = 'unix:/run/user/1000/pulse/native'
                     speak_aloud(text, block=False)
                 except Exception:
                     pass
