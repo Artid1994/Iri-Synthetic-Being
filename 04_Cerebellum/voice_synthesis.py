@@ -45,7 +45,7 @@ class VoiceSynthesizer:
         self,
         voice_th: str = DEFAULT_THAI_VOICE,
         voice_en: str = DEFAULT_ENGLISH_VOICE,
-        rate: str = "-12%",  # Slower baseline for more natural speech
+        rate: str = "+5%",  # Natural Thai conversational pace
         volume: str = "+0%",
         player_cmd: Optional[str] = None,
         enabled: bool = True,
@@ -82,6 +82,7 @@ class VoiceSynthesizer:
         - Tokenizes Thai words with pythainlp for explicit word boundaries
         - Removes markdown formatting characters
         - Normalizes punctuation for natural pauses
+        - Adds micro-pauses at sentence boundaries
         """
         if not text or not text.strip():
             return text
@@ -91,6 +92,14 @@ class VoiceSynthesizer:
         
         # Normalize multiple spaces
         text = re.sub(r'\s+', ' ', text)
+        
+        # Add natural pauses at Thai sentence boundaries
+        # Insert slight pause markers for major punctuation
+        text = text.replace('។', '។ ')  # Thai full stop
+        text = text.replace('?', '? ')  # Question mark
+        text = text.replace('!', '! ')  # Exclamation
+        text = text.replace(',', ', ')  # Comma (shorter pause)
+        text = text.replace('  ', ' ')  # Clean up double spaces
         
         # Apply Thai word tokenization for clear boundaries
         if self._contains_thai(text) and PYTHAINLP_AVAILABLE:
