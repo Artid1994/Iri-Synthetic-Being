@@ -77,7 +77,11 @@ class IriChat:
         thai_intent = self.thai_lexicon.extract_intent(user_input)
         
         # Check for system inspection keywords (highest priority)
-        system_keywords = ['ตรวจสอบ', 'สถานะ', 'ระบบ', 'รายงาน', 'วิเคราะห์', 'ตรวจสภาพ', 'เครื่อง']
+        system_keywords = [
+            'ตรวจสอบ', 'สถานะ', 'ระบบ', 'รายงาน', 'วิเคราะห์', 
+            'ตรวจสภาพ', 'เครื่อง', 'ตรวจ', 'สภาพ', 'เป็นไง', 
+            'เป็นยังไง', 'ตรวจดู', 'รายงานผล'
+        ]
         if any(keyword in user_input for keyword in system_keywords):
             # Use text analyzer to extract precise skill command
             skill_command = self.text_analyzer.extract_skill_commands(user_input)

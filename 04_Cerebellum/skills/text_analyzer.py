@@ -25,7 +25,9 @@ class TextAnalyzer:
         self.command_map = {
             "วิเคราะห์": "analyze",
             "ตรวจสอบ": "check",
+            "ตรวจ": "check",
             "ตรวจสภาพ": "inspect",
+            "ตรวจดู": "inspect",
             "แสดง": "show",
             "ค้นหา": "search",
             "เปิด": "open",
@@ -36,7 +38,9 @@ class TextAnalyzer:
             "ลบ": "delete",
             "สร้าง": "create",
             "แก้ไข": "edit",
-            "รายงาน": "report"
+            "รายงาน": "report",
+            "สถานะ": "status",
+            "สภาพ": "status"
         }
         
         # Target mappings (Thai → English)
@@ -51,7 +55,8 @@ class TextAnalyzer:
             "CPU": "cpu",
             "ดิสก์": "disk",
             "Git": "git",
-            "โค้ด": "code"
+            "โค้ด": "code",
+            "ผล": "result"
         }
     
     def analyze(self, text: str) -> Dict[str, any]:
@@ -123,6 +128,32 @@ class TextAnalyzer:
         Extract skill command from Thai text.
         Returns None if not a skill command, or dict with skill name and parameters.
         """
+        # Handle compound phrases first (before tokenization)
+        compound_mappings = {
+            'ตรวจสภาพเครื่อง': {'skill': 'system_inspector', 'method': 'inspect_system'},
+            'ตรวจสภาพ เครื่อง': {'skill': 'system_inspector', 'method': 'inspect_system'},
+            'สภาพเครื่อง': {'skill': 'system_inspector', 'method': 'inspect_system'},
+            'ตรวจสอบระบบ': {'skill': 'system_inspector', 'method': 'inspect_all'},
+            'ตรวจระบบ': {'skill': 'system_inspector', 'method': 'inspect_all'},
+            'ตรวจดูระบบ': {'skill': 'system_inspector', 'method': 'inspect_all'},
+            'ตรวจดู ระบบ': {'skill': 'system_inspector', 'method': 'inspect_all'},
+            'ระบบเป็นไงบ้าง': {'skill': 'system_inspector', 'method': 'inspect_all'},
+            'ระบบเป็นยังไงบ้าง': {'skill': 'system_inspector', 'method': 'inspect_all'},
+            'สถานะระบบ': {'skill': 'system_inspector', 'method': 'inspect_all'},
+            'สถานะเครื่อง': {'skill': 'system_inspector', 'method': 'inspect_system'},
+            'รายงานระบบ': {'skill': 'system_inspector', 'method': 'inspect_all'},
+            'รายงานผล': {'skill': 'system_inspector', 'method': 'inspect_all'},
+            'ตรวจสภาพ': {'skill': 'system_inspector', 'method': 'inspect_system'},
+        }
+        
+        # Check for compound phrases
+        text_normalized = text.replace(' ', '')  # Remove spaces for compound matching
+        for phrase, mapping in compound_mappings.items():
+            phrase_normalized = phrase.replace(' ', '')
+            if phrase_normalized in text_normalized:
+                return mapping
+        
+        # Fall back to tokenized analysis
         analysis = self.analyze(text)
         
         if not analysis['is_command']:
@@ -141,6 +172,10 @@ class TextAnalyzer:
             ('inspect', 'system'): {'skill': 'system_inspector', 'method': 'inspect_system'},
             ('inspect', 'machine'): {'skill': 'system_inspector', 'method': 'inspect_system'},
             ('check', 'machine'): {'skill': 'system_inspector', 'method': 'inspect_system'},
+            ('status', 'system'): {'skill': 'system_inspector', 'method': 'inspect_all'},
+            ('status', 'machine'): {'skill': 'system_inspector', 'method': 'inspect_system'},
+            ('report', 'system'): {'skill': 'system_inspector', 'method': 'inspect_all'},
+            ('report', 'result'): {'skill': 'system_inspector', 'method': 'inspect_all'},
             ('show', 'git'): {'skill': 'system_inspector', 'method': 'inspect_git'},
             ('check', 'git'): {'skill': 'system_inspector', 'method': 'inspect_git'},
         }
@@ -150,7 +185,7 @@ class TextAnalyzer:
             return skill_mappings[key]
         
         # Default to full inspection if action matches but target is unknown
-        if action in ['analyze', 'check', 'inspect']:
+        if action in ['analyze', 'check', 'inspect', 'status', 'report']:
             return {'skill': 'system_inspector', 'method': 'inspect_all'}
         
         return None
