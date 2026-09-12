@@ -7,6 +7,8 @@ import sys
 import os
 import json
 import time
+import threading
+import importlib
 from pathlib import Path
 from datetime import datetime
 from typing import Optional
@@ -30,9 +32,6 @@ try:
     sys.path.insert(0, str(PROJECT_ROOT / "01_Neocortex" / "tools"))
     from bilingual_pragmatics import BilingualPragmaticParser
     from conversational_response_builder import ConversationalResponseBuilder, ResponseContext
-    
-    # Voice synthesis
-    from chat_voice_bridge import ChatVoiceBridge
     
     # Cognitive modules
     from inner_monologue import InnerMonologue
@@ -64,9 +63,9 @@ class IriChat:
         self.session_start = datetime.now()
         self.session_id = int(self.session_start.timestamp())
         
-        # TTS voice bridge (integrated)
-        self.voice_bridge = ChatVoiceBridge(enabled=True)
-        print(f"✓ Voice synthesis: {'enabled' if self.voice_bridge.is_available() else 'unavailable'}")
+        # Voice synthesis (direct integration with VoiceSynthesizer)
+        self.voice_synthesizer = None
+        self._init_voice_synthesis()
         
         # Bilingual pragmatic parser
         self.bilingual_parser = BilingualPragmaticParser()
@@ -83,6 +82,24 @@ class IriChat:
         # Parallel processor
         self.parallel_processor = get_processor()
         print("✓ Parallel dual-tasking engine started")
+    
+    def _init_voice_synthesis(self):
+        """Initialize VoiceSynthesizer dynamically from 04_Cerebellum."""
+        try:
+            voice_synthesis_module = importlib.import_module('voice_synthesis')
+            VoiceSynthesizer = voice_synthesis_module.VoiceSynthesizer
+            self.voice_synthesizer = VoiceSynthesizer(
+                voice_th="th-TH-NiwatNeural",
+                voice_en="en-US-JennyNeural",
+                rate="+5%",
+                volume="+0%",
+                player_cmd="ffplay",
+                enabled=True
+            )
+            print(f"✓ Voice synthesis: enabled (Thai male: th-TH-NiwatNeural)")
+        except Exception as e:
+            print(f"⚠️  Voice synthesis unavailable: {e}")
+            self.voice_synthesizer = None
     
     def update_user_activity(self):
         """Update user activity timestamp (DIRECTIVE_2 compliance)."""
@@ -103,10 +120,40 @@ class IriChat:
     
     def speak(self, text: str):
         """
-        Speak text using TTS voice synthesis (non-blocking).
-        Uses ChatVoiceBridge for bilingual support.
+        Speak text using TTS voice synthesis (non-blocking background thread).
+        Uses VoiceSynthesizer with proper PipeWire environment and ffplay routing.
         """
-        self.voice_bridge.speak_bilingual(text)
+        if not self.voice_synthesizer or not text or not text.strip():
+            return
+        
+        def _speak_thread():
+            """Background thread for non-blocking TTS playback."""
+            try:
+                # Enforce PipeWire/PulseAudio environment
+                env = os.environ.copy()
+                env['XDG_RUNTIME_DIR'] = '/run/user/1000'
+                env['PULSE_SERVER'] = 'unix:/run/user/1000/pulse/native'
+                
+                # Synthesize and play (blocking in thread, non-blocking to main loop)
+                audio_file = self.voice_synthesizer.synthesize(text)
+                if audio_file and os.path.exists(audio_file):
+                    # Play with ffplay (enforced environment)
+                    import subprocess
+                    cmd = ["ffplay", "-nodisp", "-autoexit", "-loglevel", "error", audio_file]
+                    subprocess.run(cmd, env=env, capture_output=True, timeout=60)
+                    
+                    # Cleanup temp file
+                    if "/tmp" in audio_file:
+                        try:
+                            os.remove(audio_file)
+                        except OSError:
+                            pass
+            except Exception as e:
+                print(f"[Voice] Playback error: {e}")
+        
+        # Launch background thread (non-blocking)
+        thread = threading.Thread(target=_speak_thread, daemon=True)
+        thread.start()
     
     def classify_input(self, user_input: str) -> Intent:
         """Classify user input intent using Thai NLP lexicon and skills."""
