@@ -44,8 +44,25 @@ class SpeechRecognition:
             beam_size=1,
         )
 
-        return " ".join(
+        transcribed_text = " ".join(
             segment.text.strip()
             for segment in segments
             if segment.text.strip()
         ).strip()
+        
+        # Apply Thai word tokenization for better intent parsing
+        return self._preprocess_thai(transcribed_text)
+    
+    def _preprocess_thai(self, text: str) -> str:
+        """Preprocess Thai text with word tokenization."""
+        if not text or not text.strip():
+            return text
+        
+        try:
+            from pythainlp.tokenize import word_tokenize
+            # Tokenize and rejoin with spaces for clearer word boundaries
+            tokens = word_tokenize(text, engine="newmm")
+            return " ".join(tokens)
+        except ImportError:
+            # Fallback if pythainlp not available
+            return text

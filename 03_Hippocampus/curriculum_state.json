@@ -13,8 +13,8 @@
     ],
     "prerequisites": [],
     "mastery_score": 0.32000000000000006,
-    "attempts": 19,
-    "last_studied": 1789215384.1779757
+    "attempts": 20,
+    "last_studied": 1789220456.7545605
   },
   "algorithms_basic": {
     "id": "algorithms_basic",
@@ -30,8 +30,8 @@
     ],
     "prerequisites": [],
     "mastery_score": 0.32000000000000006,
-    "attempts": 19,
-    "last_studied": 1789215425.1635392
+    "attempts": 20,
+    "last_studied": 1789220593.1593666
   },
   "oop_principles": {
     "id": "oop_principles",
@@ -82,8 +82,8 @@
     ],
     "prerequisites": [],
     "mastery_score": 0.0,
-    "attempts": 20,
-    "last_studied": 1789216851.445769
+    "attempts": 21,
+    "last_studied": 1789221001.9431667
   },
   "networking_fundamentals": {
     "id": "networking_fundamentals",
@@ -117,8 +117,8 @@
     ],
     "prerequisites": [],
     "mastery_score": 0.0,
-    "attempts": 20,
-    "last_studied": 1789217023.0183916
+    "attempts": 21,
+    "last_studied": 1789221292.1904144
   },
   "calculus_fundamentals": {
     "id": "calculus_fundamentals",
@@ -134,8 +134,8 @@
     ],
     "prerequisites": [],
     "mastery_score": 0.0,
-    "attempts": 20,
-    "last_studied": 1789218130.4455338
+    "attempts": 21,
+    "last_studied": 1789221455.9446077
   },
   "probability_statistics": {
     "id": "probability_statistics",
@@ -168,8 +168,8 @@
     ],
     "prerequisites": [],
     "mastery_score": 0.4,
-    "attempts": 19,
-    "last_studied": 1789215466.3466365
+    "attempts": 20,
+    "last_studied": 1789220637.9244523
   },
   "celestial_navigation": {
     "id": "celestial_navigation",
@@ -186,8 +186,8 @@
     ],
     "prerequisites": [],
     "mastery_score": 0.4,
-    "attempts": 19,
-    "last_studied": 1789216617.0372493
+    "attempts": 20,
+    "last_studied": 1789220841.9465287
   },
   "stellar_evolution": {
     "id": "stellar_evolution",
@@ -223,7 +223,7 @@
     "prerequisites": [],
     "mastery_score": 0.0,
     "attempts": 20,
-    "last_studied": 1789218255.1744092
+    "last_studied": 1789220134.133525
   },
   "self_code_mapping": {
     "id": "self_code_mapping",
@@ -239,8 +239,8 @@
     ],
     "prerequisites": [],
     "mastery_score": 0.0,
-    "attempts": 19,
-    "last_studied": 1789215343.1166446
+    "attempts": 20,
+    "last_studied": 1789220232.1031876
   },
   "llm_architectures": {
     "id": "llm_architectures",

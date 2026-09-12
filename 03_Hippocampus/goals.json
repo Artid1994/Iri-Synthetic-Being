@@ -7332,9 +7332,9 @@
     "title": "Learn: Celestial Coordinates & Navigation",
     "description": "Star positions, coordinate systems, astronomical units\nConcepts: right ascension, declination, ecliptic, parsec, light-year",
     "priority": "medium",
-    "status": "in_progress",
+    "status": "completed",
     "created_at": 1789218372.571206,
-    "updated_at": 1789218466.8815567,
+    "updated_at": 1789218607.6635447,
     "subtasks": [
       {
         "id": "LEARN_celestial_navigation_1789218372_research",
@@ -7354,6 +7354,524 @@
         "title": "Self-quiz: Celestial Coordinates & Navigation",
         "type": "verification",
         "command": "echo 'Quiz: What coordinate system uses right ascension and declination?\nExpected: Equatorial coordinate system'",
+        "estimated_duration": 60,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1"
+        ],
+        "result": "Quiz: What coordinate system uses right ascension and declination?\nExpected: Equatorial coordinate system"
+      }
+    ],
+    "result": null
+  },
+  {
+    "id": "LEARN_celestial_navigation_1789219029",
+    "title": "Learn: Celestial Coordinates & Navigation",
+    "description": "Star positions, coordinate systems, astronomical units\nConcepts: right ascension, declination, ecliptic, parsec, light-year",
+    "priority": "medium",
+    "status": "completed",
+    "created_at": 1789219029.280206,
+    "updated_at": 1789219239.1495245,
+    "subtasks": [
+      {
+        "id": "LEARN_celestial_navigation_1789219029_research",
+        "title": "Research Celestial Coordinates & Navigation",
+        "type": "research",
+        "command": "Research topic: Celestial Coordinates & Navigation",
+        "estimated_duration": 300,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1",
+          "DIRECTIVE_2"
+        ],
+        "result": "Autonomous research completed on Celestial Coordinates & Navigation. Synthesized 3 facts using local tools."
+      },
+      {
+        "id": "LEARN_celestial_navigation_1789219029_quiz",
+        "title": "Self-quiz: Celestial Coordinates & Navigation",
+        "type": "verification",
+        "command": "echo 'Quiz: What coordinate system uses right ascension and declination?\nExpected: Equatorial coordinate system'",
+        "estimated_duration": 60,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1"
+        ],
+        "result": "Quiz: What coordinate system uses right ascension and declination?\nExpected: Equatorial coordinate system"
+      }
+    ],
+    "result": null
+  },
+  {
+    "id": "LEARN_os_basics_1789219162",
+    "title": "Learn: Operating System Fundamentals",
+    "description": "Processes, threads, memory management, file systems\nConcepts: processes, threads, virtual memory, file systems, syscalls",
+    "priority": "medium",
+    "status": "completed",
+    "created_at": 1789219162.679401,
+    "updated_at": 1789219570.081897,
+    "subtasks": [
+      {
+        "id": "LEARN_os_basics_1789219162_research",
+        "title": "Research Operating System Fundamentals",
+        "type": "research",
+        "command": "Research topic: Operating System Fundamentals",
+        "estimated_duration": 300,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1",
+          "DIRECTIVE_2"
+        ],
+        "result": "Autonomous research completed on Operating System Fundamentals. Synthesized 5 facts using local tools."
+      },
+      {
+        "id": "LEARN_os_basics_1789219162_quiz",
+        "title": "Self-quiz: Operating System Fundamentals",
+        "type": "verification",
+        "command": "echo 'Quiz: What is the difference between a process and a thread?\nExpected: A process is an independent program with its own memory space, while a thread is a lightweight execu'",
+        "estimated_duration": 60,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1"
+        ],
+        "result": "Quiz: What is the difference between a process and a thread?\nExpected: A process is an independent program with its own memory space, while a thread is a lightweight execu"
+      }
+    ],
+    "result": null
+  },
+  {
+    "id": "LEARN_linear_algebra_basics_1789219558",
+    "title": "Learn: Linear Algebra Basics",
+    "description": "Vectors, matrices, transformations\nConcepts: vectors, matrices, dot product, transformations",
+    "priority": "medium",
+    "status": "completed",
+    "created_at": 1789219558.977609,
+    "updated_at": 1789219836.786791,
+    "subtasks": [
+      {
+        "id": "LEARN_linear_algebra_basics_1789219558_research",
+        "title": "Research Linear Algebra Basics",
+        "type": "research",
+        "command": "Research topic: Linear Algebra Basics",
+        "estimated_duration": 300,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1",
+          "DIRECTIVE_2"
+        ],
+        "result": "Autonomous research completed on Linear Algebra Basics. Synthesized 5 facts using local tools."
+      },
+      {
+        "id": "LEARN_linear_algebra_basics_1789219558_quiz",
+        "title": "Self-quiz: Linear Algebra Basics",
+        "type": "verification",
+        "command": "echo 'Quiz: Calculate the dot product of vectors [1,2,3] and [4,5,6]\nExpected: 32'",
+        "estimated_duration": 60,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1"
+        ],
+        "result": "Quiz: Calculate the dot product of vectors [1,2,3] and [4,5,6]\nExpected: 32"
+      }
+    ],
+    "result": null
+  },
+  {
+    "id": "LEARN_calculus_fundamentals_1789219927",
+    "title": "Learn: Calculus Fundamentals",
+    "description": "Derivatives, integrals, limits\nConcepts: limits, derivatives, integrals, optimization",
+    "priority": "medium",
+    "status": "completed",
+    "created_at": 1789219927.876116,
+    "updated_at": 1789220042.3662279,
+    "subtasks": [
+      {
+        "id": "LEARN_calculus_fundamentals_1789219927_research",
+        "title": "Research Calculus Fundamentals",
+        "type": "research",
+        "command": "Research topic: Calculus Fundamentals",
+        "estimated_duration": 300,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1",
+          "DIRECTIVE_2"
+        ],
+        "result": "Autonomous research completed on Calculus Fundamentals. Synthesized 5 facts using local tools."
+      },
+      {
+        "id": "LEARN_calculus_fundamentals_1789219927_quiz",
+        "title": "Self-quiz: Calculus Fundamentals",
+        "type": "verification",
+        "command": "echo 'Quiz: What is the derivative of f(x) = x\u00b2 + 2x?\nExpected: 2x + 2'",
+        "estimated_duration": 60,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1"
+        ],
+        "result": "Quiz: What is the derivative of f(x) = x\u00b2 + 2x?\nExpected: 2x + 2"
+      }
+    ],
+    "result": null
+  },
+  {
+    "id": "LEARN_ml_neural_basics_1789220064",
+    "title": "Learn: Machine Learning & Neural Network Basics",
+    "description": "Foundational ML concepts, neural network architecture, training\nConcepts: supervised learning, neural networks, backpropagation, activation functions, loss functions",
+    "priority": "medium",
+    "status": "completed",
+    "created_at": 1789220064.576379,
+    "updated_at": 1789220203.3694851,
+    "subtasks": [
+      {
+        "id": "LEARN_ml_neural_basics_1789220064_research",
+        "title": "Research Machine Learning & Neural Network Basics",
+        "type": "research",
+        "command": "Research topic: Machine Learning & Neural Network Basics",
+        "estimated_duration": 300,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1",
+          "DIRECTIVE_2"
+        ],
+        "result": "Autonomous research completed on Machine Learning & Neural Network Basics. Synthesized 2 facts using local tools."
+      },
+      {
+        "id": "LEARN_ml_neural_basics_1789220064_quiz",
+        "title": "Self-quiz: Machine Learning & Neural Network Basics",
+        "type": "verification",
+        "command": "echo 'Quiz: Explain the purpose of backpropagation in neural network training\nExpected: Backpropagation calculates gradients of the loss function with respect to weights using the chain ru'",
+        "estimated_duration": 60,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1"
+        ],
+        "result": "Quiz: Explain the purpose of backpropagation in neural network training\nExpected: Backpropagation calculates gradients of the loss function with respect to weights using the chain ru"
+      }
+    ],
+    "result": null
+  },
+  {
+    "id": "LEARN_self_code_mapping_1789220134",
+    "title": "Learn: Self-Code Architecture Mapping",
+    "description": "Understanding own codebase structure, module dependencies, data flow\nConcepts: code introspection, dependency graphs, module relationships, capability inventory",
+    "priority": "medium",
+    "status": "completed",
+    "created_at": 1789220134.1521912,
+    "updated_at": 1789220410.8500617,
+    "subtasks": [
+      {
+        "id": "LEARN_self_code_mapping_1789220134_research",
+        "title": "Research Self-Code Architecture Mapping",
+        "type": "research",
+        "command": "Research topic: Self-Code Architecture Mapping",
+        "estimated_duration": 300,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1",
+          "DIRECTIVE_2"
+        ],
+        "result": "Autonomous research completed on Self-Code Architecture Mapping. Synthesized 5 facts using local tools."
+      },
+      {
+        "id": "LEARN_self_code_mapping_1789220134_quiz",
+        "title": "Self-quiz: Self-Code Architecture Mapping",
+        "type": "verification",
+        "command": "echo 'Quiz: List the main functional modules in Iri's architecture (Neocortex, Limbic, etc.)\nExpected: Neocortex (cognition), Visual Cortex (perception), Hippocampus (memory), Cerebellum (motor), Brain S'",
+        "estimated_duration": 60,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1"
+        ],
+        "result": "Exit code: 2\nError: /bin/sh: 1: Syntax error: \"(\" unexpected"
+      }
+    ],
+    "result": null
+  },
+  {
+    "id": "LEARN_python_data_structures_1789220410",
+    "title": "Learn: Python Data Structures",
+    "description": "Lists, dicts, sets, tuples - core Python collections\nConcepts: list operations, dictionary methods, set theory, tuple immutability",
+    "priority": "medium",
+    "status": "completed",
+    "created_at": 1789220410.9442112,
+    "updated_at": 1789220479.0396674,
+    "subtasks": [
+      {
+        "id": "LEARN_python_data_structures_1789220410_research",
+        "title": "Research Python Data Structures",
+        "type": "research",
+        "command": "Research topic: Python Data Structures",
+        "estimated_duration": 300,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1",
+          "DIRECTIVE_2"
+        ],
+        "result": "Autonomous research completed on Python Data Structures. Synthesized 5 facts using local tools."
+      },
+      {
+        "id": "LEARN_python_data_structures_1789220410_quiz",
+        "title": "Self-quiz: Python Data Structures",
+        "type": "verification",
+        "command": "echo 'Quiz: Write Python code to count frequency of each character in 'hello world'\nExpected: \nfrom collections import Counter\ntext = 'hello world'\nfreq = Counter(text)\nprint(dict(freq))\n'",
+        "estimated_duration": 60,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1"
+        ],
+        "result": "Quiz: Write Python code to count frequency of each character in hello world\nExpected: \nfrom collections import Counter\ntext = hello world\nfreq = Counter(text)\nprint(dict(freq))"
+      }
+    ],
+    "result": null
+  },
+  {
+    "id": "LEARN_algorithms_basic_1789220479",
+    "title": "Learn: Basic Algorithms",
+    "description": "Search, sort, basic complexity analysis\nConcepts: linear search, binary search, bubble sort, Big-O notation",
+    "priority": "medium",
+    "status": "completed",
+    "created_at": 1789220479.1704988,
+    "updated_at": 1789220615.0769887,
+    "subtasks": [
+      {
+        "id": "LEARN_algorithms_basic_1789220479_research",
+        "title": "Research Basic Algorithms",
+        "type": "research",
+        "command": "Research topic: Basic Algorithms",
+        "estimated_duration": 300,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1",
+          "DIRECTIVE_2"
+        ],
+        "result": "Autonomous research completed on Basic Algorithms. Synthesized 5 facts using local tools."
+      },
+      {
+        "id": "LEARN_algorithms_basic_1789220479_quiz",
+        "title": "Self-quiz: Basic Algorithms",
+        "type": "verification",
+        "command": "echo 'Quiz: Implement binary search for sorted list [1,3,5,7,9] to find 5\nExpected: \ndef binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        '",
+        "estimated_duration": 60,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1"
+        ],
+        "result": "Quiz: Implement binary search for sorted list [1,3,5,7,9] to find 5\nExpected: \ndef binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    while left <= right:"
+      }
+    ],
+    "result": null
+  },
+  {
+    "id": "LEARN_orbital_mechanics_1789220615",
+    "title": "Learn: Orbital Mechanics & Kepler's Laws",
+    "description": "Planetary motion, orbits, gravitational physics\nConcepts: Kepler's laws, orbital elements, escape velocity, gravitational force",
+    "priority": "medium",
+    "status": "completed",
+    "created_at": 1789220615.2021317,
+    "updated_at": 1789220796.4765007,
+    "subtasks": [
+      {
+        "id": "LEARN_orbital_mechanics_1789220615_research",
+        "title": "Research Orbital Mechanics & Kepler's Laws",
+        "type": "research",
+        "command": "Research topic: Orbital Mechanics & Kepler's Laws",
+        "estimated_duration": 300,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1",
+          "DIRECTIVE_2"
+        ],
+        "result": "Autonomous research completed on Orbital Mechanics & Kepler's Laws. Synthesized 2 facts using local tools."
+      },
+      {
+        "id": "LEARN_orbital_mechanics_1789220615_quiz",
+        "title": "Self-quiz: Orbital Mechanics & Kepler's Laws",
+        "type": "verification",
+        "command": "echo 'Quiz: State Kepler's First Law of planetary motion\nExpected: Planets orbit the Sun in elliptical paths with the Sun at one focus'",
+        "estimated_duration": 60,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1"
+        ],
+        "result": "Exit code: 2\nError: /bin/sh: 2: Syntax error: Unterminated quoted string"
+      }
+    ],
+    "result": null
+  },
+  {
+    "id": "LEARN_celestial_navigation_1789220718",
+    "title": "Learn: Celestial Coordinates & Navigation",
+    "description": "Star positions, coordinate systems, astronomical units\nConcepts: right ascension, declination, ecliptic, parsec, light-year",
+    "priority": "medium",
+    "status": "completed",
+    "created_at": 1789220718.871816,
+    "updated_at": 1789220977.1478271,
+    "subtasks": [
+      {
+        "id": "LEARN_celestial_navigation_1789220718_research",
+        "title": "Research Celestial Coordinates & Navigation",
+        "type": "research",
+        "command": "Research topic: Celestial Coordinates & Navigation",
+        "estimated_duration": 300,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1",
+          "DIRECTIVE_2"
+        ],
+        "result": "Autonomous research completed on Celestial Coordinates & Navigation. Synthesized 3 facts using local tools."
+      },
+      {
+        "id": "LEARN_celestial_navigation_1789220718_quiz",
+        "title": "Self-quiz: Celestial Coordinates & Navigation",
+        "type": "verification",
+        "command": "echo 'Quiz: What coordinate system uses right ascension and declination?\nExpected: Equatorial coordinate system'",
+        "estimated_duration": 60,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1"
+        ],
+        "result": "Quiz: What coordinate system uses right ascension and declination?\nExpected: Equatorial coordinate system"
+      }
+    ],
+    "result": null
+  },
+  {
+    "id": "LEARN_os_basics_1789220920",
+    "title": "Learn: Operating System Fundamentals",
+    "description": "Processes, threads, memory management, file systems\nConcepts: processes, threads, virtual memory, file systems, syscalls",
+    "priority": "medium",
+    "status": "completed",
+    "created_at": 1789220920.8828888,
+    "updated_at": 1789221223.4682431,
+    "subtasks": [
+      {
+        "id": "LEARN_os_basics_1789220920_research",
+        "title": "Research Operating System Fundamentals",
+        "type": "research",
+        "command": "Research topic: Operating System Fundamentals",
+        "estimated_duration": 300,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1",
+          "DIRECTIVE_2"
+        ],
+        "result": "Autonomous research completed on Operating System Fundamentals. Synthesized 5 facts using local tools."
+      },
+      {
+        "id": "LEARN_os_basics_1789220920_quiz",
+        "title": "Self-quiz: Operating System Fundamentals",
+        "type": "verification",
+        "command": "echo 'Quiz: What is the difference between a process and a thread?\nExpected: A process is an independent program with its own memory space, while a thread is a lightweight execu'",
+        "estimated_duration": 60,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1"
+        ],
+        "result": "Quiz: What is the difference between a process and a thread?\nExpected: A process is an independent program with its own memory space, while a thread is a lightweight execu"
+      }
+    ],
+    "result": null
+  },
+  {
+    "id": "LEARN_linear_algebra_basics_1789221223",
+    "title": "Learn: Linear Algebra Basics",
+    "description": "Vectors, matrices, transformations\nConcepts: vectors, matrices, dot product, transformations",
+    "priority": "medium",
+    "status": "completed",
+    "created_at": 1789221223.5907822,
+    "updated_at": 1789221430.8375547,
+    "subtasks": [
+      {
+        "id": "LEARN_linear_algebra_basics_1789221223_research",
+        "title": "Research Linear Algebra Basics",
+        "type": "research",
+        "command": "Research topic: Linear Algebra Basics",
+        "estimated_duration": 300,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1",
+          "DIRECTIVE_2"
+        ],
+        "result": "Autonomous research completed on Linear Algebra Basics. Synthesized 5 facts using local tools."
+      },
+      {
+        "id": "LEARN_linear_algebra_basics_1789221223_quiz",
+        "title": "Self-quiz: Linear Algebra Basics",
+        "type": "verification",
+        "command": "echo 'Quiz: Calculate the dot product of vectors [1,2,3] and [4,5,6]\nExpected: 32'",
+        "estimated_duration": 60,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1"
+        ],
+        "result": "Quiz: Calculate the dot product of vectors [1,2,3] and [4,5,6]\nExpected: 32"
+      }
+    ],
+    "result": null
+  },
+  {
+    "id": "LEARN_calculus_fundamentals_1789221292",
+    "title": "Learn: Calculus Fundamentals",
+    "description": "Derivatives, integrals, limits\nConcepts: limits, derivatives, integrals, optimization",
+    "priority": "medium",
+    "status": "in_progress",
+    "created_at": 1789221292.5595336,
+    "updated_at": 1789221455.945509,
+    "subtasks": [
+      {
+        "id": "LEARN_calculus_fundamentals_1789221292_research",
+        "title": "Research Calculus Fundamentals",
+        "type": "research",
+        "command": "Research topic: Calculus Fundamentals",
+        "estimated_duration": 300,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1",
+          "DIRECTIVE_2"
+        ],
+        "result": "Autonomous research completed on Calculus Fundamentals. Synthesized 5 facts using local tools."
+      },
+      {
+        "id": "LEARN_calculus_fundamentals_1789221292_quiz",
+        "title": "Self-quiz: Calculus Fundamentals",
+        "type": "verification",
+        "command": "echo 'Quiz: What is the derivative of f(x) = x\u00b2 + 2x?\nExpected: 2x + 2'",
+        "estimated_duration": 60,
+        "status": "pending",
+        "safety_checks": [
+          "DIRECTIVE_1"
+        ],
+        "result": null
+      }
+    ],
+    "result": null
+  },
+  {
+    "id": "LEARN_ml_neural_basics_1789221534",
+    "title": "Learn: Machine Learning & Neural Network Basics",
+    "description": "Foundational ML concepts, neural network architecture, training\nConcepts: supervised learning, neural networks, backpropagation, activation functions, loss functions",
+    "priority": "medium",
+    "status": "pending",
+    "created_at": 1789221534.474755,
+    "updated_at": 1789221534.474755,
+    "subtasks": [
+      {
+        "id": "LEARN_ml_neural_basics_1789221534_research",
+        "title": "Research Machine Learning & Neural Network Basics",
+        "type": "research",
+        "command": "Research topic: Machine Learning & Neural Network Basics",
+        "estimated_duration": 300,
+        "status": "pending",
+        "safety_checks": [
+          "DIRECTIVE_1",
+          "DIRECTIVE_2"
+        ],
+        "result": null
+      },
+      {
+        "id": "LEARN_ml_neural_basics_1789221534_quiz",
+        "title": "Self-quiz: Machine Learning & Neural Network Basics",
+        "type": "verification",
+        "command": "echo 'Quiz: Explain the purpose of backpropagation in neural network training\nExpected: Backpropagation calculates gradients of the loss function with respect to weights using the chain ru'",
         "estimated_duration": 60,
         "status": "pending",
         "safety_checks": [

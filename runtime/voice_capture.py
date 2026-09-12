@@ -14,7 +14,7 @@ class VoiceCapture:
         channels: int = 1,
         sample_width: int = 2,
         frame_duration: float = 0.1,
-        silence_duration: float = 0.8,
+        silence_duration: float = 1.0,
         threshold: float = 0.015,
     ) -> None:
         self.device = device
