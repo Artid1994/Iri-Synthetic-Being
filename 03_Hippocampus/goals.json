@@ -6962,9 +6962,9 @@
     "title": "Learn: Celestial Coordinates & Navigation",
     "description": "Star positions, coordinate systems, astronomical units\nConcepts: right ascension, declination, ecliptic, parsec, light-year",
     "priority": "medium",
-    "status": "in_progress",
+    "status": "completed",
     "created_at": 1789217264.0959487,
-    "updated_at": 1789217284.3789666,
+    "updated_at": 1789217304.5681958,
     "subtasks": [
       {
         "id": "LEARN_celestial_navigation_1789217264_research",
@@ -6981,6 +6981,376 @@
       },
       {
         "id": "LEARN_celestial_navigation_1789217264_quiz",
+        "title": "Self-quiz: Celestial Coordinates & Navigation",
+        "type": "verification",
+        "command": "echo 'Quiz: What coordinate system uses right ascension and declination?\nExpected: Equatorial coordinate system'",
+        "estimated_duration": 60,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1"
+        ],
+        "result": "Quiz: What coordinate system uses right ascension and declination?\nExpected: Equatorial coordinate system"
+      }
+    ],
+    "result": null
+  },
+  {
+    "id": "LEARN_celestial_navigation_1789217324",
+    "title": "Learn: Celestial Coordinates & Navigation",
+    "description": "Star positions, coordinate systems, astronomical units\nConcepts: right ascension, declination, ecliptic, parsec, light-year",
+    "priority": "medium",
+    "status": "completed",
+    "created_at": 1789217324.6767824,
+    "updated_at": 1789217365.0799499,
+    "subtasks": [
+      {
+        "id": "LEARN_celestial_navigation_1789217324_research",
+        "title": "Research Celestial Coordinates & Navigation",
+        "type": "research",
+        "command": "Research topic: Celestial Coordinates & Navigation",
+        "estimated_duration": 300,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1",
+          "DIRECTIVE_2"
+        ],
+        "result": "Basic research completed on Celestial Coordinates & Navigation. Added knowledge to database."
+      },
+      {
+        "id": "LEARN_celestial_navigation_1789217324_quiz",
+        "title": "Self-quiz: Celestial Coordinates & Navigation",
+        "type": "verification",
+        "command": "echo 'Quiz: What coordinate system uses right ascension and declination?\nExpected: Equatorial coordinate system'",
+        "estimated_duration": 60,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1"
+        ],
+        "result": "Quiz: What coordinate system uses right ascension and declination?\nExpected: Equatorial coordinate system"
+      }
+    ],
+    "result": null
+  },
+  {
+    "id": "LEARN_celestial_navigation_1789217385",
+    "title": "Learn: Celestial Coordinates & Navigation",
+    "description": "Star positions, coordinate systems, astronomical units\nConcepts: right ascension, declination, ecliptic, parsec, light-year",
+    "priority": "medium",
+    "status": "completed",
+    "created_at": 1789217385.1808965,
+    "updated_at": 1789217425.6885264,
+    "subtasks": [
+      {
+        "id": "LEARN_celestial_navigation_1789217385_research",
+        "title": "Research Celestial Coordinates & Navigation",
+        "type": "research",
+        "command": "Research topic: Celestial Coordinates & Navigation",
+        "estimated_duration": 300,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1",
+          "DIRECTIVE_2"
+        ],
+        "result": "Basic research completed on Celestial Coordinates & Navigation. Added knowledge to database."
+      },
+      {
+        "id": "LEARN_celestial_navigation_1789217385_quiz",
+        "title": "Self-quiz: Celestial Coordinates & Navigation",
+        "type": "verification",
+        "command": "echo 'Quiz: What coordinate system uses right ascension and declination?\nExpected: Equatorial coordinate system'",
+        "estimated_duration": 60,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1"
+        ],
+        "result": "Quiz: What coordinate system uses right ascension and declination?\nExpected: Equatorial coordinate system"
+      }
+    ],
+    "result": null
+  },
+  {
+    "id": "LEARN_celestial_navigation_1789217445",
+    "title": "Learn: Celestial Coordinates & Navigation",
+    "description": "Star positions, coordinate systems, astronomical units\nConcepts: right ascension, declination, ecliptic, parsec, light-year",
+    "priority": "medium",
+    "status": "completed",
+    "created_at": 1789217445.780335,
+    "updated_at": 1789217486.06163,
+    "subtasks": [
+      {
+        "id": "LEARN_celestial_navigation_1789217445_research",
+        "title": "Research Celestial Coordinates & Navigation",
+        "type": "research",
+        "command": "Research topic: Celestial Coordinates & Navigation",
+        "estimated_duration": 300,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1",
+          "DIRECTIVE_2"
+        ],
+        "result": "Basic research completed on Celestial Coordinates & Navigation. Added knowledge to database."
+      },
+      {
+        "id": "LEARN_celestial_navigation_1789217445_quiz",
+        "title": "Self-quiz: Celestial Coordinates & Navigation",
+        "type": "verification",
+        "command": "echo 'Quiz: What coordinate system uses right ascension and declination?\nExpected: Equatorial coordinate system'",
+        "estimated_duration": 60,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1"
+        ],
+        "result": "Quiz: What coordinate system uses right ascension and declination?\nExpected: Equatorial coordinate system"
+      }
+    ],
+    "result": null
+  },
+  {
+    "id": "LEARN_celestial_navigation_1789217506",
+    "title": "Learn: Celestial Coordinates & Navigation",
+    "description": "Star positions, coordinate systems, astronomical units\nConcepts: right ascension, declination, ecliptic, parsec, light-year",
+    "priority": "medium",
+    "status": "completed",
+    "created_at": 1789217506.1729376,
+    "updated_at": 1789217546.6810246,
+    "subtasks": [
+      {
+        "id": "LEARN_celestial_navigation_1789217506_research",
+        "title": "Research Celestial Coordinates & Navigation",
+        "type": "research",
+        "command": "Research topic: Celestial Coordinates & Navigation",
+        "estimated_duration": 300,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1",
+          "DIRECTIVE_2"
+        ],
+        "result": "Basic research completed on Celestial Coordinates & Navigation. Added knowledge to database."
+      },
+      {
+        "id": "LEARN_celestial_navigation_1789217506_quiz",
+        "title": "Self-quiz: Celestial Coordinates & Navigation",
+        "type": "verification",
+        "command": "echo 'Quiz: What coordinate system uses right ascension and declination?\nExpected: Equatorial coordinate system'",
+        "estimated_duration": 60,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1"
+        ],
+        "result": "Quiz: What coordinate system uses right ascension and declination?\nExpected: Equatorial coordinate system"
+      }
+    ],
+    "result": null
+  },
+  {
+    "id": "LEARN_celestial_navigation_1789217566",
+    "title": "Learn: Celestial Coordinates & Navigation",
+    "description": "Star positions, coordinate systems, astronomical units\nConcepts: right ascension, declination, ecliptic, parsec, light-year",
+    "priority": "medium",
+    "status": "completed",
+    "created_at": 1789217566.7792187,
+    "updated_at": 1789217607.1175725,
+    "subtasks": [
+      {
+        "id": "LEARN_celestial_navigation_1789217566_research",
+        "title": "Research Celestial Coordinates & Navigation",
+        "type": "research",
+        "command": "Research topic: Celestial Coordinates & Navigation",
+        "estimated_duration": 300,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1",
+          "DIRECTIVE_2"
+        ],
+        "result": "Basic research completed on Celestial Coordinates & Navigation. Added knowledge to database."
+      },
+      {
+        "id": "LEARN_celestial_navigation_1789217566_quiz",
+        "title": "Self-quiz: Celestial Coordinates & Navigation",
+        "type": "verification",
+        "command": "echo 'Quiz: What coordinate system uses right ascension and declination?\nExpected: Equatorial coordinate system'",
+        "estimated_duration": 60,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1"
+        ],
+        "result": "Quiz: What coordinate system uses right ascension and declination?\nExpected: Equatorial coordinate system"
+      }
+    ],
+    "result": null
+  },
+  {
+    "id": "LEARN_celestial_navigation_1789217627",
+    "title": "Learn: Celestial Coordinates & Navigation",
+    "description": "Star positions, coordinate systems, astronomical units\nConcepts: right ascension, declination, ecliptic, parsec, light-year",
+    "priority": "medium",
+    "status": "completed",
+    "created_at": 1789217627.1830363,
+    "updated_at": 1789217667.4624894,
+    "subtasks": [
+      {
+        "id": "LEARN_celestial_navigation_1789217627_research",
+        "title": "Research Celestial Coordinates & Navigation",
+        "type": "research",
+        "command": "Research topic: Celestial Coordinates & Navigation",
+        "estimated_duration": 300,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1",
+          "DIRECTIVE_2"
+        ],
+        "result": "Basic research completed on Celestial Coordinates & Navigation. Added knowledge to database."
+      },
+      {
+        "id": "LEARN_celestial_navigation_1789217627_quiz",
+        "title": "Self-quiz: Celestial Coordinates & Navigation",
+        "type": "verification",
+        "command": "echo 'Quiz: What coordinate system uses right ascension and declination?\nExpected: Equatorial coordinate system'",
+        "estimated_duration": 60,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1"
+        ],
+        "result": "Quiz: What coordinate system uses right ascension and declination?\nExpected: Equatorial coordinate system"
+      }
+    ],
+    "result": null
+  },
+  {
+    "id": "LEARN_celestial_navigation_1789217687",
+    "title": "Learn: Celestial Coordinates & Navigation",
+    "description": "Star positions, coordinate systems, astronomical units\nConcepts: right ascension, declination, ecliptic, parsec, light-year",
+    "priority": "medium",
+    "status": "completed",
+    "created_at": 1789217687.5773814,
+    "updated_at": 1789217727.929875,
+    "subtasks": [
+      {
+        "id": "LEARN_celestial_navigation_1789217687_research",
+        "title": "Research Celestial Coordinates & Navigation",
+        "type": "research",
+        "command": "Research topic: Celestial Coordinates & Navigation",
+        "estimated_duration": 300,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1",
+          "DIRECTIVE_2"
+        ],
+        "result": "Basic research completed on Celestial Coordinates & Navigation. Added knowledge to database."
+      },
+      {
+        "id": "LEARN_celestial_navigation_1789217687_quiz",
+        "title": "Self-quiz: Celestial Coordinates & Navigation",
+        "type": "verification",
+        "command": "echo 'Quiz: What coordinate system uses right ascension and declination?\nExpected: Equatorial coordinate system'",
+        "estimated_duration": 60,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1"
+        ],
+        "result": "Quiz: What coordinate system uses right ascension and declination?\nExpected: Equatorial coordinate system"
+      }
+    ],
+    "result": null
+  },
+  {
+    "id": "LEARN_celestial_navigation_1789217747",
+    "title": "Learn: Celestial Coordinates & Navigation",
+    "description": "Star positions, coordinate systems, astronomical units\nConcepts: right ascension, declination, ecliptic, parsec, light-year",
+    "priority": "medium",
+    "status": "completed",
+    "created_at": 1789217747.9864955,
+    "updated_at": 1789217788.283365,
+    "subtasks": [
+      {
+        "id": "LEARN_celestial_navigation_1789217747_research",
+        "title": "Research Celestial Coordinates & Navigation",
+        "type": "research",
+        "command": "Research topic: Celestial Coordinates & Navigation",
+        "estimated_duration": 300,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1",
+          "DIRECTIVE_2"
+        ],
+        "result": "Basic research completed on Celestial Coordinates & Navigation. Added knowledge to database."
+      },
+      {
+        "id": "LEARN_celestial_navigation_1789217747_quiz",
+        "title": "Self-quiz: Celestial Coordinates & Navigation",
+        "type": "verification",
+        "command": "echo 'Quiz: What coordinate system uses right ascension and declination?\nExpected: Equatorial coordinate system'",
+        "estimated_duration": 60,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1"
+        ],
+        "result": "Quiz: What coordinate system uses right ascension and declination?\nExpected: Equatorial coordinate system"
+      }
+    ],
+    "result": null
+  },
+  {
+    "id": "LEARN_celestial_navigation_1789217879",
+    "title": "Learn: Celestial Coordinates & Navigation",
+    "description": "Star positions, coordinate systems, astronomical units\nConcepts: right ascension, declination, ecliptic, parsec, light-year",
+    "priority": "medium",
+    "status": "completed",
+    "created_at": 1789217879.9595833,
+    "updated_at": 1789218278.0508642,
+    "subtasks": [
+      {
+        "id": "LEARN_celestial_navigation_1789217879_research",
+        "title": "Research Celestial Coordinates & Navigation",
+        "type": "research",
+        "command": "Research topic: Celestial Coordinates & Navigation",
+        "estimated_duration": 300,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1",
+          "DIRECTIVE_2"
+        ],
+        "result": "Basic research completed on Celestial Coordinates & Navigation. Added knowledge to database."
+      },
+      {
+        "id": "LEARN_celestial_navigation_1789217879_quiz",
+        "title": "Self-quiz: Celestial Coordinates & Navigation",
+        "type": "verification",
+        "command": "echo 'Quiz: What coordinate system uses right ascension and declination?\nExpected: Equatorial coordinate system'",
+        "estimated_duration": 60,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1"
+        ],
+        "result": "Quiz: What coordinate system uses right ascension and declination?\nExpected: Equatorial coordinate system"
+      }
+    ],
+    "result": null
+  },
+  {
+    "id": "LEARN_celestial_navigation_1789218372",
+    "title": "Learn: Celestial Coordinates & Navigation",
+    "description": "Star positions, coordinate systems, astronomical units\nConcepts: right ascension, declination, ecliptic, parsec, light-year",
+    "priority": "medium",
+    "status": "in_progress",
+    "created_at": 1789218372.571206,
+    "updated_at": 1789218466.8815567,
+    "subtasks": [
+      {
+        "id": "LEARN_celestial_navigation_1789218372_research",
+        "title": "Research Celestial Coordinates & Navigation",
+        "type": "research",
+        "command": "Research topic: Celestial Coordinates & Navigation",
+        "estimated_duration": 300,
+        "status": "completed",
+        "safety_checks": [
+          "DIRECTIVE_1",
+          "DIRECTIVE_2"
+        ],
+        "result": "Basic research completed on Celestial Coordinates & Navigation. Added knowledge to database."
+      },
+      {
+        "id": "LEARN_celestial_navigation_1789218372_quiz",
         "title": "Self-quiz: Celestial Coordinates & Navigation",
         "type": "verification",
         "command": "echo 'Quiz: What coordinate system uses right ascension and declination?\nExpected: Equatorial coordinate system'",

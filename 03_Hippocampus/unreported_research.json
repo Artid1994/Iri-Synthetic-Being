@@ -1,16 +1,5 @@
 [
   {
-    "topic": "Calculus Fundamentals",
-    "domain": "Mathematics",
-    "facts_count": 5,
-    "timestamp": 1789215260.3382416,
-    "key_facts": [
-      "[Autonomous] Functions map inputs to outputs systematically",
-      "[Autonomous] Derivatives measure rates of change"
-    ],
-    "reported": false
-  },
-  {
     "topic": "Self-Code Architecture Mapping",
     "domain": "Programming",
     "facts_count": 5,
@@ -19,7 +8,7 @@
       "[Autonomous] Algorithms are step-by-step procedures",
       "[Autonomous] Data structures organize information efficiently"
     ],
-    "reported": false
+    "reported": true
   },
   {
     "topic": "Self-Code Architecture Mapping",
@@ -30,7 +19,7 @@
       "[Autonomous] Algorithms are step-by-step procedures",
       "[Autonomous] Data structures organize information efficiently"
     ],
-    "reported": false
+    "reported": true
   },
   {
     "topic": "Python Data Structures",
@@ -41,7 +30,7 @@
       "[Autonomous] Algorithms are step-by-step procedures",
       "[Autonomous] Data structures organize information efficiently"
     ],
-    "reported": false
+    "reported": true
   },
   {
     "topic": "Python Data Structures",
@@ -52,7 +41,7 @@
       "[Autonomous] Algorithms are step-by-step procedures",
       "[Autonomous] Data structures organize information efficiently"
     ],
-    "reported": false
+    "reported": true
   },
   {
     "topic": "Basic Algorithms",
@@ -63,7 +52,7 @@
       "[Autonomous] Algorithms are step-by-step procedures",
       "[Autonomous] Data structures organize information efficiently"
     ],
-    "reported": false
+    "reported": true
   },
   {
     "topic": "Basic Algorithms",
@@ -74,7 +63,7 @@
       "[Autonomous] Algorithms are step-by-step procedures",
       "[Autonomous] Data structures organize information efficiently"
     ],
-    "reported": false
+    "reported": true
   },
   {
     "topic": "Celestial Coordinates & Navigation",
@@ -85,7 +74,7 @@
       "[Autonomous] Understanding Celestial Coordinates & Navigation requires foundational knowledge",
       "[Autonomous] Key concepts in Celestial Coordinates & Navigation build systematically"
     ],
-    "reported": false
+    "reported": true
   },
   {
     "topic": "Operating System Fundamentals",
@@ -96,13 +85,24 @@
       "[Autonomous] Operating systems manage hardware resources",
       "[Autonomous] Processes are independent program executions"
     ],
-    "reported": false
+    "reported": true
   },
   {
     "topic": "Linear Algebra Basics",
     "domain": "Mathematics",
     "facts_count": 5,
     "timestamp": 1789217023.0176888,
+    "key_facts": [
+      "[Autonomous] Functions map inputs to outputs systematically",
+      "[Autonomous] Derivatives measure rates of change"
+    ],
+    "reported": true
+  },
+  {
+    "topic": "Calculus Fundamentals",
+    "domain": "Mathematics",
+    "facts_count": 5,
+    "timestamp": 1789218130.443222,
     "key_facts": [
       "[Autonomous] Functions map inputs to outputs systematically",
       "[Autonomous] Derivatives measure rates of change"
