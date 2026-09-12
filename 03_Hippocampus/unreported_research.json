@@ -3,109 +3,109 @@
     "topic": "Calculus Fundamentals",
     "domain": "Mathematics",
     "facts_count": 5,
-    "timestamp": 1789164054.6732662,
+    "timestamp": 1789215260.3382416,
     "key_facts": [
       "[Autonomous] Functions map inputs to outputs systematically",
       "[Autonomous] Derivatives measure rates of change"
     ],
-    "reported": true
+    "reported": false
   },
   {
     "topic": "Self-Code Architecture Mapping",
     "domain": "Programming",
     "facts_count": 5,
-    "timestamp": 1789164138.3288357,
+    "timestamp": 1789215342.529741,
     "key_facts": [
       "[Autonomous] Algorithms are step-by-step procedures",
       "[Autonomous] Data structures organize information efficiently"
     ],
-    "reported": true
+    "reported": false
+  },
+  {
+    "topic": "Self-Code Architecture Mapping",
+    "domain": "Programming",
+    "facts_count": 5,
+    "timestamp": 1789215343.1159456,
+    "key_facts": [
+      "[Autonomous] Algorithms are step-by-step procedures",
+      "[Autonomous] Data structures organize information efficiently"
+    ],
+    "reported": false
   },
   {
     "topic": "Python Data Structures",
     "domain": "Programming",
     "facts_count": 5,
-    "timestamp": 1789164179.5579953,
+    "timestamp": 1789215383.410013,
     "key_facts": [
       "[Autonomous] Algorithms are step-by-step procedures",
       "[Autonomous] Data structures organize information efficiently"
     ],
-    "reported": true
+    "reported": false
+  },
+  {
+    "topic": "Python Data Structures",
+    "domain": "Programming",
+    "facts_count": 5,
+    "timestamp": 1789215384.17725,
+    "key_facts": [
+      "[Autonomous] Algorithms are step-by-step procedures",
+      "[Autonomous] Data structures organize information efficiently"
+    ],
+    "reported": false
   },
   {
     "topic": "Basic Algorithms",
     "domain": "Programming",
     "facts_count": 5,
-    "timestamp": 1789164220.769404,
+    "timestamp": 1789215424.2946942,
     "key_facts": [
       "[Autonomous] Algorithms are step-by-step procedures",
       "[Autonomous] Data structures organize information efficiently"
     ],
-    "reported": true
+    "reported": false
+  },
+  {
+    "topic": "Basic Algorithms",
+    "domain": "Programming",
+    "facts_count": 5,
+    "timestamp": 1789215425.1629486,
+    "key_facts": [
+      "[Autonomous] Algorithms are step-by-step procedures",
+      "[Autonomous] Data structures organize information efficiently"
+    ],
+    "reported": false
   },
   {
     "topic": "Celestial Coordinates & Navigation",
     "domain": "General",
     "facts_count": 3,
-    "timestamp": 1789164304.8333654,
+    "timestamp": 1789216617.0363252,
     "key_facts": [
       "[Autonomous] Understanding Celestial Coordinates & Navigation requires foundational knowledge",
       "[Autonomous] Key concepts in Celestial Coordinates & Navigation build systematically"
     ],
-    "reported": true
+    "reported": false
   },
   {
     "topic": "Operating System Fundamentals",
     "domain": "Computer_Systems",
     "facts_count": 5,
-    "timestamp": 1789164346.6515546,
+    "timestamp": 1789216851.4449503,
     "key_facts": [
       "[Autonomous] Operating systems manage hardware resources",
       "[Autonomous] Processes are independent program executions"
     ],
-    "reported": true
+    "reported": false
   },
   {
     "topic": "Linear Algebra Basics",
     "domain": "Mathematics",
     "facts_count": 5,
-    "timestamp": 1789164388.0648682,
+    "timestamp": 1789217023.0176888,
     "key_facts": [
       "[Autonomous] Functions map inputs to outputs systematically",
       "[Autonomous] Derivatives measure rates of change"
-    ],
-    "reported": true
-  },
-  {
-    "topic": "Calculus Fundamentals",
-    "domain": "Mathematics",
-    "facts_count": 5,
-    "timestamp": 1789166611.6336043,
-    "key_facts": [
-      "[Autonomous] Functions map inputs to outputs systematically",
-      "[Autonomous] Derivatives measure rates of change"
-    ],
-    "reported": false
-  },
-  {
-    "topic": "Self-Code Architecture Mapping",
-    "domain": "Programming",
-    "facts_count": 5,
-    "timestamp": 1789167438.6513836,
-    "key_facts": [
-      "[Autonomous] Algorithms are step-by-step procedures",
-      "[Autonomous] Data structures organize information efficiently"
-    ],
-    "reported": false
-  },
-  {
-    "topic": "Python Data Structures",
-    "domain": "Programming",
-    "facts_count": 5,
-    "timestamp": 1789167555.853011,
-    "key_facts": [
-      "[Autonomous] Algorithms are step-by-step procedures",
-      "[Autonomous] Data structures organize information efficiently"
     ],
     "reported": false
   }

@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "bc8d09d8253f065b",
+        "id": "ac1dea6449116ab4",
         "type": "tabs",
         "children": [
           {
-            "id": "d64d970d03ff9bfd",
+            "id": "d27b02b4c1030324",
             "type": "leaf",
             "state": {
               "type": "brain-atlas",
@@ -200,7 +200,7 @@
       "obsidian-shellcommands:Shell commands: Custom variables": false
     }
   },
-  "active": "d64d970d03ff9bfd",
+  "active": "d27b02b4c1030324",
   "lastOpenFiles": [
     "01_Neocortex/NEURAL_NETWORK_ARCHITECTURE.md",
     "03_Hippocampus/learned_insights/EPISODIC_ไอร_20260909_194635.md",
