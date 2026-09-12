@@ -527,6 +527,9 @@ class IriChat:
                 # Save conversation turn to memory
                 self.save_conversation_turn(user_input, response)
                 
+                # Flush stdin to clear any buffered input before next prompt
+                sys.stdout.flush()
+                
                 # Exit if requested
                 if intent.type == 'exit':
                     break
