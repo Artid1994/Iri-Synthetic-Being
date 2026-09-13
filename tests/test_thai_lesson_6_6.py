@@ -299,6 +299,7 @@ class TestEvidenceGateIntegration:
             expected_pattern="contextual_interpretation",
             verified=True,
             confidence=0.9,
+            explanation="Interpreted VERB+ไหม pattern based on invitation context",
         )
         
         memory = Memory()
@@ -331,6 +332,7 @@ class TestEvidenceGateIntegration:
             expected_pattern="explanation",
             verified=True,
             confidence=0.9,
+            explanation="Learner explained pragmatic vs lexical distinction",
         )
         
         memory = Memory()
@@ -365,6 +367,7 @@ class TestProvenancePreservation:
             expected_pattern="pattern",
             verified=True,
             confidence=0.9,
+            explanation="Interpreted based on pragmatic context",
         )
         
         memory = Memory()

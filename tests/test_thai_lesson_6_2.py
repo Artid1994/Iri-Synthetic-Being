@@ -182,6 +182,7 @@ class TestPipelineIntegration:
             expected_pattern="contextual interpretation",
             verified=True,
             confidence=0.9,
+            explanation="Interpreted ไป contextually in activity context",
         )
         
         # Use actual Pipeline + Evidence Gate

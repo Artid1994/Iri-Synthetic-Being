@@ -349,6 +349,13 @@ class KnowledgeIngestionPipeline:
             if not understanding_evidence.verified:
                 return False
             
+            # CRITICAL: Validate evidence content matches claimed type
+            from runtime.education.semantic_representation import SemanticVerifier
+            valid, errors = SemanticVerifier.validate_understanding_evidence(understanding_evidence)
+            if not valid:
+                # Evidence validation failed (e.g., APPLICATION same as input, EXPLANATION too short)
+                return False
+            
             # Check ambiguity for semantic knowledge
             if hasattr(concept, 'metadata') and 'ambiguity_level' in concept.metadata:
                 ambiguity = concept.metadata['ambiguity_level']

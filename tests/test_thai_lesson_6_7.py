@@ -429,11 +429,12 @@ class TestEvidenceGateIntegration:
         
         evidence = UnderstandingEvidence(
             evidence_type=EvidenceType.EXPLANATION,
-            language_input="ไป กิน",
+            language_input="test_representation",
             learner_output="Serial verb pattern: VERB+VERB with purpose meaning, combines motion and action",
             expected_pattern="explanation",
             verified=True,
             confidence=0.9,
+            explanation="Learner explained serial verb compositional pattern",
         )
         
         memory = Memory()

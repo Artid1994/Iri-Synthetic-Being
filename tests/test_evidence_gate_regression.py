@@ -121,6 +121,7 @@ class TestUnderstandingEvidenceTypes:
             expected_pattern="explanation",
             verified=True,
             confidence=0.9,
+            explanation="Learner explained semantic field and directional meaning",
         )
         
         memory = Memory()
@@ -153,6 +154,7 @@ class TestUnderstandingEvidenceTypes:
             expected_pattern="application",
             verified=True,
             confidence=0.9,
+            explanation="Applied ACTION verb in serial verb construction",
         )
         
         memory = Memory()
@@ -184,6 +186,7 @@ class TestUnderstandingEvidenceTypes:
             expected_pattern="transfer",
             verified=True,
             confidence=0.9,
+            explanation="Transferred NOUN+ADJECTIVE pattern to new noun",
         )
         
         memory = Memory()
@@ -287,6 +290,7 @@ class TestAmbiguityHandling:
             expected_pattern="pattern",
             verified=True,
             confidence=0.8,
+            explanation="Interpreted meaning based on context",
         )
         
         memory = Memory()
@@ -358,6 +362,7 @@ class TestProvenanceWithEvidenceType:
             expected_pattern="pattern",
             verified=True,
             confidence=0.9,
+            explanation="Applied pattern to new example",
         )
         
         memory = Memory()

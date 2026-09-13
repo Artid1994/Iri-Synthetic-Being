@@ -196,6 +196,7 @@ class TestEvidenceGateEnforcement:
             expected_pattern="explanation",
             verified=True,
             confidence=0.9,
+            explanation="Learner explained semantic field and verb type",
         )
         
         memory = Memory()
@@ -226,6 +227,7 @@ class TestEvidenceGateEnforcement:
             expected_pattern="application",
             verified=True,
             confidence=0.9,
+            explanation="Applied pattern to novel context",
         )
         
         memory = Memory()
@@ -302,6 +304,7 @@ class TestNumericVsSemanticCriteria:
             expected_pattern="explanation",
             verified=True,
             confidence=0.8,
+            explanation="Learner provided structural semantic explanation",
         )
         
         memory = Memory()

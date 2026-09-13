@@ -237,6 +237,9 @@ class SemanticVerifier:
         if evidence.evidence_type == EvidenceType.EXPLANATION:
             if len(evidence.learner_output) < 10:
                 errors.append("Explanation too short to demonstrate understanding")
+            # CRITICAL: Explanation must not just repeat input
+            if evidence.language_input.strip().lower() == evidence.learner_output.strip().lower():
+                errors.append("Explanation must not just repeat input")
         
         if evidence.evidence_type == EvidenceType.APPLICATION:
             if evidence.language_input == evidence.learner_output:
