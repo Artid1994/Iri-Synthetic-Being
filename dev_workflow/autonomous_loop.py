@@ -109,75 +109,151 @@ class TaskPlanner:
         previous_state: Optional[AutonomousLoopState] = None,
     ) -> Tuple[TaskStatus, Optional[DevelopmentTask], str]:
         """
-        Select the next safe bounded development task.
+        Select the next development task by inspecting actual repository state.
+        
+        v1.5: Real inspection-driven development, not predefined catalog.
         
         Args:
-            goal: Human-provided high-level goal
+            goal: High-level development goal
             previous_state: Previous loop state
         
         Returns:
             (status, task, message)
         """
-        # For v1 Controlled Mode: Use predefined safe task catalog
-        # Do NOT invent tasks or inspect arbitrary repository state
+        # Inspect repository and identify real gaps
+        gaps = self._inspect_repository_gaps()
         
-        safe_tasks = self._get_safe_task_catalog()
-        
-        if not safe_tasks:
+        if not gaps:
             return (
                 TaskStatus.NO_SAFE_TASK,
                 None,
-                "No safe tasks defined in catalog"
+                "No actionable gaps identified"
             )
         
-        # Select first safe task that hasn't been attempted
-        attempted_tasks = set()
-        if previous_state and previous_state.selected_task:
-            attempted_tasks.add(previous_state.selected_task.task_id)
+        # Select highest priority gap
+        top_gap = gaps[0]
         
-        for task in safe_tasks:
-            if task.task_id not in attempted_tasks:
-                return (
-                    TaskStatus.SELECTED,
-                    task,
-                    f"Selected task: {task.task_id}"
-                )
+        # Create bounded development task for this gap
+        task = self._create_task_from_gap(top_gap)
         
-        # All safe tasks attempted
-        return (
-            TaskStatus.NO_SAFE_TASK,
-            None,
-            "All safe tasks attempted"
-        )
+        if task:
+            return (
+                TaskStatus.SELECTED,
+                task,
+                f"Selected task for gap: {top_gap['name']}"
+            )
+        else:
+            return (
+                TaskStatus.NO_SAFE_TASK,
+                None,
+                f"Cannot create safe task for gap: {top_gap['name']}"
+            )
     
-    def _get_safe_task_catalog(self) -> List[DevelopmentTask]:
+    def _inspect_repository_gaps(self) -> List[Dict]:
         """
-        Get catalog of predefined safe tasks.
+        Inspect actual repository state to identify gaps.
         
-        v1 Controlled Mode: Minimal safe task set.
-        Tasks are hardcoded, not dynamically generated.
+        Returns list of gaps, highest priority first.
         """
-        return [
-            DevelopmentTask(
-                task_id="readme-verification",
-                objective="Verify README.md exists and is not empty",
-                rationale="Basic repository documentation check",
-                allowed_paths=[],  # Read-only
+        gaps = []
+        
+        # Check Thai language foundation
+        thai_gap = self._check_thai_foundation()
+        if thai_gap:
+            gaps.append(thai_gap)
+        
+        # Check English language foundation
+        english_gap = self._check_english_foundation()
+        if english_gap:
+            gaps.append(english_gap)
+        
+        # Check learning system integration
+        learning_gap = self._check_learning_integration()
+        if learning_gap:
+            gaps.append(learning_gap)
+        
+        return gaps
+    
+    def _check_thai_foundation(self) -> Optional[Dict]:
+        """Check Thai language understanding foundation."""
+        import os
+        
+        # Check if Thai curriculum exists
+        curriculum_file = "03_Hippocampus/curriculum_state.json"
+        if not os.path.exists(curriculum_file):
+            return {
+                'name': 'thai_curriculum_missing',
+                'priority': 1,
+                'description': 'Thai curriculum state file missing',
+                'category': 'thai_foundation',
+            }
+        
+        # Check for semantic verification system
+        semantic_repr = "runtime/education/semantic_representation.py"
+        if not os.path.exists(semantic_repr):
+            return {
+                'name': 'semantic_system_missing',
+                'priority': 1,
+                'description': 'Semantic representation system missing',
+                'category': 'thai_foundation',
+            }
+        
+        # Check if semantic verification is integrated with Thai curriculum
+        integration_test = "tests/test_thai_semantic_integration.py"
+        if not os.path.exists(integration_test):
+            return {
+                'name': 'thai_semantic_integration_test_missing',
+                'priority': 1,
+                'description': 'Need integration test for Thai semantic verification',
+                'category': 'thai_foundation',
+            }
+        
+        # If basic infrastructure exists, check for deeper gaps
+        # For now, return None (will expand in next iteration)
+        return None
+    
+    def _check_english_foundation(self) -> Optional[Dict]:
+        """Check English language understanding foundation."""
+        # English is lower priority than Thai
+        return None
+    
+    def _check_learning_integration(self) -> Optional[Dict]:
+        """Check learning system integration."""
+        return None
+    
+    def _create_task_from_gap(self, gap: Dict) -> Optional[DevelopmentTask]:
+        """
+        Create bounded development task from identified gap.
+        
+        Returns None if task cannot be safely created.
+        """
+        if gap['name'] == 'thai_semantic_integration_test_missing':
+            return DevelopmentTask(
+                task_id='thai-semantic-integration-test',
+                objective='Create integration test for Thai semantic verification',
+                rationale='Verify semantic understanding works with Thai curriculum',
+                allowed_paths=[
+                    'tests/test_thai_semantic_integration.py',
+                ],
                 allowed_commands=[
-                    "git status",
-                    "git diff --stat",
+                    'git status',
+                    'git diff --stat',
+                    'python -m pytest tests/test_thai_semantic_integration.py -v',
                 ],
                 verification_criteria=[
-                    "README.md file exists",
-                    "README.md is not empty",
+                    'Test file created',
+                    'Test can import semantic verification',
+                    'Test passes',
                 ],
                 stop_conditions=[
-                    "File not found",
-                    "Ambiguous state",
+                    'Import errors',
+                    'Test failure',
+                    'Semantic verifier not found',
                 ],
-            ),
-            # Additional safe tasks can be added here
-        ]
+            )
+        
+        # Cannot create safe task for this gap
+        return None
     
     def identify_gaps(self, goal: str) -> List[str]:
         """
