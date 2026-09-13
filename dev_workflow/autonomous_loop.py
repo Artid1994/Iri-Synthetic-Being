@@ -204,11 +204,17 @@ class AutonomousLoop:
         self,
         workspace_root: str,
         orchestrator,  # WorkflowOrchestrator instance
+        hermes_adapter=None,
     ):
         self.workspace_root = workspace_root
         self.orchestrator = orchestrator
         self.task_planner = TaskPlanner(workspace_root)
         self.loop_history = []
+        self.hermes_adapter = hermes_adapter
+        
+        # Set adapter on orchestrator's builder
+        if hermes_adapter:
+            self.orchestrator.builder.executor.hermes_adapter = hermes_adapter
     
     def execute_cycle(
         self,

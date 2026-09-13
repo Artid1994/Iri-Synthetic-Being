@@ -1,8 +1,7 @@
 """
-Hermes-native execution engine for v1.3.
+Hermes-native execution engine for v1.3+.
 
-Replaces broken exec() approach with proper execute_code tool usage.
-Enforces safety policies at every step.
+v1.4: Uses HermesExecutionAdapter instead of direct import.
 """
 
 from typing import Dict, List, Optional, Tuple
@@ -11,6 +10,7 @@ from dataclasses import dataclass
 import json
 
 from .safety import ExecutionPolicy
+from .hermes_adapter import HermesExecutionAdapter
 
 
 @dataclass
@@ -83,15 +83,15 @@ class ExecutionResult:
 
 class HermesNativeExecutor:
     """
-    Hermes-native execution engine for v1.3.
+    Hermes-native execution engine for v1.3+.
     
-    Uses execute_code tool with safety policies.
-    Replaces broken exec() mechanism.
+    v1.4: Uses HermesExecutionAdapter for proper context handling.
     """
     
-    def __init__(self, workspace_root: str = "."):
+    def __init__(self, workspace_root: str = ".", hermes_adapter: Optional[HermesExecutionAdapter] = None):
         self.workspace_root = Path(workspace_root).resolve()
         self.execution_history = []
+        self.hermes_adapter = hermes_adapter or HermesExecutionAdapter(None)
     
     def execute_plan(
         self,
@@ -251,55 +251,11 @@ print(json.dumps(result))
     
     def _execute_via_hermes(self, script: str) -> Dict:
         """
-        Execute script via Hermes execute_code tool.
+        Execute script via Hermes adapter.
         
-        This is the REAL Hermes integration point.
+        v1.4: Uses injected adapter instead of direct import.
         """
-        try:
-            # Import execute_code from the enclosing Hermes environment
-            # This is available because we're running inside Hermes
-            from execute_code import execute_code as hermes_execute_code
-            
-            exec_result = hermes_execute_code(code=script)
-            
-            # Parse JSON output
-            output = exec_result.get('output', '{}')
-            result = json.loads(output.strip())
-            
-            return result
-            
-        except ImportError:
-            # execute_code not available - fallback for testing
-            # In production this should not happen
-            return {
-                'success': False,
-                'message': 'execute_code tool not available',
-                'files_changed': [],
-                'tests_run': '',
-                'test_exit_code': None,
-                'git_diff': '',
-                'commands_executed': [],
-            }
-        except json.JSONDecodeError as e:
-            return {
-                'success': False,
-                'message': f'Failed to parse execution result: {str(e)}',
-                'files_changed': [],
-                'tests_run': '',
-                'test_exit_code': None,
-                'git_diff': '',
-                'commands_executed': [],
-            }
-        except Exception as e:
-            return {
-                'success': False,
-                'message': f'Hermes execution failed: {str(e)}',
-                'files_changed': [],
-                'tests_run': '',
-                'test_exit_code': None,
-                'git_diff': '',
-                'commands_executed': [],
-            }
+        return self.hermes_adapter.execute_script(script)
     
     def _capture_state(self) -> Dict:
         """Capture current workspace state for verification."""

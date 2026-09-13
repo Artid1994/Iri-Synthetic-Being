@@ -99,10 +99,10 @@ class HermesBuilder:
     Replaces broken exec() mechanism.
     """
     
-    def __init__(self, workspace_root: str = ".", allowed_paths: List[str] = None):
+    def __init__(self, workspace_root: str = ".", allowed_paths: List[str] = None, hermes_adapter=None):
         self.execution_history = []
         self.workspace_root = workspace_root
-        self.executor = HermesNativeExecutor(workspace_root)
+        self.executor = HermesNativeExecutor(workspace_root, hermes_adapter)
         self.policy = ExecutionPolicy(workspace_root, allowed_paths)
     
     def execute_task(
