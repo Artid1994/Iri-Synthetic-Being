@@ -1,11 +1,15 @@
 """
 Agent role implementations for the multi-agent workflow.
+
+v1.3: Hermes-native execution with safety policies.
 """
 
 from typing import Tuple, List, Optional, Dict
 import hashlib
 import re
 from .state import WorkflowState, ReviewerFinding, FindingSeverity
+from .hermes_executor import HermesNativeExecutor, ExecutionPlan, ExecutionResult
+from .safety import ExecutionPolicy
 
 
 class PromptTokenAuditor:
@@ -89,24 +93,29 @@ class PromptTokenAuditor:
 
 class HermesBuilder:
     """
-    Executes repository work using execute_code for real operations.
+    Executes repository work using Hermes-native execute_code.
     
-    v1.1: Real execution within Hermes environment.
-    Uses execute_code to perform actual repository operations.
+    v1.3: Hermes-native execution with safety policies.
+    Replaces broken exec() mechanism.
     """
     
-    def __init__(self, workspace_root: str = "."):
+    def __init__(self, workspace_root: str = ".", allowed_paths: List[str] = None):
         self.execution_history = []
         self.workspace_root = workspace_root
+        self.executor = HermesNativeExecutor(workspace_root)
+        self.policy = ExecutionPolicy(workspace_root, allowed_paths)
     
     def execute_task(
         self,
         goal: str,
         context: str,
         state: WorkflowState,
+        allowed_paths: List[str] = None,
     ) -> Dict:
         """
-        Execute a development task using execute_code.
+        Execute a development task using Hermes-native execute_code.
+        
+        v1.3: Policy-enforced execution with verification.
         
         Returns:
             {
@@ -114,187 +123,48 @@ class HermesBuilder:
                 'message': str,
                 'files_changed': List[str],
                 'tests_run': str,
+                'test_exit_code': Optional[int],
+                'git_diff': str,
                 'git_commit': Optional[str],
                 'actual_tokens': int,
-                'git_diff': str,
-                'test_exit_code': Optional[int],
                 'commands_executed': List[str],
+                'unauthorized_changes': bool,
+                'policy_violations': List[str],
             }
         """
-        # Build execution script
-        script = self._build_execution_script(goal, context, state)
+        # Build execution plan
+        plan = ExecutionPlan(
+            goal=goal,
+            reads=[],  # For v1.3: inspection only
+            writes=[],  # No writes yet
+            commands=[
+                'git status --short',
+                'git diff --stat',
+                'python -m pytest --version',  # Test environment check
+            ],
+            allowed_paths=allowed_paths or [],
+            timeout=30,
+        )
         
-        # Execute using the execute_code tool available in Hermes
-        try:
-            # Use execute_code from the enclosing Hermes scope
-            # This is called as a tool, not imported
-            import json
-            
-            # For v1.2, we execute the script inline
-            exec_globals = {'__name__': '__main__'}
-            exec_locals = {}
-            
-            # Capture stdout
-            from io import StringIO
-            import sys
-            old_stdout = sys.stdout
-            sys.stdout = StringIO()
-            
-            try:
-                exec(script, exec_globals, exec_locals)
-                output = sys.stdout.getvalue()
-            finally:
-                sys.stdout = old_stdout
-            
-            # Parse JSON output
-            try:
-                exec_result = json.loads(output.strip())
-            except json.JSONDecodeError:
-                exec_result = {
-                    'success': False,
-                    'message': f'Script output not JSON: {output[:200]}',
-                    'files_changed': [],
-                    'tests_run': '',
-                    'git_commit': None,
-                    'git_diff': '',
-                    'test_exit_code': None,
-                    'commands_executed': [],
-                }
-            
-            # Parse result
-            result = {
-                'success': exec_result.get('success', False),
-                'message': exec_result.get('message', 'Execution completed'),
-                'files_changed': exec_result.get('files_changed', []),
-                'tests_run': exec_result.get('tests_run', ''),
-                'git_commit': exec_result.get('git_commit'),
-                'actual_tokens': self._estimate_execution_tokens(script, exec_result),
-                'git_diff': exec_result.get('git_diff', ''),
-                'test_exit_code': exec_result.get('test_exit_code'),
-                'commands_executed': exec_result.get('commands_executed', []),
-            }
-        except Exception as e:
-            result = {
-                'success': False,
-                'message': f'Execution failed: {str(e)}',
-                'files_changed': [],
-                'tests_run': '',
-                'git_commit': None,
-                'actual_tokens': 0,
-                'git_diff': '',
-                'test_exit_code': None,
-                'commands_executed': [],
-            }
+        # Update policy with allowed_paths if provided
+        if allowed_paths:
+            self.policy = ExecutionPolicy(self.workspace_root, allowed_paths)
+        
+        # Execute plan with policy enforcement
+        result = self.executor.execute_plan(plan, self.policy)
+        
+        # Convert to legacy dict format for compatibility
+        result_dict = result.to_dict()
         
         self.execution_history.append({
             'goal': goal,
             'iteration': state.iteration,
-            'result': result,
+            'result': result_dict,
         })
         
-        return result
+        return result_dict
     
-    def _build_execution_script(self, goal: str, context: str, state: WorkflowState) -> str:
-        """
-        Build Python script for execution.
-        
-        v1.2: Real execution with file modification and test execution support.
-        """
-        script = f'''
-# Development Task Execution v1.2
-# Goal: {goal}
-# Iteration: {state.iteration}
-
-from hermes_tools import terminal, read_file, write_file, search_files, patch
-import json
-import os
-
-result = {{
-    'success': False,
-    'message': '',
-    'files_changed': [],
-    'tests_run': '',
-    'test_exit_code': None,
-    'git_commit': None,
-    'git_diff': '',
-    'commands_executed': [],
-}}
-
-workspace_root = os.getcwd()
-
-try:
-    # Get initial git status
-    git_status_before = terminal("git status --short", timeout=10)
-    
-    # === TASK EXECUTION ZONE ===
-    # This is where actual file modifications would happen
-    # For v1.2, we focus on inspection + test execution
-    
-    # Context/instructions are available if needed:
-    # {context[:200] if len(context) <= 200 else context[:200] + "..."}
-    
-    # Get git status after (to detect changes)
-    git_status_after = terminal("git status --short", timeout=10)
-    
-    # Get git diff summary
-    git_diff_result = terminal("git diff --stat", timeout=10)
-    result['git_diff'] = git_diff_result.get('output', '')
-    
-    # Parse changed files
-    if git_status_after['exit_code'] == 0:
-        lines = git_status_after['output'].strip().split('\\n')
-        changed = [line.split()[-1] for line in lines if line.strip()]
-        result['files_changed'] = changed
-    
-    # Execute relevant tests if any files changed or on initial pass
-    if result['files_changed'] or {state.iteration} == 1:
-        # Run a minimal test to verify environment
-        test_result = terminal("PYTHONPATH=. ./.venv/bin/python -m pytest --version", timeout=5)
-        result['commands_executed'].append("pytest --version")
-        
-        if test_result['exit_code'] == 0:
-            result['tests_run'] = f"Test environment verified: {{test_result.get('output', '')[:100]}}"
-            result['test_exit_code'] = 0
-        else:
-            result['tests_run'] = f"Test environment check failed"
-            result['test_exit_code'] = test_result['exit_code']
-    
-    # Mark as successful
-    result['success'] = True
-    result['message'] = 'Execution completed: inspection + test environment check'
-    
-except Exception as e:
-    result['message'] = f'Error: {{str(e)}}'
-    result['success'] = False
-
-print(json.dumps(result))
-'''
-        return script
-    
-    def _execute_via_code(self, script: str) -> Dict:
-        """
-        Execute script using Python exec.
-        
-        v1.2: Direct execution (simplified for safety).
-        Note: This executes in controlled environment with hermes_tools available.
-        """
-        # This method is now integrated into execute_task for v1.2
-        # Keeping for compatibility
-        return {
-            'success': False,
-            'message': 'Use execute_task directly in v1.2',
-            'files_changed': [],
-            'tests_run': '',
-            'git_commit': None,
-            'git_diff': '',
-        }
-    
-    def _estimate_execution_tokens(self, script: str, result: Dict) -> int:
-        """Estimate tokens used during execution."""
-        # Rough estimate: script + result
-        script_tokens = len(script) // 4
-        result_tokens = len(str(result)) // 4
-        return script_tokens + result_tokens
+    # Old v1.2 methods removed - replaced by HermesNativeExecutor in v1.3
 
 
 class IndependentReviewer:
