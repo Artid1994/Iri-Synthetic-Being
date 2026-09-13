@@ -328,22 +328,21 @@ class KnowledgeIngestionPipeline:
             
             from runtime.education.semantic_representation import EvidenceType
             
-            # Reject translation-only evidence
-            if understanding_evidence.evidence_type == EvidenceType.PARAPHRASE:
-                # Paraphrase is acceptable (different from translation)
-                pass
-            elif understanding_evidence.evidence_type in [
+            # CRITICAL: Explicitly reject translation-only evidence for semantic knowledge
+            if understanding_evidence.evidence_type == EvidenceType.TRANSLATION:
+                return False  # Translation alone insufficient for semantic understanding
+            
+            # Accept only semantic understanding evidence types
+            if understanding_evidence.evidence_type not in [
                 EvidenceType.EXPLANATION,
+                EvidenceType.PARAPHRASE,
                 EvidenceType.APPLICATION,
                 EvidenceType.INFERENCE,
                 EvidenceType.CONTEXTUAL_INTERPRETATION,
                 EvidenceType.PATTERN_EXTRACTION,
                 EvidenceType.TRANSFER,
             ]:
-                # These are valid understanding evidence
-                pass
-            else:
-                # No explicit translation rejection, but if not in approved list, reject
+                # Unknown or insufficient evidence type
                 return False
             
             # Check if evidence was actually verified
