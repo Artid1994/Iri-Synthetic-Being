@@ -1,7 +1,7 @@
 # IRI/AE01M PROJECT HANDOFF
 # THE_TRANSCENDING_FORM - Thai Language Learning + Autonomous Learning Infrastructure
 # Date: 2026-09-13
-# Status: Week 6.1-6.6 COMPLETE, Semantic Core LOCKED
+# Status: Week 6.1-6.7 COMPLETE, Semantic Core LOCKED
 
 ## VERIFIED CURRENT STATE
 
@@ -13,12 +13,13 @@
 - Thai Week 6.4: Ambiguity (23 tests PASSING)
 - Thai Week 6.5: Context (19 tests PASSING)
 - Thai Week 6.6: Pragmatic Meaning (32 tests PASSING)
+- Thai Week 6.7: Thai → Internal Semantic Representation (41 tests PASSING)
 - Self-directed learning: Gap detection, target selection, goal creation
 - Autonomous learning loop: State-driven cycle orchestration
 - Knowledge Ingestion Pipeline v1: SOURCE → EXTRACT → LEARN → EVIDENCE → GATE → CONSOLIDATE
 - Evidence Gate: Enforces understanding requirements (not translation-only)
 - Semantic Core: Data structures, knowledge base, verification logic
-- Total: **689 tests passing** (547+ core tests verified)
+- Total: **730 tests passing** (588+ core tests verified)
 
 **Test Command:**
 ```bash
@@ -26,23 +27,37 @@ cd /home/artid1994/Projects/THE_TRANSCENDING_FORM
 PYTHONPATH=. ./.venv/bin/python -m pytest tests/ -q --tb=no
 ```
 
-**Expected Result:** 689 passed (or more if additional work completed)
+**Expected Result:** 730 passed (or more if additional work completed)
 
-**Baseline:** 689 tests as of 2026-09-13 (Week 6.6 completion)
+**Baseline:** 730 tests as of 2026-09-13 (Week 6.7 completion)
 
 ---
 
 ## ARCHITECTURE INVENTORY
 
-### Thai Curriculum (COMPLETE)
+### Thai Curriculum (Week 6.1-6.7 COMPLETE)
 - Week 2 (10 lessons): Phonology - consonants, vowels, syllables, tones, IPA
 - Week 3 (10 lessons): Vocabulary - 30 words, categories, fluency
 - Week 4 (10 lessons): Grammar - sentence structure, negation, questions
 - Week 5 (10 lessons): Practical - classifiers, serial verbs, conversational structures
-- Week 6.1-6.6 (6 lessons): Semantics - meaning, context, ambiguity, pragmatics
+- Week 6.1-6.7 (7 lessons): Semantics - meaning, context, ambiguity, pragmatics, representation
 
-Files: ./runtime/education/thai_lesson_2_*.py through thai_lesson_6_6.py (46 files)
+Files: ./runtime/education/thai_lesson_2_*.py through thai_lesson_6_7.py (47 files)
 Tests: ./tests/test_thai_lesson_*.py + test_thai_week*.py
+
+### Week 6.7: Thai → Internal Semantic Representation (COMPLETE)
+- **thai_to_semantic_representation**: Complete Thai → Semantic conversion
+- **Four-layer architecture**: Lexical → Contextual → Compositional → Pragmatic
+- **Uncertainty tracking**: KNOWN/AMBIGUOUS/UNKNOWN preserved at each layer
+- **Evidence trail**: Full documentation of interpretation process
+- **Integration**: Reuses mechanisms from 6.2-6.6
+- **41 tests**: All layers, uncertainty, evidence, Evidence Gate integration
+
+### Semantic Vocabulary (EXTENDED)
+- 6 Thai words with complete semantic data: ไป, กิน, ดี, คน, น้ำ, ไหม
+- Each word: lexical meaning, semantic field, contextual meanings, ambiguity level
+- Pragmatic patterns: VERB+ไหม (question/invitation)
+- Semantic patterns: VERB+VERB (serial), NOUN+ADJECTIVE (modification)
 
 ### Education System (COMPLETE)
 - Lesson, LearningExercise, Assessment
@@ -64,22 +79,13 @@ Tests: ./tests/test_thai_lesson_*.py + test_thai_week*.py
   - Safe stopping when no valid target
 
 ### Semantic Core (LOCKED)
-- semantic_representation.py (319 lines)
+- semantic_representation.py (273 lines)
   - SemanticMeaning, ContextualMeaning, SentenceSemantics
   - AmbiguityPoint, UnderstandingEvidence
   - SemanticVerifier with validation rules
-- semantic_vocabulary.json (5 Thai words with verified semantic data)
+- semantic_vocabulary.json (6 Thai words with verified semantic data)
 - understanding_tests.json (translation ≠ understanding, memorization ≠ understanding)
 - test_semantic_core.py (20 tests, all passing)
-
-### Week 6.6: Pragmatic Meaning (COMPLETE)
-- extract_pragmatic_meaning: Evidence-based pragmatic interpretation
-- Four-level meaning hierarchy: Lexical → Contextual → Sentence → Pragmatic
-- Pragmatic patterns: VERB+ไหม (question/invitation depending on context)
-- Context-dependent interpretation with evidence tracking
-- No mind-reading: insufficient evidence → AMBIGUOUS/UNKNOWN
-- Evidence Gate integration verified
-- 32 tests covering all requirements
 
 ### Memory & SelfModel (COMPLETE)
 - Memory: add_experience(), add_semantic(), recall(), associate()
@@ -102,12 +108,14 @@ Tests: ./tests/test_thai_lesson_*.py + test_thai_week*.py
 10. **Assessment Weights:** Translation 40%, Explanation 30%, Application 30%
 11. **Pragmatic ≠ Mind-Reading:** Pragmatic meaning requires context evidence, not intention guessing
 12. **Four-Level Meaning:** Lexical → Contextual → Sentence → Pragmatic (distinct levels)
+13. **Parsing ≠ Understanding:** Representation includes semantic interpretation, not just parsing
+14. **Translation ≠ Understanding:** Representation includes structures beyond translation
 
 ---
 
-## WEEK 6 SPECIFICATION (6.1-6.6 COMPLETE, 6.7-6.10 REMAINING)
+## WEEK 6 SPECIFICATION (6.1-6.7 COMPLETE, 6.8-6.10 REMAINING)
 
-**Status:** 6 lessons implemented and tested, 4 lessons remaining
+**Status:** 7 lessons implemented and tested, 3 lessons remaining
 
 **Lessons Completed:**
 - 6.1: Semantic Meaning (semantic fields, evidence status) ✓
@@ -116,105 +124,146 @@ Tests: ./tests/test_thai_lesson_*.py + test_thai_week*.py
 - 6.4: Ambiguity (types, resolution strategies) ✓
 - 6.5: Context (context representation, resolution) ✓
 - 6.6: Pragmatic Meaning (speech acts, pragmatic interpretation) ✓
+- 6.7: Thai → Internal Semantic Representation (integration lesson) ✓
 
 **Lessons Remaining:**
-6.7: Thai → Internal Semantic Representation (CORE TECHNICAL LESSON)
 6.8: Understanding ≠ Translation (enforcement)
 6.9: Understanding ≠ Memorization (enforcement)
 6.10: Integrated Semantic Understanding
 
-**Implementation Estimate:** ~2,000 lines (4 lessons + 4 test files remaining)
+**Implementation Estimate:** ~1,500 lines (3 lessons + 3 test files remaining)
 
 ---
 
-## WEEK 6.6 IMPLEMENTATION DETAILS
+## WEEK 6.7 IMPLEMENTATION DETAILS
 
 **Files Created:**
-- runtime/education/thai_lesson_6_6.py (491 lines)
-- tests/test_thai_lesson_6_6.py (526 lines)
+- runtime/education/thai_lesson_6_7.py (557 lines)
+- tests/test_thai_lesson_6_7.py (503 lines)
+- 03_Hippocampus/knowledge_base/thai_language/semantic_vocabulary.json (extended with ไหม)
 
-**Key Functions:**
-1. extract_pragmatic_meaning(sentence, context_clues, data)
-   - Returns: (pragmatic_meaning, evidence_list, state)
-   - Four-level interpretation: lexical → contextual → sentence → pragmatic
-   - Pattern recognition: VERB+ไหม → question/invitation based on context
-   - Evidence tracking throughout interpretation process
-   - AMBIGUOUS when context insufficient, UNKNOWN when vocabulary missing
+**Key Function: thai_to_semantic_representation(thai_input, context_clues, data)**
 
-2. Pragmatic Patterns Supported:
-   - VERB + ไหม: yes/no question OR invitation (context determines which)
-   - Single word pragmatic: "ดี" = quality OR agreement (context-dependent)
-   - Serial verbs: purpose vs sequence interpretation
+Returns: `(SentenceSemantics, state, evidence_trail)`
 
-3. Evidence Requirements:
-   - Evidence Type: CONTEXTUAL_INTERPRETATION
-   - Must document: pattern, context match, interpretation basis
-   - Cannot guess speaker intention without context evidence
-   - Evidence Gate enforces understanding requirements
+**Four-Layer Architecture:**
 
-**Test Coverage (32 tests):**
-- Lexical vs pragmatic distinction (2 tests)
-- Context-dependent pragmatic interpretation (3 tests)
-- Insufficient context → AMBIGUOUS (3 tests)
-- Unsupported intention rejection (2 tests)
-- Valid pragmatic evidence (3 tests)
-- Evidence Gate integration (3 tests)
-- Provenance preservation (1 test)
-- Memory/SelfModel integration (2 tests)
-- No guessing principle (2 tests)
-- Mastery assessment (3 tests)
-- Knowledge state updates (2 tests)
-- Mastery tracker updates (1 test)
-- Full suite regression (2 tests)
+1. **Lexical Layer**
+   - Dictionary meanings for each word
+   - Semantic fields (MOTION, ACTION, QUALITY, PERSON, OBJECT, PARTICLE)
+   - Unknown words marked with EvidenceStatus.UNKNOWN
+   - Builds SemanticMeaning objects with contextual_meanings
+
+2. **Contextual Layer**
+   - Uses select_interpretation_with_context from 6.5
+   - Selects context-appropriate meaning
+   - Tracks ambiguity when multiple interpretations possible
+   - Creates AmbiguityPoint for unresolved ambiguities
+
+3. **Compositional Layer**
+   - Identifies sentence patterns (VERB+VERB, NOUN+ADJECTIVE)
+   - Extracts compositional meaning from patterns
+   - Uses semantic_patterns from vocabulary data
+
+4. **Pragmatic Layer**
+   - Uses extract_pragmatic_meaning from 6.6
+   - Extracts context-dependent interpretation
+   - Only when context evidence supports
+   - Tracks pragmatic ambiguity
+
+**State Determination:**
+- **KNOWN**: All words known, pattern identified, no ambiguity (confidence 0.9)
+- **AMBIGUOUS**: Multiple interpretations, context insufficient (confidence 0.5)
+- **UNKNOWN**: Unknown words or no vocabulary data (confidence 0.0)
+
+**Uncertainty Preservation:**
+- Ambiguity tracked in `ambiguity_points` list
+- Multiple interpretations preserved
+- Resolution strategy documented
+- Never forced resolution
+
+**Evidence Trail:**
+- Input + context
+- Lexical lookups (word count, unknowns)
+- Contextual selections
+- Pattern matches
+- Pragmatic extractions
+- State determination
+- All preserved in SentenceSemantics.evidence
+
+**Integration:**
+- Reuses existing mechanisms from 6.2-6.6
+- No duplicate logic
+- Minimal extensions only
+- Evidence Gate compatible
+
+**Test Coverage (41 tests):**
+- Lesson structure (3)
+- Thai → representation conversion (3)
+- Lexical layer (3)
+- Contextual layer (3)
+- Compositional layer (3)
+- Pragmatic layer (3)
+- Uncertainty tracking (3)
+- Evidence preservation (3)
+- Parsing ≠ understanding (2)
+- Translation ≠ understanding (2)
+- Evidence Gate integration (2)
+- Memory/SelfModel (2)
+- Mastery assessment (3)
+- Knowledge state updates (2)
+- Mastery tracker (1)
+- Regression (3)
 
 **Examples:**
+
 ```python
-# Pragmatic with context → KNOWN
-extract_pragmatic_meaning("ไป ไหม", ["invitation"], data)
-# Returns: ("yes/no question or invitation (invitation context)", evidence, "KNOWN")
+# Example A: KNOWN
+thai_to_semantic_representation("ไป กิน", ["purpose"], data)
+# → (SentenceSemantics with all 4 layers, "KNOWN", evidence)
+# Compositional: "purpose or sequence"
+# Pragmatic: "go to eat"
 
-# Pragmatic without context → AMBIGUOUS
-extract_pragmatic_meaning("ไป ไหม", [], data)
-# Returns: (None, evidence, "AMBIGUOUS")
+# Example B: AMBIGUOUS
+thai_to_semantic_representation("ดี", [], data)
+# → (SentenceSemantics with ambiguity, "AMBIGUOUS", evidence)
+# Ambiguity: 2 interpretations (quality vs agreement)
 
-# Single word pragmatic
-extract_pragmatic_meaning("ดี", ["conversational"], data)
-# Returns: ("agreement or acknowledgment in conversation", evidence, "KNOWN")
-
-# Unknown word → UNKNOWN
-extract_pragmatic_meaning("unknown", [], data)
-# Returns: (None, evidence, "UNKNOWN")
+# Example C: UNKNOWN
+thai_to_semantic_representation("unknown", [], data)
+# → (SentenceSemantics with UNKNOWN word, "UNKNOWN", evidence)
+# No fabricated meaning
 ```
 
 ---
 
-## IMPLEMENTATION ORDER FOR WEEK 6.7-6.10
+## IMPLEMENTATION ORDER FOR WEEK 6.8-6.10
 
-Phase 1: Lesson 6.7 (Core Technical)
-  - Focus on building SemanticMeaning from Thai input
-  - Exercises construct complete semantic representations
-  - Integration with semantic_vocabulary.json
-  - 10 tests (standard 8 + 2 semantic-specific)
+Phase 1: Lesson 6.8 (Understanding ≠ Translation Enforcement)
+  - Reject translation-only evidence (max 70%)
+  - Require EXPLANATION, APPLICATION, or CONTEXTUAL_INTERPRETATION
+  - Tests prove rejection works
+  - Integration with Evidence Gate
 
-Phase 2: Lessons 6.8-6.9 (Understanding Enforcement)
-  - 6.8: Reject translation-only (max 70%)
-  - 6.9: Reject memorization-only (max 70%)
-  - Tests must prove rejection works
+Phase 2: Lesson 6.9 (Understanding ≠ Memorization Enforcement)
+  - Reject memorization-only evidence (max 70%)
+  - Require PATTERN_EXTRACTION or TRANSFER
+  - Tests prove rejection works
   - Integration with Evidence Gate
 
 Phase 3: Lesson 6.10 + Curriculum
-  - Integration lesson
+  - Integration lesson combining all Week 6 mechanisms
   - thai_week6_curriculum.py
   - test_thai_week6.py
 
 Phase 4: Verify Full Suite
-  - Target: 770+ tests passing (689 existing + ~80 new)
+  - Target: 810+ tests passing (730 existing + ~80 new)
 
 ---
 
 ## OPEN QUESTIONS (MUST REMAIN OPEN)
 
-These are design questions that should be answered during Week 6.7-6.10 implementation, not before:
+These are design questions that should be answered during Week 6.8-6.10 implementation, not before:
 
 1. SelfModel semantic tracking: Add semantic_understanding field or use existing self_knowledge?
 2. Memory API extension: Structured semantic relations or string-based?
@@ -239,7 +288,7 @@ These are design questions that should be answered during Week 6.7-6.10 implemen
 
 ## KNOWN LIMITATIONS
 
-1. Vocabulary: 30 words (Weeks 2-5), 5 words with semantics (Week 6 foundation)
+1. Vocabulary: 30 words (Weeks 2-5), 6 words with semantics (ไป, กิน, ดี, คน, น้ำ, ไหม)
 2. Classifiers: 5 common (Thai has 50+)
 3. No LLM (by design)
 4. No TTS (by design)
@@ -247,42 +296,38 @@ These are design questions that should be answered during Week 6.7-6.10 implemen
 6. Research integration blocked by infrastructure
 7. World knowledge not available
 8. Automatic explanation verification limited
-9. Pragmatic patterns: Only VERB+ไหม and single-word pragmatics implemented
+9. Pragmatic patterns: Only VERB+ไหม and single-word pragmatics
+10. Compositional patterns: Only VERB+VERB and NOUN+ADJECTIVE
 
 ---
 
 ## NOT YET IMPLEMENTED
 
-**Week 6.7-6.10: Semantic Representation and Understanding Enforcement**
-- 6.7: Thai → Internal Semantic Representation ← **NEXT TO IMPLEMENT**
-- 6.8: Understanding ≠ Translation (enforcement)
+**Week 6.8-6.10: Understanding Enforcement and Integration**
+- 6.8: Understanding ≠ Translation (enforcement) ← **NEXT TO IMPLEMENT**
 - 6.9: Understanding ≠ Memorization (enforcement)
 - 6.10: Integrated Semantic Understanding
 
-**Week 6.7 Objective:**
-Build complete semantic representation from Thai input using existing structures.
-- Parse Thai sentences into SemanticMeaning objects
-- Construct SentenceSemantics with compositional + pragmatic meaning
-- Use contextual meanings from 6.2 and pragmatic interpretation from 6.6
-- Create internal semantic representation (language-agnostic)
-- Enforce understanding through Evidence Gate
-- Handle AMBIGUOUS/UNKNOWN when evidence insufficient
+**Week 6.8 Objective:**
+Enforce that translation-only evidence cannot reach mastery threshold.
+- Test translation-only responses (should achieve max 70%)
+- Require explanation/application/contextual evidence for >70%
+- Evidence Gate must reject translation-only for semantic consolidation
+- Tests prove enforcement works
 
-**Week 6.7 Constraints:**
-- Reuse all existing structures: SemanticMeaning, ContextualMeaning, SentenceSemantics
-- No LLM, no guessing
-- Translation ≠ Understanding
-- Parsing ≠ Understanding
-- Limited to 5-word vocabulary: ไป, กิน, ดี, คน, น้ำ
-- Must integrate with Pipeline + Evidence Gate
-- Provenance preserved throughout
+**Week 6.8 Constraints:**
+- Use existing Evidence Gate infrastructure
+- No new semantic structures needed
+- Focus on assessment and evidence verification
+- Integration with existing lessons 6.1-6.7
+- Must not break existing mechanisms
 
 **Estimated Completion:**
-- Week 6.7: 1 lesson, 10 tests (~1 day)
-- Week 6.8-6.9: 2 lessons, 40 tests (~2 days)
-- Week 6.10: 1 lesson, 30 tests (~1 day)
-- Total Week 6.7-6.10: 4 lessons, 80 tests (~4 days)
-- Target: 770 tests passing (689 baseline + 80 new)
+- Week 6.8: 1 lesson, 20 tests (~1 day)
+- Week 6.9: 1 lesson, 20 tests (~1 day)
+- Week 6.10: 1 lesson, 40 tests (~2 days)
+- Total Week 6.8-6.10: 3 lessons, 80 tests (~4 days)
+- Target: 810 tests passing (730 baseline + 80 new)
 
 ---
 
@@ -290,16 +335,16 @@ Build complete semantic representation from Thai input using existing structures
 
 **For Next Fresh Context:**
 
-1. Verify baseline: Run test suite, confirm 689 tests passing
+1. Verify baseline: Run test suite, confirm 730 tests passing
 2. Read this handoff document completely
-3. Implement Week 6.7: Thai → Internal Semantic Representation
-   - Create thai_lesson_6_7.py
-   - Implement thai_to_semantic_meaning(thai_sentence, data) function
-   - Build complete SemanticMeaning + SentenceSemantics from Thai input
-   - Create test_thai_lesson_6_7.py with 10 tests
+3. Implement Week 6.8: Understanding ≠ Translation
+   - Create thai_lesson_6_8.py
+   - Implement translation-only rejection in assessment
+   - Create test_thai_lesson_6_8.py with 20 tests
    - Verify Evidence Gate integration
-4. Implement Week 6.8-6.10 in sequence
-5. Verify full suite passes (target 770+ tests)
+   - Prove translation max 70%
+4. Implement Week 6.9-6.10 in sequence
+5. Verify full suite passes (target 810+ tests)
 6. Update this handoff with new status
 
 **Critical:**
@@ -307,9 +352,9 @@ Build complete semantic representation from Thai input using existing structures
 - Preserve 90% mastery rule
 - Preserve KNOWN/AMBIGUOUS/UNKNOWN discipline
 - Never guess interpretations
-- Translation alone cannot reach mastery
-- Memorization alone cannot reach mastery
-- Pragmatic interpretation requires context evidence
+- Translation alone cannot reach mastery (max 70%)
+- Memorization alone cannot reach mastery (max 70%)
+- Representation requires all 4 layers
 
 ---
 
@@ -317,27 +362,28 @@ Build complete semantic representation from Thai input using existing structures
 
 **VERIFIED WORKING:**
 ✓ Thai Weeks 2-5 (40 lessons, 480 tests)
-✓ Thai Week 6.1-6.6 (6 lessons, 135 tests)
+✓ Thai Week 6.1-6.7 (7 lessons, 176 tests)
 ✓ Self-directed learning infrastructure (gap detection, autonomous loop)
 ✓ Semantic Core (data structures, knowledge base, 20 tests)
 ✓ Evidence Gate (translation/memorization rejection, understanding enforcement)
 ✓ Pragmatic meaning extraction (evidence-based, no guessing)
-✓ 689 tests passing
+✓ Thai → Internal Semantic Representation (4 layers, uncertainty tracking)
+✓ 730 tests passing
 
 **READY FOR IMPLEMENTATION:**
 ✓ Semantic Core locked and tested
 ✓ Implementation order defined
-✓ Week 6.7-6.10 lessons specified
-✓ Pragmatic interpretation architecture proven
+✓ Week 6.8-6.10 lessons specified
+✓ Representation architecture complete
 
 **NOT CLAIMED:**
-✗ Week 6.7-6.10 implemented
+✗ Week 6.8-6.10 implemented
 ✗ Complete semantic understanding operational
 ✗ General autonomy or AGI
 ✗ Consciousness
 
 This is honest, verified, reproducible state.
 
-**Git Commit:** dc5e947 feat(thai): complete week 6.6 pragmatic meaning
+**Git Commit:** 2ee6533 feat(thai): complete week 6.7 thai → internal semantic representation
 **Branch:** master
 **Pushed:** Yes
