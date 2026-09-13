@@ -145,9 +145,11 @@ class TestContextGovernor(unittest.TestCase):
     def test_compaction_tracking(self):
         """Compaction events are tracked."""
         gov = ContextGovernor(context_limit=100000)
-        gov.compact()
-        gov.compact()
-        self.assertEqual(gov.compaction_count, 2)
+        gov.update(80000)
+        freed = gov.compact(50000)
+        self.assertEqual(gov.compaction_count, 1)
+        self.assertEqual(gov.context_used, 50000)
+        self.assertEqual(freed, 30000)
 
 
 class TestPromptTokenAuditor(unittest.TestCase):

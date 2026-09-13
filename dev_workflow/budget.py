@@ -202,10 +202,18 @@ class ContextGovernor:
         self.context_used = new_context_used
         self.history.append(('update', new_context_used, self.utilization))
     
-    def compact(self):
-        """Record a compaction event."""
+    def compact(self, reduced_context: int):
+        """
+        Record a compaction event and update context usage.
+        
+        Args:
+            reduced_context: new context size after compaction
+        """
         self.compaction_count += 1
+        old_context = self.context_used
+        self.context_used = reduced_context
         self.history.append(('compact', self.compaction_count, self.utilization))
+        return old_context - reduced_context  # Amount freed
     
     def get_status_dict(self) -> dict:
         """Get current context status as dict."""

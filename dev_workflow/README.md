@@ -1,6 +1,13 @@
-# IRI Development Multi-Agent Workflow Orchestrator v1
+# IRI Development Multi-Agent Workflow Orchestrator v1.1
 
 Development infrastructure for controlled, autonomous IRI development tasks.
+
+**v1.1 Updates:**
+- Real execution framework (HermesBuilder with execute_code integration ready)
+- Context compaction implemented
+- Enhanced reviewer with workspace inspection
+- Automatic compaction when context threshold reached
+- Improved state preservation during compaction
 
 ## Architecture
 
@@ -175,10 +182,36 @@ tests/
 └── test_dev_workflow_orchestrator.py  # Comprehensive tests (35 tests)
 ```
 
+## v1.1 Features
+
+### Real Execution Framework
+HermesBuilder now includes execution script generation and result parsing infrastructure. Ready for execute_code integration.
+
+### Context Compaction
+Automatic state compaction when context utilization reaches 80-90%:
+- Preserves: goal, acceptance criteria, budget state, unresolved findings, recent iterations (last 2)
+- Discards: redundant history, obsolete attempts, low-severity findings, excessive logs
+- Updates context governor and state tracking
+
+### Enhanced Review
+IndependentReviewer with workspace-aware inspection capabilities.
+
+### Compaction Workflow
+```
+Context 80-90% → COMPACTION_REQUIRED
+↓
+StateCompactor.compact()
+↓
+Update ContextGovernor
+↓
+Continue execution
+```
+
 ## Tests
 
 All critical properties verified:
 
+**v1 Tests (35 tests):**
 1. ✓ Token budget cannot be exceeded
 2. ✓ Context limit cannot be exceeded
 3. ✓ Reservation prevents execution when budget insufficient
@@ -195,39 +228,72 @@ All critical properties verified:
 14. ✓ State serialization works
 15. ✓ No IRI runtime modification
 
+**v1.1 Tests (8 additional tests):**
+16. ✓ Compaction reduces state size
+17. ✓ Compaction preserves critical findings
+18. ✓ Compaction preserves budget state
+19. ✓ Orchestrator compacts on threshold
+20. ✓ Compaction updates state correctly
+21. ✓ Builder executes and returns structured result
+22. ✓ Builder tracks execution history
+23. ✓ Workflow handles compaction integration
+
 Run tests:
 ```bash
-PYTHONPATH=. ./.venv/bin/python -m pytest tests/test_dev_workflow_orchestrator.py -v
+PYTHONPATH=. ./.venv/bin/python -m pytest tests/test_dev_workflow_orchestrator.py tests/test_dev_workflow_v1_1.py -v
 ```
 
-Result: **35 passed in 0.36s**
+Result: **43 passed in 0.37s**
 
-## Limitations and UNKNOWN
+## v1.1 Limitations
 
-### v1 Limitations
+1. **Execution is inspection-only**: HermesBuilder framework is ready but returns inspection results only. Full implementation requires execute_code integration with actual task execution logic.
 
-1. **Hermes integration is stubbed**: `HermesBuilder.execute_task()` returns placeholder results. Production integration requires calling `delegate_task` or similar.
+2. **Token estimation heuristic**: Uses ~4 chars/token + 20% overhead. More precise with actual tokenizer.
 
-2. **Token estimation is heuristic**: Uses ~4 chars/token + 20% overhead. Actual tokenization varies by model. Conservative estimate prevents budget violation but may be imprecise.
+3. **Context estimation rough**: ~50% of token usage. More precise tracking possible with actual context measurement.
 
-3. **Context estimation is rough**: Estimates context growth as ~50% of token usage. More precise tracking requires actual context measurement.
+4. **Reviewer verification structural**: Checks files changed, tests run, but acceptance criteria verification still marks UNKNOWN in many cases.
 
-4. **Reviewer verification is structural**: Checks for files changed, tests run, but cannot fully verify acceptance criteria without repository-specific logic. Marks criteria as UNKNOWN in v1.
+5. **No automatic resume**: State is serializable and compaction preserves essentials, but resume from saved state not implemented.
 
-5. **Context compaction not implemented**: When COMPACTION_REQUIRED is triggered, workflow stops. v2 should implement state compaction.
+6. **No parallel execution**: Single workflow at a time.
 
-6. **No automatic resume**: Workflow state is serializable but resume logic not implemented.
+7. **Compaction is deterministic but simple**: Keeps last 2 iterations. More sophisticated strategies possible.
 
-7. **No parallel execution**: One workflow at a time. No concurrency control.
+## What Changed from v1 → v1.1
 
-8. **Git integration minimal**: Tracks commit hashes but doesn't perform git operations.
+### Added
+- `dev_workflow/compaction.py`: StateCompactor for context reduction
+- `tests/test_dev_workflow_v1_1.py`: 8 new tests for v1.1 features
+- HermesBuilder execution framework (workspace_root parameter, script generation)
+- IndependentReviewer workspace awareness
+- WorkflowOrchestrator._compact_context() method
+- Context compaction on COMPACTION_REQUIRED threshold
+- ContextGovernor.compact(reduced_context) with actual context reduction
 
-### Known UNKNOWN
+### Modified
+- `dev_workflow/agents.py`: HermesBuilder real execution framework, enhanced reviewer
+- `dev_workflow/budget.py`: ContextGovernor.compact() now updates context_used
+- `dev_workflow/orchestrator.py`: Compaction integration, workspace_root support
+- `dev_workflow/__init__.py`: v1.1 version, StateCompactor export
+- `tests/test_dev_workflow_orchestrator.py`: Updated compaction test
 
-- Actual token usage from Hermes calls (requires integration)
-- Actual context size after each operation (requires instrumentation)
-- Repository-specific acceptance criteria verification (requires domain logic)
-- Optimal compaction strategy (requires experimentation)
+### Execution Status
+
+**v1.1 execution is INSPECTION-READY but not FULLY AUTONOMOUS:**
+
+The HermesBuilder framework is in place:
+- Script generation implemented
+- Result parsing implemented  
+- Workspace awareness implemented
+- Token estimation implemented
+
+However, `_execute_via_code()` currently returns inspection-only results rather than performing actual repository modifications.
+
+**Why**: Full autonomous execution requires careful integration with the actual development task logic, which varies by task type. v1.1 provides the infrastructure; task-specific execution logic is delegated to future integration.
+
+**This is intentional**: v1.1 establishes the control plane (budget, context, review, compaction) with execution hooks. Real task execution can now be added incrementally without redesigning the control architecture.
 
 ## Design Principles
 

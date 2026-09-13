@@ -1,6 +1,8 @@
 """
 Main workflow orchestrator.
 Coordinates all agent roles and enforces workflow discipline.
+
+v1.1: Real execution, context compaction, enhanced review loop.
 """
 
 from typing import List, Optional, Dict
@@ -10,6 +12,7 @@ import json
 from .state import WorkflowState, WorkflowStatus, IterationRecord, FindingSeverity
 from .budget import BudgetGovernor, ContextGovernor, ContextStatus
 from .agents import PromptTokenAuditor, HermesBuilder, IndependentReviewer, FinalGate
+from .compaction import StateCompactor
 
 
 class WorkflowOrchestrator:
@@ -33,6 +36,7 @@ class WorkflowOrchestrator:
         context_limit: int = 100000,
         max_iterations: int = 5,
         max_fix_iterations: int = 3,
+        workspace_root: str = ".",
     ):
         # Initialize state
         self.state = WorkflowState(
@@ -51,9 +55,12 @@ class WorkflowOrchestrator:
         
         # Initialize agents
         self.auditor = PromptTokenAuditor(budget_governor=self.budget_governor)
-        self.builder = HermesBuilder()
-        self.reviewer = IndependentReviewer()
+        self.builder = HermesBuilder(workspace_root=workspace_root)
+        self.reviewer = IndependentReviewer(workspace_root=workspace_root)
         self.final_gate = FinalGate()
+        
+        # Initialize compactor
+        self.compactor = StateCompactor()
     
     def run(self) -> WorkflowState:
         """
@@ -151,10 +158,20 @@ class WorkflowOrchestrator:
             if ctx_status == ContextStatus.HARD_STOP:
                 self.state.status = WorkflowStatus.CONTEXT_STOP
             elif ctx_status == ContextStatus.COMPACTION_REQUIRED:
-                # In v1, we stop. In v2+, implement compaction.
+                # v1.1: Implement compaction
+                compaction_result = self._compact_context()
+                if compaction_result['success']:
+                    # Continue after successful compaction
+                    pass
+                else:
+                    # Compaction failed, must stop
+                    self.state.status = WorkflowStatus.CONTEXT_STOP
+                    self.state.iterations.append(iteration_record)
+                    return
+            else:
                 self.state.status = WorkflowStatus.CONTEXT_STOP
-            self.state.iterations.append(iteration_record)
-            return
+                self.state.iterations.append(iteration_record)
+                return
         
         # Stage 3: Execute
         self.state.status = WorkflowStatus.EXECUTING
@@ -183,7 +200,7 @@ class WorkflowOrchestrator:
             goal=self.state.goal,
             acceptance_criteria=self.state.acceptance_criteria,
             changed_files=result.get('files_changed', []),
-            git_diff='',  # Would be actual diff
+            git_diff=result.get('git_diff', ''),
             test_results=result.get('tests_run', ''),
             state=self.state,
         )
@@ -252,6 +269,43 @@ Unresolved Findings:
             
             prompt += "\nProvide minimal targeted fixes for these issues only."
             return prompt
+    
+    def _compact_context(self) -> Dict:
+        """
+        Compact workflow context to free space.
+        
+        Returns:
+            {
+                'success': bool,
+                'context_saved': int,
+                'message': str,
+            }
+        """
+        try:
+            # Perform compaction
+            compaction_result = self.compactor.compact(self.state)
+            context_saved = compaction_result['context_saved']
+            
+            # Update context governor
+            new_context = max(0, self.context_governor.context_used - context_saved)
+            freed = self.context_governor.compact(new_context)
+            
+            # Update state
+            self.state.context_used = new_context
+            self.state.context_utilization = self.context_governor.utilization
+            self.state.compaction_count = self.context_governor.compaction_count
+            
+            return {
+                'success': True,
+                'context_saved': freed,
+                'message': f'Compacted: freed {freed} context tokens',
+            }
+        except Exception as e:
+            return {
+                'success': False,
+                'context_saved': 0,
+                'message': f'Compaction failed: {str(e)}',
+            }
     
     def save_state(self, path: Path):
         """Persist workflow state."""
