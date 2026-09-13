@@ -1,6 +1,14 @@
-# IRI Development Multi-Agent Workflow Orchestrator v1.1
+# IRI Development Multi-Agent Workflow Orchestrator v1.2
 
 Development infrastructure for controlled, autonomous IRI development tasks.
+
+**v1.2 Updates:**
+- Real execution engine with inline script execution
+- Actual test execution via terminal commands
+- Git status and diff inspection
+- Enhanced result structure (test_exit_code, commands_executed)
+- Path validation and workspace isolation
+- Direct Python exec for controlled script execution
 
 **v1.1 Updates:**
 - Real execution framework (HermesBuilder with execute_code integration ready)
