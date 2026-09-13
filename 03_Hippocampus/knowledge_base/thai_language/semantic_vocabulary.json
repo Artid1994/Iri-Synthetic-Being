@@ -1,0 +1,202 @@
+{
+  "semantic_vocabulary": [
+    {
+      "word": "ไป",
+      "lexical_meaning": "go",
+      "semantic_field": "MOTION",
+      "contextual_meanings": [
+        {
+          "context_type": "LITERAL",
+          "meaning": "physical movement from here to there",
+          "required_context": [],
+          "examples": ["ไป บ้าน (go home)"],
+          "confidence": 1.0,
+          "data_status": "KNOWN"
+        },
+        {
+          "context_type": "PRAGMATIC",
+          "meaning": "attend or participate in activity",
+          "required_context": ["activity", "event"],
+          "examples": ["ไป เรียน (go to study/attend class)"],
+          "confidence": 0.9,
+          "data_status": "KNOWN"
+        }
+      ],
+      "ambiguity_level": "MILDLY_AMBIGUOUS",
+      "evidence_status": "KNOWN",
+      "confidence": 1.0,
+      "note": "Common motion verb with pragmatic extensions"
+    },
+    {
+      "word": "กิน",
+      "lexical_meaning": "eat",
+      "semantic_field": "ACTION",
+      "contextual_meanings": [
+        {
+          "context_type": "LITERAL",
+          "meaning": "consume food",
+          "required_context": [],
+          "examples": ["กิน ข้าว (eat rice/meal)"],
+          "confidence": 1.0,
+          "data_status": "KNOWN"
+        }
+      ],
+      "ambiguity_level": "UNAMBIGUOUS",
+      "evidence_status": "KNOWN",
+      "confidence": 1.0,
+      "note": "Unambiguous action verb"
+    },
+    {
+      "word": "ดี",
+      "lexical_meaning": "good",
+      "semantic_field": "QUALITY",
+      "contextual_meanings": [
+        {
+          "context_type": "LITERAL",
+          "meaning": "good quality or positive attribute",
+          "required_context": [],
+          "examples": ["คน ดี (good person)"],
+          "confidence": 1.0,
+          "data_status": "KNOWN"
+        },
+        {
+          "context_type": "PRAGMATIC",
+          "meaning": "agreement or acknowledgment in conversation",
+          "required_context": ["conversational", "response"],
+          "examples": ["ดี (okay/fine as response to suggestion)"],
+          "confidence": 0.8,
+          "data_status": "AMBIGUOUS",
+          "note": "Pragmatic use depends heavily on conversational context"
+        }
+      ],
+      "ambiguity_level": "MILDLY_AMBIGUOUS",
+      "evidence_status": "KNOWN",
+      "confidence": 1.0,
+      "note": "Quality adjective with pragmatic conversational use"
+    },
+    {
+      "word": "คน",
+      "lexical_meaning": "person",
+      "semantic_field": "PERSON",
+      "contextual_meanings": [
+        {
+          "context_type": "LITERAL",
+          "meaning": "human being",
+          "required_context": [],
+          "examples": ["คน ไทย (Thai person)"],
+          "confidence": 1.0,
+          "data_status": "KNOWN"
+        }
+      ],
+      "ambiguity_level": "UNAMBIGUOUS",
+      "evidence_status": "KNOWN",
+      "confidence": 1.0,
+      "note": "Also functions as classifier for people"
+    },
+    {
+      "word": "น้ำ",
+      "lexical_meaning": "water",
+      "semantic_field": "OBJECT",
+      "contextual_meanings": [
+        {
+          "context_type": "LITERAL",
+          "meaning": "water (liquid)",
+          "required_context": [],
+          "examples": ["ดื่ม น้ำ (drink water)"],
+          "confidence": 1.0,
+          "data_status": "KNOWN"
+        }
+      ],
+      "ambiguity_level": "UNAMBIGUOUS",
+      "evidence_status": "KNOWN",
+      "confidence": 1.0,
+      "note": "Basic concrete noun"
+    },
+    {
+      "word": "ไหม",
+      "lexical_meaning": "question particle",
+      "semantic_field": "PARTICLE",
+      "contextual_meanings": [
+        {
+          "context_type": "LITERAL",
+          "meaning": "yes/no question particle",
+          "required_context": [],
+          "examples": ["ไป ไหม (go question)"],
+          "confidence": 1.0,
+          "data_status": "KNOWN"
+        }
+      ],
+      "ambiguity_level": "UNAMBIGUOUS",
+      "evidence_status": "KNOWN",
+      "confidence": 1.0,
+      "note": "Question particle used with verbs"
+    }
+  ],
+  "semantic_patterns": [
+    {
+      "pattern": "VERB + VERB (serial)",
+      "semantic_function": "purpose or sequence",
+      "compositional_rule": "verb1.action + 'to' + verb2.action",
+      "examples": ["ไป กิน (go to eat)", "มา เรียน (come to study)"],
+      "data_status": "KNOWN",
+      "note": "Serial verb construction from Week 5"
+    },
+    {
+      "pattern": "NOUN + ADJECTIVE",
+      "semantic_function": "modification",
+      "compositional_rule": "noun.object + adjective.quality",
+      "examples": ["คน ดี (good person)", "น้ำ ร้อน (hot water)"],
+      "data_status": "KNOWN",
+      "note": "Basic Thai word order"
+    }
+  ],
+  "ambiguity_examples": [
+    {
+      "sentence": "ดี",
+      "possible_meanings": [
+        "good (quality adjective)",
+        "okay/fine (pragmatic agreement)"
+      ],
+      "resolution": "CONTEXT_REQUIRED",
+      "resolution_clues": ["Is this describing quality or responding to question?"],
+      "data_status": "KNOWN_AMBIGUITY",
+      "note": "Single word highly context-dependent"
+    },
+    {
+      "sentence": "ไป เรียน",
+      "possible_meanings": [
+        "go study (go and then study)",
+        "go to study (go for the purpose of studying)",
+        "attend class (idiomatic meaning)"
+      ],
+      "resolution": "MILDLY_AMBIGUOUS",
+      "resolution_clues": ["Serial verb interpretation depends on pragmatic context"],
+      "data_status": "KNOWN_AMBIGUITY",
+      "note": "Serial verbs have slight pragmatic variation"
+    }
+  ],
+  "pragmatic_patterns": [
+    {
+      "form": "VERB + ไหม",
+      "literal_meaning": "VERB + question particle",
+      "pragmatic_function": "yes/no question or invitation",
+      "examples": [
+        {
+          "thai": "ไป ไหม",
+          "literal": "go question",
+          "pragmatic": "Will you go? / Shall we go?",
+          "note": "Can be question or invitation depending on context"
+        }
+      ],
+      "data_status": "KNOWN"
+    }
+  ],
+  "limitations": {
+    "note": "Semantic Core Vocabulary Limitations",
+    "scope": "5 words with verified semantic information",
+    "excluded": "Words without clear pragmatic/contextual documentation",
+    "ambiguity": "Only documented ambiguities; real usage may reveal more",
+    "confidence_basis": "Confidence reflects data quality, not inherent semantic certainty",
+    "data_status": "All patterns marked KNOWN unless explicitly AMBIGUOUS or UNKNOWN"
+  }
+}
