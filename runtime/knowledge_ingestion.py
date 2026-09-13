@@ -11,10 +11,13 @@ CRITICAL RULES:
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional, List, Dict, Any
+from typing import Optional, List, Dict, Any, TYPE_CHECKING
 from pathlib import Path
 from enum import Enum
 import json
+
+if TYPE_CHECKING:
+    from runtime.education.semantic_representation import UnderstandingEvidence
 
 
 class SourceType(Enum):
@@ -149,32 +152,32 @@ class KnowledgeExtractor:
         relations = []
         examples = []
         
-        # Handle vocabulary-like JSON
-        if "vocabulary" in data or "concepts" in data:
-            items = data.get("vocabulary", data.get("concepts", []))
-            for item in items:
-                if "term" in item or "word" in item:
-                    term = item.get("term", item.get("word"))
-                    definition = item.get("definition", item.get("meaning", ""))
-                    
-                    concept = Concept(
-                        term=term,
-                        definition=definition,
-                        language=item.get("language", "unknown"),
-                        provenance=source.get_provenance(),
-                        confidence=1.0,  # Source confidence, not learning confidence
-                        metadata=item,
-                    )
-                    concepts.append(concept)
-                    
-                    # Extract examples if present
-                    if "examples" in item:
-                        for ex in item["examples"]:
-                            examples.append(Example(
-                                concept_term=term,
-                                example_text=ex,
-                                provenance=source.get_provenance(),
-                            ))
+        # Handle vocabulary-like JSON (including semantic_vocabulary)
+        items = data.get("vocabulary", data.get("concepts", data.get("semantic_vocabulary", [])))
+        
+        for item in items:
+            if "term" in item or "word" in item:
+                term = item.get("term", item.get("word"))
+                definition = item.get("definition", item.get("meaning", ""))
+                
+                concept = Concept(
+                    term=term,
+                    definition=definition,
+                    language=item.get("language", "unknown"),
+                    provenance=source.get_provenance(),
+                    confidence=1.0,  # Source confidence, not learning confidence
+                    metadata=item,
+                )
+                concepts.append(concept)
+                
+                # Extract examples if present
+                if "examples" in item:
+                    for ex in item["examples"]:
+                        examples.append(Example(
+                            concept_term=term,
+                            example_text=ex,
+                            provenance=source.get_provenance(),
+                        ))
         
         return concepts, relations, examples
     
@@ -290,12 +293,22 @@ class KnowledgeIngestionPipeline:
         concept: Concept,
         knowledge_state,
         evidence_verified: bool,
+        understanding_evidence: Optional['UnderstandingEvidence'] = None,
     ) -> bool:
         """
         Consolidate concept to Memory ONLY if evidence verified.
         
-        This is called AFTER Education System provides evidence.
-        Extraction alone is NOT sufficient.
+        For semantic knowledge, requires structured understanding evidence.
+        For non-semantic (phonological/factual), mastery level sufficient.
+        
+        Args:
+            concept: The concept to consolidate
+            knowledge_state: KnowledgeState tracking learning
+            evidence_verified: Basic verification flag
+            understanding_evidence: Required for semantic knowledge
+        
+        Returns:
+            True if consolidated, False if rejected
         """
         if not evidence_verified:
             return False
@@ -305,12 +318,76 @@ class KnowledgeIngestionPipeline:
         if knowledge_state.level not in [KnowledgeLevel.CAN_USE, KnowledgeLevel.MASTERED]:
             return False  # Insufficient learning level
         
+        # CRITICAL: Semantic knowledge requires understanding evidence
+        is_semantic = self._is_semantic_knowledge(concept)
+        
+        if is_semantic:
+            # Semantic knowledge must have understanding evidence
+            if understanding_evidence is None:
+                return False  # No evidence provided
+            
+            from runtime.education.semantic_representation import EvidenceType
+            
+            # Reject translation-only evidence
+            if understanding_evidence.evidence_type == EvidenceType.PARAPHRASE:
+                # Paraphrase is acceptable (different from translation)
+                pass
+            elif understanding_evidence.evidence_type in [
+                EvidenceType.EXPLANATION,
+                EvidenceType.APPLICATION,
+                EvidenceType.INFERENCE,
+                EvidenceType.CONTEXTUAL_INTERPRETATION,
+                EvidenceType.PATTERN_EXTRACTION,
+                EvidenceType.TRANSFER,
+            ]:
+                # These are valid understanding evidence
+                pass
+            else:
+                # No explicit translation rejection, but if not in approved list, reject
+                return False
+            
+            # Check if evidence was actually verified
+            if not understanding_evidence.verified:
+                return False
+            
+            # Check ambiguity for semantic knowledge
+            if hasattr(concept, 'metadata') and 'ambiguity_level' in concept.metadata:
+                ambiguity = concept.metadata['ambiguity_level']
+                if ambiguity == "HIGHLY_AMBIGUOUS":
+                    return False  # Cannot consolidate unresolved high ambiguity
+        
         # Consolidate to semantic memory with full provenance
         entry = f"{concept.term}: {concept.definition}"
         self.memory.add_semantic(entry)
         
         # Add provenance as experience
         prov_entry = f"Learned '{concept.term}' from {concept.provenance.source_path}"
+        if is_semantic and understanding_evidence:
+            prov_entry += f" (evidence: {understanding_evidence.evidence_type.value})"
         self.memory.add_experience(prov_entry)
         
         return True
+    
+    def _is_semantic_knowledge(self, concept: Concept) -> bool:
+        """
+        Determine if concept is semantic knowledge requiring understanding evidence.
+        
+        Semantic: meaning, pragmatics, contextual interpretation
+        Non-semantic: phonology, orthography, deterministic facts
+        """
+        # Check metadata for semantic indicators
+        if hasattr(concept, 'metadata'):
+            # If has contextual_meanings, it's semantic
+            if 'contextual_meanings' in concept.metadata:
+                return True
+            
+            # If has semantic_field, it's semantic
+            if 'semantic_field' in concept.metadata:
+                return True
+            
+            # If has ambiguity_level, it's semantic
+            if 'ambiguity_level' in concept.metadata:
+                return True
+        
+        # Default: non-semantic (phonological/factual knowledge)
+        return False
