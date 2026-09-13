@@ -1,16 +1,20 @@
 # IRI/AE01M PROJECT HANDOFF
 # THE_TRANSCENDING_FORM - Thai Language Learning + Autonomous Learning Infrastructure
 # Date: 2026-09-13
-# Status: Weeks 2-5 COMPLETE, Semantic Core LOCKED, Week 6 SPECIFIED (not implemented)
+# Status: Weeks 2-5 COMPLETE, Week 6.1-6.2 COMPLETE, Semantic Core LOCKED
 
 ## VERIFIED CURRENT STATE
 
 **Working Implementation:**
 - Thai Weeks 2-5: 40 lessons, 480 tests PASSING
+- Thai Week 6.1: Semantic Meaning (20 tests PASSING)
+- Thai Week 6.2: Word Meaning in Context (20 tests PASSING)
 - Self-directed learning: Gap detection, target selection, goal creation
 - Autonomous learning loop: State-driven cycle orchestration
+- Knowledge Ingestion Pipeline v1: SOURCE → EXTRACT → LEARN → EVIDENCE → GATE → CONSOLIDATE
+- Evidence Gate: Enforces understanding requirements (not translation-only)
 - Semantic Core: Data structures, knowledge base, verification logic
-- Total: 526 tests passing
+- Total: **594 tests passing**
 
 **Test Command:**
 ```bash
@@ -18,9 +22,9 @@ cd /home/artid1994/Projects/THE_TRANSCENDING_FORM
 PYTHONPATH=. ./.venv/bin/python -m pytest tests/ -q --tb=no
 ```
 
-**Expected Result:** 526 passed (or more if Week 6 implemented)
+**Expected Result:** 594 passed (or more if additional work completed)
 
-**Baseline:** 526 tests as of 2026-09-13
+**Baseline:** 594 tests as of 2026-09-13
 
 ---
 
@@ -189,20 +193,39 @@ These are design questions that should be answered during Week 6 implementation,
 
 ## NOT YET IMPLEMENTED
 
-Week 6 Lessons: NONE implemented (specification complete only)
+**Week 6.3-6.10: Sentence Semantics and Understanding Enforcement**
+- 6.3: Sentence Meaning ← **NEXT TO IMPLEMENT**
+- 6.4: Ambiguity
+- 6.5: Context  
+- 6.6: Pragmatic Meaning
+- 6.7: Thai → Internal Semantic Representation
+- 6.8: Understanding ≠ Translation (enforcement)
+- 6.9: Understanding ≠ Memorization (enforcement)
+- 6.10: Integrated Semantic Understanding
 
-What Does NOT Exist:
-- Lessons 6.1-6.10 code
-- Tests for lessons 6.1-6.10
-- thai_week6_curriculum.py
-- Exercise generators using semantic data
-- Assessment enforcing understanding evidence
-- Integration with autonomous loop for semantic gaps
+**Week 6.3 Objective:**
+Build sentence-level semantic representation using existing SentenceSemantics structure.
+- Parse sentences into semantic roles/relations
+- Distinguish word meaning vs sentence meaning
+- Use contextual meanings from 6.2 as input
+- Create internal semantic representation
+- Enforce understanding through Evidence Gate
+- Handle AMBIGUOUS/UNKNOWN when evidence insufficient
 
-What DOES Exist:
-- Semantic Core (data structures, knowledge base, verification)
-- Week 6 specification (complete implementation roadmap)
-- Foundation ready for implementation
+**Week 6.3 Constraints:**
+- Reuse SentenceSemantics from semantic_representation.py
+- No LLM, no guessing
+- Translation ≠ Understanding
+- Parsing ≠ Understanding
+- Use existing semantic patterns (VERB+VERB serial, NOUN+ADJECTIVE)
+- Limited to 5-word vocabulary: ไป, กิน, ดี, คน, น้ำ
+- Must integrate with Pipeline + Evidence Gate
+
+**Estimated Completion:**
+- Week 6.3-6.6: 4 lessons, 80 tests (~3 days)
+- Week 6.7-6.10: 4 lessons, 80 tests (~3 days)
+- Total Week 6: 10 lessons, 160 tests (~6 days)
+- Target: 754 tests passing (594 baseline + 160 new)
 
 ---
 
