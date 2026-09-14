@@ -14,7 +14,14 @@ from runtime.prediction import Prediction
 from runtime.perception import Perception
 from runtime.perception import PerceptionModule
 from runtime.reflection import Reflection
-from brain.brain import Brain
+from runtime.attention import AttentionMechanism, CognitiveTrigger
+from runtime.valuation import ValuationSystem
+
+# Brain module archived - make optional
+try:
+    from brain.brain import Brain
+except ImportError:
+    Brain = None
 
 
 @dataclass(frozen=True)
@@ -43,6 +50,8 @@ class CognitiveLoop:
         reflection=None,
         brain: Brain | None = None,
         enable_voice: bool = False,
+        enable_attention: bool = True,
+        enable_valuation: bool = True,
     ) -> None:
         self.cognitive = cognitive
         self.learning = learning
@@ -53,6 +62,15 @@ class CognitiveLoop:
         self.reflection = reflection or Reflection()
         self.brain = brain
         self.enable_voice = enable_voice
+
+        # Attention and valuation systems
+        if enable_attention:
+            self.attention = AttentionMechanism()
+            self.cognitive_trigger = CognitiveTrigger(self.attention)
+        else:
+            self.attention = None
+            self.cognitive_trigger = None
+        self.valuation = ValuationSystem() if enable_valuation else None
         self.voice_synthesizer = None
         if self.enable_voice:
             try:
@@ -141,6 +159,72 @@ class CognitiveLoop:
             self_history=self_history,
         )
 
+    def _apply_learning_plasticity(self, reward_signal) -> None:
+        """
+        Apply plasticity when learning occurs with positive reward.
+        
+        Strengthens neural connections based on reward magnitude.
+        This creates the experience → plasticity → behavior link.
+        """
+        if self.brain is None:
+            return
+            
+        # Import here to avoid circular dependency
+        from brain.synapse import Synapse
+        from brain.plasticity import Plasticity
+        import numpy as np
+        
+        # Reward-modulated learning rate: higher reward = stronger plasticity
+        base_learning_rate = 0.01
+        modulated_rate = base_learning_rate * reward_signal.reward
+        
+        # Create plasticity with reward-modulated learning rate
+        plasticity = Plasticity(learning_rate=modulated_rate)
+        
+        # Create a simple recurrent synapse in hippocampus for memory strengthening
+        # This represents the "memory trace gets stronger with successful learning"
+        if hasattr(self.brain, 'hippocampus'):
+            region = self.brain.hippocampus
+            if hasattr(region, 'population'):
+                pop = region.population
+                
+                # Create sparse connections from chunk 0 to chunk 1
+                connection_count = min(10, pop.chunk_size)
+                source_indices = list(range(connection_count))
+                target_indices = list(range(connection_count))
+                initial_weights = [0.5] * connection_count  # Initial synaptic strength
+                
+                # Create synapse from first chunk to second chunk (recurrent memory)
+                synapse = Synapse(
+                    source=pop,
+                    source_chunk_index=0,
+                    target=pop,
+                    target_chunk_index=1,
+                    source_indices=source_indices,
+                    target_indices=target_indices,
+                    weights=initial_weights,
+                )
+                
+                # Generate activity pattern representing successful learning
+                source_input = np.ones(pop.chunk_size) * 0.5  # Moderate activity
+                
+                # Run neural projection cycle with plasticity
+                result = self.brain.run_neural_projection_cycle(
+                    synapse=synapse,
+                    source_input=source_input,
+                    plasticity=plasticity,
+                )
+                
+                # Store adaptation info for development tracking
+                if not hasattr(self, '_plasticity_events'):
+                    self._plasticity_events = []
+                self._plasticity_events.append({
+                    'reward': reward_signal.reward,
+                    'learning_rate': modulated_rate,
+                    'adapted': result['adapted'],
+                    'weight_change': float(np.mean(result['weights_after'] - result['weights_before'])),
+                })
+
     def _brain_signal(
         self,
         region,
@@ -186,10 +270,27 @@ class CognitiveLoop:
             self.last_cycle = cycle
             return cycle
 
+        # Evaluate attention and salience
+        salience_signal = None
+        should_invoke_cognition = True  # Default: always invoke
+
+        if self.cognitive_trigger is not None:
+            # Get context for relevance evaluation
+            memory = getattr(self.development, "memory", None)
+            context_items = []
+            if memory is not None:
+                state = memory.snapshot()
+                context_items = list(state.working[-3:])  # Recent working memory
+
+            should_invoke_cognition, salience_signal = self.cognitive_trigger.should_invoke_cognition(
+                perception.normalized_input,
+                context=context_items if context_items else None,
+            )
+
         attention_required = (
             self.last_cycle is None
             or self.last_cycle.input_text != perception.normalized_input
-        )
+        ) and should_invoke_cognition
 
         if attention_required:
             if self.brain is not None:
@@ -205,9 +306,8 @@ class CognitiveLoop:
                 )
 
         salience = (
-            min(len(perception.normalized_input) / 64.0, 1.0)
-            if attention_required
-            else 0.0
+            salience_signal.salience if salience_signal is not None
+            else (min(len(perception.normalized_input) / 64.0, 1.0) if attention_required else 0.0)
         )
 
         recalled = perception.normalized_input
@@ -284,11 +384,23 @@ class CognitiveLoop:
             evaluation = self.learning.evaluate(candidate)
             experience_recorded = evaluation.accepted
 
+            # Valuation: evaluate outcome and produce reward signal
+            reward_signal = None
+            if self.valuation is not None and evaluation.accepted:
+                reward_signal = self.valuation.evaluate_outcome(
+                    outcome="learning_accepted",
+                    goal_achieved=True,
+                )
+
             if evaluation.accepted and candidate is not None:
                 if self.brain is not None:
                     self.brain.store_memory(
                         candidate.experience
                     )
+                    
+                    # Apply plasticity when learning succeeds with positive reward
+                    if reward_signal is not None and reward_signal.reward > 0:
+                        self._apply_learning_plasticity(reward_signal)
 
                 if self.memory_consolidation is not None:
                     self.memory_consolidation.consolidate(
