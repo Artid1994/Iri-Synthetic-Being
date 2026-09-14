@@ -75,7 +75,8 @@ class CognitiveEngine:
             if knowledge_response:
                 # Use knowledge-constructed response
                 self.state.last_response = knowledge_response
-            else:# Fall back to semantic response generator
+            else:
+                # Fall back to semantic response generator
                 response = self.response_generator.generate_response(
                     semantic_context=semantic_context,
                     user_input=user_input,

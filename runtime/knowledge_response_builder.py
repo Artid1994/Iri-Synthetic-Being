@@ -45,7 +45,7 @@ class KnowledgeResponseBuilder:
         
         # Extract key terms from query (simple word tokenization)
         # Remove common question words
-        stop_words = {'what', 'is', 'the', 'does', 'mean', 'how', 'why', 'where', 'when', 'who'}
+        stop_words = {'what', 'is', 'the', 'does', 'mean', 'how', 'why', 'where', 'when', 'who', 'you', 'should', 'know', 'can', 'could', 'would'}
         query_terms = [
             word.strip('?.!,') 
             for word in query_lower.split() 
@@ -81,8 +81,16 @@ class KnowledgeResponseBuilder:
             return self._extract_meaning(query, semantic_entries)
         
         # Pattern 2: "How do you say X in Thai?" (English -> Thai)
+        # Also handles: "What would X say?", "Express X", "Show X", "word for X"
         if ('say' in query_lower and 'thai' in query_lower) or \
-           ('thai word' in query_lower):
+           ('thai word' in query_lower) or \
+           ('would' in query_lower and 'thai' in query_lower) or \
+           ('express' in query_lower) or \
+           ('show' in query_lower and ('appreciation' in query_lower or 'gratitude' in query_lower)) or \
+           ('called' in query_lower and 'thai' in query_lower) or \
+           ('word' in query_lower and 'thai' in query_lower) or \
+           ('written as' in query_lower and 'thai' in query_lower) or \
+           ('using' in query_lower and 'thai' in query_lower):
             return self._extract_reverse_translation(query, semantic_entries)
 
         # Pattern 3: "What is X?" queries
@@ -174,7 +182,10 @@ class KnowledgeResponseBuilder:
         # Remove question words and common phrases
         words_to_remove = [
             'how', 'do', 'you', 'say', 'in', 'thai', 'what', 'word', 'would',
-            'use', 'to', 'express', 'for', 'the', 'is', 'a', 'an', '?', '.', ','
+            'use', 'to', 'express', 'for', 'the', 'is', 'a', 'an', '?', '.', ',',
+            'show', 'using', 'phrase', 'speaker', 'language', 'represents',
+            'should', 'know', 'called', 'written', 'script', 'when', 'used',
+            'daily', 'essential', 'life', 'tastes', 'gesture', 'staple'
         ]
 
         query_words = query_lower.split()
@@ -189,10 +200,13 @@ class KnowledgeResponseBuilder:
 
         # Semantic equivalents for common concepts
         semantic_groups = {
-            'gratitude': ['thank', 'thanks', 'gratitude', 'grateful'],
-            'greeting': ['hello', 'hi', 'greet', 'greeting', 'salutation'],
+            'gratitude': ['thank', 'thanks', 'gratitude', 'grateful', 'appreciation', 'appreciate', 'thankfulness'],
+            'greeting': ['hello', 'hi', 'greet', 'greeting', 'salutation', 'gesture'],
             'affirmation': ['yes', 'affirmative', 'agree', 'affirmation'],
             'negation': ['no', 'negative', 'deny', 'negation'],
+            'water': ['water', 'beverage', 'drink', 'liquid', 'thirsty', 'hydrate'],
+            'rice': ['rice', 'grain', 'food', 'staple', 'eaten', 'meal'],
+            'delicious': ['delicious', 'tasty', 'good', 'taste', 'yummy', 'flavor'],
         }
 
         # Expand content words with semantic equivalents
@@ -201,6 +215,7 @@ class KnowledgeResponseBuilder:
             for group_words in semantic_groups.values():
                 if word in group_words:
                     expanded_words.update(group_words)
+                    break  # Found group, no need to check others
 
         # Look for entries where the English meaning matches
         best_match = None
