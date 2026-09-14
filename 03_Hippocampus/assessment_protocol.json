@@ -1,0 +1,23 @@
+{
+  "version": "1.0.0",
+  "frozen": true,
+  "thresholds": {
+    "immediate_recall": 0.8,
+    "retention": 0.75,
+    "transfer": 0.7,
+    "remediation_trigger": 0.5
+  },
+  "evidence_rules": {
+    "learning_gain": "post_test_score - baseline_score",
+    "mastery_decision": "immediate >= 0.80 AND retention >= 0.75 AND transfer >= 0.70",
+    "remediation": "any_score < 0.50"
+  },
+  "assessment_types": [
+    "baseline",
+    "immediate_recall",
+    "retention",
+    "transfer"
+  ],
+  "no_fabrication": true,
+  "no_weakening": true
+}
