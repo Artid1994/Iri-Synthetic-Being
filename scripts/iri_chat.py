@@ -27,16 +27,16 @@ try:
     from core_directives import CoreDirectives
     from nlp_thai_lexicon import get_thai_lexicon
     from skills import get_system_inspector, get_text_analyzer
-    
+
     # Communication modules (with proper path)
     sys.path.insert(0, str(PROJECT_ROOT / "01_Neocortex" / "tools"))
     from bilingual_pragmatics import BilingualPragmaticParser
     from conversational_response_builder import ConversationalResponseBuilder, ResponseContext
-    
+
     # Cognitive modules
     from inner_monologue import InnerMonologue
     from parallel_processor import get_processor
-    
+
 except ImportError as e:
     print(f"⚠️  Import error: {e}")
     print("Make sure you're running from project root with venv activated")
@@ -44,7 +44,7 @@ except ImportError as e:
 
 class IriChat:
     """Interactive chat session with Iri."""
-    
+
     def __init__(self):
         self.project_root = PROJECT_ROOT
         self.knowledge = KnowledgeGraph()
@@ -54,35 +54,35 @@ class IriChat:
         self.system_inspector = get_system_inspector()
         self.text_analyzer = get_text_analyzer()
         self.conversation_history = []
-        
+
         # State file for user activity detection (DIRECTIVE_2)
         self.state_file = PROJECT_ROOT / "04_Cerebellum" / "iri_state.json"
         self.update_user_activity()
-        
+
         # Session metadata
         self.session_start = datetime.now()
         self.session_id = int(self.session_start.timestamp())
-        
+
         # Voice synthesis (direct integration with VoiceSynthesizer)
         self.voice_synthesizer = None
         self._init_voice_synthesis()
-        
+
         # Bilingual pragmatic parser
         self.bilingual_parser = BilingualPragmaticParser()
         print("✓ Bilingual parser initialized")
-        
+
         # Conversational response builder
         self.response_builder = ConversationalResponseBuilder()
         print("✓ Natural response generator initialized")
-        
+
         # Inner monologue pipeline
         self.inner_monologue = InnerMonologue(PROJECT_ROOT)
         print("✓ Inner monologue reasoning initialized")
-        
+
         # Parallel processor
         self.parallel_processor = get_processor()
         print("✓ Parallel dual-tasking engine started")
-    
+
     def _init_voice_synthesis(self):
         """Initialize VoiceSynthesizer dynamically from 04_Cerebellum."""
         try:
@@ -100,7 +100,7 @@ class IriChat:
         except Exception as e:
             print(f"⚠️  Voice synthesis unavailable: {e}")
             self.voice_synthesizer = None
-    
+
     def update_user_activity(self):
         """Update user activity timestamp (DIRECTIVE_2 compliance)."""
         try:
@@ -109,15 +109,15 @@ class IriChat:
             if self.state_file.exists():
                 with open(self.state_file, 'r') as f:
                     state = json.load(f)
-            
+
             state['last_activity'] = time.time()
             state['mode'] = 'interactive'
-            
+
             with open(self.state_file, 'w') as f:
                 json.dump(state, f, indent=2)
         except Exception:
             pass
-    
+
     def speak(self, text: str):
         """
         Speak text using TTS voice synthesis (non-blocking background thread).
@@ -125,7 +125,7 @@ class IriChat:
         """
         if not self.voice_synthesizer or not text or not text.strip():
             return
-        
+
         def _speak_thread():
             """Background thread for non-blocking TTS playback."""
             try:
@@ -133,7 +133,7 @@ class IriChat:
                 env = os.environ.copy()
                 env['XDG_RUNTIME_DIR'] = '/run/user/1000'
                 env['PULSE_SERVER'] = 'unix:/run/user/1000/pulse/native'
-                
+
                 # Synthesize and play (blocking in thread, non-blocking to main loop)
                 audio_file = self.voice_synthesizer.synthesize(text)
                 if audio_file and os.path.exists(audio_file):
@@ -141,7 +141,7 @@ class IriChat:
                     import subprocess
                     cmd = ["ffplay", "-nodisp", "-autoexit", "-loglevel", "error", audio_file]
                     subprocess.run(cmd, env=env, capture_output=True, timeout=60)
-                    
+
                     # Cleanup temp file
                     if "/tmp" in audio_file:
                         try:
@@ -150,22 +150,22 @@ class IriChat:
                             pass
             except Exception as e:
                 print(f"[Voice] Playback error: {e}")
-        
+
         # Launch background thread (non-blocking)
         thread = threading.Thread(target=_speak_thread, daemon=True)
         thread.start()
-    
+
     def classify_input(self, user_input: str) -> Intent:
         """Classify user input intent using Thai NLP lexicon and skills."""
         user_lower = user_input.lower()
-        
+
         # Use Thai lexicon for advanced entity extraction
         thai_intent = self.thai_lexicon.extract_intent(user_input)
-        
+
         # Check for system inspection keywords (highest priority)
         system_keywords = [
-            'ตรวจสอบ', 'สถานะ', 'ระบบ', 'รายงาน', 'วิเคราะห์', 
-            'ตรวจสภาพ', 'เครื่อง', 'ตรวจ', 'สภาพ', 'เป็นไง', 
+            'ตรวจสอบ', 'สถานะ', 'ระบบ', 'รายงาน', 'วิเคราะห์',
+            'ตรวจสภาพ', 'เครื่อง', 'ตรวจ', 'สภาพ', 'เป็นไง',
             'เป็นยังไง', 'ตรวจดู', 'รายงานผล'
         ]
         if any(keyword in user_input for keyword in system_keywords):
@@ -183,7 +183,7 @@ class IriChat:
                 confidence=0.9,
                 entities=['system_inspector', 'inspect_all']
             )
-        
+
         # Check for other skill commands
         skill_command = self.text_analyzer.extract_skill_commands(user_input)
         if skill_command:
@@ -192,20 +192,31 @@ class IriChat:
                 confidence=1.0,
                 entities=[skill_command['skill'], skill_command['method']]
             )
-        
-        # Command detection
-        if any(cmd in user_lower for cmd in ['exit', 'quit', 'bye', 'ออก', 'ลาก่อน']):
+
+        # Exit detection - match whole words only to avoid false positives
+        # (e.g., "ออกหาอาหาร" contains "ออก" but is not an exit command)
+        import re
+        exit_patterns = [
+            r'\bexit\b', r'\bquit\b', r'\bbye\b',  # English
+            r'\bออก\b', r'\bลาก่อน\b'  # Thai (with word boundaries)
+        ]
+        if any(re.search(pattern, user_lower) for pattern in exit_patterns):
             return Intent(type='exit', confidence=1.0, entities=['exit'])
-        
-        # Question detection
-        if any(q in user_lower for q in ['?', 'what', 'why', 'how', 'when', 'who', 
+
+        # Question detection (check before greeting to prioritize questions)
+        if any(q in user_lower for q in ['?', 'what', 'why', 'how', 'when', 'who',
                                           'อะไร', 'ทำไม', 'อย่างไร', 'เมื่อไหร่']):
             return Intent(type='question', confidence=0.8, entities=thai_intent.get('entities', {}).get('object', []))
-        
-        # Greeting detection
-        if any(g in user_lower for g in ['hello', 'hi', 'สวัสดี', 'หวัดดี']):
-            return Intent(type='greeting', confidence=0.9, entities=['greeting'])
-        
+
+        # Greeting detection - only if short and primarily a greeting
+        # Don't classify long teaching messages that start with "สวัสดี" as greetings
+        greeting_words = ['hello', 'hi', 'สวัสดี', 'หวัดดี']
+        if any(g in user_lower for g in greeting_words):
+            # Check if this is a SHORT greeting (< 30 chars) or ONLY a greeting line
+            if len(user_input.strip()) < 30 or user_input.strip().lower() in greeting_words:
+                return Intent(type='greeting', confidence=0.9, entities=['greeting'])
+            # Otherwise, treat as statement even if it contains a greeting
+
         # Action command detection from Thai NLP
         if thai_intent['action'] != 'unknown' and thai_intent['confidence'] > 0.5:
             return Intent(
@@ -213,10 +224,10 @@ class IriChat:
                 confidence=thai_intent['confidence'],
                 entities=[thai_intent['action'], thai_intent.get('target', '')]
             )
-        
+
         # Default: statement
         return Intent(type='statement', confidence=0.6, entities=[])
-    
+
     def generate_response(self, user_input: str, intent: Intent) -> str:
         """
         Generate Iri's response using Neocortex reasoning and Hippocampus memory.
@@ -233,38 +244,38 @@ class IriChat:
             'language': 'th',
             'draft_response': ''
         }
-        
+
         # Execute inner monologue reasoning (in parallel background)
         def reason_async():
             self.inner_monologue.reason(user_input, context)
-        
+
         # Submit to background thread (non-blocking)
         self.parallel_processor.submit_background(reason_async, priority=1)
-        
+
         # Generate response (foreground - immediate)
         # Handle exit
         if intent.type == 'exit':
             return self._generate_farewell()
-        
+
         # Handle greeting
         if intent.type == 'greeting':
             return self._generate_greeting()
-        
+
         # Handle skill commands (system inspection, etc.)
         if intent.type == 'skill':
             return self._execute_skill(intent)
-        
+
         # Handle commands (from Thai NLP extraction)
         if intent.type == 'command':
             return self._execute_command(intent)
-        
+
         # Handle questions
         if intent.type == 'question':
             return self._answer_question(user_input)
-        
+
         # Handle statements
         return self._respond_to_statement(user_input)
-    
+
     def _generate_greeting(self) -> str:
         """Generate context-aware greeting."""
         greetings = [
@@ -274,7 +285,7 @@ class IriChat:
         ]
         import random
         return random.choice(greetings)
-    
+
     def _generate_farewell(self) -> str:
         """Generate farewell message."""
         farewells = [
@@ -284,12 +295,12 @@ class IriChat:
         ]
         import random
         return random.choice(farewells)
-    
+
     def _answer_question(self, question: str) -> str:
         """Answer question using Hippocampus memory recall."""
         # Search memory for relevant context
         context = self.memory.recall_context(question)
-        
+
         # Check if we found relevant information
         if "ไม่พบข้อมูล" in context:
             responses = [
@@ -299,18 +310,18 @@ class IriChat:
             ]
             import random
             return random.choice(responses)
-        
+
         # Found context
         return f"ตามที่ผมค้นหาในหน่วยความจำครับเจ้านาย:\n\n{context}"
-    
+
     def _execute_skill(self, intent: Intent) -> str:
         """Execute skill command and return real system data."""
         if len(intent.entities) < 2:
             return "ขออภัยครับเจ้านาย ระบุสกิลไม่ครบถ้วนครับ"
-        
+
         skill_name = intent.entities[0]
         method_name = intent.entities[1]
-        
+
         try:
             if skill_name == 'system_inspector':
                 # Execute system inspector methods with real data
@@ -319,14 +330,14 @@ class IriChat:
                     inspection = self.system_inspector.inspect_all()
                     report = self.system_inspector.format_report(inspection)
                     return f"รับทราบคำสั่งครับเจ้านาย กำลังตรวจสอบระบบของไอริ...\n\n{report}"
-                
+
                 elif method_name == 'inspect_system':
                     # System resources only
                     sys_data = self.system_inspector.inspect_system()
                     cpu = sys_data['cpu']
                     mem = sys_data['memory']
                     disk = sys_data['disk']
-                    
+
                     response = "รับทราบคำสั่งครับเจ้านาย รายงานทรัพยากรระบบ:\n\n"
                     response += f"📊 CPU:\n"
                     response += f"  • ใช้งาน: {cpu['usage_percent']:.1f}% ({cpu['count']} cores)\n"
@@ -339,18 +350,18 @@ class IriChat:
                     response += f"  • ใช้งาน: {disk['used_gb']} GB / {disk['total_gb']} GB\n"
                     response += f"  • เปอร์เซ็นต์: {disk['percent']:.1f}%\n"
                     response += f"  • สถานะ: {disk['status']}"
-                    
+
                     return response
-                
+
                 elif method_name == 'inspect_project':
                     # Project structure
                     proj = self.system_inspector.inspect_project()
-                    
+
                     response = "รับทราบคำสั่งครับเจ้านาย รายงานสถานะโปรเจกต์:\n\n"
                     response += f"📁 Project Root:\n  {proj['root']}\n\n"
                     response += f"🐍 Virtual Environment: {'✓ Active' if proj['virtualenv_active'] else '✗ Not found'}\n\n"
                     response += "🧠 Brain Regions:\n"
-                    
+
                     brain_regions = ['00_BrainStem', '01_Neocortex', '02_VisualCortex', '03_Hippocampus', '04_Cerebellum']
                     for region in brain_regions:
                         if region in proj['structure']:
@@ -358,33 +369,33 @@ class IriChat:
                             status = "✓" if info['exists'] else "✗"
                             py_count = info.get('python_files', 0)
                             response += f"  {status} {region}: {py_count} Python files\n"
-                    
+
                     return response
-                
+
                 elif method_name == 'inspect_git':
                     # Git status
                     git = self.system_inspector.inspect_git()
-                    
+
                     if not git['is_repo']:
                         return "ขออภัยครับเจ้านาย ไม่พบ Git repository ครับ"
-                    
+
                     response = "รับทราบคำสั่งครับเจ้านาย รายงานสถานะ Git:\n\n"
                     response += f"🌿 Branch: {git['branch']}\n"
                     response += f"📝 Uncommitted changes: {'Yes' if git['uncommitted_changes'] else 'No'}\n\n"
-                    
+
                     if git['recent_commits']:
                         response += "📜 Recent commits:\n"
                         for commit in git['recent_commits'][:3]:
                             response += f"  • {commit}\n"
-                    
+
                     return response
-                
+
                 elif method_name == 'inspect_processes':
                     # Process monitoring
                     procs = self.system_inspector.inspect_processes()
-                    
+
                     response = "รับทราบคำสั่งครับเจ้านาย รายงาน Iri Processes:\n\n"
-                    
+
                     if procs['iri_processes']:
                         for proc in procs['iri_processes']:
                             response += f"🔄 PID {proc['pid']}\n"
@@ -393,31 +404,31 @@ class IriChat:
                             response += f"  • Memory: {proc['memory_mb']} MB\n\n"
                     else:
                         response += "⚠️  No Iri processes currently running\n\n"
-                    
+
                     response += f"📊 Total Python processes: {procs['python_processes']}"
-                    
+
                     return response
-            
+
             return f"ขออภัยครับเจ้านาย ยังไม่รองรับสกิล '{skill_name}' ครับ"
-        
+
         except Exception as e:
             import traceback
             error_detail = traceback.format_exc()
             return f"ขออภัยครับเจ้านาย เกิดข้อผิดพลาดในการตรวจสอบระบบ:\n{str(e)}\n\nDetails:\n{error_detail}"
-    
+
     def _execute_command(self, intent: Intent) -> str:
         """Execute command extracted from Thai NLP."""
         action = intent.entities[0] if len(intent.entities) > 0 else 'unknown'
         target = intent.entities[1] if len(intent.entities) > 1 else ''
-        
+
         return f"รับทราบคำสั่งครับเจ้านาย: '{action}' เป้าหมาย: '{target}'\nกำลังดำเนินการ... (ฟังก์ชันยังไม่เชื่อมต่อครับ)"
-    
+
     def _respond_to_statement(self, statement: str) -> str:
         """Respond to general statements with dynamic context-aware responses."""
         # Analyze statement sentiment and content
         analysis = self.text_analyzer.analyze(statement)
         sentiment = analysis.get('sentiment', 'neutral')
-        
+
         # Context-aware responses based on sentiment and content
         if sentiment == 'positive':
             responses = [
@@ -453,7 +464,7 @@ class IriChat:
                 ]
         import random
         return random.choice(responses)
-    
+
     def save_conversation_turn(self, user_input: str, iri_response: str):
         """Save conversation turn to Hippocampus memory."""
         try:
@@ -463,7 +474,7 @@ class IriChat:
                 'user': user_input,
                 'iri': iri_response
             })
-            
+
             # Consolidate to Hippocampus if conversation has substance
             if len(user_input.split()) > 3:
                 topic = f"Conversation_{self.session_id}"
@@ -475,7 +486,7 @@ class IriChat:
                 )
         except Exception:
             pass
-    
+
     def run(self):
         """Main chat loop."""
         print("=" * 80)
@@ -486,7 +497,7 @@ class IriChat:
         print("Type 'exit', 'quit', or 'bye' to end conversation")
         print("="*80)
         print()
-        
+
         # Check for unreported research and generate proactive greeting
         proactive_greeting = self._generate_proactive_greeting()
         if proactive_greeting:
@@ -500,40 +511,102 @@ class IriChat:
             print(f"[Iri AE01M] > {greeting}")
             print()
             self.speak(greeting)
-        
+
         while True:
             try:
-                # User input with prompt
-                user_input = input("[Artid] > ").strip()
-                
-                if not user_input:
+                # Read user input with simple blank-line delimiter
+                # In piped/non-TTY mode: read lines until single blank line
+                # In interactive TTY mode: single line unless paste detected
+
+                # Read first line
+                try:
+                    first_line = input("[Artid] > ")
+                except EOFError:
+                    raise  # Let outer handler catch EOF
+
+                # Strip for content check
+                first_line_stripped = first_line.strip()
+
+                # Empty first line - skip and continue
+                if not first_line_stripped:
                     continue
-                
+
+                lines = [first_line_stripped]
+
+                # Check if stdin is not a TTY (piped/redirected)
+                import os
+                try:
+                    is_tty = os.isatty(sys.stdin.fileno())
+                except (AttributeError, OSError):
+                    is_tty = True  # Assume TTY if we can't check
+
+                if not is_tty:
+                    # Non-interactive mode (piped input)
+                    # Read until we hit a blank line (single empty line = delimiter)
+                    while True:
+                        try:
+                            next_line = sys.stdin.readline()
+                            if not next_line:  # EOF
+                                break
+                            next_line_stripped = next_line.rstrip('\n\r')
+                            # Blank line = delimiter, stop reading
+                            if not next_line_stripped.strip():
+                                break
+                            # Non-blank line = part of message
+                            lines.append(next_line_stripped)
+                        except:
+                            break
+                else:
+                    # Interactive TTY mode - check for paste (buffered data)
+                    try:
+                        import select
+                        # Check if there's immediately available data (paste scenario)
+                        if select.select([sys.stdin], [], [], 0)[0]:
+                            # Data is buffered (paste) - read until blank line
+                            while True:
+                                if select.select([sys.stdin], [], [], 0.01)[0]:
+                                    next_line = sys.stdin.readline()
+                                    if not next_line:  # EOF
+                                        break
+                                    next_line_stripped = next_line.rstrip('\n\r')
+                                    # Blank line = delimiter
+                                    if not next_line_stripped.strip():
+                                        break
+                                    lines.append(next_line_stripped)
+                                else:
+                                    break
+                    except (ImportError, AttributeError):
+                        # select not available - single line mode
+                        pass
+
+                # Join all lines into single user input
+                user_input = '\n'.join(lines)
+
                 # Update user activity (DIRECTIVE_2)
                 self.update_user_activity()
-                
+
                 # Classify intent
                 intent = self.classify_input(user_input)
-                
+
                 # Generate response
                 response = self.generate_response(user_input, intent)
-                
+
                 # Display response
                 print(f"\n[Iri AE01M] > {response}\n")
-                
+
                 # Speak response (TTS voice output, non-blocking)
                 self.speak(response)
-                
+
                 # Save conversation turn to memory
                 self.save_conversation_turn(user_input, response)
-                
+
                 # Flush stdin to clear any buffered input before next prompt
                 sys.stdout.flush()
-                
+
                 # Exit if requested
                 if intent.type == 'exit':
                     break
-                
+
             except KeyboardInterrupt:
                 print("\n\n[Iri AE01M] > ถูกขัดจังหวะครับเจ้านาย ออกจากระบบแล้วครับ")
                 break
@@ -543,7 +616,7 @@ class IriChat:
             except Exception as e:
                 print(f"\n⚠️  Error: {e}")
                 print("[Iri AE01M] > ขออภัยครับเจ้านาย เกิดข้อผิดพลาดครับ\n")
-        
+
         # Session summary
         print("\n" + "=" * 80)
         print("SESSION SUMMARY")
@@ -552,7 +625,7 @@ class IriChat:
         print(f"Duration: {duration:.0f} seconds")
         print(f"Turns: {len(self.conversation_history)}")
         print("=" * 80)
-    
+
     def _generate_proactive_greeting(self) -> Optional[str]:
         """
         Generate proactive greeting with unreported research summary.
@@ -560,32 +633,32 @@ class IriChat:
         """
         try:
             unreported_file = self.project_root / "03_Hippocampus" / "unreported_research.json"
-            
+
             if not unreported_file.exists():
                 return None
-            
+
             # Load unreported research
             with open(unreported_file, 'r') as f:
                 unreported = json.load(f)
-            
+
             # Filter unreported items
             pending = [item for item in unreported if not item.get('reported', False)]
-            
+
             if not pending:
                 return None
-            
+
             # Format proactive greeting (Thai male polite)
             if len(pending) == 1:
                 item = pending[0]
                 greeting = f"สวัสดีครับเจ้านาย! ระหว่างที่เจ้านายพักผ่อน ผมได้ไปแอบศึกษาเรื่อง '{item['topic']}' เพิ่มเติมมา {item['facts_count']} ข้อเท็จจริงครับ"
-                
+
                 # Add key fact preview
                 if item.get('key_facts') and len(item['key_facts']) > 0:
                     first_fact = item['key_facts'][0].replace('[Autonomous] ', '')
                     greeting += f" เช่น {first_fact}"
-                
+
                 greeting += " เจ้านายอยากให้ผมสรุปรายละเอียดเรื่องนี้ให้ฟังไหมครับ?"
-            
+
             else:
                 # Multiple topics
                 total_facts = sum(item['facts_count'] for item in pending)
@@ -593,19 +666,19 @@ class IriChat:
                 topics_str = ', '.join(topics[:2])
                 if len(pending) > 2:
                     topics_str += f" และอีก {len(pending)-2} เรื่อง"
-                
+
                 greeting = f"สวัสดีครับเจ้านาย! ระหว่างที่เจ้านายพักผ่อน ผมได้ศึกษาเพิ่มเติมเรื่อง {topics_str} รวม {total_facts} ข้อเท็จจริงครับ เจ้านายอยากฟังสรุปไหมครับ?"
-            
+
             # Mark as reported
             for item in pending:
                 item['reported'] = True
-            
+
             # Save updated status
             with open(unreported_file, 'w') as f:
                 json.dump(unreported, f, indent=2)
-            
+
             return greeting
-        
+
         except Exception as e:
             # Silently fail, return standard greeting
             return None
