@@ -2,7 +2,20 @@
   "version": "1.0.0",
   "type": "iri_learner_state",
   "timestamp": 1789395533.7362244,
-  "curriculum_progress": {},
-  "mastered_lessons": [],
+  "curriculum_progress": {
+    "thai_vowels": {
+      "lesson_id": "thai_vowels_1",
+      "status": "MASTERED",
+      "baseline_score": 0.0,
+      "post_score": 0.9,
+      "retention_score": 1.0,
+      "transfer_score": 0.7777777777777778,
+      "learning_gain": 0.9,
+      "timestamp": 1789396079.3594434
+    }
+  },
+  "mastered_lessons": [
+    "thai_vowels_1"
+  ],
   "current_lesson": null
 }
