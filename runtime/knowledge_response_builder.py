@@ -76,15 +76,20 @@ class KnowledgeResponseBuilder:
         """
         query_lower = query.lower()
         
-        # Pattern 1: "What does X mean?" queries
+        # Pattern 1: "What does X mean?" queries (Thai -> English)
         if 'mean' in query_lower or 'means' in query_lower:
             return self._extract_meaning(query, semantic_entries)
         
-        # Pattern 2: "What is X?" queries
+        # Pattern 2: "How do you say X in Thai?" (English -> Thai)
+        if ('say' in query_lower and 'thai' in query_lower) or \
+           ('thai word' in query_lower):
+            return self._extract_reverse_translation(query, semantic_entries)
+
+        # Pattern 3: "What is X?" queries
         if 'what is' in query_lower or 'what\'s' in query_lower:
             return self._extract_definition(query, semantic_entries)
         
-        # Pattern 3: Translation queries (contains Thai script)
+        # Pattern 4: Translation queries (contains Thai script)
         if self._contains_thai(query):
             return self._extract_translation(query, semantic_entries)
         
@@ -157,3 +162,66 @@ class KnowledgeResponseBuilder:
             if '\u0e00' <= char <= '\u0e7f' or char == ' ':
                 thai_chars.append(char)
         return ''.join(thai_chars).strip()
+
+    def _extract_reverse_translation(self, query: str, entries: List[str]) -> Optional[str]:
+        """
+        Extract Thai word from English meaning query.
+        E.g., "How do you say water in Thai?" -> "น้ำ"
+        """
+        query_lower = query.lower()
+
+        # Extract the English word being asked about
+        # Remove question words and common phrases
+        words_to_remove = [
+            'how', 'do', 'you', 'say', 'in', 'thai', 'what', 'word', 'would',
+            'use', 'to', 'express', 'for', 'the', 'is', 'a', 'an', '?', '.', ','
+        ]
+
+        query_words = query_lower.split()
+        content_words = [
+            w.strip('?.!,')
+            for w in query_words
+            if w.strip('?.!,') not in words_to_remove and len(w) > 2
+        ]
+
+        if not content_words:
+            return None
+
+        # Semantic equivalents for common concepts
+        semantic_groups = {
+            'gratitude': ['thank', 'thanks', 'gratitude', 'grateful'],
+            'greeting': ['hello', 'hi', 'greet', 'greeting', 'salutation'],
+            'affirmation': ['yes', 'affirmative', 'agree', 'affirmation'],
+            'negation': ['no', 'negative', 'deny', 'negation'],
+        }
+
+        # Expand content words with semantic equivalents
+        expanded_words = set(content_words)
+        for word in content_words:
+            for group_words in semantic_groups.values():
+                if word in group_words:
+                    expanded_words.update(group_words)
+
+        # Look for entries where the English meaning matches
+        best_match = None
+        best_match_score = 0
+
+        for entry in entries:
+            if ' means ' in entry.lower():
+                parts = entry.split(' means ')
+                if len(parts) == 2:
+                    thai_part = parts[0].strip()
+                    english_part = parts[1].strip().lower()
+
+                    # Count how many words match
+                    match_score = sum(1 for word in expanded_words if word in english_part)
+
+                    if match_score > best_match_score:
+                        best_match_score = match_score
+                        # Extract just the Thai word (remove "Thai: " prefix)
+                        if thai_part.lower().startswith('thai:'):
+                            best_match = thai_part[5:].strip()
+                        else:
+                            best_match = thai_part
+
+        return best_match
