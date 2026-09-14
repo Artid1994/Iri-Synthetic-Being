@@ -137,9 +137,13 @@ class AutonomousLoop:
         self.curriculum_manager = CurriculumManager()
         
         # INTEGRATION: Initialize TranscendingRuntime for cognitive processing
-        sys.path.insert(0, str(project_root / "runtime"))
+        # Note: PROJECT_ROOT already in sys.path (line 34), so runtime package is accessible
+        logger.info("[AutonomousLoop] Loading TranscendingRuntime...")
+        sys.stdout.flush()
         from runtime.runtime import TranscendingRuntime
         self.runtime = TranscendingRuntime()
+        logger.info("[AutonomousLoop] TranscendingRuntime loaded")
+        sys.stdout.flush()
         
         logger.info("[AutonomousLoop] Initialized")
         logger.info(f"[AutonomousLoop] Knowledge base: {len(self.knowledge_base.get('learned_facts', []))} facts")
