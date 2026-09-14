@@ -1,0 +1,2963 @@
+{
+  "version": "1.0.0",
+  "type": "ae01m_memory_brain_snapshot",
+  "memory": {
+    "version": "1.0.0",
+    "subsystem": "memory",
+    "state": {
+      "working": [
+        "The consonant ฮ produces which sound?",
+        "Question: What sound does ฃ make? Answer: ฃ makes the sound kh. The consonant ฃ is called kho khuat and produces kh.",
+        "Question: What sound does ฅ make? Answer: ฅ makes the sound kh. The consonant ฅ is called kho khon and produces kh.",
+        "What sound does ฃ make?",
+        "The consonant ฃ produces which sound?",
+        "What sound does ฅ make?",
+        "The consonant ฅ produces which sound?"
+      ],
+      "episodic": [
+        "Thai Consonants Group 1:\nก (ko kai): /k/\nข (kho khai): /kh/\nฃ (kho khuat): /kh/",
+        "Practice: ก = /k/",
+        "Practice: ข = /kh/",
+        "Practice: ฃ = /kh/",
+        "Thai Consonants Group 2:\nค (kho khwai): /kh/\nฆ (kho rakhang): /kh/\nง (ngo ngu): /ng/",
+        "Thai Consonants Group 2:\nค (kho khwai): /kh/\nฆ (kho rakhang): /kh/\nง (ngo ngu): /ng/",
+        "Thai consonant ฃ (called kho khuat) makes the sound kh",
+        "Thai consonant ฅ (called kho khon) makes the sound kh",
+        "Thai consonant จ (called cho chan) makes the sound ch",
+        "Practice: ฃ = kh",
+        "Practice: ฅ = kh",
+        "Practice: จ = ch",
+        "Thai consonant ฃ (called kho khuat) makes the sound kh",
+        "Thai consonant ฅ (called kho khon) makes the sound kh",
+        "Thai consonant ฉ (called cho ching) makes the sound ch",
+        "Practice: ฃ = kh",
+        "Practice: ฅ = kh",
+        "Practice: ฉ = ch",
+        "Thai consonant ฃ (called kho khuat) makes the sound kh",
+        "Thai consonant ฅ (called kho khon) makes the sound kh",
+        "Thai consonant ช (called cho chang) makes the sound ch",
+        "Practice: ฃ = kh",
+        "Practice: ฅ = kh",
+        "Practice: ช = ch",
+        "Thai consonant ฃ (called kho khuat) makes the sound kh",
+        "Thai consonant ฅ (called kho khon) makes the sound kh",
+        "Thai consonant ซ (called so so) makes the sound s",
+        "Practice: ฃ = kh",
+        "Practice: ฅ = kh",
+        "Practice: ซ = s",
+        "Thai consonant ฃ (called kho khuat) makes the sound kh",
+        "Thai consonant ฅ (called kho khon) makes the sound kh",
+        "Thai consonant ฌ (called cho choe) makes the sound ch",
+        "Practice: ฃ = kh",
+        "Practice: ฅ = kh",
+        "Practice: ฌ = ch",
+        "Thai consonant ฃ (called kho khuat) makes the sound kh",
+        "Thai consonant ฅ (called kho khon) makes the sound kh",
+        "Thai consonant ญ (called yo ying) makes the sound y",
+        "Practice: ฃ = kh",
+        "Practice: ฅ = kh",
+        "Practice: ญ = y",
+        "Thai consonant ฃ (called kho khuat) makes the sound kh",
+        "Thai consonant ฅ (called kho khon) makes the sound kh",
+        "Thai consonant ฎ (called do chada) makes the sound d",
+        "Practice: ฃ = kh",
+        "Practice: ฅ = kh",
+        "Practice: ฎ = d",
+        "What sound does ซ make?",
+        "What sound does ญ make?",
+        "What sound does ค make?",
+        "What sound does จ make?",
+        "What sound does ฉ make?",
+        "Question: What sound does ก make? Answer: ก makes the sound k. The consonant ก is called ko kai and produces k.",
+        "Question: What sound does ข make? Answer: ข makes the sound kh. The consonant ข is called kho khai and produces kh.",
+        "Question: What sound does ฃ make? Answer: ฃ makes the sound kh. The consonant ฃ is called kho khuat and produces kh.",
+        "Question: What sound does ค make? Answer: ค makes the sound kh. The consonant ค is called kho khwai and produces kh.",
+        "Question: What sound does ฅ make? Answer: ฅ makes the sound kh. The consonant ฅ is called kho khon and produces kh.",
+        "Question: What sound does ฆ make? Answer: ฆ makes the sound kh. The consonant ฆ is called kho rakhang and produces kh.",
+        "Question: What sound does ง make? Answer: ง makes the sound ng. The consonant ง is called ngo ngu and produces ng.",
+        "Question: What sound does จ make? Answer: จ makes the sound ch. The consonant จ is called cho chan and produces ch.",
+        "Question: What sound does ฉ make? Answer: ฉ makes the sound ch. The consonant ฉ is called cho ching and produces ch.",
+        "Question: What sound does ช make? Answer: ช makes the sound ch. The consonant ช is called cho chang and produces ch.",
+        "What sound does ก make?",
+        "The consonant ก produces which sound?",
+        "What sound does ข make?",
+        "The consonant ข produces which sound?",
+        "What sound does ฃ make?",
+        "The consonant ฃ produces which sound?",
+        "What sound does ค make?",
+        "The consonant ค produces which sound?",
+        "What sound does ฅ make?",
+        "The consonant ฅ produces which sound?",
+        "What sound does ฆ make?",
+        "The consonant ฆ produces which sound?",
+        "What sound does ง make?",
+        "The consonant ง produces which sound?",
+        "What sound does จ make?",
+        "The consonant จ produces which sound?",
+        "What sound does ฉ make?",
+        "The consonant ฉ produces which sound?",
+        "What sound does ช make?",
+        "The consonant ช produces which sound?",
+        "What sound does ซ make?",
+        "What sound does ญ make?",
+        "What sound does ค make?",
+        "What sound does จ make?",
+        "What sound does ฉ make?",
+        "Question: What sound does ฃ make? Answer: ฃ makes the sound kh. The consonant ฃ is called kho khuat and produces kh.",
+        "Question: What sound does ฅ make? Answer: ฅ makes the sound kh. The consonant ฅ is called kho khon and produces kh.",
+        "Question: What sound does ฏ make? Answer: ฏ makes the sound t. The consonant ฏ is called to patak and produces t.",
+        "What sound does ฃ make?",
+        "The consonant ฃ produces which sound?",
+        "What sound does ฅ make?",
+        "The consonant ฅ produces which sound?",
+        "What sound does ฏ make?",
+        "The consonant ฏ produces which sound?",
+        "Question: What sound does ฃ make? Answer: ฃ makes the sound kh. The consonant ฃ is called kho khuat and produces kh.",
+        "Question: What sound does ฅ make? Answer: ฅ makes the sound kh. The consonant ฅ is called kho khon and produces kh.",
+        "Question: What sound does ฐ make? Answer: ฐ makes the sound th. The consonant ฐ is called tho than and produces th.",
+        "What sound does ฃ make?",
+        "The consonant ฃ produces which sound?",
+        "What sound does ฅ make?",
+        "The consonant ฅ produces which sound?",
+        "What sound does ฐ make?",
+        "The consonant ฐ produces which sound?",
+        "Question: What sound does ฃ make? Answer: ฃ makes the sound kh. The consonant ฃ is called kho khuat and produces kh.",
+        "Question: What sound does ฅ make? Answer: ฅ makes the sound kh. The consonant ฅ is called kho khon and produces kh.",
+        "Question: What sound does ฑ make? Answer: ฑ makes the sound th. The consonant ฑ is called tho montho and produces th.",
+        "What sound does ฃ make?",
+        "The consonant ฃ produces which sound?",
+        "What sound does ฅ make?",
+        "The consonant ฅ produces which sound?",
+        "What sound does ฑ make?",
+        "The consonant ฑ produces which sound?",
+        "Question: What sound does ฃ make? Answer: ฃ makes the sound kh. The consonant ฃ is called kho khuat and produces kh.",
+        "Question: What sound does ฅ make? Answer: ฅ makes the sound kh. The consonant ฅ is called kho khon and produces kh.",
+        "Question: What sound does ฒ make? Answer: ฒ makes the sound th. The consonant ฒ is called tho phu thao and produces th.",
+        "What sound does ฃ make?",
+        "The consonant ฃ produces which sound?",
+        "What sound does ฅ make?",
+        "The consonant ฅ produces which sound?",
+        "What sound does ฒ make?",
+        "The consonant ฒ produces which sound?",
+        "Question: What sound does ฃ make? Answer: ฃ makes the sound kh. The consonant ฃ is called kho khuat and produces kh.",
+        "Question: What sound does ฅ make? Answer: ฅ makes the sound kh. The consonant ฅ is called kho khon and produces kh.",
+        "Question: What sound does ณ make? Answer: ณ makes the sound n. The consonant ณ is called no nen and produces n.",
+        "What sound does ฃ make?",
+        "The consonant ฃ produces which sound?",
+        "What sound does ฅ make?",
+        "The consonant ฅ produces which sound?",
+        "What sound does ณ make?",
+        "The consonant ณ produces which sound?",
+        "Question: What sound does ฃ make? Answer: ฃ makes the sound kh. The consonant ฃ is called kho khuat and produces kh.",
+        "Question: What sound does ฅ make? Answer: ฅ makes the sound kh. The consonant ฅ is called kho khon and produces kh.",
+        "Question: What sound does ด make? Answer: ด makes the sound d. The consonant ด is called do dek and produces d.",
+        "What sound does ฃ make?",
+        "The consonant ฃ produces which sound?",
+        "What sound does ฅ make?",
+        "The consonant ฅ produces which sound?",
+        "What sound does ด make?",
+        "The consonant ด produces which sound?",
+        "Question: What sound does ฃ make? Answer: ฃ makes the sound kh. The consonant ฃ is called kho khuat and produces kh.",
+        "Question: What sound does ฅ make? Answer: ฅ makes the sound kh. The consonant ฅ is called kho khon and produces kh.",
+        "Question: What sound does ต make? Answer: ต makes the sound t. The consonant ต is called to tao and produces t.",
+        "What sound does ฃ make?",
+        "The consonant ฃ produces which sound?",
+        "What sound does ฅ make?",
+        "The consonant ฅ produces which sound?",
+        "What sound does ต make?",
+        "The consonant ต produces which sound?",
+        "Question: What sound does ฃ make? Answer: ฃ makes the sound kh. The consonant ฃ is called kho khuat and produces kh.",
+        "Question: What sound does ฅ make? Answer: ฅ makes the sound kh. The consonant ฅ is called kho khon and produces kh.",
+        "Question: What sound does ถ make? Answer: ถ makes the sound th. The consonant ถ is called tho thung and produces th.",
+        "What sound does ฃ make?",
+        "The consonant ฃ produces which sound?",
+        "What sound does ฅ make?",
+        "The consonant ฅ produces which sound?",
+        "What sound does ถ make?",
+        "The consonant ถ produces which sound?",
+        "Question: What sound does ฃ make? Answer: ฃ makes the sound kh. The consonant ฃ is called kho khuat and produces kh.",
+        "Question: What sound does ฅ make? Answer: ฅ makes the sound kh. The consonant ฅ is called kho khon and produces kh.",
+        "Question: What sound does ท make? Answer: ท makes the sound th. The consonant ท is called tho thahan and produces th.",
+        "What sound does ฃ make?",
+        "The consonant ฃ produces which sound?",
+        "What sound does ฅ make?",
+        "The consonant ฅ produces which sound?",
+        "What sound does ท make?",
+        "The consonant ท produces which sound?",
+        "Question: What sound does ฃ make? Answer: ฃ makes the sound kh. The consonant ฃ is called kho khuat and produces kh.",
+        "Question: What sound does ฅ make? Answer: ฅ makes the sound kh. The consonant ฅ is called kho khon and produces kh.",
+        "Question: What sound does ธ make? Answer: ธ makes the sound th. The consonant ธ is called tho thong and produces th.",
+        "What sound does ฃ make?",
+        "The consonant ฃ produces which sound?",
+        "What sound does ฅ make?",
+        "The consonant ฅ produces which sound?",
+        "What sound does ธ make?",
+        "The consonant ธ produces which sound?",
+        "Question: What sound does ฃ make? Answer: ฃ makes the sound kh. The consonant ฃ is called kho khuat and produces kh.",
+        "Question: What sound does ฅ make? Answer: ฅ makes the sound kh. The consonant ฅ is called kho khon and produces kh.",
+        "Question: What sound does น make? Answer: น makes the sound n. The consonant น is called no nu and produces n.",
+        "What sound does ฃ make?",
+        "The consonant ฃ produces which sound?",
+        "What sound does ฅ make?",
+        "The consonant ฅ produces which sound?",
+        "What sound does น make?",
+        "The consonant น produces which sound?",
+        "Question: What sound does ฃ make? Answer: ฃ makes the sound kh. The consonant ฃ is called kho khuat and produces kh.",
+        "Question: What sound does ฅ make? Answer: ฅ makes the sound kh. The consonant ฅ is called kho khon and produces kh.",
+        "Question: What sound does บ make? Answer: บ makes the sound b. The consonant บ is called bo baimai and produces b.",
+        "What sound does ฃ make?",
+        "The consonant ฃ produces which sound?",
+        "What sound does ฅ make?",
+        "The consonant ฅ produces which sound?",
+        "What sound does บ make?",
+        "The consonant บ produces which sound?",
+        "Question: What sound does ฃ make? Answer: ฃ makes the sound kh. The consonant ฃ is called kho khuat and produces kh.",
+        "Question: What sound does ฅ make? Answer: ฅ makes the sound kh. The consonant ฅ is called kho khon and produces kh.",
+        "Question: What sound does ป make? Answer: ป makes the sound p. The consonant ป is called po pla and produces p.",
+        "What sound does ฃ make?",
+        "The consonant ฃ produces which sound?",
+        "What sound does ฅ make?",
+        "The consonant ฅ produces which sound?",
+        "What sound does ป make?",
+        "The consonant ป produces which sound?",
+        "Question: What sound does ฃ make? Answer: ฃ makes the sound kh. The consonant ฃ is called kho khuat and produces kh.",
+        "Question: What sound does ฅ make? Answer: ฅ makes the sound kh. The consonant ฅ is called kho khon and produces kh.",
+        "Question: What sound does ผ make? Answer: ผ makes the sound ph. The consonant ผ is called pho phung and produces ph.",
+        "What sound does ฃ make?",
+        "The consonant ฃ produces which sound?",
+        "What sound does ฅ make?",
+        "The consonant ฅ produces which sound?",
+        "What sound does ผ make?",
+        "The consonant ผ produces which sound?",
+        "Question: What sound does ฃ make? Answer: ฃ makes the sound kh. The consonant ฃ is called kho khuat and produces kh.",
+        "Question: What sound does ฅ make? Answer: ฅ makes the sound kh. The consonant ฅ is called kho khon and produces kh.",
+        "Question: What sound does ฝ make? Answer: ฝ makes the sound f. The consonant ฝ is called fo fa and produces f.",
+        "What sound does ฃ make?",
+        "The consonant ฃ produces which sound?",
+        "What sound does ฅ make?",
+        "The consonant ฅ produces which sound?",
+        "What sound does ฝ make?",
+        "The consonant ฝ produces which sound?",
+        "Question: What sound does ฃ make? Answer: ฃ makes the sound kh. The consonant ฃ is called kho khuat and produces kh.",
+        "Question: What sound does ฅ make? Answer: ฅ makes the sound kh. The consonant ฅ is called kho khon and produces kh.",
+        "Question: What sound does พ make? Answer: พ makes the sound ph. The consonant พ is called pho phan and produces ph.",
+        "What sound does ฃ make?",
+        "The consonant ฃ produces which sound?",
+        "What sound does ฅ make?",
+        "The consonant ฅ produces which sound?",
+        "What sound does พ make?",
+        "The consonant พ produces which sound?",
+        "Question: What sound does ฃ make? Answer: ฃ makes the sound kh. The consonant ฃ is called kho khuat and produces kh.",
+        "Question: What sound does ฅ make? Answer: ฅ makes the sound kh. The consonant ฅ is called kho khon and produces kh.",
+        "Question: What sound does ฟ make? Answer: ฟ makes the sound f. The consonant ฟ is called fo fan and produces f.",
+        "What sound does ฃ make?",
+        "The consonant ฃ produces which sound?",
+        "What sound does ฅ make?",
+        "The consonant ฅ produces which sound?",
+        "What sound does ฟ make?",
+        "The consonant ฟ produces which sound?",
+        "Question: What sound does ฃ make? Answer: ฃ makes the sound kh. The consonant ฃ is called kho khuat and produces kh.",
+        "Question: What sound does ฅ make? Answer: ฅ makes the sound kh. The consonant ฅ is called kho khon and produces kh.",
+        "Question: What sound does ภ make? Answer: ภ makes the sound ph. The consonant ภ is called pho samphao and produces ph.",
+        "What sound does ฃ make?",
+        "The consonant ฃ produces which sound?",
+        "What sound does ฅ make?",
+        "The consonant ฅ produces which sound?",
+        "What sound does ภ make?",
+        "The consonant ภ produces which sound?",
+        "Question: What sound does ฃ make? Answer: ฃ makes the sound kh. The consonant ฃ is called kho khuat and produces kh.",
+        "Question: What sound does ฅ make? Answer: ฅ makes the sound kh. The consonant ฅ is called kho khon and produces kh.",
+        "Question: What sound does ม make? Answer: ม makes the sound m. The consonant ม is called mo ma and produces m.",
+        "What sound does ฃ make?",
+        "The consonant ฃ produces which sound?",
+        "What sound does ฅ make?",
+        "The consonant ฅ produces which sound?",
+        "What sound does ม make?",
+        "The consonant ม produces which sound?",
+        "Question: What sound does ฃ make? Answer: ฃ makes the sound kh. The consonant ฃ is called kho khuat and produces kh.",
+        "Question: What sound does ฅ make? Answer: ฅ makes the sound kh. The consonant ฅ is called kho khon and produces kh.",
+        "Question: What sound does ย make? Answer: ย makes the sound y. The consonant ย is called yo yak and produces y.",
+        "What sound does ฃ make?",
+        "The consonant ฃ produces which sound?",
+        "What sound does ฅ make?",
+        "The consonant ฅ produces which sound?",
+        "What sound does ย make?",
+        "The consonant ย produces which sound?",
+        "Question: What sound does ฃ make? Answer: ฃ makes the sound kh. The consonant ฃ is called kho khuat and produces kh.",
+        "Question: What sound does ฅ make? Answer: ฅ makes the sound kh. The consonant ฅ is called kho khon and produces kh.",
+        "Question: What sound does ร make? Answer: ร makes the sound r. The consonant ร is called ro ruea and produces r.",
+        "What sound does ฃ make?",
+        "The consonant ฃ produces which sound?",
+        "What sound does ฅ make?",
+        "The consonant ฅ produces which sound?",
+        "What sound does ร make?",
+        "The consonant ร produces which sound?",
+        "Question: What sound does ฃ make? Answer: ฃ makes the sound kh. The consonant ฃ is called kho khuat and produces kh.",
+        "Question: What sound does ฅ make? Answer: ฅ makes the sound kh. The consonant ฅ is called kho khon and produces kh.",
+        "Question: What sound does ล make? Answer: ล makes the sound l. The consonant ล is called lo ling and produces l.",
+        "What sound does ฃ make?",
+        "The consonant ฃ produces which sound?",
+        "What sound does ฅ make?",
+        "The consonant ฅ produces which sound?",
+        "What sound does ล make?",
+        "The consonant ล produces which sound?",
+        "Question: What sound does ฃ make? Answer: ฃ makes the sound kh. The consonant ฃ is called kho khuat and produces kh.",
+        "Question: What sound does ฅ make? Answer: ฅ makes the sound kh. The consonant ฅ is called kho khon and produces kh.",
+        "Question: What sound does ว make? Answer: ว makes the sound w. The consonant ว is called wo waen and produces w.",
+        "What sound does ฃ make?",
+        "The consonant ฃ produces which sound?",
+        "What sound does ฅ make?",
+        "The consonant ฅ produces which sound?",
+        "What sound does ว make?",
+        "The consonant ว produces which sound?",
+        "Question: What sound does ฃ make? Answer: ฃ makes the sound kh. The consonant ฃ is called kho khuat and produces kh.",
+        "Question: What sound does ฅ make? Answer: ฅ makes the sound kh. The consonant ฅ is called kho khon and produces kh.",
+        "Question: What sound does ศ make? Answer: ศ makes the sound s. The consonant ศ is called so sala and produces s.",
+        "What sound does ฃ make?",
+        "The consonant ฃ produces which sound?",
+        "What sound does ฅ make?",
+        "The consonant ฅ produces which sound?",
+        "What sound does ศ make?",
+        "The consonant ศ produces which sound?",
+        "Question: What sound does ฃ make? Answer: ฃ makes the sound kh. The consonant ฃ is called kho khuat and produces kh.",
+        "Question: What sound does ฅ make? Answer: ฅ makes the sound kh. The consonant ฅ is called kho khon and produces kh.",
+        "Question: What sound does ษ make? Answer: ษ makes the sound s. The consonant ษ is called so rue si and produces s.",
+        "What sound does ฃ make?",
+        "The consonant ฃ produces which sound?",
+        "What sound does ฅ make?",
+        "The consonant ฅ produces which sound?",
+        "What sound does ษ make?",
+        "The consonant ษ produces which sound?",
+        "Question: What sound does ฃ make? Answer: ฃ makes the sound kh. The consonant ฃ is called kho khuat and produces kh.",
+        "Question: What sound does ฅ make? Answer: ฅ makes the sound kh. The consonant ฅ is called kho khon and produces kh.",
+        "Question: What sound does ส make? Answer: ส makes the sound s. The consonant ส is called so suea and produces s.",
+        "What sound does ฃ make?",
+        "The consonant ฃ produces which sound?",
+        "What sound does ฅ make?",
+        "The consonant ฅ produces which sound?",
+        "What sound does ส make?",
+        "The consonant ส produces which sound?",
+        "Question: What sound does ฃ make? Answer: ฃ makes the sound kh. The consonant ฃ is called kho khuat and produces kh.",
+        "Question: What sound does ฅ make? Answer: ฅ makes the sound kh. The consonant ฅ is called kho khon and produces kh.",
+        "Question: What sound does ห make? Answer: ห makes the sound h. The consonant ห is called ho hip and produces h.",
+        "What sound does ฃ make?",
+        "The consonant ฃ produces which sound?",
+        "What sound does ฅ make?",
+        "The consonant ฅ produces which sound?",
+        "What sound does ห make?",
+        "The consonant ห produces which sound?",
+        "Question: What sound does ฃ make? Answer: ฃ makes the sound kh. The consonant ฃ is called kho khuat and produces kh.",
+        "Question: What sound does ฅ make? Answer: ฅ makes the sound kh. The consonant ฅ is called kho khon and produces kh.",
+        "Question: What sound does ฬ make? Answer: ฬ makes the sound l. The consonant ฬ is called lo chula and produces l.",
+        "What sound does ฃ make?",
+        "The consonant ฃ produces which sound?",
+        "What sound does ฅ make?",
+        "The consonant ฅ produces which sound?",
+        "What sound does ฬ make?",
+        "The consonant ฬ produces which sound?",
+        "Question: What sound does ฃ make? Answer: ฃ makes the sound kh. The consonant ฃ is called kho khuat and produces kh.",
+        "Question: What sound does ฅ make? Answer: ฅ makes the sound kh. The consonant ฅ is called kho khon and produces kh.",
+        "Question: What sound does อ make? Answer: อ makes the sound -. The consonant อ is called o ang and produces -.",
+        "What sound does ฃ make?",
+        "The consonant ฃ produces which sound?",
+        "What sound does ฅ make?",
+        "The consonant ฅ produces which sound?",
+        "What sound does อ make?",
+        "The consonant อ produces which sound?",
+        "Question: What sound does ฃ make? Answer: ฃ makes the sound kh. The consonant ฃ is called kho khuat and produces kh.",
+        "Question: What sound does ฅ make? Answer: ฅ makes the sound kh. The consonant ฅ is called kho khon and produces kh.",
+        "Question: What sound does ฮ make? Answer: ฮ makes the sound h. The consonant ฮ is called ho nokhuk and produces h.",
+        "What sound does ฃ make?",
+        "The consonant ฃ produces which sound?",
+        "What sound does ฅ make?",
+        "The consonant ฅ produces which sound?",
+        "What sound does ฮ make?",
+        "The consonant ฮ produces which sound?",
+        "Question: What sound does ฃ make? Answer: ฃ makes the sound kh. The consonant ฃ is called kho khuat and produces kh.",
+        "Question: What sound does ฅ make? Answer: ฅ makes the sound kh. The consonant ฅ is called kho khon and produces kh.",
+        "What sound does ฃ make?",
+        "The consonant ฃ produces which sound?",
+        "What sound does ฅ make?",
+        "The consonant ฅ produces which sound?"
+      ],
+      "semantic": [
+        "Thai consonant ฃ (called kho khuat) makes the sound kh",
+        "Thai consonant ฅ (called kho khon) makes the sound kh",
+        "Thai consonant จ (called cho chan) makes the sound ch",
+        "Practice: ฃ = kh",
+        "Practice: ฅ = kh",
+        "Practice: จ = ch",
+        "Thai consonant ฉ (called cho ching) makes the sound ch",
+        "Practice: ฉ = ch",
+        "Thai consonant ช (called cho chang) makes the sound ch",
+        "Practice: ช = ch",
+        "Thai consonant ซ (called so so) makes the sound s",
+        "Practice: ซ = s",
+        "Thai consonant ฌ (called cho choe) makes the sound ch",
+        "Practice: ฌ = ch",
+        "Thai consonant ญ (called yo ying) makes the sound y",
+        "Practice: ญ = y",
+        "Thai consonant ฎ (called do chada) makes the sound d",
+        "Practice: ฎ = d",
+        "What sound does ซ make?",
+        "What sound does ญ make?",
+        "What sound does ค make?",
+        "What sound does จ make?",
+        "What sound does ฉ make?",
+        "Question: What sound does ก make? Answer: ก makes the sound k. The consonant ก is called ko kai and produces k.",
+        "Question: What sound does ข make? Answer: ข makes the sound kh. The consonant ข is called kho khai and produces kh.",
+        "Question: What sound does ฃ make? Answer: ฃ makes the sound kh. The consonant ฃ is called kho khuat and produces kh.",
+        "Question: What sound does ค make? Answer: ค makes the sound kh. The consonant ค is called kho khwai and produces kh.",
+        "Question: What sound does ฅ make? Answer: ฅ makes the sound kh. The consonant ฅ is called kho khon and produces kh.",
+        "Question: What sound does ฆ make? Answer: ฆ makes the sound kh. The consonant ฆ is called kho rakhang and produces kh.",
+        "Question: What sound does ง make? Answer: ง makes the sound ng. The consonant ง is called ngo ngu and produces ng.",
+        "Question: What sound does จ make? Answer: จ makes the sound ch. The consonant จ is called cho chan and produces ch.",
+        "Question: What sound does ฉ make? Answer: ฉ makes the sound ch. The consonant ฉ is called cho ching and produces ch.",
+        "Question: What sound does ช make? Answer: ช makes the sound ch. The consonant ช is called cho chang and produces ch.",
+        "What sound does ก make?",
+        "The consonant ก produces which sound?",
+        "What sound does ข make?",
+        "The consonant ข produces which sound?",
+        "What sound does ฃ make?",
+        "The consonant ฃ produces which sound?",
+        "The consonant ค produces which sound?",
+        "What sound does ฅ make?",
+        "The consonant ฅ produces which sound?",
+        "What sound does ฆ make?",
+        "The consonant ฆ produces which sound?",
+        "What sound does ง make?",
+        "The consonant ง produces which sound?",
+        "The consonant จ produces which sound?",
+        "The consonant ฉ produces which sound?",
+        "What sound does ช make?",
+        "The consonant ช produces which sound?",
+        "Question: What sound does ฏ make? Answer: ฏ makes the sound t. The consonant ฏ is called to patak and produces t.",
+        "What sound does ฏ make?",
+        "The consonant ฏ produces which sound?",
+        "Question: What sound does ฐ make? Answer: ฐ makes the sound th. The consonant ฐ is called tho than and produces th.",
+        "What sound does ฐ make?",
+        "The consonant ฐ produces which sound?",
+        "Question: What sound does ฑ make? Answer: ฑ makes the sound th. The consonant ฑ is called tho montho and produces th.",
+        "What sound does ฑ make?",
+        "The consonant ฑ produces which sound?",
+        "Question: What sound does ฒ make? Answer: ฒ makes the sound th. The consonant ฒ is called tho phu thao and produces th.",
+        "What sound does ฒ make?",
+        "The consonant ฒ produces which sound?",
+        "Question: What sound does ณ make? Answer: ณ makes the sound n. The consonant ณ is called no nen and produces n.",
+        "What sound does ณ make?",
+        "The consonant ณ produces which sound?",
+        "Question: What sound does ด make? Answer: ด makes the sound d. The consonant ด is called do dek and produces d.",
+        "What sound does ด make?",
+        "The consonant ด produces which sound?",
+        "Question: What sound does ต make? Answer: ต makes the sound t. The consonant ต is called to tao and produces t.",
+        "What sound does ต make?",
+        "The consonant ต produces which sound?",
+        "Question: What sound does ถ make? Answer: ถ makes the sound th. The consonant ถ is called tho thung and produces th.",
+        "What sound does ถ make?",
+        "The consonant ถ produces which sound?",
+        "Question: What sound does ท make? Answer: ท makes the sound th. The consonant ท is called tho thahan and produces th.",
+        "What sound does ท make?",
+        "The consonant ท produces which sound?",
+        "Question: What sound does ธ make? Answer: ธ makes the sound th. The consonant ธ is called tho thong and produces th.",
+        "What sound does ธ make?",
+        "The consonant ธ produces which sound?",
+        "Question: What sound does น make? Answer: น makes the sound n. The consonant น is called no nu and produces n.",
+        "What sound does น make?",
+        "The consonant น produces which sound?",
+        "Question: What sound does บ make? Answer: บ makes the sound b. The consonant บ is called bo baimai and produces b.",
+        "What sound does บ make?",
+        "The consonant บ produces which sound?",
+        "Question: What sound does ป make? Answer: ป makes the sound p. The consonant ป is called po pla and produces p.",
+        "What sound does ป make?",
+        "The consonant ป produces which sound?",
+        "Question: What sound does ผ make? Answer: ผ makes the sound ph. The consonant ผ is called pho phung and produces ph.",
+        "What sound does ผ make?",
+        "The consonant ผ produces which sound?",
+        "Question: What sound does ฝ make? Answer: ฝ makes the sound f. The consonant ฝ is called fo fa and produces f.",
+        "What sound does ฝ make?",
+        "The consonant ฝ produces which sound?",
+        "Question: What sound does พ make? Answer: พ makes the sound ph. The consonant พ is called pho phan and produces ph.",
+        "What sound does พ make?",
+        "The consonant พ produces which sound?",
+        "Question: What sound does ฟ make? Answer: ฟ makes the sound f. The consonant ฟ is called fo fan and produces f.",
+        "What sound does ฟ make?",
+        "The consonant ฟ produces which sound?",
+        "Question: What sound does ภ make? Answer: ภ makes the sound ph. The consonant ภ is called pho samphao and produces ph.",
+        "What sound does ภ make?",
+        "The consonant ภ produces which sound?",
+        "Question: What sound does ม make? Answer: ม makes the sound m. The consonant ม is called mo ma and produces m.",
+        "What sound does ม make?",
+        "The consonant ม produces which sound?",
+        "Question: What sound does ย make? Answer: ย makes the sound y. The consonant ย is called yo yak and produces y.",
+        "What sound does ย make?",
+        "The consonant ย produces which sound?",
+        "Question: What sound does ร make? Answer: ร makes the sound r. The consonant ร is called ro ruea and produces r.",
+        "What sound does ร make?",
+        "The consonant ร produces which sound?",
+        "Question: What sound does ล make? Answer: ล makes the sound l. The consonant ล is called lo ling and produces l.",
+        "What sound does ล make?",
+        "The consonant ล produces which sound?",
+        "Question: What sound does ว make? Answer: ว makes the sound w. The consonant ว is called wo waen and produces w.",
+        "What sound does ว make?",
+        "The consonant ว produces which sound?",
+        "Question: What sound does ศ make? Answer: ศ makes the sound s. The consonant ศ is called so sala and produces s.",
+        "What sound does ศ make?",
+        "The consonant ศ produces which sound?",
+        "Question: What sound does ษ make? Answer: ษ makes the sound s. The consonant ษ is called so rue si and produces s.",
+        "What sound does ษ make?",
+        "The consonant ษ produces which sound?",
+        "Question: What sound does ส make? Answer: ส makes the sound s. The consonant ส is called so suea and produces s.",
+        "What sound does ส make?",
+        "The consonant ส produces which sound?",
+        "Question: What sound does ห make? Answer: ห makes the sound h. The consonant ห is called ho hip and produces h.",
+        "What sound does ห make?",
+        "The consonant ห produces which sound?",
+        "Question: What sound does ฬ make? Answer: ฬ makes the sound l. The consonant ฬ is called lo chula and produces l.",
+        "What sound does ฬ make?",
+        "The consonant ฬ produces which sound?",
+        "Question: What sound does อ make? Answer: อ makes the sound -. The consonant อ is called o ang and produces -.",
+        "What sound does อ make?",
+        "The consonant อ produces which sound?",
+        "Question: What sound does ฮ make? Answer: ฮ makes the sound h. The consonant ฮ is called ho nokhuk and produces h.",
+        "What sound does ฮ make?",
+        "The consonant ฮ produces which sound?"
+      ],
+      "experiences": [],
+      "safety_events": [],
+      "associations": {}
+    },
+    "graph": {
+      "nodes": {
+        "EPISODIC:Thai Consonants Group 1:\nก (ko kai): /k/\nข (kho khai): /kh/\nฃ (kho khuat): /kh/": {
+          "content": "Thai Consonants Group 1:\nก (ko kai): /k/\nข (kho khai): /kh/\nฃ (kho khuat): /kh/",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": null
+        },
+        "EPISODIC:Practice: ก = /k/": {
+          "content": "Practice: ก = /k/",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": null
+        },
+        "EPISODIC:Practice: ข = /kh/": {
+          "content": "Practice: ข = /kh/",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": null
+        },
+        "EPISODIC:Practice: ฃ = /kh/": {
+          "content": "Practice: ฃ = /kh/",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": null
+        },
+        "EPISODIC:Thai Consonants Group 2:\nค (kho khwai): /kh/\nฆ (kho rakhang): /kh/\nง (ngo ngu): /ng/": {
+          "content": "Thai Consonants Group 2:\nค (kho khwai): /kh/\nฆ (kho rakhang): /kh/\nง (ngo ngu): /ng/",
+          "memory_type": "EPISODIC",
+          "activation_count": 2,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": null
+        },
+        "EPISODIC:Thai consonant ฃ (called kho khuat) makes the sound kh": {
+          "content": "Thai consonant ฃ (called kho khuat) makes the sound kh",
+          "memory_type": "EPISODIC",
+          "activation_count": 7,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:Thai consonant ฃ (called kho khuat) makes the sound kh": {
+          "content": "Thai consonant ฃ (called kho khuat) makes the sound kh",
+          "memory_type": "SEMANTIC",
+          "activation_count": 7,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:Thai consonant ฅ (called kho khon) makes the sound kh": {
+          "content": "Thai consonant ฅ (called kho khon) makes the sound kh",
+          "memory_type": "EPISODIC",
+          "activation_count": 7,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:Thai consonant ฅ (called kho khon) makes the sound kh": {
+          "content": "Thai consonant ฅ (called kho khon) makes the sound kh",
+          "memory_type": "SEMANTIC",
+          "activation_count": 7,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:Thai consonant จ (called cho chan) makes the sound ch": {
+          "content": "Thai consonant จ (called cho chan) makes the sound ch",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:Thai consonant จ (called cho chan) makes the sound ch": {
+          "content": "Thai consonant จ (called cho chan) makes the sound ch",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:Practice: ฃ = kh": {
+          "content": "Practice: ฃ = kh",
+          "memory_type": "EPISODIC",
+          "activation_count": 7,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:Practice: ฃ = kh": {
+          "content": "Practice: ฃ = kh",
+          "memory_type": "SEMANTIC",
+          "activation_count": 7,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:Practice: ฅ = kh": {
+          "content": "Practice: ฅ = kh",
+          "memory_type": "EPISODIC",
+          "activation_count": 7,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:Practice: ฅ = kh": {
+          "content": "Practice: ฅ = kh",
+          "memory_type": "SEMANTIC",
+          "activation_count": 7,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:Practice: จ = ch": {
+          "content": "Practice: จ = ch",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:Practice: จ = ch": {
+          "content": "Practice: จ = ch",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:Thai consonant ฉ (called cho ching) makes the sound ch": {
+          "content": "Thai consonant ฉ (called cho ching) makes the sound ch",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:Thai consonant ฉ (called cho ching) makes the sound ch": {
+          "content": "Thai consonant ฉ (called cho ching) makes the sound ch",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:Practice: ฉ = ch": {
+          "content": "Practice: ฉ = ch",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:Practice: ฉ = ch": {
+          "content": "Practice: ฉ = ch",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:Thai consonant ช (called cho chang) makes the sound ch": {
+          "content": "Thai consonant ช (called cho chang) makes the sound ch",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:Thai consonant ช (called cho chang) makes the sound ch": {
+          "content": "Thai consonant ช (called cho chang) makes the sound ch",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:Practice: ช = ch": {
+          "content": "Practice: ช = ch",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:Practice: ช = ch": {
+          "content": "Practice: ช = ch",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:Thai consonant ซ (called so so) makes the sound s": {
+          "content": "Thai consonant ซ (called so so) makes the sound s",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:Thai consonant ซ (called so so) makes the sound s": {
+          "content": "Thai consonant ซ (called so so) makes the sound s",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:Practice: ซ = s": {
+          "content": "Practice: ซ = s",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:Practice: ซ = s": {
+          "content": "Practice: ซ = s",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:Thai consonant ฌ (called cho choe) makes the sound ch": {
+          "content": "Thai consonant ฌ (called cho choe) makes the sound ch",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:Thai consonant ฌ (called cho choe) makes the sound ch": {
+          "content": "Thai consonant ฌ (called cho choe) makes the sound ch",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:Practice: ฌ = ch": {
+          "content": "Practice: ฌ = ch",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:Practice: ฌ = ch": {
+          "content": "Practice: ฌ = ch",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:Thai consonant ญ (called yo ying) makes the sound y": {
+          "content": "Thai consonant ญ (called yo ying) makes the sound y",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:Thai consonant ญ (called yo ying) makes the sound y": {
+          "content": "Thai consonant ญ (called yo ying) makes the sound y",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:Practice: ญ = y": {
+          "content": "Practice: ญ = y",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:Practice: ญ = y": {
+          "content": "Practice: ญ = y",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:Thai consonant ฎ (called do chada) makes the sound d": {
+          "content": "Thai consonant ฎ (called do chada) makes the sound d",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:Thai consonant ฎ (called do chada) makes the sound d": {
+          "content": "Thai consonant ฎ (called do chada) makes the sound d",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:Practice: ฎ = d": {
+          "content": "Practice: ฎ = d",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:Practice: ฎ = d": {
+          "content": "Practice: ฎ = d",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:What sound does ซ make?": {
+          "content": "What sound does ซ make?",
+          "memory_type": "EPISODIC",
+          "activation_count": 2,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:What sound does ซ make?": {
+          "content": "What sound does ซ make?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 2,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:What sound does ญ make?": {
+          "content": "What sound does ญ make?",
+          "memory_type": "EPISODIC",
+          "activation_count": 2,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:What sound does ญ make?": {
+          "content": "What sound does ญ make?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 2,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:What sound does ค make?": {
+          "content": "What sound does ค make?",
+          "memory_type": "EPISODIC",
+          "activation_count": 3,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:What sound does ค make?": {
+          "content": "What sound does ค make?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 3,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:What sound does จ make?": {
+          "content": "What sound does จ make?",
+          "memory_type": "EPISODIC",
+          "activation_count": 3,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:What sound does จ make?": {
+          "content": "What sound does จ make?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 3,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:What sound does ฉ make?": {
+          "content": "What sound does ฉ make?",
+          "memory_type": "EPISODIC",
+          "activation_count": 3,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:What sound does ฉ make?": {
+          "content": "What sound does ฉ make?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 3,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:Question: What sound does ก make? Answer: ก makes the sound k. The consonant ก is called ko kai and produces k.": {
+          "content": "Question: What sound does ก make? Answer: ก makes the sound k. The consonant ก is called ko kai and produces k.",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:Question: What sound does ก make? Answer: ก makes the sound k. The consonant ก is called ko kai and produces k.": {
+          "content": "Question: What sound does ก make? Answer: ก makes the sound k. The consonant ก is called ko kai and produces k.",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:Question: What sound does ข make? Answer: ข makes the sound kh. The consonant ข is called kho khai and produces kh.": {
+          "content": "Question: What sound does ข make? Answer: ข makes the sound kh. The consonant ข is called kho khai and produces kh.",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:Question: What sound does ข make? Answer: ข makes the sound kh. The consonant ข is called kho khai and produces kh.": {
+          "content": "Question: What sound does ข make? Answer: ข makes the sound kh. The consonant ข is called kho khai and produces kh.",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:Question: What sound does ฃ make? Answer: ฃ makes the sound kh. The consonant ฃ is called kho khuat and produces kh.": {
+          "content": "Question: What sound does ฃ make? Answer: ฃ makes the sound kh. The consonant ฃ is called kho khuat and produces kh.",
+          "memory_type": "EPISODIC",
+          "activation_count": 32,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:Question: What sound does ฃ make? Answer: ฃ makes the sound kh. The consonant ฃ is called kho khuat and produces kh.": {
+          "content": "Question: What sound does ฃ make? Answer: ฃ makes the sound kh. The consonant ฃ is called kho khuat and produces kh.",
+          "memory_type": "SEMANTIC",
+          "activation_count": 32,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:Question: What sound does ค make? Answer: ค makes the sound kh. The consonant ค is called kho khwai and produces kh.": {
+          "content": "Question: What sound does ค make? Answer: ค makes the sound kh. The consonant ค is called kho khwai and produces kh.",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:Question: What sound does ค make? Answer: ค makes the sound kh. The consonant ค is called kho khwai and produces kh.": {
+          "content": "Question: What sound does ค make? Answer: ค makes the sound kh. The consonant ค is called kho khwai and produces kh.",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:Question: What sound does ฅ make? Answer: ฅ makes the sound kh. The consonant ฅ is called kho khon and produces kh.": {
+          "content": "Question: What sound does ฅ make? Answer: ฅ makes the sound kh. The consonant ฅ is called kho khon and produces kh.",
+          "memory_type": "EPISODIC",
+          "activation_count": 32,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:Question: What sound does ฅ make? Answer: ฅ makes the sound kh. The consonant ฅ is called kho khon and produces kh.": {
+          "content": "Question: What sound does ฅ make? Answer: ฅ makes the sound kh. The consonant ฅ is called kho khon and produces kh.",
+          "memory_type": "SEMANTIC",
+          "activation_count": 32,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:Question: What sound does ฆ make? Answer: ฆ makes the sound kh. The consonant ฆ is called kho rakhang and produces kh.": {
+          "content": "Question: What sound does ฆ make? Answer: ฆ makes the sound kh. The consonant ฆ is called kho rakhang and produces kh.",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:Question: What sound does ฆ make? Answer: ฆ makes the sound kh. The consonant ฆ is called kho rakhang and produces kh.": {
+          "content": "Question: What sound does ฆ make? Answer: ฆ makes the sound kh. The consonant ฆ is called kho rakhang and produces kh.",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:Question: What sound does ง make? Answer: ง makes the sound ng. The consonant ง is called ngo ngu and produces ng.": {
+          "content": "Question: What sound does ง make? Answer: ง makes the sound ng. The consonant ง is called ngo ngu and produces ng.",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:Question: What sound does ง make? Answer: ง makes the sound ng. The consonant ง is called ngo ngu and produces ng.": {
+          "content": "Question: What sound does ง make? Answer: ง makes the sound ng. The consonant ง is called ngo ngu and produces ng.",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:Question: What sound does จ make? Answer: จ makes the sound ch. The consonant จ is called cho chan and produces ch.": {
+          "content": "Question: What sound does จ make? Answer: จ makes the sound ch. The consonant จ is called cho chan and produces ch.",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:Question: What sound does จ make? Answer: จ makes the sound ch. The consonant จ is called cho chan and produces ch.": {
+          "content": "Question: What sound does จ make? Answer: จ makes the sound ch. The consonant จ is called cho chan and produces ch.",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:Question: What sound does ฉ make? Answer: ฉ makes the sound ch. The consonant ฉ is called cho ching and produces ch.": {
+          "content": "Question: What sound does ฉ make? Answer: ฉ makes the sound ch. The consonant ฉ is called cho ching and produces ch.",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:Question: What sound does ฉ make? Answer: ฉ makes the sound ch. The consonant ฉ is called cho ching and produces ch.": {
+          "content": "Question: What sound does ฉ make? Answer: ฉ makes the sound ch. The consonant ฉ is called cho ching and produces ch.",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:Question: What sound does ช make? Answer: ช makes the sound ch. The consonant ช is called cho chang and produces ch.": {
+          "content": "Question: What sound does ช make? Answer: ช makes the sound ch. The consonant ช is called cho chang and produces ch.",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:Question: What sound does ช make? Answer: ช makes the sound ch. The consonant ช is called cho chang and produces ch.": {
+          "content": "Question: What sound does ช make? Answer: ช makes the sound ch. The consonant ช is called cho chang and produces ch.",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:What sound does ก make?": {
+          "content": "What sound does ก make?",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:What sound does ก make?": {
+          "content": "What sound does ก make?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:The consonant ก produces which sound?": {
+          "content": "The consonant ก produces which sound?",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:The consonant ก produces which sound?": {
+          "content": "The consonant ก produces which sound?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:What sound does ข make?": {
+          "content": "What sound does ข make?",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:What sound does ข make?": {
+          "content": "What sound does ข make?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:The consonant ข produces which sound?": {
+          "content": "The consonant ข produces which sound?",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:The consonant ข produces which sound?": {
+          "content": "The consonant ข produces which sound?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:What sound does ฃ make?": {
+          "content": "What sound does ฃ make?",
+          "memory_type": "EPISODIC",
+          "activation_count": 32,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:What sound does ฃ make?": {
+          "content": "What sound does ฃ make?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 32,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:The consonant ฃ produces which sound?": {
+          "content": "The consonant ฃ produces which sound?",
+          "memory_type": "EPISODIC",
+          "activation_count": 32,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:The consonant ฃ produces which sound?": {
+          "content": "The consonant ฃ produces which sound?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 32,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:The consonant ค produces which sound?": {
+          "content": "The consonant ค produces which sound?",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:The consonant ค produces which sound?": {
+          "content": "The consonant ค produces which sound?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:What sound does ฅ make?": {
+          "content": "What sound does ฅ make?",
+          "memory_type": "EPISODIC",
+          "activation_count": 32,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:What sound does ฅ make?": {
+          "content": "What sound does ฅ make?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 32,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:The consonant ฅ produces which sound?": {
+          "content": "The consonant ฅ produces which sound?",
+          "memory_type": "EPISODIC",
+          "activation_count": 32,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:The consonant ฅ produces which sound?": {
+          "content": "The consonant ฅ produces which sound?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 32,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:What sound does ฆ make?": {
+          "content": "What sound does ฆ make?",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:What sound does ฆ make?": {
+          "content": "What sound does ฆ make?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:The consonant ฆ produces which sound?": {
+          "content": "The consonant ฆ produces which sound?",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:The consonant ฆ produces which sound?": {
+          "content": "The consonant ฆ produces which sound?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:What sound does ง make?": {
+          "content": "What sound does ง make?",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:What sound does ง make?": {
+          "content": "What sound does ง make?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:The consonant ง produces which sound?": {
+          "content": "The consonant ง produces which sound?",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:The consonant ง produces which sound?": {
+          "content": "The consonant ง produces which sound?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:The consonant จ produces which sound?": {
+          "content": "The consonant จ produces which sound?",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:The consonant จ produces which sound?": {
+          "content": "The consonant จ produces which sound?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:The consonant ฉ produces which sound?": {
+          "content": "The consonant ฉ produces which sound?",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:The consonant ฉ produces which sound?": {
+          "content": "The consonant ฉ produces which sound?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:What sound does ช make?": {
+          "content": "What sound does ช make?",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:What sound does ช make?": {
+          "content": "What sound does ช make?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:The consonant ช produces which sound?": {
+          "content": "The consonant ช produces which sound?",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:The consonant ช produces which sound?": {
+          "content": "The consonant ช produces which sound?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:Question: What sound does ฏ make? Answer: ฏ makes the sound t. The consonant ฏ is called to patak and produces t.": {
+          "content": "Question: What sound does ฏ make? Answer: ฏ makes the sound t. The consonant ฏ is called to patak and produces t.",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:Question: What sound does ฏ make? Answer: ฏ makes the sound t. The consonant ฏ is called to patak and produces t.": {
+          "content": "Question: What sound does ฏ make? Answer: ฏ makes the sound t. The consonant ฏ is called to patak and produces t.",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:What sound does ฏ make?": {
+          "content": "What sound does ฏ make?",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:What sound does ฏ make?": {
+          "content": "What sound does ฏ make?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:The consonant ฏ produces which sound?": {
+          "content": "The consonant ฏ produces which sound?",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:The consonant ฏ produces which sound?": {
+          "content": "The consonant ฏ produces which sound?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:Question: What sound does ฐ make? Answer: ฐ makes the sound th. The consonant ฐ is called tho than and produces th.": {
+          "content": "Question: What sound does ฐ make? Answer: ฐ makes the sound th. The consonant ฐ is called tho than and produces th.",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:Question: What sound does ฐ make? Answer: ฐ makes the sound th. The consonant ฐ is called tho than and produces th.": {
+          "content": "Question: What sound does ฐ make? Answer: ฐ makes the sound th. The consonant ฐ is called tho than and produces th.",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:What sound does ฐ make?": {
+          "content": "What sound does ฐ make?",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:What sound does ฐ make?": {
+          "content": "What sound does ฐ make?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:The consonant ฐ produces which sound?": {
+          "content": "The consonant ฐ produces which sound?",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:The consonant ฐ produces which sound?": {
+          "content": "The consonant ฐ produces which sound?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:Question: What sound does ฑ make? Answer: ฑ makes the sound th. The consonant ฑ is called tho montho and produces th.": {
+          "content": "Question: What sound does ฑ make? Answer: ฑ makes the sound th. The consonant ฑ is called tho montho and produces th.",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:Question: What sound does ฑ make? Answer: ฑ makes the sound th. The consonant ฑ is called tho montho and produces th.": {
+          "content": "Question: What sound does ฑ make? Answer: ฑ makes the sound th. The consonant ฑ is called tho montho and produces th.",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:What sound does ฑ make?": {
+          "content": "What sound does ฑ make?",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:What sound does ฑ make?": {
+          "content": "What sound does ฑ make?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:The consonant ฑ produces which sound?": {
+          "content": "The consonant ฑ produces which sound?",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:The consonant ฑ produces which sound?": {
+          "content": "The consonant ฑ produces which sound?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:Question: What sound does ฒ make? Answer: ฒ makes the sound th. The consonant ฒ is called tho phu thao and produces th.": {
+          "content": "Question: What sound does ฒ make? Answer: ฒ makes the sound th. The consonant ฒ is called tho phu thao and produces th.",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:Question: What sound does ฒ make? Answer: ฒ makes the sound th. The consonant ฒ is called tho phu thao and produces th.": {
+          "content": "Question: What sound does ฒ make? Answer: ฒ makes the sound th. The consonant ฒ is called tho phu thao and produces th.",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:What sound does ฒ make?": {
+          "content": "What sound does ฒ make?",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:What sound does ฒ make?": {
+          "content": "What sound does ฒ make?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:The consonant ฒ produces which sound?": {
+          "content": "The consonant ฒ produces which sound?",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:The consonant ฒ produces which sound?": {
+          "content": "The consonant ฒ produces which sound?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:Question: What sound does ณ make? Answer: ณ makes the sound n. The consonant ณ is called no nen and produces n.": {
+          "content": "Question: What sound does ณ make? Answer: ณ makes the sound n. The consonant ณ is called no nen and produces n.",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:Question: What sound does ณ make? Answer: ณ makes the sound n. The consonant ณ is called no nen and produces n.": {
+          "content": "Question: What sound does ณ make? Answer: ณ makes the sound n. The consonant ณ is called no nen and produces n.",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:What sound does ณ make?": {
+          "content": "What sound does ณ make?",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:What sound does ณ make?": {
+          "content": "What sound does ณ make?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:The consonant ณ produces which sound?": {
+          "content": "The consonant ณ produces which sound?",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:The consonant ณ produces which sound?": {
+          "content": "The consonant ณ produces which sound?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:Question: What sound does ด make? Answer: ด makes the sound d. The consonant ด is called do dek and produces d.": {
+          "content": "Question: What sound does ด make? Answer: ด makes the sound d. The consonant ด is called do dek and produces d.",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:Question: What sound does ด make? Answer: ด makes the sound d. The consonant ด is called do dek and produces d.": {
+          "content": "Question: What sound does ด make? Answer: ด makes the sound d. The consonant ด is called do dek and produces d.",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:What sound does ด make?": {
+          "content": "What sound does ด make?",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:What sound does ด make?": {
+          "content": "What sound does ด make?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:The consonant ด produces which sound?": {
+          "content": "The consonant ด produces which sound?",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:The consonant ด produces which sound?": {
+          "content": "The consonant ด produces which sound?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:Question: What sound does ต make? Answer: ต makes the sound t. The consonant ต is called to tao and produces t.": {
+          "content": "Question: What sound does ต make? Answer: ต makes the sound t. The consonant ต is called to tao and produces t.",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:Question: What sound does ต make? Answer: ต makes the sound t. The consonant ต is called to tao and produces t.": {
+          "content": "Question: What sound does ต make? Answer: ต makes the sound t. The consonant ต is called to tao and produces t.",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:What sound does ต make?": {
+          "content": "What sound does ต make?",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:What sound does ต make?": {
+          "content": "What sound does ต make?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:The consonant ต produces which sound?": {
+          "content": "The consonant ต produces which sound?",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:The consonant ต produces which sound?": {
+          "content": "The consonant ต produces which sound?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:Question: What sound does ถ make? Answer: ถ makes the sound th. The consonant ถ is called tho thung and produces th.": {
+          "content": "Question: What sound does ถ make? Answer: ถ makes the sound th. The consonant ถ is called tho thung and produces th.",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:Question: What sound does ถ make? Answer: ถ makes the sound th. The consonant ถ is called tho thung and produces th.": {
+          "content": "Question: What sound does ถ make? Answer: ถ makes the sound th. The consonant ถ is called tho thung and produces th.",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:What sound does ถ make?": {
+          "content": "What sound does ถ make?",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:What sound does ถ make?": {
+          "content": "What sound does ถ make?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:The consonant ถ produces which sound?": {
+          "content": "The consonant ถ produces which sound?",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:The consonant ถ produces which sound?": {
+          "content": "The consonant ถ produces which sound?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:Question: What sound does ท make? Answer: ท makes the sound th. The consonant ท is called tho thahan and produces th.": {
+          "content": "Question: What sound does ท make? Answer: ท makes the sound th. The consonant ท is called tho thahan and produces th.",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:Question: What sound does ท make? Answer: ท makes the sound th. The consonant ท is called tho thahan and produces th.": {
+          "content": "Question: What sound does ท make? Answer: ท makes the sound th. The consonant ท is called tho thahan and produces th.",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:What sound does ท make?": {
+          "content": "What sound does ท make?",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:What sound does ท make?": {
+          "content": "What sound does ท make?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:The consonant ท produces which sound?": {
+          "content": "The consonant ท produces which sound?",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:The consonant ท produces which sound?": {
+          "content": "The consonant ท produces which sound?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:Question: What sound does ธ make? Answer: ธ makes the sound th. The consonant ธ is called tho thong and produces th.": {
+          "content": "Question: What sound does ธ make? Answer: ธ makes the sound th. The consonant ธ is called tho thong and produces th.",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:Question: What sound does ธ make? Answer: ธ makes the sound th. The consonant ธ is called tho thong and produces th.": {
+          "content": "Question: What sound does ธ make? Answer: ธ makes the sound th. The consonant ธ is called tho thong and produces th.",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:What sound does ธ make?": {
+          "content": "What sound does ธ make?",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:What sound does ธ make?": {
+          "content": "What sound does ธ make?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:The consonant ธ produces which sound?": {
+          "content": "The consonant ธ produces which sound?",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:The consonant ธ produces which sound?": {
+          "content": "The consonant ธ produces which sound?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:Question: What sound does น make? Answer: น makes the sound n. The consonant น is called no nu and produces n.": {
+          "content": "Question: What sound does น make? Answer: น makes the sound n. The consonant น is called no nu and produces n.",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:Question: What sound does น make? Answer: น makes the sound n. The consonant น is called no nu and produces n.": {
+          "content": "Question: What sound does น make? Answer: น makes the sound n. The consonant น is called no nu and produces n.",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:What sound does น make?": {
+          "content": "What sound does น make?",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:What sound does น make?": {
+          "content": "What sound does น make?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:The consonant น produces which sound?": {
+          "content": "The consonant น produces which sound?",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:The consonant น produces which sound?": {
+          "content": "The consonant น produces which sound?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:Question: What sound does บ make? Answer: บ makes the sound b. The consonant บ is called bo baimai and produces b.": {
+          "content": "Question: What sound does บ make? Answer: บ makes the sound b. The consonant บ is called bo baimai and produces b.",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:Question: What sound does บ make? Answer: บ makes the sound b. The consonant บ is called bo baimai and produces b.": {
+          "content": "Question: What sound does บ make? Answer: บ makes the sound b. The consonant บ is called bo baimai and produces b.",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:What sound does บ make?": {
+          "content": "What sound does บ make?",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:What sound does บ make?": {
+          "content": "What sound does บ make?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:The consonant บ produces which sound?": {
+          "content": "The consonant บ produces which sound?",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:The consonant บ produces which sound?": {
+          "content": "The consonant บ produces which sound?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:Question: What sound does ป make? Answer: ป makes the sound p. The consonant ป is called po pla and produces p.": {
+          "content": "Question: What sound does ป make? Answer: ป makes the sound p. The consonant ป is called po pla and produces p.",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:Question: What sound does ป make? Answer: ป makes the sound p. The consonant ป is called po pla and produces p.": {
+          "content": "Question: What sound does ป make? Answer: ป makes the sound p. The consonant ป is called po pla and produces p.",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:What sound does ป make?": {
+          "content": "What sound does ป make?",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:What sound does ป make?": {
+          "content": "What sound does ป make?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:The consonant ป produces which sound?": {
+          "content": "The consonant ป produces which sound?",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:The consonant ป produces which sound?": {
+          "content": "The consonant ป produces which sound?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:Question: What sound does ผ make? Answer: ผ makes the sound ph. The consonant ผ is called pho phung and produces ph.": {
+          "content": "Question: What sound does ผ make? Answer: ผ makes the sound ph. The consonant ผ is called pho phung and produces ph.",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:Question: What sound does ผ make? Answer: ผ makes the sound ph. The consonant ผ is called pho phung and produces ph.": {
+          "content": "Question: What sound does ผ make? Answer: ผ makes the sound ph. The consonant ผ is called pho phung and produces ph.",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:What sound does ผ make?": {
+          "content": "What sound does ผ make?",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:What sound does ผ make?": {
+          "content": "What sound does ผ make?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:The consonant ผ produces which sound?": {
+          "content": "The consonant ผ produces which sound?",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:The consonant ผ produces which sound?": {
+          "content": "The consonant ผ produces which sound?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:Question: What sound does ฝ make? Answer: ฝ makes the sound f. The consonant ฝ is called fo fa and produces f.": {
+          "content": "Question: What sound does ฝ make? Answer: ฝ makes the sound f. The consonant ฝ is called fo fa and produces f.",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:Question: What sound does ฝ make? Answer: ฝ makes the sound f. The consonant ฝ is called fo fa and produces f.": {
+          "content": "Question: What sound does ฝ make? Answer: ฝ makes the sound f. The consonant ฝ is called fo fa and produces f.",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:What sound does ฝ make?": {
+          "content": "What sound does ฝ make?",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:What sound does ฝ make?": {
+          "content": "What sound does ฝ make?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:The consonant ฝ produces which sound?": {
+          "content": "The consonant ฝ produces which sound?",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:The consonant ฝ produces which sound?": {
+          "content": "The consonant ฝ produces which sound?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:Question: What sound does พ make? Answer: พ makes the sound ph. The consonant พ is called pho phan and produces ph.": {
+          "content": "Question: What sound does พ make? Answer: พ makes the sound ph. The consonant พ is called pho phan and produces ph.",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:Question: What sound does พ make? Answer: พ makes the sound ph. The consonant พ is called pho phan and produces ph.": {
+          "content": "Question: What sound does พ make? Answer: พ makes the sound ph. The consonant พ is called pho phan and produces ph.",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:What sound does พ make?": {
+          "content": "What sound does พ make?",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:What sound does พ make?": {
+          "content": "What sound does พ make?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:The consonant พ produces which sound?": {
+          "content": "The consonant พ produces which sound?",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:The consonant พ produces which sound?": {
+          "content": "The consonant พ produces which sound?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:Question: What sound does ฟ make? Answer: ฟ makes the sound f. The consonant ฟ is called fo fan and produces f.": {
+          "content": "Question: What sound does ฟ make? Answer: ฟ makes the sound f. The consonant ฟ is called fo fan and produces f.",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:Question: What sound does ฟ make? Answer: ฟ makes the sound f. The consonant ฟ is called fo fan and produces f.": {
+          "content": "Question: What sound does ฟ make? Answer: ฟ makes the sound f. The consonant ฟ is called fo fan and produces f.",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:What sound does ฟ make?": {
+          "content": "What sound does ฟ make?",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:What sound does ฟ make?": {
+          "content": "What sound does ฟ make?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:The consonant ฟ produces which sound?": {
+          "content": "The consonant ฟ produces which sound?",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:The consonant ฟ produces which sound?": {
+          "content": "The consonant ฟ produces which sound?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:Question: What sound does ภ make? Answer: ภ makes the sound ph. The consonant ภ is called pho samphao and produces ph.": {
+          "content": "Question: What sound does ภ make? Answer: ภ makes the sound ph. The consonant ภ is called pho samphao and produces ph.",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:Question: What sound does ภ make? Answer: ภ makes the sound ph. The consonant ภ is called pho samphao and produces ph.": {
+          "content": "Question: What sound does ภ make? Answer: ภ makes the sound ph. The consonant ภ is called pho samphao and produces ph.",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:What sound does ภ make?": {
+          "content": "What sound does ภ make?",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:What sound does ภ make?": {
+          "content": "What sound does ภ make?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:The consonant ภ produces which sound?": {
+          "content": "The consonant ภ produces which sound?",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:The consonant ภ produces which sound?": {
+          "content": "The consonant ภ produces which sound?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:Question: What sound does ม make? Answer: ม makes the sound m. The consonant ม is called mo ma and produces m.": {
+          "content": "Question: What sound does ม make? Answer: ม makes the sound m. The consonant ม is called mo ma and produces m.",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:Question: What sound does ม make? Answer: ม makes the sound m. The consonant ม is called mo ma and produces m.": {
+          "content": "Question: What sound does ม make? Answer: ม makes the sound m. The consonant ม is called mo ma and produces m.",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:What sound does ม make?": {
+          "content": "What sound does ม make?",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:What sound does ม make?": {
+          "content": "What sound does ม make?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:The consonant ม produces which sound?": {
+          "content": "The consonant ม produces which sound?",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:The consonant ม produces which sound?": {
+          "content": "The consonant ม produces which sound?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:Question: What sound does ย make? Answer: ย makes the sound y. The consonant ย is called yo yak and produces y.": {
+          "content": "Question: What sound does ย make? Answer: ย makes the sound y. The consonant ย is called yo yak and produces y.",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:Question: What sound does ย make? Answer: ย makes the sound y. The consonant ย is called yo yak and produces y.": {
+          "content": "Question: What sound does ย make? Answer: ย makes the sound y. The consonant ย is called yo yak and produces y.",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:What sound does ย make?": {
+          "content": "What sound does ย make?",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:What sound does ย make?": {
+          "content": "What sound does ย make?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:The consonant ย produces which sound?": {
+          "content": "The consonant ย produces which sound?",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:The consonant ย produces which sound?": {
+          "content": "The consonant ย produces which sound?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:Question: What sound does ร make? Answer: ร makes the sound r. The consonant ร is called ro ruea and produces r.": {
+          "content": "Question: What sound does ร make? Answer: ร makes the sound r. The consonant ร is called ro ruea and produces r.",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:Question: What sound does ร make? Answer: ร makes the sound r. The consonant ร is called ro ruea and produces r.": {
+          "content": "Question: What sound does ร make? Answer: ร makes the sound r. The consonant ร is called ro ruea and produces r.",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:What sound does ร make?": {
+          "content": "What sound does ร make?",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:What sound does ร make?": {
+          "content": "What sound does ร make?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:The consonant ร produces which sound?": {
+          "content": "The consonant ร produces which sound?",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:The consonant ร produces which sound?": {
+          "content": "The consonant ร produces which sound?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:Question: What sound does ล make? Answer: ล makes the sound l. The consonant ล is called lo ling and produces l.": {
+          "content": "Question: What sound does ล make? Answer: ล makes the sound l. The consonant ล is called lo ling and produces l.",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:Question: What sound does ล make? Answer: ล makes the sound l. The consonant ล is called lo ling and produces l.": {
+          "content": "Question: What sound does ล make? Answer: ล makes the sound l. The consonant ล is called lo ling and produces l.",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:What sound does ล make?": {
+          "content": "What sound does ล make?",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:What sound does ล make?": {
+          "content": "What sound does ล make?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:The consonant ล produces which sound?": {
+          "content": "The consonant ล produces which sound?",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:The consonant ล produces which sound?": {
+          "content": "The consonant ล produces which sound?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:Question: What sound does ว make? Answer: ว makes the sound w. The consonant ว is called wo waen and produces w.": {
+          "content": "Question: What sound does ว make? Answer: ว makes the sound w. The consonant ว is called wo waen and produces w.",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:Question: What sound does ว make? Answer: ว makes the sound w. The consonant ว is called wo waen and produces w.": {
+          "content": "Question: What sound does ว make? Answer: ว makes the sound w. The consonant ว is called wo waen and produces w.",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:What sound does ว make?": {
+          "content": "What sound does ว make?",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:What sound does ว make?": {
+          "content": "What sound does ว make?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:The consonant ว produces which sound?": {
+          "content": "The consonant ว produces which sound?",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:The consonant ว produces which sound?": {
+          "content": "The consonant ว produces which sound?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:Question: What sound does ศ make? Answer: ศ makes the sound s. The consonant ศ is called so sala and produces s.": {
+          "content": "Question: What sound does ศ make? Answer: ศ makes the sound s. The consonant ศ is called so sala and produces s.",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:Question: What sound does ศ make? Answer: ศ makes the sound s. The consonant ศ is called so sala and produces s.": {
+          "content": "Question: What sound does ศ make? Answer: ศ makes the sound s. The consonant ศ is called so sala and produces s.",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:What sound does ศ make?": {
+          "content": "What sound does ศ make?",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:What sound does ศ make?": {
+          "content": "What sound does ศ make?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:The consonant ศ produces which sound?": {
+          "content": "The consonant ศ produces which sound?",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:The consonant ศ produces which sound?": {
+          "content": "The consonant ศ produces which sound?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:Question: What sound does ษ make? Answer: ษ makes the sound s. The consonant ษ is called so rue si and produces s.": {
+          "content": "Question: What sound does ษ make? Answer: ษ makes the sound s. The consonant ษ is called so rue si and produces s.",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:Question: What sound does ษ make? Answer: ษ makes the sound s. The consonant ษ is called so rue si and produces s.": {
+          "content": "Question: What sound does ษ make? Answer: ษ makes the sound s. The consonant ษ is called so rue si and produces s.",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:What sound does ษ make?": {
+          "content": "What sound does ษ make?",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:What sound does ษ make?": {
+          "content": "What sound does ษ make?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:The consonant ษ produces which sound?": {
+          "content": "The consonant ษ produces which sound?",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:The consonant ษ produces which sound?": {
+          "content": "The consonant ษ produces which sound?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:Question: What sound does ส make? Answer: ส makes the sound s. The consonant ส is called so suea and produces s.": {
+          "content": "Question: What sound does ส make? Answer: ส makes the sound s. The consonant ส is called so suea and produces s.",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:Question: What sound does ส make? Answer: ส makes the sound s. The consonant ส is called so suea and produces s.": {
+          "content": "Question: What sound does ส make? Answer: ส makes the sound s. The consonant ส is called so suea and produces s.",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:What sound does ส make?": {
+          "content": "What sound does ส make?",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:What sound does ส make?": {
+          "content": "What sound does ส make?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:The consonant ส produces which sound?": {
+          "content": "The consonant ส produces which sound?",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:The consonant ส produces which sound?": {
+          "content": "The consonant ส produces which sound?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:Question: What sound does ห make? Answer: ห makes the sound h. The consonant ห is called ho hip and produces h.": {
+          "content": "Question: What sound does ห make? Answer: ห makes the sound h. The consonant ห is called ho hip and produces h.",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:Question: What sound does ห make? Answer: ห makes the sound h. The consonant ห is called ho hip and produces h.": {
+          "content": "Question: What sound does ห make? Answer: ห makes the sound h. The consonant ห is called ho hip and produces h.",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:What sound does ห make?": {
+          "content": "What sound does ห make?",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:What sound does ห make?": {
+          "content": "What sound does ห make?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:The consonant ห produces which sound?": {
+          "content": "The consonant ห produces which sound?",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:The consonant ห produces which sound?": {
+          "content": "The consonant ห produces which sound?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:Question: What sound does ฬ make? Answer: ฬ makes the sound l. The consonant ฬ is called lo chula and produces l.": {
+          "content": "Question: What sound does ฬ make? Answer: ฬ makes the sound l. The consonant ฬ is called lo chula and produces l.",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:Question: What sound does ฬ make? Answer: ฬ makes the sound l. The consonant ฬ is called lo chula and produces l.": {
+          "content": "Question: What sound does ฬ make? Answer: ฬ makes the sound l. The consonant ฬ is called lo chula and produces l.",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:What sound does ฬ make?": {
+          "content": "What sound does ฬ make?",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:What sound does ฬ make?": {
+          "content": "What sound does ฬ make?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:The consonant ฬ produces which sound?": {
+          "content": "The consonant ฬ produces which sound?",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:The consonant ฬ produces which sound?": {
+          "content": "The consonant ฬ produces which sound?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:Question: What sound does อ make? Answer: อ makes the sound -. The consonant อ is called o ang and produces -.": {
+          "content": "Question: What sound does อ make? Answer: อ makes the sound -. The consonant อ is called o ang and produces -.",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:Question: What sound does อ make? Answer: อ makes the sound -. The consonant อ is called o ang and produces -.": {
+          "content": "Question: What sound does อ make? Answer: อ makes the sound -. The consonant อ is called o ang and produces -.",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:What sound does อ make?": {
+          "content": "What sound does อ make?",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:What sound does อ make?": {
+          "content": "What sound does อ make?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:The consonant อ produces which sound?": {
+          "content": "The consonant อ produces which sound?",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:The consonant อ produces which sound?": {
+          "content": "The consonant อ produces which sound?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:Question: What sound does ฮ make? Answer: ฮ makes the sound h. The consonant ฮ is called ho nokhuk and produces h.": {
+          "content": "Question: What sound does ฮ make? Answer: ฮ makes the sound h. The consonant ฮ is called ho nokhuk and produces h.",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:Question: What sound does ฮ make? Answer: ฮ makes the sound h. The consonant ฮ is called ho nokhuk and produces h.": {
+          "content": "Question: What sound does ฮ make? Answer: ฮ makes the sound h. The consonant ฮ is called ho nokhuk and produces h.",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:What sound does ฮ make?": {
+          "content": "What sound does ฮ make?",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:What sound does ฮ make?": {
+          "content": "What sound does ฮ make?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "EPISODIC:The consonant ฮ produces which sound?": {
+          "content": "The consonant ฮ produces which sound?",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:The consonant ฮ produces which sound?": {
+          "content": "The consonant ฮ produces which sound?",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        }
+      },
+      "edges": []
+    }
+  },
+  "brain": {
+    "version": "1.0.0",
+    "subsystem": "brain",
+    "hippocampus": {
+      "memories": [
+        "Practice: ฃ = kh",
+        "Practice: ฅ = kh",
+        "Practice: จ = ch",
+        "Practice: ฉ = ch",
+        "Practice: ช = ch",
+        "Practice: ซ = s",
+        "Practice: ฌ = ch",
+        "Practice: ญ = y",
+        "Practice: ฎ = d",
+        "Question: What sound does ก make? Answer: ก makes the sound k. The consonant ก is called ko kai and produces k.",
+        "Question: What sound does ข make? Answer: ข makes the sound kh. The consonant ข is called kho khai and produces kh.",
+        "Question: What sound does ฃ make? Answer: ฃ makes the sound kh. The consonant ฃ is called kho khuat and produces kh.",
+        "Question: What sound does ค make? Answer: ค makes the sound kh. The consonant ค is called kho khwai and produces kh.",
+        "Question: What sound does ฅ make? Answer: ฅ makes the sound kh. The consonant ฅ is called kho khon and produces kh.",
+        "Question: What sound does ฆ make? Answer: ฆ makes the sound kh. The consonant ฆ is called kho rakhang and produces kh.",
+        "Question: What sound does ง make? Answer: ง makes the sound ng. The consonant ง is called ngo ngu and produces ng.",
+        "Question: What sound does จ make? Answer: จ makes the sound ch. The consonant จ is called cho chan and produces ch.",
+        "Question: What sound does ฉ make? Answer: ฉ makes the sound ch. The consonant ฉ is called cho ching and produces ch.",
+        "Question: What sound does ช make? Answer: ช makes the sound ch. The consonant ช is called cho chang and produces ch.",
+        "Question: What sound does ฏ make? Answer: ฏ makes the sound t. The consonant ฏ is called to patak and produces t.",
+        "Question: What sound does ฐ make? Answer: ฐ makes the sound th. The consonant ฐ is called tho than and produces th.",
+        "Question: What sound does ฑ make? Answer: ฑ makes the sound th. The consonant ฑ is called tho montho and produces th.",
+        "Question: What sound does ฒ make? Answer: ฒ makes the sound th. The consonant ฒ is called tho phu thao and produces th.",
+        "Question: What sound does ณ make? Answer: ณ makes the sound n. The consonant ณ is called no nen and produces n.",
+        "Question: What sound does ด make? Answer: ด makes the sound d. The consonant ด is called do dek and produces d.",
+        "Question: What sound does ต make? Answer: ต makes the sound t. The consonant ต is called to tao and produces t.",
+        "Question: What sound does ถ make? Answer: ถ makes the sound th. The consonant ถ is called tho thung and produces th.",
+        "Question: What sound does ท make? Answer: ท makes the sound th. The consonant ท is called tho thahan and produces th.",
+        "Question: What sound does ธ make? Answer: ธ makes the sound th. The consonant ธ is called tho thong and produces th.",
+        "Question: What sound does น make? Answer: น makes the sound n. The consonant น is called no nu and produces n.",
+        "Question: What sound does บ make? Answer: บ makes the sound b. The consonant บ is called bo baimai and produces b.",
+        "Question: What sound does ป make? Answer: ป makes the sound p. The consonant ป is called po pla and produces p.",
+        "Question: What sound does ผ make? Answer: ผ makes the sound ph. The consonant ผ is called pho phung and produces ph.",
+        "Question: What sound does ฝ make? Answer: ฝ makes the sound f. The consonant ฝ is called fo fa and produces f.",
+        "Question: What sound does พ make? Answer: พ makes the sound ph. The consonant พ is called pho phan and produces ph.",
+        "Question: What sound does ฟ make? Answer: ฟ makes the sound f. The consonant ฟ is called fo fan and produces f.",
+        "Question: What sound does ภ make? Answer: ภ makes the sound ph. The consonant ภ is called pho samphao and produces ph.",
+        "Question: What sound does ม make? Answer: ม makes the sound m. The consonant ม is called mo ma and produces m.",
+        "Question: What sound does ย make? Answer: ย makes the sound y. The consonant ย is called yo yak and produces y.",
+        "Question: What sound does ร make? Answer: ร makes the sound r. The consonant ร is called ro ruea and produces r.",
+        "Question: What sound does ล make? Answer: ล makes the sound l. The consonant ล is called lo ling and produces l.",
+        "Question: What sound does ว make? Answer: ว makes the sound w. The consonant ว is called wo waen and produces w.",
+        "Question: What sound does ศ make? Answer: ศ makes the sound s. The consonant ศ is called so sala and produces s.",
+        "Question: What sound does ษ make? Answer: ษ makes the sound s. The consonant ษ is called so rue si and produces s.",
+        "Question: What sound does ส make? Answer: ส makes the sound s. The consonant ส is called so suea and produces s.",
+        "Question: What sound does ห make? Answer: ห makes the sound h. The consonant ห is called ho hip and produces h.",
+        "Question: What sound does ฬ make? Answer: ฬ makes the sound l. The consonant ฬ is called lo chula and produces l.",
+        "Question: What sound does อ make? Answer: อ makes the sound -. The consonant อ is called o ang and produces -.",
+        "Question: What sound does ฮ make? Answer: ฮ makes the sound h. The consonant ฮ is called ho nokhuk and produces h.",
+        "Thai consonant ฃ (called kho khuat) makes the sound kh",
+        "Thai consonant ฅ (called kho khon) makes the sound kh",
+        "Thai consonant จ (called cho chan) makes the sound ch",
+        "Thai consonant ฉ (called cho ching) makes the sound ch",
+        "Thai consonant ช (called cho chang) makes the sound ch",
+        "Thai consonant ซ (called so so) makes the sound s",
+        "Thai consonant ฌ (called cho choe) makes the sound ch",
+        "Thai consonant ญ (called yo ying) makes the sound y",
+        "Thai consonant ฎ (called do chada) makes the sound d",
+        "The consonant ก produces which sound?",
+        "The consonant ข produces which sound?",
+        "The consonant ฃ produces which sound?",
+        "The consonant ค produces which sound?",
+        "The consonant ฅ produces which sound?",
+        "The consonant ฆ produces which sound?",
+        "The consonant ง produces which sound?",
+        "The consonant จ produces which sound?",
+        "The consonant ฉ produces which sound?",
+        "The consonant ช produces which sound?",
+        "The consonant ฏ produces which sound?",
+        "The consonant ฐ produces which sound?",
+        "The consonant ฑ produces which sound?",
+        "The consonant ฒ produces which sound?",
+        "The consonant ณ produces which sound?",
+        "The consonant ด produces which sound?",
+        "The consonant ต produces which sound?",
+        "The consonant ถ produces which sound?",
+        "The consonant ท produces which sound?",
+        "The consonant ธ produces which sound?",
+        "The consonant น produces which sound?",
+        "The consonant บ produces which sound?",
+        "The consonant ป produces which sound?",
+        "The consonant ผ produces which sound?",
+        "The consonant ฝ produces which sound?",
+        "The consonant พ produces which sound?",
+        "The consonant ฟ produces which sound?",
+        "The consonant ภ produces which sound?",
+        "The consonant ม produces which sound?",
+        "The consonant ย produces which sound?",
+        "The consonant ร produces which sound?",
+        "The consonant ล produces which sound?",
+        "The consonant ว produces which sound?",
+        "The consonant ศ produces which sound?",
+        "The consonant ษ produces which sound?",
+        "The consonant ส produces which sound?",
+        "The consonant ห produces which sound?",
+        "The consonant ฬ produces which sound?",
+        "The consonant อ produces which sound?",
+        "The consonant ฮ produces which sound?",
+        "What sound does ก make?",
+        "What sound does ข make?",
+        "What sound does ฃ make?",
+        "What sound does ค make?",
+        "What sound does ฅ make?",
+        "What sound does ฆ make?",
+        "What sound does ง make?",
+        "What sound does จ make?",
+        "What sound does ฉ make?",
+        "What sound does ช make?",
+        "What sound does ซ make?",
+        "What sound does ญ make?",
+        "What sound does ฏ make?",
+        "What sound does ฐ make?",
+        "What sound does ฑ make?",
+        "What sound does ฒ make?",
+        "What sound does ณ make?",
+        "What sound does ด make?",
+        "What sound does ต make?",
+        "What sound does ถ make?",
+        "What sound does ท make?",
+        "What sound does ธ make?",
+        "What sound does น make?",
+        "What sound does บ make?",
+        "What sound does ป make?",
+        "What sound does ผ make?",
+        "What sound does ฝ make?",
+        "What sound does พ make?",
+        "What sound does ฟ make?",
+        "What sound does ภ make?",
+        "What sound does ม make?",
+        "What sound does ย make?",
+        "What sound does ร make?",
+        "What sound does ล make?",
+        "What sound does ว make?",
+        "What sound does ศ make?",
+        "What sound does ษ make?",
+        "What sound does ส make?",
+        "What sound does ห make?",
+        "What sound does ฬ make?",
+        "What sound does อ make?",
+        "What sound does ฮ make?"
+      ]
+    }
+  }
+}
