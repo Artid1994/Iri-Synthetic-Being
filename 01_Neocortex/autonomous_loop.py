@@ -136,10 +136,16 @@ class AutonomousLoop:
         # Initialize curriculum manager for knowledge-gap driven learning
         self.curriculum_manager = CurriculumManager()
         
+        # INTEGRATION: Initialize TranscendingRuntime for cognitive processing
+        sys.path.insert(0, str(project_root / "runtime"))
+        from runtime.runtime import TranscendingRuntime
+        self.runtime = TranscendingRuntime()
+        
         logger.info("[AutonomousLoop] Initialized")
         logger.info(f"[AutonomousLoop] Knowledge base: {len(self.knowledge_base.get('learned_facts', []))} facts")
         logger.info(f"[AutonomousLoop] Goal engine: {len(self.goal_engine.list_goals())} goals loaded")
         logger.info(f"[AutonomousLoop] Curriculum: {len(self.curriculum_manager.topics)} topics tracked")
+        logger.info("[AutonomousLoop] Cognitive runtime integrated")
         
         # Resource monitoring state
         self.current_resource_tier = ResourceTier.NORMAL
@@ -509,15 +515,19 @@ class AutonomousLoop:
     def _execute_research_subtask(self, subtask, goal) -> str:
         """
         Execute research subtask - perform autonomous knowledge acquisition.
-        TOOL-ASSISTED: Uses web search, Wikipedia, and synthesis without Hermes.
+        COGNITIVE INTEGRATION: Routes through cognitive_loop for experience/learning/plasticity.
         """
-        logger.info(f"[Research] Starting autonomous research for: {goal.title}")
+        logger.info(f"[Research] Starting cognitive research for: {goal.title}")
         
         # Extract topic from goal description
         topic = goal.title.replace("Learn: ", "").strip()
         
-        # Autonomous tool-assisted research
-        facts_synthesized = self._autonomous_tool_research(topic, goal.description)
+        # STEP 1: Cognitive skill selection (replacing rule-based keyword matching)
+        selected_tools = self._cognitive_skill_selection(topic, goal.description)
+        logger.info(f"[CognitiveSkills] Selected tools: {selected_tools}")
+        
+        # STEP 2: Execute research with cognitive processing
+        facts_synthesized = self._cognitive_tool_research(topic, goal.description, selected_tools)
         
         if facts_synthesized > 0:
             logger.info(f"[Research] Completed autonomous research on {topic}: {facts_synthesized} facts")
@@ -543,6 +553,126 @@ class AutonomousLoop:
             
             logger.info(f"[Research] Basic research completed on {topic}")
             return f"Basic research completed on {topic}. Added knowledge to database."
+    
+    def _cognitive_skill_selection(self, topic: str, description: str) -> List[str]:
+        """
+        Cognitive skill selection - IRI decides which tools to use based on context.
+        Replaces rule-based keyword matching with cognitive decision.
+        """
+        # Construct cognitive context for tool selection
+        available_tools = "wikipedia, arxiv, web_search, python_sandbox"
+        context = f"Goal: Research {topic}. Description: {description}. Available tools: {available_tools}. Select appropriate research tools."
+        
+        try:
+            # Process through cognitive loop for decision
+            cycle = self.runtime.cognitive_loop.process(context)
+            
+            # Parse tool selection from cognitive reasoning
+            tools = []
+            reasoning_lower = cycle.reasoning.lower()
+            
+            if 'wikipedia' in reasoning_lower:
+                tools.append('wikipedia')
+            if 'arxiv' in reasoning_lower:
+                tools.append('arxiv')
+            if 'web' in reasoning_lower or 'search' in reasoning_lower:
+                tools.append('web_search')
+            if 'python' in reasoning_lower or 'sandbox' in reasoning_lower:
+                tools.append('python_sandbox')
+            
+            # If cognitive decision produced tools, use them
+            if tools:
+                logger.info(f"[CognitiveSkills] Cognitive decision: {tools}")
+                return tools
+            
+        except Exception as e:
+            logger.warning(f"[CognitiveSkills] Cognitive selection failed: {e}, using fallback")
+        
+        # Fallback: semantic heuristic (not pure keyword rules)
+        return self._fallback_tool_selection(topic, description)
+    
+    def _fallback_tool_selection(self, topic: str, description: str) -> List[str]:
+        """Fallback tool selection using semantic heuristics."""
+        text = (topic + " " + description).lower()
+        
+        # Semantic domain detection
+        if any(kw in text for kw in ['neural', 'llm', 'ai', 'machine learning']):
+            return ['wikipedia', 'arxiv', 'web_search']
+        elif any(kw in text for kw in ['math', 'calculus', 'algebra']):
+            return ['wikipedia', 'python_sandbox', 'web_search']
+        elif any(kw in text for kw in ['physics', 'quantum']):
+            return ['wikipedia', 'arxiv']
+        else:
+            return ['wikipedia', 'web_search']
+    
+    def _cognitive_tool_research(self, topic: str, description: str, selected_tools: List[str]) -> int:
+        """
+        Execute research with cognitive integration.
+        Each result flows through cognitive_loop → experience → learning → plasticity.
+        """
+        logger.info(f"[CognitiveResearch] Starting cognitive research: {topic}")
+        
+        # Check for duplicate research
+        existing_facts = self.knowledge_base.get("learned_facts", [])
+        existing_topics = {f.get("topic", "").lower() for f in existing_facts[-100:]}
+        
+        if topic.lower() in existing_topics:
+            logger.info(f"[CognitiveResearch] Topic already researched, skipping")
+            return 0
+        
+        facts_integrated = 0
+        
+        # Execute tools to gather raw research
+        try:
+            from tool_registry import ToolRegistry
+            registry = ToolRegistry()
+            
+            # Gather facts from selected tools
+            raw_facts = []
+            for tool in selected_tools:
+                if tool == 'wikipedia':
+                    raw_facts.extend(registry._research_wikipedia(topic, max_facts=2))
+                elif tool == 'arxiv':
+                    raw_facts.extend(registry._research_arxiv(topic, max_facts=2))
+                elif tool == 'web_search':
+                    raw_facts.extend(registry._research_web(topic, max_facts=2))
+            
+            logger.info(f"[CognitiveResearch] Retrieved {len(raw_facts)} raw facts from tools")
+            
+            # CRITICAL: Process each fact through cognitive loop
+            for fact_data in raw_facts[:5]:  # Limit to 5 for resource control
+                observation = f"Research result for {topic}: {fact_data['text']}"
+                
+                # Feed through cognitive loop
+                cycle = self.runtime.cognitive_loop.process(observation)
+                
+                # Experience → Learning → Plasticity happens automatically in cognitive_loop
+                if cycle.experience_recorded:
+                    facts_integrated += 1
+                    logger.info(f"[CognitiveResearch] Fact integrated via cognitive loop (learning={cycle.experience_recorded})")
+                    
+                    # Also store in knowledge_base for persistence
+                    fact = {
+                        "topic": topic,
+                        "summary": fact_data['text'],
+                        "timestamp": time.time(),
+                        "source": "cognitive_tool_research",
+                        "tool": fact_data.get('source', 'unknown'),
+                        "confidence": fact_data.get('confidence', 0.85),
+                        "cognitive_integration": True
+                    }
+                    self.knowledge_base.setdefault("learned_facts", []).append(fact)
+            
+            # Save knowledge base
+            if facts_integrated > 0:
+                self._save_knowledge_base()
+                logger.info(f"[CognitiveResearch] {facts_integrated} facts integrated through cognitive loop")
+            
+            return facts_integrated
+            
+        except Exception as e:
+            logger.warning(f"[CognitiveResearch] Tool research failed: {e}")
+            return 0
     
     def _autonomous_tool_research(self, topic: str, description: str) -> int:
         """
