@@ -28,7 +28,12 @@ class WikipediaTool:
         
         try:
             url = f"{self.api_url}?{urllib.parse.urlencode(params)}"
-            with urllib.request.urlopen(url, timeout=self.timeout) as response:
+            # 🟢 ปลดล็อกท่อเครือข่าย: ระบุหัวข้อสิทธิ์ User-Agent ตามกฎสากลของ MediaWiki API เพื่อไม่ให้โดนบล็อก
+            req = urllib.request.Request(
+                url, 
+                headers={'User-Agent': 'IriSyntheticBeing/1.0 (Contact: artid1994@debian)'}
+            )
+            with urllib.request.urlopen(req, timeout=self.timeout) as response:
                 data = json.loads(response.read())
             
             # Format: [query, [titles], [descriptions], [urls]]
@@ -60,7 +65,12 @@ class WikipediaTool:
         
         try:
             url = f"{self.api_url}?{urllib.parse.urlencode(params)}"
-            with urllib.request.urlopen(url, timeout=self.timeout) as response:
+            # 🟢 ปลดล็อกท่อเครือข่าย: ระบุหัวข้อสิทธิ์ User-Agent ตามกฎสากลของ MediaWiki API เพื่อไม่ให้โดนบล็อก
+            req = urllib.request.Request(
+                url, 
+                headers={'User-Agent': 'IriSyntheticBeing/1.0 (Contact: artid1994@debian)'}
+            )
+            with urllib.request.urlopen(req, timeout=self.timeout) as response:
                 data = json.loads(response.read())
             
             pages = data.get('query', {}).get('pages', {})
@@ -85,7 +95,12 @@ class WikipediaTool:
         
         try:
             url = f"{self.api_url}?{urllib.parse.urlencode(params)}"
-            with urllib.request.urlopen(url, timeout=self.timeout) as response:
+            # 🟢 ปลดล็อกท่อเครือข่าย: ระบุหัวข้อสิทธิ์ User-Agent ตามกฎสากลของ MediaWiki API เพื่อไม่ให้โดนบล็อก
+            req = urllib.request.Request(
+                url, 
+                headers={'User-Agent': 'IriSyntheticBeing/1.0 (Contact: artid1994@debian)'}
+            )
+            with urllib.request.urlopen(req, timeout=self.timeout) as response:
                 data = json.loads(response.read())
             
             pages = data.get('query', {}).get('pages', {})

@@ -26,6 +26,54 @@ class ThaiLexicon:
         self._abbreviations: Optional[Dict[str, str]] = None
         self._action_verbs: Optional[Set[str]] = None
         
+    def learn_vocabulary_from_text(self, text_content: str, topic_context: str) -> dict:
+        """
+        👶 Linguistic Growth (Word Habituation Model)
+        Extracts and learns Thai/English words from scraped text to build semantic memory without LLM.
+        """
+        if not text_content:
+            return {"status": "empty"}
+            
+        import json
+        from collections import Counter
+        
+        # 1. แยกคำภาษาอังกฤษและคำภาษาไทยเบื้องต้นด้วยขอบเขตภาษา (Regex Split)
+        eng_words = re.findall(r'[a-zA-Z]{3,}', text_content.lower())
+        # ดักจับคำภาษาไทยเบื้องต้น (กรองเอาเฉพาะอักขระไทยที่มีความยาวมากกว่า 2 ตัวอักษร)
+        thai_chunks = re.findall(r'[฀-๿]{2,}', text_content)
+        
+        # 2. นับความถี่ของคำเพื่อหาคำเด่นประจำบทความ (Word Frequency Tracking)
+        eng_counter = Counter(eng_words)
+        
+        # 3. จัดกลุ่มความรู้คำศัพท์ล็อตเด่นประจำหัวข้อ
+        learned_words = {
+            "topic": topic_context,
+            "timestamp": datetime.now().isoformat() if 'datetime' in globals() else "2026-09-15T18:21:00",
+            "english_keywords": [word for word, count in eng_counter.most_common(10)],
+            "thai_segments_detected": len(thai_chunks)
+        }
+        
+        # 4. สลักคำศัพท์สะสมลงสู่คลังหน่วยความจำทางภาษา (semantic_memory.json)
+        memory_path = Path(__file__).parent / "semantic_memory.json"
+        try:
+            if memory_path.exists():
+                with open(memory_path, "r", encoding="utf-8") as f:
+                    semantic_db = json.load(f)
+            else:
+                semantic_db = {"vocabulary_learned": [], "total_words_encountered": 0}
+                
+            semantic_db["vocabulary_learned"].append(learned_words)
+            semantic_db["total_words_encountered"] += len(eng_words) + len(thai_chunks)
+            
+            with open(memory_path, "w", encoding="utf-8") as f:
+                json.dump(semantic_db, f, ensure_ascii=False, indent=2)
+                
+            print(f"[Linguistic] 👶 Iri integrated vocabulary from topic '{topic_context}' into semantic memory.")
+            return learned_words
+        except Exception as e:
+            print(f"[Linguistic] ❌ Vocabulary storage failed: {e}")
+            return {"status": "error", "message": str(e)}
+
     def load_female_names(self) -> Set[str]:
         """Load Thai female names."""
         if self._female_names is None:

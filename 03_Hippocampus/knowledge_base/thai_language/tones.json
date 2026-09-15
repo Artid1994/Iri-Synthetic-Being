@@ -1,0 +1,115 @@
+{
+  "tones": [
+    {
+      "number": 0,
+      "name": "mid tone",
+      "thai_name": "สามัญ",
+      "contour": "level_33",
+      "description": "Level pitch at mid range"
+    },
+    {
+      "number": 1,
+      "name": "low tone",
+      "thai_name": "เอก",
+      "contour": "low_21",
+      "description": "Falls to low pitch"
+    },
+    {
+      "number": 2,
+      "name": "falling tone",
+      "thai_name": "โท",
+      "contour": "fall_51",
+      "description": "Starts high and falls sharply"
+    },
+    {
+      "number": 3,
+      "name": "high tone",
+      "thai_name": "ตรี",
+      "contour": "high_45",
+      "description": "Rises to high pitch"
+    },
+    {
+      "number": 4,
+      "name": "rising tone",
+      "thai_name": "จัตวา",
+      "contour": "rising_214",
+      "description": "Dips low then rises"
+    }
+  ],
+  "tone_marks": [
+    {"mark": "◌่", "name": "mai ek", "tone_number": 1},
+    {"mark": "◌้", "name": "mai tho", "tone_number": 2},
+    {"mark": "◌๊", "name": "mai tri", "tone_number": 3},
+    {"mark": "◌๋", "name": "mai chattawa", "tone_number": 4}
+  ],
+  "tone_rules": {
+    "description": "Complete tone rules for reading Thai syllables",
+    "live_syllable": {
+      "description": "Syllable ending with long vowel or sonorant consonant (ม น ŋ ว ย)",
+      "mid_class": {
+        "no_mark": 0,
+        "mai_ek": 1,
+        "mai_tho": 2,
+        "mai_tri": 3,
+        "mai_chattawa": 4
+      },
+      "high_class": {
+        "no_mark": 4,
+        "mai_ek": 1,
+        "mai_tho": 2,
+        "mai_tri": "not_used",
+        "mai_chattawa": "not_used"
+      },
+      "low_class": {
+        "no_mark": 0,
+        "mai_ek": 2,
+        "mai_tho": 3,
+        "mai_tri": "not_used",
+        "mai_chattawa": "not_used"
+      }
+    },
+    "dead_syllable": {
+      "description": "Syllable ending with short vowel or stop consonant (ป ต ก)",
+      "short_vowel": {
+        "mid_class": 1,
+        "high_class": 1,
+        "low_class": 3
+      },
+      "long_vowel": {
+        "mid_class": 1,
+        "high_class": 1,
+        "low_class": 2
+      }
+    },
+    "leading_h_rules": {
+      "description": "ห leading before low-class sonorants changes class to high",
+      "pattern": "ห + [ง น ม ย ร ล ว] → high class onset",
+      "examples": {
+        "หนา": "high class (rising tone)",
+        "หมา": "high class (rising tone)",
+        "หลาย": "high class (rising tone)"
+      },
+      "note": "ห is silent in pronunciation but affects tone"
+    },
+    "leading_o_rules": {
+      "description": "อ leading before low-class consonants changes class to mid",
+      "pattern": "อ + low_consonant → mid class onset",
+      "examples": {
+        "อย่า": "mid class tone behavior",
+        "อยาก": "mid class tone behavior"
+      },
+      "note": "อ is silent in pronunciation but affects tone"
+    }
+  },
+  "special_cases": {
+    "implicit_vowel": {
+      "description": "Consonant without explicit vowel has inherent /o/ or /a/",
+      "rule": "Single consonant → /C/+/o/ (e.g., ก → /ko/)",
+      "exceptions": "ฤ and ฦ are vowels themselves"
+    },
+    "consonant_clusters": {
+      "description": "Initial clusters (กร-, กล-, กว-, etc.) follow complex rules",
+      "note": "Cluster tone determined by first consonant class"
+    }
+  }
+}

@@ -54,8 +54,8 @@ class LearningExerciseProposal:
 
 
 class LearningExerciseGenerator:
-    def __init__(self, inference) -> None:
-        self.inference = inference
+    def __init__(self) -> None:
+        pass
 
     def generate(self, knowledge: str) -> LearningExercise:
         knowledge = knowledge.strip()
@@ -63,27 +63,31 @@ class LearningExerciseGenerator:
         if not knowledge:
             raise ValueError("KNOWLEDGE_CANNOT_BE_EMPTY")
 
-        prompt = (
-            "Create one learning exercise from the knowledge below.\n"
-            f"Knowledge: {knowledge}\n"
-            "\n"
-            "The exercise must have an objectively verifiable answer.\n"
-            "Use EXACT for exact text answers.\n"
-            "Use NUMERICAL for numerical answers.\n"
-            "\n"
-            "Return exactly three lines:\n"
-            "Question: <question>\n"
-            "Expected Answer: <answer>\n"
-            "Verification Type: EXACT or NUMERICAL\n"
-            "Do not execute code."
-        )
+        # Template-based exercise generation from knowledge
+        # Extract key concepts and generate deterministic exercises
 
-        output = self.inference(prompt)
+        # Simple heuristic: if knowledge contains numbers, create numerical exercise
+        import re
+        numbers = re.findall(r'\b\d+\b', knowledge)
 
-        proposal = LearningExerciseProposal.parse(output)
+        if numbers and len(numbers) >= 2:
+            # Numerical exercise
+            question = f"What is the sum mentioned in: {knowledge[:50]}?"
+            expected_answer = str(sum(int(n) for n in numbers[:2]))
+            verification_type = "NUMERICAL"
+        else:
+            # Exact match exercise based on key terms
+            words = knowledge.split()
+            if len(words) > 3:
+                question = f"Complete the phrase from the knowledge: {' '.join(words[:3])} ___?"
+                expected_answer = words[3] if len(words) > 3 else "unknown"
+            else:
+                question = f"What is the key concept in: {knowledge}?"
+                expected_answer = knowledge.split()[0] if knowledge.split() else "unknown"
+            verification_type = "EXACT"
 
         return LearningExercise(
-            question=proposal.question,
-            expected_answer=proposal.expected_answer,
-            verification_type=proposal.verification_type,
+            question=question,
+            expected_answer=expected_answer,
+            verification_type=verification_type,
         )

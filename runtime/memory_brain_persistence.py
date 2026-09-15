@@ -1,11 +1,23 @@
+from __future__ import annotations
+
 import os
 import json
 from pathlib import Path
+from typing import TYPE_CHECKING
+
 from runtime.memory import Memory, MemoryState
 from runtime.experience import Experience
 from runtime.safety_event import SafetyEvent
 from runtime.memory_graph import MemoryGraph, MemoryNode, MemoryEdge
-from brain.brain import Brain
+
+# Brain module archived - make optional
+if TYPE_CHECKING:
+    from brain.brain import Brain
+else:
+    try:
+        from brain.brain import Brain
+    except ImportError:
+        Brain = None
 
 class PersistenceSchemaError(ValueError):
     """Raised when persisted data violates schema or version contracts."""

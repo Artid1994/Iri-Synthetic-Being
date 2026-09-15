@@ -1,0 +1,23 @@
+[
+  {
+    "subject": "เซร่า",
+    "predicate": "สัตว์สมมติ",
+    "object": "อาศัยอยู่ในถ้ำ ออกหากินตอนเช้า",
+    "context": "user_teaching",
+    "learned_at": "2026-09-15T02:33:49.915639"
+  },
+  {
+    "subject": "เซร่า",
+    "predicate": "สัตว์สมมติ",
+    "object": "อาศัยอยู่ในถ้ำ ออกหากินตอนเช้า",
+    "context": "user_teaching",
+    "learned_at": "2026-09-15T02:41:08.157760"
+  },
+  {
+    "subject": "เซร่า",
+    "predicate": "สัตว์สมมติ",
+    "object": "อาศัยอยู่ในถ้ำ ออกหากินตอนเช้า",
+    "context": "user_teaching",
+    "learned_at": "2026-09-15T02:41:19.471659"
+  }
+]

@@ -1,0 +1,39 @@
+{
+  "vowels": [
+    {"form": "◌ะ", "name": "sara a", "sound": "a", "length": "short", "position": "trailing"},
+    {"form": "◌า", "name": "sara aa", "sound": "aa", "length": "long", "position": "trailing"},
+    {"form": "◌ิ", "name": "sara i", "sound": "i", "length": "short", "position": "above"},
+    {"form": "◌ี", "name": "sara ii", "sound": "ii", "length": "long", "position": "above"},
+    {"form": "◌ึ", "name": "sara ue", "sound": "ue", "length": "short", "position": "above"},
+    {"form": "◌ื", "name": "sara uue", "sound": "uue", "length": "long", "position": "above"},
+    {"form": "◌ุ", "name": "sara u", "sound": "u", "length": "short", "position": "below"},
+    {"form": "◌ู", "name": "sara uu", "sound": "uu", "length": "long", "position": "below"},
+    {"form": "เ◌", "name": "sara e", "sound": "e", "length": "short", "position": "leading"},
+    {"form": "เ◌◌", "name": "sara ee", "sound": "ee", "length": "long", "position": "leading"},
+    {"form": "แ◌", "name": "sara ae", "sound": "ae", "length": "short", "position": "leading"},
+    {"form": "แ◌◌", "name": "sara aae", "sound": "aae", "length": "long", "position": "leading"},
+    {"form": "โ◌", "name": "sara o", "sound": "o", "length": "long", "position": "leading"},
+    {"form": "◌อ", "name": "sara o short", "sound": "o", "length": "short", "position": "trailing"},
+    {"form": "เ◌า", "name": "sara ao", "sound": "ao", "length": "long", "position": "leading+trailing"},
+    {"form": "◌ัย", "name": "sara ai", "sound": "ai", "length": "long", "position": "above+trailing"},
+    {"form": "ไ◌", "name": "sara ai mai malai", "sound": "ai", "length": "long", "position": "leading"},
+    {"form": "ใ◌", "name": "sara ai mai muan", "sound": "ai", "length": "long", "position": "leading"},
+    {"form": "เ◌อ", "name": "sara oe", "sound": "oe", "length": "short", "position": "leading+trailing"},
+    {"form": "เ◌อ◌", "name": "sara ooe", "sound": "ooe", "length": "long", "position": "leading+trailing"},
+    {"form": "เ◌ีย", "name": "sara ia", "sound": "ia", "length": "long", "position": "leading+above+trailing"},
+    {"form": "เ◌ียว", "name": "sara iao", "sound": "iao", "length": "long", "position": "leading+above+trailing"},
+    {"form": "◌ัว", "name": "sara ua", "sound": "ua", "length": "short", "position": "above+trailing"},
+    {"form": "◌ัว◌", "name": "sara uua", "sound": "uua", "length": "long", "position": "above+trailing"},
+    {"form": "อำ", "name": "sara am", "sound": "am", "length": "short", "position": "above"},
+    {"form": "◌ฤ", "name": "rue", "sound": "rue", "length": "short", "position": "trailing"},
+    {"form": "◌ฤๅ", "name": "ruue", "sound": "ruue", "length": "long", "position": "trailing"},
+    {"form": "◌ฦ", "name": "lue", "sound": "lue", "length": "short", "position": "trailing"},
+    {"form": "◌ฦๅ", "name": "luue", "sound": "luue", "length": "long", "position": "trailing"}
+  ],
+  "special_marks": [
+    {"mark": "◌ั", "name": "mai han akat", "function": "vowel_shortener"},
+    {"mark": "◌็", "name": "mai tai khu", "function": "vowel_shortener"},
+    {"mark": "◌์", "name": "thanthakhat", "function": "silent_letter"},
+    {"mark": "ๅ", "name": "lak khang yao", "function": "vowel_lengthener"}
+  ]
+}

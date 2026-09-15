@@ -9,15 +9,22 @@
           "context_type": "LITERAL",
           "meaning": "physical movement from here to there",
           "required_context": [],
-          "examples": ["ไป บ้าน (go home)"],
+          "examples": [
+            "ไป บ้าน (go home)"
+          ],
           "confidence": 1.0,
           "data_status": "KNOWN"
         },
         {
           "context_type": "PRAGMATIC",
           "meaning": "attend or participate in activity",
-          "required_context": ["activity", "event"],
-          "examples": ["ไป เรียน (go to study/attend class)"],
+          "required_context": [
+            "activity",
+            "event"
+          ],
+          "examples": [
+            "ไป เรียน (go to study/attend class)"
+          ],
           "confidence": 0.9,
           "data_status": "KNOWN"
         }
@@ -36,7 +43,9 @@
           "context_type": "LITERAL",
           "meaning": "consume food",
           "required_context": [],
-          "examples": ["กิน ข้าว (eat rice/meal)"],
+          "examples": [
+            "กิน ข้าว (eat rice/meal)"
+          ],
           "confidence": 1.0,
           "data_status": "KNOWN"
         }
@@ -55,15 +64,22 @@
           "context_type": "LITERAL",
           "meaning": "good quality or positive attribute",
           "required_context": [],
-          "examples": ["คน ดี (good person)"],
+          "examples": [
+            "คน ดี (good person)"
+          ],
           "confidence": 1.0,
           "data_status": "KNOWN"
         },
         {
           "context_type": "PRAGMATIC",
           "meaning": "agreement or acknowledgment in conversation",
-          "required_context": ["conversational", "response"],
-          "examples": ["ดี (okay/fine as response to suggestion)"],
+          "required_context": [
+            "conversational",
+            "response"
+          ],
+          "examples": [
+            "ดี (okay/fine as response to suggestion)"
+          ],
           "confidence": 0.8,
           "data_status": "AMBIGUOUS",
           "note": "Pragmatic use depends heavily on conversational context"
@@ -83,7 +99,9 @@
           "context_type": "LITERAL",
           "meaning": "human being",
           "required_context": [],
-          "examples": ["คน ไทย (Thai person)"],
+          "examples": [
+            "คน ไทย (Thai person)"
+          ],
           "confidence": 1.0,
           "data_status": "KNOWN"
         }
@@ -102,7 +120,9 @@
           "context_type": "LITERAL",
           "meaning": "water (liquid)",
           "required_context": [],
-          "examples": ["ดื่ม น้ำ (drink water)"],
+          "examples": [
+            "ดื่ม น้ำ (drink water)"
+          ],
           "confidence": 1.0,
           "data_status": "KNOWN"
         }
@@ -121,7 +141,9 @@
           "context_type": "LITERAL",
           "meaning": "yes/no question particle",
           "required_context": [],
-          "examples": ["ไป ไหม (go question)"],
+          "examples": [
+            "ไป ไหม (go question)"
+          ],
           "confidence": 1.0,
           "data_status": "KNOWN"
         }
@@ -130,6 +152,1081 @@
       "evidence_status": "KNOWN",
       "confidence": 1.0,
       "note": "Question particle used with verbs"
+    },
+    {
+      "word": "สวัสดี",
+      "lexical_meaning": "hello/goodbye/greet",
+      "semantic_field": "SOCIAL_INTERACTION",
+      "contextual_meanings": [
+        {
+          "context_type": "LITERAL",
+          "meaning": "polite greeting or farewell",
+          "required_context": [],
+          "examples": [
+            "สวัสดี ครับ (hello/goodbye [male])",
+            "สวัสดี ค่ะ (hello/goodbye [female])"
+          ],
+          "confidence": 1.0,
+          "data_status": "KNOWN"
+        },
+        {
+          "context_type": "PRAGMATIC",
+          "meaning": "blessing/wish for well-being",
+          "required_context": [
+            "formal",
+            "respectful"
+          ],
+          "examples": [
+            "สวัสดี ปีใหม่ (happy new year)"
+          ],
+          "confidence": 0.9,
+          "data_status": "KNOWN"
+        }
+      ],
+      "ambiguity_level": "MILDLY_AMBIGUOUS",
+      "evidence_status": "KNOWN",
+      "confidence": 1.0,
+      "note": "Most fundamental Thai greeting, from Sanskrit svasti (well-being)"
+    },
+    {
+      "word": "ขอบคุณ",
+      "lexical_meaning": "thank you",
+      "semantic_field": "SOCIAL_INTERACTION",
+      "contextual_meanings": [
+        {
+          "context_type": "LITERAL",
+          "meaning": "expression of gratitude",
+          "required_context": [],
+          "examples": [
+            "ขอบคุณ ครับ (thank you [male])",
+            "ขอบคุณ ค่ะ (thank you [female])"
+          ],
+          "confidence": 1.0,
+          "data_status": "KNOWN"
+        }
+      ],
+      "ambiguity_level": "UNAMBIGUOUS",
+      "evidence_status": "KNOWN",
+      "confidence": 1.0,
+      "note": "Fundamental expression of gratitude"
+    },
+    {
+      "word": "ครับ",
+      "lexical_meaning": "[polite particle, male]",
+      "semantic_field": "PRAGMATIC_MARKER",
+      "contextual_meanings": [
+        {
+          "context_type": "PRAGMATIC",
+          "meaning": "polite ending for male speakers",
+          "required_context": [
+            "male_speaker"
+          ],
+          "examples": [
+            "สวัสดี ครับ",
+            "ขอบคุณ ครับ"
+          ],
+          "confidence": 1.0,
+          "data_status": "KNOWN"
+        }
+      ],
+      "ambiguity_level": "UNAMBIGUOUS",
+      "evidence_status": "KNOWN",
+      "confidence": 1.0,
+      "note": "Mandatory polite marker for male speakers"
+    },
+    {
+      "word": "ค่ะ",
+      "lexical_meaning": "[polite particle, female]",
+      "semantic_field": "PRAGMATIC_MARKER",
+      "contextual_meanings": [
+        {
+          "context_type": "PRAGMATIC",
+          "meaning": "polite ending for female speakers",
+          "required_context": [
+            "female_speaker"
+          ],
+          "examples": [
+            "สวัสดี ค่ะ",
+            "ขอบคุณ ค่ะ"
+          ],
+          "confidence": 1.0,
+          "data_status": "KNOWN"
+        }
+      ],
+      "ambiguity_level": "UNAMBIGUOUS",
+      "evidence_status": "KNOWN",
+      "confidence": 1.0,
+      "note": "Mandatory polite marker for female speakers"
+    },
+    {
+      "word": "ใช่",
+      "lexical_meaning": "yes/correct",
+      "semantic_field": "AFFIRMATION",
+      "contextual_meanings": [
+        {
+          "context_type": "LITERAL",
+          "meaning": "affirmative response",
+          "required_context": [],
+          "examples": [
+            "ใช่ ครับ (yes)",
+            "ใช่ ไหม (is it correct?)"
+          ],
+          "confidence": 1.0,
+          "data_status": "KNOWN"
+        }
+      ],
+      "ambiguity_level": "UNAMBIGUOUS",
+      "evidence_status": "KNOWN",
+      "confidence": 1.0,
+      "note": "Basic affirmation"
+    },
+    {
+      "word": "ไม่",
+      "lexical_meaning": "no/not",
+      "semantic_field": "NEGATION",
+      "contextual_meanings": [
+        {
+          "context_type": "LITERAL",
+          "meaning": "negation marker",
+          "required_context": [],
+          "examples": [
+            "ไม่ ไป (not go)",
+            "ไม่ ใช่ (no/not correct)"
+          ],
+          "confidence": 1.0,
+          "data_status": "KNOWN"
+        }
+      ],
+      "ambiguity_level": "UNAMBIGUOUS",
+      "evidence_status": "KNOWN",
+      "confidence": 1.0,
+      "note": "Primary negation marker"
+    },
+    {
+      "word": "อะไร",
+      "lexical_meaning": "what",
+      "semantic_field": "INTERROGATIVE",
+      "contextual_meanings": [
+        {
+          "context_type": "LITERAL",
+          "meaning": "question word for things/actions",
+          "required_context": [],
+          "examples": [
+            "ทำ อะไร (do what?)",
+            "นี่ คือ อะไร (what is this?)"
+          ],
+          "confidence": 1.0,
+          "data_status": "KNOWN"
+        }
+      ],
+      "ambiguity_level": "UNAMBIGUOUS",
+      "evidence_status": "KNOWN",
+      "confidence": 1.0,
+      "note": "Primary interrogative for objects/actions"
+    },
+    {
+      "word": "ที่ไหน",
+      "lexical_meaning": "where",
+      "semantic_field": "INTERROGATIVE",
+      "contextual_meanings": [
+        {
+          "context_type": "LITERAL",
+          "meaning": "question word for location",
+          "required_context": [],
+          "examples": [
+            "ไป ที่ไหน (go where?)",
+            "อยู่ ที่ไหน (located where?)"
+          ],
+          "confidence": 1.0,
+          "data_status": "KNOWN"
+        }
+      ],
+      "ambiguity_level": "UNAMBIGUOUS",
+      "evidence_status": "KNOWN",
+      "confidence": 1.0,
+      "note": "Interrogative for location"
+    },
+    {
+      "word": "เป็น",
+      "lexical_meaning": "be/is",
+      "semantic_field": "STATE",
+      "contextual_meanings": [
+        {
+          "context_type": "LITERAL",
+          "meaning": "copula/state of being",
+          "required_context": [],
+          "examples": [
+            "เป็น คน ไทย (be Thai person)",
+            "เป็น อะไร (be what?)"
+          ],
+          "confidence": 1.0,
+          "data_status": "KNOWN"
+        }
+      ],
+      "ambiguity_level": "MILDLY_AMBIGUOUS",
+      "evidence_status": "KNOWN",
+      "confidence": 1.0,
+      "note": "Essential copula verb"
+    },
+    {
+      "word": "มี",
+      "lexical_meaning": "have/exist",
+      "semantic_field": "POSSESSION",
+      "contextual_meanings": [
+        {
+          "context_type": "LITERAL",
+          "meaning": "possession or existence",
+          "required_context": [],
+          "examples": [
+            "มี น้ำ (have water)",
+            "มี ไหม (do you have? / is there?)"
+          ],
+          "confidence": 1.0,
+          "data_status": "KNOWN"
+        }
+      ],
+      "ambiguity_level": "MILDLY_AMBIGUOUS",
+      "evidence_status": "KNOWN",
+      "confidence": 1.0,
+      "note": "Possession and existence"
+    },
+    {
+      "word": "ทำ",
+      "lexical_meaning": "do/make",
+      "semantic_field": "ACTION",
+      "contextual_meanings": [
+        {
+          "context_type": "LITERAL",
+          "meaning": "perform action or create",
+          "required_context": [],
+          "examples": [
+            "ทำ อะไร (do what?)",
+            "ทำ งาน (do work)"
+          ],
+          "confidence": 1.0,
+          "data_status": "KNOWN"
+        }
+      ],
+      "ambiguity_level": "MILDLY_AMBIGUOUS",
+      "evidence_status": "KNOWN",
+      "confidence": 1.0,
+      "note": "General action verb"
+    },
+    {
+      "word": "รัก",
+      "lexical_meaning": "love",
+      "semantic_field": "EMOTION",
+      "contextual_meanings": [
+        {
+          "context_type": "LITERAL",
+          "meaning": "deep affection/love",
+          "required_context": [],
+          "examples": [
+            "รัก คุณ (love you)"
+          ],
+          "confidence": 1.0,
+          "data_status": "KNOWN"
+        }
+      ],
+      "ambiguity_level": "UNAMBIGUOUS",
+      "evidence_status": "KNOWN",
+      "confidence": 1.0,
+      "note": "Emotion verb"
+    },
+    {
+      "word": "ชอบ",
+      "lexical_meaning": "like",
+      "semantic_field": "PREFERENCE",
+      "contextual_meanings": [
+        {
+          "context_type": "LITERAL",
+          "meaning": "prefer or enjoy",
+          "required_context": [],
+          "examples": [
+            "ชอบ กิน (like to eat)"
+          ],
+          "confidence": 1.0,
+          "data_status": "KNOWN"
+        }
+      ],
+      "ambiguity_level": "UNAMBIGUOUS",
+      "evidence_status": "KNOWN",
+      "confidence": 1.0,
+      "note": "Preference verb"
+    },
+    {
+      "word": "ไทย",
+      "lexical_meaning": "Thai",
+      "semantic_field": "NATIONALITY",
+      "contextual_meanings": [
+        {
+          "context_type": "LITERAL",
+          "meaning": "pertaining to Thailand/Thai people",
+          "required_context": [],
+          "examples": [
+            "คน ไทย (Thai person)",
+            "ภาษา ไทย (Thai language)"
+          ],
+          "confidence": 1.0,
+          "data_status": "KNOWN"
+        }
+      ],
+      "ambiguity_level": "UNAMBIGUOUS",
+      "evidence_status": "KNOWN",
+      "confidence": 1.0,
+      "note": "Nationality/language descriptor"
+    },
+    {
+      "word": "ภาษา",
+      "lexical_meaning": "language",
+      "semantic_field": "ABSTRACT_CONCEPT",
+      "contextual_meanings": [
+        {
+          "context_type": "LITERAL",
+          "meaning": "language/speech",
+          "required_context": [],
+          "examples": [
+            "ภาษา ไทย (Thai language)",
+            "ภาษา อังกฤษ (English language)"
+          ],
+          "confidence": 1.0,
+          "data_status": "KNOWN"
+        }
+      ],
+      "ambiguity_level": "UNAMBIGUOUS",
+      "evidence_status": "KNOWN",
+      "confidence": 1.0,
+      "note": "Abstract noun for language"
+    },
+    {
+      "word": "ไร",
+      "lexical_meaning": "what/anything",
+      "semantic_field": "QUANTIFIER",
+      "contextual_meanings": [
+        {
+          "context_type": "PRAGMATIC",
+          "meaning": "rhetorical minimizer (nothing/anything)",
+          "required_context": [
+            "idiomatic"
+          ],
+          "examples": [
+            "ไม่ เป็น ไร (never mind/no problem)",
+            "อะไร ก็ ได้ ไร (whatever/anything)"
+          ],
+          "confidence": 0.9,
+          "data_status": "KNOWN"
+        }
+      ],
+      "ambiguity_level": "HIGHLY_AMBIGUOUS",
+      "evidence_status": "KNOWN",
+      "confidence": 0.9,
+      "note": "Pragmatic particle in idioms"
+    },
+    {
+      "word": "ผม",
+      "lexical_meaning": "I/me (male polite)",
+      "semantic_field": "PRONOUN",
+      "contextual_meanings": [
+        {
+          "context_type": "LITERAL",
+          "meaning": "first person pronoun for male speakers",
+          "required_context": [
+            "male_speaker",
+            "polite"
+          ],
+          "examples": [
+            "ผม ชอบ (I like)",
+            "ผม เป็น (I am)"
+          ],
+          "confidence": 1.0,
+          "data_status": "KNOWN"
+        }
+      ],
+      "ambiguity_level": "UNAMBIGUOUS",
+      "evidence_status": "KNOWN",
+      "confidence": 1.0,
+      "note": "Polite male first person"
+    },
+    {
+      "word": "คุณ",
+      "lexical_meaning": "you (polite)",
+      "semantic_field": "PRONOUN",
+      "contextual_meanings": [
+        {
+          "context_type": "LITERAL",
+          "meaning": "second person pronoun, polite/respectful",
+          "required_context": [],
+          "examples": [
+            "คุณ ชื่อ อะไร (What is your name?)"
+          ],
+          "confidence": 1.0,
+          "data_status": "KNOWN"
+        }
+      ],
+      "ambiguity_level": "UNAMBIGUOUS",
+      "evidence_status": "KNOWN",
+      "confidence": 1.0,
+      "note": "Standard polite you"
+    },
+    {
+      "word": "เขา",
+      "lexical_meaning": "he/she/they",
+      "semantic_field": "PRONOUN",
+      "contextual_meanings": [
+        {
+          "context_type": "LITERAL",
+          "meaning": "third person pronoun (gender neutral)",
+          "required_context": [],
+          "examples": [
+            "เขา ไป (He/she goes)"
+          ],
+          "confidence": 1.0,
+          "data_status": "KNOWN"
+        }
+      ],
+      "ambiguity_level": "MILDLY_AMBIGUOUS",
+      "evidence_status": "KNOWN",
+      "confidence": 1.0,
+      "note": "Gender neutral third person"
+    },
+    {
+      "word": "วัน",
+      "lexical_meaning": "day",
+      "semantic_field": "TIME",
+      "contextual_meanings": [
+        {
+          "context_type": "LITERAL",
+          "meaning": "day/daytime",
+          "required_context": [],
+          "examples": [
+            "วัน นี้ (today)",
+            "ทุก วัน (every day)"
+          ],
+          "confidence": 1.0,
+          "data_status": "KNOWN"
+        }
+      ],
+      "ambiguity_level": "UNAMBIGUOUS",
+      "evidence_status": "KNOWN",
+      "confidence": 1.0,
+      "note": "Time unit: day"
+    },
+    {
+      "word": "นี้",
+      "lexical_meaning": "this",
+      "semantic_field": "DEMONSTRATIVE",
+      "contextual_meanings": [
+        {
+          "context_type": "LITERAL",
+          "meaning": "proximal demonstrative (this/these)",
+          "required_context": [],
+          "examples": [
+            "นี้ (this)",
+            "วัน นี้ (today, lit. day this)"
+          ],
+          "confidence": 1.0,
+          "data_status": "KNOWN"
+        }
+      ],
+      "ambiguity_level": "UNAMBIGUOUS",
+      "evidence_status": "KNOWN",
+      "confidence": 1.0,
+      "note": "Proximal demonstrative"
+    },
+    {
+      "word": "นั้น",
+      "lexical_meaning": "that",
+      "semantic_field": "DEMONSTRATIVE",
+      "contextual_meanings": [
+        {
+          "context_type": "LITERAL",
+          "meaning": "distal demonstrative (that/those)",
+          "required_context": [],
+          "examples": [
+            "นั้น (that)",
+            "คน นั้น (that person)"
+          ],
+          "confidence": 1.0,
+          "data_status": "KNOWN"
+        }
+      ],
+      "ambiguity_level": "UNAMBIGUOUS",
+      "evidence_status": "KNOWN",
+      "confidence": 1.0,
+      "note": "Distal demonstrative"
+    },
+    {
+      "word": "อาหาร",
+      "lexical_meaning": "food",
+      "semantic_field": "FOOD",
+      "contextual_meanings": [
+        {
+          "context_type": "LITERAL",
+          "meaning": "food/meal",
+          "required_context": [],
+          "examples": [
+            "อาหาร ไทย (Thai food)",
+            "อาหาร ดี (good food)"
+          ],
+          "confidence": 1.0,
+          "data_status": "KNOWN"
+        }
+      ],
+      "ambiguity_level": "UNAMBIGUOUS",
+      "evidence_status": "KNOWN",
+      "confidence": 1.0,
+      "note": "General term for food"
+    },
+    {
+      "word": "มา",
+      "lexical_meaning": "come",
+      "semantic_field": "MOTION",
+      "contextual_meanings": [
+        {
+          "context_type": "LITERAL",
+          "meaning": "movement toward speaker/here",
+          "required_context": [],
+          "examples": [
+            "มา นี่ (come here)",
+            "มา กิน (come to eat)"
+          ],
+          "confidence": 1.0,
+          "data_status": "KNOWN"
+        }
+      ],
+      "ambiguity_level": "UNAMBIGUOUS",
+      "evidence_status": "KNOWN",
+      "confidence": 1.0,
+      "note": "Motion toward speaker"
+    },
+    {
+      "word": "อยู่",
+      "lexical_meaning": "be/stay/live",
+      "semantic_field": "STATE",
+      "contextual_meanings": [
+        {
+          "context_type": "LITERAL",
+          "meaning": "exist/be located/reside",
+          "required_context": [],
+          "examples": [
+            "อยู่ ที่ไหน (be where/live where)",
+            "อยู่ บ้าน (stay home)"
+          ],
+          "confidence": 1.0,
+          "data_status": "KNOWN"
+        }
+      ],
+      "ambiguity_level": "MILDLY_AMBIGUOUS",
+      "evidence_status": "KNOWN",
+      "confidence": 1.0,
+      "note": "Location/existence/residence"
+    },
+    {
+      "word": "ดู",
+      "lexical_meaning": "see/watch/look",
+      "semantic_field": "PERCEPTION",
+      "contextual_meanings": [
+        {
+          "context_type": "LITERAL",
+          "meaning": "visual perception",
+          "required_context": [],
+          "examples": [
+            "ดู ทีวี (watch TV)",
+            "ดู หนัง (watch movie)"
+          ],
+          "confidence": 1.0,
+          "data_status": "KNOWN"
+        }
+      ],
+      "ambiguity_level": "UNAMBIGUOUS",
+      "evidence_status": "KNOWN",
+      "confidence": 1.0,
+      "note": "Visual perception"
+    },
+    {
+      "word": "ได้",
+      "lexical_meaning": "can/get/obtain",
+      "semantic_field": "MODALITY",
+      "contextual_meanings": [
+        {
+          "context_type": "LITERAL",
+          "meaning": "ability or acquisition",
+          "required_context": [],
+          "examples": [
+            "ทำ ได้ (can do)",
+            "ได้ อะไร (get what)"
+          ],
+          "confidence": 0.9,
+          "data_status": "KNOWN"
+        }
+      ],
+      "ambiguity_level": "HIGHLY_AMBIGUOUS",
+      "evidence_status": "KNOWN",
+      "confidence": 0.9,
+      "note": "Modal auxiliary or acquisition verb"
+    },
+    {
+      "word": "จะ",
+      "lexical_meaning": "will/shall (future)",
+      "semantic_field": "MODALITY",
+      "contextual_meanings": [
+        {
+          "context_type": "PRAGMATIC",
+          "meaning": "future tense marker",
+          "required_context": [
+            "future_action"
+          ],
+          "examples": [
+            "จะ ไป (will go)",
+            "จะ กิน (will eat)"
+          ],
+          "confidence": 1.0,
+          "data_status": "KNOWN"
+        }
+      ],
+      "ambiguity_level": "UNAMBIGUOUS",
+      "evidence_status": "KNOWN",
+      "confidence": 1.0,
+      "note": "Future tense auxiliary"
+    },
+    {
+      "word": "รู้",
+      "lexical_meaning": "know",
+      "semantic_field": "COGNITION",
+      "contextual_meanings": [
+        {
+          "context_type": "LITERAL",
+          "meaning": "have knowledge/be aware",
+          "required_context": [],
+          "examples": [
+            "รู้ ไหม (know?)",
+            "ไม่ รู้ (don't know)"
+          ],
+          "confidence": 1.0,
+          "data_status": "KNOWN"
+        }
+      ],
+      "ambiguity_level": "UNAMBIGUOUS",
+      "evidence_status": "KNOWN",
+      "confidence": 1.0,
+      "note": "Knowledge/awareness verb"
+    },
+    {
+      "word": "พูด",
+      "lexical_meaning": "speak/say/talk",
+      "semantic_field": "COMMUNICATION",
+      "contextual_meanings": [
+        {
+          "context_type": "LITERAL",
+          "meaning": "verbal communication",
+          "required_context": [],
+          "examples": [
+            "พูด ภาษา ไทย (speak Thai)",
+            "พูด อะไร (say what)"
+          ],
+          "confidence": 1.0,
+          "data_status": "KNOWN"
+        }
+      ],
+      "ambiguity_level": "UNAMBIGUOUS",
+      "evidence_status": "KNOWN",
+      "confidence": 1.0,
+      "note": "Speech/communication"
+    },
+    {
+      "word": "เรียน",
+      "lexical_meaning": "study/learn",
+      "semantic_field": "COGNITION",
+      "contextual_meanings": [
+        {
+          "context_type": "LITERAL",
+          "meaning": "acquire knowledge formally",
+          "required_context": [],
+          "examples": [
+            "เรียน ภาษา (study language)",
+            "ไป เรียน (go to study/school)"
+          ],
+          "confidence": 1.0,
+          "data_status": "KNOWN"
+        }
+      ],
+      "ambiguity_level": "UNAMBIGUOUS",
+      "evidence_status": "KNOWN",
+      "confidence": 1.0,
+      "note": "Formal learning/study"
+    },
+    {
+      "word": "ทำงาน",
+      "lexical_meaning": "work",
+      "semantic_field": "ACTION",
+      "contextual_meanings": [
+        {
+          "context_type": "LITERAL",
+          "meaning": "engage in employment/labor",
+          "required_context": [],
+          "examples": [
+            "ทำงาน ที่ไหน (work where)",
+            "ไป ทำงาน (go to work)"
+          ],
+          "confidence": 1.0,
+          "data_status": "KNOWN"
+        }
+      ],
+      "ambiguity_level": "UNAMBIGUOUS",
+      "evidence_status": "KNOWN",
+      "confidence": 1.0,
+      "note": "Employment/work"
+    },
+    {
+      "word": "บ้าน",
+      "lexical_meaning": "house/home",
+      "semantic_field": "LOCATION",
+      "contextual_meanings": [
+        {
+          "context_type": "LITERAL",
+          "meaning": "dwelling/residence",
+          "required_context": [],
+          "examples": [
+            "อยู่ บ้าน (be at home)",
+            "ไป บ้าน (go home)"
+          ],
+          "confidence": 1.0,
+          "data_status": "KNOWN"
+        }
+      ],
+      "ambiguity_level": "UNAMBIGUOUS",
+      "evidence_status": "KNOWN",
+      "confidence": 1.0,
+      "note": "Dwelling/residence"
+    },
+    {
+      "word": "ใหญ่",
+      "lexical_meaning": "big/large",
+      "semantic_field": "QUALITY",
+      "contextual_meanings": [
+        {
+          "context_type": "LITERAL",
+          "meaning": "large in size",
+          "required_context": [],
+          "examples": [
+            "บ้าน ใหญ่ (big house)"
+          ],
+          "confidence": 1.0,
+          "data_status": "KNOWN"
+        }
+      ],
+      "ambiguity_level": "UNAMBIGUOUS",
+      "evidence_status": "KNOWN",
+      "confidence": 1.0
+    },
+    {
+      "word": "เล็ก",
+      "lexical_meaning": "small/little",
+      "semantic_field": "QUALITY",
+      "contextual_meanings": [
+        {
+          "context_type": "LITERAL",
+          "meaning": "small in size",
+          "required_context": [],
+          "examples": [
+            "คน เล็ก (small person)"
+          ],
+          "confidence": 1.0,
+          "data_status": "KNOWN"
+        }
+      ],
+      "ambiguity_level": "UNAMBIGUOUS",
+      "evidence_status": "KNOWN",
+      "confidence": 1.0
+    },
+    {
+      "word": "มาก",
+      "lexical_meaning": "very/much/many",
+      "semantic_field": "QUANTITY",
+      "contextual_meanings": [
+        {
+          "context_type": "PRAGMATIC",
+          "meaning": "intensifier/quantifier",
+          "required_context": [],
+          "examples": [
+            "ดี มาก (very good)",
+            "มาก (many/much)"
+          ],
+          "confidence": 1.0,
+          "data_status": "KNOWN"
+        }
+      ],
+      "ambiguity_level": "MILDLY_AMBIGUOUS",
+      "evidence_status": "KNOWN",
+      "confidence": 1.0
+    },
+    {
+      "word": "น้อย",
+      "lexical_meaning": "little/few",
+      "semantic_field": "QUANTITY",
+      "contextual_meanings": [
+        {
+          "context_type": "LITERAL",
+          "meaning": "small quantity",
+          "required_context": [],
+          "examples": [
+            "น้อย (little/few)"
+          ],
+          "confidence": 1.0,
+          "data_status": "KNOWN"
+        }
+      ],
+      "ambiguity_level": "UNAMBIGUOUS",
+      "evidence_status": "KNOWN",
+      "confidence": 1.0
+    },
+    {
+      "word": "สวย",
+      "lexical_meaning": "beautiful/pretty",
+      "semantic_field": "QUALITY",
+      "contextual_meanings": [
+        {
+          "context_type": "LITERAL",
+          "meaning": "aesthetically pleasing",
+          "required_context": [],
+          "examples": [
+            "สวย มาก (very beautiful)"
+          ],
+          "confidence": 1.0,
+          "data_status": "KNOWN"
+        }
+      ],
+      "ambiguity_level": "UNAMBIGUOUS",
+      "evidence_status": "KNOWN",
+      "confidence": 1.0
+    },
+    {
+      "word": "เก่ง",
+      "lexical_meaning": "good at/skilled",
+      "semantic_field": "QUALITY",
+      "contextual_meanings": [
+        {
+          "context_type": "LITERAL",
+          "meaning": "proficient/talented",
+          "required_context": [],
+          "examples": [
+            "เก่ง ภาษา (good at language)"
+          ],
+          "confidence": 1.0,
+          "data_status": "KNOWN"
+        }
+      ],
+      "ambiguity_level": "UNAMBIGUOUS",
+      "evidence_status": "KNOWN",
+      "confidence": 1.0
+    },
+    {
+      "word": "เวลา",
+      "lexical_meaning": "time",
+      "semantic_field": "TIME",
+      "contextual_meanings": [
+        {
+          "context_type": "LITERAL",
+          "meaning": "time/moment",
+          "required_context": [],
+          "examples": [
+            "เวลา ไหน (what time)"
+          ],
+          "confidence": 1.0,
+          "data_status": "KNOWN"
+        }
+      ],
+      "ambiguity_level": "UNAMBIGUOUS",
+      "evidence_status": "KNOWN",
+      "confidence": 1.0
+    },
+    {
+      "word": "ข้าว",
+      "lexical_meaning": "rice/meal",
+      "semantic_field": "FOOD",
+      "contextual_meanings": [
+        {
+          "context_type": "LITERAL",
+          "meaning": "rice or meal",
+          "required_context": [],
+          "examples": [
+            "กิน ข้าว (eat rice/meal)"
+          ],
+          "confidence": 1.0,
+          "data_status": "KNOWN"
+        }
+      ],
+      "ambiguity_level": "MILDLY_AMBIGUOUS",
+      "evidence_status": "KNOWN",
+      "confidence": 1.0
+    },
+    {
+      "word": "ชื่อ",
+      "lexical_meaning": "name",
+      "semantic_field": "ATTRIBUTE",
+      "contextual_meanings": [
+        {
+          "context_type": "LITERAL",
+          "meaning": "personal name",
+          "required_context": [],
+          "examples": [
+            "ชื่อ อะไร (what name)"
+          ],
+          "confidence": 1.0,
+          "data_status": "KNOWN"
+        }
+      ],
+      "ambiguity_level": "UNAMBIGUOUS",
+      "evidence_status": "KNOWN",
+      "confidence": 1.0
+    },
+    {
+      "word": "หนัง",
+      "lexical_meaning": "movie/film",
+      "semantic_field": "MEDIA",
+      "contextual_meanings": [
+        {
+          "context_type": "LITERAL",
+          "meaning": "motion picture",
+          "required_context": [],
+          "examples": [
+            "ดู หนัง (watch movie)"
+          ],
+          "confidence": 1.0,
+          "data_status": "KNOWN"
+        }
+      ],
+      "ambiguity_level": "UNAMBIGUOUS",
+      "evidence_status": "KNOWN",
+      "confidence": 1.0
+    },
+    {
+      "word": "ทุก",
+      "lexical_meaning": "every/all",
+      "semantic_field": "QUANTITY",
+      "contextual_meanings": [
+        {
+          "context_type": "LITERAL",
+          "meaning": "universal quantifier",
+          "required_context": [],
+          "examples": [
+            "ทุก วัน (every day)",
+            "ทุก คน (everyone)"
+          ],
+          "confidence": 1.0,
+          "data_status": "KNOWN"
+        }
+      ],
+      "ambiguity_level": "UNAMBIGUOUS",
+      "evidence_status": "KNOWN",
+      "confidence": 1.0
+    },
+    {
+      "word": "เข้าใจ",
+      "lexical_meaning": "understand",
+      "semantic_field": "COGNITION",
+      "contextual_meanings": [
+        {
+          "context_type": "LITERAL",
+          "meaning": "comprehend/grasp meaning",
+          "required_context": [],
+          "examples": [
+            "เข้าใจ ไหม (do you understand?)",
+            "เข้าใจ แล้ว (understood)"
+          ],
+          "confidence": 1.0,
+          "data_status": "KNOWN"
+        }
+      ],
+      "ambiguity_level": "UNAMBIGUOUS",
+      "evidence_status": "KNOWN",
+      "confidence": 1.0,
+      "note": "Comprehension verb"
+    },
+    {
+      "word": "ยินดี",
+      "lexical_meaning": "pleased/willing/glad",
+      "semantic_field": "EMOTION",
+      "contextual_meanings": [
+        {
+          "context_type": "PRAGMATIC",
+          "meaning": "polite expression of pleasure/willingness",
+          "required_context": [
+            "polite_response"
+          ],
+          "examples": [
+            "ยินดี (you're welcome)",
+            "ยินดี ที่ ได้ รู้จัก (pleased to meet you)"
+          ],
+          "confidence": 1.0,
+          "data_status": "KNOWN"
+        }
+      ],
+      "ambiguity_level": "UNAMBIGUOUS",
+      "evidence_status": "KNOWN",
+      "confidence": 1.0,
+      "note": "Polite response word"
+    },
+    {
+      "word": "คำถาม",
+      "lexical_meaning": "question",
+      "semantic_field": "COMMUNICATION",
+      "contextual_meanings": [
+        {
+          "context_type": "LITERAL",
+          "meaning": "interrogative/query",
+          "required_context": [],
+          "examples": [
+            "เข้าใจ คำถาม (understand the question)"
+          ],
+          "confidence": 1.0,
+          "data_status": "KNOWN"
+        }
+      ],
+      "ambiguity_level": "UNAMBIGUOUS",
+      "evidence_status": "KNOWN",
+      "confidence": 1.0,
+      "note": "Noun: question"
+    },
+    {
+      "word": "ใคร",
+      "lexical_meaning": "who",
+      "semantic_field": "INTERROGATIVE",
+      "contextual_meanings": [
+        {
+          "context_type": "LITERAL",
+          "meaning": "which person",
+          "required_context": [],
+          "examples": [
+            "คุณ เป็น ใคร (who are you)"
+          ],
+          "confidence": 1.0,
+          "data_status": "KNOWN"
+        }
+      ],
+      "ambiguity_level": "UNAMBIGUOUS",
+      "evidence_status": "KNOWN",
+      "confidence": 1.0
+    },
+    {
+      "word": "ที่นี่",
+      "lexical_meaning": "here",
+      "semantic_field": "LOCATION",
+      "contextual_meanings": [
+        {
+          "context_type": "LITERAL",
+          "meaning": "this place",
+          "required_context": [],
+          "examples": [
+            "อยู่ ที่นี่ (be here)"
+          ],
+          "confidence": 1.0,
+          "data_status": "KNOWN"
+        }
+      ],
+      "ambiguity_level": "UNAMBIGUOUS",
+      "evidence_status": "KNOWN",
+      "confidence": 1.0
     }
   ],
   "semantic_patterns": [
@@ -137,7 +1234,10 @@
       "pattern": "VERB + VERB (serial)",
       "semantic_function": "purpose or sequence",
       "compositional_rule": "verb1.action + 'to' + verb2.action",
-      "examples": ["ไป กิน (go to eat)", "มา เรียน (come to study)"],
+      "examples": [
+        "ไป กิน (go to eat)",
+        "มา เรียน (come to study)"
+      ],
       "data_status": "KNOWN",
       "note": "Serial verb construction from Week 5"
     },
@@ -145,7 +1245,10 @@
       "pattern": "NOUN + ADJECTIVE",
       "semantic_function": "modification",
       "compositional_rule": "noun.object + adjective.quality",
-      "examples": ["คน ดี (good person)", "น้ำ ร้อน (hot water)"],
+      "examples": [
+        "คน ดี (good person)",
+        "น้ำ ร้อน (hot water)"
+      ],
       "data_status": "KNOWN",
       "note": "Basic Thai word order"
     }
@@ -158,7 +1261,9 @@
         "okay/fine (pragmatic agreement)"
       ],
       "resolution": "CONTEXT_REQUIRED",
-      "resolution_clues": ["Is this describing quality or responding to question?"],
+      "resolution_clues": [
+        "Is this describing quality or responding to question?"
+      ],
       "data_status": "KNOWN_AMBIGUITY",
       "note": "Single word highly context-dependent"
     },
@@ -170,7 +1275,9 @@
         "attend class (idiomatic meaning)"
       ],
       "resolution": "MILDLY_AMBIGUOUS",
-      "resolution_clues": ["Serial verb interpretation depends on pragmatic context"],
+      "resolution_clues": [
+        "Serial verb interpretation depends on pragmatic context"
+      ],
       "data_status": "KNOWN_AMBIGUITY",
       "note": "Serial verbs have slight pragmatic variation"
     }

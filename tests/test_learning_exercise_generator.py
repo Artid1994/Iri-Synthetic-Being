@@ -1,66 +1,47 @@
 import unittest
 
-from runtime.learning_exercise import LearningExercise
 from runtime.learning_exercise_generator import LearningExerciseGenerator
+from runtime.learning_exercise import LearningExercise
 
 
 class TestLearningExerciseGenerator(unittest.TestCase):
-    def test_generator_creates_exercise_from_valid_ai_output(self):
-        inference = lambda prompt: (
-            "Question: What is 2+2?\n"
-            "Expected Answer: 4\n"
-            "Verification Type: EXACT"
-        )
+    def test_generator_creates_exercise_from_knowledge(self):
+        # Generator now uses template-based generation
+        generator = LearningExerciseGenerator()
 
-        generator = LearningExerciseGenerator(inference)
+        exercise = generator.generate("Python sum of 5 and 3")
 
-        exercise = generator.generate(
-            "Addition combines quantities."
-        )
+        self.assertIsInstance(exercise, LearningExercise)
+        self.assertTrue(exercise.question)
+        self.assertTrue(exercise.expected_answer)
+        self.assertIn(exercise.verification_type, {"EXACT", "NUMERICAL"})
 
-        self.assertIsInstance(
-            exercise,
-            LearningExercise,
-        )
+    def test_generator_extracts_numbers_for_numerical_exercises(self):
+        generator = LearningExerciseGenerator()
+
+        exercise = generator.generate("The values are 10 and 20")
+
+        self.assertEqual(exercise.verification_type, "NUMERICAL")
+        self.assertEqual(exercise.expected_answer, "30")
+
+    def test_generator_creates_text_exercises_without_numbers(self):
+        generator = LearningExerciseGenerator()
+
+        exercise = generator.generate("Python is a programming language")
+
+        self.assertEqual(exercise.verification_type, "EXACT")
+        self.assertTrue(exercise.question)
+        self.assertTrue(exercise.expected_answer)
+
+    def test_generator_rejects_empty_knowledge(self):
+        generator = LearningExerciseGenerator()
+
+        with self.assertRaises(ValueError) as context:
+            generator.generate("")
+
         self.assertEqual(
-            exercise.question,
-            "What is 2+2?",
-        )
-        self.assertEqual(
-            exercise.expected_answer,
-            "4",
-        )
-
-    def test_generator_rejects_invalid_ai_output(self):
-        inference = lambda prompt: "invalid output"
-
-        generator = LearningExerciseGenerator(inference)
-
-        with self.assertRaises(ValueError):
-            generator.generate(
-                "Addition combines quantities."
-            )
-
-    def test_generator_prompt_contains_knowledge(self):
-        prompts = []
-
-        def inference(prompt):
-            prompts.append(prompt)
-            return (
-                "Question: What is 2+2?\n"
-                "Expected Answer: 4\n"
-            "Verification Type: EXACT"
-            )
-
-        generator = LearningExerciseGenerator(inference)
-
-        generator.generate(
-            "Addition combines quantities."
-        )
-
-        self.assertIn(
-            "Addition combines quantities.",
-            prompts[0],
+            str(context.exception),
+            "KNOWLEDGE_CANNOT_BE_EMPTY",
         )
 
 

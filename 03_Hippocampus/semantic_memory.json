@@ -1,0 +1,5261 @@
+{
+  "entries": [
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311012.1198466,
+      "context_used": "สวัสดี ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311012.1201239,
+      "context_used": "สวัสดี ครับ"
+    },
+    {
+      "word": "ไป",
+      "language": "thai",
+      "lexical_meaning": "go",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311012.156895,
+      "context_used": "ไป ที่ไหน ครับ"
+    },
+    {
+      "word": "ที่ไหน",
+      "language": "thai",
+      "lexical_meaning": "where",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311012.1573849,
+      "context_used": "ไป ที่ไหน ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311012.157619,
+      "context_used": "ไป ที่ไหน ครับ"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311015.2392995,
+      "context_used": "สวัสดี"
+    },
+    {
+      "word": "ขอบคุณ",
+      "language": "thai",
+      "lexical_meaning": "thank you",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311015.2803814,
+      "context_used": "ขอบคุณ"
+    },
+    {
+      "word": "รัก",
+      "language": "thai",
+      "lexical_meaning": "love",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311015.3069751,
+      "context_used": "รัก"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311015.325919,
+      "context_used": "สวัสดี"
+    },
+    {
+      "word": "ขอบคุณ",
+      "language": "thai",
+      "lexical_meaning": "thank you",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311015.3333797,
+      "context_used": "ขอบคุณ"
+    },
+    {
+      "word": "ไป",
+      "language": "thai",
+      "lexical_meaning": "go",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311015.3346643,
+      "context_used": "ไป"
+    },
+    {
+      "word": "กิน",
+      "language": "thai",
+      "lexical_meaning": "eat",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311015.3354669,
+      "context_used": "กิน"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311015.3409693,
+      "context_used": "สวัสดี ฟหกด"
+    },
+    {
+      "word": "ไทย",
+      "language": "thai",
+      "lexical_meaning": "Thai",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311015.3458028,
+      "context_used": "ไทย"
+    },
+    {
+      "word": "ชอบ",
+      "language": "thai",
+      "lexical_meaning": "like",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311015.3490965,
+      "context_used": "ชอบ"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311051.4490838,
+      "context_used": "สวัสดี ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311051.4803486,
+      "context_used": "สวัสดี ครับ"
+    },
+    {
+      "word": "ขอบคุณ",
+      "language": "thai",
+      "lexical_meaning": "thank you",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311051.4817026,
+      "context_used": "ขอบคุณ ค่ะ"
+    },
+    {
+      "word": "ค่ะ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, female]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311051.4820592,
+      "context_used": "ขอบคุณ ค่ะ"
+    },
+    {
+      "word": "ชอบ",
+      "language": "thai",
+      "lexical_meaning": "like",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311051.4830654,
+      "context_used": "ชอบ กิน อะไร"
+    },
+    {
+      "word": "กิน",
+      "language": "thai",
+      "lexical_meaning": "eat",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311051.4834192,
+      "context_used": "ชอบ กิน อะไร"
+    },
+    {
+      "word": "อะไร",
+      "language": "thai",
+      "lexical_meaning": "what",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311051.483819,
+      "context_used": "ชอบ กิน อะไร"
+    },
+    {
+      "word": "ไป",
+      "language": "thai",
+      "lexical_meaning": "go",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311051.484745,
+      "context_used": "ไป ที่ไหน"
+    },
+    {
+      "word": "ที่ไหน",
+      "language": "thai",
+      "lexical_meaning": "where",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311051.4851253,
+      "context_used": "ไป ที่ไหน"
+    },
+    {
+      "word": "เป็น",
+      "language": "thai",
+      "lexical_meaning": "be/is",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311051.486085,
+      "context_used": "เป็น คน ไทย"
+    },
+    {
+      "word": "คน",
+      "language": "thai",
+      "lexical_meaning": "person",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311051.4864771,
+      "context_used": "เป็น คน ไทย"
+    },
+    {
+      "word": "ไทย",
+      "language": "thai",
+      "lexical_meaning": "Thai",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311051.4869344,
+      "context_used": "เป็น คน ไทย"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311149.2048228,
+      "context_used": "สวัสดี"
+    },
+    {
+      "word": "ขอบคุณ",
+      "language": "thai",
+      "lexical_meaning": "thank you",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311149.2374253,
+      "context_used": "ขอบคุณ"
+    },
+    {
+      "word": "รัก",
+      "language": "thai",
+      "lexical_meaning": "love",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311149.2405033,
+      "context_used": "รัก"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311149.2435248,
+      "context_used": "สวัสดี"
+    },
+    {
+      "word": "ขอบคุณ",
+      "language": "thai",
+      "lexical_meaning": "thank you",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311149.2448087,
+      "context_used": "ขอบคุณ"
+    },
+    {
+      "word": "ไป",
+      "language": "thai",
+      "lexical_meaning": "go",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311149.2459013,
+      "context_used": "ไป"
+    },
+    {
+      "word": "กิน",
+      "language": "thai",
+      "lexical_meaning": "eat",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311149.2469869,
+      "context_used": "กิน"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311149.2535615,
+      "context_used": "สวัสดี ฟหกด"
+    },
+    {
+      "word": "ไทย",
+      "language": "thai",
+      "lexical_meaning": "Thai",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311149.2579541,
+      "context_used": "ไทย"
+    },
+    {
+      "word": "ชอบ",
+      "language": "thai",
+      "lexical_meaning": "like",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311149.2608576,
+      "context_used": "ชอบ"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311195.2004297,
+      "context_used": "สวัสดี ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311195.2325695,
+      "context_used": "สวัสดี ครับ"
+    },
+    {
+      "word": "คุณ",
+      "language": "thai",
+      "lexical_meaning": "you (polite)",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311195.2342107,
+      "context_used": "คุณ ชื่อ อะไร ครับ"
+    },
+    {
+      "word": "อะไร",
+      "language": "thai",
+      "lexical_meaning": "what",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311195.237682,
+      "context_used": "คุณ ชื่อ อะไร ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311195.2384298,
+      "context_used": "คุณ ชื่อ อะไร ครับ"
+    },
+    {
+      "word": "ผม",
+      "language": "thai",
+      "lexical_meaning": "I/me (male polite)",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311195.2498121,
+      "context_used": "ผม ชอบ กิน อาหาร ไทย"
+    },
+    {
+      "word": "ชอบ",
+      "language": "thai",
+      "lexical_meaning": "like",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311195.253957,
+      "context_used": "ผม ชอบ กิน อาหาร ไทย"
+    },
+    {
+      "word": "กิน",
+      "language": "thai",
+      "lexical_meaning": "eat",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311195.257633,
+      "context_used": "ผม ชอบ กิน อาหาร ไทย"
+    },
+    {
+      "word": "ไทย",
+      "language": "thai",
+      "lexical_meaning": "Thai",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311195.2586195,
+      "context_used": "ผม ชอบ กิน อาหาร ไทย"
+    },
+    {
+      "word": "คุณ",
+      "language": "thai",
+      "lexical_meaning": "you (polite)",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311195.2629635,
+      "context_used": "คุณ ไป ที่ไหน ค่ะ"
+    },
+    {
+      "word": "ไป",
+      "language": "thai",
+      "lexical_meaning": "go",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311195.2636764,
+      "context_used": "คุณ ไป ที่ไหน ค่ะ"
+    },
+    {
+      "word": "ที่ไหน",
+      "language": "thai",
+      "lexical_meaning": "where",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311195.2643805,
+      "context_used": "คุณ ไป ที่ไหน ค่ะ"
+    },
+    {
+      "word": "ค่ะ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, female]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311195.2650695,
+      "context_used": "คุณ ไป ที่ไหน ค่ะ"
+    },
+    {
+      "word": "วัน",
+      "language": "thai",
+      "lexical_meaning": "day",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311195.2748137,
+      "context_used": "วัน นี้ อากาศ ดี"
+    },
+    {
+      "word": "นี้",
+      "language": "thai",
+      "lexical_meaning": "this",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311195.2755156,
+      "context_used": "วัน นี้ อากาศ ดี"
+    },
+    {
+      "word": "ดี",
+      "language": "thai",
+      "lexical_meaning": "good",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311195.2784452,
+      "context_used": "วัน นี้ อากาศ ดี"
+    },
+    {
+      "word": "เขา",
+      "language": "thai",
+      "lexical_meaning": "he/she/they",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311195.2799232,
+      "context_used": "เขา เป็น คน ไทย ไหม"
+    },
+    {
+      "word": "เป็น",
+      "language": "thai",
+      "lexical_meaning": "be/is",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311195.2806559,
+      "context_used": "เขา เป็น คน ไทย ไหม"
+    },
+    {
+      "word": "คน",
+      "language": "thai",
+      "lexical_meaning": "person",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311195.2856686,
+      "context_used": "เขา เป็น คน ไทย ไหม"
+    },
+    {
+      "word": "ไทย",
+      "language": "thai",
+      "lexical_meaning": "Thai",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311195.28661,
+      "context_used": "เขา เป็น คน ไทย ไหม"
+    },
+    {
+      "word": "ไหม",
+      "language": "thai",
+      "lexical_meaning": "question particle",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311195.2889383,
+      "context_used": "เขา เป็น คน ไทย ไหม"
+    },
+    {
+      "word": "ไม่",
+      "language": "thai",
+      "lexical_meaning": "no/not",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311195.2911005,
+      "context_used": "ทำไม ไม่ ไป"
+    },
+    {
+      "word": "ไป",
+      "language": "thai",
+      "lexical_meaning": "go",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311195.2930431,
+      "context_used": "ทำไม ไม่ ไป"
+    },
+    {
+      "word": "ขอบคุณ",
+      "language": "thai",
+      "lexical_meaning": "thank you",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311195.2947085,
+      "context_used": "ขอบคุณ มาก ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311195.2955968,
+      "context_used": "ขอบคุณ มาก ครับ"
+    },
+    {
+      "word": "ผม",
+      "language": "thai",
+      "lexical_meaning": "I/me (male polite)",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311516.770597,
+      "context_used": "ผม รัก คุณ"
+    },
+    {
+      "word": "รัก",
+      "language": "thai",
+      "lexical_meaning": "love",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311516.7964616,
+      "context_used": "ผม รัก คุณ"
+    },
+    {
+      "word": "คุณ",
+      "language": "thai",
+      "lexical_meaning": "you (polite)",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311516.7975733,
+      "context_used": "ผม รัก คุณ"
+    },
+    {
+      "word": "ผม",
+      "language": "thai",
+      "lexical_meaning": "I/me (male polite)",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311528.9290202,
+      "context_used": "ผม รัก คุณ"
+    },
+    {
+      "word": "รัก",
+      "language": "thai",
+      "lexical_meaning": "love",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311528.9589324,
+      "context_used": "ผม รัก คุณ"
+    },
+    {
+      "word": "คุณ",
+      "language": "thai",
+      "lexical_meaning": "you (polite)",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311528.9600828,
+      "context_used": "ผม รัก คุณ"
+    },
+    {
+      "word": "ไม่",
+      "language": "thai",
+      "lexical_meaning": "no/not",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311528.962052,
+      "context_used": "ไม่ กิน อาหาร"
+    },
+    {
+      "word": "กิน",
+      "language": "thai",
+      "lexical_meaning": "eat",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311528.9629607,
+      "context_used": "ไม่ กิน อาหาร"
+    },
+    {
+      "word": "อาหาร",
+      "language": "thai",
+      "lexical_meaning": "food",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311528.964251,
+      "context_used": "ไม่ กิน อาหาร"
+    },
+    {
+      "word": "ไป",
+      "language": "thai",
+      "lexical_meaning": "go",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311528.9658196,
+      "context_used": "ไป กิน ข้าว"
+    },
+    {
+      "word": "กิน",
+      "language": "thai",
+      "lexical_meaning": "eat",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311528.9667635,
+      "context_used": "ไป กิน ข้าว"
+    },
+    {
+      "word": "อาหาร",
+      "language": "thai",
+      "lexical_meaning": "food",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311528.9683022,
+      "context_used": "อาหาร ไทย ดี"
+    },
+    {
+      "word": "ไทย",
+      "language": "thai",
+      "lexical_meaning": "Thai",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311528.9692488,
+      "context_used": "อาหาร ไทย ดี"
+    },
+    {
+      "word": "ดี",
+      "language": "thai",
+      "lexical_meaning": "good",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311528.9701622,
+      "context_used": "อาหาร ไทย ดี"
+    },
+    {
+      "word": "วัน",
+      "language": "thai",
+      "lexical_meaning": "day",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311528.9717932,
+      "context_used": "วัน นี้ ไป ไหม"
+    },
+    {
+      "word": "นี้",
+      "language": "thai",
+      "lexical_meaning": "this",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311528.9732094,
+      "context_used": "วัน นี้ ไป ไหม"
+    },
+    {
+      "word": "ไป",
+      "language": "thai",
+      "lexical_meaning": "go",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311528.9741974,
+      "context_used": "วัน นี้ ไป ไหม"
+    },
+    {
+      "word": "ไหม",
+      "language": "thai",
+      "lexical_meaning": "question particle",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311528.9751403,
+      "context_used": "วัน นี้ ไป ไหม"
+    },
+    {
+      "word": "ผม",
+      "language": "thai",
+      "lexical_meaning": "I/me (male polite)",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311564.5947676,
+      "context_used": "ผม รัก คุณ"
+    },
+    {
+      "word": "รัก",
+      "language": "thai",
+      "lexical_meaning": "love",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311564.6213474,
+      "context_used": "ผม รัก คุณ"
+    },
+    {
+      "word": "คุณ",
+      "language": "thai",
+      "lexical_meaning": "you (polite)",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311564.6226594,
+      "context_used": "ผม รัก คุณ"
+    },
+    {
+      "word": "ผม",
+      "language": "thai",
+      "lexical_meaning": "I/me (male polite)",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311607.4242215,
+      "context_used": "ผม รัก คุณ"
+    },
+    {
+      "word": "รัก",
+      "language": "thai",
+      "lexical_meaning": "love",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311607.4551363,
+      "context_used": "ผม รัก คุณ"
+    },
+    {
+      "word": "คุณ",
+      "language": "thai",
+      "lexical_meaning": "you (polite)",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311607.456436,
+      "context_used": "ผม รัก คุณ"
+    },
+    {
+      "word": "ผม",
+      "language": "thai",
+      "lexical_meaning": "I/me (male polite)",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311673.3576694,
+      "context_used": "ผม รัก คุณ"
+    },
+    {
+      "word": "รัก",
+      "language": "thai",
+      "lexical_meaning": "love",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311673.3588703,
+      "context_used": "ผม รัก คุณ"
+    },
+    {
+      "word": "คุณ",
+      "language": "thai",
+      "lexical_meaning": "you (polite)",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311673.3610315,
+      "context_used": "ผม รัก คุณ"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311680.3937547,
+      "context_used": "สวัสดี"
+    },
+    {
+      "word": "ขอบคุณ",
+      "language": "thai",
+      "lexical_meaning": "thank you",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311680.4284036,
+      "context_used": "ขอบคุณ"
+    },
+    {
+      "word": "รัก",
+      "language": "thai",
+      "lexical_meaning": "love",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311680.4322739,
+      "context_used": "รัก"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311680.4364865,
+      "context_used": "สวัสดี"
+    },
+    {
+      "word": "ขอบคุณ",
+      "language": "thai",
+      "lexical_meaning": "thank you",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311680.438389,
+      "context_used": "ขอบคุณ"
+    },
+    {
+      "word": "ไป",
+      "language": "thai",
+      "lexical_meaning": "go",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311680.4404309,
+      "context_used": "ไป"
+    },
+    {
+      "word": "กิน",
+      "language": "thai",
+      "lexical_meaning": "eat",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311680.4423032,
+      "context_used": "กิน"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311680.4487407,
+      "context_used": "สวัสดี ฟหกด"
+    },
+    {
+      "word": "ไทย",
+      "language": "thai",
+      "lexical_meaning": "Thai",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311680.4540894,
+      "context_used": "ไทย"
+    },
+    {
+      "word": "ชอบ",
+      "language": "thai",
+      "lexical_meaning": "like",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311680.4582105,
+      "context_used": "ชอบ"
+    },
+    {
+      "word": "ผม",
+      "language": "thai",
+      "lexical_meaning": "I/me (male polite)",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311680.500307,
+      "context_used": "ผม รัก คุณ"
+    },
+    {
+      "word": "รัก",
+      "language": "thai",
+      "lexical_meaning": "love",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311680.5017865,
+      "context_used": "ผม รัก คุณ"
+    },
+    {
+      "word": "คุณ",
+      "language": "thai",
+      "lexical_meaning": "you (polite)",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311680.505326,
+      "context_used": "ผม รัก คุณ"
+    },
+    {
+      "word": "ผม",
+      "language": "thai",
+      "lexical_meaning": "I/me (male polite)",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311718.7012773,
+      "context_used": "ผม รัก คุณ"
+    },
+    {
+      "word": "รัก",
+      "language": "thai",
+      "lexical_meaning": "love",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311718.7297213,
+      "context_used": "ผม รัก คุณ"
+    },
+    {
+      "word": "คุณ",
+      "language": "thai",
+      "lexical_meaning": "you (polite)",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311718.7313247,
+      "context_used": "ผม รัก คุณ"
+    },
+    {
+      "word": "ไม่",
+      "language": "thai",
+      "lexical_meaning": "no/not",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311718.7337492,
+      "context_used": "ไม่ ชอบ อาหาร ไทย"
+    },
+    {
+      "word": "ชอบ",
+      "language": "thai",
+      "lexical_meaning": "like",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311718.73492,
+      "context_used": "ไม่ ชอบ อาหาร ไทย"
+    },
+    {
+      "word": "อาหาร",
+      "language": "thai",
+      "lexical_meaning": "food",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311718.7362025,
+      "context_used": "ไม่ ชอบ อาหาร ไทย"
+    },
+    {
+      "word": "ไทย",
+      "language": "thai",
+      "lexical_meaning": "Thai",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311718.7375355,
+      "context_used": "ไม่ ชอบ อาหาร ไทย"
+    },
+    {
+      "word": "คุณ",
+      "language": "thai",
+      "lexical_meaning": "you (polite)",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311718.7400386,
+      "context_used": "คุณ ไป ที่ไหน ครับ"
+    },
+    {
+      "word": "ไป",
+      "language": "thai",
+      "lexical_meaning": "go",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311718.7413373,
+      "context_used": "คุณ ไป ที่ไหน ครับ"
+    },
+    {
+      "word": "ที่ไหน",
+      "language": "thai",
+      "lexical_meaning": "where",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311718.7426198,
+      "context_used": "คุณ ไป ที่ไหน ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311718.7439432,
+      "context_used": "คุณ ไป ที่ไหน ครับ"
+    },
+    {
+      "word": "วัน",
+      "language": "thai",
+      "lexical_meaning": "day",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311718.7460084,
+      "context_used": "วัน นี้ อากาศ ดี มาก"
+    },
+    {
+      "word": "นี้",
+      "language": "thai",
+      "lexical_meaning": "this",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311718.747378,
+      "context_used": "วัน นี้ อากาศ ดี มาก"
+    },
+    {
+      "word": "ดี",
+      "language": "thai",
+      "lexical_meaning": "good",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311718.748714,
+      "context_used": "วัน นี้ อากาศ ดี มาก"
+    },
+    {
+      "word": "ผม",
+      "language": "thai",
+      "lexical_meaning": "I/me (male polite)",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311885.7756171,
+      "context_used": "ผม จะ ไป บ้าน"
+    },
+    {
+      "word": "จะ",
+      "language": "thai",
+      "lexical_meaning": "will/shall (future)",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311885.777119,
+      "context_used": "ผม จะ ไป บ้าน"
+    },
+    {
+      "word": "ไป",
+      "language": "thai",
+      "lexical_meaning": "go",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311885.787344,
+      "context_used": "ผม จะ ไป บ้าน"
+    },
+    {
+      "word": "บ้าน",
+      "language": "thai",
+      "lexical_meaning": "house/home",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311885.7888029,
+      "context_used": "ผม จะ ไป บ้าน"
+    },
+    {
+      "word": "คุณ",
+      "language": "thai",
+      "lexical_meaning": "you (polite)",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311885.7913074,
+      "context_used": "คุณ อยู่ ที่ไหน"
+    },
+    {
+      "word": "อยู่",
+      "language": "thai",
+      "lexical_meaning": "be/stay/live",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311885.7926495,
+      "context_used": "คุณ อยู่ ที่ไหน"
+    },
+    {
+      "word": "ที่ไหน",
+      "language": "thai",
+      "lexical_meaning": "where",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311885.7939868,
+      "context_used": "คุณ อยู่ ที่ไหน"
+    },
+    {
+      "word": "ไม่",
+      "language": "thai",
+      "lexical_meaning": "no/not",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311885.796299,
+      "context_used": "ไม่ รู้ ภาษา ไทย"
+    },
+    {
+      "word": "รู้",
+      "language": "thai",
+      "lexical_meaning": "know",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311885.797693,
+      "context_used": "ไม่ รู้ ภาษา ไทย"
+    },
+    {
+      "word": "ภาษา",
+      "language": "thai",
+      "lexical_meaning": "language",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311885.799044,
+      "context_used": "ไม่ รู้ ภาษา ไทย"
+    },
+    {
+      "word": "ไทย",
+      "language": "thai",
+      "lexical_meaning": "Thai",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311885.8004339,
+      "context_used": "ไม่ รู้ ภาษา ไทย"
+    },
+    {
+      "word": "ชอบ",
+      "language": "thai",
+      "lexical_meaning": "like",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311885.8025875,
+      "context_used": "ชอบ ดู หนัง"
+    },
+    {
+      "word": "ดู",
+      "language": "thai",
+      "lexical_meaning": "see/watch/look",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311885.8039386,
+      "context_used": "ชอบ ดู หนัง"
+    },
+    {
+      "word": "ไป",
+      "language": "thai",
+      "lexical_meaning": "go",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311885.806107,
+      "context_used": "ไป ทำงาน ทุก วัน"
+    },
+    {
+      "word": "ทำงาน",
+      "language": "thai",
+      "lexical_meaning": "work",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311885.807713,
+      "context_used": "ไป ทำงาน ทุก วัน"
+    },
+    {
+      "word": "วัน",
+      "language": "thai",
+      "lexical_meaning": "day",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311885.8091784,
+      "context_used": "ไป ทำงาน ทุก วัน"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311887.2269292,
+      "context_used": "สวัสดี"
+    },
+    {
+      "word": "ขอบคุณ",
+      "language": "thai",
+      "lexical_meaning": "thank you",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311887.234532,
+      "context_used": "ขอบคุณ"
+    },
+    {
+      "word": "รัก",
+      "language": "thai",
+      "lexical_meaning": "love",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311887.2394545,
+      "context_used": "รัก"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311887.2442288,
+      "context_used": "สวัสดี"
+    },
+    {
+      "word": "ขอบคุณ",
+      "language": "thai",
+      "lexical_meaning": "thank you",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311887.246677,
+      "context_used": "ขอบคุณ"
+    },
+    {
+      "word": "ไป",
+      "language": "thai",
+      "lexical_meaning": "go",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311887.2490287,
+      "context_used": "ไป"
+    },
+    {
+      "word": "กิน",
+      "language": "thai",
+      "lexical_meaning": "eat",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311887.2514324,
+      "context_used": "กิน"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311887.2595985,
+      "context_used": "สวัสดี ฟหกด"
+    },
+    {
+      "word": "ไทย",
+      "language": "thai",
+      "lexical_meaning": "Thai",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311887.2658238,
+      "context_used": "ไทย"
+    },
+    {
+      "word": "ชอบ",
+      "language": "thai",
+      "lexical_meaning": "like",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311887.270641,
+      "context_used": "ชอบ"
+    },
+    {
+      "word": "ผม",
+      "language": "thai",
+      "lexical_meaning": "I/me (male polite)",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311887.3068645,
+      "context_used": "ผม รัก คุณ"
+    },
+    {
+      "word": "รัก",
+      "language": "thai",
+      "lexical_meaning": "love",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311887.3085613,
+      "context_used": "ผม รัก คุณ"
+    },
+    {
+      "word": "คุณ",
+      "language": "thai",
+      "lexical_meaning": "you (polite)",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311887.3102293,
+      "context_used": "ผม รัก คุณ"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311984.9074569,
+      "context_used": "สวัสดี"
+    },
+    {
+      "word": "ขอบคุณ",
+      "language": "thai",
+      "lexical_meaning": "thank you",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311984.9161975,
+      "context_used": "ขอบคุณ"
+    },
+    {
+      "word": "รัก",
+      "language": "thai",
+      "lexical_meaning": "love",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311984.9214492,
+      "context_used": "รัก"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311984.9321136,
+      "context_used": "สวัสดี"
+    },
+    {
+      "word": "ขอบคุณ",
+      "language": "thai",
+      "lexical_meaning": "thank you",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311984.9354868,
+      "context_used": "ขอบคุณ"
+    },
+    {
+      "word": "ไป",
+      "language": "thai",
+      "lexical_meaning": "go",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311984.9384005,
+      "context_used": "ไป"
+    },
+    {
+      "word": "กิน",
+      "language": "thai",
+      "lexical_meaning": "eat",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311984.9411101,
+      "context_used": "กิน"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311984.949942,
+      "context_used": "สวัสดี ฟหกด"
+    },
+    {
+      "word": "ไทย",
+      "language": "thai",
+      "lexical_meaning": "Thai",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311984.956686,
+      "context_used": "ไทย"
+    },
+    {
+      "word": "ชอบ",
+      "language": "thai",
+      "lexical_meaning": "like",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311984.962875,
+      "context_used": "ชอบ"
+    },
+    {
+      "word": "ผม",
+      "language": "thai",
+      "lexical_meaning": "I/me (male polite)",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311985.034175,
+      "context_used": "ผม รัก คุณ"
+    },
+    {
+      "word": "รัก",
+      "language": "thai",
+      "lexical_meaning": "love",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311985.0894854,
+      "context_used": "ผม รัก คุณ"
+    },
+    {
+      "word": "คุณ",
+      "language": "thai",
+      "lexical_meaning": "you (polite)",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789311985.0940773,
+      "context_used": "ผม รัก คุณ"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789312034.9184506,
+      "context_used": "สวัสดี"
+    },
+    {
+      "word": "ขอบคุณ",
+      "language": "thai",
+      "lexical_meaning": "thank you",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789312034.92664,
+      "context_used": "ขอบคุณ"
+    },
+    {
+      "word": "รัก",
+      "language": "thai",
+      "lexical_meaning": "love",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789312034.932054,
+      "context_used": "รัก"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789312034.9374242,
+      "context_used": "สวัสดี"
+    },
+    {
+      "word": "ขอบคุณ",
+      "language": "thai",
+      "lexical_meaning": "thank you",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789312034.940519,
+      "context_used": "ขอบคุณ"
+    },
+    {
+      "word": "ไป",
+      "language": "thai",
+      "lexical_meaning": "go",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789312034.9437234,
+      "context_used": "ไป"
+    },
+    {
+      "word": "กิน",
+      "language": "thai",
+      "lexical_meaning": "eat",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789312034.9469993,
+      "context_used": "กิน"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789312034.9569294,
+      "context_used": "สวัสดี ฟหกด"
+    },
+    {
+      "word": "ไทย",
+      "language": "thai",
+      "lexical_meaning": "Thai",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789312034.964941,
+      "context_used": "ไทย"
+    },
+    {
+      "word": "ชอบ",
+      "language": "thai",
+      "lexical_meaning": "like",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789312034.9715168,
+      "context_used": "ชอบ"
+    },
+    {
+      "word": "ผม",
+      "language": "thai",
+      "lexical_meaning": "I/me (male polite)",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789312035.0505989,
+      "context_used": "ผม รัก คุณ"
+    },
+    {
+      "word": "รัก",
+      "language": "thai",
+      "lexical_meaning": "love",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789312035.0986724,
+      "context_used": "ผม รัก คุณ"
+    },
+    {
+      "word": "คุณ",
+      "language": "thai",
+      "lexical_meaning": "you (polite)",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789312035.100822,
+      "context_used": "ผม รัก คุณ"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789312073.5598192,
+      "context_used": "สวัสดี"
+    },
+    {
+      "word": "ขอบคุณ",
+      "language": "thai",
+      "lexical_meaning": "thank you",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789312073.5968046,
+      "context_used": "ขอบคุณ"
+    },
+    {
+      "word": "รัก",
+      "language": "thai",
+      "lexical_meaning": "love",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789312073.6024938,
+      "context_used": "รัก"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789312073.6085327,
+      "context_used": "สวัสดี"
+    },
+    {
+      "word": "ขอบคุณ",
+      "language": "thai",
+      "lexical_meaning": "thank you",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789312073.6120195,
+      "context_used": "ขอบคุณ"
+    },
+    {
+      "word": "ไป",
+      "language": "thai",
+      "lexical_meaning": "go",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789312073.615056,
+      "context_used": "ไป"
+    },
+    {
+      "word": "กิน",
+      "language": "thai",
+      "lexical_meaning": "eat",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789312073.6179018,
+      "context_used": "กิน"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789312073.6269147,
+      "context_used": "สวัสดี ฟหกด"
+    },
+    {
+      "word": "ไทย",
+      "language": "thai",
+      "lexical_meaning": "Thai",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789312073.6340292,
+      "context_used": "ไทย"
+    },
+    {
+      "word": "ชอบ",
+      "language": "thai",
+      "lexical_meaning": "like",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789312073.63956,
+      "context_used": "ชอบ"
+    },
+    {
+      "word": "ผม",
+      "language": "thai",
+      "lexical_meaning": "I/me (male polite)",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789312073.7120025,
+      "context_used": "ผม รัก คุณ"
+    },
+    {
+      "word": "รัก",
+      "language": "thai",
+      "lexical_meaning": "love",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789312073.765466,
+      "context_used": "ผม รัก คุณ"
+    },
+    {
+      "word": "คุณ",
+      "language": "thai",
+      "lexical_meaning": "you (polite)",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789312073.7683764,
+      "context_used": "ผม รัก คุณ"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789312082.1993024,
+      "context_used": "สวัสดี ครับ ผม ชื่อ ไอริ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789312082.229916,
+      "context_used": "สวัสดี ครับ ผม ชื่อ ไอริ"
+    },
+    {
+      "word": "ผม",
+      "language": "thai",
+      "lexical_meaning": "I/me (male polite)",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789312082.2323031,
+      "context_used": "สวัสดี ครับ ผม ชื่อ ไอริ"
+    },
+    {
+      "word": "ชื่อ",
+      "language": "thai",
+      "lexical_meaning": "name",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789312082.234468,
+      "context_used": "สวัสดี ครับ ผม ชื่อ ไอริ"
+    },
+    {
+      "word": "คุณ",
+      "language": "thai",
+      "lexical_meaning": "you (polite)",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789312082.2378905,
+      "context_used": "คุณ อยู่ ที่ไหน ครับ"
+    },
+    {
+      "word": "อยู่",
+      "language": "thai",
+      "lexical_meaning": "be/stay/live",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789312082.239858,
+      "context_used": "คุณ อยู่ ที่ไหน ครับ"
+    },
+    {
+      "word": "ที่ไหน",
+      "language": "thai",
+      "lexical_meaning": "where",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789312082.2419307,
+      "context_used": "คุณ อยู่ ที่ไหน ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789312082.2439783,
+      "context_used": "คุณ อยู่ ที่ไหน ครับ"
+    },
+    {
+      "word": "ผม",
+      "language": "thai",
+      "lexical_meaning": "I/me (male polite)",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789312082.247305,
+      "context_used": "ผม ชอบ เรียน ภาษา ไทย มาก"
+    },
+    {
+      "word": "ชอบ",
+      "language": "thai",
+      "lexical_meaning": "like",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789312082.2493737,
+      "context_used": "ผม ชอบ เรียน ภาษา ไทย มาก"
+    },
+    {
+      "word": "เรียน",
+      "language": "thai",
+      "lexical_meaning": "study/learn",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789312082.2514172,
+      "context_used": "ผม ชอบ เรียน ภาษา ไทย มาก"
+    },
+    {
+      "word": "ภาษา",
+      "language": "thai",
+      "lexical_meaning": "language",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789312082.2534792,
+      "context_used": "ผม ชอบ เรียน ภาษา ไทย มาก"
+    },
+    {
+      "word": "ไทย",
+      "language": "thai",
+      "lexical_meaning": "Thai",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789312082.2555351,
+      "context_used": "ผม ชอบ เรียน ภาษา ไทย มาก"
+    },
+    {
+      "word": "มาก",
+      "language": "thai",
+      "lexical_meaning": "very/much/many",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789312082.2576292,
+      "context_used": "ผม ชอบ เรียน ภาษา ไทย มาก"
+    },
+    {
+      "word": "จะ",
+      "language": "thai",
+      "lexical_meaning": "will/shall (future)",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789312082.2610123,
+      "context_used": "จะ ไป กิน ข้าว ไหม ค่ะ"
+    },
+    {
+      "word": "ไป",
+      "language": "thai",
+      "lexical_meaning": "go",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789312082.2631474,
+      "context_used": "จะ ไป กิน ข้าว ไหม ค่ะ"
+    },
+    {
+      "word": "กิน",
+      "language": "thai",
+      "lexical_meaning": "eat",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789312082.26518,
+      "context_used": "จะ ไป กิน ข้าว ไหม ค่ะ"
+    },
+    {
+      "word": "ข้าว",
+      "language": "thai",
+      "lexical_meaning": "rice/meal",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789312082.267298,
+      "context_used": "จะ ไป กิน ข้าว ไหม ค่ะ"
+    },
+    {
+      "word": "ไหม",
+      "language": "thai",
+      "lexical_meaning": "question particle",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789312082.2694068,
+      "context_used": "จะ ไป กิน ข้าว ไหม ค่ะ"
+    },
+    {
+      "word": "ค่ะ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, female]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789312082.2714736,
+      "context_used": "จะ ไป กิน ข้าว ไหม ค่ะ"
+    },
+    {
+      "word": "วัน",
+      "language": "thai",
+      "lexical_meaning": "day",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789312082.2744665,
+      "context_used": "วัน นี้ อากาศ ดี มาก"
+    },
+    {
+      "word": "นี้",
+      "language": "thai",
+      "lexical_meaning": "this",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789312082.276644,
+      "context_used": "วัน นี้ อากาศ ดี มาก"
+    },
+    {
+      "word": "ดี",
+      "language": "thai",
+      "lexical_meaning": "good",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789312082.278886,
+      "context_used": "วัน นี้ อากาศ ดี มาก"
+    },
+    {
+      "word": "มาก",
+      "language": "thai",
+      "lexical_meaning": "very/much/many",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789312082.2809904,
+      "context_used": "วัน นี้ อากาศ ดี มาก"
+    },
+    {
+      "word": "ไม่",
+      "language": "thai",
+      "lexical_meaning": "no/not",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789312082.2839653,
+      "context_used": "ไม่ รู้ ว่า เขา ไป ที่ไหน"
+    },
+    {
+      "word": "รู้",
+      "language": "thai",
+      "lexical_meaning": "know",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789312082.2860866,
+      "context_used": "ไม่ รู้ ว่า เขา ไป ที่ไหน"
+    },
+    {
+      "word": "เขา",
+      "language": "thai",
+      "lexical_meaning": "he/she/they",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789312082.288216,
+      "context_used": "ไม่ รู้ ว่า เขา ไป ที่ไหน"
+    },
+    {
+      "word": "ไป",
+      "language": "thai",
+      "lexical_meaning": "go",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789312082.2904103,
+      "context_used": "ไม่ รู้ ว่า เขา ไป ที่ไหน"
+    },
+    {
+      "word": "ที่ไหน",
+      "language": "thai",
+      "lexical_meaning": "where",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789312082.2926219,
+      "context_used": "ไม่ รู้ ว่า เขา ไป ที่ไหน"
+    },
+    {
+      "word": "ผม",
+      "language": "thai",
+      "lexical_meaning": "I/me (male polite)",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789312082.2959678,
+      "context_used": "ผม ทำงาน ทุก วัน"
+    },
+    {
+      "word": "ทำงาน",
+      "language": "thai",
+      "lexical_meaning": "work",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789312082.2981842,
+      "context_used": "ผม ทำงาน ทุก วัน"
+    },
+    {
+      "word": "ทุก",
+      "language": "thai",
+      "lexical_meaning": "every/all",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789312082.300412,
+      "context_used": "ผม ทำงาน ทุก วัน"
+    },
+    {
+      "word": "วัน",
+      "language": "thai",
+      "lexical_meaning": "day",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789312082.302655,
+      "context_used": "ผม ทำงาน ทุก วัน"
+    },
+    {
+      "word": "คุณ",
+      "language": "thai",
+      "lexical_meaning": "you (polite)",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789312082.3056843,
+      "context_used": "คุณ เก่ง ภาษา อังกฤษ ไหม"
+    },
+    {
+      "word": "เก่ง",
+      "language": "thai",
+      "lexical_meaning": "good at/skilled",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789312082.3078184,
+      "context_used": "คุณ เก่ง ภาษา อังกฤษ ไหม"
+    },
+    {
+      "word": "ภาษา",
+      "language": "thai",
+      "lexical_meaning": "language",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789312082.310214,
+      "context_used": "คุณ เก่ง ภาษา อังกฤษ ไหม"
+    },
+    {
+      "word": "ไหม",
+      "language": "thai",
+      "lexical_meaning": "question particle",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789312082.3124685,
+      "context_used": "คุณ เก่ง ภาษา อังกฤษ ไหม"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313335.4399006,
+      "context_used": "สวัสดี ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313335.4700127,
+      "context_used": "สวัสดี ครับ"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313492.5681612,
+      "context_used": "สวัสดี ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313492.605449,
+      "context_used": "สวัสดี ครับ"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313492.6095512,
+      "context_used": "สวัสดี ค่ะ"
+    },
+    {
+      "word": "ค่ะ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, female]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313492.6120222,
+      "context_used": "สวัสดี ค่ะ"
+    },
+    {
+      "word": "ขอบคุณ",
+      "language": "thai",
+      "lexical_meaning": "thank you",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313492.616126,
+      "context_used": "ขอบคุณ ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313492.6191041,
+      "context_used": "ขอบคุณ ครับ"
+    },
+    {
+      "word": "คุณ",
+      "language": "thai",
+      "lexical_meaning": "you (polite)",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313492.6236236,
+      "context_used": "คุณ ชื่อ อะไร ค่ะ"
+    },
+    {
+      "word": "ชื่อ",
+      "language": "thai",
+      "lexical_meaning": "name",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313492.6269248,
+      "context_used": "คุณ ชื่อ อะไร ค่ะ"
+    },
+    {
+      "word": "อะไร",
+      "language": "thai",
+      "lexical_meaning": "what",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313492.6298473,
+      "context_used": "คุณ ชื่อ อะไร ค่ะ"
+    },
+    {
+      "word": "ค่ะ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, female]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313492.6324058,
+      "context_used": "คุณ ชื่อ อะไร ค่ะ"
+    },
+    {
+      "word": "ไป",
+      "language": "thai",
+      "lexical_meaning": "go",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313492.6362686,
+      "context_used": "ไป ที่ไหน ครับ"
+    },
+    {
+      "word": "ที่ไหน",
+      "language": "thai",
+      "lexical_meaning": "where",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313492.6387858,
+      "context_used": "ไป ที่ไหน ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313492.6413445,
+      "context_used": "ไป ที่ไหน ครับ"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313495.8756378,
+      "context_used": "สวัสดี ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313495.9094756,
+      "context_used": "สวัสดี ครับ"
+    },
+    {
+      "word": "ขอบคุณ",
+      "language": "thai",
+      "lexical_meaning": "thank you",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313495.9262195,
+      "context_used": "ขอบคุณ ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313495.9290006,
+      "context_used": "ขอบคุณ ครับ"
+    },
+    {
+      "word": "ไป",
+      "language": "thai",
+      "lexical_meaning": "go",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313495.9559464,
+      "context_used": "ไป ที่ไหน ครับ"
+    },
+    {
+      "word": "ที่ไหน",
+      "language": "thai",
+      "lexical_meaning": "where",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313495.959248,
+      "context_used": "ไป ที่ไหน ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313495.962163,
+      "context_used": "ไป ที่ไหน ครับ"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313495.974327,
+      "context_used": "สวัสดี ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313495.9772134,
+      "context_used": "สวัสดี ครับ"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313495.9943774,
+      "context_used": "สวัสดี ค่ะ"
+    },
+    {
+      "word": "ค่ะ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, female]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313496.0004199,
+      "context_used": "สวัสดี ค่ะ"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313496.0234795,
+      "context_used": "สวัสดี ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313496.0319912,
+      "context_used": "สวัสดี ครับ"
+    },
+    {
+      "word": "ผม",
+      "language": "thai",
+      "lexical_meaning": "I/me (male polite)",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313496.0648172,
+      "context_used": "ผม ชื่อ ไอริ ครับ"
+    },
+    {
+      "word": "ชื่อ",
+      "language": "thai",
+      "lexical_meaning": "name",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313496.0743885,
+      "context_used": "ผม ชื่อ ไอริ ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313496.0771675,
+      "context_used": "ผม ชื่อ ไอริ ครับ"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313496.0969026,
+      "context_used": "สวัสดี ฟหกด ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313496.1112888,
+      "context_used": "สวัสดี ฟหกด ครับ"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313564.2400568,
+      "context_used": "สวัสดี"
+    },
+    {
+      "word": "ขอบคุณ",
+      "language": "thai",
+      "lexical_meaning": "thank you",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313564.2773488,
+      "context_used": "ขอบคุณ"
+    },
+    {
+      "word": "รัก",
+      "language": "thai",
+      "lexical_meaning": "love",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313564.2844558,
+      "context_used": "รัก"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313564.2913907,
+      "context_used": "สวัสดี"
+    },
+    {
+      "word": "ขอบคุณ",
+      "language": "thai",
+      "lexical_meaning": "thank you",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313564.2950609,
+      "context_used": "ขอบคุณ"
+    },
+    {
+      "word": "ไป",
+      "language": "thai",
+      "lexical_meaning": "go",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313564.2987287,
+      "context_used": "ไป"
+    },
+    {
+      "word": "กิน",
+      "language": "thai",
+      "lexical_meaning": "eat",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313564.3059793,
+      "context_used": "กิน"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313564.3167665,
+      "context_used": "สวัสดี ฟหกด"
+    },
+    {
+      "word": "ไทย",
+      "language": "thai",
+      "lexical_meaning": "Thai",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313564.3250675,
+      "context_used": "ไทย"
+    },
+    {
+      "word": "ชอบ",
+      "language": "thai",
+      "lexical_meaning": "like",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313564.332281,
+      "context_used": "ชอบ"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313564.3930445,
+      "context_used": "สวัสดี ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313564.4541528,
+      "context_used": "สวัสดี ครับ"
+    },
+    {
+      "word": "ขอบคุณ",
+      "language": "thai",
+      "lexical_meaning": "thank you",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313564.4624238,
+      "context_used": "ขอบคุณ ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313564.4653413,
+      "context_used": "ขอบคุณ ครับ"
+    },
+    {
+      "word": "ไป",
+      "language": "thai",
+      "lexical_meaning": "go",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313564.472688,
+      "context_used": "ไป ที่ไหน ครับ"
+    },
+    {
+      "word": "ที่ไหน",
+      "language": "thai",
+      "lexical_meaning": "where",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313564.4754174,
+      "context_used": "ไป ที่ไหน ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313564.4781463,
+      "context_used": "ไป ที่ไหน ครับ"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313564.4853542,
+      "context_used": "สวัสดี ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313564.488081,
+      "context_used": "สวัสดี ครับ"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313564.491969,
+      "context_used": "สวัสดี ค่ะ"
+    },
+    {
+      "word": "ค่ะ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, female]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313564.4946964,
+      "context_used": "สวัสดี ค่ะ"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313564.50219,
+      "context_used": "สวัสดี ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313564.5050209,
+      "context_used": "สวัสดี ครับ"
+    },
+    {
+      "word": "ผม",
+      "language": "thai",
+      "lexical_meaning": "I/me (male polite)",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313564.515184,
+      "context_used": "ผม ชื่อ ไอริ ครับ"
+    },
+    {
+      "word": "ชื่อ",
+      "language": "thai",
+      "lexical_meaning": "name",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313564.5180535,
+      "context_used": "ผม ชื่อ ไอริ ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313564.520842,
+      "context_used": "ผม ชื่อ ไอริ ครับ"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313564.5278738,
+      "context_used": "สวัสดี ฟหกด ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313564.5307207,
+      "context_used": "สวัสดี ฟหกด ครับ"
+    },
+    {
+      "word": "ผม",
+      "language": "thai",
+      "lexical_meaning": "I/me (male polite)",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313564.5527363,
+      "context_used": "ผม รัก คุณ"
+    },
+    {
+      "word": "รัก",
+      "language": "thai",
+      "lexical_meaning": "love",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313564.557164,
+      "context_used": "ผม รัก คุณ"
+    },
+    {
+      "word": "คุณ",
+      "language": "thai",
+      "lexical_meaning": "you (polite)",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313564.5615447,
+      "context_used": "ผม รัก คุณ"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313578.3844862,
+      "context_used": "สวัสดี ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313578.4198225,
+      "context_used": "สวัสดี ครับ"
+    },
+    {
+      "word": "ผม",
+      "language": "thai",
+      "lexical_meaning": "I/me (male polite)",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313578.424464,
+      "context_used": "ผม ชื่อ อาร์ทิด ครับ"
+    },
+    {
+      "word": "ชื่อ",
+      "language": "thai",
+      "lexical_meaning": "name",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313578.42764,
+      "context_used": "ผม ชื่อ อาร์ทิด ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313578.4307761,
+      "context_used": "ผม ชื่อ อาร์ทิด ครับ"
+    },
+    {
+      "word": "คุณ",
+      "language": "thai",
+      "lexical_meaning": "you (polite)",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313578.4356546,
+      "context_used": "คุณ เข้าใจ ภาษา ไทย ไหม ครับ"
+    },
+    {
+      "word": "เข้าใจ",
+      "language": "thai",
+      "lexical_meaning": "understand",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313578.438872,
+      "context_used": "คุณ เข้าใจ ภาษา ไทย ไหม ครับ"
+    },
+    {
+      "word": "ภาษา",
+      "language": "thai",
+      "lexical_meaning": "language",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313578.4433122,
+      "context_used": "คุณ เข้าใจ ภาษา ไทย ไหม ครับ"
+    },
+    {
+      "word": "ไทย",
+      "language": "thai",
+      "lexical_meaning": "Thai",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313578.446787,
+      "context_used": "คุณ เข้าใจ ภาษา ไทย ไหม ครับ"
+    },
+    {
+      "word": "ไหม",
+      "language": "thai",
+      "lexical_meaning": "question particle",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313578.4503758,
+      "context_used": "คุณ เข้าใจ ภาษา ไทย ไหม ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313578.4557986,
+      "context_used": "คุณ เข้าใจ ภาษา ไทย ไหม ครับ"
+    },
+    {
+      "word": "ขอบคุณ",
+      "language": "thai",
+      "lexical_meaning": "thank you",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313578.461815,
+      "context_used": "ขอบคุณ มาก ครับ"
+    },
+    {
+      "word": "มาก",
+      "language": "thai",
+      "lexical_meaning": "very/much/many",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313578.465731,
+      "context_used": "ขอบคุณ มาก ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313578.4691753,
+      "context_used": "ขอบคุณ มาก ครับ"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313812.867032,
+      "context_used": "สวัสดี ฟหกด ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313812.8753538,
+      "context_used": "สวัสดี ฟหกด ครับ"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313872.5376716,
+      "context_used": "สวัสดี ฟหกด ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313872.6014829,
+      "context_used": "สวัสดี ฟหกด ครับ"
+    },
+    {
+      "word": "นอน",
+      "language": "thai",
+      "lexical_meaning": "sleep",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313872.610812,
+      "context_used": "taught_by_user"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313872.62649,
+      "context_used": "ฟหกด จดห ครับ"
+    },
+    {
+      "word": "นอน",
+      "language": "thai",
+      "lexical_meaning": "sleep",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313872.639756,
+      "context_used": "taught_by_user"
+    },
+    {
+      "word": "ไป",
+      "language": "thai",
+      "lexical_meaning": "go",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313872.6486645,
+      "context_used": "ไป นอน"
+    },
+    {
+      "word": "นอน",
+      "language": "thai",
+      "lexical_meaning": "sleep",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313917.018723,
+      "context_used": "taught_by_user"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313926.1934118,
+      "context_used": "สวัสดี ฟหกด ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313926.1970727,
+      "context_used": "สวัสดี ฟหกด ครับ"
+    },
+    {
+      "word": "นอน",
+      "language": "thai",
+      "lexical_meaning": "sleep",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313926.211394,
+      "context_used": "นอน"
+    },
+    {
+      "word": "นอน",
+      "language": "thai",
+      "lexical_meaning": "sleep",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313926.2152224,
+      "context_used": "taught_by_user"
+    },
+    {
+      "word": "นอน",
+      "language": "thai",
+      "lexical_meaning": "sleep",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313926.2207098,
+      "context_used": "นอน"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313926.229793,
+      "context_used": "ฟหกด จดห ครับ"
+    },
+    {
+      "word": "นอน",
+      "language": "thai",
+      "lexical_meaning": "sleep",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313926.2375817,
+      "context_used": "taught_by_user"
+    },
+    {
+      "word": "ไป",
+      "language": "thai",
+      "lexical_meaning": "go",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313926.2417352,
+      "context_used": "ไป นอน"
+    },
+    {
+      "word": "นอน",
+      "language": "thai",
+      "lexical_meaning": "sleep",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313926.2447875,
+      "context_used": "ไป นอน"
+    },
+    {
+      "word": "ผม",
+      "language": "thai",
+      "lexical_meaning": "I/me (male polite)",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313932.8776088,
+      "context_used": "ผม จะ นอน"
+    },
+    {
+      "word": "จะ",
+      "language": "thai",
+      "lexical_meaning": "will/shall (future)",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313932.909756,
+      "context_used": "ผม จะ นอน"
+    },
+    {
+      "word": "นอน",
+      "language": "thai",
+      "lexical_meaning": "sleep",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313932.9137065,
+      "context_used": "ผม จะ นอน"
+    },
+    {
+      "word": "นอน",
+      "language": "thai",
+      "lexical_meaning": "sleep",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313932.9176068,
+      "context_used": "taught_by_user"
+    },
+    {
+      "word": "ผม",
+      "language": "thai",
+      "lexical_meaning": "I/me (male polite)",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313932.922057,
+      "context_used": "ผม จะ นอน"
+    },
+    {
+      "word": "จะ",
+      "language": "thai",
+      "lexical_meaning": "will/shall (future)",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313932.9256377,
+      "context_used": "ผม จะ นอน"
+    },
+    {
+      "word": "นอน",
+      "language": "thai",
+      "lexical_meaning": "sleep",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313932.9289894,
+      "context_used": "ผม จะ นอน"
+    },
+    {
+      "word": "ผม",
+      "language": "thai",
+      "lexical_meaning": "I/me (male polite)",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313972.8353336,
+      "context_used": "ผม อยาก นอน ครับ"
+    },
+    {
+      "word": "นอน",
+      "language": "thai",
+      "lexical_meaning": "sleep",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313972.8664598,
+      "context_used": "ผม อยาก นอน ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313972.8718925,
+      "context_used": "ผม อยาก นอน ครับ"
+    },
+    {
+      "word": "อยาก",
+      "language": "thai",
+      "lexical_meaning": "want",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313972.8761544,
+      "context_used": "taught_by_user"
+    },
+    {
+      "word": "นอน",
+      "language": "thai",
+      "lexical_meaning": "sleep",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313972.8809195,
+      "context_used": "taught_by_user"
+    },
+    {
+      "word": "ผม",
+      "language": "thai",
+      "lexical_meaning": "I/me (male polite)",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313972.8914278,
+      "context_used": "ผม อยาก นอน ครับ"
+    },
+    {
+      "word": "อยาก",
+      "language": "thai",
+      "lexical_meaning": "want",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313972.8969028,
+      "context_used": "ผม อยาก นอน ครับ"
+    },
+    {
+      "word": "นอน",
+      "language": "thai",
+      "lexical_meaning": "sleep",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313972.9021513,
+      "context_used": "ผม อยาก นอน ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313972.9058664,
+      "context_used": "ผม อยาก นอน ครับ"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313980.0973103,
+      "context_used": "สวัสดี"
+    },
+    {
+      "word": "ขอบคุณ",
+      "language": "thai",
+      "lexical_meaning": "thank you",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313980.1419759,
+      "context_used": "ขอบคุณ"
+    },
+    {
+      "word": "รัก",
+      "language": "thai",
+      "lexical_meaning": "love",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313980.1503649,
+      "context_used": "รัก"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313980.1590686,
+      "context_used": "สวัสดี"
+    },
+    {
+      "word": "ขอบคุณ",
+      "language": "thai",
+      "lexical_meaning": "thank you",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313980.1643164,
+      "context_used": "ขอบคุณ"
+    },
+    {
+      "word": "ไป",
+      "language": "thai",
+      "lexical_meaning": "go",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313980.16974,
+      "context_used": "ไป"
+    },
+    {
+      "word": "กิน",
+      "language": "thai",
+      "lexical_meaning": "eat",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313980.1751094,
+      "context_used": "กิน"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313980.1907008,
+      "context_used": "สวัสดี ฟหกด"
+    },
+    {
+      "word": "ไทย",
+      "language": "thai",
+      "lexical_meaning": "Thai",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313980.2019773,
+      "context_used": "ไทย"
+    },
+    {
+      "word": "ชอบ",
+      "language": "thai",
+      "lexical_meaning": "like",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313980.2108636,
+      "context_used": "ชอบ"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313980.2756257,
+      "context_used": "สวัสดี ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313980.3524003,
+      "context_used": "สวัสดี ครับ"
+    },
+    {
+      "word": "ขอบคุณ",
+      "language": "thai",
+      "lexical_meaning": "thank you",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313980.3615878,
+      "context_used": "ขอบคุณ ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313980.3654468,
+      "context_used": "ขอบคุณ ครับ"
+    },
+    {
+      "word": "ไป",
+      "language": "thai",
+      "lexical_meaning": "go",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313980.37547,
+      "context_used": "ไป ที่ไหน ครับ"
+    },
+    {
+      "word": "ที่ไหน",
+      "language": "thai",
+      "lexical_meaning": "where",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313980.3796015,
+      "context_used": "ไป ที่ไหน ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313980.383575,
+      "context_used": "ไป ที่ไหน ครับ"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313980.3944705,
+      "context_used": "สวัสดี ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313980.3986013,
+      "context_used": "สวัสดี ครับ"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313980.4039457,
+      "context_used": "สวัสดี ค่ะ"
+    },
+    {
+      "word": "ค่ะ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, female]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313980.4078498,
+      "context_used": "สวัสดี ค่ะ"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313980.4168804,
+      "context_used": "สวัสดี ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313980.4209003,
+      "context_used": "สวัสดี ครับ"
+    },
+    {
+      "word": "ผม",
+      "language": "thai",
+      "lexical_meaning": "I/me (male polite)",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313980.4328992,
+      "context_used": "ผม ชื่อ ไอริ ครับ"
+    },
+    {
+      "word": "ชื่อ",
+      "language": "thai",
+      "lexical_meaning": "name",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313980.440017,
+      "context_used": "ผม ชื่อ ไอริ ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313980.4440076,
+      "context_used": "ผม ชื่อ ไอริ ครับ"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313980.4553254,
+      "context_used": "สวัสดี ฟหกด ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313980.4591184,
+      "context_used": "สวัสดี ฟหกด ครับ"
+    },
+    {
+      "word": "ผม",
+      "language": "thai",
+      "lexical_meaning": "I/me (male polite)",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313980.4822152,
+      "context_used": "ผม รัก คุณ"
+    },
+    {
+      "word": "รัก",
+      "language": "thai",
+      "lexical_meaning": "love",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313980.4861507,
+      "context_used": "ผม รัก คุณ"
+    },
+    {
+      "word": "คุณ",
+      "language": "thai",
+      "lexical_meaning": "you (polite)",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313980.4899166,
+      "context_used": "ผม รัก คุณ"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313981.78057,
+      "context_used": "สวัสดี ฟหกด ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313981.8096507,
+      "context_used": "สวัสดี ฟหกด ครับ"
+    },
+    {
+      "word": "นอน",
+      "language": "thai",
+      "lexical_meaning": "sleep",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313981.823439,
+      "context_used": "นอน"
+    },
+    {
+      "word": "นอน",
+      "language": "thai",
+      "lexical_meaning": "sleep",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313981.8320546,
+      "context_used": "taught_by_user"
+    },
+    {
+      "word": "นอน",
+      "language": "thai",
+      "lexical_meaning": "sleep",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313981.839115,
+      "context_used": "นอน"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313981.8490736,
+      "context_used": "ฟหกด จดห ครับ"
+    },
+    {
+      "word": "นอน",
+      "language": "thai",
+      "lexical_meaning": "sleep",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313981.8573847,
+      "context_used": "taught_by_user"
+    },
+    {
+      "word": "ไป",
+      "language": "thai",
+      "lexical_meaning": "go",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313981.8620307,
+      "context_used": "ไป นอน"
+    },
+    {
+      "word": "นอน",
+      "language": "thai",
+      "lexical_meaning": "sleep",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789313981.8657134,
+      "context_used": "ไป นอน"
+    },
+    {
+      "word": "คุณ",
+      "language": "thai",
+      "lexical_meaning": "you (polite)",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316008.935788,
+      "context_used": "คุณ ชื่อ อะไร ครับ"
+    },
+    {
+      "word": "ชื่อ",
+      "language": "thai",
+      "lexical_meaning": "name",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316008.9670537,
+      "context_used": "คุณ ชื่อ อะไร ครับ"
+    },
+    {
+      "word": "อะไร",
+      "language": "thai",
+      "lexical_meaning": "what",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316008.9713671,
+      "context_used": "คุณ ชื่อ อะไร ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316008.9752553,
+      "context_used": "คุณ ชื่อ อะไร ครับ"
+    },
+    {
+      "word": "คุณ",
+      "language": "thai",
+      "lexical_meaning": "you (polite)",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316008.980398,
+      "context_used": "คุณ เป็น ใคร"
+    },
+    {
+      "word": "เป็น",
+      "language": "thai",
+      "lexical_meaning": "be/is",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316008.9845822,
+      "context_used": "คุณ เป็น ใคร"
+    },
+    {
+      "word": "วัน",
+      "language": "thai",
+      "lexical_meaning": "day",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316008.9897976,
+      "context_used": "วัน นี้ เป็น วัน อะไร"
+    },
+    {
+      "word": "นี้",
+      "language": "thai",
+      "lexical_meaning": "this",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316008.9936023,
+      "context_used": "วัน นี้ เป็น วัน อะไร"
+    },
+    {
+      "word": "เป็น",
+      "language": "thai",
+      "lexical_meaning": "be/is",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316008.9975364,
+      "context_used": "วัน นี้ เป็น วัน อะไร"
+    },
+    {
+      "word": "วัน",
+      "language": "thai",
+      "lexical_meaning": "day",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316009.0013924,
+      "context_used": "วัน นี้ เป็น วัน อะไร"
+    },
+    {
+      "word": "อะไร",
+      "language": "thai",
+      "lexical_meaning": "what",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316009.0052805,
+      "context_used": "วัน นี้ เป็น วัน อะไร"
+    },
+    {
+      "word": "ไป",
+      "language": "thai",
+      "lexical_meaning": "go",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316009.010338,
+      "context_used": "ไป ที่ไหน ดี"
+    },
+    {
+      "word": "ที่ไหน",
+      "language": "thai",
+      "lexical_meaning": "where",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316009.014394,
+      "context_used": "ไป ที่ไหน ดี"
+    },
+    {
+      "word": "ดี",
+      "language": "thai",
+      "lexical_meaning": "good",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316009.0183365,
+      "context_used": "ไป ที่ไหน ดี"
+    },
+    {
+      "word": "คุณ",
+      "language": "thai",
+      "lexical_meaning": "you (polite)",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316070.3466074,
+      "context_used": "คุณ ชื่อ อะไร ครับ"
+    },
+    {
+      "word": "ชื่อ",
+      "language": "thai",
+      "lexical_meaning": "name",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316070.351538,
+      "context_used": "คุณ ชื่อ อะไร ครับ"
+    },
+    {
+      "word": "อะไร",
+      "language": "thai",
+      "lexical_meaning": "what",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316070.3558414,
+      "context_used": "คุณ ชื่อ อะไร ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316070.3602111,
+      "context_used": "คุณ ชื่อ อะไร ครับ"
+    },
+    {
+      "word": "คุณ",
+      "language": "thai",
+      "lexical_meaning": "you (polite)",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316070.3658895,
+      "context_used": "คุณ เป็น ใคร"
+    },
+    {
+      "word": "เป็น",
+      "language": "thai",
+      "lexical_meaning": "be/is",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316070.3700874,
+      "context_used": "คุณ เป็น ใคร"
+    },
+    {
+      "word": "ใคร",
+      "language": "thai",
+      "lexical_meaning": "who",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316070.374245,
+      "context_used": "คุณ เป็น ใคร"
+    },
+    {
+      "word": "ผม",
+      "language": "thai",
+      "lexical_meaning": "I/me (male polite)",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316070.3800406,
+      "context_used": "ผม ชื่อ อาร์ทิด ครับ"
+    },
+    {
+      "word": "ชื่อ",
+      "language": "thai",
+      "lexical_meaning": "name",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316070.3848975,
+      "context_used": "ผม ชื่อ อาร์ทิด ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316070.393189,
+      "context_used": "ผม ชื่อ อาร์ทิด ครับ"
+    },
+    {
+      "word": "ผม",
+      "language": "thai",
+      "lexical_meaning": "I/me (male polite)",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316070.4008129,
+      "context_used": "ผม ชอบ กิน อาหาร ไทย"
+    },
+    {
+      "word": "ชอบ",
+      "language": "thai",
+      "lexical_meaning": "like",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316070.4054122,
+      "context_used": "ผม ชอบ กิน อาหาร ไทย"
+    },
+    {
+      "word": "กิน",
+      "language": "thai",
+      "lexical_meaning": "eat",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316070.4096925,
+      "context_used": "ผม ชอบ กิน อาหาร ไทย"
+    },
+    {
+      "word": "อาหาร",
+      "language": "thai",
+      "lexical_meaning": "food",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316070.414598,
+      "context_used": "ผม ชอบ กิน อาหาร ไทย"
+    },
+    {
+      "word": "ไทย",
+      "language": "thai",
+      "lexical_meaning": "Thai",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316070.4189603,
+      "context_used": "ผม ชอบ กิน อาหาร ไทย"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316104.5249627,
+      "context_used": "สวัสดี ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316104.5580866,
+      "context_used": "สวัสดี ครับ"
+    },
+    {
+      "word": "ขอบคุณ",
+      "language": "thai",
+      "lexical_meaning": "thank you",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316104.5702448,
+      "context_used": "ขอบคุณ ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316104.5750818,
+      "context_used": "ขอบคุณ ครับ"
+    },
+    {
+      "word": "ไป",
+      "language": "thai",
+      "lexical_meaning": "go",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316104.585605,
+      "context_used": "ไป ที่ไหน ครับ"
+    },
+    {
+      "word": "ที่ไหน",
+      "language": "thai",
+      "lexical_meaning": "where",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316104.5903196,
+      "context_used": "ไป ที่ไหน ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316104.5948718,
+      "context_used": "ไป ที่ไหน ครับ"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316104.6049588,
+      "context_used": "สวัสดี ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316104.6091127,
+      "context_used": "สวัสดี ครับ"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316104.6145072,
+      "context_used": "สวัสดี ค่ะ"
+    },
+    {
+      "word": "ค่ะ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, female]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316104.6186388,
+      "context_used": "สวัสดี ค่ะ"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316104.6284273,
+      "context_used": "สวัสดี ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316104.632724,
+      "context_used": "สวัสดี ครับ"
+    },
+    {
+      "word": "ผม",
+      "language": "thai",
+      "lexical_meaning": "I/me (male polite)",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316104.6462088,
+      "context_used": "ผม ชื่อ ไอริ ครับ"
+    },
+    {
+      "word": "ชื่อ",
+      "language": "thai",
+      "lexical_meaning": "name",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316104.650403,
+      "context_used": "ผม ชื่อ ไอริ ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316104.6544943,
+      "context_used": "ผม ชื่อ ไอริ ครับ"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316104.6639552,
+      "context_used": "สวัสดี ฟหกด ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316104.6681705,
+      "context_used": "สวัสดี ฟหกด ครับ"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316110.5277703,
+      "context_used": "สวัสดี ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316110.5575318,
+      "context_used": "สวัสดี ครับ"
+    },
+    {
+      "word": "คุณ",
+      "language": "thai",
+      "lexical_meaning": "you (polite)",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316110.5638018,
+      "context_used": "คุณ ชื่อ อะไร ครับ"
+    },
+    {
+      "word": "ชื่อ",
+      "language": "thai",
+      "lexical_meaning": "name",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316110.5685248,
+      "context_used": "คุณ ชื่อ อะไร ครับ"
+    },
+    {
+      "word": "อะไร",
+      "language": "thai",
+      "lexical_meaning": "what",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316110.5730803,
+      "context_used": "คุณ ชื่อ อะไร ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316110.577477,
+      "context_used": "คุณ ชื่อ อะไร ครับ"
+    },
+    {
+      "word": "ผม",
+      "language": "thai",
+      "lexical_meaning": "I/me (male polite)",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316110.5830364,
+      "context_used": "ผม ชื่อ อาร์ทิด ครับ"
+    },
+    {
+      "word": "ชื่อ",
+      "language": "thai",
+      "lexical_meaning": "name",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316110.5875263,
+      "context_used": "ผม ชื่อ อาร์ทิด ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316110.5922456,
+      "context_used": "ผม ชื่อ อาร์ทิด ครับ"
+    },
+    {
+      "word": "ผม",
+      "language": "thai",
+      "lexical_meaning": "I/me (male polite)",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316110.5984015,
+      "context_used": "ผม ชอบ เรียน ภาษา ไทย มาก ครับ"
+    },
+    {
+      "word": "ชอบ",
+      "language": "thai",
+      "lexical_meaning": "like",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316110.6029115,
+      "context_used": "ผม ชอบ เรียน ภาษา ไทย มาก ครับ"
+    },
+    {
+      "word": "เรียน",
+      "language": "thai",
+      "lexical_meaning": "study/learn",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316110.6072757,
+      "context_used": "ผม ชอบ เรียน ภาษา ไทย มาก ครับ"
+    },
+    {
+      "word": "ภาษา",
+      "language": "thai",
+      "lexical_meaning": "language",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316110.611833,
+      "context_used": "ผม ชอบ เรียน ภาษา ไทย มาก ครับ"
+    },
+    {
+      "word": "ไทย",
+      "language": "thai",
+      "lexical_meaning": "Thai",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316110.6163497,
+      "context_used": "ผม ชอบ เรียน ภาษา ไทย มาก ครับ"
+    },
+    {
+      "word": "มาก",
+      "language": "thai",
+      "lexical_meaning": "very/much/many",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316110.6208565,
+      "context_used": "ผม ชอบ เรียน ภาษา ไทย มาก ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316110.6253037,
+      "context_used": "ผม ชอบ เรียน ภาษา ไทย มาก ครับ"
+    },
+    {
+      "word": "ขอบคุณ",
+      "language": "thai",
+      "lexical_meaning": "thank you",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316110.6368277,
+      "context_used": "ขอบคุณ ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316110.6425605,
+      "context_used": "ขอบคุณ ครับ"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316225.7986097,
+      "context_used": "สวัสดี ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316225.8325944,
+      "context_used": "สวัสดี ครับ"
+    },
+    {
+      "word": "คุณ",
+      "language": "thai",
+      "lexical_meaning": "you (polite)",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316225.8425658,
+      "context_used": "คุณ ชื่อ อะไร ครับ"
+    },
+    {
+      "word": "ชื่อ",
+      "language": "thai",
+      "lexical_meaning": "name",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316225.8480275,
+      "context_used": "คุณ ชื่อ อะไร ครับ"
+    },
+    {
+      "word": "อะไร",
+      "language": "thai",
+      "lexical_meaning": "what",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316225.853199,
+      "context_used": "คุณ ชื่อ อะไร ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316225.8583245,
+      "context_used": "คุณ ชื่อ อะไร ครับ"
+    },
+    {
+      "word": "ขอบคุณ",
+      "language": "thai",
+      "lexical_meaning": "thank you",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316225.8646412,
+      "context_used": "ขอบคุณ ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316225.8695695,
+      "context_used": "ขอบคุณ ครับ"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316266.200638,
+      "context_used": "สวัสดี ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316266.2434719,
+      "context_used": "สวัสดี ครับ"
+    },
+    {
+      "word": "คุณ",
+      "language": "thai",
+      "lexical_meaning": "you (polite)",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316266.2513409,
+      "context_used": "คุณ ชื่อ อะไร ครับ"
+    },
+    {
+      "word": "ชื่อ",
+      "language": "thai",
+      "lexical_meaning": "name",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316266.2584767,
+      "context_used": "คุณ ชื่อ อะไร ครับ"
+    },
+    {
+      "word": "อะไร",
+      "language": "thai",
+      "lexical_meaning": "what",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316266.2646515,
+      "context_used": "คุณ ชื่อ อะไร ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316266.2700477,
+      "context_used": "คุณ ชื่อ อะไร ครับ"
+    },
+    {
+      "word": "ขอบคุณ",
+      "language": "thai",
+      "lexical_meaning": "thank you",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316266.276543,
+      "context_used": "ขอบคุณ ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316266.2863486,
+      "context_used": "ขอบคุณ ครับ"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316268.126275,
+      "context_used": "สวัสดี"
+    },
+    {
+      "word": "ขอบคุณ",
+      "language": "thai",
+      "lexical_meaning": "thank you",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316268.1726427,
+      "context_used": "ขอบคุณ"
+    },
+    {
+      "word": "รัก",
+      "language": "thai",
+      "lexical_meaning": "love",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316268.185544,
+      "context_used": "รัก"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316268.1969936,
+      "context_used": "สวัสดี"
+    },
+    {
+      "word": "ขอบคุณ",
+      "language": "thai",
+      "lexical_meaning": "thank you",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316268.2031298,
+      "context_used": "ขอบคุณ"
+    },
+    {
+      "word": "ไป",
+      "language": "thai",
+      "lexical_meaning": "go",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316268.2166321,
+      "context_used": "ไป"
+    },
+    {
+      "word": "กิน",
+      "language": "thai",
+      "lexical_meaning": "eat",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316268.2228959,
+      "context_used": "กิน"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316268.2392757,
+      "context_used": "สวัสดี ฟหกด"
+    },
+    {
+      "word": "ไทย",
+      "language": "thai",
+      "lexical_meaning": "Thai",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316268.2507644,
+      "context_used": "ไทย"
+    },
+    {
+      "word": "ชอบ",
+      "language": "thai",
+      "lexical_meaning": "like",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316268.2606106,
+      "context_used": "ชอบ"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316268.3224974,
+      "context_used": "สวัสดี ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316268.3271983,
+      "context_used": "สวัสดี ครับ"
+    },
+    {
+      "word": "ขอบคุณ",
+      "language": "thai",
+      "lexical_meaning": "thank you",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316268.3391414,
+      "context_used": "ขอบคุณ ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316268.3441162,
+      "context_used": "ขอบคุณ ครับ"
+    },
+    {
+      "word": "ไป",
+      "language": "thai",
+      "lexical_meaning": "go",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316268.3582861,
+      "context_used": "ไป ที่ไหน ครับ"
+    },
+    {
+      "word": "ที่ไหน",
+      "language": "thai",
+      "lexical_meaning": "where",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316268.3632762,
+      "context_used": "ไป ที่ไหน ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316268.3718317,
+      "context_used": "ไป ที่ไหน ครับ"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316268.3845315,
+      "context_used": "สวัสดี ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316268.390203,
+      "context_used": "สวัสดี ครับ"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316268.3969636,
+      "context_used": "สวัสดี ค่ะ"
+    },
+    {
+      "word": "ค่ะ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, female]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316268.4018664,
+      "context_used": "สวัสดี ค่ะ"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316268.4129584,
+      "context_used": "สวัสดี ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316268.4219258,
+      "context_used": "สวัสดี ครับ"
+    },
+    {
+      "word": "ผม",
+      "language": "thai",
+      "lexical_meaning": "I/me (male polite)",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316268.4374282,
+      "context_used": "ผม ชื่อ ไอริ ครับ"
+    },
+    {
+      "word": "ชื่อ",
+      "language": "thai",
+      "lexical_meaning": "name",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316268.4421797,
+      "context_used": "ผม ชื่อ ไอริ ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316268.4469116,
+      "context_used": "ผม ชื่อ ไอริ ครับ"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316268.4573581,
+      "context_used": "สวัสดี ฟหกด ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316268.4621184,
+      "context_used": "สวัสดี ฟหกด ครับ"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316268.472589,
+      "context_used": "สวัสดี ฟหกด ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316268.4772844,
+      "context_used": "สวัสดี ฟหกด ครับ"
+    },
+    {
+      "word": "นอน",
+      "language": "thai",
+      "lexical_meaning": "sleep",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316268.4876072,
+      "context_used": "นอน"
+    },
+    {
+      "word": "นอน",
+      "language": "thai",
+      "lexical_meaning": "sleep",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316268.4923415,
+      "context_used": "taught_by_user"
+    },
+    {
+      "word": "นอน",
+      "language": "thai",
+      "lexical_meaning": "sleep",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316268.4980903,
+      "context_used": "นอน"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316268.5084755,
+      "context_used": "ฟหกด จดห ครับ"
+    },
+    {
+      "word": "นอน",
+      "language": "thai",
+      "lexical_meaning": "sleep",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316268.5189133,
+      "context_used": "taught_by_user"
+    },
+    {
+      "word": "ไป",
+      "language": "thai",
+      "lexical_meaning": "go",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316268.5248506,
+      "context_used": "ไป นอน"
+    },
+    {
+      "word": "นอน",
+      "language": "thai",
+      "lexical_meaning": "sleep",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789316268.5298486,
+      "context_used": "ไป นอน"
+    },
+    {
+      "word": "ขอบคุณ",
+      "language": "thai",
+      "lexical_meaning": "thank you",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789396646.910295,
+      "context_used": "Translate to English: ขอบคุณ"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789397094.5519075,
+      "context_used": "สวัสดี ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789397094.7317967,
+      "context_used": "สวัสดี ครับ"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789397133.5406265,
+      "context_used": "สวัสดี ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789397133.5578017,
+      "context_used": "สวัสดี ครับ"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789397148.054833,
+      "context_used": "สวัสดี ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789397148.0725114,
+      "context_used": "สวัสดี ครับ"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789397182.6364927,
+      "context_used": "สวัสดี ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789397182.6542964,
+      "context_used": "สวัสดี ครับ"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789397223.1789818,
+      "context_used": "สวัสดี ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789397223.2218823,
+      "context_used": "สวัสดี ครับ"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789397281.3147526,
+      "context_used": "สวัสดี ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789397281.3371413,
+      "context_used": "สวัสดี ครับ"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789398096.4673927,
+      "context_used": "สวัสดี"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789398143.1957831,
+      "context_used": "สวัสดี"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789398161.9098272,
+      "context_used": "สวัสดี ครับ"
+    },
+    {
+      "word": "ครับ",
+      "language": "thai",
+      "lexical_meaning": "[polite particle, male]",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789398161.926234,
+      "context_used": "สวัสดี ครับ"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789398862.8863614,
+      "context_used": "What does สวัสดี mean in English?"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789399059.705068,
+      "context_used": "What does สวัสดี mean in English?"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789399282.8937867,
+      "context_used": "What does สวัสดี mean in English?"
+    },
+    {
+      "word": "ขอบคุณ",
+      "language": "thai",
+      "lexical_meaning": "thank you",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789399282.931611,
+      "context_used": "What does ขอบคุณ mean in English?"
+    },
+    {
+      "word": "ใช่",
+      "language": "thai",
+      "lexical_meaning": "yes/correct",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789399282.939632,
+      "context_used": "What does ใช่ mean in English?"
+    },
+    {
+      "word": "ไม่",
+      "language": "thai",
+      "lexical_meaning": "no/not",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789399282.9474564,
+      "context_used": "What does ไม่ mean in English?"
+    },
+    {
+      "word": "น้ำ",
+      "language": "thai",
+      "lexical_meaning": "water",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789399282.95487,
+      "context_used": "What does น้ำ mean in English?"
+    },
+    {
+      "word": "ข้าว",
+      "language": "thai",
+      "lexical_meaning": "rice/meal",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789399282.9619029,
+      "context_used": "What does ข้าว mean in English?"
+    },
+    {
+      "word": "บ้าน",
+      "language": "thai",
+      "lexical_meaning": "house/home",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789399282.973557,
+      "context_used": "What does บ้าน mean in English?"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789399482.054633,
+      "context_used": "What does สวัสดี mean in English?"
+    },
+    {
+      "word": "ขอบคุณ",
+      "language": "thai",
+      "lexical_meaning": "thank you",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789399482.0891814,
+      "context_used": "What does ขอบคุณ mean in English?"
+    },
+    {
+      "word": "ใช่",
+      "language": "thai",
+      "lexical_meaning": "yes/correct",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789399482.0971632,
+      "context_used": "What does ใช่ mean in English?"
+    },
+    {
+      "word": "ไม่",
+      "language": "thai",
+      "lexical_meaning": "no/not",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789399482.105896,
+      "context_used": "What does ไม่ mean in English?"
+    },
+    {
+      "word": "น้ำ",
+      "language": "thai",
+      "lexical_meaning": "water",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789399482.1147592,
+      "context_used": "What does น้ำ mean in English?"
+    },
+    {
+      "word": "ข้าว",
+      "language": "thai",
+      "lexical_meaning": "rice/meal",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789399482.1233423,
+      "context_used": "What does ข้าว mean in English?"
+    },
+    {
+      "word": "บ้าน",
+      "language": "thai",
+      "lexical_meaning": "house/home",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789399482.1406827,
+      "context_used": "What does บ้าน mean in English?"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789399482.1495714,
+      "context_used": "What does สวัสดี mean in English?"
+    },
+    {
+      "word": "ขอบคุณ",
+      "language": "thai",
+      "lexical_meaning": "thank you",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789399482.161209,
+      "context_used": "What does ขอบคุณ mean in English?"
+    },
+    {
+      "word": "ใช่",
+      "language": "thai",
+      "lexical_meaning": "yes/correct",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789399482.1694572,
+      "context_used": "What does ใช่ mean in English?"
+    },
+    {
+      "word": "ไม่",
+      "language": "thai",
+      "lexical_meaning": "no/not",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789399482.1773546,
+      "context_used": "What does ไม่ mean in English?"
+    },
+    {
+      "word": "น้ำ",
+      "language": "thai",
+      "lexical_meaning": "water",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789399482.186266,
+      "context_used": "What does น้ำ mean in English?"
+    },
+    {
+      "word": "ข้าว",
+      "language": "thai",
+      "lexical_meaning": "rice/meal",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789399482.194136,
+      "context_used": "What does ข้าว mean in English?"
+    },
+    {
+      "word": "บ้าน",
+      "language": "thai",
+      "lexical_meaning": "house/home",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789399482.206426,
+      "context_used": "What does บ้าน mean in English?"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789399482.22396,
+      "context_used": "If someone says สวัสดี to you, what are they saying?"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789399922.7753932,
+      "context_used": "What does สวัสดี mean in English?"
+    },
+    {
+      "word": "ขอบคุณ",
+      "language": "thai",
+      "lexical_meaning": "thank you",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789399922.790847,
+      "context_used": "What does ขอบคุณ mean in English?"
+    },
+    {
+      "word": "ใช่",
+      "language": "thai",
+      "lexical_meaning": "yes/correct",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789399922.7997558,
+      "context_used": "What does ใช่ mean in English?"
+    },
+    {
+      "word": "ไม่",
+      "language": "thai",
+      "lexical_meaning": "no/not",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789399922.8098006,
+      "context_used": "What does ไม่ mean in English?"
+    },
+    {
+      "word": "น้ำ",
+      "language": "thai",
+      "lexical_meaning": "water",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789399922.821337,
+      "context_used": "What does น้ำ mean in English?"
+    },
+    {
+      "word": "ข้าว",
+      "language": "thai",
+      "lexical_meaning": "rice/meal",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789399922.8301964,
+      "context_used": "What does ข้าว mean in English?"
+    },
+    {
+      "word": "บ้าน",
+      "language": "thai",
+      "lexical_meaning": "house/home",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789399922.850555,
+      "context_used": "What does บ้าน mean in English?"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789399922.8613951,
+      "context_used": "What does สวัสดี mean in English?"
+    },
+    {
+      "word": "ขอบคุณ",
+      "language": "thai",
+      "lexical_meaning": "thank you",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789399922.8723378,
+      "context_used": "What does ขอบคุณ mean in English?"
+    },
+    {
+      "word": "ใช่",
+      "language": "thai",
+      "lexical_meaning": "yes/correct",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789399922.881186,
+      "context_used": "What does ใช่ mean in English?"
+    },
+    {
+      "word": "ไม่",
+      "language": "thai",
+      "lexical_meaning": "no/not",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789399922.890192,
+      "context_used": "What does ไม่ mean in English?"
+    },
+    {
+      "word": "น้ำ",
+      "language": "thai",
+      "lexical_meaning": "water",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789399922.8999043,
+      "context_used": "What does น้ำ mean in English?"
+    },
+    {
+      "word": "ข้าว",
+      "language": "thai",
+      "lexical_meaning": "rice/meal",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789399922.9112806,
+      "context_used": "What does ข้าว mean in English?"
+    },
+    {
+      "word": "บ้าน",
+      "language": "thai",
+      "lexical_meaning": "house/home",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789399922.932845,
+      "context_used": "What does บ้าน mean in English?"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789399923.0038853,
+      "context_used": "If someone says สวัสดี to you, what are they saying?"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789400956.2373235,
+      "context_used": "What does สวัสดี mean?"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789401044.6172738,
+      "context_used": "What does สวัสดี mean?"
+    },
+    {
+      "word": "ขอบคุณ",
+      "language": "thai",
+      "lexical_meaning": "thank you",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789401044.6610315,
+      "context_used": "What does ขอบคุณ mean?"
+    },
+    {
+      "word": "น้ำ",
+      "language": "thai",
+      "lexical_meaning": "water",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789401044.6688838,
+      "context_used": "What does น้ำ mean?"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789401044.6795285,
+      "context_used": "If someone says สวัสดี to you, what are they saying?"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789402244.6984162,
+      "context_used": "Translate the greeting สวัสดี into another language"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789402312.5829997,
+      "context_used": "Translate the greeting สวัสดี into another language"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789402346.7703474,
+      "context_used": "Translate the greeting สวัสดี into another language"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789402373.9617684,
+      "context_used": "Translate the greeting สวัสดี into another language"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789402647.5858412,
+      "context_used": "Translate the greeting สวัสดี into another language"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789402664.1756709,
+      "context_used": "Translate the greeting สวัสดี into another language"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789402744.1445398,
+      "context_used": "The Thai word สวัสดี means hello"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789402744.1838872,
+      "context_used": "What does สวัสดี mean?"
+    },
+    {
+      "word": "ขอบคุณ",
+      "language": "thai",
+      "lexical_meaning": "thank you",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789402744.192598,
+      "context_used": "The Thai word ขอบคุณ means thank you"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789402767.8941035,
+      "context_used": "The Thai word สวัสดี means hello"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789402767.9287736,
+      "context_used": "What does สวัสดี mean?"
+    },
+    {
+      "word": "ขอบคุณ",
+      "language": "thai",
+      "lexical_meaning": "thank you",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789402767.9375994,
+      "context_used": "The Thai word ขอบคุณ means thank you"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789402789.9011128,
+      "context_used": "The Thai word สวัสดี means hello"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789402789.9384599,
+      "context_used": "What does สวัสดี mean?"
+    },
+    {
+      "word": "ขอบคุณ",
+      "language": "thai",
+      "lexical_meaning": "thank you",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789402789.9470937,
+      "context_used": "The Thai word ขอบคุณ means thank you"
+    },
+    {
+      "word": "ขอบคุณ",
+      "language": "thai",
+      "lexical_meaning": "thank you",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789402791.6872113,
+      "context_used": "What does ขอบคุณ mean?"
+    },
+    {
+      "word": "น้ำ",
+      "language": "thai",
+      "lexical_meaning": "water",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789405514.786607,
+      "context_used": "น้ำ means water"
+    },
+    {
+      "word": "บ้าน",
+      "language": "thai",
+      "lexical_meaning": "house/home",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789405514.8361356,
+      "context_used": "บ้าน means house"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789406054.1257122,
+      "context_used": "What does สวัสดี mean?"
+    },
+    {
+      "word": "ขอบคุณ",
+      "language": "thai",
+      "lexical_meaning": "thank you",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789406054.1483388,
+      "context_used": "What does ขอบคุณ mean?"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789406054.1567438,
+      "context_used": "สวัสดี means hello"
+    },
+    {
+      "word": "ขอบคุณ",
+      "language": "thai",
+      "lexical_meaning": "thank you",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789406054.1658921,
+      "context_used": "ขอบคุณ means thank you"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789406054.1800904,
+      "context_used": "What does สวัสดี mean?"
+    },
+    {
+      "word": "ขอบคุณ",
+      "language": "thai",
+      "lexical_meaning": "thank you",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789406054.188526,
+      "context_used": "What does ขอบคุณ mean?"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789406087.2488458,
+      "context_used": "What does สวัสดี mean?"
+    },
+    {
+      "word": "ขอบคุณ",
+      "language": "thai",
+      "lexical_meaning": "thank you",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789406087.2936344,
+      "context_used": "What does ขอบคุณ mean?"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789406087.3025541,
+      "context_used": "สวัสดี means hello"
+    },
+    {
+      "word": "ขอบคุณ",
+      "language": "thai",
+      "lexical_meaning": "thank you",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789406087.3114805,
+      "context_used": "ขอบคุณ means thank you"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789406087.3243713,
+      "context_used": "What does สวัสดี mean?"
+    },
+    {
+      "word": "ขอบคุณ",
+      "language": "thai",
+      "lexical_meaning": "thank you",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789406087.3330228,
+      "context_used": "What does ขอบคุณ mean?"
+    },
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789406088.3708932,
+      "context_used": "What does สวัสดี mean?"
+    },
+    {
+      "word": "ขอบคุณ",
+      "language": "thai",
+      "lexical_meaning": "thank you",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789406088.4053662,
+      "context_used": "What does ขอบคุณ mean?"
+    }
+  ],
+  "count": 584
+}

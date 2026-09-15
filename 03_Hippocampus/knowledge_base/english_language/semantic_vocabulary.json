@@ -1,0 +1,275 @@
+{
+  "semantic_vocabulary": [
+    {
+      "word": "hello",
+      "lexical_meaning": "greeting",
+      "semantic_field": "GREETING",
+      "contextual_meanings": [
+        {
+          "context_type": "LITERAL",
+          "meaning": "informal greeting",
+          "required_context": [],
+          "examples": ["hello there", "hello world"],
+          "confidence": 1.0,
+          "data_status": "KNOWN"
+        }
+      ],
+      "ambiguity_level": "UNAMBIGUOUS",
+      "evidence_status": "KNOWN",
+      "confidence": 1.0,
+      "note": "Common English greeting"
+    },
+    {
+      "word": "hi",
+      "lexical_meaning": "greeting (informal)",
+      "semantic_field": "GREETING",
+      "contextual_meanings": [
+        {
+          "context_type": "LITERAL",
+          "meaning": "casual greeting",
+          "required_context": [],
+          "examples": ["hi", "hi there"],
+          "confidence": 1.0,
+          "data_status": "KNOWN"
+        }
+      ],
+      "ambiguity_level": "UNAMBIGUOUS",
+      "evidence_status": "KNOWN",
+      "confidence": 1.0
+    },
+    {
+      "word": "thank",
+      "lexical_meaning": "express gratitude",
+      "semantic_field": "GRATITUDE",
+      "contextual_meanings": [
+        {
+          "context_type": "LITERAL",
+          "meaning": "show appreciation",
+          "required_context": [],
+          "examples": ["thank you", "thanks"],
+          "confidence": 1.0,
+          "data_status": "KNOWN"
+        }
+      ],
+      "ambiguity_level": "UNAMBIGUOUS",
+      "evidence_status": "KNOWN",
+      "confidence": 1.0
+    },
+    {
+      "word": "you",
+      "lexical_meaning": "second person pronoun",
+      "semantic_field": "PRONOUN",
+      "contextual_meanings": [
+        {
+          "context_type": "LITERAL",
+          "meaning": "the person being addressed",
+          "required_context": [],
+          "examples": ["you are", "thank you"],
+          "confidence": 1.0,
+          "data_status": "KNOWN"
+        }
+      ],
+      "ambiguity_level": "UNAMBIGUOUS",
+      "evidence_status": "KNOWN",
+      "confidence": 1.0
+    },
+    {
+      "word": "I",
+      "lexical_meaning": "first person pronoun",
+      "semantic_field": "PRONOUN",
+      "contextual_meanings": [
+        {
+          "context_type": "LITERAL",
+          "meaning": "the speaker/writer",
+          "required_context": [],
+          "examples": ["I am", "I go"],
+          "confidence": 1.0,
+          "data_status": "KNOWN"
+        }
+      ],
+      "ambiguity_level": "UNAMBIGUOUS",
+      "evidence_status": "KNOWN",
+      "confidence": 1.0
+    },
+    {
+      "word": "am",
+      "lexical_meaning": "be (first person)",
+      "semantic_field": "STATE",
+      "contextual_meanings": [
+        {
+          "context_type": "LITERAL",
+          "meaning": "first person present of 'be'",
+          "required_context": ["first_person"],
+          "examples": ["I am", "I am here"],
+          "confidence": 1.0,
+          "data_status": "KNOWN"
+        }
+      ],
+      "ambiguity_level": "UNAMBIGUOUS",
+      "evidence_status": "KNOWN",
+      "confidence": 1.0
+    },
+    {
+      "word": "is",
+      "lexical_meaning": "be (third person)",
+      "semantic_field": "STATE",
+      "contextual_meanings": [
+        {
+          "context_type": "LITERAL",
+          "meaning": "third person present of 'be'",
+          "required_context": [],
+          "examples": ["he is", "it is"],
+          "confidence": 1.0,
+          "data_status": "KNOWN"
+        }
+      ],
+      "ambiguity_level": "UNAMBIGUOUS",
+      "evidence_status": "KNOWN",
+      "confidence": 1.0
+    },
+    {
+      "word": "are",
+      "lexical_meaning": "be (second person/plural)",
+      "semantic_field": "STATE",
+      "contextual_meanings": [
+        {
+          "context_type": "LITERAL",
+          "meaning": "second person or plural present of 'be'",
+          "required_context": [],
+          "examples": ["you are", "they are"],
+          "confidence": 1.0,
+          "data_status": "KNOWN"
+        }
+      ],
+      "ambiguity_level": "UNAMBIGUOUS",
+      "evidence_status": "KNOWN",
+      "confidence": 1.0
+    },
+    {
+      "word": "what",
+      "lexical_meaning": "which thing/event",
+      "semantic_field": "INTERROGATIVE",
+      "contextual_meanings": [
+        {
+          "context_type": "LITERAL",
+          "meaning": "asking for information",
+          "required_context": [],
+          "examples": ["what is", "what do"],
+          "confidence": 1.0,
+          "data_status": "KNOWN"
+        }
+      ],
+      "ambiguity_level": "UNAMBIGUOUS",
+      "evidence_status": "KNOWN",
+      "confidence": 1.0
+    },
+    {
+      "word": "who",
+      "lexical_meaning": "which person",
+      "semantic_field": "INTERROGATIVE",
+      "contextual_meanings": [
+        {
+          "context_type": "LITERAL",
+          "meaning": "asking about person identity",
+          "required_context": [],
+          "examples": ["who are you", "who is"],
+          "confidence": 1.0,
+          "data_status": "KNOWN"
+        }
+      ],
+      "ambiguity_level": "UNAMBIGUOUS",
+      "evidence_status": "KNOWN",
+      "confidence": 1.0
+    },
+    {
+      "word": "where",
+      "lexical_meaning": "in/to what place",
+      "semantic_field": "INTERROGATIVE",
+      "contextual_meanings": [
+        {
+          "context_type": "LITERAL",
+          "meaning": "asking about location",
+          "required_context": [],
+          "examples": ["where are you", "where is"],
+          "confidence": 1.0,
+          "data_status": "KNOWN"
+        }
+      ],
+      "ambiguity_level": "UNAMBIGUOUS",
+      "evidence_status": "KNOWN",
+      "confidence": 1.0
+    },
+    {
+      "word": "name",
+      "lexical_meaning": "personal identifier",
+      "semantic_field": "ATTRIBUTE",
+      "contextual_meanings": [
+        {
+          "context_type": "LITERAL",
+          "meaning": "what someone/something is called",
+          "required_context": [],
+          "examples": ["my name", "your name"],
+          "confidence": 1.0,
+          "data_status": "KNOWN"
+        }
+      ],
+      "ambiguity_level": "UNAMBIGUOUS",
+      "evidence_status": "KNOWN",
+      "confidence": 1.0
+    },
+    {
+      "word": "my",
+      "lexical_meaning": "belonging to me",
+      "semantic_field": "POSSESSIVE",
+      "contextual_meanings": [
+        {
+          "context_type": "LITERAL",
+          "meaning": "first person possessive",
+          "required_context": [],
+          "examples": ["my name", "my home"],
+          "confidence": 1.0,
+          "data_status": "KNOWN"
+        }
+      ],
+      "ambiguity_level": "UNAMBIGUOUS",
+      "evidence_status": "KNOWN",
+      "confidence": 1.0
+    },
+    {
+      "word": "your",
+      "lexical_meaning": "belonging to you",
+      "semantic_field": "POSSESSIVE",
+      "contextual_meanings": [
+        {
+          "context_type": "LITERAL",
+          "meaning": "second person possessive",
+          "required_context": [],
+          "examples": ["your name", "your home"],
+          "confidence": 1.0,
+          "data_status": "KNOWN"
+        }
+      ],
+      "ambiguity_level": "UNAMBIGUOUS",
+      "evidence_status": "KNOWN",
+      "confidence": 1.0
+    },
+    {
+      "word": "go",
+      "lexical_meaning": "move/travel",
+      "semantic_field": "MOTION",
+      "contextual_meanings": [
+        {
+          "context_type": "LITERAL",
+          "meaning": "move from one place to another",
+          "required_context": [],
+          "examples": ["I go", "go home"],
+          "confidence": 1.0,
+          "data_status": "KNOWN"
+        }
+      ],
+      "ambiguity_level": "UNAMBIGUOUS",
+      "evidence_status": "KNOWN",
+      "confidence": 1.0
+    }
+  ]
+}

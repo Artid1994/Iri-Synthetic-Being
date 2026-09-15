@@ -115,13 +115,5 @@ class TestBrainIntegration(unittest.TestCase):
         self.assertTrue(required.issubset(snapshot.keys()))
 
 
-    def test_runtime_uses_gemma_cognitive_engine(self):
-        from runtime.gemma_cognitive_engine import GemmaCognitiveEngine
-
-        runtime = TranscendingRuntime()
-
-        self.assertIsInstance(runtime.cognitive, GemmaCognitiveEngine)
-
-
 if __name__ == "__main__":
     unittest.main()

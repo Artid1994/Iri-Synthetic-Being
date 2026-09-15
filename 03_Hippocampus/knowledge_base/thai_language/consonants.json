@@ -1,0 +1,76 @@
+{
+  "consonants": [
+    {"char": "ก", "name": "ko kai", "sound": "k", "class": "mid", "initial": true, "final": "k"},
+    {"char": "ข", "name": "kho khai", "sound": "kh", "class": "high", "initial": true, "final": "k"},
+    {"char": "ฃ", "name": "kho khuat", "sound": "kh", "class": "high", "initial": true, "final": "k", "obsolete": true},
+    {"char": "ค", "name": "kho khwai", "sound": "kh", "class": "low", "initial": true, "final": "k"},
+    {"char": "ฅ", "name": "kho khon", "sound": "kh", "class": "low", "initial": true, "final": "k", "obsolete": true},
+    {"char": "ฆ", "name": "kho rakhang", "sound": "kh", "class": "low", "initial": true, "final": "k"},
+    {"char": "ง", "name": "ngo ngu", "sound": "ng", "class": "low", "initial": true, "final": "ng"},
+    {"char": "จ", "name": "cho chan", "sound": "ch", "class": "mid", "initial": true, "final": "t"},
+    {"char": "ฉ", "name": "cho ching", "sound": "ch", "class": "high", "initial": true, "final": "-"},
+    {"char": "ช", "name": "cho chang", "sound": "ch", "class": "low", "initial": true, "final": "t"},
+    {"char": "ซ", "name": "so so", "sound": "s", "class": "low", "initial": true, "final": "t"},
+    {"char": "ฌ", "name": "cho choe", "sound": "ch", "class": "low", "initial": true, "final": "-"},
+    {"char": "ญ", "name": "yo ying", "sound": "y", "class": "low", "initial": true, "final": "n"},
+    {"char": "ฎ", "name": "do chada", "sound": "d", "class": "mid", "initial": true, "final": "t"},
+    {"char": "ฏ", "name": "to patak", "sound": "t", "class": "mid", "initial": true, "final": "t"},
+    {"char": "ฐ", "name": "tho than", "sound": "th", "class": "high", "initial": true, "final": "t"},
+    {"char": "ฑ", "name": "tho montho", "sound": "th", "class": "low", "initial": true, "final": "t"},
+    {"char": "ฒ", "name": "tho phu thao", "sound": "th", "class": "low", "initial": true, "final": "t"},
+    {"char": "ณ", "name": "no nen", "sound": "n", "class": "low", "initial": true, "final": "n"},
+    {"char": "ด", "name": "do dek", "sound": "d", "class": "mid", "initial": true, "final": "t"},
+    {"char": "ต", "name": "to tao", "sound": "t", "class": "mid", "initial": true, "final": "t"},
+    {"char": "ถ", "name": "tho thung", "sound": "th", "class": "high", "initial": true, "final": "t"},
+    {"char": "ท", "name": "tho thahan", "sound": "th", "class": "low", "initial": true, "final": "t"},
+    {"char": "ธ", "name": "tho thong", "sound": "th", "class": "low", "initial": true, "final": "t"},
+    {"char": "น", "name": "no nu", "sound": "n", "class": "low", "initial": true, "final": "n"},
+    {"char": "บ", "name": "bo baimai", "sound": "b", "class": "mid", "initial": true, "final": "p"},
+    {"char": "ป", "name": "po pla", "sound": "p", "class": "mid", "initial": true, "final": "p"},
+    {"char": "ผ", "name": "pho phung", "sound": "ph", "class": "high", "initial": true, "final": "-"},
+    {"char": "ฝ", "name": "fo fa", "sound": "f", "class": "high", "initial": true, "final": "-"},
+    {"char": "พ", "name": "pho phan", "sound": "ph", "class": "low", "initial": true, "final": "p"},
+    {"char": "ฟ", "name": "fo fan", "sound": "f", "class": "low", "initial": true, "final": "p"},
+    {"char": "ภ", "name": "pho samphao", "sound": "ph", "class": "low", "initial": true, "final": "p"},
+    {"char": "ม", "name": "mo ma", "sound": "m", "class": "low", "initial": true, "final": "m"},
+    {"char": "ย", "name": "yo yak", "sound": "y", "class": "low", "initial": true, "final": "y"},
+    {"char": "ร", "name": "ro ruea", "sound": "r", "class": "low", "initial": true, "final": "n"},
+    {"char": "ล", "name": "lo ling", "sound": "l", "class": "low", "initial": true, "final": "n"},
+    {"char": "ว", "name": "wo waen", "sound": "w", "class": "low", "initial": true, "final": "w"},
+    {"char": "ศ", "name": "so sala", "sound": "s", "class": "high", "initial": true, "final": "t"},
+    {"char": "ษ", "name": "so rue si", "sound": "s", "class": "high", "initial": true, "final": "t"},
+    {"char": "ส", "name": "so suea", "sound": "s", "class": "high", "initial": true, "final": "t"},
+    {"char": "ห", "name": "ho hip", "sound": "h", "class": "high", "initial": true, "final": "-"},
+    {"char": "ฬ", "name": "lo chula", "sound": "l", "class": "low", "initial": true, "final": "n"},
+    {"char": "อ", "name": "o ang", "sound": "-", "class": "mid", "initial": true, "final": "-"},
+    {"char": "ฮ", "name": "ho nokhuk", "sound": "h", "class": "low", "initial": true, "final": "-"}
+  ],
+  "classes": {
+    "low": {
+      "count_total": 24,
+      "count_active": 23,
+      "count_obsolete": 1,
+      "tone_behavior": "modified_rules",
+      "description": "Low class consonants produce modified tone patterns"
+    },
+    "mid": {
+      "count_total": 9,
+      "count_active": 9,
+      "count_obsolete": 0,
+      "tone_behavior": "standard_rules",
+      "description": "Mid class consonants follow standard tone rules"
+    },
+    "high": {
+      "count_total": 11,
+      "count_active": 10,
+      "count_obsolete": 1,
+      "tone_behavior": "rising_rules",
+      "description": "High class consonants tend toward rising tones"
+    }
+  },
+  "notes": {
+    "obsolete_consonants": "ฃ (kho khuat) and ฅ (kho khon) are obsolete, appearing only in historical texts",
+    "total_consonants": 44,
+    "active_consonants": 42
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "translation_is_not_understanding": [
+    {
+      "thai": "ไป กิน",
+      "translation": "go eat",
+      "why_translation_insufficient": "Translation provides surface form but not structural understanding",
+      "understanding_requires": [
+        "Explain this is serial verb construction (V1-V2 pattern)",
+        "Explain V1 (ไป) provides direction/purpose for V2 (กิน)",
+        "Apply pattern to new example: มา + ดู → มา ดู (come see/watch)"
+      ],
+      "evidence_type": "EXPLANATION + APPLICATION",
+      "memorization_fails_because": "Can translate but cannot explain WHY structure means what it means",
+      "data_status": "KNOWN"
+    },
+    {
+      "thai": "คน ดี",
+      "translation": "good person",
+      "why_translation_insufficient": "Translation does not demonstrate knowledge of word order rules",
+      "understanding_requires": [
+        "Explain Thai word order: Noun + Adjective (not Adjective + Noun)",
+        "Apply pattern to new words: บ้าน + ใหญ่ → บ้าน ใหญ่ (big house)",
+        "Explain why *ดี คน is incorrect"
+      ],
+      "evidence_type": "EXPLANATION + PATTERN_EXTRACTION + APPLICATION",
+      "memorization_fails_because": "Can recall phrase but cannot apply word-order pattern to new nouns/adjectives",
+      "data_status": "KNOWN"
+    }
+  ],
+  "memorization_is_not_understanding": [
+    {
+      "thai": "ไป บ้าน",
+      "memorized": "go home",
+      "why_memorization_insufficient": "Recall does not demonstrate structural knowledge",
+      "understanding_requires": [
+        "Extract pattern: MOTION_VERB + LOCATION",
+        "Apply to new motion verb: มา + บ้าน → มา บ้าน (come home)",
+        "Apply to new location: ไป + โรงเรียน → ไป โรงเรียน (go school)"
+      ],
+      "evidence_type": "PATTERN_EXTRACTION + TRANSFER",
+      "translation_fails_because": "Can recall specific phrase but cannot transfer pattern to novel examples",
+      "data_status": "KNOWN"
+    }
+  ],
+  "understanding_evidence_types": [
+    {
+      "type": "EXPLANATION",
+      "thai_input": "ไป กิน น้ำ",
+      "required_output_pattern": "Explanation must mention: serial verbs, S-V-V-O structure, or purpose relationship",
+      "not_sufficient": "go drink water (translation only)",
+      "confidence_threshold": 0.7,
+      "data_status": "KNOWN"
+    },
+    {
+      "type": "CONTEXTUAL_INTERPRETATION",
+      "thai_input": "ดี ไหม (in response to suggestion)",
+      "required_output_pattern": "Must identify pragmatic function: agreement/acceptance, not quality question",
+      "not_sufficient": "good question-particle (literal translation)",
+      "confidence_threshold": 0.7,
+      "data_status": "KNOWN"
+    },
+    {
+      "type": "PATTERN_APPLICATION",
+      "thai_input": "Apply NOUN+ADJECTIVE pattern to: ข้าว + ร้อน",
+      "required_output_pattern": "ข้าว ร้อน (hot rice) - correct word order",
+      "not_sufficient": "ร้อน ข้าว (reversed, incorrect)",
+      "confidence_threshold": 0.9,
+      "data_status": "KNOWN"
+    },
+    {
+      "type": "PATTERN_EXTRACTION",
+      "thai_input": "Given: คน ดี, น้ำ ดี, extract pattern",
+      "required_output_pattern": "NOUN + ดี (good)",
+      "not_sufficient": "Translate both phrases without identifying pattern",
+      "confidence_threshold": 0.8,
+      "data_status": "KNOWN"
+    },
+    {
+      "type": "TRANSFER",
+      "thai_input": "Pattern: ไป + VERB (serial). New verb: ดู (watch). Construct sentence.",
+      "required_output_pattern": "ไป ดู (go watch) - applying learned pattern to new verb",
+      "not_sufficient": "Retrieve memorized sentence with ไป",
+      "confidence_threshold": 0.9,
+      "data_status": "KNOWN"
+    }
+  ],
+  "assessment_rules": {
+    "translation_only_max_score": 0.70,
+    "memorization_only_max_score": 0.70,
+    "mastery_threshold": 0.90,
+    "understanding_evidence_required": [
+      "EXPLANATION (30% weight)",
+      "APPLICATION or TRANSFER (30% weight)",
+      "Translation/Recognition (40% weight)"
+    ],
+    "note": "Translation alone cannot reach 90% mastery threshold. Understanding evidence required.",
+    "data_status": "POLICY"
+  },
+  "limitations": {
+    "note": "Understanding Test Limitations",
+    "scope": "Tests based on 5 verified words and 2 grammatical patterns",
+    "automatic_verification": "Pattern matching for structured explanations; full natural language explanation verification NOT implemented",
+    "world_knowledge": "NOT available; tests must not require external knowledge",
+    "generation": "NO LLM; cannot generate novel explanations dynamically",
+    "data_status": "All examples based on KNOWN linguistic patterns only"
+  }
+}

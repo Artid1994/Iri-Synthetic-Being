@@ -36,6 +36,14 @@ try:
     # Cognitive modules
     from inner_monologue import InnerMonologue
     from parallel_processor import get_processor
+    
+    # Semantic learning modules
+    from semantic_extractor import SemanticExtractor
+    from semantic_knowledge import SemanticKnowledgeStore
+    
+    # Voice serialization
+    sys.path.insert(0, str(PROJECT_ROOT / "04_Cerebellum"))
+    from voice_serializer import get_voice_serializer
 
 except ImportError as e:
     print(f"⚠️  Import error: {e}")
@@ -82,6 +90,17 @@ class IriChat:
         # Parallel processor
         self.parallel_processor = get_processor()
         print("✓ Parallel dual-tasking engine started")
+        
+        # Semantic learning components
+        self.semantic_extractor = SemanticExtractor()
+        self.semantic_knowledge = SemanticKnowledgeStore(
+            storage_path=PROJECT_ROOT / "03_Hippocampus" / "semantic_facts.json"
+        )
+        print("✓ Semantic learning system initialized")
+        
+        # Voice serializer for non-overlapping playback
+        self.voice_serializer = get_voice_serializer()
+        print("✓ Voice serialization enabled")
 
     def _init_voice_synthesis(self):
         """Initialize VoiceSynthesizer dynamically from 04_Cerebellum."""
@@ -120,40 +139,37 @@ class IriChat:
 
     def speak(self, text: str):
         """
-        Speak text using TTS voice synthesis (non-blocking background thread).
-        Uses VoiceSynthesizer with proper PipeWire environment and ffplay routing.
+        Speak text using TTS voice synthesis with serialized playback.
+        Uses VoiceSynthesizer with proper PipeWire environment and voice serializer
+        to prevent overlapping audio.
         """
         if not self.voice_synthesizer or not text or not text.strip():
             return
 
-        def _speak_thread():
-            """Background thread for non-blocking TTS playback."""
-            try:
-                # Enforce PipeWire/PulseAudio environment
-                env = os.environ.copy()
-                env['XDG_RUNTIME_DIR'] = '/run/user/1000'
-                env['PULSE_SERVER'] = 'unix:/run/user/1000/pulse/native'
+        try:
+            # Enforce PipeWire/PulseAudio environment
+            env = os.environ.copy()
+            env['XDG_RUNTIME_DIR'] = '/run/user/1000'
+            env['PULSE_SERVER'] = 'unix:/run/user/1000/pulse/native'
 
-                # Synthesize and play (blocking in thread, non-blocking to main loop)
-                audio_file = self.voice_synthesizer.synthesize(text)
-                if audio_file and os.path.exists(audio_file):
-                    # Play with ffplay (enforced environment)
-                    import subprocess
-                    cmd = ["ffplay", "-nodisp", "-autoexit", "-loglevel", "error", audio_file]
-                    subprocess.run(cmd, env=env, capture_output=True, timeout=60)
-
-                    # Cleanup temp file
-                    if "/tmp" in audio_file:
+            # Synthesize audio file
+            audio_file = self.voice_synthesizer.synthesize(text)
+            
+            if audio_file and os.path.exists(audio_file):
+                # Cleanup callback to remove temp file after playback
+                def cleanup(file_path):
+                    if "/tmp" in file_path:
                         try:
-                            os.remove(audio_file)
+                            os.remove(file_path)
                         except OSError:
                             pass
-            except Exception as e:
-                print(f"[Voice] Playback error: {e}")
-
-        # Launch background thread (non-blocking)
-        thread = threading.Thread(target=_speak_thread, daemon=True)
-        thread.start()
+                
+                # Queue for serialized playback (cancels any currently playing audio)
+                self.voice_serializer.play(audio_file, env, cleanup)
+                
+        except Exception as e:
+            # Silent failure - don't interrupt conversation flow
+            pass
 
     def classify_input(self, user_input: str) -> Intent:
         """Classify user input intent using Thai NLP lexicon and skills."""
@@ -296,24 +312,109 @@ class IriChat:
         import random
         return random.choice(farewells)
 
+    def _extract_semantic_knowledge(self, text: str) -> Optional[dict]:
+        """Extract semantic knowledge from teaching text.
+        Returns structured knowledge dict or None."""
+        if not self.semantic_extractor.is_teaching_statement(text):
+            return None
+        
+        facts = self.semantic_extractor.extract_facts(text)
+        if not facts:
+            return None
+        
+        # Prioritize definition facts over naming facts
+        # Definition facts (คือ) are more informative than naming facts (ชื่อคือ)
+        # But exclude definitions where the subject is just introducing the name
+        definition_facts = [
+            f for f in facts 
+            if f.predicate == 'คือ' and 'ชื่อของ' not in f.subject
+        ]
+        chosen_fact = definition_facts[0] if definition_facts else facts[0]
+        
+        return {
+            'entity': chosen_fact.subject,
+            'attributes': [chosen_fact.predicate, chosen_fact.object] if chosen_fact.object else [chosen_fact.predicate],
+            'source': 'user_teaching',
+            'timestamp': chosen_fact.learned_at
+        }
+    
+    def _store_semantic_knowledge(self, knowledge: dict):
+        """Store structured semantic knowledge."""
+        # Store in both formats:
+        # 1. SemanticFact format for the semantic_knowledge system
+        from semantic_extractor import SemanticFact
+        
+        # Join attributes into a predicate-object pair
+        attributes = knowledge.get('attributes', [])
+        if len(attributes) >= 2:
+            predicate = attributes[0]
+            obj = ' '.join(attributes[1:])
+        else:
+            predicate = 'คือ'
+            obj = ' '.join(attributes) if attributes else ''
+        
+        fact = SemanticFact(
+            subject=knowledge['entity'],
+            predicate=predicate,
+            object_=obj,
+            context=knowledge.get('source', '')
+        )
+        self.semantic_knowledge.add_facts([fact])
+        
+        # 2. Also store in entity/attributes format for compatibility
+        knowledge_file = self.project_root / "03_Hippocampus" / "semantic_knowledge.json"
+        knowledge_file.parent.mkdir(parents=True, exist_ok=True)
+        
+        # Load existing
+        existing = []
+        if knowledge_file.exists():
+            try:
+                with open(knowledge_file, 'r', encoding='utf-8') as f:
+                    existing = json.load(f)
+            except:
+                existing = []
+        
+        # Add new knowledge
+        existing.append(knowledge)
+        
+        # Save
+        with open(knowledge_file, 'w', encoding='utf-8') as f:
+            json.dump(existing, f, ensure_ascii=False, indent=2)
+    
     def _answer_question(self, question: str) -> str:
-        """Answer question using Hippocampus memory recall."""
-        # Search memory for relevant context
+        """Answer question using semantic knowledge first, then fallback to memory search."""
+        # Try semantic knowledge first
+        semantic_answer = self.semantic_knowledge.query(question)
+        
+        if semantic_answer:
+            return semantic_answer
+        
+        # Fallback to traditional memory recall
         context = self.memory.recall_context(question)
-
+        
         # Check if we found relevant information
         if "ไม่พบข้อมูล" in context:
             responses = [
-                f"ผมไม่แน่ใจเรื่องนี้ครับเจ้านาย กำลังค้นหาข้อมูลในหน่วยความจำ...\n{context}",
+                f"ผมไม่แน่ใจเรื่องนี้ครับเจ้านาย ยังไม่มีข้อมูลในหน่วยความจำครับ",
                 f"ขออภัยครับ ผมยังไม่มีข้อมูลเพียงพอเกี่ยวกับเรื่องนี้ครับเจ้านาย",
-                f"ให้ผมลองค้นหาให้นะครับเจ้านาย...\n{context}"
+                f"ผมยังไม่เคยเรียนรู้เรื่องนี้ครับเจ้านาย"
             ]
             import random
             return random.choice(responses)
-
-        # Found context
-        return f"ตามที่ผมค้นหาในหน่วยความจำครับเจ้านาย:\n\n{context}"
-
+        
+        # Filter out raw file dumps - check if context is just a filename
+        if context.strip().startswith('[') and context.strip().endswith('.md]'):
+            # This is a raw file reference, not semantic content
+            responses = [
+                f"ผมพบข้อมูลที่เกี่ยวข้องในหน่วยความจำครับเจ้านาย แต่ยังไม่สามารถสรุปได้ชัดเจนครับ",
+                f"ผมจำได้ว่ามีข้อมูลนี้ครับเจ้านาย แต่ยังไม่สามารถอธิบายได้ละเอียดครับ"
+            ]
+            import random
+            return random.choice(responses)
+        
+        # Found real context - return it naturally
+        return f"ตามที่ผมจำได้ครับเจ้านาย:\n\n{context}"
+    
     def _execute_skill(self, intent: Intent) -> str:
         """Execute skill command and return real system data."""
         if len(intent.entities) < 2:
@@ -424,7 +525,26 @@ class IriChat:
         return f"รับทราบคำสั่งครับเจ้านาย: '{action}' เป้าหมาย: '{target}'\nกำลังดำเนินการ... (ฟังก์ชันยังไม่เชื่อมต่อครับ)"
 
     def _respond_to_statement(self, statement: str) -> str:
-        """Respond to general statements with dynamic context-aware responses."""
+        """Respond to general statements with dynamic context-aware responses.
+        Extracts and stores semantic knowledge from teaching statements."""
+        
+        # Check if this is a teaching statement
+        if self.semantic_extractor.is_teaching_statement(statement):
+            # Extract semantic facts
+            facts = self.semantic_extractor.extract_facts(statement)
+            
+            if facts:
+                # Store extracted facts
+                self.semantic_knowledge.add_facts(facts)
+                
+                # Acknowledge learning with specificity
+                learned_items = [f.subject for f in facts[:2]]  # First 2 subjects
+                if len(learned_items) == 1:
+                    return f"เข้าใจแล้วครับเจ้านาย ผมจำเรื่อง{learned_items[0]}ไว้แล้วครับ"
+                else:
+                    return f"เข้าใจแล้วครับเจ้านาย ผมจดจำข้อมูลเหล่านี้ไว้แล้วครับ"
+        
+        # Not a teaching statement - regular acknowledgment
         # Analyze statement sentiment and content
         analysis = self.text_analyzer.analyze(statement)
         sentiment = analysis.get('sentiment', 'neutral')
@@ -465,9 +585,14 @@ class IriChat:
         import random
         return random.choice(responses)
 
-    def save_conversation_turn(self, user_input: str, iri_response: str):
-        """Save conversation turn to Hippocampus memory."""
+    def save_conversation_turn(self, user_input: str, iri_response: str, intent_type: str = ""):
+        """Save conversation turn to Hippocampus memory.
+        Filters out control commands (exit/quit) from being stored as conversational content."""
         try:
+            # Skip saving control commands (exit, quit, etc.)
+            if intent_type == 'exit':
+                return
+            
             # Add to conversation history
             self.conversation_history.append({
                 'timestamp': datetime.now().isoformat(),
@@ -597,8 +722,8 @@ class IriChat:
                 # Speak response (TTS voice output, non-blocking)
                 self.speak(response)
 
-                # Save conversation turn to memory
-                self.save_conversation_turn(user_input, response)
+                # Save conversation turn to memory (with intent type for filtering)
+                self.save_conversation_turn(user_input, response, intent.type)
 
                 # Flush stdin to clear any buffered input before next prompt
                 sys.stdout.flush()
@@ -625,6 +750,12 @@ class IriChat:
         print(f"Duration: {duration:.0f} seconds")
         print(f"Turns: {len(self.conversation_history)}")
         print("=" * 80)
+        
+        # Cleanup voice serializer
+        try:
+            self.voice_serializer.shutdown()
+        except Exception:
+            pass
 
     def _generate_proactive_greeting(self) -> Optional[str]:
         """

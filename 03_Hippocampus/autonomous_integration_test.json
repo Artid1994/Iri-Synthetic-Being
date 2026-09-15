@@ -1,0 +1,52 @@
+{
+  "version": "1.0.0",
+  "type": "ae01m_memory_brain_snapshot",
+  "memory": {
+    "version": "1.0.0",
+    "subsystem": "memory",
+    "state": {
+      "working": [
+        "Thai consonant ก = /k/ sound"
+      ],
+      "episodic": [
+        "Thai consonant ก = /k/ sound"
+      ],
+      "semantic": [
+        "Thai consonant ก = /k/ sound"
+      ],
+      "experiences": [],
+      "safety_events": [],
+      "associations": {}
+    },
+    "graph": {
+      "nodes": {
+        "EPISODIC:Thai consonant ก = /k/ sound": {
+          "content": "Thai consonant ก = /k/ sound",
+          "memory_type": "EPISODIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        },
+        "SEMANTIC:Thai consonant ก = /k/ sound": {
+          "content": "Thai consonant ก = /k/ sound",
+          "memory_type": "SEMANTIC",
+          "activation_count": 1,
+          "source_url": null,
+          "retrieval_timestamp": null,
+          "confidence": 1.0
+        }
+      },
+      "edges": []
+    }
+  },
+  "brain": {
+    "version": "1.0.0",
+    "subsystem": "brain",
+    "hippocampus": {
+      "memories": [
+        "Thai consonant ก = /k/ sound"
+      ]
+    }
+  }
+}

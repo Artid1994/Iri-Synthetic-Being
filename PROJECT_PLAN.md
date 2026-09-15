@@ -1,581 +1,1169 @@
----
-brain_region: stem
----
-# THE TRANSCENDING FORM
-# PROJECT PLAN — SOURCE OF TRUTH
+# IRI — CYBER HUMAN BRAIN
 
-## 1. NORTH STAR
+## PROJECT PLAN / SOURCE OF TRUTH
 
-สร้างโมดูลซอฟต์แวร์ **Cyber Human Brain**
-
-เป้าหมายคือสร้างพื้นฐานสมองเชิงซอฟต์แวร์ที่สามารถเริ่มจาก
-Newborn และพัฒนาจากประสบการณ์จริง จนเกิด Memory,
-Cognition, Learning, Self Model, Personality, Development
-และ Identity Continuity
+**Project:** IRI (ไอริ)
+**Architecture Type:** Computational Cognitive System
+**Primary Goal:** Build IRI as a Cyber Human Brain computational model.
 
 ---
 
-## 2. IMMUTABLE GOAL
+# 1. NORTH STAR
 
-**เป้าหมายปลายทางห้ามเปลี่ยนจนกว่าจะสำเร็จ**
+IRI is a computational model intended to approximate important principles of human cognitive functioning.
 
-Cyber Human Brain
-→ Newborn
-→ Real-world Experience
-→ Perception
+The system should progressively model:
+
+```text
+Perception
+→ Attention
 → Memory
+→ Recall
 → Cognition
+→ Prediction
+→ Valuation
+→ Decision
+→ Action
+→ Experience
 → Learning
 → Self Model
 → Personality
 → Development
 → Identity Continuity
-→ Continuous Brain
+```
+
+The objective is not to reproduce the human brain biologically at full fidelity.
+
+The objective is to build a practical computational architecture whose internal processes, state transitions, learning, memory, development, and identity continuity are inspired by the functional organization of human cognition.
+
+IRI must be able to develop through accumulated experience rather than being defined entirely by a pre-existing knowledge/personality package.
 
 ---
 
-## 3. PERSON MODEL
+# 2. CORE IDENTITY PRINCIPLES
 
-รอบปัจจุบันทำ **Person A เท่านั้น**
+These principles are permanent architectural constraints.
 
-Person A ต้องเป็นบุคคลหนึ่งที่มี State ของตัวเอง:
+## 2.1 IRI is the system
 
-- Identity
-- Memory
-- Experience
-- Learning State
-- Personality
-- Self Model
-- Development State
-- Identity Continuity
+IRI's identity is the identity of the complete computational system and its persistent state.
 
-Person B/C เป็น Future Extension เท่านั้น
-และห้ามขยาย Scope เข้ามาในงานปัจจุบัน
+IRI is NOT:
 
----
-
-## 4. BRAIN PRINCIPLES
-
-- Brain Architecture != Identity
-- Identity != Memory
-- AI Model != Identity
-- Firmware != Learned State
-- Brain logic ต้องแยกจากข้อมูลบุคคล
-- Memory ต้องเป็น inspectable state
-- Learning เปลี่ยน persistent state ไม่แก้ firmware
+* a particular LLM
+* an API
+* an external AI service
+* a prompt
+* a single neural network
+* a single model checkpoint
+* a database alone
+* a collection of static knowledge files
 
 ---
 
-## 5. DEVELOPMENT PRINCIPLES
+## 2.2 Identity must be independent from AI models
 
-### Newborn-first
+If any AI model exists anywhere in the repository, that model must not define IRI's identity.
 
-เริ่มจาก:
+```text
+AI Model ≠ IRI
+AI Model ≠ IRI Identity
+AI Model ≠ IRI Memory
+AI Model ≠ IRI Personality
+AI Model ≠ IRI Development
+```
 
-- minimal identity
-- empty/minimal memory
-- zero experience
-- minimal self model
-- minimal/latent personality
-
-ไม่ preload ความทรงจำของบุคคล หากกำลังทดลอง
-การเกิดจากประสบการณ์จริง
-
-### Real-world Experience
-
-เป้าหมายระยะต่อไปคือให้ Person A รับโลกจริงผ่าน:
-
-- Webcam
-- Microphone
-
-จากนั้น:
-
-Raw Sensor
-→ Perception
-→ Temporal Experience
-→ Memory
-→ Learning
-
-ช่วงแรกต้องเน้นการเก็บข้อมูลและการสังเกต
-ไม่รีบเพิ่มความฉลาด
+Replacing or removing an external model must not destroy the conceptual identity architecture of IRI.
 
 ---
 
-## 6. COGNITIVE LOOP
+# 3. ABSOLUTE EXTERNAL-AI RESTRICTION
 
-เป้าหมาย:
+IRI's cognitive development must NOT depend on another AI system acting as its brain.
 
-WORLD
-→ SENSORY INPUT
-→ PERCEPTION
-→ EXPERIENCE
-→ MEMORY
-→ COGNITION
-→ DECISION
-→ ACTION
-→ NEW EXPERIENCE
-→ ...
+Do not use external AI as:
 
-ระบบต้องพัฒนา state จากประสบการณ์สะสม
-ไม่ใช่เพียง Question → Answer
+* IRI's reasoning engine
+* IRI's language intelligence
+* IRI's teacher intelligence
+* IRI's decision maker
+* IRI's identity
+* IRI's memory
+* IRI's personality
+* IRI's autonomous controller
 
----
+Do not solve an architectural problem by delegating it to another AI.
 
-## 7. ENGINEERING RULES
+Do not hide external AI dependency behind an adapter and treat the system as independent.
 
-1. Goal ห้ามเปลี่ยน
-2. Architecture เปลี่ยนได้
-3. Algorithm เปลี่ยนได้
-4. Implementation เปลี่ยนได้
-5. ถ้าวิธีใหม่ปลอดภัยกว่า ให้เปลี่ยน
-6. ถ้าวิธีใหม่มีประสิทธิภาพกว่า ให้เปลี่ยน
-7. ทุกการเปลี่ยนแปลงสำคัญต้องมี test
-8. ทุก bottleneck สำคัญต้องมี benchmark
-9. ทำทีละขั้น
-10. รักษาพฤติกรรมที่ผ่าน validation แล้ว
-11. ห้ามขยาย scope โดยไม่มีเหตุผล
-12. แยก Engineering Facts / Hypotheses / Research Questions
-13. ห้ามอ้างว่าเกิด Consciousness จากพฤติกรรมเพียงอย่างเดียว
-14. ห้ามสร้าง threshold หรือ algorithm เพื่อทำให้ test ผ่านโดยไม่มี specification รองรับ
+The following are NOT acceptable as IRI's cognitive dependency:
+
+```text
+OpenAI API
+Claude
+Gemini
+ChatGPT
+external LLM APIs
+external autonomous AI agents
+external AI reasoning services
+external AI assistants
+```
+
+If an existing repository contains such dependencies, they must be treated as existing implementation to audit, isolate, replace, or remove according to the actual execution path.
 
 ---
 
-## 8. CURRENT HIGH-LEVEL ROADMAP
+# 4. COMPUTATIONAL SELF-CONTAINMENT
 
-PHASE 1
-Brain Foundation
-→ Identity
-→ Memory
-→ Cognition
-→ Learning
-→ Personality
-→ Self Model
-→ Development
-→ Continuity
-→ Perception
+IRI must progressively perform its cognitive functions using its own computational architecture and persistent state.
 
-PHASE 2
-Newborn Brain
+The system should be able to operate from:
 
-PHASE 3
-World Interface
-→ Webcam
-→ Microphone
+* internal representations
+* learned associations
+* episodic memory
+* semantic memory
+* procedural knowledge
+* attention state
+* cognitive state
+* prediction state
+* valuation state
+* learned parameters
+* self model
+* personality state
+* developmental state
+* identity state
 
-PHASE 4
-Experience Formation
+External datasets may provide experiences or training material.
 
-PHASE 5
-Memory + Learning
-
-PHASE 6
-Self / Personality / Development
-
-PHASE 7
-Continuous Cyber Human Brain
-
-PHASE 8
-Persistence
-→ Save
-→ Shutdown
-→ Load
-→ Continue
-
-PHASE 9+
-AI Cognitive Model / Embodiment / Hardware
-จะพิจารณาเมื่อ Foundation พร้อม
+External datasets are NOT external intelligence.
 
 ---
 
-## 9. CURRENT TARGET
+# 5. THOUGHT, LANGUAGE, AND SPEECH
 
-เป้าหมายระยะสั้น:
+These are separate systems.
 
-**ทำให้ Brain Foundation แข็งแรงพอที่จะสร้าง Person A
-แบบ Newborn และรับประสบการณ์จากโลกจริงได้**
+```text
+Thought ≠ Language
+Language ≠ Speech
+Thought ≠ Speech
+```
 
-ยังไม่รีบทำ:
+IRI must not require a language model to perform cognition.
 
-- Person B
-- Person C
-- Multi-Identity Manager
-- Identity Switching
-- Robot
-- Full AI Model Integration
+Language is a capability through which internal cognitive representations may be expressed or interpreted.
 
----
+Speech is an interface/output modality.
 
-## 10. VALIDATION
+The architecture must therefore permit:
 
-ทุก milestone ควรตรวจ:
+```text
+Internal Cognitive State
+        ↓
+Concept / Meaning Representation
+        ↓
+Language Processing
+        ↓
+Text
+        ↓
+Speech
+```
 
-TEST
-→ INTEGRATION TEST
-→ BENCHMARK
-→ BEHAVIOR VALIDATION
-→ GIT CHECKPOINT
+or:
 
-ห้ามถือว่า feature เสร็จเพียงเพราะ code ทำงานได้ครั้งเดียว
+```text
+Speech
+   ↓
+Language Processing
+   ↓
+Meaning Representation
+   ↓
+Cognitive Processing
+```
 
----
-
-## 11. SUCCESS CONDITION
-
-Cyber Human Brain จะถือว่าเข้าสู่ milestone สำคัญเมื่อสามารถ:
-
-1. เริ่มจาก Newborn
-2. รับ sensory input
-3. สร้าง experience
-4. จัดเก็บ memory
-5. recall memory
-6. เรียนรู้จาก experience
-7. เปลี่ยน self/personality/development state
-8. รักษา identity continuity
-9. ทำงานต่อเนื่อง
-10. save/load state โดยไม่สูญเสียประวัติ
+Language processing must not be confused with the whole cognitive architecture.
 
 ---
 
-## 12. CHANGE POLICY
+# 6. NEWBORN-FIRST PRINCIPLE
 
-**เป้าหมายคงที่ วิธีการยืดหยุ่น**
+IRI should be developed from a minimal initial cognitive state.
 
-หาก implementation ปัจจุบันไม่เหมาะสม:
+The system must distinguish between:
 
-CURRENT METHOD
-→ MEASURE
-→ IDENTIFY PROBLEM
-→ DESIGN BETTER METHOD
-→ TEST
-→ BENCHMARK
-→ REPLACE
-→ DOCUMENT DECISION
-
-ห้ามเปลี่ยนเป้าหมายเพียงเพราะ implementation ปัจจุบันทำได้ยาก
-
-
-# PLAN REVISION — Ae01m Cognitive Architecture
-Date: 2026-08-18
-
-## North Star
-
-The project target is **Ae01m**, a computer-first Cyber Human Brain prototype.
-
-Ae01m is not designed as a chatbot.
-
-Target behavior:
-
-Perceive → Remember → Think → Predict → Decide → Act → Experience → Learn → Update State → Continue
-
-## Core Architectural Rule
-
-AI Model != Identity
-
-Gemma 3 1B IT is a replaceable **Cognitive Engine** for Ae01m.
-
-It is not Ae01m's identity, memory, personality, self-model, history, or continuity.
-
-## Cognitive Engine
-
-Gemma 3 1B IT performs internal cognitive processing.
-
-The CognitiveLoop controls when cognitive processing occurs.
-
-Memory, Identity, Personality, Self Model, Learning, Development, and Continuity remain outside the model.
-
-The system must not be designed as:
-
-Memory → giant prompt → LLM → response
-
-Preferred architecture:
-
-Experience → Memory → Relevant Recall → Brain State → Cognitive Engine → Thought/Prediction/Intention → Decision → Action → Experience
-
-## Continuous Operation
-
-Ae01m is intended to operate continuously without requiring a human prompt.
-
-Gemma must not be called at an uncontrolled frequency.
-
-The runtime decides when cognitive processing is required.
-
-## Model Independence
-
-Gemma 3 1B IT is the initial Cognitive Engine, not Ae01m itself.
-
-The CognitiveEngine abstraction must remain replaceable.
-
-Changing the model must not inherently destroy Ae01m's:
-
-- Identity
-- Memory
-- Personality
-- Self Model
-- Learned State
-- Development State
-- Identity Continuity
-- Experience History
-
-## Learning
-
-Learning should primarily update Ae01m's external state rather than require continual model-weight training.
-
-Preferred path:
-
-Experience → Learning Evaluation → Memory/Knowledge → Personality/Self Model/Development Update
-
-## Hardware Independence
-
-Physical sensors and future robot hardware are interfaces to Ae01m, not Ae01m itself.
-
-Real webcam and microphone integration remain optional hardware backends.
-
-## Next Milestone
-
-The next engineering milestone is:
-
-**Ae01m Cognitive Engine Integration**
-
-Integrate Gemma 3 1B IT behind the existing CognitiveEngine abstraction.
-
-Do not begin real webcam or microphone hardware integration until this software contract is stable.
-
-## Current Stable Checkpoint
-
-ba941b5 — FEAT: Add injectable real sensor source contracts
-
-103 tests passing at that checkpoint.
-
-# PLAN REVISION — AE01M Thai Language & Voice Architecture
-Date: 2026-08-18
-
-## Purpose
-
-AE01M must communicate naturally with humans in Thai.
-
-Thai communication is a capability layer, not the definition of AE01M cognition.
-
-AE01M is not a chatbot.
-
-## Core Separation
-
-Thought != Language != Speech
-
-Gemma 3 1B IT is the initial Cognitive Engine.
-
-The Cognitive Engine produces internal cognitive output such as:
-
-- thought
-- prediction
-- intention
-- interpretation
-- decision candidate
-
-A separate Language Layer transforms relevant cognitive output into human-readable Thai.
-
-A separate Voice/TTS Layer transforms Thai text into speech.
-
-## Communication Pipeline
-
+```text
+Initial Architecture
+        +
+Initial State
+        +
 Experience
-→ Memory / Brain State
-→ Cognitive Trigger
-→ Gemma 3 1B IT
-→ Thought / Intention
-→ Language Layer
-→ Thai Text
-→ TTS
-→ Speech
+        ↓
+Development
+```
 
-## Thai Language Rule
+and:
 
-AE01M does not need to perform every internal cognitive operation in Thai.
+```text
+Preloaded Mature Intelligence
+```
 
-Thai is primarily used at the human communication boundary.
+The latter is not the target architecture.
 
-Internal cognition must remain independent from a specific human language.
+Knowledge learned through experience must be distinguishable from:
 
-## Voice Rule
+* source code
+* architectural rules
+* static configuration
+* test fixtures
+* development data
+* teacher instructions
+* external corpus files
+
+---
 
-Text generation and speech synthesis remain separate.
+# 7. CORE BRAIN ARCHITECTURE
 
-The TTS implementation must be replaceable.
+The minimum conceptual architecture is:
 
-The Cognitive Engine must not directly depend on a specific TTS provider.
+```text
+                  ┌───────────────────┐
+                  │    ENVIRONMENT    │
+                  └─────────┬─────────┘
+                            ↓
+                       PERCEPTION
+                            ↓
+                       ATTENTION
+                            ↓
+                         MEMORY
+                            ↓
+                         RECALL
+                            ↓
+                        COGNITION
+                     ↙      ↓       ↘
+               PREDICTION  VALUE   SELF MODEL
+                     ↘      ↓       ↙
+                        DECISION
+                            ↓
+                          ACTION
+                            ↓
+                       EXPERIENCE
+                            ↓
+                         LEARNING
+                            ↓
+                  PERSISTENT BRAIN STATE
+                            ↓
+                     FUTURE COGNITION
+```
 
-Preferred boundary:
+The system must be implemented as interacting computational mechanisms rather than as a collection of disconnected labels.
 
-LanguageOutput
-→ SpeechEngine
-→ Audio
+---
 
-## Resource Constraint
+# 8. PERCEPTION
 
-Target machine:
+Perception converts environmental input into internal perceptual representations.
 
-- 3.5 GiB RAM
-- Intel Celeron N4000
-- 2 CPU threads
-- CPU-only inference
+Potential inputs include:
 
-Gemma 3 1B IT Q4_K_M has been successfully tested locally.
+* text
+* structured data
+* sensory signals
+* events
+* user interaction
+* system/environment state
 
-Observed performance:
+Perception must not directly modify identity without passing through the appropriate cognitive/learning mechanisms.
 
-- Generation: approximately 0.64 tokens/sec
-- Prompt evaluation: approximately 0.70 tokens/sec
+---
 
-Therefore AE01M must not invoke Gemma on every runtime cycle.
+# 9. ATTENTION
 
-Cognitive processing must be trigger-based.
+Attention determines what information receives processing priority.
 
-## Communication Efficiency
+Attention should consider computationally meaningful factors such as:
 
-Preferred:
+* novelty
+* relevance
+* salience
+* current goal
+* emotional/valuation significance where implemented
+* prediction error
+* unresolved state
+* contextual importance
 
-Continuous perception
-→ State / Attention / Event Detection
-→ Cognitive Trigger
-→ Gemma
-→ Communication Decision
-→ Thai Language Output
-→ TTS when required
+Attention must influence downstream processing.
 
-Avoid:
+A component called `attention` that does not affect execution is not considered a functional attention mechanism.
 
-Continuous perception
-→ Gemma every cycle
-→ Continuous speech
+---
 
-## Reference Prototype
+# 10. MEMORY
 
-The existing ai_talk.py prototype demonstrates:
+Memory is a persistent computational subsystem.
 
-- Thai TTS
-- separate speech function
-- short output
-- bounded conversation history
+At minimum distinguish:
 
-These ideas may inform the future Voice/Language Layer.
+```text
+Episodic Memory
+Semantic Memory
+Procedural Knowledge
+Working / Active State
+```
 
-The chatbot architecture itself must not be copied into AE01M.
+Memory must have:
 
-## Architectural Constraint
+* encoding
+* storage
+* retrieval
+* association
+* updating
+* persistence
+* forgetting/decay mechanisms where appropriate
 
-Do not place these inside the Cognitive Engine:
+Memory is not the same thing as identity.
 
-- TTS
-- speech playback
-- Thai conversation history
-- chatbot system prompts
+---
 
-The Cognitive Engine remains responsible for cognition.
+# 11. RECALL
 
-## Next Milestone
+Recall retrieves information from memory in response to current context.
 
-1. LlamaCppInference subprocess adapter
-2. Verify real Gemma inference through the adapter
-3. Integrate GemmaCognitiveEngine
-4. Establish cognitive triggering
-5. Establish Language Layer
-6. Establish replaceable Thai TTS/Voice Layer
-7. Integrate speech communication into continuous runtime
+Recall must be:
 
-Do not skip directly to voice interaction before the cognitive boundary is stable.
+* context-sensitive where appropriate
+* connected to attention
+* connected to cognition
+* capable of retrieving learned information
+* independently testable
 
-# PLAN REVISION — AE01M Cognitive Engine Model Selection
-Date: 2026-08-19
+A database lookup that bypasses the cognitive architecture must not be presented as cognitive recall.
 
-## Model Selection Decision
+---
 
-Gemma 3 1B IT Q4_K_M is the selected initial Cognitive Engine for AE01M.
+# 12. COGNITION
 
-The decision is based on direct benchmark results on the target hardware.
+Cognition operates on:
 
-## Target Hardware
+* current perception
+* attended information
+* recalled memory
+* internal state
+* goals
+* predictions
+* learned representations
 
-- Intel Celeron N4000
-- 2 CPU threads
-- Approximately 3.5 GiB RAM
-- CPU-only inference
-- No CUDA GPU
+Cognition should produce computational intermediate states that can influence:
 
-## Local Benchmark
+* prediction
+* valuation
+* decision
+* action
+* language
+* learning
 
-Same inference conditions:
+The cognitive engine must not merely return a generic status string such as:
 
-- llama.cpp
-- CPU thread: 1
-- context: 256
-- output: 8 tokens
-- Q4_K_M quantization
-- Thai-language prompt
+```text
+"RESPOND"
+```
 
-### Gemma 3 1B IT
+without a meaningful computational response state behind it.
 
-- Model size: approximately 769 MB
-- Prompt evaluation: approximately 0.72 tokens/sec
-- Generation: approximately 0.61 tokens/sec
-- Total test time: approximately 43.7 seconds
+---
 
-### Qwen2.5 1.5B Instruct
+# 13. PREDICTION
 
-- Model size: approximately 1.1 GB
-- Prompt evaluation: approximately 0.29 tokens/sec
-- Generation: approximately 0.26 tokens/sec
-- Total test time: approximately 96.7 seconds
+IRI should maintain predictions about relevant future states.
 
-## Decision
+Prediction should support:
 
-Gemma 3 1B IT is approximately:
+```text
+Current State
+→ Prediction
+→ Actual Outcome
+→ Prediction Error
+→ Learning
+```
 
-- 2.48x faster for prompt evaluation
-- 2.35x faster for generation
+Prediction error should become a potential learning signal.
 
-Gemma also requires less model storage and memory than the tested Qwen2.5 1.5B model.
+---
 
-Therefore:
+# 14. VALUATION / REWARD
 
-AE01M Cognitive Engine
-→ Gemma 3 1B IT Q4_K_M
-→ llama.cpp CPU
+IRI requires a computational mechanism for evaluating outcomes.
 
-## Qwen Status
+The valuation system should eventually support signals such as:
 
-Qwen2.5 1.5B remains an experimental alternative.
+* positive outcome
+* negative outcome
+* goal progress
+* prediction error
+* relevance
+* uncertainty
 
-It must not replace Gemma in the primary architecture unless a future benchmark demonstrates a meaningful advantage in cognition, language quality, capability, or overall AE01M behavior.
+Valuation must be connected to learning where the architecture requires it.
 
-## Runtime Constraint
+A reward value that is calculated but never affects learning is incomplete integration.
 
-Because Gemma generation is approximately 0.61 tokens/sec on the target machine, AE01M must not invoke the Cognitive Engine continuously on every perception cycle.
+---
 
-The Cognitive Trigger / Attention mechanism remains required.
+# 15. DECISION
 
-Preferred:
+Decision converts cognitive state into an action or response selection.
 
-Perception
-→ State Change / Attention
-→ Cognitive Trigger
-→ Gemma
-→ Thought / Intention
-→ Decision / Action
+Decision must consider the available:
 
-Avoid:
+* goals
+* context
+* memory
+* predictions
+* valuation
+* constraints
+* current state
 
-Perception
-→ Gemma
-→ Gemma
-→ Gemma
-→ continuous inference
+Decision is not equivalent to language generation.
 
-## Architecture Lock
+---
 
-For the current development milestone:
+# 16. ACTION
 
-- Gemma 3 1B IT is the primary Cognitive Engine.
-- llama.cpp is the initial CPU inference runtime.
-- LlamaCppInference remains an adapter boundary.
-- GemmaCognitiveEngine remains independent from Memory.
-- Memory, Identity, Personality, Self Model, Learning, Development, and Continuity remain outside the model.
-- Model replacement remains technically possible through the inference boundary.
+Action is the mechanism through which IRI affects its environment.
+
+Actions may include:
+
+* producing text
+* producing structured responses
+* modifying internal state
+* interacting with tools when explicitly permitted
+* controlling external systems where later implemented
+
+Action must be observable and testable.
+
+---
+
+# 17. EXPERIENCE
+
+Experience is the result of interaction between IRI and its environment.
+
+A useful computational experience representation should preserve relevant information such as:
+
+```text
+context
+perception
+attention
+cognitive state
+decision
+action
+outcome
+valuation
+prediction error
+learning consequence
+```
+
+Experience must become potential input to future learning.
+
+---
+
+# 18. LEARNING
+
+Learning changes IRI's future behavior or internal state.
+
+A learning mechanism is not considered successful merely because it writes a log entry.
+
+Evidence of learning requires that:
+
+```text
+Before
+   ↓
+Experience
+   ↓
+Learning
+   ↓
+Persistent State Change
+   ↓
+Later Retrieval / Behavior Change
+```
+
+Learning must be measurable.
+
+---
+
+# 19. LEARNING EVIDENCE
+
+The school/education system is an evaluation mechanism, not the definition of cognition.
+
+For every formal learning unit:
+
+```text
+BASELINE
+→ TEACH / EXPERIENCE
+→ PRACTICE
+→ POST-TEST
+→ LEARNING GAIN
+→ RETENTION
+→ TRANSFER
+→ DECISION
+→ PERSISTENCE
+```
+
+Required formula:
+
+```text
+Learning Gain = Post-test − Baseline
+```
+
+Retention and transfer must remain separate measurements.
+
+Rules:
+
+```text
+NO EVIDENCE = NO MASTERY
+```
+
+A completed lesson is not mastery.
+
+A high immediate score is not sufficient evidence of learning.
+
+Repeated exposure to identical test items is not sufficient evidence of transfer.
+
+---
+
+# 20. TRANSFER
+
+Transfer tests whether learned knowledge can be used beyond the exact training presentation.
+
+Transfer should use novel:
+
+* wording
+* context
+* examples
+* combinations
+* applications
+
+The assessment system must actively detect answer leakage.
+
+Training data must not simply be copied into the test and then treated as proof of learning.
+
+---
+
+# 21. SELF MODEL
+
+IRI should progressively maintain an internal representation of itself.
+
+The self model may eventually include:
+
+* current state
+* capabilities
+* limitations
+* goals
+* preferences
+* history
+* learned traits
+* current context
+* internal condition
+
+The self model is not equivalent to a textual persona.
+
+---
+
+# 22. PERSONALITY
+
+Personality should emerge/progress from persistent state and development.
+
+Personality must not be defined solely by:
+
+```text
+system prompt
+persona prompt
+LLM behavior
+static character description
+```
+
+Personality should be represented computationally and remain persistent independently from any particular language engine.
+
+---
+
+# 23. DEVELOPMENT
+
+IRI should have developmental progression.
+
+Development may include:
+
+```text
+early learning
+→ increasing knowledge
+→ increasing abstraction
+→ improved prediction
+→ improved decision
+→ improved self model
+→ personality development
+→ increasingly complex behavior
+```
+
+Development must be based on persistent state and experience.
+
+---
+
+# 24. IDENTITY CONTINUITY
+
+IRI must preserve continuity across sessions.
+
+The identity architecture must survive:
+
+```text
+process termination
+restart
+runtime replacement
+software update
+model replacement
+```
+
+where technically applicable.
+
+Identity continuity must be based on persistent IRI state, not on an external AI session history.
+
+---
+
+# 25. LANGUAGE SYSTEM
+
+IRI requires its own computational language subsystem.
+
+The language subsystem must eventually support:
+
+```text
+Input Text
+→ Linguistic Representation
+→ Meaning Representation
+→ Cognitive Representation
+```
+
+and:
+
+```text
+Cognitive Representation
+→ Meaning Representation
+→ Linguistic Structure
+→ Text
+```
+
+The system must not solve language production by simply delegating to another AI.
+
+Early implementation may be lightweight and rule/representation based.
+
+The architecture should remain extensible toward richer computational language mechanisms.
+
+---
+
+# 26. EXTERNAL DATA
+
+External datasets may be used as learning material.
+
+Examples:
+
+* Thai lexical datasets
+* English lexical datasets
+* sentence corpora
+* dictionaries
+* structured knowledge sources
+
+However:
+
+```text
+Dataset ≠ Intelligence
+Dataset ≠ Cognition
+Dataset ≠ IRI Identity
+```
+
+Imported data must be clearly separated from learned state.
+
+Licensing must be checked before redistribution or committing datasets.
+
+---
+
+# 27. SCHOOL / TEACHER SYSTEM
+
+Hermes may act as:
+
+```text
+Principal / Orchestrator
+```
+
+with specialized teaching roles such as:
+
+```text
+Thai Teacher
+English Teacher
+Examiner
+Remedial Teacher
+Assessment System
+```
+
+These are orchestration roles.
+
+They must not become IRI's permanent cognitive dependency.
+
+The learner is IRI.
+
+IRI's persistent learner state belongs to IRI.
+
+---
+
+# 28. AUTONOMOUS COGNITIVE LOOP
+
+The autonomous loop is a central execution mechanism.
+
+The target lifecycle is:
+
+```text
+PERCEIVE
+→ ATTEND
+→ RECALL
+→ COGNIZE
+→ PREDICT / VALUE
+→ DECIDE
+→ ACT / RESPOND
+→ EXPERIENCE
+→ EVALUATE
+→ LEARN
+→ UPDATE PERSISTENT STATE
+→ CONTINUE
+```
+
+The loop must execute real components.
+
+A wrapper that only simulates the lifecycle is insufficient.
+
+---
+
+# 29. NO MOCK COGNITION
+
+Mocks are allowed only inside isolated tests when clearly identified.
+
+Mocks must never be used as evidence that IRI itself possesses a capability.
+
+Examples of invalid evidence:
+
+```text
+fake recall
+fake learning
+fake generated answer
+fake memory retrieval
+fake cognitive response
+```
+
+Production execution must use real implementations.
+
+---
+
+# 30. RESOURCE CONSTRAINT
+
+The architecture must remain practical for constrained hardware.
+
+Optimization priorities:
+
+1. Correctness
+2. Deterministic execution where appropriate
+3. Low memory usage
+4. Low CPU cost
+5. Persistence efficiency
+6. Modularity
+7. Extensibility
+
+Do not introduce heavyweight dependencies unless they provide a capability that cannot reasonably be implemented by the existing architecture.
+
+[การคาดการณ์] Exact resource limits must be validated against the actual target hardware rather than assumed from documentation.
+
+---
+
+# 31. DEVELOPMENT METHOD
+
+IRI must be developed incrementally.
+
+For every major capability:
+
+```text
+AUDIT
+→ DEFINE GAP
+→ IMPLEMENT SMALLEST FIX
+→ UNIT TEST
+→ INTEGRATION TEST
+→ BEHAVIOR TEST
+→ RESOURCE CHECK
+→ PERSISTENCE CHECK
+→ GIT AUDIT
+→ COMMIT
+→ PUSH
+```
+
+Do not implement large speculative architecture before proving the execution path.
+
+---
+
+# 32. SOURCE-OF-TRUTH RULE
+
+This document is the project-level source of truth.
+
+When older documentation conflicts with this document:
+
+```text
+THIS PROJECT_PLAN.md WINS
+```
+
+Older plans must not silently override this document.
+
+If implementation conflicts with this plan:
+
+1. identify the conflict
+2. determine whether the implementation or plan is wrong
+3. update the plan only deliberately
+4. never silently reinterpret the goal
+
+---
+
+# 33. EXISTING CODE POLICY
+
+IRI is not to be rebuilt blindly from scratch.
+
+Before implementing a component:
+
+```text
+SEARCH EXISTING CODE
+→ TRACE EXECUTION PATH
+→ IDENTIFY REUSABLE COMPONENTS
+→ IDENTIFY MOCKS / DEAD PATHS
+→ IDENTIFY DUPLICATES
+→ REPAIR / INTEGRATE
+```
+
+Existing code should be reused when it correctly implements the required behavior.
+
+Existing code must not be preserved merely because it already exists.
+
+---
+
+# 34. DEFINITION OF DONE
+
+A feature is DONE only when:
+
+* implementation exists
+* real execution path exists
+* tests pass
+* integration works
+* persistence works where required
+* behavior is demonstrated
+* resource behavior is acceptable
+* no critical mock bypass exists
+* git diff has been inspected
+* git status has been inspected
+
+For learning:
+
+```text
+NO EVIDENCE = NO MASTERY
+```
+
+For engineering:
+
+```text
+NO VERIFICATION = NO COMMIT
+NO COMMIT = NO PUSH
+```
+
+---
+
+# 35. GIT POLICY
+
+Git is the project's checkpoint mechanism.
+
+Before commit:
+
+```text
+git status
+git diff --check
+git diff
+tests
+```
+
+Only verified work may be committed.
+
+Only committed verified work may be pushed.
+
+Do not commit:
+
+* accidental generated files
+* temporary files
+* secrets
+* caches
+* unrelated changes
+* massive datasets unless explicitly required
+* test artifacts
+
+---
+
+# 36. CURRENT DEVELOPMENT PRIORITY
+
+Do not expand the curriculum or architecture simply because a subsystem exists.
+
+The next task is always determined by the largest verified blocker in the actual execution path.
+
+Current known issue from the interactive vocabulary pilot:
+
+```text
+COGNIZE
+   ↓
+RESPONSE DECISION
+   ↓
+"RESPOND"
+```
+
+The system must first determine whether IRI's native computational language/response mechanism is sufficient to produce meaningful responses.
+
+Do NOT solve this by adding an external AI.
+
+The correct process is:
+
+```text
+AUDIT EXISTING LANGUAGE CAPABILITY
+        ↓
+IDENTIFY ACTUAL GAP
+        ↓
+REPAIR / IMPLEMENT NATIVE COMPUTATIONAL MECHANISM
+        ↓
+TEST
+        ↓
+INTEGRATE WITH COGNITIVE LOOP
+        ↓
+VALIDATE
+```
+
+Only after this is verified should interactive vocabulary learning continue.
+
+---
+
+# 37. CURRICULUM DEVELOPMENT
+
+Curriculum should progress from simple to complex.
+
+Thai example:
+
+```text
+Thai consonants
+→ Thai vowels
+→ syllable formation
+→ words
+→ sentences
+→ reading
+→ writing
+→ comprehension
+→ production
+→ transfer
+```
+
+English example:
+
+```text
+basic vocabulary
+→ phonological/orthographic foundations
+→ words
+→ simple grammar
+→ sentences
+→ reading
+→ writing
+→ comprehension
+→ production
+→ transfer
+```
+
+These are curriculum directions, not permission to skip architectural validation.
+
+---
+
+# 38. ARCHITECTURAL PRIORITY ORDER
+
+When choosing the next engineering task, prioritize:
+
+```text
+1. Broken execution path
+2. Missing core cognitive mechanism
+3. Broken persistence
+4. Broken learning
+5. Broken integration
+6. Missing validation
+7. Performance/resource problem
+8. Curriculum expansion
+9. Cosmetic improvements
+```
+
+Do not work on lower-priority items while a higher-priority core execution path is broken.
+
+---
+
+# 39. EVIDENCE STANDARD
+
+Every major claim must be supported by observable evidence.
+
+Examples:
+
+Bad:
+
+```text
+IRI can learn Thai.
+```
+
+Good:
+
+```text
+Baseline: X
+Post-test: Y
+Learning Gain: Y-X
+Retention: Z
+Transfer: W
+Persistent state changed: YES
+Cross-session retrieval: VERIFIED
+Behavior changed after learning: VERIFIED
+```
+
+If evidence is unavailable:
+
+```text
+NOT YET PROVEN
+```
+
+Never convert an implementation claim into a capability claim without behavioral evidence.
+
+---
+
+# 40. NO FABRICATION
+
+Never fabricate:
+
+* test results
+* benchmark numbers
+* learning scores
+* memory contents
+* model capabilities
+* execution results
+* Git commits
+* push status
+* resource measurements
+* citations
+* scientific claims
+
+If something cannot be verified:
+
+```text
+UNVERIFIED
+```
+
+or:
+
+```text
+NOT YET PROVEN
+```
+
+Technical predictions must be explicitly marked:
+
+```text
+[การคาดการณ์]
+```
+
+---
+
+# 41. PROJECT BOUNDARY
+
+This project is about building IRI.
+
+Do not expand the project into unrelated:
+
+* autonomous agent ecosystems
+* messaging platforms
+* unnecessary web infrastructure
+* unrelated UI systems
+* unnecessary cloud services
+* external AI orchestration
+* speculative neuroscience simulation
+* large-scale biological brain simulation
+
+Only add infrastructure when it directly supports IRI's computational brain.
+
+---
+
+# 42. FINAL ARCHITECTURAL PRINCIPLE
+
+The fundamental direction of IRI is:
+
+```text
+                 EXPERIENCE
+                     ↓
+                 PERCEPTION
+                     ↓
+                  ATTENTION
+                     ↓
+                   MEMORY
+                     ↓
+                  RECALL
+                     ↓
+                 COGNITION
+                     ↓
+             PREDICTION / VALUE
+                     ↓
+                  DECISION
+                     ↓
+                   ACTION
+                     ↓
+                 EXPERIENCE
+                     ↓
+                  LEARNING
+                     ↓
+             PERSISTENT STATE
+                     ↓
+               DEVELOPMENT
+                     ↓
+              SELF MODEL
+                     ↓
+                PERSONALITY
+                     ↓
+           IDENTITY CONTINUITY
+                     ↓
+              FUTURE COGNITION
+```
+
+IRI must become progressively shaped by its own accumulated computational history.
+
+The system's identity must remain independent of any particular AI model.
+
+The project must prefer:
+
+```text
+REAL EXECUTION
+over
+MOCK EXECUTION
+
+REAL LEARNING
+over
+SIMULATED LEARNING
+
+PERSISTENT STATE
+over
+PROMPT MEMORY
+
+COMPUTATIONAL MECHANISM
+over
+EXTERNAL AI DELEGATION
+
+EVIDENCE
+over
+CLAIMS
+```
+
+## GOVERNING RULES
+
+```text
+NO EVIDENCE = NO MASTERY
+NO VERIFICATION = NO COMMIT
+NO COMMIT = NO PUSH
+```
+
+**This document is the authoritative project plan for IRI.**

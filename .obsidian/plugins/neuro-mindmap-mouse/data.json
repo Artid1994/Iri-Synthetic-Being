@@ -2,9 +2,9 @@
   "defaultFolder": "neuro",
   "lastViewpointByAllenId": {},
   "brain3DCamera": {
-    "theta": 3.001194490192345,
-    "phi": 1.4071975511965977,
-    "radius": 18
+    "theta": 18.241194490192346,
+    "phi": 1.5299999999999991,
+    "radius": 22.5
   },
   "brain3DDragToRotate": true,
   "brain3DClickToOpen": false

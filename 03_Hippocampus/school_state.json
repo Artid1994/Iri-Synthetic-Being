@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "type": "school_workflow_state",
-  "timestamp": 1789396079.3437703,
+  "timestamp": 1789396649.1531985,
   "assessments": [
     {
       "assessment_id": "baseline_1",
@@ -6423,6 +6423,671 @@
       "score": 0.7777777777777778,
       "total_items": 9,
       "correct_items": 7
+    },
+    {
+      "assessment_id": "baseline_thai_vocabulary_pilot_1_1789396646",
+      "assessment_type": "baseline",
+      "lesson_id": "thai_vocabulary_pilot_1",
+      "timestamp": 1789396646.8287044,
+      "items": [
+        {
+          "item_id": "baseline_1",
+          "prompt": "What does '\u0e04\u0e38\u0e13\u0e40\u0e1b\u0e47\u0e19\u0e19\u0e31\u0e01\u0e40\u0e23\u0e35\u0e22\u0e19' mean in English?",
+          "student_answer": "RESPOND",
+          "correct_answer": "You are a student.",
+          "is_correct": false,
+          "item_type": "translation",
+          "timestamp": 1789396646.7911239
+        },
+        {
+          "item_id": "baseline_2",
+          "prompt": "What does '\u0e09\u0e31\u0e19\u0e0a\u0e2d\u0e1a\u0e04\u0e38\u0e13\u0e40\u0e2b\u0e21\u0e37\u0e2d\u0e19\u0e01\u0e31\u0e19' mean in English?",
+          "student_answer": "RESPOND",
+          "correct_answer": "I like you too.",
+          "is_correct": false,
+          "item_type": "translation",
+          "timestamp": 1789396646.7929778
+        },
+        {
+          "item_id": "baseline_3",
+          "prompt": "What does '\u0e1e\u0e35\u0e48\u0e2a\u0e32\u0e27\u0e2a\u0e39\u0e07\u0e01\u0e27\u0e48\u0e32\u0e09\u0e31\u0e19' mean in English?",
+          "student_answer": "RESPOND",
+          "correct_answer": "My sister is taller than I am.",
+          "is_correct": false,
+          "item_type": "translation",
+          "timestamp": 1789396646.7946174
+        },
+        {
+          "item_id": "baseline_4",
+          "prompt": "What does '\u0e09\u0e31\u0e19\u0e01\u0e33\u0e25\u0e31\u0e07\u0e40\u0e14\u0e34\u0e19' mean in English?",
+          "student_answer": "RESPOND",
+          "correct_answer": "I am walking.",
+          "is_correct": false,
+          "item_type": "translation",
+          "timestamp": 1789396646.7962549
+        },
+        {
+          "item_id": "baseline_5",
+          "prompt": "What does '\u0e19\u0e35\u0e48\u0e04\u0e37\u0e2d\u0e2d\u0e30\u0e44\u0e23?' mean in English?",
+          "student_answer": "RESPOND",
+          "correct_answer": "What is this?",
+          "is_correct": false,
+          "item_type": "translation",
+          "timestamp": 1789396646.7979393
+        },
+        {
+          "item_id": "baseline_6",
+          "prompt": "What does '\u0e19\u0e2d\u0e19\u0e01\u0e31\u0e19\u0e40\u0e16\u0e2d\u0e30' mean in English?",
+          "student_answer": "RESPOND",
+          "correct_answer": "Let's sleep!",
+          "is_correct": false,
+          "item_type": "translation",
+          "timestamp": 1789396646.7995422
+        },
+        {
+          "item_id": "baseline_7",
+          "prompt": "What does '\u0e02\u0e2d\u0e1a\u0e04\u0e38\u0e13' mean in English?",
+          "student_answer": "RESPOND",
+          "correct_answer": "thank you",
+          "is_correct": false,
+          "item_type": "translation",
+          "timestamp": 1789396646.8018787
+        },
+        {
+          "item_id": "baseline_8",
+          "prompt": "What does '\u0e22\u0e34\u0e19\u0e14\u0e35\u0e15\u0e49\u0e2d\u0e19\u0e23\u0e31\u0e1a' mean in English?",
+          "student_answer": "RESPOND",
+          "correct_answer": "Welcome",
+          "is_correct": false,
+          "item_type": "translation",
+          "timestamp": 1789396646.8035033
+        },
+        {
+          "item_id": "baseline_9",
+          "prompt": "What does '\u0e04\u0e38\u0e13\u0e40\u0e1b\u0e47\u0e19\u0e2d\u0e22\u0e48\u0e32\u0e07\u0e44\u0e23\u0e1a\u0e49\u0e32\u0e07?' mean in English?",
+          "student_answer": "RESPOND",
+          "correct_answer": "How are you?",
+          "is_correct": false,
+          "item_type": "translation",
+          "timestamp": 1789396646.805097
+        },
+        {
+          "item_id": "baseline_10",
+          "prompt": "What does '\u0e04\u0e38\u0e13\u0e21\u0e32\u0e08\u0e32\u0e01\u0e17\u0e35\u0e48\u0e44\u0e2b\u0e19?' mean in English?",
+          "student_answer": "RESPOND",
+          "correct_answer": "Where are you from?",
+          "is_correct": false,
+          "item_type": "translation",
+          "timestamp": 1789396646.806649
+        },
+        {
+          "item_id": "baseline_11",
+          "prompt": "What does '\u0e22\u0e34\u0e19\u0e14\u0e35\u0e17\u0e35\u0e48\u0e44\u0e14\u0e49\u0e23\u0e39\u0e49\u0e08\u0e31\u0e01\u0e04\u0e38\u0e13' mean in English?",
+          "student_answer": "RESPOND",
+          "correct_answer": "Pleased to meet you.",
+          "is_correct": false,
+          "item_type": "translation",
+          "timestamp": 1789396646.8081415
+        },
+        {
+          "item_id": "baseline_12",
+          "prompt": "What does '\u0e23\u0e32\u0e15\u0e23\u0e35\u0e2a\u0e27\u0e31\u0e2a\u0e14\u0e34\u0e4c' mean in English?",
+          "student_answer": "RESPOND",
+          "correct_answer": "Good night",
+          "is_correct": false,
+          "item_type": "translation",
+          "timestamp": 1789396646.8097057
+        },
+        {
+          "item_id": "baseline_13",
+          "prompt": "What does '\u0e25\u0e32\u0e01\u0e48\u0e2d\u0e19' mean in English?",
+          "student_answer": "RESPOND",
+          "correct_answer": "Goodbye",
+          "is_correct": false,
+          "item_type": "translation",
+          "timestamp": 1789396646.811269
+        },
+        {
+          "item_id": "baseline_14",
+          "prompt": "What does '\u0e02\u0e2d\u0e43\u0e2b\u0e49\u0e42\u0e0a\u0e04\u0e14\u0e35' mean in English?",
+          "student_answer": "RESPOND",
+          "correct_answer": "Good luck!",
+          "is_correct": false,
+          "item_type": "translation",
+          "timestamp": 1789396646.8125901
+        },
+        {
+          "item_id": "baseline_15",
+          "prompt": "What does '\u0e09\u0e31\u0e19\u0e44\u0e21\u0e48\u0e23\u0e39\u0e49' mean in English?",
+          "student_answer": "RESPOND",
+          "correct_answer": "I don't know.",
+          "is_correct": false,
+          "item_type": "translation",
+          "timestamp": 1789396646.8138793
+        },
+        {
+          "item_id": "baseline_16",
+          "prompt": "What does '\u0e09\u0e31\u0e19\u0e40\u0e02\u0e49\u0e32\u0e43\u0e08' mean in English?",
+          "student_answer": "RESPOND",
+          "correct_answer": "I understand.",
+          "is_correct": false,
+          "item_type": "translation",
+          "timestamp": 1789396646.8152673
+        },
+        {
+          "item_id": "baseline_17",
+          "prompt": "What does '\u0e0a\u0e48\u0e27\u0e22\u0e40\u0e2b\u0e25\u0e37\u0e2d' mean in English?",
+          "student_answer": "RESPOND",
+          "correct_answer": "Help!",
+          "is_correct": false,
+          "item_type": "translation",
+          "timestamp": 1789396646.8166118
+        },
+        {
+          "item_id": "baseline_18",
+          "prompt": "What does '\u0e04\u0e38\u0e13\u0e40\u0e02\u0e49\u0e32\u0e43\u0e08\u0e44\u0e2b\u0e21?' mean in English?",
+          "student_answer": "RESPOND",
+          "correct_answer": "Do you understand?",
+          "is_correct": false,
+          "item_type": "translation",
+          "timestamp": 1789396646.8183503
+        },
+        {
+          "item_id": "baseline_19",
+          "prompt": "What does '\u0e09\u0e31\u0e19\u0e08\u0e30\u0e17\u0e33\u0e43\u0e2b\u0e49\u0e14\u0e35\u0e17\u0e35\u0e48\u0e2a\u0e38\u0e14' mean in English?",
+          "student_answer": "RESPOND",
+          "correct_answer": "I will do my best.",
+          "is_correct": false,
+          "item_type": "translation",
+          "timestamp": 1789396646.8197515
+        },
+        {
+          "item_id": "baseline_20",
+          "prompt": "What does '\u0e09\u0e31\u0e19\u0e23\u0e31\u0e01\u0e04\u0e38\u0e13' mean in English?",
+          "student_answer": "RESPOND",
+          "correct_answer": "I love you.",
+          "is_correct": false,
+          "item_type": "translation",
+          "timestamp": 1789396646.8211582
+        },
+        {
+          "item_id": "baseline_21",
+          "prompt": "What does '\u0e09\u0e31\u0e19\u0e23\u0e2d\u0e17\u0e35\u0e48\u0e08\u0e30\u0e1e\u0e1a\u0e40\u0e18\u0e2d\u0e44\u0e21\u0e48\u0e44\u0e2b\u0e27\u0e41\u0e25\u0e49\u0e27' mean in English?",
+          "student_answer": "RESPOND",
+          "correct_answer": "I can't wait to see you again.",
+          "is_correct": false,
+          "item_type": "translation",
+          "timestamp": 1789396646.8225784
+        },
+        {
+          "item_id": "baseline_22",
+          "prompt": "What does '\u0e44\u0e0b\u0e2a\u0e4c\u0e02\u0e2d\u0e07\u0e09\u0e31\u0e19\u0e40\u0e2b\u0e21\u0e37\u0e2d\u0e19\u0e01\u0e31\u0e1a\u0e04\u0e38\u0e13' mean in English?",
+          "student_answer": "RESPOND",
+          "correct_answer": "My size is the same as you.",
+          "is_correct": false,
+          "item_type": "translation",
+          "timestamp": 1789396646.8240652
+        },
+        {
+          "item_id": "baseline_23",
+          "prompt": "What does '\u0e07\u0e32\u0e19\u0e17\u0e35\u0e48\u0e44\u0e14\u0e49\u0e23\u0e31\u0e1a\u0e21\u0e2d\u0e1a\u0e2b\u0e21\u0e32\u0e22\u0e02\u0e2d\u0e07\u0e09\u0e31\u0e19\u0e44\u0e21\u0e48\u0e40\u0e2b\u0e21\u0e37\u0e2d\u0e19\u0e01\u0e31\u0e1a\u0e04\u0e38\u0e13' mean in English?",
+          "student_answer": "RESPOND",
+          "correct_answer": "My assignment isn\u2019t the same as you.",
+          "is_correct": false,
+          "item_type": "translation",
+          "timestamp": 1789396646.8256972
+        },
+        {
+          "item_id": "baseline_24",
+          "prompt": "What does '\u0e09\u0e31\u0e19\u0e21\u0e35\u0e23\u0e2d\u0e07\u0e40\u0e17\u0e49\u0e32\u0e40\u0e2b\u0e21\u0e37\u0e2d\u0e19\u0e01\u0e31\u0e1a\u0e04\u0e38\u0e13\u0e40\u0e25\u0e22' mean in English?",
+          "student_answer": "RESPOND",
+          "correct_answer": "I have the same shoes as you.",
+          "is_correct": false,
+          "item_type": "translation",
+          "timestamp": 1789396646.82721
+        },
+        {
+          "item_id": "baseline_25",
+          "prompt": "What does '\u0e04\u0e38\u0e13\u0e43\u0e0a\u0e49\u0e42\u0e17\u0e23\u0e28\u0e31\u0e1e\u0e17\u0e4c\u0e21\u0e37\u0e2d\u0e16\u0e37\u0e2d\u0e40\u0e2b\u0e21\u0e37\u0e2d\u0e19\u0e01\u0e31\u0e1a\u0e09\u0e31\u0e19\u0e40\u0e25\u0e22' mean in English?",
+          "student_answer": "RESPOND",
+          "correct_answer": "You use the same mobile phone as me.",
+          "is_correct": false,
+          "item_type": "translation",
+          "timestamp": 1789396646.8286824
+        }
+      ],
+      "score": 0.0,
+      "total_items": 25,
+      "correct_items": 0
+    },
+    {
+      "assessment_id": "immediate_recall_thai_vocabulary_pilot_1_1789396646",
+      "assessment_type": "immediate_recall",
+      "lesson_id": "thai_vocabulary_pilot_1",
+      "timestamp": 1789396646.9896536,
+      "items": [
+        {
+          "item_id": "post_1",
+          "prompt": "Translate to English: \u0e04\u0e38\u0e13\u0e40\u0e1b\u0e47\u0e19\u0e19\u0e31\u0e01\u0e40\u0e23\u0e35\u0e22\u0e19",
+          "student_answer": "RESPOND",
+          "correct_answer": "You are a student.",
+          "is_correct": false,
+          "item_type": "translation",
+          "timestamp": 1789396646.9005811
+        },
+        {
+          "item_id": "post_2",
+          "prompt": "Translate to English: \u0e09\u0e31\u0e19\u0e0a\u0e2d\u0e1a\u0e04\u0e38\u0e13\u0e40\u0e2b\u0e21\u0e37\u0e2d\u0e19\u0e01\u0e31\u0e19",
+          "student_answer": "RESPOND",
+          "correct_answer": "I like you too.",
+          "is_correct": false,
+          "item_type": "translation",
+          "timestamp": 1789396646.9026737
+        },
+        {
+          "item_id": "post_3",
+          "prompt": "Translate to English: \u0e1e\u0e35\u0e48\u0e2a\u0e32\u0e27\u0e2a\u0e39\u0e07\u0e01\u0e27\u0e48\u0e32\u0e09\u0e31\u0e19",
+          "student_answer": "RESPOND",
+          "correct_answer": "My sister is taller than I am.",
+          "is_correct": false,
+          "item_type": "translation",
+          "timestamp": 1789396646.9042158
+        },
+        {
+          "item_id": "post_4",
+          "prompt": "Translate to English: \u0e09\u0e31\u0e19\u0e01\u0e33\u0e25\u0e31\u0e07\u0e40\u0e14\u0e34\u0e19",
+          "student_answer": "RESPOND",
+          "correct_answer": "I am walking.",
+          "is_correct": false,
+          "item_type": "translation",
+          "timestamp": 1789396646.9057045
+        },
+        {
+          "item_id": "post_5",
+          "prompt": "Translate to English: \u0e19\u0e35\u0e48\u0e04\u0e37\u0e2d\u0e2d\u0e30\u0e44\u0e23?",
+          "student_answer": "RESPOND",
+          "correct_answer": "What is this?",
+          "is_correct": false,
+          "item_type": "translation",
+          "timestamp": 1789396646.9073067
+        },
+        {
+          "item_id": "post_6",
+          "prompt": "Translate to English: \u0e19\u0e2d\u0e19\u0e01\u0e31\u0e19\u0e40\u0e16\u0e2d\u0e30",
+          "student_answer": "RESPOND",
+          "correct_answer": "Let's sleep!",
+          "is_correct": false,
+          "item_type": "translation",
+          "timestamp": 1789396646.9088726
+        },
+        {
+          "item_id": "post_7",
+          "prompt": "Translate to English: \u0e02\u0e2d\u0e1a\u0e04\u0e38\u0e13",
+          "student_answer": "RESPOND",
+          "correct_answer": "thank you",
+          "is_correct": false,
+          "item_type": "translation",
+          "timestamp": 1789396646.977247
+        },
+        {
+          "item_id": "post_8",
+          "prompt": "Translate to English: \u0e22\u0e34\u0e19\u0e14\u0e35\u0e15\u0e49\u0e2d\u0e19\u0e23\u0e31\u0e1a",
+          "student_answer": "RESPOND",
+          "correct_answer": "Welcome",
+          "is_correct": false,
+          "item_type": "translation",
+          "timestamp": 1789396646.9794152
+        },
+        {
+          "item_id": "post_9",
+          "prompt": "Translate to English: \u0e04\u0e38\u0e13\u0e40\u0e1b\u0e47\u0e19\u0e2d\u0e22\u0e48\u0e32\u0e07\u0e44\u0e23\u0e1a\u0e49\u0e32\u0e07?",
+          "student_answer": "RESPOND",
+          "correct_answer": "How are you?",
+          "is_correct": false,
+          "item_type": "translation",
+          "timestamp": 1789396646.9809859
+        },
+        {
+          "item_id": "post_10",
+          "prompt": "Translate to English: \u0e04\u0e38\u0e13\u0e21\u0e32\u0e08\u0e32\u0e01\u0e17\u0e35\u0e48\u0e44\u0e2b\u0e19?",
+          "student_answer": "RESPOND",
+          "correct_answer": "Where are you from?",
+          "is_correct": false,
+          "item_type": "translation",
+          "timestamp": 1789396646.9825351
+        },
+        {
+          "item_id": "post_11",
+          "prompt": "Translate to English: \u0e22\u0e34\u0e19\u0e14\u0e35\u0e17\u0e35\u0e48\u0e44\u0e14\u0e49\u0e23\u0e39\u0e49\u0e08\u0e31\u0e01\u0e04\u0e38\u0e13",
+          "student_answer": "",
+          "correct_answer": "Pleased to meet you.",
+          "is_correct": false,
+          "item_type": "translation",
+          "timestamp": 1789396646.983009
+        },
+        {
+          "item_id": "post_12",
+          "prompt": "Translate to English: \u0e23\u0e32\u0e15\u0e23\u0e35\u0e2a\u0e27\u0e31\u0e2a\u0e14\u0e34\u0e4c",
+          "student_answer": "",
+          "correct_answer": "Good night",
+          "is_correct": false,
+          "item_type": "translation",
+          "timestamp": 1789396646.9834714
+        },
+        {
+          "item_id": "post_13",
+          "prompt": "Translate to English: \u0e25\u0e32\u0e01\u0e48\u0e2d\u0e19",
+          "student_answer": "",
+          "correct_answer": "Goodbye",
+          "is_correct": false,
+          "item_type": "translation",
+          "timestamp": 1789396646.983929
+        },
+        {
+          "item_id": "post_14",
+          "prompt": "Translate to English: \u0e02\u0e2d\u0e43\u0e2b\u0e49\u0e42\u0e0a\u0e04\u0e14\u0e35",
+          "student_answer": "",
+          "correct_answer": "Good luck!",
+          "is_correct": false,
+          "item_type": "translation",
+          "timestamp": 1789396646.9845684
+        },
+        {
+          "item_id": "post_15",
+          "prompt": "Translate to English: \u0e09\u0e31\u0e19\u0e44\u0e21\u0e48\u0e23\u0e39\u0e49",
+          "student_answer": "",
+          "correct_answer": "I don't know.",
+          "is_correct": false,
+          "item_type": "translation",
+          "timestamp": 1789396646.9850292
+        },
+        {
+          "item_id": "post_16",
+          "prompt": "Translate to English: \u0e09\u0e31\u0e19\u0e40\u0e02\u0e49\u0e32\u0e43\u0e08",
+          "student_answer": "",
+          "correct_answer": "I understand.",
+          "is_correct": false,
+          "item_type": "translation",
+          "timestamp": 1789396646.985483
+        },
+        {
+          "item_id": "post_17",
+          "prompt": "Translate to English: \u0e0a\u0e48\u0e27\u0e22\u0e40\u0e2b\u0e25\u0e37\u0e2d",
+          "student_answer": "",
+          "correct_answer": "Help!",
+          "is_correct": false,
+          "item_type": "translation",
+          "timestamp": 1789396646.985977
+        },
+        {
+          "item_id": "post_18",
+          "prompt": "Translate to English: \u0e04\u0e38\u0e13\u0e40\u0e02\u0e49\u0e32\u0e43\u0e08\u0e44\u0e2b\u0e21?",
+          "student_answer": "",
+          "correct_answer": "Do you understand?",
+          "is_correct": false,
+          "item_type": "translation",
+          "timestamp": 1789396646.9864554
+        },
+        {
+          "item_id": "post_19",
+          "prompt": "Translate to English: \u0e09\u0e31\u0e19\u0e08\u0e30\u0e17\u0e33\u0e43\u0e2b\u0e49\u0e14\u0e35\u0e17\u0e35\u0e48\u0e2a\u0e38\u0e14",
+          "student_answer": "",
+          "correct_answer": "I will do my best.",
+          "is_correct": false,
+          "item_type": "translation",
+          "timestamp": 1789396646.9869106
+        },
+        {
+          "item_id": "post_20",
+          "prompt": "Translate to English: \u0e09\u0e31\u0e19\u0e23\u0e31\u0e01\u0e04\u0e38\u0e13",
+          "student_answer": "",
+          "correct_answer": "I love you.",
+          "is_correct": false,
+          "item_type": "translation",
+          "timestamp": 1789396646.9873695
+        },
+        {
+          "item_id": "post_21",
+          "prompt": "Translate to English: \u0e09\u0e31\u0e19\u0e23\u0e2d\u0e17\u0e35\u0e48\u0e08\u0e30\u0e1e\u0e1a\u0e40\u0e18\u0e2d\u0e44\u0e21\u0e48\u0e44\u0e2b\u0e27\u0e41\u0e25\u0e49\u0e27",
+          "student_answer": "",
+          "correct_answer": "I can't wait to see you again.",
+          "is_correct": false,
+          "item_type": "translation",
+          "timestamp": 1789396646.987824
+        },
+        {
+          "item_id": "post_22",
+          "prompt": "Translate to English: \u0e44\u0e0b\u0e2a\u0e4c\u0e02\u0e2d\u0e07\u0e09\u0e31\u0e19\u0e40\u0e2b\u0e21\u0e37\u0e2d\u0e19\u0e01\u0e31\u0e1a\u0e04\u0e38\u0e13",
+          "student_answer": "",
+          "correct_answer": "My size is the same as you.",
+          "is_correct": false,
+          "item_type": "translation",
+          "timestamp": 1789396646.9882753
+        },
+        {
+          "item_id": "post_23",
+          "prompt": "Translate to English: \u0e07\u0e32\u0e19\u0e17\u0e35\u0e48\u0e44\u0e14\u0e49\u0e23\u0e31\u0e1a\u0e21\u0e2d\u0e1a\u0e2b\u0e21\u0e32\u0e22\u0e02\u0e2d\u0e07\u0e09\u0e31\u0e19\u0e44\u0e21\u0e48\u0e40\u0e2b\u0e21\u0e37\u0e2d\u0e19\u0e01\u0e31\u0e1a\u0e04\u0e38\u0e13",
+          "student_answer": "",
+          "correct_answer": "My assignment isn\u2019t the same as you.",
+          "is_correct": false,
+          "item_type": "translation",
+          "timestamp": 1789396646.9887269
+        },
+        {
+          "item_id": "post_24",
+          "prompt": "Translate to English: \u0e09\u0e31\u0e19\u0e21\u0e35\u0e23\u0e2d\u0e07\u0e40\u0e17\u0e49\u0e32\u0e40\u0e2b\u0e21\u0e37\u0e2d\u0e19\u0e01\u0e31\u0e1a\u0e04\u0e38\u0e13\u0e40\u0e25\u0e22",
+          "student_answer": "",
+          "correct_answer": "I have the same shoes as you.",
+          "is_correct": false,
+          "item_type": "translation",
+          "timestamp": 1789396646.9891803
+        },
+        {
+          "item_id": "post_25",
+          "prompt": "Translate to English: \u0e04\u0e38\u0e13\u0e43\u0e0a\u0e49\u0e42\u0e17\u0e23\u0e28\u0e31\u0e1e\u0e17\u0e4c\u0e21\u0e37\u0e2d\u0e16\u0e37\u0e2d\u0e40\u0e2b\u0e21\u0e37\u0e2d\u0e19\u0e01\u0e31\u0e1a\u0e09\u0e31\u0e19\u0e40\u0e25\u0e22",
+          "student_answer": "",
+          "correct_answer": "You use the same mobile phone as me.",
+          "is_correct": false,
+          "item_type": "translation",
+          "timestamp": 1789396646.9896364
+        }
+      ],
+      "score": 0.0,
+      "total_items": 25,
+      "correct_items": 0
+    },
+    {
+      "assessment_id": "retention_thai_vocabulary_pilot_1_1789396649",
+      "assessment_type": "retention",
+      "lesson_id": "thai_vocabulary_pilot_1",
+      "timestamp": 1789396649.0328975,
+      "items": [
+        {
+          "item_id": "retention_1",
+          "prompt": "What is the English meaning of '\u0e04\u0e38\u0e13\u0e40\u0e1b\u0e47\u0e19\u0e19\u0e31\u0e01\u0e40\u0e23\u0e35\u0e22\u0e19'?",
+          "student_answer": "",
+          "correct_answer": "You are a student.",
+          "is_correct": false,
+          "item_type": "translation",
+          "timestamp": 1789396649.0284233
+        },
+        {
+          "item_id": "retention_2",
+          "prompt": "What is the English meaning of '\u0e09\u0e31\u0e19\u0e01\u0e33\u0e25\u0e31\u0e07\u0e40\u0e14\u0e34\u0e19'?",
+          "student_answer": "",
+          "correct_answer": "I am walking.",
+          "is_correct": false,
+          "item_type": "translation",
+          "timestamp": 1789396649.028944
+        },
+        {
+          "item_id": "retention_3",
+          "prompt": "What is the English meaning of '\u0e02\u0e2d\u0e1a\u0e04\u0e38\u0e13'?",
+          "student_answer": "",
+          "correct_answer": "thank you",
+          "is_correct": false,
+          "item_type": "translation",
+          "timestamp": 1789396649.0294282
+        },
+        {
+          "item_id": "retention_4",
+          "prompt": "What is the English meaning of '\u0e04\u0e38\u0e13\u0e21\u0e32\u0e08\u0e32\u0e01\u0e17\u0e35\u0e48\u0e44\u0e2b\u0e19?'?",
+          "student_answer": "",
+          "correct_answer": "Where are you from?",
+          "is_correct": false,
+          "item_type": "translation",
+          "timestamp": 1789396649.029912
+        },
+        {
+          "item_id": "retention_5",
+          "prompt": "What is the English meaning of '\u0e25\u0e32\u0e01\u0e48\u0e2d\u0e19'?",
+          "student_answer": "",
+          "correct_answer": "Goodbye",
+          "is_correct": false,
+          "item_type": "translation",
+          "timestamp": 1789396649.0308957
+        },
+        {
+          "item_id": "retention_6",
+          "prompt": "What is the English meaning of '\u0e09\u0e31\u0e19\u0e40\u0e02\u0e49\u0e32\u0e43\u0e08'?",
+          "student_answer": "",
+          "correct_answer": "I understand.",
+          "is_correct": false,
+          "item_type": "translation",
+          "timestamp": 1789396649.0314252
+        },
+        {
+          "item_id": "retention_7",
+          "prompt": "What is the English meaning of '\u0e09\u0e31\u0e19\u0e08\u0e30\u0e17\u0e33\u0e43\u0e2b\u0e49\u0e14\u0e35\u0e17\u0e35\u0e48\u0e2a\u0e38\u0e14'?",
+          "student_answer": "",
+          "correct_answer": "I will do my best.",
+          "is_correct": false,
+          "item_type": "translation",
+          "timestamp": 1789396649.0319142
+        },
+        {
+          "item_id": "retention_8",
+          "prompt": "What is the English meaning of '\u0e44\u0e0b\u0e2a\u0e4c\u0e02\u0e2d\u0e07\u0e09\u0e31\u0e19\u0e40\u0e2b\u0e21\u0e37\u0e2d\u0e19\u0e01\u0e31\u0e1a\u0e04\u0e38\u0e13'?",
+          "student_answer": "",
+          "correct_answer": "My size is the same as you.",
+          "is_correct": false,
+          "item_type": "translation",
+          "timestamp": 1789396649.0324001
+        },
+        {
+          "item_id": "retention_9",
+          "prompt": "What is the English meaning of '\u0e04\u0e38\u0e13\u0e43\u0e0a\u0e49\u0e42\u0e17\u0e23\u0e28\u0e31\u0e1e\u0e17\u0e4c\u0e21\u0e37\u0e2d\u0e16\u0e37\u0e2d\u0e40\u0e2b\u0e21\u0e37\u0e2d\u0e19\u0e01\u0e31\u0e1a\u0e09\u0e31\u0e19\u0e40\u0e25\u0e22'?",
+          "student_answer": "",
+          "correct_answer": "You use the same mobile phone as me.",
+          "is_correct": false,
+          "item_type": "translation",
+          "timestamp": 1789396649.0328815
+        }
+      ],
+      "score": 0.0,
+      "total_items": 9,
+      "correct_items": 0
+    },
+    {
+      "assessment_id": "transfer_thai_vocabulary_pilot_1_1789396649",
+      "assessment_type": "transfer",
+      "lesson_id": "thai_vocabulary_pilot_1",
+      "timestamp": 1789396649.0949259,
+      "items": [
+        {
+          "item_id": "transfer_1",
+          "prompt": "How do you say 'You are a student.' in Thai?",
+          "student_answer": "",
+          "correct_answer": "\u0e04\u0e38\u0e13\u0e40\u0e1b\u0e47\u0e19\u0e19\u0e31\u0e01\u0e40\u0e23\u0e35\u0e22\u0e19",
+          "is_correct": false,
+          "item_type": "reverse_translation",
+          "timestamp": 1789396649.0832803
+        },
+        {
+          "item_id": "transfer_2",
+          "prompt": "How do you say 'I like you too.' in Thai?",
+          "student_answer": "",
+          "correct_answer": "\u0e09\u0e31\u0e19\u0e0a\u0e2d\u0e1a\u0e04\u0e38\u0e13\u0e40\u0e2b\u0e21\u0e37\u0e2d\u0e19\u0e01\u0e31\u0e19",
+          "is_correct": false,
+          "item_type": "reverse_translation",
+          "timestamp": 1789396649.0863485
+        },
+        {
+          "item_id": "transfer_3",
+          "prompt": "How do you say 'My sister is taller than I am.' in Thai?",
+          "student_answer": "",
+          "correct_answer": "\u0e1e\u0e35\u0e48\u0e2a\u0e32\u0e27\u0e2a\u0e39\u0e07\u0e01\u0e27\u0e48\u0e32\u0e09\u0e31\u0e19",
+          "is_correct": false,
+          "item_type": "reverse_translation",
+          "timestamp": 1789396649.086908
+        },
+        {
+          "item_id": "transfer_4",
+          "prompt": "How do you say 'I am walking.' in Thai?",
+          "student_answer": "",
+          "correct_answer": "\u0e09\u0e31\u0e19\u0e01\u0e33\u0e25\u0e31\u0e07\u0e40\u0e14\u0e34\u0e19",
+          "is_correct": false,
+          "item_type": "reverse_translation",
+          "timestamp": 1789396649.0874023
+        },
+        {
+          "item_id": "transfer_5",
+          "prompt": "How do you say 'What is this?' in Thai?",
+          "student_answer": "",
+          "correct_answer": "\u0e19\u0e35\u0e48\u0e04\u0e37\u0e2d\u0e2d\u0e30\u0e44\u0e23?",
+          "is_correct": false,
+          "item_type": "reverse_translation",
+          "timestamp": 1789396649.0879
+        },
+        {
+          "item_id": "transfer_6",
+          "prompt": "How do you say 'Let's sleep!' in Thai?",
+          "student_answer": "",
+          "correct_answer": "\u0e19\u0e2d\u0e19\u0e01\u0e31\u0e19\u0e40\u0e16\u0e2d\u0e30",
+          "is_correct": false,
+          "item_type": "reverse_translation",
+          "timestamp": 1789396649.0883946
+        },
+        {
+          "item_id": "transfer_7",
+          "prompt": "How do you say 'thank you' in Thai?",
+          "student_answer": "",
+          "correct_answer": "\u0e02\u0e2d\u0e1a\u0e04\u0e38\u0e13",
+          "is_correct": false,
+          "item_type": "reverse_translation",
+          "timestamp": 1789396649.0888872
+        },
+        {
+          "item_id": "transfer_8",
+          "prompt": "How do you say 'Welcome' in Thai?",
+          "student_answer": "",
+          "correct_answer": "\u0e22\u0e34\u0e19\u0e14\u0e35\u0e15\u0e49\u0e2d\u0e19\u0e23\u0e31\u0e1a",
+          "is_correct": false,
+          "item_type": "reverse_translation",
+          "timestamp": 1789396649.0893846
+        },
+        {
+          "item_id": "transfer_9",
+          "prompt": "How do you say 'How are you?' in Thai?",
+          "student_answer": "",
+          "correct_answer": "\u0e04\u0e38\u0e13\u0e40\u0e1b\u0e47\u0e19\u0e2d\u0e22\u0e48\u0e32\u0e07\u0e44\u0e23\u0e1a\u0e49\u0e32\u0e07?",
+          "is_correct": false,
+          "item_type": "reverse_translation",
+          "timestamp": 1789396649.0898814
+        },
+        {
+          "item_id": "transfer_10",
+          "prompt": "How do you say 'Where are you from?' in Thai?",
+          "student_answer": "",
+          "correct_answer": "\u0e04\u0e38\u0e13\u0e21\u0e32\u0e08\u0e32\u0e01\u0e17\u0e35\u0e48\u0e44\u0e2b\u0e19?",
+          "is_correct": false,
+          "item_type": "reverse_translation",
+          "timestamp": 1789396649.094906
+        }
+      ],
+      "score": 0.0,
+      "total_items": 10,
+      "correct_items": 0
     }
   ],
   "learning_gains": [
@@ -6553,6 +7218,14 @@
       "gain": 0.9,
       "gain_percentage": Infinity,
       "timestamp": 1789396079.296445
+    },
+    {
+      "lesson_id": "thai_vocabulary_pilot_1",
+      "baseline_score": 0.0,
+      "posttest_score": 0.0,
+      "gain": 0.0,
+      "gain_percentage": Infinity,
+      "timestamp": 1789396647.0089417
     }
   ],
   "mastery_decisions": [
@@ -6720,9 +7393,21 @@
       },
       "timestamp": 1789396079.3437643,
       "next_action": "ADVANCE"
+    },
+    {
+      "lesson_id": "thai_vocabulary_pilot_1",
+      "decision": "REMEDIATE",
+      "evidence": {
+        "immediate_recall": 0.0,
+        "retention": 0.0,
+        "transfer": 0.0
+      },
+      "timestamp": 1789396649.1302881,
+      "next_action": "RETEACH"
     }
   ],
   "lesson_status": {
-    "thai_vowels_1": "MASTERED"
+    "thai_vowels_1": "MASTERED",
+    "thai_vocabulary_pilot_1": "REMEDIATE"
   }
 }

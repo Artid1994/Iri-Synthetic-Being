@@ -1,0 +1,59 @@
+{
+  "entries": [
+    {
+      "word": "สวัสดี",
+      "language": "thai",
+      "lexical_meaning": "hello/goodbye/greet",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789310660.6650338,
+      "context_used": null
+    },
+    {
+      "word": "ขอบคุณ",
+      "language": "thai",
+      "lexical_meaning": "thank you",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789310660.6658106,
+      "context_used": null
+    },
+    {
+      "word": "รัก",
+      "language": "thai",
+      "lexical_meaning": "love",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789310660.6931636,
+      "context_used": null
+    },
+    {
+      "word": "ชอบ",
+      "language": "thai",
+      "lexical_meaning": "like",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789310660.6940246,
+      "context_used": null
+    },
+    {
+      "word": "ไป",
+      "language": "thai",
+      "lexical_meaning": "go",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789310660.6946843,
+      "context_used": null
+    },
+    {
+      "word": "กิน",
+      "language": "thai",
+      "lexical_meaning": "eat",
+      "confidence": 1.0,
+      "evidence_status": "known",
+      "timestamp": 1789310660.6953213,
+      "context_used": null
+    }
+  ],
+  "count": 6
+}

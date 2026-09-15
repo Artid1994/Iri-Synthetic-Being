@@ -1,0 +1,207 @@
+{
+  "basic_sentence_patterns": [
+    {
+      "pattern": "S-V",
+      "structure": "Subject + Verb",
+      "example_thai": "คน มา",
+      "example_gloss": "person come",
+      "example_meaning": "The person comes.",
+      "note": "KNOWN: Basic intransitive pattern"
+    },
+    {
+      "pattern": "S-V-O",
+      "structure": "Subject + Verb + Object",
+      "example_thai": "คน กิน น้ำ",
+      "example_gloss": "person eat water",
+      "example_meaning": "The person drinks water.",
+      "note": "KNOWN: Basic transitive pattern, SVO order"
+    },
+    {
+      "pattern": "S-Adj",
+      "structure": "Subject + Adjective (stative verb)",
+      "example_thai": "คน ดี",
+      "example_gloss": "person good",
+      "example_meaning": "The person is good.",
+      "note": "KNOWN: Thai adjectives function as stative verbs"
+    },
+    {
+      "pattern": "N-Adj",
+      "structure": "Noun + Adjective",
+      "example_thai": "บ้าน ใหญ่",
+      "example_gloss": "house big",
+      "example_meaning": "big house",
+      "note": "KNOWN: Adjectives follow nouns"
+    }
+  ],
+  "word_order": {
+    "basic_order": "SVO",
+    "note": "KNOWN: Thai is a Subject-Verb-Object language",
+    "noun_modifier_order": "Noun-Adjective",
+    "note_2": "KNOWN: Modifiers follow heads"
+  },
+  "particles": [
+    {
+      "particle": "ไม่",
+      "function": "negation",
+      "position": "before verb",
+      "example": "ไม่ ดี",
+      "meaning": "not good",
+      "note": "KNOWN: Standard negation marker"
+    },
+    {
+      "particle": "หรือ",
+      "function": "yes-no question",
+      "position": "sentence-final",
+      "example": "ดี หรือ",
+      "meaning": "Is it good?",
+      "note": "AMBIGUOUS: Question particles vary; หรือ is one option"
+    },
+    {
+      "particle": "ไหม",
+      "function": "yes-no question",
+      "position": "sentence-final",
+      "example": "ดี ไหม",
+      "meaning": "Is it good?",
+      "note": "KNOWN: Common polite question particle"
+    }
+  ],
+  "question_words": [
+    {
+      "word": "อะไร",
+      "meaning": "what",
+      "usage": "in-situ question word",
+      "example": "กิน อะไร",
+      "translation": "eat what = What (do you) eat?",
+      "note": "KNOWN: Wh-words stay in original position"
+    },
+    {
+      "word": "ที่ไหน",
+      "meaning": "where",
+      "usage": "in-situ question word",
+      "note": "KNOWN: Location question"
+    },
+    {
+      "word": "ทำไม",
+      "meaning": "why",
+      "usage": "in-situ question word",
+      "note": "KNOWN: Reason question"
+    }
+  ],
+  "tense_aspect": {
+    "note": "AMBIGUOUS: Thai lacks obligatory tense marking",
+    "time_reference": "context-dependent or use time words",
+    "aspect_markers": [
+      {
+        "marker": "แล้ว",
+        "meaning": "completed/already",
+        "position": "sentence-final or after verb",
+        "note": "KNOWN: Perfective aspect marker"
+      },
+      {
+        "marker": "กำลัง",
+        "meaning": "in progress",
+        "position": "before verb",
+        "note": "KNOWN: Progressive aspect marker"
+      },
+      {
+        "marker": "จะ",
+        "meaning": "will/future",
+        "position": "before verb",
+        "note": "KNOWN: Future/intentional marker"
+      }
+    ]
+  },
+  "grammatical_roles": {
+    "subject": {
+      "definition": "Agent or topic of sentence",
+      "position": "sentence-initial",
+      "note": "KNOWN: Typically first element in main clause"
+    },
+    "verb": {
+      "definition": "Action or state",
+      "position": "after subject",
+      "note": "KNOWN: Core predicate"
+    },
+    "object": {
+      "definition": "Patient or theme",
+      "position": "after verb",
+      "note": "KNOWN: Direct object follows verb"
+    },
+    "adjective": {
+      "definition": "Modifier or stative predicate",
+      "position": "after noun or as main predicate",
+      "note": "KNOWN: Functions as both modifier and verb"
+    }
+  },
+  "limitations": {
+    "note": "This is a MINIMAL foundation dataset for initial sentence understanding.",
+    "scope": "Basic declarative sentences, simple negation, yes-no questions",
+    "excluded": "Complex sentences, relative clauses, serial verbs, classifiers, honorifics beyond pronouns",
+    "data_status": "KNOWN patterns only; no fabricated rules"
+  },
+  "compositional_patterns": [
+    {
+      "pattern": "PRONOUN + VERB + PRONOUN",
+      "semantic_function": "subject-verb-object (SVO)",
+      "examples": [
+        "ผม รัก คุณ (I love you)",
+        "เขา ชอบ กิน (He/she likes to eat)"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "pattern": "NEGATION + VERB",
+      "semantic_function": "negated action",
+      "examples": [
+        "ไม่ ไป (not go)",
+        "ไม่ กิน (not eat)"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "pattern": "VERB + VERB",
+      "semantic_function": "serial verb construction (first verb modifies second)",
+      "examples": [
+        "ไป กิน (go to eat)",
+        "มา เรียน (come to study)"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "pattern": "NOUN + ADJECTIVE",
+      "semantic_function": "noun qualification",
+      "examples": [
+        "อาหาร ดี (good food)",
+        "คน ไทย (Thai person)"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "pattern": "NOUN + DEMONSTRATIVE",
+      "semantic_function": "demonstrative modification (noun this/that)",
+      "examples": [
+        "วัน นี้ (today, lit. day this)",
+        "คน นั้น (that person)"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "pattern": "INTERROGATIVE + VERB",
+      "semantic_function": "question formation",
+      "examples": [
+        "อะไร เป็น (what is)",
+        "ที่ไหน ไป (where go)"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "pattern": "VERB + INTERROGATIVE",
+      "semantic_function": "verb-question construction",
+      "examples": [
+        "ไป ที่ไหน (go where)",
+        "ทำ อะไร (do what)"
+      ],
+      "confidence": 1.0
+    }
+  ]
+}

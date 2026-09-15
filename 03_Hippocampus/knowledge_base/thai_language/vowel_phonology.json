@@ -1,0 +1,50 @@
+{
+  "phonology": "Thai vowel phonemes - sound units, not spelling",
+  "vowel_phonemes": [
+    {"ipa": "/a/", "length": "short", "orthography": ["◌ะ", "◌ั"], "examples": ["กะ", "กัด"]},
+    {"ipa": "/aː/", "length": "long", "orthography": ["◌า"], "examples": ["กา"]},
+    {"ipa": "/i/", "length": "short", "orthography": ["◌ิ"], "examples": ["กิน"]},
+    {"ipa": "/iː/", "length": "long", "orthography": ["◌ี"], "examples": ["กี"]},
+    {"ipa": "/ɯ/", "length": "short", "orthography": ["◌ึ"], "examples": ["กึ"]},
+    {"ipa": "/ɯː/", "length": "long", "orthography": ["◌ื"], "examples": ["กือ"]},
+    {"ipa": "/u/", "length": "short", "orthography": ["◌ุ"], "examples": ["กุ"]},
+    {"ipa": "/uː/", "length": "long", "orthography": ["◌ู"], "examples": ["กู"]},
+    {"ipa": "/e/", "length": "short", "orthography": ["เ◌็", "เ◌ะ"], "examples": ["เก็บ", "เกะ"]},
+    {"ipa": "/eː/", "length": "long", "orthography": ["เ◌"], "examples": ["เก"]},
+    {"ipa": "/ɛ/", "length": "short", "orthography": ["แ◌็", "แ◌ะ"], "examples": ["แก็", "แกะ"]},
+    {"ipa": "/ɛː/", "length": "long", "orthography": ["แ◌"], "examples": ["แก"]},
+    {"ipa": "/o/", "length": "short", "orthography": ["เ◌าะ", "◌็อ"], "examples": ["เกาะ", "กรอ็บ"]},
+    {"ipa": "/oː/", "length": "long", "orthography": ["โ◌", "◌อ", "เ◌า"], "examples": ["โก", "กอ", "เกา"]},
+    {"ipa": "/ɔ/", "length": "short", "orthography": ["◌็อ", "◌อะ"], "examples": ["ก็อด", "กอะ"]},
+    {"ipa": "/ɔː/", "length": "long", "orthography": ["◌อ"], "examples": ["กอ"]},
+    {"ipa": "/ɤ/", "length": "short", "orthography": ["เ◌อะ"], "examples": ["เกอะ"]},
+    {"ipa": "/ɤː/", "length": "long", "orthography": ["เ◌อ"], "examples": ["เกอ"]},
+    {"ipa": "/ai/", "length": "long", "orthography": ["ไ◌", "ใ◌", "◌ัย"], "examples": ["ไก", "ใก", "กัย"]},
+    {"ipa": "/au/", "length": "long", "orthography": ["เ◌า"], "examples": ["เกา"]},
+    {"ipa": "/iə/", "length": "long", "orthography": ["เ◌ีย"], "examples": ["เกีย"]},
+    {"ipa": "/ɯə/", "length": "long", "orthography": ["เ◌ือ"], "examples": ["เกือ"]},
+    {"ipa": "/uə/", "length": "long", "orthography": ["◌ัว"], "examples": ["กัว"]},
+    {"ipa": "/am/", "length": "short", "orthography": ["อำ", "◌ำ"], "examples": ["อำ", "กำ"]},
+    {"ipa": "/rɯ/", "length": "short", "orthography": ["◌ฤ"], "examples": ["กฤ"]},
+    {"ipa": "/rɯː/", "length": "long", "orthography": ["◌ฤๅ"], "examples": ["กฤๅ"]},
+    {"ipa": "/lɯ/", "length": "short", "orthography": ["◌ฦ"], "examples": ["กฦ"]},
+    {"ipa": "/lɯː/", "length": "long", "orthography": ["◌ฦๅ"], "examples": ["กฦๅ"]}
+  ],
+  "phonological_length": {
+    "description": "Vowel length is phonologically contrastive in Thai",
+    "short_vowels": ["/a/", "/i/", "/ɯ/", "/u/", "/e/", "/ɛ/", "/o/", "/ɔ/", "/ɤ/"],
+    "long_vowels": ["/aː/", "/iː/", "/ɯː/", "/uː/", "/eː/", "/ɛː/", "/oː/", "/ɔː/", "/ɤː/"],
+    "diphthongs": ["/ai/", "/au/", "/iə/", "/ɯə/", "/uə/"],
+    "special": ["/am/", "/rɯ/", "/rɯː/", "/lɯ/", "/lɯː/"]
+  },
+  "length_rules": {
+    "open_syllable": "Vowel followed by no consonant or sonorant - inherent length preserved",
+    "closed_syllable_stop": "Vowel followed by stop consonant (/p/, /t/, /k/, /ʔ/) - short by default",
+    "closed_syllable_sonorant": "Vowel followed by sonorant (/m/, /n/, /ŋ/, /w/, /j/) - length contrastive"
+  },
+  "notes": {
+    "ipa_standard": "IPA transcriptions follow standard Thai phonology references",
+    "orthography_mapping": "One phoneme may have multiple orthographic realizations",
+    "context_dependency": "Actual pronunciation depends on syllable structure, consonant class, and tone"
+  }
+}

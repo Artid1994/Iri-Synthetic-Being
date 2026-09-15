@@ -8,7 +8,7 @@ from runtime.memory import Memory
 from runtime.internal_state import InternalStateManager
 from runtime.personality import Personality
 from runtime.self_model import SelfModel
-from runtime.ae01m_cognitive_factory import create_cognitive_engine
+from runtime.cognitive_engine import CognitiveEngine
 from runtime.learning import Learning
 from runtime.learning_practice import LearningPractice
 from runtime.learning_exercise import LearningExercise
@@ -33,8 +33,21 @@ from runtime.sensor_source import MockSensor
 from runtime.robot_adapter import RobotAdapter
 from runtime.speech_output import SpeechOutput
 from runtime.voice_conversation import VoiceConversation
-from ttf_approval_gate import ActionState, ApprovalAction, ApprovalGate
-from ttf_execution_adapter import ExecutionAdapter
+
+# These modules were moved to scripts/
+try:
+    from scripts.ttf_approval_gate import ActionState, ApprovalAction, ApprovalGate
+    from scripts.ttf_execution_adapter import ExecutionAdapter
+except ImportError:
+    # Fallback to old location if scripts/ not in path
+    import sys
+    from pathlib import Path
+    scripts_path = Path(__file__).parent.parent / "scripts"
+    if scripts_path.exists() and str(scripts_path) not in sys.path:
+        sys.path.insert(0, str(scripts_path))
+    from ttf_approval_gate import ActionState, ApprovalAction, ApprovalGate
+    from ttf_execution_adapter import ExecutionAdapter
+
 from runtime.autonomous_policy_gate import AutonomousPolicyGate
 from runtime.resource_guard import ResourceGuard
 from runtime.auto_cooling import AutoCoolingController
@@ -51,7 +64,13 @@ from runtime.research_learning import ResearchLearning
 from runtime.research_safety import ResearchSafetyGate
 from runtime.web_research import WebResearch
 from runtime.autonomous_learning import AutonomousLearning
-from brain.brain import Brain
+
+# Brain module archived - make optional
+try:
+    from brain.brain import Brain
+except ImportError:
+    Brain = None
+
 from runtime.self_directed_learning import SelfDirectedLearning
 from runtime.memory_brain_persistence import MemoryBrainPersistence
 
@@ -61,15 +80,12 @@ class TranscendingRuntime:
         self.system = SystemMonitor()
         self.identity = Identity()
         self.memory = Memory()
-        self.brain = Brain()
+        self.brain = Brain() if Brain is not None else None
         self.safety_policy = SafetyPolicy()
         self.internal_state = InternalStateManager()
         self.personality = Personality()
         self.self_model = SelfModel()
-        self.cognitive = cognitive or create_cognitive_engine(
-            backend="neocortex",
-            **({("host"): brain_host} if brain_host else {}),
-        )
+        self.cognitive = cognitive or CognitiveEngine(memory=self.memory)
         self.learning = Learning(self.memory)
         self.learning_practice = LearningPractice()
         self.self_directed_learning = SelfDirectedLearning()
@@ -253,6 +269,8 @@ class TranscendingRuntime:
         )
 
     def sync_brain_memory(self) -> int:
+        if self.brain is None:
+            return 0
         return self.brain.sync_memory(self.memory)
 
     def create_self_directed_task(self, need: str):
@@ -787,21 +805,23 @@ class TranscendingRuntime:
             MemoryBrainPersistence.deserialize_memory(memory_data, memory=self.memory)
 
         brain_data = data.get("persisted_brain")
-        if isinstance(brain_data, dict):
+        if isinstance(brain_data, dict) and self.brain is not None:
             MemoryBrainPersistence.deserialize_brain(brain_data, brain=self.brain)
 
     def save_memory_brain_snapshot(self, filepath: Path | str) -> None:
-        MemoryBrainPersistence.save(self.memory, self.brain, filepath)
+        if self.brain is not None:
+            MemoryBrainPersistence.save(self.memory, self.brain, filepath)
 
     def load_memory_brain_snapshot(self, filepath: Path | str) -> None:
-        MemoryBrainPersistence.load(filepath, memory=self.memory, brain=self.brain)
+        if self.brain is not None:
+            MemoryBrainPersistence.load(filepath, memory=self.memory, brain=self.brain)
 
     def snapshot(self) -> dict:
         return {
             "system": self.system.snapshot(),
             "identity": self.identity.snapshot(),
             "memory": self.memory.snapshot(),
-            "brain": self.brain.stats(),
+            "brain": self.brain.stats() if self.brain is not None else {"status": "archived"},
             "internal_state": self.internal_state.snapshot(),
             "personality": self.personality.snapshot(),
             "self_model": self.self_model.snapshot(),

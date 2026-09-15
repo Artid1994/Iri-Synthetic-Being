@@ -1,0 +1,135 @@
+{
+  "syllable_structure": "Thai syllable phonotactics and structure rules",
+  "canonical_structure": "(C1)(C2)V(C3)(T)",
+  "components": {
+    "C1": "Initial consonant (optional in some cases, mandatory in most)",
+    "C2": "Second consonant in cluster (optional)",
+    "V": "Vowel nucleus (mandatory)",
+    "C3": "Final consonant (optional)",
+    "T": "Tone (mandatory, may be implicit)"
+  },
+  "syllable_types": {
+    "open": {
+      "description": "Syllable ending in vowel (no C3)",
+      "structure": "(C1)(C2)V",
+      "examples": ["กา /kaː/", "ไป /pai/", "กลา /klaː/"]
+    },
+    "closed": {
+      "description": "Syllable ending in consonant (has C3)",
+      "structure": "(C1)(C2)VC3",
+      "examples": ["กิน /kin/", "ครับ /kʰráp/", "ปลา /plaː/ (open, not closed)"]
+    }
+  },
+  "live_vs_dead": {
+    "description": "Classification for tone rules",
+    "live_syllable": {
+      "definition": "Syllable ending with long vowel OR sonorant final",
+      "conditions": [
+        "No final consonant + long vowel",
+        "Sonorant final (ง น ม ย ว ร ล)",
+        "Long vowel + any final"
+      ],
+      "examples": [
+        {"spelling": "กา", "reason": "long vowel, no final"},
+        {"spelling": "กาง", "reason": "long vowel + sonorant"},
+        {"spelling": "กิน", "reason": "sonorant final"},
+        {"spelling": "ไป", "reason": "long vowel (diphthong)"}
+      ]
+    },
+    "dead_syllable": {
+      "definition": "Syllable ending with short vowel + stop OR short vowel alone",
+      "conditions": [
+        "Short vowel + stop final (ก จ ด ต บ ป)",
+        "Short vowel with no final (rare, only with ะ)"
+      ],
+      "examples": [
+        {"spelling": "กะ", "reason": "short vowel, no final"},
+        {"spelling": "กับ", "reason": "short vowel + stop"},
+        {"spelling": "กิด", "reason": "short vowel + stop"}
+      ],
+      "note": "Short vowel + sonorant is LIVE, not dead"
+    }
+  },
+  "consonant_clusters": {
+    "description": "Valid C1+C2 clusters in initial position",
+    "cluster_types": {
+      "stop_liquid": {
+        "pattern": "[stop] + [ร ล ว]",
+        "valid": [
+          "กร", "กล", "กว",
+          "ขร", "ขล", "ขว",
+          "คร", "คล", "คว",
+          "ตร", "ตล",
+          "ปร", "ปล",
+          "พร", "พล"
+        ],
+        "examples": ["กราบ /kràːp/", "ปลา /plaː/", "ขวา /kʰwǎː/"]
+      },
+      "fricative_liquid": {
+        "pattern": "[fricative] + [ร ล]",
+        "valid": ["ทร"],
+        "examples": ["ทราบ /sâːp/"],
+        "note": "ทร is pronounced /s/ in modern Thai, not /tʰr/"
+      }
+    },
+    "cluster_tone_rule": {
+      "description": "Cluster tone class determined by C1",
+      "rule": "C1 determines consonant class for tone calculation",
+      "examples": [
+        {"cluster": "กร", "class": "mid", "reason": "ก is mid class"},
+        {"cluster": "ขว", "class": "high", "reason": "ข is high class"},
+        {"cluster": "คล", "class": "low", "reason": "ค is low class"}
+      ]
+    },
+    "invalid_clusters": {
+      "description": "Clusters that do not occur in Thai",
+      "examples": ["กน", "กม", "ตง", "บว"],
+      "note": "If these appear, syllable boundary is between them"
+    }
+  },
+  "leading_h_modification": {
+    "description": "ห leading before low-class sonorant changes effective class to high",
+    "pattern": "ห + [ง น ม ย ร ล ว]",
+    "rule": "ห is silent, but makes following consonant behave as high class for tone",
+    "valid_combinations": [
+      {"spelling": "หง", "pronunciation": "/ŋ/", "effective_class": "high"},
+      {"spelling": "หน", "pronunciation": "/n/", "effective_class": "high"},
+      {"spelling": "หม", "pronunciation": "/m/", "effective_class": "high"},
+      {"spelling": "หย", "pronunciation": "/j/", "effective_class": "high"},
+      {"spelling": "หร", "pronunciation": "/r/", "effective_class": "high"},
+      {"spelling": "หล", "pronunciation": "/l/", "effective_class": "high"},
+      {"spelling": "หว", "pronunciation": "/w/", "effective_class": "high"}
+    ],
+    "examples": [
+      {"word": "หนา", "ipa": "/nǎː/", "tone": "rising (high class behavior)"},
+      {"word": "หมา", "ipa": "/mǎː/", "tone": "rising (high class behavior)"}
+    ]
+  },
+  "leading_o_modification": {
+    "description": "อ leading before consonant makes it behave as mid class",
+    "pattern": "อ + [low_consonant]",
+    "rule": "อ is silent, but changes effective class to mid for tone",
+    "note": "Less common than ห leading, used in specific words",
+    "examples": [
+      {"word": "อยาก", "pronunciation": "/jàːk/", "note": "mid class tone behavior"}
+    ]
+  },
+  "implicit_vowel": {
+    "description": "Consonant without written vowel has inherent vowel",
+    "rule": "Single consonant (C) → /Co/ (with inherent /o/)",
+    "examples": [
+      {"spelling": "ก", "pronunciation": "/ko/"},
+      {"spelling": "ม", "pronunciation": "/mo/"}
+    ],
+    "exceptions": "Does not apply when consonant is clearly final or in cluster"
+  },
+  "syllable_boundary_rules": {
+    "description": "Rules for dividing words into syllables",
+    "rules": [
+      "CV.CV - split between vowels",
+      "CVC.CV - final consonant belongs to first syllable if valid",
+      "CV.CCV - split before valid cluster",
+      "Invalid cluster → syllable boundary between consonants"
+    ]
+  }
+}

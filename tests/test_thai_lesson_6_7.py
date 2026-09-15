@@ -181,7 +181,8 @@ class TestCompositionalLayer:
         )
         
         assert sem.compositional_meaning is not None
-        assert "purpose" in sem.compositional_meaning.lower() or "sequence" in sem.compositional_meaning.lower()
+        # Pattern now returns "serial verb construction" from grammar file
+        assert "serial" in sem.compositional_meaning.lower() or "verb" in sem.compositional_meaning.lower()
     
     def test_no_pattern_for_single_word(self):
         """Test single word has no compositional meaning."""
@@ -201,7 +202,8 @@ class TestCompositionalLayer:
         )
         
         assert sem.compositional_meaning is not None
-        assert "modification" in sem.compositional_meaning.lower()
+        # Pattern now returns "noun qualification" from grammar file
+        assert "noun" in sem.compositional_meaning.lower() or "qualification" in sem.compositional_meaning.lower()
 
 
 class TestPragmaticLayer:

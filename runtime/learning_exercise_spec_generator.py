@@ -39,8 +39,8 @@ class LearningExerciseSpecProposal:
 
 
 class LearningExerciseSpecGenerator:
-    def __init__(self, inference) -> None:
-        self.inference = inference
+    def __init__(self) -> None:
+        pass
 
     def generate(self, knowledge: str) -> LearningExerciseSpec:
         knowledge = knowledge.strip()
@@ -48,26 +48,22 @@ class LearningExerciseSpecGenerator:
         if not knowledge:
             raise ValueError("KNOWLEDGE_CANNOT_BE_EMPTY")
 
-        prompt = (
-            "Create one simple mathematical learning exercise "
-            "from the knowledge below.\n"
-            f"Knowledge: {knowledge}\n"
-            "\n"
-            "The exercise must use a simple mathematical expression "
-            "that the system can verify.\n"
-            "Do not provide the answer.\n"
-            "Do not provide explanations.\n"
-            "\n"
-            "Return exactly two lines:\n"
-            "Question: <question>\n"
-            "Expression: <mathematical expression>"
-        )
+        # Template-based mathematical exercise generation
+        # Extract numbers from knowledge and create simple arithmetic
 
-        output = self.inference(prompt)
+        import re
+        numbers = re.findall(r'\b\d+\b', knowledge)
 
-        proposal = LearningExerciseSpecProposal.parse(output)
+        if len(numbers) >= 2:
+            a, b = int(numbers[0]), int(numbers[1])
+            question = f"Calculate: {a} + {b}"
+            expression = f"{a} + {b}"
+        else:
+            # Default simple exercise
+            question = "Calculate: 2 + 2"
+            expression = "2 + 2"
 
         return LearningExerciseSpec(
-            question=proposal.question,
-            expression=proposal.expression,
+            question=question,
+            expression=expression,
         )

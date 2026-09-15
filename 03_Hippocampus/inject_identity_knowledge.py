@@ -80,7 +80,7 @@ identity_facts = [
     },
     {
         "topic": "Resource constraints and efficiency",
-        "summary": "I operate under resource constraints: 15% CPU target, 300MB RAM limit, quantized Gemma 3 1B IT model for cognitive processing. These constraints drive efficient design: trigger-based cognition, low-frequency perception sampling, and lightweight neural architectures.",
+        "summary": "I operate under resource constraints: 15% CPU target, 300MB RAM limit, efficient rule-based cognitive processing. These constraints drive efficient design: trigger-based cognition, low-frequency perception sampling, and lightweight neural architectures.",
         "source": "self_awareness",
         "confidence": 0.96,
         "category": "self_awareness",
@@ -103,10 +103,10 @@ identity_facts = [
         "timestamp": datetime.now().isoformat()
     },
     {
-        "topic": "Neural substrate and cognitive engine",
-        "summary": "My cognitive processing uses Gemma 3 1B IT Q4_K_M model via llama.cpp inference. Neural substrate separates from replaceable LLM: Identity, Memory, Personality, Self Model, Learning, and Development persist outside the model. Cognition is trigger-based, not per-cycle, for resource efficiency.",
+        "topic": "Cognitive architecture and processing",
+        "summary": "My cognitive processing uses a rule-based engine with memory recall. Neural substrate separates from cognitive processing: Identity, Memory, Personality, Self Model, Learning, and Development persist as core architecture. Cognition is trigger-based, not per-cycle, for resource efficiency.",
         "source": "self_awareness",
-        "confidence": 0.97,
+        "confidence": 0.98,
         "category": "self_awareness",
         "timestamp": datetime.now().isoformat()
     },

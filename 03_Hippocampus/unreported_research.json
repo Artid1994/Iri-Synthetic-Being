@@ -1,42 +1,9 @@
 [
   {
-    "topic": "Python Data Structures",
-    "domain": "Programming",
-    "facts_count": 5,
-    "timestamp": 1789220456.7531357,
-    "key_facts": [
-      "[Autonomous] Algorithms are step-by-step procedures",
-      "[Autonomous] Data structures organize information efficiently"
-    ],
-    "reported": true
-  },
-  {
-    "topic": "Calculus Fundamentals",
-    "domain": "Mathematics",
-    "facts_count": 5,
-    "timestamp": 1789220522.7454908,
-    "key_facts": [
-      "[Autonomous] Functions map inputs to outputs systematically",
-      "[Autonomous] Derivatives measure rates of change"
-    ],
-    "reported": true
-  },
-  {
-    "topic": "Basic Algorithms",
-    "domain": "Programming",
-    "facts_count": 5,
-    "timestamp": 1789220593.1583548,
-    "key_facts": [
-      "[Autonomous] Algorithms are step-by-step procedures",
-      "[Autonomous] Data structures organize information efficiently"
-    ],
-    "reported": true
-  },
-  {
     "topic": "Celestial Coordinates & Navigation",
     "domain": "General",
     "facts_count": 3,
-    "timestamp": 1789220841.9457755,
+    "timestamp": 1789381363.73123,
     "key_facts": [
       "[Autonomous] Understanding Celestial Coordinates & Navigation requires foundational knowledge",
       "[Autonomous] Key concepts in Celestial Coordinates & Navigation build systematically"
@@ -47,66 +14,99 @@
     "topic": "Operating System Fundamentals",
     "domain": "Computer_Systems",
     "facts_count": 5,
-    "timestamp": 1789221001.9424956,
+    "timestamp": 1789381516.7201145,
     "key_facts": [
       "[Autonomous] Operating systems manage hardware resources",
       "[Autonomous] Processes are independent program executions"
     ],
-    "reported": false
-  },
-  {
-    "topic": "Self-Code Architecture Mapping",
-    "domain": "Programming",
-    "facts_count": 5,
-    "timestamp": 1789221086.5459268,
-    "key_facts": [
-      "[Autonomous] Algorithms are step-by-step procedures",
-      "[Autonomous] Data structures organize information efficiently"
-    ],
-    "reported": false
-  },
-  {
-    "topic": "Python Data Structures",
-    "domain": "Programming",
-    "facts_count": 5,
-    "timestamp": 1789221183.450526,
-    "key_facts": [
-      "[Autonomous] Algorithms are step-by-step procedures",
-      "[Autonomous] Data structures organize information efficiently"
-    ],
-    "reported": false
-  },
-  {
-    "topic": "Basic Algorithms",
-    "domain": "Programming",
-    "facts_count": 5,
-    "timestamp": 1789221235.0373864,
-    "key_facts": [
-      "[Autonomous] Algorithms are step-by-step procedures",
-      "[Autonomous] Data structures organize information efficiently"
-    ],
-    "reported": false
+    "reported": true
   },
   {
     "topic": "Linear Algebra Basics",
     "domain": "Mathematics",
     "facts_count": 5,
-    "timestamp": 1789221292.188473,
+    "timestamp": 1789382101.9349568,
     "key_facts": [
       "[Autonomous] Functions map inputs to outputs systematically",
       "[Autonomous] Derivatives measure rates of change"
     ],
-    "reported": false
+    "reported": true
   },
   {
     "topic": "Calculus Fundamentals",
     "domain": "Mathematics",
     "facts_count": 5,
-    "timestamp": 1789221455.9439135,
+    "timestamp": 1789382840.7625444,
     "key_facts": [
       "[Autonomous] Functions map inputs to outputs systematically",
       "[Autonomous] Derivatives measure rates of change"
     ],
-    "reported": false
+    "reported": true
+  },
+  {
+    "topic": "Machine Learning & Neural Network Basics",
+    "domain": "AI_ML",
+    "facts_count": 5,
+    "timestamp": 1789383526.446282,
+    "key_facts": [
+      "[Autonomous] Neural networks learn patterns through backpropagation",
+      "[Autonomous] Transformers process sequences using self-attention"
+    ],
+    "reported": true
+  },
+  {
+    "topic": "Self-Code Architecture Mapping",
+    "domain": "Programming",
+    "facts_count": 5,
+    "timestamp": 1789384108.0960572,
+    "key_facts": [
+      "[Autonomous] Algorithms are step-by-step procedures",
+      "[Autonomous] Data structures organize information efficiently"
+    ],
+    "reported": true
+  },
+  {
+    "topic": "Python Data Structures",
+    "domain": "Programming",
+    "facts_count": 5,
+    "timestamp": 1789384202.2024934,
+    "key_facts": [
+      "[Autonomous] Algorithms are step-by-step procedures",
+      "[Autonomous] Data structures organize information efficiently"
+    ],
+    "reported": true
+  },
+  {
+    "topic": "Basic Algorithms",
+    "domain": "Programming",
+    "facts_count": 5,
+    "timestamp": 1789384376.0212722,
+    "key_facts": [
+      "[Autonomous] Algorithms are step-by-step procedures",
+      "[Autonomous] Data structures organize information efficiently"
+    ],
+    "reported": true
+  },
+  {
+    "topic": "Orbital Mechanics & Kepler's Laws",
+    "domain": "General",
+    "facts_count": 3,
+    "timestamp": 1789384812.0216248,
+    "key_facts": [
+      "[Autonomous] Understanding Orbital Mechanics & Kepler's Laws requires foundational knowledge",
+      "[Autonomous] Key concepts in Orbital Mechanics & Kepler's Laws build systematically"
+    ],
+    "reported": true
+  },
+  {
+    "topic": "Celestial Coordinates & Navigation",
+    "domain": "General",
+    "facts_count": 3,
+    "timestamp": 1789385261.6355088,
+    "key_facts": [
+      "[Autonomous] Understanding Celestial Coordinates & Navigation requires foundational knowledge",
+      "[Autonomous] Key concepts in Celestial Coordinates & Navigation build systematically"
+    ],
+    "reported": true
   }
 ]

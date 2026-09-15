@@ -7,8 +7,7 @@ from runtime.research_proposal import ResearchProposal
 
 
 class NumericalResearch:
-    def __init__(self, inference, history: ExperimentHistory | None = None) -> None:
-        self.inference = inference
+    def __init__(self, history: ExperimentHistory | None = None) -> None:
         self.engine = NumericalEngine()
         self.history = history
 
@@ -17,29 +16,22 @@ class NumericalResearch:
         coupling_values: list[float],
         previous_result: dict[str, object] | None = None,
     ) -> dict[str, object]:
-        summary = self.engine.research_summary(
-            self._base_experiment(coupling_values)
+        # Systematic model search without LLM
+        # Try exponential model (most common for decay/coherence)
+
+        result = self.engine.search_exponential_rate(
+            coupling_values=coupling_values,
+            rates=[0.5, 0.75, 1.0, 1.25, 1.5],
         )
 
-        prompt = ResearchPrompt.build(summary, previous_result)
-        output = self.inference(prompt)
-        proposal = ResearchProposal.parse(output)
-
-        if proposal.model_key() == "exponential":
-            result = self.engine.search_exponential_rate(
-                coupling_values=coupling_values,
-                rates=[0.5, 0.75, 1.0, 1.25, 1.5],
-            )
-        else:
-            result = self.engine.evaluate_model(
-                proposal,
-                coupling_values=coupling_values,
-            )
+        # Default hypothesis for history recording
+        hypothesis = "coherence decreases with coupling"
+        model = "exponential"
 
         if self.history is not None and result["status"] == "COMPLETED":
             self.history.record_result(
-                hypothesis=proposal.hypothesis,
-                model=proposal.model_key() or "",
+                hypothesis=hypothesis,
+                model=model,
                 parameters={
                     "qubits": 1,
                     "coupling_values": list(coupling_values),

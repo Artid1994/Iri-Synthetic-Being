@@ -1,10 +1,18 @@
 from __future__ import annotations
 
-from typing import Any
+from typing import Any, TYPE_CHECKING
 
 import numpy as np
 
-from brain.brain import Brain
+# Brain module archived - make optional
+if TYPE_CHECKING:
+    from brain.brain import Brain
+else:
+    try:
+        from brain.brain import Brain
+    except ImportError:
+        Brain = None
+
 from runtime.memory import Memory
 
 

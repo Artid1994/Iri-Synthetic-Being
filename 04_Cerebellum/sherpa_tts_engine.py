@@ -24,7 +24,7 @@ try:
     SHERPA_AVAILABLE = True
 except ImportError:
     SHERPA_AVAILABLE = False
-    print("[ERROR] sherpa-onnx not available", file=sys.stderr)
+    # Silent import failure - availability is checked via SHERPA_AVAILABLE flag
 
 
 class EmotionalState(Enum):

@@ -1,0 +1,45 @@
+{
+  "vowel_orthography": "Thai vowel spelling forms - how vowels are written, not how they sound",
+  "vowels": [
+    {"form": "◌ะ", "name": "sara a", "sound": "a", "length": "short", "position": "trailing"},
+    {"form": "◌า", "name": "sara aa", "sound": "aa", "length": "long", "position": "trailing"},
+    {"form": "◌ิ", "name": "sara i", "sound": "i", "length": "short", "position": "above"},
+    {"form": "◌ี", "name": "sara ii", "sound": "ii", "length": "long", "position": "above"},
+    {"form": "◌ึ", "name": "sara ue", "sound": "ue", "length": "short", "position": "above"},
+    {"form": "◌ื", "name": "sara uue", "sound": "uue", "length": "long", "position": "above"},
+    {"form": "◌ุ", "name": "sara u", "sound": "u", "length": "short", "position": "below"},
+    {"form": "◌ู", "name": "sara uu", "sound": "uu", "length": "long", "position": "below"},
+    {"form": "เ◌", "name": "sara e", "sound": "e", "length": "short", "position": "leading", "context_required": "needs_final_consonant"},
+    {"form": "เ◌◌", "name": "sara ee", "sound": "ee", "length": "long", "position": "leading", "requires_consonants": true, "example": "เดิน"},
+    {"form": "แ◌", "name": "sara ae", "sound": "ae", "length": "short", "position": "leading", "context_required": "needs_final_consonant"},
+    {"form": "แ◌◌", "name": "sara aae", "sound": "aae", "length": "long", "position": "leading", "requires_consonants": true, "example": "แขก"},
+    {"form": "โ◌", "name": "sara o", "sound": "o", "length": "long", "position": "leading"},
+    {"form": "◌อ", "name": "sara o short", "sound": "o", "length": "short", "position": "trailing"},
+    {"form": "เ◌า", "name": "sara ao", "sound": "ao", "length": "long", "position": "leading+trailing"},
+    {"form": "◌ัย", "name": "sara ai", "sound": "ai", "length": "long", "position": "above+trailing", "requires_consonants": true, "example": "ไทย"},
+    {"form": "ไ◌", "name": "sara ai mai malai", "sound": "ai", "length": "long", "position": "leading"},
+    {"form": "ใ◌", "name": "sara ai mai muan", "sound": "ai", "length": "long", "position": "leading"},
+    {"form": "เ◌อ", "name": "sara oe", "sound": "oe", "length": "short", "position": "leading+trailing"},
+    {"form": "เ◌อ◌", "name": "sara ooe", "sound": "ooe", "length": "long", "position": "leading+trailing", "requires_consonants": true, "example": "เดือน"},
+    {"form": "เ◌ีย", "name": "sara ia", "sound": "ia", "length": "long", "position": "leading+above+trailing", "requires_consonants": true, "example": "เที่ยว"},
+    {"form": "เ◌ียว", "name": "sara iao", "sound": "iao", "length": "long", "position": "leading+above+trailing", "requires_consonants": true, "example": "เหลียว"},
+    {"form": "◌ัว", "name": "sara ua", "sound": "ua", "length": "short", "position": "above+trailing", "context_required": "needs_initial_consonant"},
+    {"form": "◌ัว◌", "name": "sara uua", "sound": "uua", "length": "long", "position": "above+trailing", "requires_consonants": true, "example": "ตัวหนังสือ"},
+    {"form": "อำ", "name": "sara am", "sound": "am", "length": "short", "position": "above"},
+    {"form": "◌ฤ", "name": "rue", "sound": "rue", "length": "short", "position": "trailing"},
+    {"form": "◌ฤๅ", "name": "ruue", "sound": "ruue", "length": "long", "position": "trailing"},
+    {"form": "◌ฦ", "name": "lue", "sound": "lue", "length": "short", "position": "trailing"},
+    {"form": "◌ฦๅ", "name": "luue", "sound": "luue", "length": "long", "position": "trailing"}
+  ],
+  "special_marks": [
+    {"mark": "◌ั", "name": "mai han akat", "function": "vowel_shortener"},
+    {"mark": "◌็", "name": "mai tai khu", "function": "vowel_shortener"},
+    {"mark": "◌์", "name": "thanthakhat", "function": "silent_letter"},
+    {"mark": "ๅ", "name": "lak khang yao", "function": "vowel_lengthener"}
+  ],
+  "notes": {
+    "orthography_vs_phonology": "This file contains SPELLING FORMS (how vowels are written). Actual pronunciation depends on consonant context and syllable structure. See vowel_phonology.json for sound units.",
+    "contextual_forms": "Forms marked 'requires_consonants' or 'context_required' cannot exist in isolation - they are patterns that appear in complete syllables",
+    "length_ambiguity": "Vowel 'length' here refers to typical realization, but actual phonological length depends on syllable type (open/closed)"
+  }
+}

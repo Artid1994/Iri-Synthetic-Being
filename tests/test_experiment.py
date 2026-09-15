@@ -241,17 +241,11 @@ Model Proposal: Exponential model"""
         self.assertEqual(result["model"], "exponential")
         self.assertIn("error", result)
 
-    def test_numerical_research_evaluates_ai_proposal(self):
+    def test_numerical_research_uses_systematic_model_search(self):
         from runtime.numerical_research import NumericalResearch
 
-        class FakeAI:
-            def __call__(self, prompt):
-                return (
-                    "Hypothesis: coherence decreases with coupling\n"
-                    "Model Proposal: Exponential model"
-                )
-
-        research = NumericalResearch(inference=FakeAI())
+        # NumericalResearch now uses systematic search, no LLM needed
+        research = NumericalResearch()
 
         result = research.run(
             coupling_values=[0.0, 0.5, 1.0],
@@ -441,21 +435,9 @@ Model Proposal: Exponential model"""
         from runtime.experiment_history import ExperimentHistory
         from runtime.numerical_research import NumericalResearch
 
-        class FakeAI:
-            def __init__(self):
-                self.calls = 0
-
-            def __call__(self, prompt):
-                self.calls += 1
-                model = "Exponential model" if self.calls == 1 else "Linear model"
-                return (
-                    "Hypothesis: coherence decreases with coupling\n"
-                    f"Model Proposal: {model}"
-                )
-
+        # NumericalResearch now uses systematic exponential search
         history = ExperimentHistory()
         research = NumericalResearch(
-            inference=FakeAI(),
             history=history,
         )
 
@@ -469,8 +451,9 @@ Model Proposal: Exponential model"""
             entries[0]["experiment_id"],
             entries[1]["experiment_id"],
         )
+        # Both use exponential model (systematic search)
         self.assertEqual(entries[0]["model"], "exponential")
-        self.assertEqual(entries[1]["model"], "linear")
+        self.assertEqual(entries[1]["model"], "exponential")
 
     def test_experiment_history_preserves_multiple_cycles_after_load(self):
         from tempfile import TemporaryDirectory
@@ -533,69 +516,6 @@ Model Proposal: Exponential model"""
 
         self.assertEqual(history.entries(), [])
 
-    def test_ollama_inference_raises_on_network_failure(self):
-        from unittest.mock import patch
-        from urllib.error import URLError
-        from runtime.ollama_inference import OllamaInference
-
-        ai = OllamaInference(
-            model="qwen2.5:0.5b",
-            host="http://10.74.65.85:11434",
-            timeout=1,
-        )
-
-        with patch(
-            "urllib.request.urlopen",
-            side_effect=URLError("network unavailable"),
-        ):
-            with self.assertRaises(URLError):
-                ai("test")
-
-    def test_ollama_inference_raises_on_timeout(self):
-        from unittest.mock import patch
-        from runtime.ollama_inference import OllamaInference
-
-        ai = OllamaInference(
-            model="qwen2.5:0.5b",
-            host="http://10.74.65.85:11434",
-            timeout=1,
-        )
-
-        with patch(
-            "urllib.request.urlopen",
-            side_effect=TimeoutError("request timed out"),
-        ):
-            with self.assertRaises(TimeoutError):
-                ai("test")
-
-    def test_ollama_inference_handles_malformed_response(self):
-        from unittest.mock import patch
-        from runtime.ollama_inference import OllamaInference
-
-        ai = OllamaInference(
-            model="qwen2.5:0.5b",
-            host="http://10.74.65.85:11434",
-        )
-
-        class FakeResponse:
-            def read(self):
-                return b'{"unexpected": "response"}'
-
-            def __enter__(self):
-                return self
-
-            def __exit__(self, *args):
-                pass
-
-        with patch(
-            "urllib.request.urlopen",
-            return_value=FakeResponse(),
-        ):
-            result = ai("test")
-
-        self.assertEqual(result, "")
-
-    def test_autonomous_runner_pauses_after_failure_limit(self):
         from runtime.autonomous_runner import AutonomousRunner
 
         class FailingLoop:
@@ -629,16 +549,9 @@ Model Proposal: Exponential model"""
         from runtime.experiment_history import ExperimentHistory
         from runtime.numerical_research import NumericalResearch
 
-        class FakeAI:
-            def __call__(self, prompt):
-                return (
-                    "Hypothesis: coherence decreases with coupling\n"
-                    "Model Proposal: Exponential model"
-                )
-
+        # NumericalResearch now uses systematic search
         history = ExperimentHistory()
         research = NumericalResearch(
-            inference=FakeAI(),
             history=history,
         )
 

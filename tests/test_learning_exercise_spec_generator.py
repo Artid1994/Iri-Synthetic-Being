@@ -1,88 +1,46 @@
 import unittest
 
+from runtime.learning_exercise_spec_generator import LearningExerciseSpecGenerator
 from runtime.learning_exercise_spec import LearningExerciseSpec
-from runtime.learning_exercise_spec_generator import (
-    LearningExerciseSpecGenerator,
-)
 
 
 class TestLearningExerciseSpecGenerator(unittest.TestCase):
+    def test_generator_creates_spec_from_knowledge(self):
+        # Generator now uses template-based generation
+        generator = LearningExerciseSpecGenerator()
 
-    def test_generator_creates_spec_from_valid_ai_output(self):
-        inference = lambda prompt: (
-            "Question: Calculate exp(-1).\n"
-            "Expression: exp(-1)"
-        )
-
-        generator = LearningExerciseSpecGenerator(inference)
-
-        spec = generator.generate(
-            "The exponential function is used in decay models."
-        )
+        spec = generator.generate("Calculate 15 plus 25")
 
         self.assertIsInstance(spec, LearningExerciseSpec)
-        self.assertEqual(
-            spec.question,
-            "Calculate exp(-1).",
-        )
-        self.assertEqual(
-            spec.expression,
-            "exp(-1)",
-        )
+        self.assertTrue(spec.question)
+        self.assertTrue(spec.expression)
 
-    def test_generator_rejects_invalid_ai_output(self):
-        inference = lambda prompt: "invalid output"
+    def test_generator_extracts_numbers_for_arithmetic(self):
+        generator = LearningExerciseSpecGenerator()
 
-        generator = LearningExerciseSpecGenerator(inference)
+        spec = generator.generate("The numbers 7 and 8")
 
-        with self.assertRaises(ValueError):
-            generator.generate(
-                "The exponential function is used in decay models."
-            )
+        self.assertEqual(spec.question, "Calculate: 7 + 8")
+        self.assertEqual(spec.expression, "7 + 8")
+
+    def test_generator_provides_default_exercise(self):
+        generator = LearningExerciseSpecGenerator()
+
+        spec = generator.generate("no numbers here")
+
+        self.assertEqual(spec.question, "Calculate: 2 + 2")
+        self.assertEqual(spec.expression, "2 + 2")
 
     def test_generator_rejects_empty_knowledge(self):
-        generator = LearningExerciseSpecGenerator(
-            lambda prompt: (
-                "Question: Calculate exp(-1).\n"
-                "Expression: exp(-1)"
-            )
-        )
+        generator = LearningExerciseSpecGenerator()
 
-        with self.assertRaises(ValueError):
+        with self.assertRaises(ValueError) as context:
             generator.generate("")
 
-    def test_generator_prompt_contains_knowledge(self):
-        prompts = []
-
-        def inference(prompt):
-            prompts.append(prompt)
-            return (
-                "Question: Calculate exp(-1).\n"
-                "Expression: exp(-1)"
-            )
-
-        generator = LearningExerciseSpecGenerator(inference)
-
-        generator.generate(
-            "The exponential function is used in decay models."
+        self.assertEqual(
+            str(context.exception),
+            "KNOWLEDGE_CANNOT_BE_EMPTY",
         )
-
-        self.assertIn(
-            "The exponential function is used in decay models.",
-            prompts[0],
-        )
-
-    def test_generator_requires_expression(self):
-        inference = lambda prompt: (
-            "Question: Calculate exp(-1)."
-        )
-
-        generator = LearningExerciseSpecGenerator(inference)
-
-        with self.assertRaises(ValueError):
-            generator.generate(
-                "The exponential function is used in decay models."
-            )
 
 
 if __name__ == "__main__":

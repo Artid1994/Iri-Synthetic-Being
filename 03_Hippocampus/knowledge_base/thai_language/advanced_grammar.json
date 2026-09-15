@@ -1,0 +1,199 @@
+{
+  "classifiers": {
+    "note": "KNOWN: Thai requires classifiers for counting and specifying nouns",
+    "common_classifiers": [
+      {
+        "classifier": "คน",
+        "usage": "people",
+        "example": "คน สอง คน",
+        "gloss": "person two CLASSIFIER",
+        "meaning": "two people",
+        "data_status": "KNOWN"
+      },
+      {
+        "classifier": "ตัว",
+        "usage": "animals, objects, clothing",
+        "example": "แมว สาม ตัว",
+        "gloss": "cat three CLASSIFIER",
+        "meaning": "three cats",
+        "data_status": "KNOWN"
+      },
+      {
+        "classifier": "อัน",
+        "usage": "general objects, small items",
+        "example": "ของ หนึ่ง อัน",
+        "gloss": "thing one CLASSIFIER",
+        "meaning": "one thing",
+        "data_status": "KNOWN"
+      },
+      {
+        "classifier": "เล่ม",
+        "usage": "books, notebooks",
+        "example": "หนังสือ สอง เล่ม",
+        "gloss": "book two CLASSIFIER",
+        "meaning": "two books",
+        "data_status": "KNOWN"
+      },
+      {
+        "classifier": "ลูก",
+        "usage": "round objects, fruits",
+        "example": "ส้ม สี่ ลูก",
+        "gloss": "orange four CLASSIFIER",
+        "meaning": "four oranges",
+        "data_status": "KNOWN"
+      }
+    ],
+    "pattern": "NOUN + NUMBER + CLASSIFIER",
+    "note_2": "Word order: Noun comes before number+classifier"
+  },
+  "serial_verbs": {
+    "note": "KNOWN: Thai commonly uses verb sequences without conjunctions",
+    "patterns": [
+      {
+        "pattern": "V1-V2 (sequential actions)",
+        "example": "ไป กิน",
+        "gloss": "go eat",
+        "meaning": "go to eat / go and eat",
+        "structure": "V1 (go) + V2 (eat)",
+        "data_status": "KNOWN"
+      },
+      {
+        "pattern": "V1-V2 (manner)",
+        "example": "เดิน กลับ",
+        "gloss": "walk return",
+        "meaning": "walk back",
+        "structure": "V1 (manner) + V2 (direction)",
+        "data_status": "KNOWN"
+      },
+      {
+        "pattern": "V1-V2 (purpose)",
+        "example": "มา เรียน",
+        "gloss": "come study",
+        "meaning": "come to study",
+        "structure": "V1 (come) + V2 (purpose)",
+        "data_status": "KNOWN"
+      }
+    ],
+    "note_2": "Serial verbs: multiple verbs in sequence, no conjunction required"
+  },
+  "conversational_patterns": [
+    {
+      "pattern": "location expression",
+      "structure": "อยู่ + LOCATION",
+      "example": "อยู่ บ้าน",
+      "meaning": "be at home",
+      "data_status": "KNOWN"
+    },
+    {
+      "pattern": "possession",
+      "structure": "มี + OBJECT",
+      "example": "มี หนังสือ",
+      "meaning": "have book(s)",
+      "data_status": "KNOWN"
+    },
+    {
+      "pattern": "want/desire",
+      "structure": "อยาก + VERB",
+      "example": "อยาก กิน",
+      "meaning": "want to eat",
+      "data_status": "KNOWN"
+    },
+    {
+      "pattern": "can/ability",
+      "structure": "ได้ + VERB",
+      "example": "กิน ได้",
+      "meaning": "can eat",
+      "note": "AMBIGUOUS: ได้ position varies; post-verbal common",
+      "data_status": "KNOWN pattern, AMBIGUOUS details"
+    }
+  ],
+  "quantity_expressions": {
+    "note": "KNOWN: Quantity requires classifiers in Thai",
+    "pattern": "NOUN + NUMBER + CLASSIFIER",
+    "numbers": [
+      {"thai": "หนึ่ง", "number": 1},
+      {"thai": "สอง", "number": 2},
+      {"thai": "สาม", "number": 3},
+      {"thai": "สี่", "number": 4},
+      {"thai": "ห้า", "number": 5}
+    ],
+    "examples": [
+      {
+        "thai": "คน สอง คน",
+        "structure": "person two CLASSIFIER",
+        "meaning": "two people",
+        "data_status": "KNOWN"
+      },
+      {
+        "thai": "หนังสือ สาม เล่ม",
+        "structure": "book three CLASSIFIER",
+        "meaning": "three books",
+        "data_status": "KNOWN"
+      }
+    ]
+  },
+  "expanded_sentence_patterns": [
+    {
+      "pattern": "S-V-O-LOC",
+      "structure": "Subject + Verb + Object + Location",
+      "example": "คน กิน น้ำ ที่ บ้าน",
+      "gloss": "person eat water at house",
+      "meaning": "The person drinks water at home",
+      "data_status": "KNOWN"
+    },
+    {
+      "pattern": "S-VERB-VERB (serial)",
+      "structure": "Subject + Verb1 + Verb2",
+      "example": "คน ไป กิน",
+      "gloss": "person go eat",
+      "meaning": "The person goes to eat",
+      "data_status": "KNOWN"
+    },
+    {
+      "pattern": "S-V-NUM-CL-O",
+      "structure": "Subject + Verb + Number + Classifier + Object",
+      "example": "คน มี สอง คน",
+      "gloss": "person have two CLASSIFIER",
+      "meaning": "There are two people",
+      "data_status": "KNOWN"
+    }
+  ],
+  "semantic_relationships": {
+    "note": "Relationships between concepts for deeper comprehension",
+    "relationships": [
+      {
+        "type": "cause-effect",
+        "example": "UNKNOWN: Complex causative constructions not yet covered",
+        "data_status": "UNKNOWN"
+      },
+      {
+        "type": "time-sequence",
+        "thai_markers": ["แล้ว", "ก่อน", "หลัง"],
+        "note": "KNOWN: Basic time markers, AMBIGUOUS: Complex temporal relationships",
+        "data_status": "PARTIAL"
+      },
+      {
+        "type": "comparison",
+        "example": "UNKNOWN: Comparative structures not yet covered",
+        "data_status": "UNKNOWN"
+      }
+    ]
+  },
+  "self_directed_learning": {
+    "note": "Foundation for learner autonomy",
+    "skills": [
+      "Recognize knowledge gaps",
+      "Form learning questions",
+      "Seek examples",
+      "Practice independently",
+      "Self-assess understanding"
+    ],
+    "data_status": "META: Learning strategy, not linguistic data"
+  },
+  "limitations": {
+    "note": "Week 5 scope boundaries",
+    "included": "Classifiers (5 common), serial verbs (3 patterns), basic conversational structures",
+    "excluded": "Full classifier system (50+), complex serial verbs (4+), formal register, idioms",
+    "data_status": "All patterns marked KNOWN unless explicitly AMBIGUOUS or UNKNOWN"
+  }
+}

@@ -4,5 +4,8 @@
   "galaxy-view",
   "terminal-commands",
   "obsidian-shellcommands",
-  "brain-atlas"
+  "brain-atlas",
+  "automation-graph",
+  "infranodus-graph-view",
+  "neuro-mindmap-mouse"
 ]

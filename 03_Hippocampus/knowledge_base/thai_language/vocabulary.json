@@ -1,0 +1,296 @@
+{
+  "vocabulary": [
+    {
+      "word": "คน",
+      "syllables": ["คน"],
+      "ipa": "kʰon˧",
+      "meaning": "person",
+      "category": "noun",
+      "frequency": "high",
+      "level": 1
+    },
+    {
+      "word": "ดี",
+      "syllables": ["ดี"],
+      "ipa": "diː˧",
+      "meaning": "good",
+      "category": "adjective",
+      "frequency": "high",
+      "level": 1
+    },
+    {
+      "word": "มา",
+      "syllables": ["มา"],
+      "ipa": "maː˧",
+      "meaning": "come",
+      "category": "verb",
+      "frequency": "high",
+      "level": 1
+    },
+    {
+      "word": "ไป",
+      "syllables": ["ไป"],
+      "ipa": "paj˧",
+      "meaning": "go",
+      "category": "verb",
+      "frequency": "high",
+      "level": 1
+    },
+    {
+      "word": "กิน",
+      "syllables": ["กิน"],
+      "ipa": "kin˧",
+      "meaning": "eat",
+      "category": "verb",
+      "frequency": "high",
+      "level": 1
+    },
+    {
+      "word": "น้ำ",
+      "syllables": ["น้ำ"],
+      "ipa": "naːm˦˥",
+      "meaning": "water",
+      "category": "noun",
+      "frequency": "high",
+      "level": 1
+    },
+    {
+      "word": "บ้าน",
+      "syllables": ["บ้าน"],
+      "ipa": "baːn˥˩",
+      "meaning": "house",
+      "category": "noun",
+      "frequency": "high",
+      "level": 1
+    },
+    {
+      "word": "ใหญ่",
+      "syllables": ["ใหญ่"],
+      "ipa": "jaj˨˩",
+      "meaning": "big",
+      "category": "adjective",
+      "frequency": "high",
+      "level": 1
+    },
+    {
+      "word": "เล็ก",
+      "syllables": ["เล็ก"],
+      "ipa": "lek̚˦˥",
+      "meaning": "small",
+      "category": "adjective",
+      "frequency": "high",
+      "level": 1
+    },
+    {
+      "word": "รัก",
+      "syllables": ["รัก"],
+      "ipa": "rak̚˦˥",
+      "meaning": "love",
+      "category": "verb",
+      "frequency": "high",
+      "level": 1
+    },
+    {
+      "word": "ภาษา",
+      "syllables": ["ภา", "ษา"],
+      "ipa": "pʰaː˧.saː˨˩",
+      "meaning": "language",
+      "category": "noun",
+      "frequency": "high",
+      "level": 2
+    },
+    {
+      "word": "ประเทศ",
+      "syllables": ["ประ", "เทศ"],
+      "ipa": "pra˨˩.tʰeːt̚˥˩",
+      "meaning": "country",
+      "category": "noun",
+      "frequency": "high",
+      "level": 2
+    },
+    {
+      "word": "สวัสดี",
+      "syllables": ["สะ", "หวัด", "ดี"],
+      "ipa": "sa˨˩.wat̚˨˩.diː˧",
+      "meaning": "hello",
+      "category": "greeting",
+      "frequency": "high",
+      "level": 2
+    },
+    {
+      "word": "ขอบคุณ",
+      "syllables": ["ขอบ", "คุณ"],
+      "ipa": "kʰɔːp̚˨˩.kʰun˧",
+      "meaning": "thank you",
+      "category": "phrase",
+      "frequency": "high",
+      "level": 2
+    },
+    {
+      "word": "ครอบครัว",
+      "syllables": ["ครอบ", "ครัว"],
+      "ipa": "kʰrɔːp̚˥˩.kʰrua˧",
+      "meaning": "family",
+      "category": "noun",
+      "frequency": "high",
+      "level": 2
+    },
+    {
+      "word": "อาหาร",
+      "syllables": ["อา", "หาร"],
+      "ipa": "ʔaː˧.haːn˨˩",
+      "meaning": "food",
+      "category": "noun",
+      "frequency": "high",
+      "level": 2
+    },
+    {
+      "word": "เวลา",
+      "syllables": ["เว", "ลา"],
+      "ipa": "weː˧.laː˧",
+      "meaning": "time",
+      "category": "noun",
+      "frequency": "high",
+      "level": 2
+    },
+    {
+      "word": "ทำงาน",
+      "syllables": ["ทำ", "งาน"],
+      "ipa": "tʰam˧.ŋaːn˧",
+      "meaning": "work",
+      "category": "verb",
+      "frequency": "high",
+      "level": 2
+    },
+    {
+      "word": "เรียน",
+      "syllables": ["เรียน"],
+      "ipa": "riːan˧",
+      "meaning": "study",
+      "category": "verb",
+      "frequency": "high",
+      "level": 2
+    },
+    {
+      "word": "หนังสือ",
+      "syllables": ["หนัง", "สือ"],
+      "ipa": "naŋ˨˩.sɯː˨˩",
+      "meaning": "book",
+      "category": "noun",
+      "frequency": "high",
+      "level": 2
+    },
+    {
+      "word": "เพื่อน",
+      "syllables": ["เพื่อน"],
+      "ipa": "pʰɯːan˥˩",
+      "meaning": "friend",
+      "category": "noun",
+      "frequency": "high",
+      "level": 2
+    },
+    {
+      "word": "สนุก",
+      "syllables": ["สะ", "นุก"],
+      "ipa": "sa˨˩.nuk̚˨˩",
+      "meaning": "fun",
+      "category": "adjective",
+      "frequency": "high",
+      "level": 2
+    },
+    {
+      "word": "สวย",
+      "syllables": ["สวย"],
+      "ipa": "suaj˨˩",
+      "meaning": "beautiful",
+      "category": "adjective",
+      "frequency": "high",
+      "level": 2
+    },
+    {
+      "word": "หล่อ",
+      "syllables": ["หล่อ"],
+      "ipa": "lɔː˨˩",
+      "meaning": "handsome",
+      "category": "adjective",
+      "frequency": "high",
+      "level": 2
+    },
+    {
+      "word": "อร่อย",
+      "syllables": ["อะ", "ร่อย"],
+      "ipa": "ʔa˨˩.rɔj˨˩",
+      "meaning": "delicious",
+      "category": "adjective",
+      "frequency": "high",
+      "level": 2
+    },
+    {
+      "word": "ร้อน",
+      "syllables": ["ร้อน"],
+      "ipa": "rɔːn˦˥",
+      "meaning": "hot",
+      "category": "adjective",
+      "frequency": "high",
+      "level": 2
+    },
+    {
+      "word": "เย็น",
+      "syllables": ["เย็น"],
+      "ipa": "jen˧",
+      "meaning": "cold/evening",
+      "category": "adjective",
+      "frequency": "high",
+      "level": 2
+    },
+    {
+      "word": "เช้า",
+      "syllables": ["เช้า"],
+      "ipa": "tɕʰaːw˦˥",
+      "meaning": "morning",
+      "category": "noun",
+      "frequency": "high",
+      "level": 2
+    },
+    {
+      "word": "คืน",
+      "syllables": ["คืน"],
+      "ipa": "kʰɯːn˧",
+      "meaning": "night",
+      "category": "noun",
+      "frequency": "high",
+      "level": 2
+    },
+    {
+      "word": "วันนี้",
+      "syllables": ["วัน", "นี้"],
+      "ipa": "wan˧.niː˦˥",
+      "meaning": "today",
+      "category": "noun",
+      "frequency": "high",
+      "level": 2
+    }
+  ],
+  "word_patterns": [
+    {
+      "pattern": "single_syllable",
+      "description": "Single syllable words",
+      "examples": ["คน", "ดี", "มา", "ไป", "กิน"]
+    },
+    {
+      "pattern": "two_syllable",
+      "description": "Two syllable words",
+      "examples": ["ภาษา", "ประเทศ", "ขอบคุณ", "อาหาร", "เวลา"]
+    },
+    {
+      "pattern": "compound",
+      "description": "Compound words from two meaningful parts",
+      "examples": ["ครอบครัว", "ทำงาน", "หนังสือ"]
+    },
+    {
+      "pattern": "reduplication",
+      "description": "Words with repeated elements",
+      "examples": []
+    }
+  ]
+}

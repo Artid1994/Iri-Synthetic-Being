@@ -81,12 +81,20 @@ class AutonomousContext:
     sleep_threshold_seconds: int = 1800  # 30 minutes
     research_topics: List[str] = None
     learned_facts: List[Dict[str, Any]] = None
+    last_seen_words: set = None
+    curiosity_charge: float = 0.0
+    last_seen_words: set = None
+    curiosity_charge: float = 0.0
     
     def __post_init__(self):
         if self.research_topics is None:
             self.research_topics = []
         if self.learned_facts is None:
             self.learned_facts = []
+        if self.last_seen_words is None:
+            self.last_seen_words = set()
+        if self.last_seen_words is None:
+            self.last_seen_words = set()
 
 
 class AutonomousLoop:
@@ -129,6 +137,11 @@ class AutonomousLoop:
         
         # Load existing knowledge base
         self.knowledge_base = self._load_knowledge_base()
+        
+        # 🟢 Embedded Visual Cortex - Sensory Input
+        import importlib
+        visual_module = importlib.import_module("02_VisualCortex.screen_eye")
+        self.screen_eye = visual_module.ScreenEye(ocr_scale=0.5, fast_mode=True)
         
         # Initialize goal engine for autonomous task execution
         self.goal_engine = GoalEngine()
@@ -300,38 +313,43 @@ class AutonomousLoop:
         logger.info(f"[Research] Total knowledge: {len(self.knowledge_base['learned_facts'])} facts")
     
     def _extract_work_topics(self) -> List[str]:
-        """
-        Extract work topics from recent conversation history.
-        Identifies tools, tasks, and coding languages user was working on.
-        """
+        """Extract work topics from persisted Hippocampus episodic conversations."""
         topics = []
-        
-        # Check for conversation logs
-        log_file = self.project_root / "logs" / "iri_daemon.log"
-        
-        if not log_file.exists():
+        memory_dir = self.project_root / "03_Hippocampus" / "learned_insights"
+
+        if not memory_dir.exists():
+            logger.warning("[Research] Episodic memory directory not found")
             return topics
-        
+
         try:
-            with open(log_file, 'r', encoding='utf-8') as f:
-                lines = f.readlines()
-                recent_lines = lines[-200:]  # Last 200 lines for context
-            
-            # Extract user messages
+            files = sorted(
+                memory_dir.glob("EPISODIC_Conversation_*.md"),
+                key=lambda f: f.stat().st_mtime,
+                reverse=True
+            )[:20]
+
             user_messages = []
-            for line in recent_lines:
-                if "👤 User:" in line:
-                    # Extract message content
-                    parts = line.split("👤 User:", 1)
-                    if len(parts) > 1:
-                        user_messages.append(parts[1].strip())
-            
-            # Analyze for work-related keywords
+            for file in files:
+                try:
+                    text = file.read_text(encoding="utf-8")
+                except (OSError, UnicodeDecodeError):
+                    continue
+
+                if "**User:**" not in text:
+                    continue
+
+                content = text.split("**User:**", 1)[1]
+                if "**Iri:**" in content:
+                    content = content.split("**Iri:**", 1)[0]
+
+                if content.strip():
+                    user_messages.append(content.strip())
+
             work_keywords = {
                 "python": ["python", "pytest", "pip", "venv", "ไพธอน"],
                 "javascript": ["javascript", "node", "npm", "react", "จาวาสคริปต์"],
-                "git": ["git", "commit", "push", "merge", "branch", "กิต"],
-                "docker": ["docker", "container", "image", "โดเกอร์"],
+                "git": ["git", "commit", "push", "merge", "branch"],
+                "docker": ["docker", "container", "image"],
                 "linux": ["linux", "bash", "shell", "terminal", "ลินุกซ์"],
                 "web development": ["html", "css", "api", "rest", "เว็บ"],
                 "database": ["database", "sql", "postgres", "mysql", "ฐานข้อมูล"],
@@ -340,55 +358,65 @@ class AutonomousLoop:
                 "voice synthesis": ["tts", "voice", "speech", "เสียง", "พูด"],
                 "automation": ["automation", "script", "cron", "service", "อัตโนมัติ"],
                 "systemd": ["systemd", "service", "daemon", "ระบบ"],
+                "IRI": ["iri", "ไอริ", "cognitive", "autonomous", "hermes", "agent"]
             }
-            
-            # Count keyword occurrences
-            keyword_counts = {}
+
             combined_text = " ".join(user_messages).lower()
-            
+            counts = {}
+
             for topic, keywords in work_keywords.items():
-                count = sum(combined_text.count(kw) for kw in keywords)
-                if count > 0:
-                    keyword_counts[topic] = count
-            
-            # Sort by frequency and take top topics
-            sorted_topics = sorted(keyword_counts.items(), key=lambda x: x[1], reverse=True)
-            topics = [topic for topic, count in sorted_topics[:5]]
-            
-            logger.info(f"[Research] Extracted {len(topics)} work topics from conversation history")
-            
+                count = sum(combined_text.count(k.lower()) for k in keywords)
+                if count:
+                    counts[topic] = count
+
+            topics = [
+                topic for topic, _ in
+                sorted(counts.items(), key=lambda x: x[1], reverse=True)[:5]
+            ]
+
+            logger.info(
+                f"[Research] Extracted {len(topics)} work topics "
+                f"from {len(user_messages)} episodic conversations"
+            )
+
         except Exception as e:
             logger.warning(f"[Research] Could not extract work topics: {e}")
-        
+
         return topics
-    
+
     def _consolidate_memory(self):
-        """
-        Consolidate memory from recent conversations.
-        Reviews logs and summarizes key context.
-        """
+        """Consolidate persisted Hippocampus episodic conversations."""
         logger.info("[Consolidation] Starting memory consolidation...")
-        
-        # Check for conversation logs
-        log_file = self.project_root / "logs" / "iri_daemon.log"
-        
-        if log_file.exists():
-            # Lightweight: Just count recent interactions
-            try:
-                with open(log_file, 'r', encoding='utf-8') as f:
-                    lines = f.readlines()
-                    recent_lines = lines[-100:]  # Last 100 lines
-                    user_messages = [l for l in recent_lines if "👤 User:" in l]
-                    
-                    logger.info(f"[Consolidation] Reviewed {len(recent_lines)} log lines")
-                    logger.info(f"[Consolidation] Found {len(user_messages)} user interactions")
-            except Exception as e:
-                logger.warning(f"[Consolidation] Could not read logs: {e}")
-        else:
-            logger.info("[Consolidation] No conversation logs found")
-        
+
+        memory_dir = self.project_root / "03_Hippocampus" / "learned_insights"
+
+        if not memory_dir.exists():
+            logger.info("[Consolidation] No episodic memory directory found")
+            logger.info("[Consolidation] Memory consolidation complete")
+            return
+
+        try:
+            files = sorted(
+                memory_dir.glob("EPISODIC_Conversation_*.md"),
+                key=lambda f: f.stat().st_mtime,
+                reverse=True
+            )[:100]
+
+            user_messages = 0
+            for file in files:
+                try:
+                    user_messages += file.read_text(encoding="utf-8").count("**User:**")
+                except (OSError, UnicodeDecodeError):
+                    continue
+
+            logger.info(f"[Consolidation] Reviewed {len(files)} episodic conversation files")
+            logger.info(f"[Consolidation] Found {user_messages} user interactions")
+
+        except Exception as e:
+            logger.warning(f"[Consolidation] Could not read episodic memory: {e}")
+
         logger.info("[Consolidation] Memory consolidation complete")
-    
+
     def _execute_goals(self):
         """
         Execute autonomous goals during IDLE/RESEARCH mode.
@@ -505,12 +533,46 @@ class AutonomousLoop:
         return output[:500]  # Limit stored output
     
     def _execute_file_operation_subtask(self, subtask) -> str:
-        """Execute file operation subtask."""
-        logger.info(f"[Goals] File operation: {subtask.title}")
+        """
+        🛠️ Real Motor Execution System (Cerebellum Action Trigger)
+        Executes safe, localized file operations on Linux Debian 13 without external dependencies.
+        """
+        logger.info(f"[Goals] Executing real Cerebellum file operation: {subtask.title}")
         
-        # For now, just log the operation
-        # In production, implement actual file operations with safety checks
-        return f"File operation queued: {subtask.command}"
+        try:
+            # รูปแบบคำสั่งดิบ: WRITE_FILE:path/to/file:content_string
+            if subtask.command.startswith("WRITE_FILE:"):
+                parts = subtask.command.split(":", 2)
+                if len(parts) >= 3:
+                    target_path = self.project_root / parts[1].strip()
+                    content = parts[2]
+                    
+                    # Ensure path directory safety
+                    target_path.parent.mkdir(parents=True, exist_ok=True)
+                    target_path.write_text(content, encoding="utf-8")
+                    
+                    logger.info(f"[Cerebellum] ✓ Successfully wrote file down to disk: {target_path.name}")
+                    return f"Action complete: File created and written at {target_path.name}."
+            
+            # รูปแบบคำสั่งดิบ: APPEND_FILE:path/to/file:content_string
+            elif subtask.command.startswith("APPEND_FILE:"):
+                parts = subtask.command.split(":", 2)
+                if len(parts) >= 3:
+                    target_path = self.project_root / parts[1].strip()
+                    content = parts[2]
+                    
+                    with open(target_path, "a", encoding="utf-8") as f:
+                        f.write(f"\n{content}")
+                        
+                    logger.info(f"[Cerebellum] ✓ Successfully appended data to: {target_path.name}")
+                    return f"Action complete: Data appended to {target_path.name}."
+                    
+            # คำสั่งทั่วไป ส่งผ่านเข้า Standard Shell Command
+            return self._execute_terminal_subtask(subtask)
+            
+        except Exception as e:
+            logger.error(f"[Cerebellum] ❌ Safe action execution failed: {e}")
+            return f"Execution Error: {str(e)}" 
     
     def _execute_verification_subtask(self, subtask) -> str:
         """Execute verification subtask (similar to terminal)."""
@@ -1209,6 +1271,35 @@ class AutonomousLoop:
         logger.info(f"[Curriculum] ✓ Queued learning goal: {learning_goal.title}")
         logger.info(f"[Curriculum] Goal ID: {learning_goal.id}, Priority: {learning_goal.priority.value}")
     
+    def _apply_memory_plasticity(self, visual_words: set):
+        """
+        🧠 Local Memory Plasticity (Hebbian Update Rule)
+        Adjusts target goal priority based on recent visual screen triggers without using LLM.
+        """
+        if not visual_words:
+            return
+            
+        from goal_engine import GoalPriority, GoalStatus
+        active_goals = self.goal_engine.list_goals()
+        boosted_count = 0
+        
+        for goal in active_goals:
+            if goal.status in [GoalStatus.PENDING, GoalStatus.IN_PROGRESS]:
+                goal_text = (goal.title + " " + goal.description).lower()
+                
+                # Check if user's current desktop context overlaps with the goal keywords
+                # กฎการเรียนรู้ประสาทสัมผัส: ถ้ายิ่งตรงกับสิ่งที่เจ้านายทำบ่อยๆ เส้นประสาทจะแข็งแรงขึ้น
+                matched_words = [word for word in visual_words if word in goal_text]
+                
+                if matched_words and goal.priority != GoalPriority.HIGH:
+                    # อัปเกรดประจุความสำคัญบน RAM ทันทีตามประสบการณ์หน้าจอ
+                    goal.priority = GoalPriority.HIGH
+                    boosted_count += 1
+                    
+        if boosted_count > 0:
+            logger.info(f"[Plasticity] 🧠 Synaptic adjustment: Boosted {boosted_count} goals linked to screen context.")
+            self.goal_engine.save_goals()
+
     def mark_interaction(self):
         """Mark user interaction (resets idle timer)."""
         self.context.last_interaction = datetime.now()
@@ -1263,6 +1354,45 @@ class AutonomousLoop:
             
             logger.info(f"[Cycle {iteration}] State: {current_state.value.upper()} (T+{time_in_state:.1f}s)")
             
+            # 🟢 Sensory Processing Loop: Eye blinks every 30s during ACTIVE state to conserve CPU
+            if False: # 🔴 ปิดระบบประสาทตาชั่วคราวตามคำสั่งเจ้านาย
+                logger.info("[Sensory] Iri is acquiring screen context via OCR...")
+                try:
+                    screen_elements = self.screen_eye.read_screen_text()
+                    
+                    # 👶 Local Novelty Detection (Curiosity Driven Learning)
+                    current_words = set([elem.text.lower() for elem in screen_elements if len(elem.text) > 1])
+                    old_words = self.context.last_seen_words
+                    
+                    # หาคำศัพท์ใหม่ที่เด็กน้อยเพิ่งเคยเห็นในการกะพริบตารอบนี้
+                    new_words = current_words - old_words
+                    novelty_ratio = len(new_words) / max(len(current_words), 1)
+                    
+                    # ปรับชาร์จประจุไฟฟ้าความสนใจสะสมบน RAM
+                    self.context.curiosity_charge = novelty_ratio
+                    self.context.last_seen_words = current_words
+                    
+                    if novelty_ratio > 0.15: # หากหน้าจอเปลี่ยนไปมากกว่า 15% (เกิดสิ่งใหม่)
+                        logger.info(f"[Curiosity] 👶 Iri feels curious! Novelty ratio: {novelty_ratio:.1%}. Found {len(new_words)} new words.")
+                        fact_entry = {
+                            'topic': 'Curiosity Experience',
+                            'summary': f'Discovered fresh context on screen containing words like: {list(new_words)[:3]}.',
+                            'timestamp': time.time(),
+                            'source': 'visual_curiosity',
+                            'novelty_level': novelty_ratio
+                        }
+                        self.context.learned_facts.append(fact_entry)
+                        # เพิ่มพูนความรู้ดิบก้าวแรกเข้าสู่คลังความรู้จำลองทันที
+                        self.knowledge_base.setdefault("learned_facts", []).append(fact_entry)
+                        
+                        # 🧠 กระตุ้นกลไกปรับเปลี่ยนสภาพสมอง (Plasticity Trigger) ทันทีที่มีการเปลี่ยนแปลง
+                        self._apply_memory_plasticity(current_words)
+                    else:
+                        logger.info(f"[Curiosity] Screen environment is stable ({novelty_ratio:.1%}). No high trigger.")
+                        
+                except Exception as e:
+                    logger.warning(f"[Sensory] Visual acquisition failed: {e}")
+            
             # Execute state-specific actions
             if current_state in [CircadianState.IDLE, CircadianState.RESEARCH]:
                 # Execute autonomous goals during idle/research mode
@@ -1305,50 +1435,22 @@ def main():
     else:
         # Continuous daemon mode
         logger.info("[AutonomousLoop] Running in continuous daemon mode")
-        
+
         try:
-            iteration = 0
+            test_mode = os.environ.get("IRI_TEST_MODE", "").lower() in {"1", "true", "yes"}
+            if test_mode:
+                logger.info("[AutonomousLoop] TEST MODE enabled - production thresholds unchanged")
+                loop.context.last_interaction = datetime.now() - timedelta(
+                    seconds=loop.context.idle_threshold_seconds + 1
+                )
             while True:
-                # Check for state transition
-                new_state = loop._check_state_transition()
-                if new_state:
-                    loop._transition_state(new_state)
-                
-                # Log current state periodically (every 60 iterations = ~60s)
-                if iteration % 60 == 0:
-                    current_state = loop.context.state
-                    time_in_state = (datetime.now() - loop.context.last_state_change).total_seconds()
-                    logger.info(f"[Status] State: {current_state.value.upper()} (T+{time_in_state:.0f}s)")
-                
-                # Execute goal processing cycle every 10 iterations (~10s)
-                if loop.context.state == CircadianState.ACTIVE and iteration % 10 == 0:
-                    pending_goals = [g for g in loop.goal_engine.list_goals() if g.status == GoalStatus.PENDING]
-                    if pending_goals:
-                        logger.info(f"[Goals] {len(pending_goals)} pending goals in queue")
-                        # Execute goals immediately
-                        loop._execute_goals()
-                
-                # Also execute goals during IDLE/RESEARCH states (every 20 iterations = ~20s)
-                if loop.context.state in [CircadianState.IDLE, CircadianState.RESEARCH] and iteration % 20 == 0:
-                    loop._execute_goals()
-                
-                # Curriculum-driven learning integration (every 30 iterations = ~30s)
-                if iteration % 30 == 0 and loop.context.state in [CircadianState.IDLE, CircadianState.RESEARCH]:
-                    loop._check_curriculum_gaps()
-                
-                iteration += 1
-                
-                # CONSTANT 1-SECOND TICK - No dynamic throttling
-                # Ensures consistent cognitive cycle rate for learning
-                time.sleep(1.0)
-                
+                loop.run_cycle(duration_seconds=30)
         except KeyboardInterrupt:
             logger.info("[AutonomousLoop] Interrupted by user")
         except Exception as e:
-            logger.error(f"[AutonomousLoop] Error: {e}")
+            logger.exception(f"[AutonomousLoop] Fatal error: {e}")
             raise
-    
-    logger.info("[AutonomousLoop] Shutdown complete")
+
 
 
 if __name__ == "__main__":

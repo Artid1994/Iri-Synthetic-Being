@@ -5,7 +5,7 @@ from brain import Node, Neuron, LIFNeuronVector, Synapse, NeuralState, Plasticit
 from config.anatomy_settings import RegionParameters
 from runtime.memory_graph import MemoryGraph
 from runtime.memory import Memory
-from runtime.gemma_cognitive_engine import GemmaCognitiveEngine
+from runtime.cognitive_engine import CognitiveEngine
 from runtime.cognitive_loop import CognitiveLoop
 from runtime.development import Development
 from runtime.identity import Identity
@@ -77,11 +77,9 @@ class TestPhase1FoundationBlankSlate(unittest.TestCase):
         self.assertEqual(len(memory.memory_graph.nodes), 0)
 
     def test_frontal_cognitive_trigger_execution_cycle(self):
-        # Inference function conforming to GemmaCognitiveEngine interface
-        def fake_gemma_3_1b_inference(prompt: str) -> str:
-            return '{"thought": "Phase 1 perception processed", "action": "none"}'
+        # Cognitive engine using rule-based processing
+        engine = CognitiveEngine(memory=Memory())
 
-        engine = GemmaCognitiveEngine(inference=fake_gemma_3_1b_inference)
         identity = Identity()
         memory = Memory()
         learning = Learning(memory)
@@ -110,6 +108,5 @@ class TestPhase1FoundationBlankSlate(unittest.TestCase):
 
         cycle = loop.process("Phase 1 trigger observation")
         self.assertIsNotNone(cycle)
+        # CognitiveEngine returns RESPOND for valid input
         self.assertEqual(cycle.decision, "RESPOND")
-        self.assertEqual(cycle.reasoning, '{"thought": "Phase 1 perception processed", "action": "none"}')
-        self.assertEqual(engine.last_thought, '{"thought": "Phase 1 perception processed", "action": "none"}')
