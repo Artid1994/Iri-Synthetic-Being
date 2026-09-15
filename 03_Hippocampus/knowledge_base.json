@@ -126592,7 +126592,15 @@
       "source": "targeted_upskilling",
       "confidence": 0.8007908825195424,
       "relevance": "high"
+    },
+    {
+      "topic": "IRI",
+      "summary": "Targeted insight about IRI learned from up-skilling research",
+      "timestamp": "2026-09-15T19:49:53.525479",
+      "source": "targeted_upskilling",
+      "confidence": 0.8714012717899294,
+      "relevance": "high"
     }
   ],
-  "last_updated": "2026-09-15T19:49:34.972843"
+  "last_updated": "2026-09-15T19:49:53.525510"
 }
