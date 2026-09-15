@@ -126600,7 +126600,63 @@
       "source": "targeted_upskilling",
       "confidence": 0.8714012717899294,
       "relevance": "high"
+    },
+    {
+      "topic": "IRI",
+      "summary": "Targeted insight about IRI learned from up-skilling research",
+      "timestamp": "2026-09-15T19:50:09.131544",
+      "source": "targeted_upskilling",
+      "confidence": 0.8443078351649592,
+      "relevance": "high"
+    },
+    {
+      "topic": "IRI",
+      "summary": "Targeted insight about IRI learned from up-skilling research",
+      "timestamp": "2026-09-15T19:50:18.709087",
+      "source": "targeted_upskilling",
+      "confidence": 0.9342798638346984,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-15T19:50:28.270816",
+      "source": "targeted_upskilling",
+      "confidence": 0.9157718190299255,
+      "relevance": "high"
+    },
+    {
+      "topic": "IRI",
+      "summary": "Targeted insight about IRI learned from up-skilling research",
+      "timestamp": "2026-09-15T19:50:49.845533",
+      "source": "targeted_upskilling",
+      "confidence": 0.8435626678145494,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-15T19:51:02.426112",
+      "source": "targeted_upskilling",
+      "confidence": 0.8340211539781878,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-15T19:51:54.016235",
+      "source": "targeted_upskilling",
+      "confidence": 0.8848210159054486,
+      "relevance": "high"
+    },
+    {
+      "topic": "systemd",
+      "summary": "Targeted insight about systemd learned from up-skilling research",
+      "timestamp": "2026-09-15T19:52:09.627920",
+      "source": "targeted_upskilling",
+      "confidence": 0.9227192453061598,
+      "relevance": "high"
     }
   ],
-  "last_updated": "2026-09-15T19:49:53.525510"
+  "last_updated": "2026-09-15T19:52:09.627946"
 }
